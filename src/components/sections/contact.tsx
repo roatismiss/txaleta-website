@@ -12,13 +12,15 @@ export function Contact() {
     <section id="contact" className="bg-ink text-white">
       <div className="mx-auto grid max-w-7xl lg:grid-cols-2">
         <Reveal className="px-6 py-24 sm:px-12 sm:py-32">
-          <Kicker>Find Us</Kicker>
+          <Kicker>On the Mambajao Shore</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight sm:text-5xl">
-            Plan Your Stay
+            Come the Long Way
           </h2>
           <p className="mt-6 max-w-md text-[15px] leading-relaxed text-white/65">
-            We&apos;re on the coast of Mambajao, just five minutes from Camiguin Airport.
-            Message us anytime — we&apos;ll help arrange transfers, tours and the perfect room.
+            Five minutes from Camiguin Airport, the road gives way to the sound of the
+            Bohol Sea and the volcano standing watch behind you. Tell us when you arrive
+            and we&apos;ll have the transfer waiting, the island boat ready, and the right
+            room held against the tide.
           </p>
 
           <div className="mt-10 space-y-5">

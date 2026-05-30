@@ -35,9 +35,11 @@ export const site = {
   },
 
   hero: {
-    // Cloudflare R2 — drop a new mp4 URL here anytime.
-    videoUrl:
+    // Cloudflare R2 — videos cycle in order. Add/remove URLs freely.
+    videos: [
       "https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Camiguin%20Island%20Video.mp4",
+      "https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Camiguin%20Island%20Scooter%20Rental.mp4",
+    ],
     poster: "/images/resort/Aerialview_txaleta.webp",
   },
 
@@ -53,7 +55,7 @@ export const site = {
 export const nav = [
   { label: "Accommodation", href: "/#accommodation" },
   { label: "Dining", href: "/#dining" },
-  { label: "Experiences", href: "/#experiences" },
+  { label: "Experiences", href: "/experiences" },
   { label: "Gallery", href: "/#gallery" },
   { label: "Contact", href: "/#contact" },
 ] as const;
@@ -73,9 +75,9 @@ export const rooms: Room[] = [
   {
     slug: "premier-seaview-suite",
     name: "Premier Seaview Suite",
-    kicker: "Room for the ocean",
+    kicker: "Sea at Eye Level",
     description:
-      "Floor-to-ceiling views of the sea, a private terrace and a plush king bed. Wake to the sound of the waves and step straight onto your own slice of the coast.",
+      "A king bed turned toward floor-to-ceiling glass, where the Bohol Sea fills the room before you are fully awake. Step onto your private terrace and White Island sits on the water in the distance, a pale line of sand waiting for the banca.",
     cover: "/images/rooms/ocean-view-suite/Ocean_view.webp",
     images: [
       "/images/rooms/ocean-view-suite/Ocean_view.webp",
@@ -89,9 +91,9 @@ export const rooms: Room[] = [
   {
     slug: "ocean-view-glamping",
     name: "Ocean View Glamping",
-    kicker: "Sleep under the stars",
+    kicker: "Canvas on the Cliff",
     description:
-      "Canvas luxury on the cliff's edge — a real bed, an en-suite rain shower and a private deck where the sunset pours straight into your tent.",
+      "A proper bed under canvas at the cliff's edge, with an en-suite rain shower and a private deck above the Bohol Sea. Each evening the sunset reaches straight into the tent, and the only sounds are the water below and the wind off the sea.",
     cover: "/images/rooms/glamping/glamping_sunset_view.webp",
     images: [
       "/images/rooms/glamping/glamping_sunset_view.webp",
@@ -108,9 +110,9 @@ export const rooms: Room[] = [
   {
     slug: "deluxe-garden-room",
     name: "Deluxe Garden Room",
-    kicker: "Room for two",
+    kicker: "Inside the Green",
     description:
-      "A serene double room wrapped in tropical garden, with a crisp en-suite bath and all the quiet comforts for a slow island stay.",
+      "A double bed wrapped in tropical garden, with an en-suite bath and the day kept at a slower pace. You wake to leaf-shade and birdsong rather than sun on glass, the cooler, greener side of staying by a volcano.",
     cover: "/images/rooms/double-bedroom/double_bedroom.webp",
     images: [
       "/images/rooms/double-bedroom/double_bedroom.webp",
@@ -127,9 +129,9 @@ export const rooms: Room[] = [
 ];
 
 export const dining = {
-  kicker: "Seaside dining",
-  heading: "Flavours of the Island",
-  body: "Fresh Filipino cooking and easy international plates, served over the water — from sunrise breakfast to long, golden-hour dinners at the café.",
+  kicker: "By the Sea",
+  heading: "Breakfast Comes In on the Tide",
+  body: "The café sits at the edge of the water, where breakfast arrives with the morning light and the boats heading out for White Island. Days are built on fresh Filipino cooking and a few easy international plates: fish landed that morning, fruit from the slopes behind Mambajao, lanzones when the season turns them sweet. By evening the sea goes gold, and dinner is something you stay with for a while.",
   images: [
     "/images/dining/food_txaleta.webp",
     "/images/dining/breakfest_txaleta.webp",
@@ -138,28 +140,34 @@ export const dining = {
   ],
 };
 
-export type Experience = { title: string; description: string; image: string };
+export type Experience = { title: string; description: string; image: string; video?: string };
 
 export const experiences: Experience[] = [
   {
-    title: "Private Island Boat Tours",
-    description: "Charter our boat to hidden coves, white sandbars and snorkeling reefs around Camiguin.",
+    title: "Out to the Sandbars",
+    description:
+      "A banca carries you past quiet coves to White Island's bare white spit and the reefs below, where the Bohol Sea turns clear over coral and the island's sheltered giant clams.",
     image: "/images/experiences/txaleta_private_boat.webp",
   },
   {
-    title: "Jet Ski & Watersports",
-    description: "Open the throttle across the bay, or keep it gentle along the shoreline.",
+    title: "The Bohol Sea, Faster",
+    description:
+      "Open throttle across open water, the volcano shrinking behind you. Jet skis and watersports for the mornings you would rather feel the sea than drift on it.",
     image: "/images/experiences/jet_ski_txaleta.webp",
   },
   {
-    title: "Mount Hibok-Hibok Treks",
-    description: "Guided hikes up Camiguin's volcano, through rainforest, springs and ridgeline views.",
+    title: "Up the Living Volcano",
+    description:
+      "Guided ascents of active Hibok-Hibok climb through rainforest and spring-fed shade to a ridgeline where the whole island, and the sea around it, falls away below you.",
     image: "/images/resort/txaleta_forest.webp",
   },
   {
-    title: "Island Scooter Rental",
-    description: "Two wheels, one island — chase waterfalls and the sunken cemetery at your own pace.",
+    title: "One Road, All Day",
+    description:
+      "Take the 64-kilometre ring road at your own pace: Katibawasan's falls, the cross marking the sunken cemetery, cold springs found between one town and the next.",
     image: "/images/resort/txaleta_rice_field.webp",
+    video:
+      "https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Camiguin%20Island%20Scooter%20Rental.mp4",
   },
 ];
 

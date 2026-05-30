@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { experiences } from "@/lib/site";
 import { Reveal, Kicker } from "../reveal";
 
@@ -7,13 +9,13 @@ export function Experiences() {
     <section id="experiences" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Kicker>Experiences</Kicker>
+          <Kicker>Things to Do</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
-            The Island, Beyond the Resort
+            Four Ways to Meet the Island
           </h2>
           <p className="mt-6 text-[15px] leading-relaxed text-ink/65">
-            Camiguin is small enough to explore in a day and rich enough to keep you for a week —
-            here&apos;s where to start.
+            Camiguin gives up its best on its own terms — by banca, by ridgeline, by the
+            slow turn of a coastal road. Choose how you go.
           </p>
         </Reveal>
 
@@ -39,6 +41,16 @@ export function Experiences() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal className="mt-14 text-center">
+          <Link
+            href="/experiences"
+            className="group inline-flex items-center gap-3 border-b border-sand pb-1 text-ink transition-colors hover:text-sand"
+          >
+            <span className="label text-[11px]">Explore All Experiences</span>
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
+          </Link>
+        </Reveal>
       </div>
     </section>
   );

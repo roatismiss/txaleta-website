@@ -3,7 +3,7 @@ import { Waves, BedDouble, Plane } from "lucide-react";
 import { Reveal, Kicker } from "../reveal";
 
 const features = [
-  { icon: Waves, label: "Infinity Pool", note: "Overlooking the sea" },
+  { icon: Waves, label: "Infinity Pool", note: "Meeting the horizon" },
   { icon: BedDouble, label: "Seaview Rooms", note: "Wake to the ocean" },
   { icon: Plane, label: "5 min from Airport", note: "Camiguin Airport" },
 ];
@@ -11,45 +11,68 @@ const features = [
 export function Intro() {
   return (
     <section id="about" className="bg-white py-24 sm:py-32">
-      <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20">
-        <Reveal className="order-2 lg:order-1">
-          <Kicker>Welcome to Txaleta</Kicker>
-          <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
-            Where the Island
-            <br /> Meets the Sea
+      <div className="mx-auto max-w-7xl px-6">
+        {/* Editorial header */}
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <Kicker>Camiguin · The Island Born of Fire</Kicker>
+          <h2 className="font-display mt-6 text-4xl font-light leading-[1.1] text-ink sm:text-5xl md:text-6xl">
+            The Quiet the Other Islands Lost
           </h2>
-          <p className="mt-7 max-w-xl text-[15px] leading-relaxed text-ink/70">
-            Tucked along the shoreline of Mambajao, Txaleta de Camiguin blends coastal
-            comfort with quiet luxury. Seaview rooms, an infinity pool and sun-drenched
-            decks open straight onto the water — a peaceful homestay escape only minutes
-            from Camiguin Airport.
+          <p className="font-display mx-auto mt-8 max-w-2xl text-2xl font-light italic leading-snug text-ink/80 sm:text-[1.7rem]">
+            While Siargao chases the next wave and Siquijor trades in folklore and
+            moonlight, Camiguin did something quietly radical — it stayed itself.
           </p>
-          <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-ink/70">
-            Slow mornings over breakfast by the sea, golden-hour swims and warm Filipino
-            hospitality — this is the island, at its most restful.
-          </p>
-
-          <div className="mt-10 grid grid-cols-3 gap-6 border-t border-black/10 pt-8">
-            {features.map((f) => (
-              <div key={f.label}>
-                <f.icon className="h-6 w-6 text-sand" strokeWidth={1.4} />
-                <p className="font-display mt-3 text-lg text-ink">{f.label}</p>
-                <p className="mt-0.5 text-xs text-ink/50">{f.note}</p>
-              </div>
-            ))}
-          </div>
         </Reveal>
 
-        <Reveal delay={0.1} className="order-1 lg:order-2">
-          <div className="relative aspect-[4/5] w-full overflow-hidden">
-            <Image
-              src="/images/resort/terrace_view.webp"
-              alt="Seaview terrace at Txaleta de Camiguin"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
+        {/* Body + image */}
+        <div className="mt-16 grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+          <Reveal delay={0.1}>
+            <div className="relative aspect-[4/5] w-full overflow-hidden">
+              <Image
+                src="/images/resort/terrace_view.webp"
+                alt="Seaview terrace at Txaleta de Camiguin"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.15}>
+            <p className="max-w-xl text-[15px] leading-relaxed text-ink/70">
+              One road loops the whole island. Mornings arrive with church bells from
+              Mambajao and the smell of the sea; afternoons dissolve into spring-fed
+              pools and the shade of century-old acacias. This is the Philippines
+              measured in lanzones harvests and tides, not flight schedules — an island
+              where tradition was never restored for the brochures, because it never left.
+            </p>
+            <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-ink/70">
+              Txaleta de Camiguin sits where all of it comes closest: the volcano at your
+              back, the Bohol Sea at your feet, the white sandbar of White Island a short
+              banca ride off the shore. Ten rooms, an infinity pool that meets the
+              horizon, and the rare luxury of being somewhere the world hasn&apos;t
+              crowded yet.
+            </p>
+
+            <div className="mt-10 grid grid-cols-3 gap-6 border-t border-black/10 pt-8">
+              {features.map((f) => (
+                <div key={f.label}>
+                  <f.icon className="h-6 w-6 text-sand" strokeWidth={1.4} />
+                  <p className="font-display mt-3 text-lg text-ink">{f.label}</p>
+                  <p className="mt-0.5 text-xs text-ink/50">{f.note}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+
+        {/* Pull quote */}
+        <Reveal delay={0.1}>
+          <blockquote className="mx-auto mt-20 max-w-3xl text-center">
+            <span className="rule-line font-display text-2xl font-light italic text-ink/80 sm:text-3xl">
+              Some islands you visit. Camiguin, you remember.
+            </span>
+          </blockquote>
         </Reveal>
       </div>
     </section>

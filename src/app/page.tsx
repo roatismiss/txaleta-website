@@ -1,4 +1,5 @@
 import { Hero } from "@/components/hero";
+import { BookingBar } from "@/components/booking-bar";
 import { Intro } from "@/components/sections/intro";
 import { Accommodation } from "@/components/sections/accommodation";
 import { Dining } from "@/components/sections/dining";
@@ -12,6 +13,11 @@ export default function Home() {
   return (
     <>
       <Hero />
+      {/* Mobile-only booking bar — straddles the hero/Intro seam (~half over the video,
+          half into the next section) for the premium floating-card feel. */}
+      <section className="relative z-30 -mt-28 px-4 pb-2 lg:hidden">
+        <BookingBar />
+      </section>
       <Intro />
       <Accommodation />
       <Dining />

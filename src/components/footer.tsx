@@ -6,7 +6,7 @@ import { LogoWordmark } from "./logo";
 const explore = [
   { label: "Accommodation", href: "/#accommodation" },
   { label: "Dining", href: "/#dining" },
-  { label: "Experiences", href: "/#experiences" },
+  { label: "Experiences", href: "/experiences" },
   { label: "Gallery", href: "/#gallery" },
   { label: "Book Now", href: "/book" },
 ];

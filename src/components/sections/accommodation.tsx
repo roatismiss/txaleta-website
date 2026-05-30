@@ -9,13 +9,14 @@ export function Accommodation() {
     <section id="accommodation" className="bg-cream py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Kicker>Accommodation</Kicker>
+          <Kicker>The Ten Rooms</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
-            Rooms with a View of the Sea
+            Where You Wake on Camiguin
           </h2>
           <p className="mt-6 text-[15px] leading-relaxed text-ink/65">
-            Ten ways to stay — from canvas-luxe glamping on the cliff to airy seaview
-            suites with private terraces.
+            Ten rooms sit between the volcano and the sea, close enough to hear both, and
+            no two open onto the same view. Some face the Bohol Sea, others the garden or
+            the cliff&apos;s edge. Choose the one that matches how you want to meet the morning.
           </p>
         </Reveal>
 
