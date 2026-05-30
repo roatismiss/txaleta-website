@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Txaleta de Camiguin — design tokens (Tailwind v4 @theme)
+   Coastal-luxury palette: deep teal-ink, warm sand/gold, cream.
+   ========================================================================== */
+@theme {
+  --color-ink: #0b1c22;        /* deep teal-charcoal — scrolled nav, footer */
+  --color-ink-soft: #12262e;
+  --color-sand: #b89a63;       /* warm gold — accents, CTAs, hairlines */
+  --color-sand-dark: #9c8050;
+  --color-cream: #f6f1e8;      /* light section background */
+  --color-sea: #2a6f7a;
+
+  --font-serif: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --nav-h: 112px;   /* full (top) nav height */
+  --nav-h-sm: 72px; /* condensed (scrolled) nav height */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h-sm);
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Letter-spaced uppercase label used across nav / kickers */
+.label {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-weight: 400;
+}
+
+/* Elegant serif display */
+.font-display {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+/* Hide scrollbars on horizontal galleries */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Thin uppercase hairline divider used in the logo lockup */
+.rule-line::before,
+.rule-line::after {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1px;
+  background: currentColor;
+  vertical-align: middle;
+  opacity: 0.6;
+}
+.rule-line::before { margin-right: 0.75rem; }
+.rule-line::after { margin-left: 0.75rem; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
