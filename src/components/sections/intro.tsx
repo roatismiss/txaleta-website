@@ -14,7 +14,7 @@ export function Intro() {
       <div className="mx-auto max-w-7xl px-6">
         {/* Editorial header */}
         <Reveal className="mx-auto max-w-3xl text-center">
-          <Kicker>Camiguin · The Island Born of Fire</Kicker>
+          <Kicker className="text-brand">Camiguin · The Island Born of Fire</Kicker>
           <h2 className="font-display mt-6 text-4xl font-light leading-[1.1] text-ink sm:text-5xl md:text-6xl">
             The Quiet the Other Islands Lost
           </h2>
@@ -57,7 +57,7 @@ export function Intro() {
             <div className="mt-10 grid grid-cols-3 gap-6 border-t border-black/10 pt-8">
               {features.map((f) => (
                 <div key={f.label}>
-                  <f.icon className="h-6 w-6 text-sand" strokeWidth={1.4} />
+                  <f.icon className="h-6 w-6 text-brand" strokeWidth={1.4} />
                   <p className="font-display mt-3 text-lg text-ink">{f.label}</p>
                   <p className="mt-0.5 text-xs text-ink/50">{f.note}</p>
                 </div>

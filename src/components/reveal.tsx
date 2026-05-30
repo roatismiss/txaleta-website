@@ -25,6 +25,12 @@ export function Reveal({
 }
 
 /** Small uppercase gold kicker used above section headings. */
-export function Kicker({ children }: { children: React.ReactNode }) {
-  return <p className="label text-[11px] text-sand">{children}</p>;
+export function Kicker({
+  children,
+  className = "text-sand",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return <p className={`label text-[11px] ${className}`}>{children}</p>;
 }
