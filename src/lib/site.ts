@@ -166,8 +166,6 @@ export const experiences: Experience[] = [
     description:
       "Take the 64-kilometre ring road at your own pace: Katibawasan's falls, the cross marking the sunken cemetery, cold springs found between one town and the next.",
     image: "/images/resort/txaleta_rice_field.webp",
-    video:
-      "https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Camiguin%20Island%20Scooter%20Rental.mp4",
   },
 ];
 

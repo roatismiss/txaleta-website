@@ -27,13 +27,15 @@ export default function ExperiencesPage() {
     <>
       {/* Banner */}
       <section className="relative flex h-[52vh] min-h-[380px] items-end overflow-hidden">
-        <Image
-          src="/images/experiences/txaleta_boat.webp"
-          alt="Island boat tours from Txaleta de Camiguin"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
+        <video
+          src="https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Camiguin%20Island%20Scooter%20Rental.mp4"
+          poster="/images/experiences/txaleta_boat.webp"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/40" />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-14 text-white">

@@ -66,7 +66,7 @@ export function Navbar() {
   }, [open]);
 
   const logoH = scrolled ? 60 : 104;
-  const mobileLogoH = scrolled ? 52 : 84;
+  const mobileLogoH = scrolled ? 50 : 66;
 
   return (
     <>
@@ -105,34 +105,40 @@ export function Navbar() {
           </div>
         </motion.div>
 
-        {/* ── Main row ───────────────────────────────────────────────────── */}
+        {/* ── Mobile bar: logo left · hamburger right, aligned on one line ── */}
         <div
-          className="relative z-10 mx-auto grid min-h-[68px] max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-5 transition-[padding] duration-500 sm:px-6 lg:min-h-0"
+          className="relative z-10 flex items-center justify-between px-5 transition-[padding] duration-500 lg:hidden"
+          style={{ paddingTop: scrolled ? 7 : 8, paddingBottom: scrolled ? 7 : 8 }}
+        >
+          <Logo
+            height={mobileLogoH}
+            className={`transition-[height] duration-500 ${
+              scrolled
+                ? "[filter:drop-shadow(0_2px_6px_rgba(0,0,0,0.12))]"
+                : "[filter:brightness(0)_invert(1)_drop-shadow(0_2px_8px_rgba(0,0,0,0.5))]"
+            }`}
+          />
+          <button onClick={() => setOpen(true)} aria-label="Open menu" className="flex items-center gap-2 transition-colors hover:text-brand">
+            <span className="label text-[11px]">Menu</span>
+            <Menu className="h-7 w-7" strokeWidth={1.5} />
+          </button>
+        </div>
+
+        {/* ── Desktop grid: nav split around the centered overlay logo ── */}
+        <div
+          className="relative z-10 mx-auto hidden min-h-0 max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 transition-[padding] duration-500 lg:grid"
           style={{ paddingTop: scrolled ? 8 : 12, paddingBottom: scrolled ? 8 : 12 }}
         >
-          {/* Left nav (desktop) */}
-          <nav className="col-start-1 hidden items-center justify-end gap-7 lg:flex">
+          <nav className="col-start-1 flex items-center justify-end gap-7">
             {leftNav.map((n) => (
               <NavLink key={n.href} href={n.href}>{n.label}</NavLink>
             ))}
           </nav>
 
-          {/* Mobile: search + hamburger menu on the RIGHT */}
-          <div className="col-start-3 flex items-center gap-4 justify-self-end lg:hidden">
-            <button aria-label="Search" className="transition-colors hover:text-brand">
-              <Search className="h-5 w-5" strokeWidth={1.5} />
-            </button>
-            <button onClick={() => setOpen(true)} aria-label="Open menu" className="flex items-center gap-2 transition-colors hover:text-brand">
-              <span className="label text-[11px]">Menu</span>
-              <Menu className="h-7 w-7" strokeWidth={1.5} />
-            </button>
-          </div>
+          {/* width spacer reserves room for the absolute centered logo */}
+          <div className="col-start-2 justify-self-center" style={{ width: logoH, height: 1 }} aria-hidden />
 
-          {/* Center: width spacer reserves room for the absolute desktop logo (desktop only) */}
-          <div className="col-start-2 hidden justify-self-center lg:block" style={{ width: logoH, height: 1 }} aria-hidden />
-
-          {/* Right nav (desktop) */}
-          <nav className="col-start-3 hidden items-center justify-start gap-7 lg:flex">
+          <nav className="col-start-3 flex items-center justify-start gap-7">
             {rightNav.map((n) => (
               <NavLink key={n.href} href={n.href}>{n.label}</NavLink>
             ))}
@@ -140,18 +146,6 @@ export function Navbar() {
               <Search className="h-4 w-4" strokeWidth={1.5} />
             </button>
           </nav>
-
-          {/* Mobile: BIG logo on the LEFT — white over the hero video, full-colour once the bar appears on scroll */}
-          <div className="col-start-1 justify-self-start lg:hidden">
-            <Logo
-              height={mobileLogoH}
-              className={`transition-[height] duration-500 ${
-                scrolled
-                  ? "[filter:drop-shadow(0_2px_6px_rgba(0,0,0,0.12))]"
-                  : "[filter:brightness(0)_invert(1)_drop-shadow(0_2px_8px_rgba(0,0,0,0.45))]"
-              }`}
-            />
-          </div>
         </div>
 
         {/* Oversized centered logo (desktop) — overlaps from the navbar down into the hero */}
@@ -190,11 +184,14 @@ export function Navbar() {
               variants={panelVariants}
               className="absolute right-0 top-0 flex h-full w-1/2 min-w-[16rem] flex-col border-l border-white/40 bg-white/65 shadow-[-20px_0_60px_rgba(12,28,34,0.18)] backdrop-blur-2xl"
             >
-              <div className="flex items-center justify-between px-6 py-5">
-                <Logo height={34} />
-                <button onClick={() => setOpen(false)} aria-label="Close menu" className="text-ink/70 transition-colors hover:text-brand">
-                  <X className="h-6 w-6" strokeWidth={1.5} />
-                </button>
+              {/* Close — floats in the top-right corner */}
+              <button onClick={() => setOpen(false)} aria-label="Close menu" className="absolute right-5 top-6 z-10 text-ink/70 transition-colors hover:text-brand">
+                <X className="h-6 w-6" strokeWidth={1.5} />
+              </button>
+
+              {/* Big logo — centered in the upper half, above the menu */}
+              <div className="flex flex-1 items-center justify-center px-6 pt-10">
+                <Logo height={140} />
               </div>
 
               <nav className="flex flex-1 flex-col justify-center gap-1 px-6">

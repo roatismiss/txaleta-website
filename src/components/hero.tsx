@@ -76,7 +76,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="label text-[11px] text-white/90"
+          className="label text-[11px] text-white/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]"
         >
           Camiguin Island · Philippines
         </motion.p>
@@ -85,7 +85,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.35 }}
-          className="font-display mt-5 max-w-4xl text-balance text-5xl font-light leading-[1.05] sm:text-6xl md:text-7xl"
+          className="font-display mt-5 max-w-4xl text-balance text-5xl font-light leading-[1.05] [text-shadow:0_2px_24px_rgba(0,0,0,0.5)] sm:text-6xl md:text-7xl"
         >
           Your Coastal Escape<br className="hidden sm:block" /> in Mambajao
         </motion.h1>
@@ -94,7 +94,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.55 }}
-          className="mt-6 max-w-xl text-base font-light text-white/85 sm:text-lg"
+          className="mt-6 max-w-xl text-base font-light text-white/85 [text-shadow:0_1px_12px_rgba(0,0,0,0.45)] sm:text-lg"
         >
           Seaview suites, ocean-view glamping and an infinity pool —
           warm Filipino hospitality on Camiguin Island.
