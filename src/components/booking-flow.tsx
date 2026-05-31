@@ -41,7 +41,13 @@ const ROOM_IMAGES: Record<string, string> = {
 const FALLBACK_IMAGE = "/images/resort/txaleta_hero.webp";
 
 function roomImage(name: string, apiImages?: string[]): string {
-  if (apiImages && apiImages.length > 0) return apiImages[0];
+  if (apiImages && apiImages.length > 0) {
+    // CloudReef returns ABSOLUTE urls to this site's own /images (the chatbot,
+    // hosted elsewhere, needs them absolute). next/image treats an absolute url
+    // as remote and renders it broken unless the host is in images.remotePatterns
+    // — so strip the same-origin prefix and serve it as a local file instead.
+    return apiImages[0].replace(/^https?:\/\/[^/]+(?=\/)/, "");
+  }
   return ROOM_IMAGES[name] ?? FALLBACK_IMAGE;
 }
 
