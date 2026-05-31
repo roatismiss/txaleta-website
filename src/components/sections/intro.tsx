@@ -28,18 +28,18 @@ export function Intro() {
         <div className="mt-16 grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <Reveal delay={0.1}>
             <div className="group relative aspect-[4/5] w-full overflow-hidden">
-              {/* Base image */}
+              {/* Base image — infinity pool, visible first */}
               <Image
-                src="/images/resort/terrace_view.webp"
-                alt="Seaview terrace at Txaleta de Camiguin"
+                src="/images/resort/txaleta_infinity_pool.jpg"
+                alt="Infinity pool at Txaleta de Camiguin"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
-              {/* Pool image — fades in on hover */}
+              {/* Terrace image — fades in on hover */}
               <Image
-                src="/images/resort/txaleta_infinity_pool.jpg"
-                alt="Infinity pool at Txaleta de Camiguin"
+                src="/images/resort/terrace_view.webp"
+                alt="Seaview terrace at Txaleta de Camiguin"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover opacity-0 transition-opacity duration-700 group-hover:opacity-100"
