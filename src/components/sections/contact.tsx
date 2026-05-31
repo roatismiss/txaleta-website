@@ -25,7 +25,7 @@ const mapsEmbed = `https://maps.google.com/maps?q=${encodeURIComponent(
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-ink text-white">
+    <section id="contact" className="bg-black text-white">
       <div className="mx-auto grid max-w-7xl lg:grid-cols-2">
         <Reveal className="px-6 py-24 sm:px-12 sm:py-32">
           <Kicker className="text-brand">On the Mambajao Shore</Kicker>
