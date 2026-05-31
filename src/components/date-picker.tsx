@@ -12,9 +12,13 @@ type Props = {
   onChangeCheckin: (d: string) => void;
   onChangeCheckout: (d: string) => void;
   minDate?: Date;
+  /** Fully-booked days to grey out / block (live availability from CloudReef). */
+  disabledDates?: Date[];
+  /** Which way the calendar opens. "up" suits the hero bar; "down" the booking flow. */
+  dropDirection?: "up" | "down";
 };
 
-export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCheckout, minDate }: Props) {
+export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCheckout, minDate, disabledDates, dropDirection = "up" }: Props) {
   const [open, setOpen] = useState(false);
   const [activeField, setActiveField] = useState<"checkin" | "checkout">("checkin");
   const containerRef = useRef<HTMLDivElement>(null);
@@ -85,7 +89,7 @@ export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCh
       {/* Calendar dropdown */}
       {open && (
         <div
-          className="absolute bottom-full left-0 z-[300] mb-3 bg-white shadow-[0_32px_80px_rgba(12,28,34,0.25)]"
+          className={`absolute left-0 z-[300] bg-white shadow-[0_32px_80px_rgba(12,28,34,0.25)] ${dropDirection === "down" ? "top-full mt-3" : "bottom-full mb-3"}`}
           style={{ minWidth: 320 }}
         >
           {/* Header */}
@@ -105,7 +109,7 @@ export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCh
             selected={range}
             onSelect={handleSelect}
             defaultMonth={range.from ?? (minDate ?? new Date())}
-            disabled={{ before: minDate ?? new Date() }}
+            disabled={[{ before: minDate ?? new Date() }, ...(disabledDates ?? [])]}
             classNames={{
               root: "p-5 w-[320px]",
               months: "flex flex-col",
@@ -164,9 +168,15 @@ type SingleProps = {
   minDate?: Date;
   placeholder?: string;
   disabledDates?: Date[];
+  /** Latest selectable day (e.g. capped at the next booked night so a stay can't span it). */
+  maxDate?: Date;
+  /** Bump this number to open the calendar programmatically (e.g. arrival → departure). */
+  openSignal?: number;
+  /** Month the calendar opens to when nothing is selected yet. */
+  defaultMonth?: Date;
 };
 
-export function DatePicker({ label, value, onChange, minDate, placeholder, disabledDates }: SingleProps) {
+export function DatePicker({ label, value, onChange, minDate, placeholder, disabledDates, maxDate, openSignal, defaultMonth }: SingleProps) {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState<Date | undefined>(
     value ? new Date(value + "T00:00:00") : undefined
@@ -184,6 +194,11 @@ export function DatePicker({ label, value, onChange, minDate, placeholder, disab
     if (open) document.addEventListener("mousedown", onOut);
     return () => document.removeEventListener("mousedown", onOut);
   }, [open]);
+
+  // Open programmatically when the parent bumps openSignal (arrival → departure).
+  useEffect(() => {
+    if (openSignal) setOpen(true);
+  }, [openSignal]);
 
   function handleSelect(date: Date | undefined) {
     setSelected(date);
@@ -211,8 +226,13 @@ export function DatePicker({ label, value, onChange, minDate, placeholder, disab
           <DayPicker
             mode="single"
             selected={selected}
+            defaultMonth={selected ?? defaultMonth ?? minDate}
             onSelect={handleSelect}
-            disabled={[{ before: minDate ?? new Date() }, ...(disabledDates ?? [])]}
+            disabled={[
+              { before: minDate ?? new Date() },
+              ...(maxDate ? [{ after: maxDate }] : []),
+              ...(disabledDates ?? []),
+            ]}
             classNames={{
               root: "p-5 w-[300px]",
               months: "flex flex-col",

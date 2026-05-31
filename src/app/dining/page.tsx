@@ -38,8 +38,8 @@ export default function DiningPage() {
       <section className="bg-white py-20 sm:py-28">
         <Reveal className="mx-auto max-w-3xl px-6 text-center">
           <p className="font-display text-2xl font-light italic leading-snug text-ink/80 sm:text-3xl">
-            "The café sits at the edge of the water, where breakfast arrives with the morning
-            light and the boats heading out for White Island."
+            &ldquo;The café sits at the edge of the water, where breakfast arrives with the morning
+            light and the boats heading out for White Island.&rdquo;
           </p>
           <p className="mt-8 text-[15px] leading-relaxed text-ink/60">
             {dining.body}

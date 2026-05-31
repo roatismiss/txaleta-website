@@ -372,6 +372,9 @@ function StayStep(props: {
 
   const maxGuests = selectedType?.max_occupancy ?? 8;
 
+  // Bumped whenever check-in is picked → auto-opens the check-out calendar.
+  const [checkoutOpenSignal, setCheckoutOpenSignal] = useState(0);
+
   return (
     <div className="space-y-10">
       {/* Rooms — photo + facilities cards */}
@@ -462,7 +465,11 @@ function StayStep(props: {
             <DatePicker
               label="Check-in"
               value={checkin}
-              onChange={setCheckin}
+              onChange={(d) => {
+                setCheckin(d);
+                // Picking arrival immediately opens the departure calendar.
+                setCheckoutOpenSignal((n) => n + 1);
+              }}
               minDate={new Date()}
               placeholder="Add date"
               disabledDates={disabledDates}
@@ -476,6 +483,8 @@ function StayStep(props: {
               minDate={checkin ? addDays(ymdToDate(checkin), 1) : addDays(new Date(), 1)}
               placeholder="Add date"
               disabledDates={disabledDates}
+              openSignal={checkoutOpenSignal}
+              defaultMonth={checkin ? ymdToDate(checkin) : undefined}
             />
           </div>
           <label className="relative border-b border-ink/15 pb-2">
