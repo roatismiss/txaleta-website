@@ -303,8 +303,11 @@ export function Navbar() {
 
       {/* ── Mobile drawer — slides in from the right, glassmorphism, staggered ── */}
       <AnimatePresence>
+        {/* z above the CloudReef chatbot's z-index:2147483646 so the drawer
+            always covers the floating bubble (the chatbot is also hidden via
+            the `menu-open` class — this is the belt-and-suspenders fallback). */}
         {open && (
-          <motion.div className="fixed inset-0 z-[60] lg:hidden" initial="hidden" animate="show" exit="exit">
+          <motion.div className="fixed inset-0 z-[2147483647] lg:hidden" initial="hidden" animate="show" exit="exit">
             {/* Scrim */}
             <motion.button
               aria-label="Close menu"

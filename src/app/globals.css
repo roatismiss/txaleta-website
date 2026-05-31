@@ -279,6 +279,32 @@ html[data-splash-seen] #txaleta-splash { display: none !important; }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ==========================================================================
+   Hide the CloudReef floating chatbot while the mobile menu drawer is open.
+   The widget (loaded from app.cloudreef.io) pins itself bottom-right at
+   z-index 2147483646 — far above the drawer — so without this it overlaps the
+   open hamburger menu. `html.menu-open` is toggled by ChatbotEmbed from the
+   menu context. A global rule (not a JS style write) means it applies even if
+   the widget mounts AFTER the menu opens, and `!important` beats the inline
+   `display` the widget sets on its own elements. Covers the documented hooks:
+   #cloudreef-widget-root / [data-cloudreef-widget] (root) and
+   [data-cloudreef-chatbot] (FAB).
+   ========================================================================== */
+html.menu-open #cloudreef-widget-root,
+html.menu-open [data-cloudreef-widget],
+html.menu-open [data-cloudreef-chatbot] {
+  display: none !important;
+}
+
+/* Optically centre the chat glyph inside the CloudReef FAB. lucide's
+   MessageSquare sits in the UPPER portion of its box with the tail at the
+   bottom-left, so plain bounding-box centring makes the bubble read as a touch
+   high and left in the round button. A ~1px down-right nudge lands its visual
+   mass on the circle's centre. (Adjust the px here if it needs more.) */
+[data-cloudreef-chatbot] > svg {
+  transform: translate(1px, 1px) !important;
+}
+
 /* Respect reduced-motion: neutralize CSS animations/transitions site-wide.
    (framer-motion is handled separately via useReducedMotion.) */
 @media (prefers-reduced-motion: reduce) {

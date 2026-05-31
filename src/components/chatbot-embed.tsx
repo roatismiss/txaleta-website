@@ -24,17 +24,14 @@ export function ChatbotEmbed() {
     document.body.appendChild(s);
   }, []);
 
-  // Hide chatbot when menu is open
+  // Hide the floating chatbot while the mobile menu is open so it never overlaps
+  // the drawer. We toggle a class on <html> and let a global CSS rule (see
+  // globals.css) hide the widget with `!important` — robust against the widget
+  // mounting late or re-setting its own inline `display`, unlike a querySelector
+  // write that only acts on elements present the moment the effect runs.
   useEffect(() => {
-    const chatbotButton = document.querySelector('[data-cloudreef-chatbot]') as HTMLElement;
-    const chatbotWidget = document.querySelector('[data-cloudreef-widget]') as HTMLElement;
-    
-    if (chatbotButton) {
-      chatbotButton.style.display = isMenuOpen ? 'none' : '';
-    }
-    if (chatbotWidget) {
-      chatbotWidget.style.display = isMenuOpen ? 'none' : '';
-    }
+    document.documentElement.classList.toggle("menu-open", isMenuOpen);
+    return () => document.documentElement.classList.remove("menu-open");
   }, [isMenuOpen]);
 
   return null;
