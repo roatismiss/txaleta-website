@@ -83,6 +83,21 @@ export function Intro() {
             </span>
           </blockquote>
         </Reveal>
+
+        {/* Video card — Mount Hibok-Hibok */}
+        <Reveal delay={0.1} className="mt-16">
+          <div className="mx-auto max-w-4xl overflow-hidden">
+            <video
+              src="https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Mount%20Hibok-Hibok.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="h-full w-full object-cover"
+              style={{ aspectRatio: "16/9" }}
+            />
+          </div>
+        </Reveal>
       </div>
     </section>
   );
