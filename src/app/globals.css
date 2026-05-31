@@ -296,15 +296,6 @@ html.menu-open [data-cloudreef-chatbot] {
   display: none !important;
 }
 
-/* Optically centre the chat glyph inside the CloudReef FAB. lucide's
-   MessageSquare sits in the UPPER portion of its box with the tail at the
-   bottom-left, so plain bounding-box centring makes the bubble read as a touch
-   high and left in the round button. A ~1px down-right nudge lands its visual
-   mass on the circle's centre. (Adjust the px here if it needs more.) */
-[data-cloudreef-chatbot] > svg {
-  transform: translate(1px, 1px) !important;
-}
-
 /* Respect reduced-motion: neutralize CSS animations/transitions site-wide.
    (framer-motion is handled separately via useReducedMotion.) */
 @media (prefers-reduced-motion: reduce) {
