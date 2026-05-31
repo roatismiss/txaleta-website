@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Txaleta — Splash</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* ---- Brand tokens (identice cu site-ul) ---------------------------- */
+  :root {
+    --ink:   #111111;      /* negru cerneală (arcada + text)      */
+    --brand: #c62828;      /* roșu logo (X + "DE CAMIGUIN")       */
+    --paper: #f6f1e8;      /* cream / hârtie                      */
+    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    background: var(--paper);
+    overflow: hidden;
+  }
+
+  /* Scena centrată */
+  .splash {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(120% 120% at 50% 40%, #fbf7ef 0%, var(--paper) 55%, #ece4d4 100%);
+  }
+
+  /* Textură hârtie + vignetă subtilă peste tot */
+  .splash::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .5;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/></svg>");
+  }
+  .splash::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(75% 75% at 50% 45%, transparent 60%, rgba(0,0,0,.07) 100%);
+  }
+
+  .lockup {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(14px, 2.4vw, 26px);
+    z-index: 2;
+  }
+
+  /* ---- Marca (arcadă + X) -------------------------------------------- */
+  .mark { width: clamp(150px, 22vw, 230px); height: auto; display: block; }
+
+  .arch-stroke {
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 3;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;          /* pathLength="1" → normalizat */
+    animation: draw 1.6s ease-in-out .3s forwards;
+  }
+  .arch-fill {
+    fill: var(--ink);
+    opacity: 0;
+    animation: fillIn .8s ease-out 1.5s forwards;
+  }
+  .x-stroke {
+    fill: none;
+    stroke: var(--paper);          /* X = spațiu negativ (hârtie)  */
+    stroke-width: 26;
+    stroke-linecap: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+  }
+  .x-stroke.a { animation: draw .55s ease-out 2.1s  forwards; }
+  .x-stroke.b { animation: draw .55s ease-out 2.45s forwards; }
+
+  /* Vârful peniței (glow roșu care urmează traseul arcadei) */
+  .nib { opacity: 0; }
+
+  /* ---- Wordmark TXALETA ---------------------------------------------- */
+  .wordmark {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(44px, 8.5vw, 88px);
+    line-height: .9;
+    letter-spacing: .02em;
+    color: var(--ink);
+    display: flex;
+  }
+  .wordmark span {
+    display: inline-block;
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);   /* dezvăluit stânga→dreapta (efect peniță) */
+    animation: ink .55s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+  .wordmark span.x { color: var(--brand); }       /* X-ul roșu */
+  /* stagger: fiecare literă apare după cealaltă */
+  .wordmark span:nth-child(1) { animation-delay: 3.00s; }
+  .wordmark span:nth-child(2) { animation-delay: 3.14s; }
+  .wordmark span:nth-child(3) { animation-delay: 3.28s; }
+  .wordmark span:nth-child(4) { animation-delay: 3.42s; }
+  .wordmark span:nth-child(5) { animation-delay: 3.56s; }
+  .wordmark span:nth-child(6) { animation-delay: 3.70s; }
+  .wordmark span:nth-child(7) { animation-delay: 3.84s; }
+
+  /* Sub-linii */
+  .subline {
+    font-family: var(--serif);
+    text-transform: uppercase;
+    letter-spacing: .42em;
+    text-indent: .42em;            /* compensează letter-spacing pe ultima literă */
+    opacity: 0;
+    animation: rise .8s ease-out forwards;
+  }
+  .subline.camiguin {
+    color: var(--brand);
+    font-weight: 600;
+    font-size: clamp(12px, 1.9vw, 18px);
+    animation-delay: 4.25s;
+  }
+  .subline.desde {
+    color: var(--ink);
+    font-weight: 500;
+    font-size: clamp(9px, 1.3vw, 12px);
+    opacity: 0;
+    animation-delay: 4.65s;
+  }
+
+  /* Linii hairline de o parte și alta a "DESDE 2023" */
+  .desde-row { display: flex; align-items: center; gap: 12px; }
+  .desde-row .rule {
+    width: 26px; height: 1px; background: var(--ink); opacity: 0;
+    animation: rise .8s ease-out 4.65s forwards;
+  }
+
+  /* ---- Keyframes ----------------------------------------------------- */
+  @keyframes draw   { to { stroke-dashoffset: 0; } }
+  @keyframes fillIn { to { opacity: 1; } }
+  @keyframes ink    { to { opacity: 1; clip-path: inset(0 0 0 0); } }
+  @keyframes rise   { from { opacity: 0; transform: translateY(8px); }
+                      to   { opacity: 1; transform: translateY(0); } }
+
+  /* ---- Controale preview (le scoți la integrare) --------------------- */
+  .controls {
+    position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 10px; z-index: 5;
+    opacity: 0; animation: rise .6s ease-out 6.4s forwards;
+  }
+  .controls button {
+    font-family: var(--serif); font-size: 13px; letter-spacing: .18em;
+    text-transform: uppercase; cursor: pointer;
+    background: transparent; color: var(--ink);
+    border: 1px solid rgba(17,17,17,.35); border-radius: 999px;
+    padding: 9px 20px; transition: all .2s;
+  }
+  .controls button:hover { background: var(--ink); color: var(--paper); }
+
+  /* Accesibilitate: fără mișcare → totul vizibil instant */
+  @media (prefers-reduced-motion: reduce) {
+    .arch-stroke, .arch-fill, .x-stroke, .wordmark span, .subline, .desde-row .rule {
+      animation: none !important;
+      opacity: 1 !important;
+      stroke-dashoffset: 0 !important;
+      clip-path: none !important;
+    }
+  }
+</style>
+</head>
+<body>
+  <main class="splash" id="splash">
+    <div class="lockup">
+
+      <!-- MARCĂ: arcadă cu X decupat ----------------------------------- -->
+      <svg class="mark" viewBox="0 0 300 270" role="img" aria-label="Txaleta de Camiguin">
+        <defs>
+          <radialGradient id="nibGlow">
+            <stop offset="0%"  stop-color="#ff5b5b"/>
+            <stop offset="45%" stop-color="#c62828"/>
+            <stop offset="100%" stop-color="rgba(198,40,40,0)"/>
+          </radialGradient>
+          <!-- masca limitează X-ul în interiorul arcadei -->
+          <clipPath id="archClip">
+            <path d="M 60 240 L 60 125 Q 60 35 150 22 Q 240 35 240 125 L 240 240 Z"/>
+          </clipPath>
+        </defs>
+
+        <!-- 1) umplerea neagră (apare după ce conturul s-a desenat) -->
+        <path class="arch-fill"
+              d="M 60 240 L 60 125 Q 60 35 150 22 Q 240 35 240 125 L 240 240 Z"/>
+
+        <!-- 2) X-ul alb (spațiu negativ), tăiat pe forma arcadei -->
+        <g clip-path="url(#archClip)">
+          <path class="x-stroke a" pathLength="1" d="M 88 55 L 212 205"/>
+          <path class="x-stroke b" pathLength="1" d="M 212 55 L 88 205"/>
+        </g>
+
+        <!-- 3) conturul desenat (cerneală) -->
+        <path class="arch-stroke" pathLength="1"
+              d="M 60 240 L 60 125 Q 60 35 150 22 Q 240 35 240 125 L 240 240 Z"/>
+
+        <!-- 4) vârful peniței care urmează arcada -->
+        <circle class="nib" r="7" fill="url(#nibGlow)">
+          <animateMotion begin="0.3s" dur="1.6s" fill="freeze" rotate="auto"
+                         keyPoints="0;1" keyTimes="0;1" calcMode="linear"
+                         path="M 60 240 L 60 125 Q 60 35 150 22 Q 240 35 240 125 L 240 240 Z"/>
+          <animate attributeName="opacity" values="0;1;1;0"
+                   keyTimes="0;0.08;0.92;1" begin="0.3s" dur="1.7s" fill="freeze"/>
+        </circle>
+      </svg>
+
+      <!-- WORDMARK: T X A L E T A (X roșu) ----------------------------- -->
+      <div class="wordmark" aria-hidden="true">
+        <span>T</span><span class="x">X</span><span>A</span><span>L</span><span>E</span><span>T</span><span>A</span>
+      </div>
+
+      <!-- SUB-LINII --------------------------------------------------- -->
+      <div class="subline camiguin">De Camiguin</div>
+      <div class="desde-row">
+        <span class="rule"></span>
+        <span class="subline desde">Desde 2023</span>
+        <span class="rule"></span>
+      </div>
+
+    </div>
+
+    <!-- Controale doar pentru preview -->
+    <div class="controls">
+      <button onclick="location.reload()">↻ Replay</button>
+    </div>
+  </main>
+
+  <script>
+    /* La integrare ca splash real, înlocuiește cu: după ~6.5s fade-out + redirect.
+       Pentru preview lăsăm doar butonul Replay. */
+  </script>
+</body>
+</html>

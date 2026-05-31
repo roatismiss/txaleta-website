@@ -38,6 +38,9 @@ export function Contact() {
             and we&apos;ll have the transfer waiting, the island boat ready, and the right
             room held against the tide.
           </p>
+          <p className="mt-5 text-[14px] leading-relaxed text-white/50">
+            Prefer to ask first? Our concierge replies in your language, day or night.
+          </p>
 
           <div className="mt-10 space-y-5">
             <a href={site.location.mapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 text-white/80 transition-colors hover:text-white">

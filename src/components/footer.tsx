@@ -2,6 +2,7 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 import { FacebookIcon, InstagramIcon, TikTokIcon } from "./icons";
 import { LogoWordmark } from "./logo";
+import { PoweredByCloudReef } from "./powered-by";
 
 const explore = [
   { label: "Accommodation", href: "/#accommodation" },
@@ -65,9 +66,9 @@ export function Footer() {
           <p className="text-xs text-white/40">
             © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
-          <p className="text-xs text-white/40">
-            Crafted on Camiguin · Powered by{" "}
-            <span className="text-white/60">CloudReef</span>
+          <p className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-xs text-white/40">
+            <span>Crafted on Camiguin ·</span>
+            <PoweredByCloudReef tone="dark" />
           </p>
         </div>
       </div>

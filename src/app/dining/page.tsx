@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { dining, site } from "@/lib/site";
-import { Reveal } from "@/components/reveal";
+import { Reveal, Kicker } from "@/components/reveal";
 
 export const metadata: Metadata = {
   title: "Dining",
@@ -216,15 +216,61 @@ export default function DiningPage() {
         </div>
       </section>
 
+      {/* ── Room service — order from your phone, served to your terrace ── */}
+      <section id="room-service" className="scroll-mt-28 bg-cream py-20 sm:py-28">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:gap-20">
+          {/* Image */}
+          <Reveal>
+            <div className="group relative aspect-[4/3] w-full overflow-hidden">
+              <Image
+                src={dining.roomService.image}
+                alt={dining.roomService.imageAlt}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            </div>
+          </Reveal>
+
+          {/* Text */}
+          <Reveal delay={0.1}>
+            <Kicker className="text-brand">{dining.roomService.kicker}</Kicker>
+            <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
+              {dining.roomService.heading}
+            </h2>
+            <p className="mt-7 max-w-lg text-[15px] leading-relaxed text-ink/70">
+              {dining.roomService.body}
+            </p>
+            <a
+              href={`https://wa.me/${site.contact.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-9 inline-flex items-center gap-3 border-b border-sand pb-1 text-ink transition-colors hover:text-sand"
+            >
+              <span className="label text-[11px]">Message Our Concierge</span>
+              <ArrowRight
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                strokeWidth={1.5}
+                aria-hidden
+              />
+            </a>
+            <p className="mt-4 text-[13px] leading-relaxed text-ink/50">
+              Day or night, in your language — your order brought to your terrace.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="bg-ink py-20 text-white sm:py-28">
         <Reveal className="mx-auto max-w-2xl px-6 text-center">
           <h2 className="font-display text-3xl font-light sm:text-4xl">
-            Reserve Your Table
+            Dining Is Part of the Stay
           </h2>
           <p className="mx-auto mt-5 max-w-md text-[15px] leading-relaxed text-white/65">
             Breakfast is included with every room. For dinner or a group booking,
-            let us know when you reserve your stay.
+            let us know when you book your stay.
           </p>
           <Link
             href="/book"

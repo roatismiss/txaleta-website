@@ -17,10 +17,10 @@ export function Dining() {
             {dining.body}
           </p>
           <Link
-            href="/book"
+            href="/dining"
             className="group mt-9 inline-flex items-center gap-3 border-b border-sand pb-1 transition-colors hover:text-sand"
           >
-            <span className="label text-[11px]">Reserve a Table</span>
+            <span className="label text-[11px]">Explore Our Cuisine</span>
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
           </Link>
         </Reveal>

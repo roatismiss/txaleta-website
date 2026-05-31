@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ChatbotEmbed } from "@/components/chatbot-embed";
+import { SplashScreen } from "@/components/splash-screen";
 import { MenuProvider } from "@/contexts/menu-context";
 
 const serif = Cormorant_Garamond({
@@ -65,6 +66,15 @@ export default function RootLayout({
       className={`${serif.variable} ${sans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-ink">
+        {/* Pre-paint: hide the splash for visitors who already saw it this
+            session, before the React effect can run (avoids any flicker). */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{if(sessionStorage.getItem('txaleta:splash-seen'))document.documentElement.dataset.splashSeen='1'}catch(e){}",
+          }}
+        />
+        <SplashScreen />
         <MenuProvider>
           <Navbar />
           <main className="flex-1">{children}</main>

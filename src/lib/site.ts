@@ -62,6 +62,9 @@ export const site = {
       (process.env.NEXT_PUBLIC_CLOUDREEF_URL || "").trim().replace(/\/+$/, "") ||
       "https://app.cloudreef.io",
     widgetKey: "cr_pub_txaleta",
+    // Public marketing site for the "Powered by CloudReef" credit (NOT the
+    // platform origin above, which is app.cloudreef.io).
+    productUrl: "https://cloudreef.io",
   },
 } as const;
 
@@ -190,6 +193,39 @@ export const dining = {
     "/images/resort/terrace_view.webp",
     "/images/resort/night_view.webp",
   ],
+  // QR room service — order from your phone, brought to your terrace.
+  // (The "order" CTA points at the LIVE concierge/WhatsApp until QR ordering
+  // is seeded for Txaleta in CloudReef — see plan follow-up.)
+  roomService: {
+    kicker: "Room Service, Reimagined",
+    heading: "From Your Room, to Your Terrace",
+    body: "Some afternoons you won't want to leave the deck. Scan the code in your room to browse the café's island delicacies — the morning's catch, a cold drink, something sweet — and order straight from your phone. We'll bring it to wherever you've settled: the pool, the lounge, your own private terrace.",
+    image: "/images/rooms/ocean-view-suite/Ocean_view_private_terrace.webp",
+    imageAlt: "A private terrace overlooking the Bohol Sea at Txaleta de Camiguin",
+  },
+};
+
+// Homepage "seamless stay" section — the CloudReef-powered guest experience,
+// framed as effortless hospitality (not as software). Pillar icons are mapped
+// by index in the Seamless component.
+export const seamless = {
+  kicker: "Effortless by Design",
+  heading: "Your Stay, Already Taken Care Of",
+  body: "From the moment you book to the last morning on your terrace, the details run quietly in the background — so the only thing left to do is be on the island.",
+  pillars: [
+    {
+      title: "Book in Real Time",
+      body: "Live availability, and your room confirmed the moment you choose it — with an email in your inbox before you close the tab. No waiting days for a reply.",
+    },
+    {
+      title: "A Concierge in Your Language",
+      body: "Ask anything, any hour. Our concierge answers in your own language — the best tide for White Island, a late dinner on arrival, a boat for the morning.",
+    },
+    {
+      title: "Order to Your Terrace",
+      body: "Browse the café and order from your phone, brought to wherever you've settled — the pool, the lounge, your own private terrace.",
+    },
+  ],
 };
 
 export type Experience = { title: string; description: string; image: string; video?: string; hoverImage?: string };
@@ -274,7 +310,6 @@ const diningMega: MegaMenu = {
     { label: "Breakfast & Coffee", href: "/dining#morning" },
     { label: "Filipino Kitchen", href: "/dining#all-day" },
     { label: "Evening Menu", href: "/dining#evening" },
-    { label: "Reserve a Table", href: "/book" },
   ],
   cards: [
     { name: "Breakfast by the Tide", kicker: "Morning", image: "/images/dining/breakfest_txaleta.webp", href: "/dining#morning" },
