@@ -50,9 +50,17 @@ export const site = {
 
   // CloudReef integration. Bookings POST here and land in CloudReef as `pending`.
   // Key is seeded by supabase migration 033_txaleta_seed.sql.
-  // Set NEXT_PUBLIC_CLOUDREEF_URL in .env.local to point at the live CloudReef.
+  //
+  // baseUrl MUST be the CloudReef PLATFORM origin (app.cloudreef.io) — the only
+  // place the /api/widget/* routes and /widget/chatbot.js actually live. It must
+  // NEVER point at this marketing site's own domain (e.g. txaleta.cloudreef.io),
+  // which has none of those routes and would 404 every booking + the chatbot.
+  // We normalise empty/whitespace values and a trailing slash so a misconfigured
+  // deploy falls back to the working default instead of silently breaking.
   cloudreef: {
-    baseUrl: process.env.NEXT_PUBLIC_CLOUDREEF_URL ?? "https://app.cloudreef.io",
+    baseUrl:
+      (process.env.NEXT_PUBLIC_CLOUDREEF_URL || "").trim().replace(/\/+$/, "") ||
+      "https://app.cloudreef.io",
     widgetKey: "cr_pub_txaleta",
   },
 } as const;
