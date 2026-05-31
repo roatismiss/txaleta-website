@@ -134,8 +134,17 @@ export function Navbar() {
 
   // Logo + paddings track scroll ONLY — not megaOpen — so opening a mega never
   // collapses the header (which would fight the panel's drop-in animation).
-  const logoH = scrolled ? 60 : 140;
-  const mobileLogoH = scrolled ? 44 : 56;
+  // `barLogoH` is the height the logo *reserves* in the nav row; the desktop logo
+  // (the trimmed "mark" variant, so CSS height ≈ visible height) is taller than
+  // that and is bottom-anchored, overflowing *upward* into the empty center of the
+  // utility row — never below the bar. 115 keeps its top within the header
+  // (utility 44 + nav 90 = 134) bottom-anchored.
+  const logoH = scrolled ? 50 : 115;
+  const barLogoH = scrolled ? 60 : 90;
+  // Mobile: the bar reserves `barMobileLogoH`; unscrolled the visible logo is 2×
+  // that and overflows downward, so the mobile navbar height stays unchanged.
+  const mobileLogoH = scrolled ? 44 : 128;
+  const barMobileLogoH = scrolled ? 44 : 60;
 
   return (
     <>
@@ -151,9 +160,11 @@ export function Navbar() {
             : "bg-transparent text-white lg:bg-white/75 lg:text-ink lg:backdrop-blur-md lg:shadow-[0_2px_20px_rgba(12,28,34,0.05)]"
         } ${megaOpen ? "lg:!bg-white lg:!text-ink lg:!shadow-[0_8px_30px_rgba(12,28,34,0.10)]" : ""}`}
       >
-        {/* Mobile: faint top scrim so the white logo + menu stay legible over the video (before scroll only) */}
+        {/* Mobile: top scrim so the white logo + menu stay legible over the hero —
+            reaches behind the full unscrolled logo (≈128px + 16 top) and is strong
+            enough to read even where the hero is a bright/hazy sky (before scroll only). */}
         {!scrolled && (
-          <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-24 bg-gradient-to-b from-black/35 to-transparent lg:hidden" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-44 bg-gradient-to-b from-black/50 via-black/25 to-transparent lg:hidden" />
         )}
         {/* ── Utility row (top state only) ───────────────────────────────── */}
         <motion.div
@@ -184,14 +195,18 @@ export function Navbar() {
           className="relative z-10 flex items-start justify-between px-5 transition-[padding] duration-500 lg:hidden"
           style={{ paddingTop: scrolled ? 7 : 16, paddingBottom: scrolled ? 7 : 12 }}
         >
-          <Logo
-            height={mobileLogoH}
-            className={`transition-[height] duration-500 ${
-              scrolled
-                ? "[filter:drop-shadow(0_2px_6px_rgba(0,0,0,0.12))]"
-                : "[filter:brightness(0)_invert(1)_drop-shadow(0_3px_12px_rgba(0,0,0,0.6))]"
-            }`}
-          />
+          {/* Logo reserves only `barMobileLogoH` of bar height; the 2× logo
+              overflows downward so the mobile navbar stays the same height. */}
+          <div className="relative" style={{ height: barMobileLogoH }}>
+            <Logo
+              height={mobileLogoH}
+              className={`absolute left-0 top-0 transition-[height] duration-500 ${
+                scrolled
+                  ? "[filter:drop-shadow(0_2px_6px_rgba(0,0,0,0.12))]"
+                  : "[filter:brightness(0)_invert(1)_drop-shadow(0_2px_10px_rgba(0,0,0,0.9))_drop-shadow(0_0_3px_rgba(0,0,0,0.8))]"
+              }`}
+            />
+          </div>
           <button onClick={() => setOpen(true)} aria-label="Open menu" className="flex items-center gap-2 pt-1 transition-colors hover:text-brand">
             <span className="label text-[11px]">Menu</span>
             <Menu className="h-7 w-7" strokeWidth={1.5} />
@@ -203,8 +218,9 @@ export function Navbar() {
           className="relative z-10 hidden items-center px-8 transition-[padding] duration-500 lg:flex"
           style={{ paddingTop: 0, paddingBottom: 0 }}
         >
-          {/* Left nav — flex-1 fills half the remaining space, items pushed right toward logo */}
-          <nav className="flex w-0 flex-1 items-center justify-end gap-12">
+          {/* Left nav — flex-1 fills half the remaining space, items pushed to the
+              left edge so the center stays clear for the logo */}
+          <nav className="flex w-0 flex-1 items-center justify-start gap-12">
             {leftNav.map((n) => (
               <DesktopNavItem
                 key={n.href}
@@ -216,16 +232,21 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* Logo — centered by equal flex sides */}
-          <div className="flex-shrink-0 px-12">
+          {/* Logo — centered by equal flex sides. The container only reserves
+              `barLogoH` of bar height; the trimmed "mark" logo is taller and
+              bottom-anchored so it overflows *upward* into the utility row, never
+              below the bar. bottom-[8px] lifts it slightly off the nav-row seam. */}
+          <div className="relative flex-shrink-0 px-8" style={{ height: barLogoH }}>
             <Logo
+              variant="mark"
               height={logoH}
-              className="transition-[height] duration-500 [filter:drop-shadow(0_3px_8px_rgba(0,0,0,0.18))]"
+              className="absolute bottom-[8px] left-1/2 -translate-x-1/2 transition-[height] duration-500 [filter:drop-shadow(0_3px_8px_rgba(0,0,0,0.18))]"
             />
           </div>
 
-          {/* Right nav — flex-1 fills half the remaining space, items pushed left toward logo */}
-          <nav className="flex w-0 flex-1 items-center justify-start gap-12">
+          {/* Right nav — flex-1 fills half the remaining space, items pushed to the
+              right edge so the center stays clear for the logo */}
+          <nav className="flex w-0 flex-1 items-center justify-end gap-12">
             {rightNav.map((n) => (
               <DesktopNavItem
                 key={n.href}

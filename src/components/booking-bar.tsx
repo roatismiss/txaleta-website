@@ -53,7 +53,7 @@ export function BookingBar() {
               </option>
             ))}
           </select>
-          <Users className="pointer-events-none absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 text-sand" strokeWidth={1.5} />
+          <Users className="pointer-events-none absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 text-brand" strokeWidth={1.5} />
         </label>
 
         <button

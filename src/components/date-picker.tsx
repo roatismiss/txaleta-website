@@ -70,7 +70,7 @@ export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCh
         <span className={`mt-1.5 block text-sm ${checkin ? "text-ink" : "text-ink/35"}`}>
           {fmt(checkin) || "Select date"}
         </span>
-        <CalendarDays className="absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 text-sand" strokeWidth={1.5} />
+        <CalendarDays className="absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 text-brand" strokeWidth={1.5} />
       </button>
 
       {/* DEPARTURE trigger */}
@@ -83,17 +83,16 @@ export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCh
         <span className={`mt-1.5 block text-sm ${checkout ? "text-ink" : "text-ink/35"}`}>
           {fmt(checkout) || "Select date"}
         </span>
-        <CalendarDays className="absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 text-sand" strokeWidth={1.5} />
+        <CalendarDays className="absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 text-brand" strokeWidth={1.5} />
       </button>
 
       {/* Calendar dropdown */}
       {open && (
         <div
           className={`absolute left-0 z-[300] bg-white shadow-[0_32px_80px_rgba(12,28,34,0.25)] ${dropDirection === "down" ? "top-full mt-3" : "bottom-full mb-3"}`}
-          style={{ minWidth: 320 }}
         >
           {/* Header */}
-          <div className="flex border-b border-ink/8 px-5 pt-4 pb-3 gap-8">
+          <div className="flex border-b border-ink/8 px-4 pt-3 pb-2.5 gap-5 sm:px-5 sm:pt-4 sm:pb-3 sm:gap-8">
             <div className={`flex-1 border-b-2 pb-1 transition-colors ${activeField === "checkin" ? "border-ink" : "border-transparent"}`}>
               <p className="label text-[9px] tracking-widest text-ink/40">Arrival</p>
               <p className="mt-0.5 text-sm text-ink">{fmt(checkin) || "—"}</p>
@@ -111,21 +110,21 @@ export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCh
             defaultMonth={range.from ?? (minDate ?? new Date())}
             disabled={[{ before: minDate ?? new Date() }, ...(disabledDates ?? [])]}
             classNames={{
-              root: "p-5 w-[320px]",
+              root: "p-3 w-[280px] sm:p-5 sm:w-[320px]",
               months: "flex flex-col",
               month: "space-y-2",
-              month_caption: "flex justify-center items-center relative h-8 mb-1",
-              caption_label: "font-display text-[15px] font-light tracking-wide text-ink",
+              month_caption: "flex justify-center items-center relative h-7 mb-1 sm:h-8",
+              caption_label: "font-display text-sm font-light tracking-wide text-ink sm:text-[15px]",
               nav: "absolute inset-x-0 top-0 flex items-center justify-between",
-              button_previous: "flex h-8 w-8 items-center justify-center text-ink/40 transition-colors hover:text-ink",
-              button_next: "flex h-8 w-8 items-center justify-center text-ink/40 transition-colors hover:text-ink",
+              button_previous: "flex h-7 w-7 items-center justify-center text-ink/40 transition-colors hover:text-ink sm:h-8 sm:w-8",
+              button_next: "flex h-7 w-7 items-center justify-center text-ink/40 transition-colors hover:text-ink sm:h-8 sm:w-8",
               month_grid: "w-full",
               weekdays: "flex mb-1",
-              weekday: "w-[42px] text-center text-[9px] font-medium uppercase tracking-[0.1em] text-ink/30",
+              weekday: "w-9 text-center text-[9px] font-medium uppercase tracking-[0.1em] text-ink/30 sm:w-[42px]",
               weeks: "",
               week: "flex",
               day: "p-0",
-              day_button: "h-[40px] w-[40px] text-[13px] font-light text-ink transition-colors hover:bg-cream focus:outline-none",
+              day_button: "h-9 w-9 text-[12px] font-light text-ink transition-colors hover:bg-cream focus:outline-none sm:h-[40px] sm:w-[40px] sm:text-[13px]",
               selected: "!bg-ink !text-white",
               range_start: "!bg-ink !text-white",
               range_end: "!bg-ink !text-white",
@@ -137,7 +136,7 @@ export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCh
             }}
           />
 
-          <div className="flex items-center justify-between border-t border-ink/8 px-5 py-3">
+          <div className="flex items-center justify-between border-t border-ink/8 px-4 py-2.5 sm:px-5 sm:py-3">
             <button
               type="button"
               onClick={() => { onChangeCheckin(""); onChangeCheckout(""); }}

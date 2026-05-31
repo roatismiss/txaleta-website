@@ -84,18 +84,42 @@ export function Intro() {
           </blockquote>
         </Reveal>
 
-        {/* Video card — Mount Hibok-Hibok */}
+        {/* Video card — Mount Hibok-Hibok — with aerial gallery alongside */}
         <Reveal delay={0.1} className="mt-16">
-          <div className="mx-auto max-w-4xl overflow-hidden">
-            <video
-              src="https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Mount%20Hibok-Hibok.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="h-full w-full object-cover"
-              style={{ aspectRatio: "16/9" }}
-            />
+          <div className="mx-auto grid max-w-6xl items-stretch gap-4 lg:grid-cols-[3.5fr_1fr]">
+            {/* Video — left, large (fills the gallery height on desktop) */}
+            <div className="relative aspect-[16/9] overflow-hidden lg:aspect-auto">
+              <video
+                src="https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Mount%20Hibok-Hibok.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
+
+            {/* Two images — right, shown in full at their natural proportions */}
+            <div className="flex flex-col gap-4">
+              <div className="relative aspect-[5/4] w-full overflow-hidden">
+                <Image
+                  src="/images/resort/Aerialview_txaleta.webp"
+                  alt="Aerial view of Txaleta de Camiguin and the coastline"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 24vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative aspect-[4/5] w-full overflow-hidden">
+                <Image
+                  src="/images/resort/aerial_view_camiguin_2.jpg"
+                  alt="Aerial view of Camiguin island from Txaleta"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 24vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </div>
         </Reveal>
       </div>
