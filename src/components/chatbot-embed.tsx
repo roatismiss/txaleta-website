@@ -2,12 +2,15 @@
 
 import { useEffect } from "react";
 import { site } from "@/lib/site";
+import { useMenu } from "@/contexts/menu-context";
 
 /**
  * Injects the CloudReef chatbot + booking widget (floating button, bottom-right).
  * One script, resolved per-resort by the widget key.
  */
 export function ChatbotEmbed() {
+  const { isMenuOpen } = useMenu();
+
   useEffect(() => {
     if (document.getElementById("cloudreef-chatbot-script")) return;
     const s = document.createElement("script");
@@ -20,6 +23,19 @@ export function ChatbotEmbed() {
     s.setAttribute("data-position", "right");
     document.body.appendChild(s);
   }, []);
+
+  // Hide chatbot when menu is open
+  useEffect(() => {
+    const chatbotButton = document.querySelector('[data-cloudreef-chatbot]') as HTMLElement;
+    const chatbotWidget = document.querySelector('[data-cloudreef-widget]') as HTMLElement;
+    
+    if (chatbotButton) {
+      chatbotButton.style.display = isMenuOpen ? 'none' : '';
+    }
+    if (chatbotWidget) {
+      chatbotWidget.style.display = isMenuOpen ? 'none' : '';
+    }
+  }, [isMenuOpen]);
 
   return null;
 }

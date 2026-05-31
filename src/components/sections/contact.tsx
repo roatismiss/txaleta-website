@@ -12,7 +12,7 @@ export function Contact() {
     <section id="contact" className="bg-ink text-white">
       <div className="mx-auto grid max-w-7xl lg:grid-cols-2">
         <Reveal className="px-6 py-24 sm:px-12 sm:py-32">
-          <Kicker>On the Mambajao Shore</Kicker>
+          <Kicker className="text-brand">On the Mambajao Shore</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight sm:text-5xl">
             Come the Long Way
           </h2>

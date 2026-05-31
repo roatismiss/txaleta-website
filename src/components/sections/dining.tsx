@@ -9,7 +9,7 @@ export function Dining() {
     <section id="dining" className="bg-ink py-24 text-white sm:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20">
         <Reveal>
-          <Kicker>{dining.kicker}</Kicker>
+          <Kicker className="text-brand">{dining.kicker}</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight sm:text-5xl">
             {dining.heading}
           </h2>

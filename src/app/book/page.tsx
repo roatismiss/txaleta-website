@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { BookingForm } from "@/components/booking-form";
+import { BookingFlow } from "@/components/booking-flow";
 import { Kicker } from "@/components/reveal";
 import { site } from "@/lib/site";
 
@@ -39,50 +39,30 @@ export default async function BookPage({
         </div>
       </section>
 
-      {/* Form */}
+      {/* Booking flow */}
       <section className="bg-white py-20">
-        <div className="mx-auto grid max-w-5xl gap-14 px-6 lg:grid-cols-[1.6fr_1fr]">
-          <div>
-            <p className="max-w-xl text-[15px] leading-relaxed text-ink/70">
-              Send us your dates and we&apos;ll confirm availability and rates by email,
-              usually within a few hours. No payment is taken now — this is a request to book.
-            </p>
-            <div className="mt-10">
-              <BookingForm
-                initialCheckin={first(sp.checkin)}
-                initialCheckout={first(sp.checkout)}
-                initialGuests={first(sp.guests)}
-                initialRoom={first(sp.room)}
-              />
-            </div>
+        <div className="mx-auto max-w-5xl px-6">
+          <p className="max-w-xl text-[15px] leading-relaxed text-ink/70">
+            Check live availability, choose your room and confirm instantly. Your booking
+            and payment are handled securely — you&apos;ll get an email confirmation right away.
+            Prefer to talk it through? Call{" "}
+            <a href={`tel:${site.contact.phoneRaw}`} className="text-ink underline hover:text-sand">
+              {site.contact.phone}
+            </a>{" "}
+            or message us on{" "}
+            <a href={`https://wa.me/${site.contact.whatsapp}`} className="text-ink underline hover:text-sand">
+              WhatsApp
+            </a>
+            .
+          </p>
+          <div className="mt-12">
+            <BookingFlow
+              initialCheckin={first(sp.checkin)}
+              initialCheckout={first(sp.checkout)}
+              initialGuests={first(sp.guests)}
+              initialRoom={first(sp.room)}
+            />
           </div>
-
-          {/* Side info */}
-          <aside className="h-fit border border-ink/10 bg-cream p-8">
-            <h2 className="font-display text-2xl font-light text-ink">Need a hand?</h2>
-            <p className="mt-3 text-sm leading-relaxed text-ink/65">
-              Prefer to talk it through? Reach us directly — we&apos;re happy to help plan
-              transfers, tours and the perfect room.
-            </p>
-            <dl className="mt-6 space-y-4 text-sm">
-              <div>
-                <dt className="label text-[9px] text-ink/40">Phone</dt>
-                <dd><a href={`tel:${site.contact.phoneRaw}`} className="text-ink hover:text-sand">{site.contact.phone}</a></dd>
-              </div>
-              <div>
-                <dt className="label text-[9px] text-ink/40">WhatsApp / Viber</dt>
-                <dd><a href={`https://wa.me/${site.contact.whatsapp}`} className="text-ink hover:text-sand">+63 917 818 2277</a></dd>
-              </div>
-              <div>
-                <dt className="label text-[9px] text-ink/40">Email</dt>
-                <dd><a href={`mailto:${site.contact.email}`} className="text-ink hover:text-sand">{site.contact.email}</a></dd>
-              </div>
-              <div>
-                <dt className="label text-[9px] text-ink/40">Where</dt>
-                <dd className="text-ink/70">{site.location.address}</dd>
-              </div>
-            </dl>
-          </aside>
         </div>
       </section>
     </>

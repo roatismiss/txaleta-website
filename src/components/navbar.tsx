@@ -1,12 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, type Variants } from "framer-motion";
-import { Search, Menu, X, Phone } from "lucide-react";
+import { Search, Menu, X, Phone, ChevronDown } from "lucide-react";
 import { FacebookIcon, InstagramIcon, TikTokIcon } from "./icons";
+import { MegaPanel } from "./mega-menu";
 import { Logo } from "./logo";
-import { nav, site } from "@/lib/site";
+import { nav, site, type NavItem } from "@/lib/site";
+import { useMenu } from "@/contexts/menu-context";
 
 const leftNav = nav.slice(0, 3);
 const rightNav = nav.slice(3);
@@ -27,14 +29,6 @@ function Social({ className = "" }: { className?: string }) {
   );
 }
 
-function NavLink({ href, children, onClick }: { href: string; children: React.ReactNode; onClick?: () => void }) {
-  return (
-    <Link href={href} onClick={onClick} className="label text-[11px] transition-colors hover:text-brand">
-      {children}
-    </Link>
-  );
-}
-
 // Mobile drawer animation — panel slides in from the right, items stagger.
 const panelVariants: Variants = {
   hidden: { x: "100%" },
@@ -49,12 +43,63 @@ const itemVariants: Variants = {
   show: { opacity: 1, x: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } },
 };
 
+// One desktop top-level link. Items with a mega open it on hover; plain items
+// close any open mega when hovered.
+function DesktopNavItem({
+  item,
+  active,
+  onHover,
+  onLeaveToNavigate,
+}: {
+  item: NavItem;
+  active: boolean;
+  onHover: (key: string | null) => void;
+  onLeaveToNavigate: () => void;
+}) {
+  const hasMega = !!item.mega;
+  return (
+    <Link
+      href={item.href}
+      onMouseEnter={() => onHover(hasMega ? item.label : null)}
+      // Open the panel when a mega trigger is focused; plain triggers leave any
+      // open panel alone so keyboard users can keep tabbing into it.
+      onFocus={() => { if (hasMega) onHover(item.label); }}
+      onClick={onLeaveToNavigate}
+      aria-haspopup={hasMega ? "menu" : undefined}
+      aria-expanded={hasMega ? active : undefined}
+      className={`label flex items-center gap-1.5 rounded-sm text-[13px] font-medium tracking-[0.12em] transition-colors hover:text-brand focus-visible:text-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sand ${active ? "text-brand" : ""}`}
+    >
+      {item.label}
+      {hasMega && (
+        <ChevronDown
+          className={`h-3 w-3 transition-transform duration-300 ${active ? "rotate-180" : ""}`}
+          strokeWidth={1.75}
+        />
+      )}
+    </Link>
+  );
+}
+
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [activeMega, setActiveMega] = useState<string | null>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const { setIsMenuOpen } = useMenu();
+
+  const megaOpen = activeMega !== null;
+
+  // Sync local state with context
+  useEffect(() => {
+    setIsMenuOpen(open);
+  }, [open, setIsMenuOpen]);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 32);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 32);
+      // Scrolling dismisses an open mega (cleaner than locking body scroll).
+      setActiveMega(null);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -65,17 +110,46 @@ export function Navbar() {
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 
-  const logoH = scrolled ? 60 : 104;
-  const mobileLogoH = scrolled ? 50 : 66;
+  // Escape closes the desktop mega; clean up any pending close timer on unmount.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setActiveMega(null); };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      if (closeTimer.current) clearTimeout(closeTimer.current);
+    };
+  }, []);
+
+  const openMega = (key: string | null) => {
+    if (closeTimer.current) { clearTimeout(closeTimer.current); closeTimer.current = null; }
+    setActiveMega(key);
+  };
+  // Small grace period so the pointer can travel from a link into the panel.
+  const scheduleClose = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setActiveMega(null), 140);
+  };
+
+  const activeItem = activeMega ? nav.find((n) => n.label === activeMega && n.mega) : undefined;
+
+  // Logo + paddings track scroll ONLY — not megaOpen — so opening a mega never
+  // collapses the header (which would fight the panel's drop-in animation).
+  const logoH = scrolled ? 56 : 90;
+  const mobileLogoH = scrolled ? 44 : 56;
 
   return (
     <>
       <header
+        onMouseLeave={scheduleClose}
+        // Close the mega once focus leaves the header entirely (keyboard).
+        onBlur={(e) => {
+          if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setActiveMega(null);
+        }}
         className={`fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,color] duration-500 ${
           scrolled
             ? "bg-white/95 text-ink backdrop-blur-md shadow-[0_8px_30px_rgba(12,28,34,0.10)]"
             : "bg-transparent text-white lg:bg-white/75 lg:text-ink lg:backdrop-blur-md lg:shadow-[0_2px_20px_rgba(12,28,34,0.05)]"
-        }`}
+        } ${megaOpen ? "lg:!bg-white lg:!text-ink lg:!shadow-[0_8px_30px_rgba(12,28,34,0.10)]" : ""}`}
       >
         {/* Mobile: faint top scrim so the white logo + menu stay legible over the video (before scroll only) */}
         {!scrolled && (
@@ -88,7 +162,7 @@ export function Navbar() {
           transition={{ duration: 0.4, ease: "easeInOut" }}
           className="hidden overflow-hidden border-b border-ink/10 lg:block"
         >
-          <div className="mx-auto flex h-11 max-w-7xl items-center justify-between px-6">
+          <div className="flex h-11 items-center justify-between px-14">
             <div className="hidden items-center gap-5 md:flex">
               <Social />
               <span className="label text-[10px] text-ink/60">Stay Connected</span>
@@ -97,7 +171,7 @@ export function Navbar() {
               <Phone className="h-3.5 w-3.5" strokeWidth={1.5} /> {site.contact.phone}
             </a>
             <div className="flex items-center gap-5">
-              <a href="#contact" className="hidden label text-[10px] text-ink/60 transition-colors hover:text-brand sm:inline">Contact</a>
+              <Link href="/#contact" className="hidden label text-[10px] text-ink/60 transition-colors hover:text-brand sm:inline">Contact</Link>
               <Link href="/book" className="hidden bg-brand px-5 py-2 label text-[10px] text-white transition-colors hover:bg-brand-dark sm:inline-block">
                 Book Now
               </Link>
@@ -107,40 +181,59 @@ export function Navbar() {
 
         {/* ── Mobile bar: logo left · hamburger right, aligned on one line ── */}
         <div
-          className="relative z-10 flex items-center justify-between px-5 transition-[padding] duration-500 lg:hidden"
-          style={{ paddingTop: scrolled ? 7 : 8, paddingBottom: scrolled ? 7 : 8 }}
+          className="relative z-10 flex items-start justify-between px-5 transition-[padding] duration-500 lg:hidden"
+          style={{ paddingTop: scrolled ? 7 : 16, paddingBottom: scrolled ? 7 : 12 }}
         >
           <Logo
             height={mobileLogoH}
             className={`transition-[height] duration-500 ${
               scrolled
                 ? "[filter:drop-shadow(0_2px_6px_rgba(0,0,0,0.12))]"
-                : "[filter:brightness(0)_invert(1)_drop-shadow(0_2px_8px_rgba(0,0,0,0.5))]"
+                : "[filter:brightness(0)_invert(1)_drop-shadow(0_3px_12px_rgba(0,0,0,0.6))]"
             }`}
           />
-          <button onClick={() => setOpen(true)} aria-label="Open menu" className="flex items-center gap-2 transition-colors hover:text-brand">
+          <button onClick={() => setOpen(true)} aria-label="Open menu" className="flex items-center gap-2 pt-1 transition-colors hover:text-brand">
             <span className="label text-[11px]">Menu</span>
             <Menu className="h-7 w-7" strokeWidth={1.5} />
           </button>
         </div>
 
-        {/* ── Desktop grid: nav split around the centered overlay logo ── */}
+        {/* ── Desktop nav row — edge-to-edge flex, logo centered by equal-flex sides ── */}
         <div
-          className="relative z-10 mx-auto hidden min-h-0 max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 transition-[padding] duration-500 lg:grid"
-          style={{ paddingTop: scrolled ? 8 : 12, paddingBottom: scrolled ? 8 : 12 }}
+          className="relative z-10 hidden items-center px-8 transition-[padding] duration-500 lg:flex"
+          style={{ paddingTop: 0, paddingBottom: 0 }}
         >
-          <nav className="col-start-1 flex items-center justify-end gap-7">
+          {/* Left nav — flex-1 fills half the remaining space, items pushed right toward logo */}
+          <nav className="flex w-0 flex-1 items-center justify-end gap-12">
             {leftNav.map((n) => (
-              <NavLink key={n.href} href={n.href}>{n.label}</NavLink>
+              <DesktopNavItem
+                key={n.href}
+                item={n}
+                active={activeMega === n.label}
+                onHover={openMega}
+                onLeaveToNavigate={() => setActiveMega(null)}
+              />
             ))}
           </nav>
 
-          {/* width spacer reserves room for the absolute centered logo */}
-          <div className="col-start-2 justify-self-center" style={{ width: logoH, height: 1 }} aria-hidden />
+          {/* Logo — centered by equal flex sides */}
+          <div className="flex-shrink-0 px-12">
+            <Logo
+              height={logoH}
+              className="transition-[height] duration-500 [filter:drop-shadow(0_3px_8px_rgba(0,0,0,0.18))]"
+            />
+          </div>
 
-          <nav className="col-start-3 flex items-center justify-start gap-7">
+          {/* Right nav — flex-1 fills half the remaining space, items pushed left toward logo */}
+          <nav className="flex w-0 flex-1 items-center justify-start gap-12">
             {rightNav.map((n) => (
-              <NavLink key={n.href} href={n.href}>{n.label}</NavLink>
+              <DesktopNavItem
+                key={n.href}
+                item={n}
+                active={activeMega === n.label}
+                onHover={openMega}
+                onLeaveToNavigate={() => setActiveMega(null)}
+              />
             ))}
             <button aria-label="Search" className="opacity-70 transition-opacity hover:opacity-100">
               <Search className="h-4 w-4" strokeWidth={1.5} />
@@ -148,14 +241,35 @@ export function Navbar() {
           </nav>
         </div>
 
-        {/* Oversized centered logo (desktop) — overlaps from the navbar down into the hero */}
-        <div
-          className="pointer-events-none absolute left-1/2 z-20 hidden -translate-x-1/2 transition-[top] duration-500 lg:block"
-          style={{ top: scrolled ? 6 : 34 }}
-        >
-          <Logo height={logoH} className="pointer-events-auto [filter:drop-shadow(0_3px_8px_rgba(0,0,0,0.18))]" />
-        </div>
+        {/* ── Desktop mega menu ── */}
+        <AnimatePresence mode="wait">
+          {activeItem?.mega && (
+            <MegaPanel
+              key={activeItem.label}
+              menu={activeItem.mega}
+              onNavigate={() => setActiveMega(null)}
+              onMouseEnter={() => openMega(activeItem.label)}
+            />
+          )}
+        </AnimatePresence>
       </header>
+
+      {/* Dim the page behind an open mega — moving onto it (or clicking) closes the menu */}
+      <AnimatePresence>
+        {megaOpen && (
+          <motion.button
+            aria-hidden
+            tabIndex={-1}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onMouseEnter={scheduleClose}
+            onClick={() => setActiveMega(null)}
+            className="fixed inset-0 z-20 hidden cursor-default bg-ink/30 backdrop-blur-[1px] lg:block"
+          />
+        )}
+      </AnimatePresence>
 
       {/* Vertical BOOK NOW tab (desktop) — red */}
       <Link

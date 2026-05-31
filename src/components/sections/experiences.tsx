@@ -9,7 +9,7 @@ export function Experiences() {
     <section id="experiences" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Kicker>Things to Do</Kicker>
+          <Kicker className="text-brand">Things to Do</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
             Four Ways to Meet the Island
           </h2>

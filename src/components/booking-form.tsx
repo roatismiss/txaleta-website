@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import { site, rooms } from "@/lib/site";
+import { DatePicker } from "@/components/date-picker";
+import { addDays } from "date-fns";
 
 type Props = {
   initialCheckin?: string;
@@ -121,14 +123,20 @@ export function BookingForm({ initialCheckin, initialCheckout, initialGuests, in
             ))}
           </select>
         </label>
-        <label>
-          <span className={lbl}>Arrival</span>
-          <input type="date" value={form.checkin} onChange={(e) => update("checkin", e.target.value)} className={field} />
-        </label>
-        <label>
-          <span className={lbl}>Departure</span>
-          <input type="date" value={form.checkout} onChange={(e) => update("checkout", e.target.value)} className={field} />
-        </label>
+        <DatePicker
+          label="Arrival"
+          value={form.checkin}
+          onChange={(date) => update("checkin", date)}
+          minDate={new Date()}
+          placeholder="Check-in date"
+        />
+        <DatePicker
+          label="Departure"
+          value={form.checkout}
+          onChange={(date) => update("checkout", date)}
+          minDate={form.checkin ? addDays(new Date(form.checkin), 1) : addDays(new Date(), 1)}
+          placeholder="Check-out date"
+        />
       </div>
 
       <label className="block">

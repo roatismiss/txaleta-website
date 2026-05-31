@@ -9,7 +9,7 @@ export function Accommodation() {
     <section id="accommodation" className="bg-cream py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Kicker>The Ten Rooms</Kicker>
+          <Kicker className="text-brand">The Ten Rooms</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
             Where You Wake on Camiguin
           </h2>
@@ -41,7 +41,7 @@ export function Accommodation() {
 
                 {/* Text */}
                 <div className="[direction:ltr]">
-                  <Kicker>{room.kicker}</Kicker>
+                  <Kicker className="text-brand">{room.kicker}</Kicker>
                   <h3 className="font-display mt-4 text-3xl font-light text-ink sm:text-4xl">
                     {room.name}
                   </h3>
@@ -62,9 +62,12 @@ export function Accommodation() {
 
                   <Link
                     href={`/book?room=${room.slug}`}
-                    className="group/btn mt-9 inline-flex items-center gap-3 border-b border-sand pb-1 text-ink transition-colors hover:text-sand"
+                    className="group/btn mt-9 inline-flex items-center gap-3 text-ink transition-colors hover:text-brand"
                   >
-                    <span className="label text-[11px]">Check Availability</span>
+                    <span className="label relative pb-1 text-[11px]">
+                      Check Availability
+                      <span className="absolute bottom-0 left-0 h-[2px] w-full bg-brand transition-colors group-hover/btn:bg-brand-dark"></span>
+                    </span>
                     <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" strokeWidth={1.5} />
                   </Link>
                 </div>

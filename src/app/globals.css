@@ -72,3 +72,57 @@ body {
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+@keyframes fade-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Custom Calendar Styles - Txaleta Branded */
+.txaleta-calendar {
+  animation: fade-in 0.2s ease-out;
+}
+
+.txaleta-calendar .day_button:hover:not(.disabled):not(.selected) {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+}
+
+.txaleta-calendar .selected .day_button {
+  background-color: var(--color-sand) !important;
+  color: white !important;
+}
+
+.txaleta-calendar .selected .day_button:hover {
+  background-color: var(--color-sand-dark) !important;
+}
+
+.txaleta-calendar .today .day_button {
+  font-weight: 500;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+}
+
+.txaleta-calendar .button_previous svg,
+.txaleta-calendar .button_next svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 1.5;
+}
+
+.txaleta-calendar .caption_label {
+  font-family: var(--font-serif);
+}
+
+/* Respect reduced-motion: neutralize CSS animations/transitions site-wide.
+   (framer-motion is handled separately via useReducedMotion.) */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

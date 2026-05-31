@@ -7,7 +7,7 @@ export function Testimonials() {
     <section className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Kicker>Voices from Puting Balas</Kicker>
+          <Kicker className="text-brand">Voices from Puting Balas</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
             What Stayed With Them
           </h2>

@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ChatbotEmbed } from "@/components/chatbot-embed";
+import { MenuProvider } from "@/contexts/menu-context";
 
 const serif = Cormorant_Garamond({
   subsets: ["latin"],
@@ -64,10 +65,12 @@ export default function RootLayout({
       className={`${serif.variable} ${sans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-ink">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <ChatbotEmbed />
+        <MenuProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <ChatbotEmbed />
+        </MenuProvider>
       </body>
     </html>
   );

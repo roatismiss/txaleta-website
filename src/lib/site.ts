@@ -29,8 +29,8 @@ export const site = {
   },
 
   social: {
-    facebook: "https://www.facebook.com/txaletadecamiguin",
-    instagram: "https://www.instagram.com/txaletadecamiguin",
+    facebook: "https://www.facebook.com/p/Txaleta-de-Camiguin-61564911372698/",
+    instagram: "https://www.instagram.com/txaletadecamiguin/",
     tiktok: "https://www.tiktok.com/@txaletadecamiguin",
   },
 
@@ -41,6 +41,11 @@ export const site = {
       "https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Camiguin%20Island%20Scooter%20Rental.mp4",
     ],
     poster: "/images/resort/Aerialview_txaleta.webp",
+    // Static images that slide in sequence before the video starts.
+    slides: [
+      "/images/resort/Aerialview_txaleta.webp",
+      "/images/resort/txaleta_infinity_pool.jpg",
+    ],
   },
 
   // CloudReef integration. Bookings POST here and land in CloudReef as `pending`.
@@ -52,13 +57,22 @@ export const site = {
   },
 } as const;
 
-export const nav = [
-  { label: "Accommodation", href: "/#accommodation" },
-  { label: "Dining", href: "/#dining" },
-  { label: "Experiences", href: "/experiences" },
-  { label: "Gallery", href: "/#gallery" },
-  { label: "Contact", href: "/#contact" },
-] as const;
+// ── Navigation + desktop mega-menu model ────────────────────────────────────
+// Each top-level item may carry an optional `mega` panel (desktop-only): a
+// text rail of quick links plus a row of image cards on the right.
+export type MegaLink = { label: string; href: string };
+export type MegaCard = { name: string; kicker: string; image: string; href: string };
+export type MegaMenu = {
+  kicker: string;
+  heading: string;
+  blurb: string;
+  viewAll: MegaLink;
+  links: MegaLink[];
+  cards: MegaCard[];
+};
+export type NavItem = { label: string; href: string; mega?: MegaMenu };
+// `nav` is declared at the foot of this file so its mega cards can be built
+// from `rooms` / `experiences` (defined below).
 
 export type Room = {
   slug: string;
@@ -138,9 +152,39 @@ export const dining = {
     "/images/dining/nachos_sendiv.webp",
     "/images/dining/aerial_view_table.webp",
   ],
+  // Extended copy for the dedicated /dining page
+  stories: [
+    {
+      kicker: "Morning",
+      heading: "Breakfast at the Water's Edge",
+      body: "The day begins with the tide. Coffee arrives first — Barako from the highlands, roasted dark and honest. Then the rest: fresh fruit from the market at Mambajao, eggs done simply, fish from the boats that left while you were still asleep. Breakfast at Txaleta is not rushed. The table faces the sea and the morning is yours for as long as you want it.",
+      image: "/images/dining/breakfest_txaleta.webp",
+      imageAlt: "Breakfast served by the sea at Txaleta",
+    },
+    {
+      kicker: "All Day",
+      heading: "Filipino Cooking, Kept Honest",
+      body: "The kitchen runs on what the island gives. Sinigang built from tamarind and the morning's catch. Kare-kare slow-cooked until the sauce holds. Lanzones from the trees behind Mambajao, sweet enough to eat by the handful when the season comes. A few easy international plates for the afternoons when you want something lighter — but the Filipino table is the one worth knowing.",
+      image: "/images/dining/food_txaleta.webp",
+      imageAlt: "Filipino dishes at Txaleta de Camiguin",
+    },
+    {
+      kicker: "Evening",
+      heading: "Dinner While the Sea Goes Gold",
+      body: "By late afternoon the light turns amber over the Bohol Sea. The café slows down. A cold San Miguel, or something from the bar. The nachos arrive — crisp, messy, exactly right. The snapper is grilled over coals with calamansi and butter. Dinner is unhurried here: the kind of meal that lasts past dark because no one at the table wants to be the first to leave.",
+      image: "/images/dining/nachos_sendiv.webp",
+      imageAlt: "Evening dining at Txaleta de Camiguin",
+    },
+  ],
+  atmosphere: [
+    "/images/resort/rayligh_lounge.webp",
+    "/images/resort/common-area.webp",
+    "/images/resort/terrace_view.webp",
+    "/images/resort/night_view.webp",
+  ],
 };
 
-export type Experience = { title: string; description: string; image: string; video?: string };
+export type Experience = { title: string; description: string; image: string; video?: string; hoverImage?: string };
 
 export const experiences: Experience[] = [
   {
@@ -148,18 +192,21 @@ export const experiences: Experience[] = [
     description:
       "A banca carries you past quiet coves to White Island's bare white spit and the reefs below, where the Bohol Sea turns clear over coral and the island's sheltered giant clams.",
     image: "/images/experiences/txaleta_private_boat.webp",
+    hoverImage: "/images/experiences/Txaleta_private_boat_interior.webp",
   },
   {
     title: "The Bohol Sea, Faster",
     description:
       "Open throttle across open water, the volcano shrinking behind you. Jet skis and watersports for the mornings you would rather feel the sea than drift on it.",
     image: "/images/experiences/jet_ski_txaleta.webp",
+    hoverImage: "/images/experiences/ski_jet_camiguin.jpg",
   },
   {
     title: "Up the Living Volcano",
     description:
       "Guided ascents of active Hibok-Hibok climb through rainforest and spring-fed shade to a ridgeline where the whole island, and the sea around it, falls away below you.",
     image: "/images/resort/txaleta_forest.webp",
+    hoverImage: "/images/resort/telescope.webp",
   },
   {
     title: "One Road, All Day",
@@ -202,4 +249,76 @@ export const testimonials: Testimonial[] = [
     name: "Randulph",
     date: "April 2025",
   },
+];
+
+// ============================================================================
+// Navigation — top bar + desktop mega menus
+// Declared last so the mega cards can read from `rooms` / `experiences` above.
+// ============================================================================
+
+const diningMega: MegaMenu = {
+  kicker: "The Café",
+  heading: "Dining by the Sea",
+  blurb:
+    "Fresh Filipino cooking at the water's edge — breakfast with the tide, long lunches, and dinners that last past dark.",
+  viewAll: { label: "See the Full Story", href: "/dining" },
+  links: [
+    { label: "Breakfast & Coffee", href: "/dining#morning" },
+    { label: "Filipino Kitchen", href: "/dining#all-day" },
+    { label: "Evening Menu", href: "/dining#evening" },
+    { label: "Reserve a Table", href: "/book" },
+  ],
+  cards: [
+    { name: "Breakfast by the Tide", kicker: "Morning", image: "/images/dining/breakfest_txaleta.webp", href: "/dining#morning" },
+    { name: "The Filipino Table", kicker: "All Day", image: "/images/dining/food_txaleta.webp", href: "/dining#all-day" },
+    { name: "Evenings at the Café", kicker: "Evening", image: "/images/dining/aerial_view_table.webp", href: "/dining#evening" },
+  ],
+};
+
+const accommodationMega: MegaMenu = {
+  kicker: "Stay With Us",
+  heading: "Rooms by the Sea",
+  blurb:
+    "Ten rooms between the volcano and the Bohol Sea — seaview suites, cliff-edge glamping and quiet garden retreats.",
+  viewAll: { label: "All Accommodation", href: "/accommodation" },
+  links: [
+    { label: "Inclusions & Amenities", href: "/accommodation#inclusions" },
+    { label: "Dining by the Sea", href: "/#dining" },
+    { label: "The Gallery", href: "/#gallery" },
+    { label: "Book Direct", href: "/book" },
+  ],
+  cards: rooms.map((r) => ({
+    name: r.name,
+    kicker: r.kicker,
+    image: r.cover,
+    href: `/accommodation#${r.slug}`,
+  })),
+};
+
+const experiencesMega: MegaMenu = {
+  kicker: "Things to Do",
+  heading: "Meet the Island",
+  blurb:
+    "By banca, by ridgeline, by the slow turn of a coastal road — choose how you take Camiguin.",
+  viewAll: { label: "All Experiences", href: "/experiences" },
+  links: [
+    { label: "Island Boat Tours", href: "/experiences" },
+    { label: "Mount Hibok-Hibok", href: "/experiences" },
+    { label: "Beyond the Resort", href: "/experiences" },
+    { label: "Plan Your Stay", href: "/book" },
+  ],
+  cards: experiences.slice(0, 3).map((e) => ({
+    name: e.title,
+    kicker: "Signature",
+    image: e.image,
+    href: "/experiences",
+  })),
+};
+
+export const nav: NavItem[] = [
+  { label: "Accommodation", href: "/accommodation", mega: accommodationMega },
+  { label: "Dining", href: "/dining", mega: diningMega },
+  { label: "Experiences", href: "/experiences", mega: experiencesMega },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Contact", href: "/#contact" },
 ];

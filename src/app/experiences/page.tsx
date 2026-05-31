@@ -26,7 +26,7 @@ export default function ExperiencesPage() {
   return (
     <>
       {/* Banner */}
-      <section className="relative flex h-[52vh] min-h-[380px] items-end overflow-hidden">
+      <section className="relative flex h-[75vh] min-h-[500px] items-end overflow-hidden">
         <video
           src="https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Camiguin%20Island%20Scooter%20Rental.mp4"
           poster="/images/experiences/txaleta_boat.webp"
@@ -39,7 +39,7 @@ export default function ExperiencesPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/40" />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-14 text-white">
-          <Kicker>Things to Do on Camiguin</Kicker>
+          <Kicker className="font-bold text-brand [text-shadow:0_0_8px_rgba(0,0,0,1),0_0_16px_rgba(0,0,0,1),0_2px_4px_rgba(0,0,0,0.95),0_4px_24px_rgba(0,0,0,0.8)]">Things to Do on Camiguin</Kicker>
           <h1 className="font-display mt-4 text-5xl font-light sm:text-6xl md:text-7xl">Experiences</h1>
         </div>
       </section>
@@ -74,13 +74,24 @@ export default function ExperiencesPage() {
                         className="absolute inset-0 h-full w-full object-cover"
                       />
                     ) : (
-                      <Image
-                        src={exp.image}
-                        alt={exp.title}
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                        className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
-                      />
+                      <>
+                        <Image
+                          src={exp.image}
+                          alt={exp.title}
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                          className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
+                        />
+                        {exp.hoverImage && (
+                          <Image
+                            src={exp.hoverImage}
+                            alt={`${exp.title} — alternate view`}
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                            className="object-cover opacity-0 transition-opacity duration-1000 ease-in-out group-hover:opacity-100"
+                          />
+                        )}
+                      </>
                     )}
                   </div>
                   <div className="[direction:ltr]">

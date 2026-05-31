@@ -69,7 +69,7 @@ export function Intro() {
         {/* Pull quote */}
         <Reveal delay={0.1}>
           <blockquote className="mx-auto mt-20 max-w-3xl text-center">
-            <span className="rule-line font-display text-2xl font-light italic text-ink/80 sm:text-3xl">
+            <span className="rule-line font-display text-2xl font-light italic text-brand sm:text-3xl">
               Some islands you visit. Camiguin, you remember.
             </span>
           </blockquote>
