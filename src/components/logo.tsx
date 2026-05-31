@@ -45,7 +45,7 @@ export function LogoWordmark({
       <span className={`font-display ${wordmark} tracking-[0.04em] uppercase`} style={{ fontWeight: 400 }}>
         Txaleta
       </span>
-      <span className={`label ${sub} mt-1.5 text-sand`}>de Camiguin</span>
+      <span className={`label ${sub} mt-1.5 text-brand`}>de Camiguin</span>
     </Link>
   );
 }

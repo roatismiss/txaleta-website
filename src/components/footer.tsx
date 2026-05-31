@@ -38,7 +38,7 @@ export function Footer() {
 
           {/* Explore */}
           <div>
-            <h3 className="label text-[10px] text-sand">Explore</h3>
+            <h3 className="label text-[10px] text-brand">Explore</h3>
             <ul className="mt-5 space-y-3">
               {explore.map((l) => (
                 <li key={l.href}>
@@ -52,7 +52,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="label text-[10px] text-sand">Contact</h3>
+            <h3 className="label text-[10px] text-brand">Contact</h3>
             <ul className="mt-5 space-y-3 text-sm text-white/65">
               <li>{site.location.address}</li>
               <li><a href={`tel:${site.contact.phoneRaw}`} className="transition-colors hover:text-white">{site.contact.phone}</a></li>
