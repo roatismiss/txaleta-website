@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { experiences, site } from "@/lib/site";
+import { experiences } from "@/lib/site";
 import { Reveal, Kicker } from "@/components/reveal";
+import { ExperienceCardImage } from "@/components/experience-card-image";
 
 export const metadata: Metadata = {
   title: "Experiences",
@@ -61,7 +62,7 @@ export default function ExperiencesPage() {
             {experiences.map((exp, i) => (
               <Reveal key={exp.title}>
                 <div className={`grid items-center gap-8 lg:grid-cols-2 lg:gap-16 ${i % 2 === 1 ? "lg:[direction:rtl]" : ""}`}>
-                  <div className="group relative aspect-[4/3] w-full overflow-hidden [direction:ltr]">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden [direction:ltr]">
                     {exp.video ? (
                       <video
                         src={exp.video}
@@ -74,24 +75,12 @@ export default function ExperiencesPage() {
                         className="absolute inset-0 h-full w-full object-cover"
                       />
                     ) : (
-                      <>
-                        <Image
-                          src={exp.image}
-                          alt={exp.title}
-                          fill
-                          sizes="(max-width: 1024px) 100vw, 50vw"
-                          className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
-                        />
-                        {exp.hoverImage && (
-                          <Image
-                            src={exp.hoverImage}
-                            alt={`${exp.title} — alternate view`}
-                            fill
-                            sizes="(max-width: 1024px) 100vw, 50vw"
-                            className="object-cover opacity-0 transition-opacity duration-1000 ease-in-out group-hover:opacity-100"
-                          />
-                        )}
-                      </>
+                      <ExperienceCardImage
+                        image={exp.image}
+                        hoverImage={exp.hoverImage}
+                        alt={exp.title}
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
                     )}
                   </div>
                   <div className="[direction:ltr]">
@@ -154,7 +143,7 @@ export default function ExperiencesPage() {
             {island.map((p, i) => (
               <Reveal key={p.name} delay={(i % 2) * 0.08}>
                 <div className="flex gap-5 border-t border-ink/10 pt-6">
-                  <span className="font-display text-2xl font-light text-sand">{`0${i + 1}`}</span>
+                  <span className="font-display text-2xl font-light text-brand">{`0${i + 1}`}</span>
                   <div>
                     <h3 className="font-display text-2xl font-light text-ink">{p.name}</h3>
                     <p className="mt-2 text-[14px] leading-relaxed text-ink/65">{p.note}</p>

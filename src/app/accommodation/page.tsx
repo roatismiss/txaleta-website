@@ -79,7 +79,7 @@ export default function AccommodationPage() {
                   {/* Text */}
                   <div className="[direction:ltr]">
                     <div className="flex items-baseline gap-4">
-                      <span className="font-display text-2xl font-light text-sand">{`0${i + 1}`}</span>
+                      <span className="font-display text-2xl font-light text-brand">{`0${i + 1}`}</span>
                       <Kicker className="text-brand">{room.kicker}</Kicker>
                     </div>
                     <h2 className="font-display mt-3 text-3xl font-light text-ink sm:text-4xl">

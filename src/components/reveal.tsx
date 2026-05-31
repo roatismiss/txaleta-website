@@ -24,10 +24,10 @@ export function Reveal({
   );
 }
 
-/** Small uppercase gold kicker used above section headings. */
+/** Small uppercase signature-red kicker used above section headings. */
 export function Kicker({
   children,
-  className = "text-sand",
+  className = "text-brand",
 }: {
   children: React.ReactNode;
   className?: string;

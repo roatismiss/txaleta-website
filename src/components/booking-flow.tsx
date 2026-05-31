@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { addDays, format } from "date-fns";
 import {
@@ -77,6 +77,10 @@ export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, in
   const [processing, setProcessing] = useState(false);
   const [stepError, setStepError] = useState<string | null>(null);
   const [result, setResult] = useState<ConfirmResponse | null>(null);
+
+  // Top of the flow, so each step transition can scroll back into view.
+  const flowRef = useRef<HTMLDivElement>(null);
+  const didMountRef = useRef(false);
 
   // Map an incoming room slug → CloudReef display name (best-effort).
   const initialTypeName = useMemo(() => {
@@ -221,6 +225,22 @@ export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, in
     }
   }
 
+  // On every step change (Continue / Pay / Back, and the success screen), bring
+  // the step tracker back to the top — otherwise the next step opens wherever
+  // the previous button sat, mid-page. Skip the initial mount so the page load
+  // doesn't jump past the hero.
+  useEffect(() => {
+    if (!didMountRef.current) {
+      didMountRef.current = true;
+      return;
+    }
+    const el = flowRef.current;
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - 88; // clear condensed nav (72px) + air
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top, behavior: reduce ? "auto" : "smooth" });
+  }, [step]);
+
   // ── Render ────────────────────────────────────────────────────────────────
   if (loading) return <FlowSkeleton />;
 
@@ -243,11 +263,15 @@ export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, in
   }
 
   if (step === "done" && result) {
-    return <SuccessCard result={result} currency={currency} email={contact.email} />;
+    return (
+      <div ref={flowRef}>
+        <SuccessCard result={result} currency={currency} email={contact.email} />
+      </div>
+    );
   }
 
   return (
-    <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr]">
+    <div ref={flowRef} className="grid gap-12 lg:grid-cols-[1.5fr_1fr]">
       <div>
         <StepNav step={step} />
 

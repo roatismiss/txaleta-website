@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { experiences } from "@/lib/site";
 import { Reveal, Kicker } from "../reveal";
+import { ExperienceCardImage } from "../experience-card-image";
 
 export function Experiences() {
   return (
@@ -22,16 +22,15 @@ export function Experiences() {
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {experiences.map((exp, i) => (
             <Reveal key={exp.title} delay={i * 0.08}>
-              <div className="group relative h-[26rem] overflow-hidden">
-                <Image
-                  src={exp.image}
+              <div className="relative h-[26rem] overflow-hidden">
+                <ExperienceCardImage
+                  image={exp.image}
+                  hoverImage={exp.hoverImage}
                   alt={exp.title}
-                  fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent" />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 p-6 text-white">
                   <h3 className="font-display text-2xl font-light">{exp.title}</h3>
                   <p className="mt-2 text-[13px] leading-relaxed text-white/75">
                     {exp.description}

@@ -64,7 +64,7 @@ export function MegaPanel({
         <div className="mx-auto grid max-h-[calc(100dvh-8.5rem)] max-w-7xl grid-cols-[0.85fr_2.15fr] gap-12 overflow-y-auto px-6 py-10">
           {/* ── Left rail: heading, view-all, quick links ── */}
           <motion.div variants={item} className="flex flex-col">
-            <p className="label text-[11px] text-sand">{menu.kicker}</p>
+            <p className="label text-[11px] text-brand">{menu.kicker}</p>
             <h3 className="font-display mt-3 text-3xl font-light leading-tight text-ink">
               {menu.heading}
             </h3>
@@ -125,7 +125,7 @@ export function MegaPanel({
                     <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/0 transition-all duration-500 group-hover:ring-white/30" />
 
                     <div className="absolute inset-x-0 bottom-0 p-4 text-white">
-                      <p className="label text-[9px] text-sand [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]">
+                      <p className="label text-[9px] text-brand [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]">
                         {c.kicker}
                       </p>
                       <h4 className="font-display mt-1 text-xl font-light leading-snug [text-shadow:0_1px_5px_rgba(0,0,0,0.5)]">
