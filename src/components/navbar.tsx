@@ -134,7 +134,7 @@ export function Navbar() {
 
   // Logo + paddings track scroll ONLY — not megaOpen — so opening a mega never
   // collapses the header (which would fight the panel's drop-in animation).
-  const logoH = scrolled ? 56 : 90;
+  const logoH = scrolled ? 60 : 140;
   const mobileLogoH = scrolled ? 44 : 56;
 
   return (
