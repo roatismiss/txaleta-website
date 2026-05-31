@@ -13,7 +13,7 @@ const explore = [
 
 export function Footer() {
   return (
-    <footer className="bg-ink-soft text-white">
+    <footer className="bg-black text-white">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-12 md:grid-cols-4">
           {/* Brand */}
