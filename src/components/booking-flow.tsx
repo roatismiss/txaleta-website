@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { addDays, format } from "date-fns";
 import {
@@ -22,7 +22,7 @@ import {
   confirmBooking,
   formatMoney,
   nightsBetween,
-  nightsInRange,
+  nightKeysInRange,
   ymdToDate,
   type ApiRoomType,
   type ConfirmResponse,
@@ -84,21 +84,34 @@ export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, in
     return siteRooms.find((r) => r.slug === initialRoom)?.name ?? "";
   }, [initialRoom]);
 
-  // ── Load rooms + availability once ────────────────────────────────────────
+  // Gentle note when a stale/invalid date selection is cleared for a room.
+  const [availNote, setAvailNote] = useState<string | null>(null);
+
+  // Pull LIVE availability (all room types in one call) from CloudReef.
+  const refreshAvailability = useCallback(async () => {
+    try {
+      const from = format(new Date(), "yyyy-MM-dd");
+      const to = format(addDays(new Date(), 180), "yyyy-MM-dd");
+      const availRes = await fetchAvailability(from, to);
+      const map: Record<string, string[]> = {};
+      for (const t of availRes.types) map[t.name] = t.fullyBookedDates;
+      setFullyBookedByType(map);
+    } catch {
+      /* keep last-known availability rather than blanking the calendar */
+    }
+  }, []);
+
+  // Initial load: rooms + first availability pull.
   useEffect(() => {
     let alive = true;
     (async () => {
       try {
-        const from = format(new Date(), "yyyy-MM-dd");
-        const to = format(addDays(new Date(), 180), "yyyy-MM-dd");
-        const [roomsRes, availRes] = await Promise.all([fetchRooms(), fetchAvailability(from, to)]);
+        const roomsRes = await fetchRooms();
         if (!alive) return;
         setCurrency(roomsRes.currency || "PHP");
         setRoomTypes(roomsRes.roomTypes);
-        const map: Record<string, string[]> = {};
-        for (const t of availRes.types) map[t.name] = t.fullyBookedDates;
-        setFullyBookedByType(map);
-        // Preselect from query if it matches a real type
+        await refreshAvailability();
+        if (!alive) return;
         if (initialTypeName && roomsRes.roomTypes.some((t) => t.name === initialTypeName)) {
           setTypeName(initialTypeName);
         }
@@ -111,7 +124,13 @@ export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, in
     return () => {
       alive = false;
     };
-  }, [initialTypeName]);
+  }, [initialTypeName, refreshAvailability]);
+
+  // Re-pull availability whenever the guest focuses a different room — keeps the
+  // calendar live (e.g. reflects a booking just made this session).
+  useEffect(() => {
+    if (typeName) refreshAvailability();
+  }, [typeName, refreshAvailability]);
 
   const selectedType = roomTypes.find((t) => t.name === typeName) ?? null;
   const nights = nightsBetween(checkin, checkout);
@@ -122,11 +141,36 @@ export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, in
     return list.map(ymdToDate);
   }, [typeName, fullyBookedByType]);
 
+  // First booked night strictly after check-in — caps check-out so a stay can't
+  // be selected straddling an occupied block.
+  const checkoutMaxDate = useMemo(() => {
+    if (!typeName || !checkin) return undefined;
+    const after = (fullyBookedByType[typeName] ?? []).filter((d) => d > checkin).sort();
+    return after.length ? ymdToDate(after[0]) : undefined;
+  }, [typeName, checkin, fullyBookedByType]);
+
+  // When the room (or its live availability) changes, drop any now-unavailable
+  // dates so the guest is never told "those dates aren't free" AFTER picking.
+  useEffect(() => {
+    if (!typeName || !checkin) return;
+    const booked = new Set(fullyBookedByType[typeName] ?? []);
+    const keys = checkout ? nightKeysInRange(checkin, checkout) : [checkin];
+    if (keys.some((k) => booked.has(k))) {
+      setCheckin("");
+      setCheckout("");
+      setAvailNote("Those dates are booked for this room — please pick from the available days.");
+    } else {
+      setAvailNote(null);
+    }
+    // Only re-check on room / availability change (not on every date keystroke).
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [typeName, fullyBookedByType]);
+
   // Does the chosen span include any fully-booked night for the selected type?
   function spanAvailable(): boolean {
     if (!selectedType || !checkin || !checkout || nights < 1) return false;
     const booked = new Set(fullyBookedByType[typeName] ?? []);
-    return nightsInRange(checkin, checkout).every((d) => !booked.has(format(d, "yyyy-MM-dd")));
+    return nightKeysInRange(checkin, checkout).every((k) => !booked.has(k));
   }
 
   // ── Step transitions ──────────────────────────────────────────────────────
@@ -226,6 +270,8 @@ export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, in
             guests={guests}
             setGuests={setGuests}
             disabledDates={disabledDatesForSelected}
+            checkoutMaxDate={checkoutMaxDate}
+            availNote={availNote}
             selectedType={selectedType}
           />
         )}
@@ -353,6 +399,8 @@ function StayStep(props: {
   guests: number;
   setGuests: (n: number) => void;
   disabledDates: Date[];
+  checkoutMaxDate?: Date;
+  availNote: string | null;
   selectedType: ApiRoomType | null;
 }) {
   const {
@@ -367,6 +415,8 @@ function StayStep(props: {
     guests,
     setGuests,
     disabledDates,
+    checkoutMaxDate,
+    availNote,
     selectedType,
   } = props;
 
@@ -481,6 +531,7 @@ function StayStep(props: {
               value={checkout}
               onChange={setCheckout}
               minDate={checkin ? addDays(ymdToDate(checkin), 1) : addDays(new Date(), 1)}
+              maxDate={checkoutMaxDate}
               placeholder="Add date"
               disabledDates={disabledDates}
               openSignal={checkoutOpenSignal}
@@ -503,8 +554,14 @@ function StayStep(props: {
             <Users className="pointer-events-none absolute right-1 top-1/2 h-4 w-4 -translate-y-1/2 text-sand" strokeWidth={1.5} />
           </label>
         </div>
+        {availNote && (
+          <p className="mt-4 flex items-center gap-2 text-[12px] text-amber-700">
+            <AlertCircle className="h-3.5 w-3.5 shrink-0" />
+            {availNote}
+          </p>
+        )}
         {disabledDates.length > 0 && (
-          <p className="mt-4 flex items-center gap-2 text-[12px] text-ink/45">
+          <p className="mt-3 flex items-center gap-2 text-[12px] text-ink/45">
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-ink/15" />
             Greyed-out dates are already booked for this room.
           </p>

@@ -148,14 +148,19 @@ export function nightsBetween(checkin: string, checkout: string): number {
   return Math.round((b - a) / 86400000);
 }
 
-/** Each night Date object in [checkin, checkout) — for availability checks. */
-export function nightsInRange(checkin: string, checkout: string): Date[] {
-  const out: Date[] = [];
-  const start = new Date(`${checkin}T00:00:00.000Z`);
+/**
+ * Each night in [checkin, checkout) as a UTC "YYYY-MM-DD" key. String-based and
+ * timezone-independent, so it compares cleanly against the API's
+ * fullyBookedDates (which are UTC date strings) with no off-by-one.
+ */
+export function nightKeysInRange(checkin: string, checkout: string): string[] {
+  const out: string[] = [];
+  let d = new Date(`${checkin}T00:00:00.000Z`);
   const end = new Date(`${checkout}T00:00:00.000Z`);
-  if (isNaN(start.getTime()) || isNaN(end.getTime())) return out;
-  for (let d = start; d < end; d = new Date(d.getTime() + 86400000)) {
-    out.push(new Date(d));
+  if (isNaN(d.getTime()) || isNaN(end.getTime())) return out;
+  while (d < end) {
+    out.push(d.toISOString().slice(0, 10));
+    d = new Date(d.getTime() + 86400000);
   }
   return out;
 }
