@@ -260,6 +260,50 @@ export const experiences: Experience[] = [
   },
 ];
 
+// Vehicle & watercraft rentals — shown on /experiences#rentals. Prices mirror
+// the CloudReef bookable activities (migration 045) so the site and the folio
+// charge match. Edit prices/copy here, the single source of truth.
+export type RentalRate = { label: string; price: string };
+export type Rental = { name: string; blurb: string; rates: RentalRate[] };
+
+export const rentals = {
+  kicker: "Getting Around",
+  heading: "The Island, at Your Own Pace",
+  body: "Take Camiguin on your own terms — a scooter for the coast road, a vehicle for the family, or the open sea by jet ski. We arrange it all from the front desk and add it straight to your stay.",
+  items: [
+    {
+      name: "Scooter",
+      blurb: "Nimble and easy for solo island cruising — the simplest way to take the 64-kilometre ring road at your own pace.",
+      rates: [{ label: "Per day", price: "₱450" }],
+    },
+    {
+      name: "SUV / AUV",
+      blurb: "Spacious and comfortable for families and groups — room for everyone, and for the day's plans.",
+      rates: [
+        { label: "Per day", price: "₱2,850" },
+        { label: "Half day", price: "₱1,500" },
+      ],
+    },
+    {
+      name: "Local Driver",
+      blurb: "Add a local driver for ease and insider tips around the island — let someone who knows the roads do the driving.",
+      rates: [
+        { label: "Per day", price: "+₱1,000" },
+        { label: "Half day", price: "+₱500" },
+      ],
+    },
+    {
+      name: "Jet Ski",
+      blurb: "Thrilling rides across the Bohol Sea, with safety gear and a full orientation included before you set off.",
+      rates: [
+        { label: "4 hours", price: "₱7,000" },
+        { label: "Additional hour", price: "₱1,500" },
+      ],
+    },
+  ] as Rental[],
+  note: "Every rental comes with essential inclusions, flexible durations and a clear fuel-return policy — making each journey smooth, comfortable and tailored to your stay.",
+};
+
 export const gallery = [
   "/images/resort/txaleta_hero.webp",
   "/images/resort/night_view.webp",
@@ -347,6 +391,7 @@ const experiencesMega: MegaMenu = {
   links: [
     { label: "Island Boat Tours", href: "/experiences" },
     { label: "Mount Hibok-Hibok", href: "/experiences" },
+    { label: "Vehicle Rentals", href: "/experiences#rentals" },
     { label: "Beyond the Resort", href: "/experiences" },
     { label: "Plan Your Stay", href: "/book" },
   ],
