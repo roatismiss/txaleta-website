@@ -498,7 +498,7 @@ function StayStep(props: {
                 <div className="p-5">
                   <div className="flex items-center justify-between">
                     <span className="label inline-flex items-center gap-1.5 text-[9px] text-ink/45">
-                      <BedDouble className="h-3.5 w-3.5 text-sand" strokeWidth={1.5} />
+                      <BedDouble className="h-3.5 w-3.5 text-brand" strokeWidth={1.5} />
                       Sleeps {t.max_occupancy} · {t.count} {t.count === 1 ? "room" : "rooms"}
                     </span>
                     <span className="text-ink">

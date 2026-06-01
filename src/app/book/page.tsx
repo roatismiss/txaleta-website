@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { CalendarCheck, Zap, ShieldCheck, Mail } from "lucide-react";
+import { CalendarCheck, Zap, ShieldCheck, Mail, type LucideIcon } from "lucide-react";
 import { BookingFlow } from "@/components/booking-flow";
 import { Kicker } from "@/components/reveal";
 import { PoweredByCloudReef } from "@/components/powered-by";
@@ -60,15 +60,18 @@ export default async function BookPage({
 
           {/* Trust strip — the CloudReef booking-engine advantage */}
           <div className="mt-8 flex flex-col gap-3 border-y border-ink/10 py-5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-3">
-            {[
+            {([
               { icon: CalendarCheck, label: "Live availability" },
               { icon: Zap, label: "Instant confirmation" },
-              { icon: ShieldCheck, label: "Secure payment" },
+              { icon: ShieldCheck, label: "Secure payment", note: "GCash · Maya · Apple Pay" },
               { icon: Mail, label: "Email in seconds" },
-            ].map(({ icon: Icon, label }) => (
-              <span key={label} className="flex items-center gap-2.5 text-[13px] text-ink/70">
-                <Icon className="h-4 w-4 text-brand" strokeWidth={1.5} aria-hidden />
-                {label}
+            ] as { icon: LucideIcon; label: string; note?: string }[]).map(({ icon: Icon, label, note }) => (
+              <span key={label} className="flex items-start gap-2.5 text-[13px] text-ink/70">
+                <Icon className="mt-0.5 h-4 w-4 shrink-0 text-brand" strokeWidth={1.5} aria-hidden />
+                <span className="flex flex-col leading-tight">
+                  <span>{label}</span>
+                  {note && <span className="mt-0.5 text-[11px] text-ink/45">{note}</span>}
+                </span>
               </span>
             ))}
             <PoweredByCloudReef tone="light" className="sm:ml-auto" />

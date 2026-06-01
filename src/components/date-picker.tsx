@@ -217,7 +217,7 @@ export function DatePicker({ label, value, onChange, minDate, placeholder, disab
         <span className={`text-sm ${displayValue ? "text-ink" : "text-ink/35"}`}>
           {displayValue || placeholder || "Select date"}
         </span>
-        <CalendarDays className="h-4 w-4 text-sand" strokeWidth={1.5} />
+        <CalendarDays className="h-4 w-4 text-brand" strokeWidth={1.5} />
       </button>
 
       {open && (
