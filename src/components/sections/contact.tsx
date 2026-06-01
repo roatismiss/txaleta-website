@@ -73,14 +73,16 @@ export function Contact() {
           </Link>
         </Reveal>
 
-        <div className="relative min-h-[360px] w-full lg:min-h-full">
-          <iframe
-            title="Map — Txaleta de Camiguin"
-            src={mapsEmbed}
-            className="absolute inset-0 h-full w-full grayscale-[0.3]"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+        <div className="flex items-center justify-center px-6 pb-16 sm:px-12 lg:py-16 lg:pl-0 lg:pr-12">
+          <div className="relative h-[300px] w-full max-w-xl overflow-hidden rounded-md border border-white/10 shadow-2xl sm:h-[360px] lg:h-[440px]">
+            <iframe
+              title="Map — Txaleta de Camiguin"
+              src={mapsEmbed}
+              className="absolute inset-0 h-full w-full grayscale-[0.3]"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -63,6 +63,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      // The pre-paint splash script sets `data-splash-seen` on <html> before
+      // hydration; suppress the (expected) attribute mismatch on this element only.
+      suppressHydrationWarning
       className={`${serif.variable} ${sans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-ink">
