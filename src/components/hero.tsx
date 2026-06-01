@@ -32,11 +32,18 @@ export function Hero() {
     return () => clearInterval(interval);
   }, [slides.length]);
 
-  // Start video playback once slideshow ends
+  // Play the active video — on the slideshow hand-off AND every time videoIdx
+  // changes. Swapping a <video>'s src in React does NOT auto-resume playback,
+  // so without this the 2nd/3rd video in the cycle just froze on its first
+  // frame. load() picks up the new src, then play() starts it (this order does
+  // not trigger the "play() interrupted by load()" abort).
   useEffect(() => {
     if (!showVideo) return;
-    videoRef.current?.play().catch(() => {});
-  }, [showVideo]);
+    const v = videoRef.current;
+    if (!v) return;
+    v.load();
+    v.play().catch(() => {});
+  }, [videoIdx, showVideo]);
 
   const handleEnded = () => {
     if (videos.length > 1) setVideoIdx((i) => (i + 1) % videos.length);
@@ -89,6 +96,7 @@ export function Hero() {
           ref={videoRef}
           src={videos[videoIdx]}
           onEnded={handleEnded}
+          poster={site.hero.poster}
           className="h-full w-full object-cover"
           muted
           playsInline
