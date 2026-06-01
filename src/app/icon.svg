@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Txaleta mark (arch + negative-space X) on white — favicon.
+       Wordmark omitted: it is illegible at favicon sizes; the mark reads clearly. -->
+  <rect width="512" height="512" fill="#ffffff"/>
+  <path d="M 116 426 L 116 247 Q 116 106 256 86 Q 396 106 396 247 L 396 426 Z" fill="#111111"/>
+  <!-- white X = negative space (white-on-white outside the arch is simply invisible) -->
+  <g stroke="#ffffff" stroke-width="41" stroke-linecap="round">
+    <line x1="159" y1="137" x2="353" y2="371"/>
+    <line x1="353" y1="137" x2="159" y2="371"/>
+  </g>
+</svg>
