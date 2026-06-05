@@ -107,7 +107,7 @@ export const bookingProvider: "cloudbeds" | "cloudreef" = "cloudbeds";
 //   "iframe"  → legacy inline iframe. DEPRECATED by Cloudbeds — its SameSite
 //               cookies are blocked inside a cross-origin iframe on iOS Safari /
 //               in-app browsers, breaking payment mid-checkout. Do NOT use live.
-export const cloudbedsEmbedMode: "new-tab" | "be-plus" | "iframe" = "new-tab";
+export const cloudbedsEmbedMode: "new-tab" | "be-plus" | "iframe" = "be-plus";
 
 // ── Navigation + desktop mega-menu model ────────────────────────────────────
 // Each top-level item may carry an optional `mega` panel (desktop-only): a

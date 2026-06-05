@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { ArrowUpRight } from "lucide-react";
 import { site, cloudbedsEmbedMode } from "@/lib/site";
 import { cloudbedsEngineUrl, cloudbedsEnabled } from "@/lib/cloudbeds";
@@ -76,8 +77,26 @@ export function CloudbedsBooking({ checkin, checkout, guests }: Props) {
     );
   }
 
-  // Default = first-party new-tab handoff (also the interim for "be-plus" until
-  // the Immersive Experience embed code is wired up).
+  // Booking Engine Plus / Immersive Experience 2.0 — true first-party in-page
+  // embed (works on iOS Safari + in-app browsers; no third-party cookies). The
+  // loader script defines the <cb-immersive-experience> web component, bound to
+  // the property via `property-code`. NOTE: Cloudbeds only renders the engine on
+  // domains whitelisted in the property's Booking Engine settings — until our
+  // domain is whitelisted it will not display.
+  if (cloudbedsEmbedMode === "be-plus") {
+    return (
+      <div className="cloudbeds-immersive min-h-[600px]">
+        <Script
+          src="https://static1.cloudbeds.com/booking-engine/latest/static/js/immersive-experience/cb-immersive-experience.js"
+          strategy="afterInteractive"
+          data-cookieconsent="ignore"
+        />
+        <cb-immersive-experience mode="standard" property-code={site.cloudbeds.propertyId}></cb-immersive-experience>
+      </div>
+    );
+  }
+
+  // Default = first-party new-tab handoff.
   const ci = fmtDate(checkin);
   const co = fmtDate(checkout);
   const hasDates = Boolean(ci && co);
