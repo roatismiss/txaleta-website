@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { CalendarCheck, Zap, ShieldCheck, Mail, type LucideIcon } from "lucide-react";
 import { BookingFlow } from "@/components/booking-flow";
+import { CloudbedsBooking } from "@/components/cloudbeds-booking";
 import { Kicker } from "@/components/reveal";
 import { PoweredByCloudReef } from "@/components/powered-by";
-import { site } from "@/lib/site";
+import { site, bookingProvider } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Book Your Stay",
@@ -74,16 +75,26 @@ export default async function BookPage({
                 </span>
               </span>
             ))}
-            <PoweredByCloudReef tone="light" className="sm:ml-auto" />
+            {bookingProvider === "cloudreef" && (
+              <PoweredByCloudReef tone="light" className="sm:ml-auto" />
+            )}
           </div>
 
           <div className="mt-12">
-            <BookingFlow
-              initialCheckin={first(sp.checkin)}
-              initialCheckout={first(sp.checkout)}
-              initialGuests={first(sp.guests)}
-              initialRoom={first(sp.room)}
-            />
+            {bookingProvider === "cloudbeds" ? (
+              <CloudbedsBooking
+                checkin={first(sp.checkin)}
+                checkout={first(sp.checkout)}
+                guests={first(sp.guests)}
+              />
+            ) : (
+              <BookingFlow
+                initialCheckin={first(sp.checkin)}
+                initialCheckout={first(sp.checkout)}
+                initialGuests={first(sp.guests)}
+                initialRoom={first(sp.room)}
+              />
+            )}
           </div>
         </div>
       </section>

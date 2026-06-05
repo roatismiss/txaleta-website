@@ -82,7 +82,14 @@ export default function RootLayout({
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
+          {/* Concierge chatbot stays on in every phase — it only answers
+              questions and captures leads into the CRM (it never creates
+              bookings), so it's safe alongside the Cloudbeds engine. */}
           <ChatbotEmbed />
+          {/* NOTE: the CloudReef promo popup (PromoPopup / promo-popup.tsx) is part
+              of the not-yet-committed promotions feature and is intentionally left
+              out of this Cloudbeds commit. Re-add it with that feature when
+              CloudReef becomes the booking provider. */}
           {/* Floating WhatsApp button */}
           <a
             href={`https://wa.me/${site.contact.whatsapp}`}

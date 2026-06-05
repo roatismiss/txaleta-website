@@ -66,7 +66,48 @@ export const site = {
     // platform origin above, which is app.cloudreef.io).
     productUrl: "https://cloudreef.io",
   },
+
+  // Cloudbeds Booking Engine. Used while CloudReef is NOT yet live at the
+  // property: Cloudbeds is the single source of truth — direct bookings + OTA
+  // inventory kept in sync by the Cloudbeds channel manager behind it.
+  //
+  // `propertyId` is the code in the engine URL hotels.cloudbeds.com/reservation/<this>.
+  // (Txaleta = 4lfwvW, from the client's Cloudbeds rep.) Override via the Vercel
+  // env var NEXT_PUBLIC_CLOUDBEDS_PROPERTY_ID. Empty → /book shows a graceful
+  // phone/WhatsApp fallback (never a blank page).
+  //
+  // NOTE: do NOT add an `/en/` locale prefix — hotels.cloudbeds.com/en/reservation/<id>
+  // returns HTTP 400. The engine has its own in-UI language switch.
+  cloudbeds: {
+    propertyId: (process.env.NEXT_PUBLIC_CLOUDBEDS_PROPERTY_ID || "").trim() || "4lfwvW",
+    currency: "PHP",
+  },
 } as const;
+
+// Which booking engine the public site uses RIGHT NOW.
+//   "cloudbeds" → /book embeds the Cloudbeds Booking Engine. Cloudbeds is the
+//                 single source of truth for PAID bookings + the OTA channel
+//                 manager behind it. The CloudReef concierge chatbot STAYS on
+//                 (it only captures leads, never books). The CloudReef promo
+//                 popup is off — its discount codes aren't redeemable on the
+//                 Cloudbeds engine (configure promos in Cloudbeds instead).
+//   "cloudreef" → /book uses the native CloudReef BookingFlow + promo popup.
+// Flip this ONE value to "cloudreef" when CloudReef goes live at the property —
+// all the CloudReef code stays in the repo, nothing else to change.
+export const bookingProvider: "cloudbeds" | "cloudreef" = "cloudbeds";
+
+// How the Cloudbeds engine is presented on /book:
+//   "new-tab" → guest is handed off to the engine in a new FIRST-PARTY tab
+//               (deep-linked with their dates). Works everywhere incl. iOS
+//               Safari + Facebook/Instagram in-app browsers. SAFE DEFAULT.
+//   "be-plus" → (future) Cloudbeds Booking Engine Plus / Immersive Experience
+//               web component embedded directly in-page — true first-party embed,
+//               works on iPhone. Needs the embed code from the client. Until
+//               wired up, this behaves like "new-tab".
+//   "iframe"  → legacy inline iframe. DEPRECATED by Cloudbeds — its SameSite
+//               cookies are blocked inside a cross-origin iframe on iOS Safari /
+//               in-app browsers, breaking payment mid-checkout. Do NOT use live.
+export const cloudbedsEmbedMode: "new-tab" | "be-plus" | "iframe" = "new-tab";
 
 // ── Navigation + desktop mega-menu model ────────────────────────────────────
 // Each top-level item may carry an optional `mega` panel (desktop-only): a
