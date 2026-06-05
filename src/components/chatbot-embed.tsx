@@ -15,7 +15,9 @@ export function ChatbotEmbed() {
     if (document.getElementById("cloudreef-chatbot-script")) return;
     const s = document.createElement("script");
     s.id = "cloudreef-chatbot-script";
-    s.src = `${site.cloudreef.baseUrl}/widget/chatbot.js`;
+    // ?v=… cache-busts the 4h-cached chatbot.js so visitors pick up widget
+    // updates (e.g. the Cloudbeds booking handoff) without waiting for the TTL.
+    s.src = `${site.cloudreef.baseUrl}/widget/chatbot.js?v=20260605`;
     s.async = true;
     s.defer = true;
     s.setAttribute("data-resort-key", site.cloudreef.widgetKey);
