@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { experiences, rentals } from "@/lib/site";
+import { experiences, rentals, site } from "@/lib/site";
 import { Reveal, Kicker } from "@/components/reveal";
 import { ExperienceCardImage } from "@/components/experience-card-image";
 
@@ -187,12 +187,14 @@ export default function ExperiencesPage() {
 
           <Reveal className="mx-auto mt-16 max-w-2xl text-center">
             <p className="text-[13px] leading-relaxed text-ink/55">{rentals.note}</p>
-            <Link
-              href="/book"
+            <a
+              href={`https://wa.me/${site.contact.whatsapp}?text=${encodeURIComponent("Hi, I'd like to arrange a rental.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="label mt-8 inline-flex items-center gap-3 bg-brand px-9 py-4 text-[11px] text-white transition-colors hover:bg-brand-dark"
             >
               Arrange a Rental <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
-            </Link>
+            </a>
           </Reveal>
         </div>
       </section>
