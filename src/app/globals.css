@@ -280,6 +280,35 @@ html[data-splash-seen] #txaleta-splash { display: none !important; }
 }
 
 /* ==========================================================================
+   Txaleta brand tokens for the Cloudbeds Immersive Experience web component.
+   CSS custom properties penetrate shadow DOM if the component uses them.
+   Primary color (#c62828) overrides the brown/default Cloudbeds palette.
+   Border-radius 0 enforces the squared / architectural look.
+   ========================================================================== */
+.cloudbeds-immersive,
+cb-immersive-experience {
+  /* Primary / CTA colour — used by Cloudbeds for buttons and header accents */
+  --cb-primary-color: #c62828;
+  --cb-color-primary: #c62828;
+  --cb-color-cta: #c62828;
+  --cb-color-accent: #c62828;
+  --cb-brand-color: #c62828;
+  --primary-color: #c62828;
+  --accent-color: #c62828;
+
+  /* Squared corners */
+  --cb-border-radius: 0;
+  --cb-button-border-radius: 0;
+  --cb-input-border-radius: 0;
+  --cb-card-border-radius: 0;
+
+  /* Text */
+  --cb-color-text: #0b1c22;
+
+  display: block;
+}
+
+/* ==========================================================================
    Hide the CloudReef floating chatbot while the mobile menu drawer is open.
    The widget (loaded from app.cloudreef.io) pins itself bottom-right at
    z-index 2147483646 — far above the drawer — so without this it overlaps the

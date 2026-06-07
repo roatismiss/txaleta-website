@@ -43,44 +43,45 @@ export default async function BookPage({
       </section>
 
       {/* Booking flow */}
-      <section className="bg-white py-20">
+      <section className="bg-brand py-20">
         <div className="mx-auto max-w-5xl px-6">
-          <p className="max-w-xl text-[15px] leading-relaxed text-ink/70">
+          <p className="max-w-xl text-[15px] leading-relaxed text-white/80">
             Check live availability, choose your room and confirm instantly. Your booking
             and payment are handled securely — you&apos;ll get an email confirmation right away.
             Prefer to talk it through? Call{" "}
-            <a href={`tel:${site.contact.phoneRaw}`} className="text-ink underline hover:text-sand">
+            <a href={`tel:${site.contact.phoneRaw}`} className="text-white underline hover:text-white/70">
               {site.contact.phone}
             </a>{" "}
             or message us on{" "}
-            <a href={`https://wa.me/${site.contact.whatsapp}`} className="text-ink underline hover:text-sand">
+            <a href={`https://wa.me/${site.contact.whatsapp}`} className="text-white underline hover:text-white/70">
               WhatsApp
             </a>
             .
           </p>
 
-          {/* Trust strip — the CloudReef booking-engine advantage */}
-          <div className="mt-8 flex flex-col gap-3 border-y border-ink/10 py-5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-3">
+          {/* Trust strip */}
+          <div className="mt-8 flex flex-col gap-3 border-y border-white/20 py-5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-3">
             {([
               { icon: CalendarCheck, label: "Live availability" },
               { icon: Zap, label: "Instant confirmation" },
               { icon: ShieldCheck, label: "Secure payment", note: "GCash · Maya · Apple Pay" },
               { icon: Mail, label: "Email in seconds" },
             ] as { icon: LucideIcon; label: string; note?: string }[]).map(({ icon: Icon, label, note }) => (
-              <span key={label} className="flex items-start gap-2.5 text-[13px] text-ink/70">
-                <Icon className="mt-0.5 h-4 w-4 shrink-0 text-brand" strokeWidth={1.5} aria-hidden />
+              <span key={label} className="flex items-start gap-2.5 text-[13px] text-white/80">
+                <Icon className="mt-0.5 h-4 w-4 shrink-0 text-white" strokeWidth={1.5} aria-hidden />
                 <span className="flex flex-col leading-tight">
                   <span>{label}</span>
-                  {note && <span className="mt-0.5 text-[11px] text-ink/45">{note}</span>}
+                  {note && <span className="mt-0.5 text-[11px] text-white/50">{note}</span>}
                 </span>
               </span>
             ))}
             {bookingProvider === "cloudreef" && (
-              <PoweredByCloudReef tone="light" className="sm:ml-auto" />
+              <PoweredByCloudReef tone="dark" className="sm:ml-auto" />
             )}
           </div>
 
-          <div className="mt-12">
+          {/* Booking engine — white card, black squared border */}
+          <div className="mt-12 border-2 border-ink bg-white">
             {bookingProvider === "cloudbeds" ? (
               <CloudbedsBooking
                 checkin={first(sp.checkin)}

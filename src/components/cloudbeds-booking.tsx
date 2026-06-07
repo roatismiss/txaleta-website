@@ -91,7 +91,11 @@ export function CloudbedsBooking({ checkin, checkout, guests }: Props) {
           strategy="afterInteractive"
           data-cookieconsent="ignore"
         />
-        <cb-immersive-experience mode="standard" property-code={site.cloudbeds.propertyId}></cb-immersive-experience>
+        {/* property-id on the element + CSS custom props let Cloudbeds pick up brand tokens */}
+        <cb-immersive-experience
+          mode="standard"
+          property-code={site.cloudbeds.propertyId}
+        ></cb-immersive-experience>
       </div>
     );
   }
