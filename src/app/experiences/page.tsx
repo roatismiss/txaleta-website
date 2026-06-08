@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { experiences, rentals, site } from "@/lib/site";
+import { experiences, signature, rentals, site } from "@/lib/site";
 import { Reveal, Kicker } from "@/components/reveal";
 import { ExperienceCardImage } from "@/components/experience-card-image";
 
@@ -49,16 +49,76 @@ export default function ExperiencesPage() {
       <section className="bg-white py-20 sm:py-28">
         <Reveal className="mx-auto max-w-3xl px-6 text-center">
           <p className="font-display text-2xl font-light italic leading-snug text-ink/80 sm:text-3xl">
-            Camiguin gives up its best on its own terms — by banca, by ridgeline, by the
-            slow turn of a coastal road. Choose how you go.
+            The best journeys are the ones that feel personal. Whether you&apos;re chasing
+            waterfalls, island hopping, or watching the sunrise with a coffee in hand, we&apos;ll
+            help you experience Camiguin in a way that matches your pace.
           </p>
         </Reveal>
       </section>
 
-      {/* Signature experiences — alternating feature rows */}
-      <section className="bg-cream py-20 sm:py-28">
+      {/* Signature Txaleta experiences — the curated heritage + wellness rituals */}
+      <section className="bg-cream py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col gap-20 sm:gap-28">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <Kicker className="text-brand">{signature.kicker}</Kicker>
+            <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
+              {signature.heading}
+            </h2>
+            <p className="mt-6 text-[15px] leading-relaxed text-ink/65">{signature.body}</p>
+          </Reveal>
+
+          <div className="mt-16 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+            {signature.items.map((exp, i) => (
+              <Reveal key={exp.name} delay={(i % 4) * 0.06}>
+                <div className="group flex h-full flex-col">
+                  <div className="relative aspect-[4/5] w-full overflow-hidden">
+                    <Image
+                      src={exp.image}
+                      alt={exp.tagline}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent" />
+                  </div>
+                  <p className="label mt-5 text-[10px] text-brand">{exp.tagline}</p>
+                  <h3 className="font-display mt-2 text-2xl font-light leading-tight text-ink">
+                    {exp.name}
+                  </h3>
+                  <p className="mt-3 text-[14px] leading-relaxed text-ink/65">{exp.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal className="mt-14 text-center">
+            <a
+              href={`https://wa.me/${site.contact.whatsapp}?text=${encodeURIComponent("Hi, I'd like to plan some Txaleta experiences for my stay.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="label inline-flex items-center gap-3 bg-brand px-9 py-4 text-[11px] text-white transition-colors hover:bg-brand-dark"
+            >
+              Plan Your Experiences <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+            </a>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Island adventures — the on-the-water + on-the-trail activities */}
+      <section className="bg-white py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <Kicker className="text-brand">Out on the Island</Kicker>
+            <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
+              Island Adventures
+            </h2>
+            <p className="mt-6 text-[15px] leading-relaxed text-ink/65">
+              By banca, by ridgeline, by the slow turn of a coastal road — Camiguin gives up its
+              best on its own terms. Choose how you go.
+            </p>
+          </Reveal>
+
+          <div className="mt-16 flex flex-col gap-20 sm:gap-28">
             {experiences.map((exp, i) => (
               <Reveal key={exp.title}>
                 <div className={`grid items-center gap-8 lg:grid-cols-2 lg:gap-16 ${i % 2 === 1 ? "lg:[direction:rtl]" : ""}`}>
@@ -84,7 +144,7 @@ export default function ExperiencesPage() {
                     )}
                   </div>
                   <div className="[direction:ltr]">
-                    <Kicker>{`0${i + 1} · Signature`}</Kicker>
+                    <Kicker>{`0${i + 1} · Adventure`}</Kicker>
                     <h2 className="font-display mt-4 text-3xl font-light text-ink sm:text-4xl">{exp.title}</h2>
                     <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-ink/70">{exp.description}</p>
                   </div>
