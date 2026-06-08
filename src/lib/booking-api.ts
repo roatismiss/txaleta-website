@@ -66,6 +66,7 @@ export type ConfirmPayload = {
   guests: number;
   children?: number;
   message?: string;
+  promoCode?: string; // discount code — re-validated + applied server-side
   payment: { method: string; simulated: boolean; reference?: string };
 };
 
@@ -80,6 +81,9 @@ export type ConfirmResponse = {
   guests: number;
   currency: string;
   ratePerNight: number;
+  subtotal?: number;
+  discountAmount?: number;
+  promoCode?: string | null;
   total: number;
   amountPaid: number;
   emailSent: boolean;
@@ -124,6 +128,58 @@ export async function confirmBooking(payload: ConfirmPayload): Promise<ConfirmRe
     body: JSON.stringify({ widgetKey: KEY, ...payload }),
   });
   return jsonOrThrow<ConfirmResponse>(res);
+}
+
+// ── Promotions ───────────────────────────────────────────────────────────────
+
+export type PromoValidation =
+  | {
+      valid: true;
+      code: string;
+      title: string;
+      discountType: "percentage" | "fixed";
+      discountValue: number;
+      discountAmount: number;
+      subtotal: number;
+      total: number;
+      currency: string;
+    }
+  | { valid: false; message: string; currency?: string };
+
+/** Live discount preview for a code against the chosen room + dates. */
+export async function validatePromo(args: {
+  code: string;
+  checkin?: string;
+  checkout?: string;
+  roomType?: string;
+}): Promise<PromoValidation> {
+  const params = new URLSearchParams({ key: KEY, code: args.code });
+  if (args.checkin) params.set("checkin", args.checkin);
+  if (args.checkout) params.set("checkout", args.checkout);
+  if (args.roomType) params.set("roomType", args.roomType);
+  const res = await fetch(`${BASE}/api/widget/validate-promo?${params.toString()}`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  });
+  return jsonOrThrow<PromoValidation>(res);
+}
+
+export type FeaturedPromo = {
+  code: string;
+  title: string;
+  description: string | null;
+  discountType: "percentage" | "fixed";
+  discountValue: number;
+};
+
+/** The single featured promo the resort wants advertised (or null). */
+export async function fetchFeaturedPromo(): Promise<FeaturedPromo | null> {
+  const res = await fetch(`${BASE}/api/widget/promos?key=${encodeURIComponent(KEY)}`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  });
+  const data = await jsonOrThrow<{ featured: FeaturedPromo | null }>(res);
+  return data.featured;
 }
 
 // ── Formatting + date helpers ───────────────────────────────────────────────

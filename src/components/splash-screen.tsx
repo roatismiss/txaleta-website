@@ -48,14 +48,6 @@ export function SplashScreen() {
     };
   }, []);
 
-  const dismiss = () => {
-    setStage("leaving");
-    setTimeout(() => {
-      setStage("gone");
-      document.body.style.overflow = "";
-    }, FADE_MS);
-  };
-
   if (stage === "gone") return null;
 
   return (
@@ -146,10 +138,6 @@ export function SplashScreen() {
           <span className="rule" />
         </div>
       </div>
-
-      <button type="button" className="splash-skip" onClick={dismiss}>
-        Skip
-      </button>
     </div>
   );
 }

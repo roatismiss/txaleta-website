@@ -36,19 +36,23 @@ export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCh
     return () => document.removeEventListener("mousedown", onOutside);
   }, [open]);
 
-  function handleSelect(r: DateRange | undefined) {
-    const from = r?.from;
-    const to = r?.to;
+  function handleSelect(_range: DateRange | undefined, clicked: Date) {
+    const day = format(clicked, "yyyy-MM-dd");
+    const from = checkin ? new Date(checkin + "T00:00:00") : undefined;
 
-    if (from) onChangeCheckin(format(from, "yyyy-MM-dd"));
-    else onChangeCheckin("");
-
-    if (to) {
-      onChangeCheckout(format(to, "yyyy-MM-dd"));
-      setOpen(false);
-    } else {
+    // First click — or a click on/before the current check-in — (re)starts the
+    // range: set check-in, clear check-out, and keep the calendar open with the
+    // focus moved to Departure so the very next click picks the check-out.
+    if (activeField === "checkin" || !from || clicked <= from) {
+      onChangeCheckin(day);
       onChangeCheckout("");
+      setActiveField("checkout");
+      return;
     }
+
+    // Second click completes the stay and closes.
+    onChangeCheckout(day);
+    setOpen(false);
   }
 
   function openOn(field: "checkin" | "checkout") {
@@ -123,8 +127,8 @@ export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCh
               weekday: "w-9 text-center text-[9px] font-medium uppercase tracking-[0.1em] text-ink/30 sm:w-[42px]",
               weeks: "",
               week: "flex",
-              day: "p-0",
-              day_button: "h-9 w-9 text-[12px] font-light text-ink transition-colors hover:bg-cream focus:outline-none sm:h-[40px] sm:w-[40px] sm:text-[13px]",
+              day: "p-0 text-ink",
+              day_button: "h-9 w-9 text-[12px] font-light transition-colors hover:bg-cream focus:outline-none sm:h-[40px] sm:w-[40px] sm:text-[13px]",
               selected: "!bg-ink !text-white",
               range_start: "!bg-ink !text-white",
               range_end: "!bg-ink !text-white",
@@ -246,8 +250,8 @@ export function DatePicker({ label, value, onChange, minDate, placeholder, disab
               weekday: "w-[40px] text-center text-[9px] font-medium uppercase tracking-[0.1em] text-ink/30",
               weeks: "",
               week: "flex",
-              day: "p-0",
-              day_button: "h-[40px] w-[40px] text-[13px] font-light text-ink transition-colors hover:bg-cream focus:outline-none",
+              day: "p-0 text-ink",
+              day_button: "h-[40px] w-[40px] text-[13px] font-light transition-colors hover:bg-cream focus:outline-none",
               selected: "!bg-ink !text-white",
               today: "font-semibold !text-brand",
               outside: "opacity-20",

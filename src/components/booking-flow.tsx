@@ -20,6 +20,7 @@ import {
   fetchRooms,
   fetchAvailability,
   confirmBooking,
+  validatePromo,
   formatMoney,
   nightsBetween,
   nightKeysInRange,
@@ -59,9 +60,10 @@ type Props = {
   initialCheckout?: string;
   initialGuests?: string;
   initialRoom?: string; // slug from site.ts
+  initialPromo?: string; // ?promo= deep link or a pop-up "copy code"
 };
 
-export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, initialRoom }: Props) {
+export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, initialRoom, initialPromo }: Props) {
   // ── Remote data ───────────────────────────────────────────────────────────
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -83,6 +85,12 @@ export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, in
   const [processing, setProcessing] = useState(false);
   const [stepError, setStepError] = useState<string | null>(null);
   const [result, setResult] = useState<ConfirmResponse | null>(null);
+
+  // ── Promo code ─────────────────────────────────────────────────────────────
+  const [promoInput, setPromoInput] = useState("");
+  const [appliedPromo, setAppliedPromo] = useState<{ code: string; discountAmount: number } | null>(null);
+  const [promoError, setPromoError] = useState<string | null>(null);
+  const [promoChecking, setPromoChecking] = useState(false);
 
   // Top of the flow, so each step transition can scroll back into view.
   const flowRef = useRef<HTMLDivElement>(null);
@@ -144,7 +152,9 @@ export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, in
 
   const selectedType = roomTypes.find((t) => t.name === typeName) ?? null;
   const nights = nightsBetween(checkin, checkout);
-  const total = selectedType ? selectedType.base_rate * nights : 0;
+  const subtotal = selectedType ? selectedType.base_rate * nights : 0;
+  const promoDiscount = appliedPromo ? Math.min(appliedPromo.discountAmount, subtotal) : 0;
+  const total = Math.max(0, subtotal - promoDiscount);
 
   const disabledDatesForSelected = useMemo(() => {
     const list = (typeName && fullyBookedByType[typeName]) || [];
@@ -183,6 +193,67 @@ export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, in
     return nightKeysInRange(checkin, checkout).every((k) => !booked.has(k));
   }
 
+  // ── Promo handlers ─────────────────────────────────────────────────────────
+  const applyPromo = useCallback(async () => {
+    const code = promoInput.trim();
+    if (!code) return;
+    if (!selectedType || !checkin || !checkout || nights < 1) {
+      setPromoError("Choose your room and dates first.");
+      return;
+    }
+    setPromoChecking(true);
+    setPromoError(null);
+    try {
+      const res = await validatePromo({ code, checkin, checkout, roomType: selectedType.name });
+      if (res.valid) {
+        setAppliedPromo({ code: res.code, discountAmount: res.discountAmount });
+        setPromoInput(res.code);
+        setPromoError(null);
+      } else {
+        setAppliedPromo(null);
+        setPromoError(res.message);
+      }
+    } catch {
+      setAppliedPromo(null);
+      setPromoError("Couldn't check that code right now.");
+    } finally {
+      setPromoChecking(false);
+    }
+  }, [promoInput, selectedType, checkin, checkout, nights]);
+
+  function clearPromo() {
+    setAppliedPromo(null);
+    setPromoError(null);
+    setPromoInput("");
+    try {
+      localStorage.removeItem("txaleta:promo-code");
+    } catch {
+      /* ignore */
+    }
+  }
+
+  // Seed the code once from ?promo= / a pop-up "copy code".
+  useEffect(() => {
+    let seed = (initialPromo ?? "").trim();
+    if (!seed) {
+      try {
+        seed = (localStorage.getItem("txaleta:promo-code") ?? "").trim();
+      } catch {
+        /* ignore */
+      }
+    }
+    if (seed) setPromoInput(seed.toUpperCase());
+    // one-shot on mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // A change of room or dates invalidates a computed discount — drop it so the
+  // guest re-applies against the new subtotal (the typed code is kept).
+  useEffect(() => {
+    setAppliedPromo(null);
+    setPromoError(null);
+  }, [typeName, checkin, checkout]);
+
   // ── Step transitions ──────────────────────────────────────────────────────
   function goToDetails() {
     setStepError(null);
@@ -201,6 +272,8 @@ export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, in
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(contact.email.trim()))
       return setStepError("Please enter a valid email.");
     setStep("payment");
+    // Auto-apply a seeded code (deep link / pop-up) the moment dates are locked.
+    if (promoInput.trim() && !appliedPromo) void applyPromo();
   }
 
   async function pay() {
@@ -220,6 +293,7 @@ export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, in
         checkout,
         guests,
         message: contact.message.trim() || undefined,
+        promoCode: appliedPromo?.code,
         payment: { method: payMethod, simulated: true, reference: ref },
       });
       setResult(res);
@@ -320,6 +394,13 @@ export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, in
             setCard={setCard}
             processing={processing}
             onPay={pay}
+            promoInput={promoInput}
+            setPromoInput={setPromoInput}
+            appliedPromo={appliedPromo}
+            promoError={promoError}
+            promoChecking={promoChecking}
+            onApplyPromo={applyPromo}
+            onClearPromo={clearPromo}
           />
         )}
 
@@ -375,6 +456,9 @@ export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, in
         checkout={checkout}
         nights={nights}
         guests={guests}
+        subtotal={subtotal}
+        discount={promoDiscount}
+        promoCode={appliedPromo?.code ?? null}
         total={total}
       />
     </div>
@@ -671,8 +755,31 @@ function PaymentStep(props: {
   setCard: (c: { number: string; exp: string; cvc: string }) => void;
   processing: boolean;
   onPay: () => void;
+  promoInput: string;
+  setPromoInput: (v: string) => void;
+  appliedPromo: { code: string; discountAmount: number } | null;
+  promoError: string | null;
+  promoChecking: boolean;
+  onApplyPromo: () => void;
+  onClearPromo: () => void;
 }) {
-  const { currency, total, payMethod, setPayMethod, card, setCard, processing, onPay } = props;
+  const {
+    currency,
+    total,
+    payMethod,
+    setPayMethod,
+    card,
+    setCard,
+    processing,
+    onPay,
+    promoInput,
+    setPromoInput,
+    appliedPromo,
+    promoError,
+    promoChecking,
+    onApplyPromo,
+    onClearPromo,
+  } = props;
   const amount = formatMoney(currency, total);
 
   return (
@@ -682,6 +789,58 @@ function PaymentStep(props: {
       <div className="mt-3 inline-flex items-center gap-2 rounded-sm bg-cream px-3 py-1.5 text-[11px] text-ink/60">
         <ShieldCheck className="h-3.5 w-3.5 text-brand" />
         Demo mode — no real charge. Card <span className="font-mono">4242 4242 4242 4242</span> works.
+      </div>
+
+      {/* Promo code */}
+      <div className="mt-6">
+        {appliedPromo ? (
+          <div className="flex items-center justify-between gap-3 rounded-sm border border-brand/30 bg-brand/[0.06] px-3.5 py-3">
+            <span className="flex items-center gap-2 text-[13px] text-ink">
+              <Check className="h-4 w-4 shrink-0 text-brand" strokeWidth={2} />
+              <span className="font-mono font-medium">{appliedPromo.code}</span>
+              <span className="text-ink/60">— you save {formatMoney(currency, appliedPromo.discountAmount)}</span>
+            </span>
+            <button
+              type="button"
+              onClick={onClearPromo}
+              className="shrink-0 text-[12px] text-ink/45 underline transition-colors hover:text-ink"
+            >
+              Remove
+            </button>
+          </div>
+        ) : (
+          <>
+            <label className="label block text-[9px] text-ink/45">Promo code</label>
+            <div className="mt-2 flex items-end gap-3">
+              <input
+                value={promoInput}
+                onChange={(e) => setPromoInput(e.target.value.toUpperCase().replace(/\s+/g, ""))}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+                    onApplyPromo();
+                  }
+                }}
+                placeholder="Have a code?"
+                className="flex-1 border-b border-ink/15 bg-transparent pb-2 font-mono text-sm uppercase text-ink outline-none transition-colors focus:border-sand placeholder:normal-case placeholder:text-ink/35"
+              />
+              <button
+                type="button"
+                onClick={onApplyPromo}
+                disabled={promoChecking || !promoInput.trim()}
+                className="label inline-flex items-center gap-2 border-b border-ink pb-2 text-[11px] text-ink transition-colors hover:text-sand disabled:opacity-40"
+              >
+                {promoChecking && <Loader2 className="h-3.5 w-3.5 animate-spin" />}
+                Apply
+              </button>
+            </div>
+          </>
+        )}
+        {promoError && (
+          <p className="mt-2 flex items-center gap-1.5 text-[12px] text-red-600">
+            <AlertCircle className="h-3.5 w-3.5 shrink-0" /> {promoError}
+          </p>
+        )}
       </div>
 
       {/* Wallet buttons */}
@@ -787,9 +946,12 @@ function SummaryRail(props: {
   checkout: string;
   nights: number;
   guests: number;
+  subtotal: number;
+  discount: number;
+  promoCode: string | null;
   total: number;
 }) {
-  const { currency, selectedType, checkin, checkout, nights, guests, total } = props;
+  const { currency, selectedType, checkin, checkout, nights, guests, subtotal, discount, promoCode, total } = props;
   const fmtD = (s: string) => (s ? format(ymdToDate(s), "EEE, dd MMM yyyy") : "—");
 
   return (
@@ -843,8 +1005,14 @@ function SummaryRail(props: {
             <span>
               {formatMoney(currency, selectedType.base_rate)} × {nights} night{nights !== 1 ? "s" : ""}
             </span>
-            <span className="font-mono">{formatMoney(currency, total)}</span>
+            <span className="font-mono">{formatMoney(currency, subtotal)}</span>
           </div>
+          {discount > 0 && (
+            <div className="mt-2 flex justify-between text-sm text-brand">
+              <span>Promo{promoCode ? ` (${promoCode})` : ""}</span>
+              <span className="font-mono">−{formatMoney(currency, discount)}</span>
+            </div>
+          )}
           <div className="mt-4 flex items-baseline justify-between">
             <span className="label text-[10px] text-ink/45">Total</span>
             <span className="font-mono text-2xl text-ink">{formatMoney(currency, total)}</span>
@@ -882,6 +1050,12 @@ function SuccessCard({
           <Row label="Check-out" value={fmtD(result.checkOut)} />
           <Row label="Nights" value={String(result.nights)} />
           <Row label="Guests" value={String(result.guests)} />
+          {result.discountAmount ? (
+            <div className="flex justify-between">
+              <dt className="text-ink/50">Discount{result.promoCode ? ` (${result.promoCode})` : ""}</dt>
+              <dd className="font-mono text-brand">−{formatMoney(currency, result.discountAmount)}</dd>
+            </div>
+          ) : null}
           <div className="flex justify-between border-t border-ink/10 pt-3">
             <dt className="text-ink/50">Paid</dt>
             <dd className="font-mono text-base text-ink">{formatMoney(currency, result.amountPaid)}</dd>
