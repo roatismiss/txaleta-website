@@ -21,7 +21,7 @@ export function ChatbotEmbed() {
     s.async = true;
     s.defer = true;
     s.setAttribute("data-resort-key", site.cloudreef.widgetKey);
-    s.setAttribute("data-color", "#0b1c22");
+    s.setAttribute("data-color", "#2c3a2c");
     s.setAttribute("data-position", "right");
     document.body.appendChild(s);
   }, []);

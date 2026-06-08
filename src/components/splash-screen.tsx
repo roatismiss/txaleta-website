@@ -66,9 +66,9 @@ export function SplashScreen() {
         >
           <defs>
             <radialGradient id="splashNib">
-              <stop offset="0%" stopColor="#ff5b5b" />
-              <stop offset="45%" stopColor="#c62828" />
-              <stop offset="100%" stopColor="rgba(198,40,40,0)" />
+              <stop offset="0%" stopColor="#c89a94" />
+              <stop offset="45%" stopColor="#9c6b66" />
+              <stop offset="100%" stopColor="rgba(156,107,102,0)" />
             </radialGradient>
             <clipPath id="splashArchClip">
               <path d="M 60 240 L 60 125 Q 60 35 150 22 Q 240 35 240 125 L 240 240 Z" />

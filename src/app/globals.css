@@ -2,20 +2,29 @@
 
 /* ==========================================================================
    Txaleta de Camiguin — design tokens (Tailwind v4 @theme)
-   Coastal-luxury palette: deep teal-ink, warm sand/gold, cream.
+   Heritage palette (txaleta_branding.pdf): Filipino-Spanish, golden-hour warmth.
+   Heritage Clay (primary) · Coconut White (base) · Palm Leaf Green + Sunset
+   Mango (accents). Token NAMES are kept stable so existing utility classes
+   (bg-brand, text-ink, bg-cream…) inherit the new brand automatically.
    ========================================================================== */
 @theme {
-  --color-ink: #0b1c22;        /* deep teal-charcoal — scrolled nav, footer */
-  --color-ink-soft: #12262e;
-  --color-sand: #b89a63;       /* warm gold — accents, CTAs, hairlines */
-  --color-sand-dark: #9c8050;
-  --color-cream: #f6f1e8;      /* light section background */
-  --color-sea: #2a6f7a;
-  --color-brand: #c62828;      /* logo red — primary CTA (Book Now, widget) */
-  --color-brand-dark: #9e1f1f;
+  --color-ink: #2c3a2c;        /* Palm Leaf Green (deep) — nav, footer, body text */
+  --color-ink-soft: #3a4a37;
+  --color-sand: #e3a53e;       /* Sunset Mango — warm accent, kickers, hairlines */
+  --color-sand-dark: #c6862a;
+  --color-cream: #f4efe3;      /* Coconut White — light section background */
+  --color-sea: #6f8a6a;        /* soft palm green — secondary accent (was teal) */
+  --color-brand: #9c6b66;      /* Heritage Clay — primary CTA (Book Now, widget) */
+  --color-brand-dark: #7e534f;
 
-  --font-serif: var(--font-cormorant), Georgia, "Times New Roman", serif;
-  --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
+  /* Explicit brand aliases — prefer these in new copy/components. */
+  --color-clay: #9c6b66;
+  --color-coconut: #f4efe3;
+  --color-palm: #2c3a2c;
+  --color-mango: #e3a53e;
+
+  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-lato), ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
@@ -43,10 +52,10 @@ body {
   font-weight: 400;
 }
 
-/* Elegant serif display */
+/* Elegant serif display (Playfair Display — variable axis starts at 400) */
 .font-display {
   font-family: var(--font-serif);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.01em;
 }
 
@@ -89,12 +98,12 @@ body {
 }
 
 .txaleta-calendar .selected .day_button {
-  background-color: var(--color-sand) !important;
+  background-color: var(--color-brand) !important; /* Heritage Clay — readable white-on-clay */
   color: white !important;
 }
 
 .txaleta-calendar .selected .day_button:hover {
-  background-color: var(--color-sand-dark) !important;
+  background-color: var(--color-brand-dark) !important;
 }
 
 .txaleta-calendar .today .day_button {
@@ -130,7 +139,7 @@ html[data-splash-seen] #txaleta-splash { display: none !important; }
   opacity: 1;
   transition: opacity 0.7s ease;
   background:
-    radial-gradient(120% 120% at 50% 40%, #fbf7ef 0%, #f6f1e8 55%, #ece4d4 100%);
+    radial-gradient(120% 120% at 50% 40%, #fbf7ef 0%, #f4efe3 55%, #e9dfcb 100%);
 }
 #txaleta-splash.is-leaving { opacity: 0; pointer-events: none; }
 
@@ -181,7 +190,7 @@ html[data-splash-seen] #txaleta-splash { display: none !important; }
 }
 .splash-x {
   fill: none;
-  stroke: #f6f1e8;
+  stroke: #f4efe3; /* Coconut White — negative-space X inside the mark */
   stroke-width: 26;
   stroke-linecap: round;
   stroke-dasharray: 1;
@@ -257,19 +266,19 @@ html[data-splash-seen] #txaleta-splash { display: none !important; }
 /* ==========================================================================
    Txaleta brand tokens for the Cloudbeds Immersive Experience web component.
    CSS custom properties penetrate shadow DOM if the component uses them.
-   Primary color (#c62828) overrides the brown/default Cloudbeds palette.
+   Primary color (#9c6b66) overrides the brown/default Cloudbeds palette.
    Border-radius 0 enforces the squared / architectural look.
    ========================================================================== */
 .cloudbeds-immersive,
 cb-immersive-experience {
   /* Primary / CTA colour — used by Cloudbeds for buttons and header accents */
-  --cb-primary-color: #c62828;
-  --cb-color-primary: #c62828;
-  --cb-color-cta: #c62828;
-  --cb-color-accent: #c62828;
-  --cb-brand-color: #c62828;
-  --primary-color: #c62828;
-  --accent-color: #c62828;
+  --cb-primary-color: #9c6b66;
+  --cb-color-primary: #9c6b66;
+  --cb-color-cta: #9c6b66;
+  --cb-color-accent: #9c6b66;
+  --cb-brand-color: #9c6b66;
+  --primary-color: #9c6b66;
+  --accent-color: #9c6b66;
 
   /* Squared corners */
   --cb-border-radius: 0;
@@ -278,7 +287,7 @@ cb-immersive-experience {
   --cb-card-border-radius: 0;
 
   /* Text */
-  --cb-color-text: #0b1c22;
+  --cb-color-text: #2c3a2c;
 
   display: block;
 }
