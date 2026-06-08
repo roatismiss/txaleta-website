@@ -195,39 +195,64 @@ export const rooms: Room[] = [
 ];
 
 export const dining = {
-  kicker: "By the Sea",
-  heading: "Breakfast Comes In on the Tide",
-  body: "The café sits at the edge of the water, where breakfast arrives with the morning light and the boats heading out for White Island. Days are built on fresh Filipino cooking and a few easy international plates: fish landed that morning, fruit from the slopes behind Mambajao, lanzones when the season turns them sweet. By evening the sea goes gold, and dinner is something you stay with for a while.",
+  // Short kicker for the homepage section; the long line lives in `subheading`.
+  kicker: "Filipino Heart, Spanish Soul",
+  heading: "Dining at Txaleta",
+  subheading: "One of Camiguin's Most Memorable Dining Experiences",
+  body:
+    "Perched on a scenic clifftop overlooking the sea, Txaleta offers a unique dining experience that brings together Filipino warmth, Spanish heritage, breathtaking ocean views, and thoughtfully prepared cuisine. Whether you're looking for breakfast in Camiguin, a leisurely lunch with a view, sunset cocktails, or dinner under the stars, our restaurant welcomes both resort guests and walk-in visitors seeking great food and unforgettable island hospitality.",
   images: [
     "/images/dining/food_txaleta.webp",
     "/images/dining/breakfest_txaleta.webp",
     "/images/dining/nachos_sendiv.webp",
     "/images/dining/aerial_view_table.webp",
   ],
-  // Extended copy for the dedicated /dining page
+  // Extended copy for the dedicated /dining page (client copywriting, verbatim).
   stories: [
     {
-      kicker: "Morning",
-      heading: "Breakfast at the Water's Edge",
-      body: "The day begins with the tide. Coffee arrives first — Barako from the highlands, roasted dark and honest. Then the rest: fresh fruit from the market at Mambajao, eggs done simply, fish from the boats that left while you were still asleep. Breakfast at Txaleta is not rushed. The table faces the sea and the morning is yours for as long as you want it.",
-      image: "/images/dining/breakfest_txaleta.webp",
-      imageAlt: "Breakfast served by the sea at Txaleta",
-    },
-    {
-      kicker: "All Day",
-      heading: "Filipino Cooking, Kept Honest",
-      body: "The kitchen runs on what the island gives. Sinigang built from tamarind and the morning's catch. Kare-kare slow-cooked until the sauce holds. Lanzones from the trees behind Mambajao, sweet enough to eat by the handful when the season comes. A few easy international plates for the afternoons when you want something lighter — but the Filipino table is the one worth knowing.",
+      id: "all-day",
+      kicker: "The Kitchen",
+      heading: "Filipino-Spanish Cuisine Rooted in Family Tradition",
+      body:
+        "Our menu celebrates the flavors that have shaped our family's story. Inspired by both Filipino and Spanish culinary traditions, we serve dishes designed to be shared and enjoyed together — fresh seafood, local ingredients, traditional recipes, and island flavors that honor both heritage and home. From paella and tapas to beloved Filipino favorites, every dish is prepared with care and meant to nourish both body and spirit.",
       image: "/images/dining/food_txaleta.webp",
-      imageAlt: "Filipino dishes at Txaleta de Camiguin",
+      imageAlt: "Filipino-Spanish dishes at Txaleta de Camiguin",
     },
     {
+      id: "morning",
+      kicker: "Morning",
+      heading: "Breakfast with a View in Camiguin",
+      body:
+        "Mornings at Txaleta are unhurried. Wake up to freshly brewed coffee, tropical fruits, homemade specialties, and breakfast dishes served alongside panoramic ocean views and the gentle rhythm of island life. Whether you're preparing for a day of adventure or simply enjoying a slow morning, breakfast at Txaleta is one of the most peaceful ways to begin your day in Camiguin.",
+      image: "/images/dining/breakfest_txaleta.webp",
+      imageAlt: "Breakfast with an ocean view at Txaleta de Camiguin",
+    },
+    {
+      id: "evening",
       kicker: "Evening",
-      heading: "Dinner While the Sea Goes Gold",
-      body: "By late afternoon the light turns amber over the Bohol Sea. The café slows down. A cold San Miguel, or something from the bar. The nachos arrive — crisp, messy, exactly right. The snapper is grilled over coals with calamansi and butter. Dinner is unhurried here: the kind of meal that lasts past dark because no one at the table wants to be the first to leave.",
-      image: "/images/dining/nachos_sendiv.webp",
-      imageAlt: "Evening dining at Txaleta de Camiguin",
+      heading: "Sunset Dining Overlooking the Sea",
+      body:
+        "As the sun begins to set, our clifftop location offers one of the most beautiful dining settings in Camiguin. Gather with family and friends, enjoy fresh island flavors, and watch the sky transform into shades of gold, orange, and pink while overlooking the sea. These are the moments our guests remember long after their holiday ends.",
+      image: "/images/dining/aerial_view_table.webp",
+      imageAlt: "Sunset dining overlooking the sea at Txaleta de Camiguin",
     },
   ],
+  family: {
+    kicker: "Gather",
+    heading: "Family Dining, Celebrations & Special Occasions",
+    body:
+      "Some of life's best memories are made around the table. Whether you're celebrating a birthday, anniversary, family reunion, wedding gathering, or simply enjoying a meal together, our team is happy to help create a dining experience that feels personal and memorable. Private dining arrangements and customized menus are available upon request.",
+    image: "/images/resort/common-area.webp",
+    imageAlt: "Family dining and celebrations at Txaleta de Camiguin",
+  },
+  local: {
+    kicker: "From the Island",
+    heading: "Local Ingredients, Island Flavors",
+    body:
+      "Whenever possible, we source ingredients locally and support the Camiguin community that makes this island so special. Fresh seafood, tropical fruits, locally grown produce, and regional flavors inspire much of what we serve — letting guests enjoy an authentic taste of Camiguin while supporting local farmers, fishermen, and suppliers.",
+    image: "/images/dining/nachos_sendiv.webp",
+    imageAlt: "Local Camiguin ingredients and island flavors at Txaleta",
+  },
   atmosphere: [
     "/images/resort/rayligh_lounge.webp",
     "/images/resort/common-area.webp",
@@ -243,6 +268,12 @@ export const dining = {
     body: "Some afternoons you won't want to leave the deck. Scan the code in your room to browse the café's island delicacies — the morning's catch, a cold drink, something sweet — and order straight from your phone. We'll bring it to wherever you've settled: the pool, the lounge, your own private terrace.",
     image: "/images/rooms/ocean-view-suite/Ocean_view_private_terrace.webp",
     imageAlt: "A private terrace overlooking the Bohol Sea at Txaleta de Camiguin",
+  },
+  closing: {
+    heading: "Come Hungry. Leave Nourished.",
+    body:
+      "At Txaleta, we hope every meal leaves you with more than a full stomach — a story shared, a laugh remembered, a sunset enjoyed, and the feeling of having gathered around a table where you truly belong.",
+    signoff: ["Welcome to the table.", "Welcome home."],
   },
 };
 
