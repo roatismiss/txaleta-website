@@ -58,7 +58,7 @@ export function BookingBar() {
 
         <button
           type="submit"
-          className="label bg-black px-8 py-5 text-[11px] text-brand transition-colors hover:bg-brand-dark hover:text-white"
+          className="label bg-brand px-8 py-5 text-[11px] text-white transition-colors hover:bg-brand-dark"
         >
           Check Availability
         </button>
