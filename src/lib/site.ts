@@ -368,7 +368,7 @@ export const rentals = {
       name: "Jet Ski",
       blurb: "Thrilling rides across the Bohol Sea, with safety gear and a full orientation included before you set off.",
       rates: [
-        { label: "4 hours", price: "₱7,000" },
+        { label: "3 hours", price: "₱7,000" },
         { label: "Additional hour", price: "₱1,500" },
       ],
     },

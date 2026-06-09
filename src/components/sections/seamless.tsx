@@ -9,14 +9,14 @@ const icons = [CalendarCheck, Languages, UtensilsCrossed] as const;
 
 export function Seamless() {
   return (
-    <section className="bg-cream py-24 sm:py-32">
+    <section className="bg-ink py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Kicker className="text-brand">{seamless.kicker}</Kicker>
-          <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
+          <Kicker className="text-sand">{seamless.kicker}</Kicker>
+          <h2 className="font-display mt-5 text-4xl font-light leading-tight text-cream sm:text-5xl">
             {seamless.heading}
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-[15px] leading-relaxed text-ink/65">
+          <p className="mx-auto mt-6 max-w-xl text-[15px] leading-relaxed text-cream/65">
             {seamless.body}
           </p>
         </Reveal>
@@ -27,12 +27,12 @@ export function Seamless() {
             const Icon = icons[i] ?? CalendarCheck;
             return (
               <Reveal key={pillar.title} delay={i * 0.08}>
-                <div className="border-t border-ink/15 pt-7">
-                  <Icon className="h-7 w-7 text-brand" strokeWidth={1.25} aria-hidden />
-                  <h3 className="font-display mt-5 text-2xl font-light text-ink">
+                <div className="border-t border-cream/15 pt-7">
+                  <Icon className="h-7 w-7 text-sand" strokeWidth={1.25} aria-hidden />
+                  <h3 className="font-display mt-5 text-2xl font-light text-cream">
                     {pillar.title}
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-ink/65">
+                  <p className="mt-3 text-[14px] leading-relaxed text-cream/65">
                     {pillar.body}
                   </p>
                 </div>
@@ -44,7 +44,7 @@ export function Seamless() {
         <Reveal className="mt-14 flex flex-col items-center gap-5 text-center">
           <Link
             href="/dining#room-service"
-            className="group inline-flex items-center gap-3 border-b border-sand pb-1 text-ink transition-colors hover:text-sand"
+            className="group inline-flex items-center gap-3 border-b border-sand pb-1 text-cream transition-colors hover:text-sand"
           >
             <span className="label text-[11px]">See It in Action</span>
             <ArrowRight
@@ -53,7 +53,7 @@ export function Seamless() {
               aria-hidden
             />
           </Link>
-          <PoweredByCloudReef tone="light" />
+          <PoweredByCloudReef tone="dark" />
         </Reveal>
       </div>
     </section>
