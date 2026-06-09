@@ -5,7 +5,7 @@
 // come from src/lib/site.ts.
 // ============================================================================
 
-import { site } from "@/lib/site";
+import { site, rooms as fallbackRooms } from "@/lib/site";
 
 const BASE = site.cloudreef.baseUrl;
 const KEY = site.cloudreef.widgetKey;
@@ -113,6 +113,61 @@ export async function fetchRooms(): Promise<RoomsResponse> {
     headers: { "Content-Type": "application/json" },
   });
   return jsonOrThrow<RoomsResponse>(res);
+}
+
+// ── Display rooms (Accommodation page + homepage section) ────────────────────
+// Live Cloudbeds rooms with Cloudbeds' own photos, mapped to the marketing
+// display shape. Falls back to the curated site.ts rooms if the API is
+// unavailable so pages never break.
+
+export type DisplayRoom = {
+  slug: string;
+  name: string;
+  kicker: string;
+  description: string;
+  amenities: string[];
+  images: string[];
+  cover: string;
+  maxOccupancy: number;
+};
+
+function slugify(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+export async function fetchDisplayRooms(): Promise<DisplayRoom[]> {
+  try {
+    const data = await fetchRooms();
+    const cur = data.currency || "PHP";
+    const types = (data.roomTypes ?? []).filter((t) => t.images && t.images.length > 0);
+    if (!types.length) throw new Error("no cloudbeds rooms");
+    return types.map((t) => ({
+      slug: slugify(t.name),
+      name: t.name,
+      kicker:
+        t.base_rate > 0
+          ? `From ${cur} ${Math.round(t.base_rate).toLocaleString()} / night`
+          : "Oceanfront Stay",
+      description:
+        t.description ||
+        "A comfortable room at Txaleta de Camiguin, moments from the Bohol Sea.",
+      amenities: t.amenities ?? [],
+      images: t.images,
+      cover: t.images[0],
+      maxOccupancy: t.max_occupancy,
+    }));
+  } catch {
+    return fallbackRooms.map((r) => ({
+      slug: r.slug,
+      name: r.name,
+      kicker: r.kicker,
+      description: r.description,
+      amenities: r.amenities,
+      images: r.images,
+      cover: r.cover,
+      maxOccupancy: r.maxOccupancy,
+    }));
+  }
 }
 
 export async function fetchAvailability(from: string, to: string): Promise<AvailabilityResponse> {

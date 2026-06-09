@@ -2,64 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Wifi, Waves, Coffee, Wind, Car, Utensils, Sparkles, Bell } from "lucide-react";
-import { rooms, site } from "@/lib/site";
+import { site } from "@/lib/site";
 import { Reveal, Kicker } from "@/components/reveal";
 import { RoomGallery } from "@/components/room-gallery";
 import { RattanWeave, PalmCorner } from "@/components/brand-texture";
-import { fetchRooms } from "@/lib/booking-api";
+import { fetchDisplayRooms } from "@/lib/booking-api";
 
 // Refresh the live Cloudbeds rooms hourly (ISR) — avoids a Cloudbeds call per view.
 export const revalidate = 3600;
-
-type DisplayRoom = {
-  slug: string;
-  name: string;
-  kicker: string;
-  description: string;
-  amenities: string[];
-  images: string[];
-  maxOccupancy: number;
-};
-
-function slugify(s: string): string {
-  return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-}
-
-// Live Cloudbeds rooms (with Cloudbeds' own photos) via the CloudReef rooms API.
-// Falls back to the curated site.ts rooms if the API is unavailable, so the page
-// never breaks.
-async function getDisplayRooms(): Promise<DisplayRoom[]> {
-  try {
-    const data = await fetchRooms();
-    const cur = data.currency || "PHP";
-    const types = (data.roomTypes ?? []).filter((t) => t.images && t.images.length > 0);
-    if (!types.length) throw new Error("no cloudbeds rooms");
-    return types.map((t) => ({
-      slug: slugify(t.name),
-      name: t.name,
-      kicker:
-        t.base_rate > 0
-          ? `From ${cur} ${Math.round(t.base_rate).toLocaleString()} / night`
-          : "Oceanfront Stay",
-      description:
-        t.description ||
-        "A comfortable room at Txaleta de Camiguin, moments from the Bohol Sea.",
-      amenities: t.amenities ?? [],
-      images: t.images,
-      maxOccupancy: t.max_occupancy,
-    }));
-  } catch {
-    return rooms.map((r) => ({
-      slug: r.slug,
-      name: r.name,
-      kicker: r.kicker,
-      description: r.description,
-      amenities: r.amenities,
-      images: r.images,
-      maxOccupancy: r.maxOccupancy,
-    }));
-  }
-}
 
 export const metadata: Metadata = {
   title: "Accommodation",
@@ -80,7 +30,7 @@ const inclusions = [
 ];
 
 export default async function AccommodationPage() {
-  const displayRooms = await getDisplayRooms();
+  const displayRooms = await fetchDisplayRooms();
   return (
     <>
       {/* ── Banner ── */}

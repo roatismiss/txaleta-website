@@ -10,6 +10,10 @@ import { Testimonials } from "@/components/sections/testimonials";
 import { BrandMoment } from "@/components/sections/brand-moment";
 import { site } from "@/lib/site";
 
+// Refresh the homepage hourly (ISR) so the Accommodation section picks up live
+// Cloudbeds rooms/photos without a Cloudbeds call on every visit.
+export const revalidate = 3600;
+
 export default function Home() {
   return (
     <>

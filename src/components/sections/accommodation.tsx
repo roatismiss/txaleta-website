@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { rooms } from "@/lib/site";
+import { fetchDisplayRooms } from "@/lib/booking-api";
 import { Reveal, Kicker } from "../reveal";
 import { RattanWeave, PalmCorner } from "../brand-texture";
 
-export function Accommodation() {
+export async function Accommodation() {
+  // Live Cloudbeds rooms (photos + rates), falling back to curated site.ts rooms.
+  const rooms = await fetchDisplayRooms();
   return (
     <section id="accommodation" className="relative overflow-hidden bg-cream py-24 sm:py-32">
       <RattanWeave className="opacity-[0.10]" />
