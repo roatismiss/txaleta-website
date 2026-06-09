@@ -94,7 +94,7 @@ export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, in
 
   // Top of the flow, so each step transition can scroll back into view.
   const flowRef = useRef<HTMLDivElement>(null);
-  const didMountRef = useRef(false);
+  const isMountScroll = useRef(true);
 
   // Map an incoming room slug → CloudReef display name (best-effort).
   const initialTypeName = useMemo(() => {
@@ -305,20 +305,24 @@ export function BookingFlow({ initialCheckin, initialCheckout, initialGuests, in
     }
   }
 
-  // On every step change (Continue / Pay / Back, and the success screen), bring
-  // the step tracker back to the top — otherwise the next step opens wherever
-  // the previous button sat, mid-page. Skip the initial mount so the page load
-  // doesn't jump past the hero.
+  // Scroll the booking form into view on mount (user lands on /book and the form
+  // is below the hero banner) and on every step change (Continue / Pay / Back).
   useEffect(() => {
-    if (!didMountRef.current) {
-      didMountRef.current = true;
-      return;
-    }
     const el = flowRef.current;
     if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY - 88; // clear condensed nav (72px) + air
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    window.scrollTo({ top, behavior: reduce ? "auto" : "smooth" });
+    const doScroll = () => {
+      const top = el.getBoundingClientRect().top + window.scrollY - 96; // clear condensed nav + air
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top, behavior: reduce ? "auto" : "smooth" });
+    };
+    if (isMountScroll.current) {
+      isMountScroll.current = false;
+      // Brief delay on first render so the hero gets a moment to show,
+      // then glide down to the form.
+      const id = setTimeout(doScroll, 350);
+      return () => clearTimeout(id);
+    }
+    doScroll();
   }, [step]);
 
   // ── Render ────────────────────────────────────────────────────────────────

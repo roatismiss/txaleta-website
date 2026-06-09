@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { experiences, signature, rentals, site } from "@/lib/site";
 import { Reveal, Kicker } from "@/components/reveal";
 import { ExperienceCardImage } from "@/components/experience-card-image";
+import { TilePattern, PaperGrain, PalmCorner, RattanWeave } from "@/components/brand-texture";
 
 export const metadata: Metadata = {
   title: "Experiences",
@@ -57,8 +58,11 @@ export default function ExperiencesPage() {
       </section>
 
       {/* Signature Txaleta experiences — the curated heritage + wellness rituals */}
-      <section className="bg-cream py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative overflow-hidden bg-cream py-24 sm:py-32">
+        <PaperGrain className="opacity-[0.06]" />
+        <PalmCorner corner="tl" className="text-palm opacity-[0.12] lg:opacity-[0.18]" />
+        <PalmCorner corner="br" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
+        <div className="relative z-10 mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker className="text-brand">{signature.kicker}</Kicker>
             <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
@@ -260,10 +264,13 @@ export default function ExperiencesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-ink py-20 text-white sm:py-28">
-        <Reveal className="mx-auto max-w-2xl px-6 text-center">
-          <h2 className="font-display text-3xl font-light sm:text-4xl">Let Us Plan Your Days</h2>
-          <p className="mx-auto mt-5 max-w-md text-[15px] leading-relaxed text-white/65">
+      <section className="relative overflow-hidden bg-cream py-20 sm:py-28">
+        <RattanWeave className="opacity-[0.10]" />
+        <PalmCorner corner="tl" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
+        <PalmCorner corner="br" className="text-palm opacity-[0.10] lg:opacity-[0.14]" />
+        <Reveal className="relative z-10 mx-auto max-w-2xl px-6 text-center">
+          <h2 className="font-display text-3xl font-light text-ink sm:text-4xl">Let Us Plan Your Days</h2>
+          <p className="mx-auto mt-5 max-w-md text-[15px] leading-relaxed text-ink/65">
             Tell us how long you&apos;re staying and we&apos;ll line up the boats, the
             treks and the quiet corners — and hold the right room for it.
           </p>

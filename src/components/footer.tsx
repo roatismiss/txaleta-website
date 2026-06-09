@@ -3,6 +3,7 @@ import { site } from "@/lib/site";
 import { FacebookIcon, InstagramIcon, TikTokIcon } from "./icons";
 import { LogoWordmark } from "./logo";
 import { PoweredByCloudReef } from "./powered-by";
+import { AzulejoBand, AzulejoBackdrop } from "./brand-texture";
 
 const explore = [
   { label: "Accommodation", href: "/#accommodation" },
@@ -14,8 +15,10 @@ const explore = [
 
 export function Footer() {
   return (
-    <footer className="bg-black text-white">
-      <div className="mx-auto max-w-7xl px-6 py-20">
+    <footer className="relative overflow-hidden bg-[#0f1b30] text-white">
+      <AzulejoBand className="relative z-10 shadow-[0_12px_30px_rgba(0,0,0,0.3)]" />
+      <AzulejoBackdrop className="opacity-[0.07]" />
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pb-20 pt-16">
         <div className="grid gap-12 md:grid-cols-4">
           {/* Brand */}
           <div className="md:col-span-2">
@@ -39,7 +42,7 @@ export function Footer() {
 
           {/* Explore */}
           <div>
-            <h3 className="label text-[10px] text-brand">Explore</h3>
+            <h3 className="label text-[10px] text-[#9db8ef]">Explore</h3>
             <ul className="mt-5 space-y-3">
               {explore.map((l) => (
                 <li key={l.href}>
@@ -53,7 +56,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="label text-[10px] text-brand">Contact</h3>
+            <h3 className="label text-[10px] text-[#9db8ef]">Contact</h3>
             <ul className="mt-5 space-y-3 text-sm text-white/65">
               <li>{site.location.address}</li>
               <li><a href={`tel:${site.contact.phoneRaw}`} className="transition-colors hover:text-white">{site.contact.phone}</a></li>

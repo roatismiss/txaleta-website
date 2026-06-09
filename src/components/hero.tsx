@@ -126,7 +126,7 @@ export function Hero() {
           style={{ fontWeight: 600 }}
           className="font-display mt-5 max-w-4xl text-balance text-5xl leading-[1.05] [text-shadow:0_1px_2px_rgba(0,0,0,0.9),0_3px_10px_rgba(0,0,0,0.85),0_6px_24px_rgba(0,0,0,0.7),0_10px_60px_rgba(0,0,0,0.55)] sm:text-6xl md:text-7xl"
         >
-          Your Coastal Escape<br className="hidden sm:block" /> in Mambajao
+          Come Home<br className="hidden sm:block" /> to Camiguin
         </motion.h1>
 
         <motion.p

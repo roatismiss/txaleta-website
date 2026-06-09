@@ -8,7 +8,6 @@ import { Seamless } from "@/components/sections/seamless";
 import { Gallery } from "@/components/sections/gallery";
 import { Testimonials } from "@/components/sections/testimonials";
 import { BrandMoment } from "@/components/sections/brand-moment";
-import { Contact } from "@/components/sections/contact";
 import { site } from "@/lib/site";
 
 export default function Home() {
@@ -28,7 +27,6 @@ export default function Home() {
       <Gallery />
       <Testimonials />
       <BrandMoment />
-      <Contact />
       <JsonLd />
     </>
   );

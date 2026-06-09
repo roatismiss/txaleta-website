@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Check, MapPin } from "lucide-react";
 import { about, pillars, idealGuests, site } from "@/lib/site";
 import { Reveal, Kicker } from "@/components/reveal";
+import { TilePattern, PaperGrain, PalmCorner, RattanWeave } from "@/components/brand-texture";
 
 export const metadata: Metadata = {
   title: "About",
@@ -37,8 +38,11 @@ export default function AboutPage() {
       </section>
 
       {/* ── Opening + brand essence ── */}
-      <section className="bg-white py-20 sm:py-28">
-        <Reveal className="mx-auto max-w-3xl px-6 text-center">
+      <section className="relative overflow-hidden bg-white py-20 sm:py-28">
+        <PaperGrain className="opacity-[0.06]" />
+        <PalmCorner corner="tl" className="text-palm opacity-[0.12] lg:opacity-[0.18]" />
+        <PalmCorner corner="br" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
+        <Reveal className="relative z-10 mx-auto max-w-3xl px-6 text-center">
           <p className="font-display text-2xl font-light italic leading-snug text-ink/80 sm:text-3xl">
             &ldquo;A heartfelt retreat where heritage meets healing.&rdquo;
           </p>
@@ -126,8 +130,9 @@ export default function AboutPage() {
       </section>
 
       {/* ── Brand pillars — what we believe ── */}
-      <section className="bg-ink py-24 text-white sm:py-32">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative overflow-hidden bg-ink py-24 text-white sm:py-32">
+        <TilePattern tone="cream" fade="center" className="opacity-[0.12]" />
+        <div className="relative z-10 mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker className="text-sand">What We Believe</Kicker>
             <h2 className="font-display mt-5 text-4xl font-light sm:text-5xl">
@@ -211,10 +216,13 @@ export default function AboutPage() {
       </section>
 
       {/* ── Come home — CTA ── */}
-      <section className="bg-ink py-24 text-white sm:py-32">
-        <Reveal className="mx-auto max-w-2xl px-6 text-center">
-          <h2 className="font-display text-4xl font-light sm:text-5xl">{about.comeHome.heading}</h2>
-          <p className="mx-auto mt-6 max-w-md text-[15px] leading-relaxed text-white/65">
+      <section className="relative overflow-hidden bg-cream py-24 sm:py-32">
+        <RattanWeave className="opacity-[0.10]" />
+        <PalmCorner corner="tl" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
+        <PalmCorner corner="br" className="text-palm opacity-[0.10] lg:opacity-[0.14]" />
+        <Reveal className="relative z-10 mx-auto max-w-2xl px-6 text-center">
+          <h2 className="font-display text-4xl font-light text-ink sm:text-5xl">{about.comeHome.heading}</h2>
+          <p className="mx-auto mt-6 max-w-md text-[15px] leading-relaxed text-ink/65">
             {about.comeHome.body}
           </p>
           <p className="font-display mt-8 text-2xl font-light italic leading-snug text-sand">
@@ -226,11 +234,11 @@ export default function AboutPage() {
           >
             Book Your Stay <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
           </Link>
-          <p className="mt-8 text-[13px] text-white/45">
+          <p className="mt-8 text-[13px] text-ink/45">
             Or reach us directly ·{" "}
             <a
               href={`tel:${site.contact.phoneRaw}`}
-              className="text-white/70 transition-colors hover:text-white"
+              className="text-ink/60 transition-colors hover:text-ink"
             >
               {site.contact.phone}
             </a>

@@ -3,11 +3,15 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { dining } from "@/lib/site";
 import { Reveal, Kicker } from "../reveal";
+import { TilePattern, PalmCorner } from "../brand-texture";
 
 export function Dining() {
   return (
-    <section id="dining" className="bg-ink py-24 text-white sm:py-32">
-      <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20">
+    <section id="dining" className="relative overflow-hidden bg-ink py-24 text-white sm:py-32">
+      <TilePattern tone="cream" fade="top" className="opacity-[0.08]" />
+      <PalmCorner corner="tl" className="text-cream opacity-[0.09] lg:opacity-[0.12]" />
+      <PalmCorner corner="br" className="text-cream opacity-[0.07] lg:opacity-[0.10]" />
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <Kicker className="text-brand">{dining.kicker}</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight sm:text-5xl">
