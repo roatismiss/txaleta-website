@@ -220,27 +220,27 @@ export default function ExperiencesPage() {
       </section>
 
       {/* Vehicle rentals — getting around the island */}
-      <section id="rentals" className="scroll-mt-24 bg-cream py-24 sm:py-32">
+      <section id="rentals" className="scroll-mt-24 bg-ink py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <Kicker>{rentals.kicker}</Kicker>
-            <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
+            <Kicker className="text-sand">{rentals.kicker}</Kicker>
+            <h2 className="font-display mt-5 text-4xl font-light leading-tight text-cream sm:text-5xl">
               {rentals.heading}
             </h2>
-            <p className="mt-6 text-[15px] leading-relaxed text-ink/65">{rentals.body}</p>
+            <p className="mt-6 text-[15px] leading-relaxed text-cream/65">{rentals.body}</p>
           </Reveal>
 
           <div className="mt-16 grid gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
             {rentals.items.map((r, i) => (
               <Reveal key={r.name} delay={(i % 4) * 0.06}>
-                <div className="flex h-full flex-col border-t border-ink/10 pt-6">
-                  <h3 className="font-display text-2xl font-light text-ink">{r.name}</h3>
-                  <p className="mt-2 flex-1 text-[14px] leading-relaxed text-ink/65">{r.blurb}</p>
+                <div className="flex h-full flex-col border-t border-cream/15 pt-6">
+                  <h3 className="font-display text-2xl font-light text-cream">{r.name}</h3>
+                  <p className="mt-2 flex-1 text-[14px] leading-relaxed text-cream/65">{r.blurb}</p>
                   <dl className="mt-6 space-y-2">
                     {r.rates.map((rate) => (
-                      <div key={rate.label} className="flex items-baseline justify-between gap-3 border-t border-ink/5 pt-2 first:border-0 first:pt-0">
-                        <dt className="text-[13px] text-ink/55">{rate.label}</dt>
-                        <dd className="font-display text-xl font-light text-brand">{rate.price}</dd>
+                      <div key={rate.label} className="flex items-baseline justify-between gap-3 border-t border-cream/10 pt-2 first:border-0 first:pt-0">
+                        <dt className="text-[13px] text-cream/55">{rate.label}</dt>
+                        <dd className="font-display text-xl font-light text-sand">{rate.price}</dd>
                       </div>
                     ))}
                   </dl>
@@ -250,7 +250,7 @@ export default function ExperiencesPage() {
           </div>
 
           <Reveal className="mx-auto mt-16 max-w-2xl text-center">
-            <p className="text-[13px] leading-relaxed text-ink/55">{rentals.note}</p>
+            <p className="text-[13px] leading-relaxed text-cream/55">{rentals.note}</p>
             <a
               href={`https://wa.me/${site.contact.whatsapp}?text=${encodeURIComponent("Hi, I'd like to arrange a rental.")}`}
               target="_blank"
