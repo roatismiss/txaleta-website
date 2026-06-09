@@ -5,6 +5,7 @@ import { ArrowRight, Wifi, Waves, Coffee, Wind, Car, Utensils, Sparkles, Bell } 
 import { rooms, site } from "@/lib/site";
 import { Reveal, Kicker } from "@/components/reveal";
 import { RoomGallery } from "@/components/room-gallery";
+import { RattanWeave, PalmCorner } from "@/components/brand-texture";
 
 export const metadata: Metadata = {
   title: "Accommodation",
@@ -60,8 +61,11 @@ export default function AccommodationPage() {
       </section>
 
       {/* ── Rooms — alternating feature rows with an image collage ── */}
-      <section className="bg-cream py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative overflow-hidden bg-cream py-20 sm:py-28">
+        <RattanWeave className="opacity-[0.10]" />
+        <PalmCorner corner="tr" className="text-palm opacity-[0.12] lg:opacity-[0.18]" />
+        <PalmCorner corner="bl" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
+        <div className="relative z-10 mx-auto max-w-7xl px-6">
           <div className="flex flex-col gap-24 sm:gap-32">
             {rooms.map((room, i) => (
               <Reveal key={room.slug}>
@@ -152,10 +156,13 @@ export default function AccommodationPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-ink py-20 text-white sm:py-28">
-        <Reveal className="mx-auto max-w-2xl px-6 text-center">
-          <h2 className="font-display text-3xl font-light sm:text-4xl">Find Your Room</h2>
-          <p className="mx-auto mt-5 max-w-md text-[15px] leading-relaxed text-white/65">
+      <section className="relative overflow-hidden bg-cream py-20 sm:py-28">
+        <RattanWeave className="opacity-[0.10]" />
+        <PalmCorner corner="tl" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
+        <PalmCorner corner="br" className="text-palm opacity-[0.10] lg:opacity-[0.14]" />
+        <Reveal className="relative z-10 mx-auto max-w-2xl px-6 text-center">
+          <h2 className="font-display text-3xl font-light text-ink sm:text-4xl">Find Your Room</h2>
+          <p className="mx-auto mt-5 max-w-md text-[15px] leading-relaxed text-ink/65">
             Tell us your dates and how many you are, and we&apos;ll hold the right room — and
             help you plan the days around it.
           </p>
@@ -165,9 +172,9 @@ export default function AccommodationPage() {
           >
             Check Availability <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
           </Link>
-          <p className="mt-8 text-[13px] text-white/45">
+          <p className="mt-8 text-[13px] text-ink/45">
             Or call us directly ·{" "}
-            <a href={`tel:${site.contact.phoneRaw}`} className="text-white/70 transition-colors hover:text-white">
+            <a href={`tel:${site.contact.phoneRaw}`} className="text-ink/60 transition-colors hover:text-ink">
               {site.contact.phone}
             </a>
           </p>

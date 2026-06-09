@@ -3,11 +3,15 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { rooms } from "@/lib/site";
 import { Reveal, Kicker } from "../reveal";
+import { RattanWeave, PalmCorner } from "../brand-texture";
 
 export function Accommodation() {
   return (
-    <section id="accommodation" className="bg-cream py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="accommodation" className="relative overflow-hidden bg-cream py-24 sm:py-32">
+      <RattanWeave className="opacity-[0.10]" />
+      <PalmCorner corner="tr" className="text-palm opacity-[0.12] lg:opacity-[0.18]" />
+      <PalmCorner corner="bl" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
+      <div className="relative z-10 mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
           <Kicker className="text-brand">The Ten Rooms</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">

@@ -6,9 +6,9 @@
 export const site = {
   name: "Txaleta de Camiguin",
   shortName: "Txaleta",
-  tagline: "Your Coastal Escape in Mambajao",
+  tagline: "Come Home to Camiguin",
   description:
-    "A boutique coastal resort on Camiguin Island — seaview suites, ocean-view glamping, an infinity pool and warm Filipino hospitality, just minutes from Camiguin Airport.",
+    "A family-owned boutique resort on a Camiguin clifftop — Filipino-Spanish heritage, ocean-view rooms, an infinity pool, personalized island experiences and heartfelt hospitality, just minutes from Camiguin Airport.",
   url: "https://txaletadecamiguin.com",
 
   location: {
@@ -195,39 +195,64 @@ export const rooms: Room[] = [
 ];
 
 export const dining = {
-  kicker: "By the Sea",
-  heading: "Breakfast Comes In on the Tide",
-  body: "The café sits at the edge of the water, where breakfast arrives with the morning light and the boats heading out for White Island. Days are built on fresh Filipino cooking and a few easy international plates: fish landed that morning, fruit from the slopes behind Mambajao, lanzones when the season turns them sweet. By evening the sea goes gold, and dinner is something you stay with for a while.",
+  // Short kicker for the homepage section; the long line lives in `subheading`.
+  kicker: "Filipino Heart, Spanish Soul",
+  heading: "Dining at Txaleta",
+  subheading: "One of Camiguin's Most Memorable Dining Experiences",
+  body:
+    "Perched on a scenic clifftop overlooking the sea, Txaleta offers a unique dining experience that brings together Filipino warmth, Spanish heritage, breathtaking ocean views, and thoughtfully prepared cuisine. Whether you're looking for breakfast in Camiguin, a leisurely lunch with a view, sunset cocktails, or dinner under the stars, our restaurant welcomes both resort guests and walk-in visitors seeking great food and unforgettable island hospitality.",
   images: [
     "/images/dining/food_txaleta.webp",
     "/images/dining/breakfest_txaleta.webp",
     "/images/dining/nachos_sendiv.webp",
     "/images/dining/aerial_view_table.webp",
   ],
-  // Extended copy for the dedicated /dining page
+  // Extended copy for the dedicated /dining page (client copywriting, verbatim).
   stories: [
     {
-      kicker: "Morning",
-      heading: "Breakfast at the Water's Edge",
-      body: "The day begins with the tide. Coffee arrives first — Barako from the highlands, roasted dark and honest. Then the rest: fresh fruit from the market at Mambajao, eggs done simply, fish from the boats that left while you were still asleep. Breakfast at Txaleta is not rushed. The table faces the sea and the morning is yours for as long as you want it.",
-      image: "/images/dining/breakfest_txaleta.webp",
-      imageAlt: "Breakfast served by the sea at Txaleta",
-    },
-    {
-      kicker: "All Day",
-      heading: "Filipino Cooking, Kept Honest",
-      body: "The kitchen runs on what the island gives. Sinigang built from tamarind and the morning's catch. Kare-kare slow-cooked until the sauce holds. Lanzones from the trees behind Mambajao, sweet enough to eat by the handful when the season comes. A few easy international plates for the afternoons when you want something lighter — but the Filipino table is the one worth knowing.",
+      id: "all-day",
+      kicker: "The Kitchen",
+      heading: "Filipino-Spanish Cuisine Rooted in Family Tradition",
+      body:
+        "Our menu celebrates the flavors that have shaped our family's story. Inspired by both Filipino and Spanish culinary traditions, we serve dishes designed to be shared and enjoyed together — fresh seafood, local ingredients, traditional recipes, and island flavors that honor both heritage and home. From paella and tapas to beloved Filipino favorites, every dish is prepared with care and meant to nourish both body and spirit.",
       image: "/images/dining/food_txaleta.webp",
-      imageAlt: "Filipino dishes at Txaleta de Camiguin",
+      imageAlt: "Filipino-Spanish dishes at Txaleta de Camiguin",
     },
     {
+      id: "morning",
+      kicker: "Morning",
+      heading: "Breakfast with a View in Camiguin",
+      body:
+        "Mornings at Txaleta are unhurried. Wake up to freshly brewed coffee, tropical fruits, homemade specialties, and breakfast dishes served alongside panoramic ocean views and the gentle rhythm of island life. Whether you're preparing for a day of adventure or simply enjoying a slow morning, breakfast at Txaleta is one of the most peaceful ways to begin your day in Camiguin.",
+      image: "/images/dining/breakfest_txaleta.webp",
+      imageAlt: "Breakfast with an ocean view at Txaleta de Camiguin",
+    },
+    {
+      id: "evening",
       kicker: "Evening",
-      heading: "Dinner While the Sea Goes Gold",
-      body: "By late afternoon the light turns amber over the Bohol Sea. The café slows down. A cold San Miguel, or something from the bar. The nachos arrive — crisp, messy, exactly right. The snapper is grilled over coals with calamansi and butter. Dinner is unhurried here: the kind of meal that lasts past dark because no one at the table wants to be the first to leave.",
-      image: "/images/dining/nachos_sendiv.webp",
-      imageAlt: "Evening dining at Txaleta de Camiguin",
+      heading: "Sunset Dining Overlooking the Sea",
+      body:
+        "As the sun begins to set, our clifftop location offers one of the most beautiful dining settings in Camiguin. Gather with family and friends, enjoy fresh island flavors, and watch the sky transform into shades of gold, orange, and pink while overlooking the sea. These are the moments our guests remember long after their holiday ends.",
+      image: "/images/dining/aerial_view_table.webp",
+      imageAlt: "Sunset dining overlooking the sea at Txaleta de Camiguin",
     },
   ],
+  family: {
+    kicker: "Gather",
+    heading: "Family Dining, Celebrations & Special Occasions",
+    body:
+      "Some of life's best memories are made around the table. Whether you're celebrating a birthday, anniversary, family reunion, wedding gathering, or simply enjoying a meal together, our team is happy to help create a dining experience that feels personal and memorable. Private dining arrangements and customized menus are available upon request.",
+    image: "/images/resort/common-area.webp",
+    imageAlt: "Family dining and celebrations at Txaleta de Camiguin",
+  },
+  local: {
+    kicker: "From the Island",
+    heading: "Local Ingredients, Island Flavors",
+    body:
+      "Whenever possible, we source ingredients locally and support the Camiguin community that makes this island so special. Fresh seafood, tropical fruits, locally grown produce, and regional flavors inspire much of what we serve — letting guests enjoy an authentic taste of Camiguin while supporting local farmers, fishermen, and suppliers.",
+    image: "/images/dining/nachos_sendiv.webp",
+    imageAlt: "Local Camiguin ingredients and island flavors at Txaleta",
+  },
   atmosphere: [
     "/images/resort/rayligh_lounge.webp",
     "/images/resort/common-area.webp",
@@ -243,6 +268,12 @@ export const dining = {
     body: "Some afternoons you won't want to leave the deck. Scan the code in your room to browse the café's island delicacies — the morning's catch, a cold drink, something sweet — and order straight from your phone. We'll bring it to wherever you've settled: the pool, the lounge, your own private terrace.",
     image: "/images/rooms/ocean-view-suite/Ocean_view_private_terrace.webp",
     imageAlt: "A private terrace overlooking the Bohol Sea at Txaleta de Camiguin",
+  },
+  closing: {
+    heading: "Come Hungry. Leave Nourished.",
+    body:
+      "At Txaleta, we hope every meal leaves you with more than a full stomach — a story shared, a laugh remembered, a sunset enjoyed, and the feeling of having gathered around a table where you truly belong.",
+    signoff: ["Welcome to the table.", "Welcome home."],
   },
 };
 
@@ -381,6 +412,237 @@ export const testimonials: Testimonial[] = [
 ];
 
 // ============================================================================
+// Brand pillars — the five core ideas from the brand book (txaleta_branding.pdf).
+// ============================================================================
+export type Pillar = { title: string; idea: string; quote: string };
+
+export const pillars: Pillar[] = [
+  {
+    title: "Family-Centered Hospitality",
+    idea: "Guests are family.",
+    quote:
+      "We treat every guest as family — offering warmth, care, and genuine connections rooted in Filipino and Spanish traditions of hospitality.",
+  },
+  {
+    title: "Cultural Harmony & Heritage",
+    idea: "Filipino heart, Spanish soul.",
+    quote:
+      "We celebrate our Filipino-Spanish roots by honoring tradition while creating space for shared cultural discovery and pride.",
+  },
+  {
+    title: "Wellness Through Simplicity",
+    idea: "Nature and nourishment, made personal.",
+    quote:
+      "We believe in restorative living — grounded in nature, gentle rhythms, and intentional design that nourishes body, mind, and spirit.",
+  },
+  {
+    title: "Sustainable Island Living",
+    idea: "Respect for the land that gives us life.",
+    quote:
+      "Our commitment to Camiguin's natural beauty means treading lightly, sourcing locally, and uplifting the community around us.",
+  },
+  {
+    title: "Timeless Togetherness",
+    idea: "Space to be present.",
+    quote:
+      "We create space for slow, meaningful moments — where generations come together and time feels both sacred and simple.",
+  },
+];
+
+// ============================================================================
+// Signature Txaleta experiences — the curated heritage + wellness rituals from
+// the brand book. (Distinct from the island ACTIVITIES in `experiences` above.)
+// ============================================================================
+export type SignatureExperience = {
+  name: string;
+  tagline: string;
+  body: string;
+  image: string;
+};
+
+export const signature = {
+  kicker: "Signature Experiences",
+  heading: "Rituals Made for Togetherness",
+  body:
+    "Woven through every stay are the small ceremonies that make Txaleta itself — heritage on the table, wellness by the sea, and slow evenings under the stars. Tell us what your family loves and we'll arrange the rest.",
+  items: [
+    {
+      name: "Almusal sa Bahay",
+      tagline: "Family Heritage Breakfast",
+      body:
+        "A slow morning ritual served in-room or al fresco — heirloom Filipino-Spanish plates like tsokolate-e, pan de sal con keso de bola, longganisa, and fresh Camiguin mango. Comfort food, storytelling, and shared moments.",
+      image: "/images/dining/breakfest_txaleta.webp",
+    },
+    {
+      name: "Sunrise Saludo",
+      tagline: "Cliffside Yoga at Dawn",
+      body:
+        "Gentle, breath-centered yoga overlooking the sea at sunrise, set to birdsong and the rhythm of Camiguin's early light. Designed for all levels — a calm, grounded way to begin the day.",
+      image: "/images/resort/terrace_view.webp",
+    },
+    {
+      name: "Liit na Yogis",
+      tagline: "Kids' Mindful Movement",
+      body:
+        "A playful yoga session for children — stories, animal poses, and breathwork in the garden or shaded lanai, guided by certified kids' instructors. Whole-family wellness, and a quiet moment for parents.",
+      image: "/images/resort/txaleta_forest.webp",
+    },
+    {
+      name: "Hilot & Heritage",
+      tagline: "Wellness Afternoon",
+      body:
+        "Traditional hilot massage with a volcanic salt foot soak and native herbal tea — local oils, skilled hands, and ancestral healing wisdom. Deep relaxation rooted in Filipino tradition.",
+      image: "/images/resort/rayligh_lounge.webp",
+    },
+    {
+      name: "La Merienda",
+      tagline: "Sunset Picnic",
+      body:
+        "A curated seaside or garden picnic with ensaymada, churros con tsokolate, fresh coconut juice or sangria — blankets, woven mats, and a reflection journal included. Made for golden-hour bonding.",
+      image: "/images/resort/txaleta_sand.webp",
+    },
+    {
+      name: "Camiguin Roots",
+      tagline: "Island Heritage Tour",
+      body:
+        "A soulful exploration of Camiguin's old churches, springs, and ancestral homes, guided by local storytellers sharing Filipino-Spanish history. Depth, learning, and real cultural connection.",
+      image: "/images/resort/txaleta_rice_field.webp",
+    },
+    {
+      name: "Pamilya sa Palayok",
+      tagline: "Family Cooking Session",
+      body:
+        "An interactive kitchen experience — cook paella filipina, rellenong bangus, or bibingka alongside a local chef and learn the stories behind each dish. Joyful bonding through food and shared tradition.",
+      image: "/images/dining/food_txaleta.webp",
+    },
+    {
+      name: "Tahimik Nights",
+      tagline: "Digital Detox & Stargazing",
+      body:
+        "A tech-free night of oil lamps, stars, and local myths — cacao or salabat in hand, slow music and gentle storytelling under the Camiguin sky. A soul-soothing break from the noise.",
+      image: "/images/resort/night_view.webp",
+    },
+  ] as SignatureExperience[],
+};
+
+// ============================================================================
+// Ideal guests — who Txaleta is for (client onboarding brief).
+// ============================================================================
+export type IdealGuest = { title: string; body: string };
+
+export const idealGuests = {
+  kicker: "Who Txaleta Is For",
+  heading: "Made for Those Who Travel with Heart",
+  body:
+    "We welcome everyone, but we have a special place in our hearts for travelers who value meaningful experiences over busy itineraries, connection over crowds, and memories over material things.",
+  items: [
+    {
+      title: "Families Seeking Quality Time",
+      body:
+        "Multigenerational holidays, long-awaited reunions, or a simple weekend escape — built for the moments that happen around a shared table, during a sunset conversation, or while exploring the island together.",
+    },
+    {
+      title: "Couples Looking to Slow Down",
+      body:
+        "Space to reconnect and unwind — sunrise views, leisurely breakfasts, island adventures, and peaceful evenings by the sea, set for meaningful moments.",
+    },
+    {
+      title: "Wellness & Slow-Travel Enthusiasts",
+      body:
+        "For those who appreciate a slower pace and the restorative power of nature — a morning by the infinity pool, a quiet walk, a hike up Hibok-Hibok, or simply the sea breeze and a good book.",
+    },
+    {
+      title: "Cultural & Island Explorers",
+      body:
+        "Curious travelers who seek authentic experiences — local traditions, regional cuisine, the stories behind a place, and the corners beyond the typical tourist route.",
+    },
+  ] as IdealGuest[],
+};
+
+// ============================================================================
+// About page content (client copywriting). Single source of truth for /about.
+// ============================================================================
+export const about = {
+  hero: {
+    kicker: "About Txaleta de Camiguin",
+    heading: "Where Heritage, Hospitality & Island Living Come Together",
+    image: "/images/resort/Aerialview_txaleta.webp",
+  },
+  intro:
+    "On a scenic clifftop overlooking the sea, Txaleta de Camiguin is a family-owned boutique resort in Mambajao designed for travelers seeking meaningful experiences, breathtaking ocean views, and the warmth of genuine hospitality. More than a place to stay, Txaleta is a place to slow down, reconnect, and experience island life at a gentler pace — whatever brings you here, our goal is simple: to make you feel at home.",
+  sections: [
+    {
+      kicker: "Our Story",
+      heading: "A Family Dream, Rooted in Camiguin",
+      body: [
+        "Txaleta began as a family dream inspired by a love for Camiguin, hospitality, and the traditions that bring people together.",
+        "The name “Txaleta” comes from the Spanish word for a small home or cottage, reflecting our family's Spanish heritage and our vision of a welcoming sanctuary where guests are treated like family. Today that vision continues in every part of the guest experience — personalized service, thoughtfully designed spaces, shared meals, and island adventures.",
+        "We believe the best memories are often the simplest ones: a sunrise shared with loved ones, conversations around the table, laughter by the pool, and moments of stillness overlooking the sea.",
+      ],
+      image: "/images/resort/common-area.webp",
+    },
+    {
+      kicker: "Filipino Heart, Spanish Soul",
+      heading: "A Blend of Two Cultures",
+      body: [
+        "Our Filipino-Spanish heritage influences everything we do — from our architecture and interiors to our cuisine and hospitality, Txaleta reflects a blend of cultures rooted in family, generosity, tradition, and togetherness.",
+        "Every detail has been thoughtfully chosen to create a space that feels elegant yet comfortable, refined yet welcoming. It is luxury without pretense, and hospitality from the heart.",
+      ],
+      image: "/images/resort/rayligh_lounge.webp",
+    },
+    {
+      kicker: "Designed for Connection",
+      heading: "Space for Meaningful Moments",
+      body: [
+        "At Txaleta, travel is about more than visiting a destination. It is about creating space for family, friendship, wellness, and meaningful moments.",
+        "Mornings begin with spectacular sunrises. Days unfold at a slower pace. Evenings are spent gathered around the table sharing stories, food, and laughter — the moments that stay with you long after you've returned home.",
+      ],
+      image: "/images/dining/aerial_view_table.webp",
+    },
+  ],
+  location: {
+    kicker: "A Unique Location in Camiguin",
+    heading: "The Heart of the Island, a Peaceful Retreat from the Crowds",
+    body:
+      "Located in Mambajao, Txaleta offers easy access to many of Camiguin's most famous attractions while remaining a quiet retreat. After a day of exploring the island's natural wonders, return to panoramic ocean views, island breezes, and unforgettable sunsets.",
+    attractions: [
+      "White Island Sandbar",
+      "Mantigue Island Nature Park",
+      "Katibawasan Falls",
+      "Tuasan Falls",
+      "Sunken Cemetery",
+      "Old Church Ruins",
+      "Sto. Niño Cold Spring",
+      "Ardent Hot Spring",
+      "Mt. Hibok-Hibok",
+    ],
+    image: "/images/resort/aerial_view_camiguin_2.jpg",
+  },
+  whyChoose: {
+    kicker: "What Makes Txaleta Special",
+    heading: "More Than a Resort. A Place to Belong.",
+    body:
+      "Many travelers come for the ocean views, the infinity pool, and the villas — but what they remember most is how they felt: welcomed, cared for, and completely at home.",
+    points: [
+      "Family-owned boutique resort in Camiguin",
+      "Personalized hospitality and local recommendations",
+      "Infinity pool with panoramic ocean views",
+      "Filipino-Spanish heritage and authentic island charm",
+      "Customized tours and experiences",
+      "Easy access to Camiguin's top attractions",
+      "Restaurant serving Filipino-Spanish cuisine",
+      "A peaceful retreat for connection, wellness, and togetherness",
+    ],
+  },
+  comeHome: {
+    heading: "Come Home to Txaleta",
+    body:
+      "Whether you're searching for a boutique resort in Camiguin, a family-friendly island getaway, or a romantic retreat, we invite you to experience the island through our eyes.",
+    closing: ["Come for the views.", "Stay for the feeling.", "Welcome home."],
+  },
+};
+
+// ============================================================================
 // Navigation — top bar + desktop mega menus
 // Declared last so the mega cards can read from `rooms` / `experiences` above.
 // ============================================================================
@@ -448,6 +710,7 @@ export const nav: NavItem[] = [
   { label: "Accommodation", href: "/accommodation", mega: accommodationMega },
   { label: "Dining", href: "/dining", mega: diningMega },
   { label: "Experiences", href: "/experiences", mega: experiencesMega },
+  { label: "About", href: "/about" },
   { label: "Gallery", href: "/#gallery" },
   { label: "Contact", href: "/#contact" },
 ];

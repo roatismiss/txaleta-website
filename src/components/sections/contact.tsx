@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { site } from "@/lib/site";
 import { Reveal, Kicker } from "../reveal";
+import { PalmCorner } from "../brand-texture";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -25,8 +26,10 @@ const mapsEmbed = `https://maps.google.com/maps?q=${encodeURIComponent(
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-black text-white">
-      <div className="mx-auto grid max-w-7xl lg:grid-cols-2">
+    <section id="contact" className="relative overflow-hidden bg-black text-white">
+      <PalmCorner corner="tl" className="text-cream opacity-[0.07] lg:opacity-[0.10]" />
+      <PalmCorner corner="bl" className="text-cream opacity-[0.09] lg:opacity-[0.12]" />
+      <div className="relative z-10 mx-auto grid max-w-7xl lg:grid-cols-2">
         <Reveal className="px-6 py-24 sm:px-12 sm:py-32">
           <Kicker className="text-brand">On the Mambajao Shore</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight sm:text-5xl">

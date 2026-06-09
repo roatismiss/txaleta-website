@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Jost } from "next/font/google";
+import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { Navbar } from "@/components/navbar";
@@ -8,17 +8,21 @@ import { ChatbotEmbed } from "@/components/chatbot-embed";
 import { SplashScreen } from "@/components/splash-screen";
 import { MenuProvider } from "@/contexts/menu-context";
 
-const serif = Cormorant_Garamond({
+// Brand typography (txaleta_branding.pdf — Visual Identity):
+//   Playfair Display — elegant heritage serif for titles/headers
+//   Lato            — clean modern sans for body + digital UI
+// Playfair Display is a variable font (400–900); Lato ships fixed weights.
+const serif = Playfair_Display({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-cormorant",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-playfair",
   display: "swap",
 });
 
-const sans = Jost({
+const sans = Lato({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-jost",
+  weight: ["300", "400", "700"],
+  variable: "--font-lato",
   display: "swap",
 });
 

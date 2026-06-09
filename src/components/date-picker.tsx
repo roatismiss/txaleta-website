@@ -22,6 +22,7 @@ export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCh
   const [open, setOpen] = useState(false);
   const [activeField, setActiveField] = useState<"checkin" | "checkout">("checkin");
   const containerRef = useRef<HTMLDivElement>(null);
+  const calendarRef = useRef<HTMLDivElement>(null);
 
   const range: DateRange = {
     from: checkin ? new Date(checkin + "T00:00:00") : undefined,
@@ -34,6 +35,17 @@ export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCh
     }
     if (open) document.addEventListener("mousedown", onOutside);
     return () => document.removeEventListener("mousedown", onOutside);
+  }, [open]);
+
+  // When the calendar opens, ensure it's fully visible in the viewport.
+  // If it opens upward and clips past the top, scroll up to reveal it.
+  useEffect(() => {
+    if (!open || !calendarRef.current) return;
+    const rect = calendarRef.current.getBoundingClientRect();
+    if (rect.top < 0) {
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollBy({ top: rect.top - 12, behavior: reduce ? "auto" : "smooth" });
+    }
   }, [open]);
 
   function handleSelect(_range: DateRange | undefined, clicked: Date) {
@@ -93,6 +105,7 @@ export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCh
       {/* Calendar dropdown */}
       {open && (
         <div
+          ref={calendarRef}
           className={`absolute left-0 z-[300] bg-white shadow-[0_32px_80px_rgba(12,28,34,0.25)] ${dropDirection === "down" ? "top-full mt-3" : "bottom-full mb-3"}`}
         >
           {/* Header */}

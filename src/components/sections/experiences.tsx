@@ -3,11 +3,14 @@ import { ArrowRight } from "lucide-react";
 import { experiences } from "@/lib/site";
 import { Reveal, Kicker } from "../reveal";
 import { ExperienceCardImage } from "../experience-card-image";
+import { PalmCorner } from "../brand-texture";
 
 export function Experiences() {
   return (
-    <section id="experiences" className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="experiences" className="relative overflow-hidden bg-white py-24 sm:py-32">
+      <PalmCorner corner="tr" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
+      <PalmCorner corner="bl" className="text-palm opacity-[0.12] lg:opacity-[0.18]" />
+      <div className="relative z-10 mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
           <Kicker className="text-brand">Things to Do</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">

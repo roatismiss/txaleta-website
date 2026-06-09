@@ -17,11 +17,19 @@ export function ChatbotEmbed() {
     s.id = "cloudreef-chatbot-script";
     // ?v=… cache-busts the 4h-cached chatbot.js so visitors pick up widget
     // updates (e.g. the Cloudbeds booking handoff) without waiting for the TTL.
-    s.src = `${site.cloudreef.baseUrl}/widget/chatbot.js?v=20260605`;
+    s.src = `${site.cloudreef.baseUrl}/widget/chatbot.js?v=20260609`;
     s.async = true;
     s.defer = true;
     s.setAttribute("data-resort-key", site.cloudreef.widgetKey);
-    s.setAttribute("data-color", "#0b1c22");
+    // Heritage palette (see globals.css @theme) so the whole widget — FAB *and*
+    // the in-chat iframe UI — matches the site instead of CloudReef's sky blue.
+    // data-color themes the FAB; data-accent/ambient/ink/surface are forwarded
+    // into the iframe by chatbot.js and drive the chat theme.
+    s.setAttribute("data-color", "#9c6b66");      // Heritage Clay — FAB + CTAs
+    s.setAttribute("data-accent", "#9c6b66");     // Heritage Clay — bubbles, buttons
+    s.setAttribute("data-ambient", "#6f8a6a");    // Palm/Sage green — glass + tints
+    s.setAttribute("data-ink", "#2c3a2c");        // Palm Leaf Green (deep) — text
+    s.setAttribute("data-surface", "#f4efe3");    // Coconut White — background base
     s.setAttribute("data-position", "right");
     document.body.appendChild(s);
   }, []);
