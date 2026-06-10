@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Txaleta — Texturi florale (tuner)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#2c3a2c; --ink-soft:#3a4a37; --sand:#e3a53e; --cream:#f4efe3;
+    --clay:#9c6b66; --clay-dark:#7e534f; --blush:#c4848c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{display:flex;min-height:100vh;background:#e9e4d6;font-family:Lato,system-ui,sans-serif;color:var(--ink)}
+
+  /* ---------- Panel ---------- */
+  aside{width:296px;flex:none;background:var(--ink);color:#f4efe3;padding:20px 18px 40px;height:100vh;overflow-y:auto;position:sticky;top:0}
+  aside h1{font-family:'Playfair Display',serif;font-weight:400;font-size:20px;letter-spacing:.02em}
+  aside p.hint{font-size:11px;opacity:.6;margin-top:6px;line-height:1.5}
+  fieldset{border:1px solid rgba(244,239,227,.18);margin-top:16px;padding:12px 12px 14px;border-radius:2px}
+  legend{padding:0 8px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--sand)}
+  .row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:9px;font-size:12px}
+  .row label{opacity:.85}
+  input[type=range]{width:128px;accent-color:var(--sand)}
+  select,input[type=number]{background:#22301f;color:#f4efe3;border:1px solid rgba(244,239,227,.25);font-size:12px;padding:3px 6px;border-radius:2px;width:128px}
+  input[type=number]{width:70px}
+  input[type=checkbox]{accent-color:var(--sand);width:15px;height:15px}
+  .onrow{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700}
+  .btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+  button{background:transparent;border:1px solid var(--sand);color:var(--sand);font-size:11px;letter-spacing:.08em;padding:6px 10px;cursor:pointer;border-radius:2px}
+  button:hover{background:var(--sand);color:var(--ink)}
+  button.solid{background:var(--clay);border-color:var(--clay);color:#fff}
+  button.solid:hover{background:var(--clay-dark)}
+  .note{font-size:10.5px;line-height:1.55;opacity:.55;margin-top:16px}
+
+  /* ---------- Preview ---------- */
+  main{flex:1;overflow-y:auto;padding:36px 40px}
+  .frame{max-width:1280px;margin:0 auto;box-shadow:0 24px 70px rgba(0,0,0,.18)}
+  .fakenav{background:var(--ink);color:var(--cream);display:flex;justify-content:space-between;align-items:center;padding:16px 34px;font-size:12px;letter-spacing:.2em}
+  .fakenav b{font-family:'Playfair Display',serif;font-size:17px;letter-spacing:.06em;font-weight:400}
+  section.intro{position:relative;overflow:hidden;background:#fff;padding:96px 56px 110px}
+  section.intro.cream{background:var(--cream)}
+  .z{position:relative;z-index:10}
+  .center{max-width:760px;margin:0 auto;text-align:center}
+  .kicker{font-size:11px;letter-spacing:.38em;text-transform:uppercase;color:var(--clay);font-weight:700}
+  .kicker::before,.kicker::after{content:"";display:inline-block;width:34px;height:1px;background:var(--sand);vertical-align:middle;margin:0 14px}
+  h2{font-family:'Playfair Display',serif;font-weight:300;font-size:clamp(36px,5vw,58px);line-height:1.1;margin-top:24px;color:var(--ink)}
+  .lede{font-family:'Playfair Display',serif;font-style:italic;font-weight:300;font-size:clamp(20px,2.2vw,27px);line-height:1.4;color:rgba(44,58,44,.8);margin:30px auto 0;max-width:640px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:64px}
+  .imgbox{aspect-ratio:4/5;overflow:hidden;background:linear-gradient(160deg,#9cb8a8,#41594a)}
+  .imgbox img{width:100%;height:100%;object-fit:cover;display:block}
+  .body p{font-size:15px;line-height:1.7;color:rgba(44,58,44,.7);max-width:520px}
+  .body p+p{margin-top:18px}
+  .feats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;border-top:1px solid rgba(0,0,0,.1);margin-top:38px;padding-top:30px}
+  .feats div p.t{font-family:'Playfair Display',serif;font-size:18px;color:var(--ink);margin-top:10px}
+  .feats div p.n{font-size:11.5px;color:rgba(44,58,44,.5);margin-top:2px}
+  .feats svg{width:24px;height:24px;stroke:var(--clay);fill:none;stroke-width:1.4}
+  blockquote{margin:80px auto 0;max-width:740px;text-align:center}
+  blockquote span{font-family:'Playfair Display',serif;font-style:italic;font-weight:300;font-size:clamp(22px,2.6vw,30px);color:var(--clay)}
+
+  /* ---------- Decorative layers ---------- */
+  .layer{position:absolute;pointer-events:none}
+  .fill{inset:0}
+  #grain{inset:0;mix-blend-mode:multiply;opacity:.06}
+  #garlandLayer{top:0;left:0;right:0;height:150px}
+  #vineLayer{inset:0;-webkit-mask-image:linear-gradient(transparent,black 7%,black 93%,transparent);mask-image:linear-gradient(transparent,black 7%,black 93%,transparent)}
+  #fieldLayer{inset:0;-webkit-mask-image:radial-gradient(58% 46% at 50% 36%,transparent 28%,black 72%);mask-image:radial-gradient(58% 46% at 50% 36%,transparent 28%,black 72%)}
+  .corner{position:absolute}
+  .corner.tl{top:0;left:0} .corner.tr{top:0;right:0}
+  .corner.bl{bottom:0;left:0} .corner.br{bottom:0;right:0}
+  .fx path,.fx circle{vector-effect:non-scaling-stroke}
+
+  @keyframes drift{
+    0%{transform:translateY(0) rotate(0deg)}
+    100%{transform:translateY(16px) rotate(10deg)}
+  }
+  g.p{transform-box:fill-box;transform-origin:center}
+  g.p.anim{animation:drift var(--d,6s) ease-in-out infinite alternate}
+
+  @media (max-width:1100px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<aside>
+  <h1>Texturi florale</h1>
+  <p class="hint">Tuner pentru secțiunea „The Quiet the Other Islands Lost". Varianta aleasă se portează 1:1 în <b>brand-texture.tsx</b>. Deschide pe <b>localhost:3100/floral-texture-styles.html</b>.</p>
+
+  <div class="btns">
+    <button class="solid" data-preset="reco">Combo recomandat</button>
+    <button data-preset="rich">Tot decorul</button>
+    <button data-preset="min">Doar palmieri</button>
+  </div>
+
+  <fieldset>
+    <legend>1 · Colț calachuchi</legend>
+    <div class="onrow"><input type="checkbox" id="c_on" checked /><label for="c_on">Activ</label></div>
+    <div class="row"><label>Poziție</label>
+      <select id="c_pos">
+        <option value="tr,bl" selected>TR + BL (opus palmierilor)</option>
+        <option value="tr">Doar TR</option>
+        <option value="bl">Doar BL</option>
+        <option value="tl,tr,bl,br">Toate 4</option>
+      </select></div>
+    <div class="row"><label>Culoare</label>
+      <select id="c_color"><option value="clay" selected>Heritage Clay</option><option value="palm">Palm Green</option><option value="sand">Sunset Mango</option><option value="blush">Blush (foto)</option></select></div>
+    <div class="row"><label>Opacitate</label><input type="range" id="c_op" min="0.05" max="0.6" step="0.01" value="0.2" /></div>
+    <div class="row"><label>Mărime</label><input type="range" id="c_size" min="200" max="460" step="10" value="320" /></div>
+    <div class="row"><label>Desime</label><input type="range" id="c_dens" min="0.6" max="1.6" step="0.05" value="1" /></div>
+    <div class="row"><label>Umplere petale</label><input type="range" id="c_fill" min="0" max="0.18" step="0.01" value="0.05" /></div>
+  </fieldset>
+
+  <fieldset>
+    <legend>2 · Petale plutitoare</legend>
+    <div class="onrow"><input type="checkbox" id="p_on" checked /><label for="p_on">Activ</label></div>
+    <div class="row"><label>Culoare</label>
+      <select id="p_color"><option value="clay" selected>Heritage Clay</option><option value="palm">Palm Green</option><option value="sand">Sunset Mango</option><option value="blush">Blush (foto)</option></select></div>
+    <div class="row"><label>Opacitate</label><input type="range" id="p_op" min="0.05" max="0.6" step="0.01" value="0.22" /></div>
+    <div class="row"><label>Număr</label><input type="range" id="p_count" min="6" max="60" step="2" value="26" /></div>
+    <div class="row"><label>Umplere</label><input type="range" id="p_fill" min="0" max="0.2" step="0.01" value="0.06" /></div>
+    <div class="onrow" style="margin-top:9px"><input type="checkbox" id="p_anim" checked /><label for="p_anim">Animație lentă</label></div>
+  </fieldset>
+
+  <fieldset>
+    <legend>3 · Ghirlandă sampaguita</legend>
+    <div class="onrow"><input type="checkbox" id="g_on" /><label for="g_on">Activ</label></div>
+    <div class="row"><label>Culoare</label>
+      <select id="g_color"><option value="sand" selected>Sunset Mango</option><option value="clay">Heritage Clay</option><option value="palm">Palm Green</option><option value="blush">Blush (foto)</option></select></div>
+    <div class="row"><label>Opacitate</label><input type="range" id="g_op" min="0.08" max="0.7" step="0.01" value="0.32" /></div>
+  </fieldset>
+
+  <fieldset>
+    <legend>4 · Liane pe margini</legend>
+    <div class="onrow"><input type="checkbox" id="v_on" /><label for="v_on">Activ</label></div>
+    <div class="row"><label>Culoare</label>
+      <select id="v_color"><option value="palm" selected>Palm Green</option><option value="clay">Heritage Clay</option><option value="sand">Sunset Mango</option><option value="blush">Blush (foto)</option></select></div>
+    <div class="row"><label>Opacitate</label><input type="range" id="v_op" min="0.05" max="0.5" step="0.01" value="0.14" /></div>
+  </fieldset>
+
+  <fieldset>
+    <legend>5 · Câmp de flori (fundal)</legend>
+    <div class="onrow"><input type="checkbox" id="f_on" /><label for="f_on">Activ</label></div>
+    <div class="row"><label>Culoare</label>
+      <select id="f_color"><option value="clay" selected>Heritage Clay</option><option value="palm">Palm Green</option><option value="sand">Sunset Mango</option><option value="blush">Blush (foto)</option></select></div>
+    <div class="row"><label>Opacitate</label><input type="range" id="f_op" min="0.03" max="0.3" step="0.01" value="0.09" /></div>
+    <div class="row"><label>Desime</label><input type="range" id="f_dens" min="0.5" max="1.8" step="0.05" value="1" /></div>
+  </fieldset>
+
+  <fieldset>
+    <legend>General</legend>
+    <div class="row"><label>Fundal secțiune</label>
+      <select id="bg"><option value="white" selected>Alb (ca live)</option><option value="cream">Coconut White</option></select></div>
+    <div class="row"><label>Seed</label><input type="number" id="seed" value="7" min="1" max="9999" /></div>
+    <div class="btns">
+      <button id="shuffle">Amestecă</button>
+      <button id="copy">Copiază setările</button>
+    </div>
+  </fieldset>
+
+  <p class="note">Palmierii din colțuri (TL + BR), granulația de hârtie și sampaguita mică din stânga-jos sunt cele deja live — rămân fixe, ca referință. Tot ce reglezi aici se adaugă peste ele.</p>
+</aside>
+
+<main>
+  <div class="frame">
+    <div class="fakenav"><b>TXALETA <span style="color:var(--clay)">de</span> CAMIGUIN</b><span>HOME · ROOMS · EXPERIENCES · BOOK NOW</span></div>
+
+    <section class="intro" id="sec">
+      <!-- existing live textures (static reference) -->
+      <div class="layer" id="grain"></div>
+      <span class="corner tl layer" id="palmTL" style="color:var(--ink);opacity:.18"></span>
+      <span class="corner br layer" id="palmBR" style="color:var(--ink);opacity:.16"></span>
+      <span class="layer" id="sampAccent" style="bottom:64px;left:24px;width:80px;height:80px;color:var(--clay);opacity:.22"></span>
+
+      <!-- tunable floral layers -->
+      <div class="layer fill" id="fieldLayer"></div>
+      <div class="layer fill" id="vineLayer"></div>
+      <div class="layer" id="garlandLayer"></div>
+      <span class="corner tl layer fcorner" data-c="tl"></span>
+      <span class="corner tr layer fcorner" data-c="tr"></span>
+      <span class="corner bl layer fcorner" data-c="bl"></span>
+      <span class="corner br layer fcorner" data-c="br"></span>
+      <div class="layer fill" id="petalLayer"></div>
+
+      <!-- section content -->
+      <div class="z">
+        <div class="center">
+          <p class="kicker">Camiguin · The Island Born of Fire</p>
+          <h2>The Quiet the Other Islands Lost</h2>
+          <p class="lede">While Siargao chases the next wave and Siquijor trades in folklore and moonlight, Camiguin did something quietly radical — it stayed itself.</p>
+        </div>
+
+        <div class="grid">
+          <div class="imgbox"><img src="/images/resort/txaleta_infinity_pool.jpg" alt="" onerror="this.remove()" /></div>
+          <div class="body">
+            <p>One road loops the whole island. Mornings arrive with church bells from Mambajao and the smell of the sea; afternoons dissolve into spring-fed pools and the shade of century-old acacias. This is the Philippines measured in lanzones harvests and tides, not flight schedules.</p>
+            <p>Txaleta de Camiguin sits where all of it comes closest: the volcano at your back, the Bohol Sea at your feet, the white sandbar of White Island a short banca ride off the shore.</p>
+            <div class="feats">
+              <div><svg viewBox="0 0 24 24"><path d="M2 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg><p class="t">Infinity Pool</p><p class="n">Meeting the horizon</p></div>
+              <div><svg viewBox="0 0 24 24"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 18h18M5 10V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/></svg><p class="t">Seaview Rooms</p><p class="n">Wake to the ocean</p></div>
+              <div><svg viewBox="0 0 24 24"><path d="M2 16l20-6-9 8-2-4-4-1zM13 14l7-4"/></svg><p class="t">5 min from Airport</p><p class="n">Camiguin Airport</p></div>
+            </div>
+          </div>
+        </div>
+
+        <blockquote><span>Some islands you visit. Camiguin, you remember.</span></blockquote>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script>
+/* ============================================================
+   Helpers
+   ============================================================ */
+const ff = n => (Math.round(n * 10) / 10).toString();
+const f2 = n => n.toFixed(2);
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const COLORS = {clay:'#9c6b66',palm:'#2c3a2c',sand:'#e3a53e',blush:'#c4848c'};
+function bez(p0,p1,p2,p3,t){const u=1-t;return{
+  x:u*u*u*p0.x+3*u*u*t*p1.x+3*u*t*t*p2.x+t*t*t*p3.x,
+  y:u*u*u*p0.y+3*u*u*t*p1.y+3*u*t*t*p2.y+t*t*t*p3.y}}
+
+/* ============================================================
+   Motif primitives — all stroke: currentColor, line style
+   ============================================================ */
+// Calachuchi blossom: 5-fold pinwheel (same paths as brand-texture.tsx), 64×64 box centred on (32,32)
+const CALACHUCHI =
+  "<path d='M34.2 28.2 Q41.8 18.8 38.2 10.2 A10.2 10.2 0 0 1 27 11 Q26.4 21 30.3 28.4'/>"+
+  "<path d='M36.29 32.92 Q47.58 37.24 54.65 31.16 A10.2 10.2 0 0 1 50.43 20.76 Q40.73 23.27 34.9 29.27'/>"+
+  "<path d='M32.45 36.37 Q31.83 48.44 39.8 53.28 A10.2 10.2 0 0 1 48.39 46.05 Q43 37.61 35.49 33.91'/>"+
+  "<path d='M27.99 33.78 Q16.31 36.92 14.17 45.99 A10.2 10.2 0 0 1 23.7 51.93 Q30.06 44.19 31.26 35.91'/>"+
+  "<path d='M29.07 28.73 Q22.47 18.6 13.18 19.37 A10.2 10.2 0 0 1 10.48 30.27 Q19.81 33.93 28.05 32.5'/>"+
+  "<circle cx='32' cy='32' r='3'/>";
+function blossom(x,y,size,rot,fillOp){
+  return `<g transform='translate(${ff(x)} ${ff(y)}) rotate(${ff(rot)}) scale(${f2(size/64)}) translate(-32 -32)' fill='currentColor' fill-opacity='${fillOp}'>${CALACHUCHI}</g>`;
+}
+// Sampaguita: 5 circles + centre, centred on (0,0), extent ±20
+const SAMP =
+  "<circle cx='0' cy='-12' r='8'/><circle cx='11.4' cy='-3.7' r='8'/><circle cx='7' cy='9.7' r='8'/>"+
+  "<circle cx='-7' cy='9.7' r='8'/><circle cx='-11.4' cy='-3.7' r='8'/><circle cx='0' cy='0' r='3.6'/>";
+function sampaguita(x,y,size,rot,fillOp){
+  return `<g transform='translate(${ff(x)} ${ff(y)}) rotate(${ff(rot)}) scale(${f2(size/40)})' fill='currentColor' fill-opacity='${fillOp}'>${SAMP}</g>`;
+}
+// Plumeria leaf, points up (−y) at rotation 0; to aim along angle θ° use rotate(θ+90)
+function leaf(x,y,ang,len,fillOp){
+  const w=len*0.17;
+  return `<g transform='translate(${ff(x)} ${ff(y)}) rotate(${ff(ang)})'>`+
+    `<path d='M0 0 C${ff(-w)} ${ff(-len*0.3)} ${ff(-w)} ${ff(-len*0.72)} 0 ${ff(-len)} C${ff(w)} ${ff(-len*0.72)} ${ff(w)} ${ff(-len*0.3)} 0 0 Z' fill='currentColor' fill-opacity='${fillOp}'/>`+
+    `<path d='M0 ${ff(-len*0.08)} L0 ${ff(-len*0.92)}' fill='none'/></g>`;
+}
+// Furled bud, points up at rotation 0
+function bud(x,y,ang,len){
+  return `<g transform='translate(${ff(x)} ${ff(y)}) rotate(${ff(ang)})' fill='none'>`+
+    `<path d='M0 0 C-1.6 ${ff(-len*0.4)} -1 ${ff(-len*0.75)} 1 ${ff(-len)}'/>`+
+    `<path d='M0 0 C1.8 ${ff(-len*0.35)} 2.4 ${ff(-len*0.7)} 1 ${ff(-len)}'/>`+
+    `<path d='M-0.4 ${ff(-len*0.3)} Q1 ${ff(-len*0.42)} 1.6 ${ff(-len*0.58)}'/></g>`;
+}
+// Single fallen petal with centre crease
+function petal(x,y,rot,size,fillOp,anim,dur,delay){
+  const cls = anim ? 'p anim' : 'p';
+  return `<g transform='translate(${ff(x)} ${ff(y)}) rotate(${ff(rot)}) scale(${f2(size/22)})'>`+
+    `<g class='${cls}' style='--d:${f2(dur)}s;animation-delay:${f2(delay)}s'>`+
+    `<path d='M0 0 C-5 -6 -6.5 -15 -1.5 -21 C2.5 -15.5 3.5 -6.5 0 0 Z' fill='currentColor' fill-opacity='${fillOp}'/>`+
+    `<path d='M-0.6 -3.5 Q-1.8 -10.5 -1.2 -17.5' fill='none'/></g></g>`;
+}
+
+/* ============================================================
+   1 · Calachuchi corner cluster — woody stems, leaf whorls,
+   blossom bunches + buds at the tips. Generated in TL
+   orientation, flipped per corner like PalmCorner.
+   ============================================================ */
+const FLIP = {tl:'none',tr:'scaleX(-1)',bl:'scaleY(-1)',br:'scale(-1,-1)'};
+function clusterSVG(S,seed,density,fillOp){
+  const rnd=mulberry32(seed), R=(a,b)=>a+(b-a)*rnd();
+  let stems='',leaves='',buds='',blooms='';
+  const baseAngles=[16,40,64];
+  for(let i=0;i<3;i++){
+    const angDeg=baseAngles[i]+R(-7,7), a=angDeg*Math.PI/180;
+    const L=S*R(0.34,0.5)*(i===1?1.2:1);
+    const p0={x:6,y:6}, dir={x:Math.cos(a),y:Math.sin(a)}, nrm={x:-dir.y,y:dir.x};
+    const bow=L*R(-0.12,0.12);
+    const c1={x:p0.x+dir.x*L*0.33+nrm.x*bow*0.6, y:p0.y+dir.y*L*0.33+nrm.y*bow*0.6};
+    const c2={x:p0.x+dir.x*L*0.66+nrm.x*bow,     y:p0.y+dir.y*L*0.66+nrm.y*bow};
+    const tip={x:p0.x+dir.x*L+nrm.x*bow*0.7,     y:p0.y+dir.y*L+nrm.y*bow*0.7};
+    stems+=`M${ff(p0.x)} ${ff(p0.y)} C${ff(c1.x)} ${ff(c1.y)} ${ff(c2.x)} ${ff(c2.y)} ${ff(tip.x)} ${ff(tip.y)}`;
+    // leaf whorl behind the tip
+    const nLeaf=Math.round(R(3,5)*density);
+    for(let k=0;k<nLeaf;k++){
+      const pt=bez(p0,c1,c2,tip,R(0.6,0.86));
+      leaves+=leaf(pt.x,pt.y, angDeg+90+R(-70,70), S*R(0.15,0.23), fillOp);
+    }
+    // bunch of blossoms covering the tip
+    const nB=Math.round(R(3,4.4)*density);
+    for(let k=0;k<nB;k++){
+      const rr=S*0.05*R(0.2,1.5), aa=R(0,Math.PI*2);
+      blooms+=blossom(tip.x+Math.cos(aa)*rr, tip.y+Math.sin(aa)*rr, S*R(0.13,0.2), R(0,360), fillOp);
+    }
+    // a couple of buds poking outward
+    for(let k=0;k<2;k++){
+      buds+=bud(tip.x+R(-5,5), tip.y+R(-5,5), angDeg+90+R(-35,35), S*R(0.07,0.1));
+    }
+  }
+  return `<g fill='none'><path d='${stems}'/></g>${leaves}${buds}${blooms}`;
+}
+function cornerSVG(S,seed,density,fillOp,corner){
+  return `<svg class='fx' width='${S}' height='${S}' viewBox='0 0 ${S} ${S}' fill='none' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' style='transform:${FLIP[corner]};overflow:visible'>${clusterSVG(S,seed,density,fillOp)}</svg>`;
+}
+
+/* ============================================================
+   2 · Drifting petals — scattered down both side margins
+   ============================================================ */
+function petalsSVG(W,H,seed,count,fillOp,anim){
+  const rnd=mulberry32(seed); let out='';
+  for(let i=0;i<count;i++){
+    const left=rnd()<0.5;
+    const x=left ? 20+rnd()*W*0.12 : W*0.88+rnd()*(W*0.12-20);
+    const y=H*(0.04+rnd()*0.92);
+    out+=petal(x,y, rnd()*360, 15+rnd()*12, fillOp, anim, 5+rnd()*5, -rnd()*8);
+  }
+  return out;
+}
+
+/* ============================================================
+   3 · Sampaguita garland — lei swags hung from the top edge
+   ============================================================ */
+function garlandSVG(W,seed,fillOp){
+  const rnd=mulberry32(seed), R=(a,b)=>a+(b-a)*rnd();
+  const nSw=Math.max(1,Math.round(W/620)), sw=W/nSw;
+  let string='',items='';
+  for(let s=0;s<nSw;s++){
+    const x0=s*sw, x1=(s+1)*sw, dip=Math.min(sw*0.18,86);
+    const cx=(x0+x1)/2, cy=6+dip*2;
+    string+=`M${ff(x0)} 6 Q${ff(cx)} ${ff(cy)} ${ff(x1)} 6`;
+    const n=11;
+    for(let i=1;i<n;i++){
+      const t=i/n, u=1-t;
+      const px=u*u*x0+2*u*t*cx+t*t*x1;
+      const py=u*u*6+2*u*t*cy+t*t*6;
+      if(i%2){ items+=sampaguita(px, py+7, 12+7*Math.sin(Math.PI*t), R(0,72), fillOp); }
+      else { items+=leaf(px, py+3, 180+R(-28,28), 18+6*Math.sin(Math.PI*t), fillOp); }
+    }
+    // knot dots where swags meet
+    if(s>0) items+=`<circle cx='${ff(x0)}' cy='6' r='2.6' fill='currentColor' fill-opacity='0.5'/>`;
+  }
+  return `<g fill='none'><path d='${string}'/></g>${items}`;
+}
+
+/* ============================================================
+   4 · Climbing vines on both side margins
+   ============================================================ */
+function vineSVG(W,H,seed,fillOp){
+  let out='';
+  for(const side of [0,1]){
+    const xBase=side ? W-30 : 30, m=side ? -1 : 1;
+    const pts=[];
+    for(let y=24;y<H-24;y+=12) pts.push([xBase+m*12*Math.sin(y*0.018+side*2), y]);
+    out+=`<path d='M${pts.map(p=>ff(p[0])+' '+ff(p[1])).join(' L')}' fill='none'/>`;
+    let li=0;
+    for(let i=4;i<pts.length-4;i+=5){
+      const [x,y]=pts[i];
+      out+=leaf(x,y, m*(li%2?62:-62)+(li%2?14:-14), 24+((i*7)%10), fillOp);
+      li++;
+      if(li%4===0) out+=blossom(x+m*11, y+6, 17, (i*37)%360, fillOp);
+    }
+  }
+  return out;
+}
+
+/* ============================================================
+   5 · Faint blossom field — jittered scatter, centre kept clean
+   ============================================================ */
+function fieldSVG(W,H,seed,density,fillOp){
+  const rnd=mulberry32(seed); let out='';
+  const cell=130/density;
+  for(let gx=cell/2;gx<W;gx+=cell)for(let gy=cell/2;gy<H;gy+=cell){
+    if(rnd()<0.32) continue;
+    const x=gx+(rnd()-0.5)*cell*0.7, y=gy+(rnd()-0.5)*cell*0.7;
+    if(Math.abs(x-W/2)<W*0.26 && y>H*0.05 && y<H*0.58) continue; // text zone
+    const r=rnd();
+    if(r<0.6)      out+=blossom(x,y,16+rnd()*16,rnd()*360,fillOp);
+    else if(r<0.85) out+=sampaguita(x,y,12+rnd()*10,rnd()*72,fillOp);
+    else            out+=petal(x,y,rnd()*360,12+rnd()*8,fillOp,false,0,0);
+  }
+  return out;
+}
+
+/* ============================================================
+   Existing live textures (static reference): PaperGrain +
+   PalmCorner port from brand-texture.tsx + sampaguita accent
+   ============================================================ */
+document.getElementById('grain').style.backgroundImage =
+  "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23g)'/></svg>\")";
+
+function frond(L,dens){
+  const rot=(v,a)=>({x:v.x*Math.cos(a)-v.y*Math.sin(a),y:v.x*Math.sin(a)+v.y*Math.cos(a)});
+  const nrm=v=>{const l=Math.hypot(v.x,v.y)||1;return{x:v.x/l,y:v.y/l}};
+  const p0={x:0,y:0},p1={x:L*0.34,y:-L*0.2},p2={x:L*0.72,y:-L*0.06},p3={x:L,y:L*0.26};
+  const rib=`M${ff(p0.x)} ${ff(p0.y)} C${ff(p1.x)} ${ff(p1.y)} ${ff(p2.x)} ${ff(p2.y)} ${ff(p3.x)} ${ff(p3.y)}`;
+  let leavesD=''; const Lmax=L*0.46;
+  for(const side of [1,-1]) for(let i=0;i<dens;i++){
+    const t=(i+0.5)/dens, O=bez(p0,p1,p2,p3,t);
+    const u=1-t;
+    const tan=nrm({x:3*u*u*(p1.x-p0.x)+6*u*t*(p2.x-p1.x)+3*t*t*(p3.x-p2.x),
+                   y:3*u*u*(p1.y-p0.y)+6*u*t*(p2.y-p1.y)+3*t*t*(p3.y-p2.y)});
+    const prof=Math.pow(Math.sin(Math.PI*Math.min(Math.max(0.06+0.88*t,0),1)),0.72);
+    const len=Lmax*prof; if(len<3) continue;
+    const ang=((58-38*t)*Math.PI)/180, dir=rot(tan,side*ang), curl=len*0.16;
+    const tip={x:O.x+dir.x*len+tan.x*curl, y:O.y+dir.y*len+tan.y*curl};
+    const cF={x:O.x+dir.x*len*0.55+tan.x*curl*0.5, y:O.y+dir.y*len*0.55+tan.y*curl*0.5};
+    leavesD+=`M${ff(O.x)} ${ff(O.y)} Q${ff(cF.x)} ${ff(cF.y)} ${ff(tip.x)} ${ff(tip.y)}`;
+  }
+  return {rib,leaves:leavesD};
+}
+function palmCornerSVG(size,corner){
+  const layouts=[{rot:-26,sc:0.78,op:0.55},{rot:-3,sc:1,op:1},{rot:19,sc:0.66,op:0.72}];
+  const g=frond(size*0.92,20), sw=size*0.92*0.012;
+  return `<svg width='${size}' height='${size}' viewBox='0 0 ${size} ${size}' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' style='transform:${FLIP[corner]};overflow:visible'>`+
+    layouts.map((l,i)=>`<g transform='translate(10,10) rotate(${l.rot}) scale(${l.sc})' opacity='${l.op}' stroke-width='${f2(sw)}'><path d='${g.rib}'/><path d='${g.leaves}'/></g>`).join('')+`</svg>`;
+}
+document.getElementById('palmTL').innerHTML=palmCornerSVG(440,'tl');
+document.getElementById('palmBR').innerHTML=palmCornerSVG(440,'br');
+document.getElementById('sampAccent').innerHTML=
+  `<svg class='fx' width='80' height='80' viewBox='-32 -32 64 64' fill='none' stroke='currentColor' stroke-width='1.4'>${SAMP.replace("r='3.6'/>","r='3.6'/>")}</svg>`;
+
+/* ============================================================
+   Render + controls
+   ============================================================ */
+const $=id=>document.getElementById(id);
+const sec=$('sec');
+function layerSVG(el,inner){
+  el.innerHTML=`<svg class='fx' width='100%' height='100%' viewBox='0 0 ${el.clientWidth} ${el.clientHeight}' fill='none' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'>${inner}</svg>`;
+}
+function render(){
+  const seed=+$('seed').value||7;
+  sec.classList.toggle('cream', $('bg').value==='cream');
+
+  // corners
+  const wanted=$('c_on').checked ? $('c_pos').value.split(',') : [];
+  document.querySelectorAll('.fcorner').forEach((el,idx)=>{
+    const c=el.dataset.c;
+    if(wanted.includes(c)){
+      el.style.color=COLORS[$('c_color').value];
+      el.style.opacity=$('c_op').value;
+      el.innerHTML=cornerSVG(+$('c_size').value, seed+idx*13, +$('c_dens').value, +$('c_fill').value, c);
+    } else el.innerHTML='';
+  });
+
+  // petals
+  const pl=$('petalLayer');
+  pl.style.color=COLORS[$('p_color').value]; pl.style.opacity=$('p_op').value;
+  layerSVG(pl, $('p_on').checked ? petalsSVG(sec.clientWidth,sec.clientHeight,seed+101,+$('p_count').value,+$('p_fill').value,$('p_anim').checked) : '');
+
+  // garland
+  const gl=$('garlandLayer');
+  gl.style.color=COLORS[$('g_color').value]; gl.style.opacity=$('g_op').value;
+  layerSVG(gl, $('g_on').checked ? garlandSVG(sec.clientWidth,seed+33,0.08) : '');
+
+  // vines
+  const vl=$('vineLayer');
+  vl.style.color=COLORS[$('v_color').value]; vl.style.opacity=$('v_op').value;
+  layerSVG(vl, $('v_on').checked ? vineSVG(sec.clientWidth,sec.clientHeight,seed+55,0.06) : '');
+
+  // field
+  const fl=$('fieldLayer');
+  fl.style.color=COLORS[$('f_color').value]; fl.style.opacity=$('f_op').value;
+  layerSVG(fl, $('f_on').checked ? fieldSVG(sec.clientWidth,sec.clientHeight,seed+77,+$('f_dens').value,0.05) : '');
+}
+
+document.querySelectorAll('aside input,aside select').forEach(el=>el.addEventListener('input',render));
+$('shuffle').addEventListener('click',()=>{$('seed').value=1+Math.floor(Math.random()*9999);render()});
+$('copy').addEventListener('click',()=>{
+  const ids=['c_on','c_pos','c_color','c_op','c_size','c_dens','c_fill','p_on','p_color','p_op','p_count','p_fill','p_anim','g_on','g_color','g_op','v_on','v_color','v_op','f_on','f_color','f_op','f_dens','bg','seed'];
+  const o={}; ids.forEach(id=>{const el=$(id); o[id]=el.type==='checkbox'?el.checked:el.value});
+  navigator.clipboard.writeText(JSON.stringify(o,null,2));
+  $('copy').textContent='Copiat ✓'; setTimeout(()=>$('copy').textContent='Copiază setările',1400);
+});
+
+const PRESETS={
+  reco:{c_on:true,c_pos:'tr,bl',c_color:'clay',c_op:.2,c_fill:.05,p_on:true,p_color:'blush',p_op:.25,p_count:22,p_anim:true,g_on:false,v_on:false,f_on:false},
+  rich:{c_on:true,c_pos:'tr,bl',c_color:'clay',c_op:.22,p_on:true,p_color:'clay',p_op:.2,p_count:30,p_anim:true,g_on:true,g_color:'sand',g_op:.3,v_on:false,f_on:true,f_color:'clay',f_op:.07,f_dens:.9},
+  min:{c_on:false,p_on:false,g_on:false,v_on:false,f_on:false},
+};
+document.querySelectorAll('[data-preset]').forEach(b=>b.addEventListener('click',()=>{
+  const p=PRESETS[b.dataset.preset];
+  for(const [k,v] of Object.entries(p)){const el=$(k); if(!el) continue; if(el.type==='checkbox') el.checked=v; else el.value=v;}
+  render();
+}));
+
+let rT; window.addEventListener('resize',()=>{clearTimeout(rT);rT=setTimeout(render,150)});
+render();
+</script>
+</body>
+</html>

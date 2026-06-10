@@ -22,6 +22,7 @@
   --color-coconut: #f4efe3;
   --color-palm: #2c3a2c;
   --color-mango: #e3a53e;
+  --color-blush: #c4848c;      /* muted calachuchi pink — floral accents only */
 
   --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-lato), ui-sans-serif, system-ui, sans-serif;
@@ -43,6 +44,19 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+/* Drifting calachuchi petals (brand-texture DriftingPetals) — gentle float;
+   duration/delay are set per petal inline. */
+@keyframes petal-drift {
+  from { transform: translateY(0) rotate(0deg); }
+  to   { transform: translateY(16px) rotate(10deg); }
+}
+.petal-drift {
+  animation: petal-drift 6s ease-in-out infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+  .petal-drift { animation: none; }
 }
 
 /* Letter-spaced uppercase label used across nav / kickers */

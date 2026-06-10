@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Txaleta — Frunziș de bananier (tuner)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#2c3a2c; --sand:#e3a53e; --cream:#f4efe3; --sea:#6f8a6a;
+    --clay:#9c6b66; --clay-dark:#7e534f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{display:flex;min-height:100vh;background:#e9e4d6;font-family:Lato,system-ui,sans-serif;color:var(--ink)}
+
+  /* ---------- Panel ---------- */
+  aside{width:296px;flex:none;background:var(--ink);color:#f4efe3;padding:20px 18px 40px;height:100vh;overflow-y:auto;position:sticky;top:0}
+  aside h1{font-family:'Playfair Display',serif;font-weight:400;font-size:20px}
+  aside p.hint{font-size:11px;opacity:.6;margin-top:6px;line-height:1.5}
+  fieldset{border:1px solid rgba(244,239,227,.18);margin-top:16px;padding:12px 12px 14px;border-radius:2px}
+  legend{padding:0 8px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--sand)}
+  .row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:9px;font-size:12px}
+  .row label{opacity:.85}
+  input[type=range]{width:128px;accent-color:var(--sand)}
+  select,input[type=number]{background:#22301f;color:#f4efe3;border:1px solid rgba(244,239,227,.25);font-size:12px;padding:3px 6px;border-radius:2px;width:128px}
+  input[type=number]{width:70px}
+  input[type=checkbox]{accent-color:var(--sand);width:15px;height:15px}
+  .onrow{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;margin-top:9px}
+  .btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+  button{background:transparent;border:1px solid var(--sand);color:var(--sand);font-size:11px;letter-spacing:.08em;padding:6px 10px;cursor:pointer;border-radius:2px}
+  button:hover{background:var(--sand);color:var(--ink)}
+  button.solid{background:var(--clay);border-color:var(--clay);color:#fff}
+  button.solid:hover{background:var(--clay-dark)}
+  .note{font-size:10.5px;line-height:1.55;opacity:.55;margin-top:16px}
+
+  /* ---------- Preview ---------- */
+  main{flex:1;overflow-y:auto;padding:36px 40px}
+  .frame{max-width:1280px;margin:0 auto;box-shadow:0 24px 70px rgba(0,0,0,.18)}
+  .fakenav{background:var(--ink);color:var(--cream);display:flex;justify-content:space-between;align-items:center;padding:16px 34px;font-size:12px;letter-spacing:.2em}
+  .fakenav b{font-family:'Playfair Display',serif;font-size:17px;letter-spacing:.06em;font-weight:400}
+  section{position:relative;overflow:hidden;background:#fff;padding:96px 56px}
+  section .z{position:relative;z-index:10}
+  .center{max-width:680px;margin:0 auto;text-align:center}
+  .kicker{font-size:11px;letter-spacing:.38em;text-transform:uppercase;color:var(--clay);font-weight:700}
+  .kicker::before,.kicker::after{content:"";display:inline-block;width:34px;height:1px;background:var(--sand);vertical-align:middle;margin:0 14px}
+  h2{font-family:'Playfair Display',serif;font-weight:300;font-size:clamp(32px,4.2vw,48px);line-height:1.15;margin-top:20px;color:var(--ink)}
+  .center>p.body{font-size:15px;line-height:1.7;color:rgba(44,58,44,.65);margin-top:22px}
+  .adrow{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:80px}
+  .adrow.rev>.imgbox{order:2}
+  .imgbox{aspect-ratio:4/3;overflow:hidden;background:linear-gradient(160deg,#9cb8a8,#41594a)}
+  .imgbox img{width:100%;height:100%;object-fit:cover;display:block}
+  .adrow h3{font-family:'Playfair Display',serif;font-weight:300;font-size:30px;color:var(--ink);margin-top:14px}
+  .adrow p{font-size:15px;line-height:1.7;color:rgba(44,58,44,.7);margin-top:16px;max-width:480px}
+  .num{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--clay);font-weight:700}
+  .darkband{background:var(--ink);color:var(--cream);text-align:center;padding:60px 56px;font-family:'Playfair Display',serif;font-weight:300;font-size:26px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:40px 48px;margin-top:64px}
+  .item{display:flex;gap:20px;border-top:1px solid rgba(44,58,44,.1);padding-top:24px}
+  .item .n{font-family:'Playfair Display',serif;font-weight:300;font-size:24px;color:var(--clay)}
+  .item h3{font-family:'Playfair Display',serif;font-weight:300;font-size:23px;color:var(--ink)}
+  .item p{font-size:14px;line-height:1.65;color:rgba(44,58,44,.65);margin-top:8px}
+
+  .layer{position:absolute;inset:0;pointer-events:none}
+  .fx path{vector-effect:non-scaling-stroke}
+  @media (max-width:1100px){.adrow,.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<aside>
+  <h1>Frunziș de bananier</h1>
+  <p class="hint">Replica parametrică a fotografiei — tulpini, frunze late cu nervuri paralele și rupturi naturale. Tuner pentru <b>Island Adventures</b> și <b>The Whole Island Is the Day Trip</b>. Deschide pe <b>localhost:3100/banana-foliage-styles.html</b>.</p>
+
+  <div class="btns">
+    <button class="solid" data-preset="reco">Combo recomandat</button>
+    <button data-preset="lush">Junglă plină</button>
+    <button data-preset="min">Curat</button>
+  </div>
+
+  <fieldset>
+    <legend>Plasare pe secțiuni</legend>
+    <div class="row"><label>Island Adventures</label>
+      <select id="a_var">
+        <option value="margins" selected>Margini laterale</option>
+        <option value="hedge">Gard viu (jos)</option>
+        <option value="corners">Colțuri jos</option>
+        <option value="backdrop">Frunze fundal</option>
+        <option value="off">Dezactivat</option>
+      </select></div>
+    <div class="row"><label>Day Trip</label>
+      <select id="b_var">
+        <option value="margins">Margini laterale</option>
+        <option value="hedge">Gard viu (jos)</option>
+        <option value="corners" selected>Colțuri jos</option>
+        <option value="backdrop">Frunze fundal</option>
+        <option value="off">Dezactivat</option>
+      </select></div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Stil frunziș</legend>
+    <div class="row"><label>Culoare</label>
+      <select id="color">
+        <option value="sea" selected>Soft Palm (sea)</option>
+        <option value="palm">Palm Green</option>
+        <option value="clay">Heritage Clay</option>
+        <option value="sand">Sunset Mango</option>
+      </select></div>
+    <div class="row"><label>Opacitate</label><input type="range" id="op" min="0.04" max="0.5" step="0.01" value="0.16" /></div>
+    <div class="row"><label>Înălțime plante</label><input type="range" id="scale" min="0.5" max="1.4" step="0.05" value="1" /></div>
+    <div class="row"><label>Desime</label><input type="range" id="dens" min="0.5" max="2" step="0.05" value="1" /></div>
+    <div class="row"><label>Rupturi în frunze</label><input type="range" id="tear" min="0" max="1" step="0.05" value="0.6" /></div>
+    <div class="row"><label>Arcuire frunze</label><input type="range" id="droop" min="0.15" max="1" step="0.05" value="0.55" /></div>
+    <div class="row"><label>Umplere frunze</label><input type="range" id="fill" min="0" max="0.15" step="0.01" value="0.04" /></div>
+    <div class="onrow"><input type="checkbox" id="layers" checked /><label for="layers">Strat de fundal (adâncime)</label></div>
+  </fieldset>
+
+  <fieldset>
+    <legend>General</legend>
+    <div class="row"><label>Seed</label><input type="number" id="seed" value="11" min="1" max="9999" /></div>
+    <div class="btns">
+      <button id="shuffle">Amestecă</button>
+      <button id="copy">Copiază setările</button>
+    </div>
+  </fieldset>
+
+  <p class="note">Varianta aleasă se portează în <b>brand-texture.tsx</b> ca <b>BananaGrove</b>, la fel cum PalmCorner și CalachuchiCorner au fost portate din tunerele lor.</p>
+</aside>
+
+<main>
+  <div class="frame">
+    <div class="fakenav"><b>TXALETA <span style="color:var(--clay)">de</span> CAMIGUIN</b><span>HOME · ROOMS · EXPERIENCES · BOOK NOW</span></div>
+
+    <!-- ===== Island Adventures ===== -->
+    <section id="secA">
+      <div class="layer" id="layerA"></div>
+      <div class="z">
+        <div class="center">
+          <p class="kicker">Out on the Island</p>
+          <h2>Island Adventures</h2>
+          <p class="body">By banca, by ridgeline, by the slow turn of a coastal road — Camiguin gives up its best on its own terms. Choose how you go.</p>
+        </div>
+        <div class="adrow">
+          <div class="imgbox"><img src="/images/experiences/txaleta_boat.webp" alt="" onerror="this.remove()" /></div>
+          <div>
+            <p class="num">— 01 · Adventure —</p>
+            <h3>Island Hopping by Private Banca</h3>
+            <p>White Island at first light, Mantigue's marine sanctuary by mid-morning, and the Sunken Cemetery as the sun drops — your own boat, your own order.</p>
+          </div>
+        </div>
+        <div class="adrow rev">
+          <div class="imgbox"></div>
+          <div>
+            <p class="num">— 02 · Adventure —</p>
+            <h3>Mount Hibok-Hibok Trek</h3>
+            <p>Guided ascents of the active volcano climb through rainforest and spring-fed shade to a ridgeline where the whole island, and the sea around it, falls away below you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="darkband">— Days That Begin at the Waterline —</div>
+
+    <!-- ===== Day Trip ===== -->
+    <section id="secB">
+      <div class="layer" id="layerB"></div>
+      <div class="z">
+        <div class="center">
+          <p class="kicker">Beyond the Resort</p>
+          <h2>The Whole Island Is the Day Trip</h2>
+          <p class="body">One road, sixty-four kilometres, and more than enough to fill every morning of your stay. We'll help you plan the order.</p>
+        </div>
+        <div class="grid2">
+          <div class="item"><span class="n">01</span><div><h3>White Island</h3><p>A bare crescent of white sand off Mambajao, reached by banca at first light — no trees, no shade, just the sandbar, the reef and the volcano across the water.</p></div></div>
+          <div class="item"><span class="n">02</span><div><h3>Mantigue Island</h3><p>A green islet ringed by a marine sanctuary, twenty minutes out. Snorkel the drop-off, then lunch in the shade of the trees.</p></div></div>
+          <div class="item"><span class="n">03</span><div><h3>The Sunken Cemetery</h3><p>A single white cross stands over the town the 1871 eruption pulled into the sea — best met by kayak as the sun goes down.</p></div></div>
+          <div class="item"><span class="n">04</span><div><h3>Katibawasan Falls</h3><p>Seventy metres of water falling in one clean ribbon into a cold, fern-ringed pool at the foot of the highlands.</p></div></div>
+          <div class="item"><span class="n">05</span><div><h3>Cold Springs &amp; Soda Pool</h3><p>Sto. Niño's spring-fed pools run clear and cold; nearby, the Bura pool fizzes with natural soda water you can swim in.</p></div></div>
+          <div class="item"><span class="n">06</span><div><h3>Ardent Hot Spring</h3><p>On the flank of Hibok-Hibok, volcano-warmed pools sit in the rainforest — the island's other temperature.</p></div></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script>
+/* ============================================================
+   Helpers
+   ============================================================ */
+const ff = n => (Math.round(n * 10) / 10).toString();
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const COLORS={sea:'#6f8a6a',palm:'#2c3a2c',clay:'#9c6b66',sand:'#e3a53e'};
+function bez(p0,p1,p2,p3,t){const u=1-t;return{
+  x:u*u*u*p0.x+3*u*u*t*p1.x+3*u*t*t*p2.x+t*t*t*p3.x,
+  y:u*u*u*p0.y+3*u*u*t*p1.y+3*u*t*t*p2.y+t*t*t*p3.y}}
+function bezT(p0,p1,p2,p3,t){const u=1-t;
+  const x=3*u*u*(p1.x-p0.x)+6*u*t*(p2.x-p1.x)+3*t*t*(p3.x-p2.x);
+  const y=3*u*u*(p1.y-p0.y)+6*u*t*(p2.y-p1.y)+3*t*t*(p3.y-p2.y);
+  const l=Math.hypot(x,y)||1; return{x:x/l,y:y/l}}
+
+/* ============================================================
+   Banana leaf — the heart of the motif. Curved midrib, blade
+   edges offset along the normals with a sine width profile,
+   parallel veins slanted toward the tip, and the signature
+   wind-torn notches where the blade splits between veins.
+   Local frame: base at (0,0), grows up (−y), arcs toward +x.
+   ============================================================ */
+function leafMarkup(len, droop, tear, fillOp, rnd){
+  const p0={x:0,y:0},
+        p1={x:len*0.04,y:-len*0.42},
+        p2={x:len*0.26,y:-len*0.85},
+        p3={x:len*(0.45+0.3*droop), y:-len*(1.02-0.42*droop)};
+  const N=16, pts=[], nrms=[];
+  for(let i=0;i<=N;i++){
+    const t=i/N, P=bez(p0,p1,p2,p3,t), T=bezT(p0,p1,p2,p3,t);
+    pts.push(P); nrms.push({x:-T.y,y:T.x});
+  }
+  const wMax=len*0.17;
+  const prof=t=>Math.pow(Math.sin(Math.PI*Math.min(1,0.06+0.92*t)),0.65);
+  // torn notches: blade collapses to near the midrib for one sample
+  const tearsL=new Set(), tearsR=new Set();
+  const nT=Math.round(tear*3.5);
+  for(let k=0;k<nT;k++){
+    tearsL.add(3+Math.floor(rnd()*(N-5)));
+    tearsR.add(3+Math.floor(rnd()*(N-5)));
+  }
+  const edgePts=side=>{
+    const tearSet=side>0?tearsL:tearsR, arr=[];
+    for(let i=0;i<=N;i++){
+      let w=wMax*prof(i/N);
+      if(tearSet.has(i)) w*=0.12;
+      arr.push({x:pts[i].x+nrms[i].x*w*side, y:pts[i].y+nrms[i].y*w*side});
+    }
+    return arr;
+  };
+  const eL=edgePts(1), eR=edgePts(-1);
+  const poly=a=>a.map((p,i)=>(i?'L':'M')+ff(p.x)+' '+ff(p.y)).join('');
+  let out='';
+  if(fillOp>0){
+    out+=`<path d='${poly(eL)} L${[...eR].reverse().map(p=>ff(p.x)+' '+ff(p.y)).join(' L')} Z' fill='currentColor' fill-opacity='${fillOp}' stroke='none'/>`;
+  }
+  out+=`<path d='M${ff(p0.x)} ${ff(p0.y)} C${ff(p1.x)} ${ff(p1.y)} ${ff(p2.x)} ${ff(p2.y)} ${ff(p3.x)} ${ff(p3.y)}'/>`;
+  out+=`<path d='${poly(eL)}'/><path d='${poly(eR)}'/>`;
+  let veins='';
+  for(let i=2;i<N-1;i++){
+    if(rnd()<0.25) continue;
+    const j=Math.min(N,i+1); // slant toward the tip, like real banana venation
+    veins+=`M${ff(pts[i].x)} ${ff(pts[i].y)} L${ff(eL[j].x)} ${ff(eL[j].y)}`;
+    veins+=`M${ff(pts[i].x)} ${ff(pts[i].y)} L${ff(eR[j].x)} ${ff(eR[j].y)}`;
+  }
+  out+=`<path d='${veins}' stroke-opacity='0.5'/>`;
+  return out;
+}
+// Place a leaf: rot in deg (0 = vertical, positive leans right); mirror flips the arc to −x.
+function leafAt(x,y,rot,len,mirror,droop,tear,fillOp,rnd){
+  return `<g transform='translate(${ff(x)} ${ff(y)}) rotate(${ff(rot)})${mirror?" scale(-1 1)":""}'>${leafMarkup(len,droop,tear,fillOp,rnd)}</g>`;
+}
+
+/* ============================================================
+   Banana plant — pseudostem (two converging lines + sheath
+   line) with a crown of 4–6 leaves fanning from the top.
+   Rooted at (0,0), grows up.
+   ============================================================ */
+function plantMarkup(h, seed, droop, tear, fillOp){
+  const rnd=mulberry32(seed), R=(a,b)=>a+(b-a)*rnd();
+  const lean=R(-0.09,0.09);
+  const topX=lean*h, topY=-h*0.96;
+  const sw=Math.max(2.5,h*0.04);
+  let out='';
+  out+=`<path d='M${ff(-sw)} 0 C${ff(-sw*0.8)} ${ff(-h*0.4)} ${ff(topX-sw*0.45)} ${ff(-h*0.72)} ${ff(topX-sw*0.3)} ${ff(topY)}'/>`;
+  out+=`<path d='M${ff(sw)} 0 C${ff(sw*0.8)} ${ff(-h*0.4)} ${ff(topX+sw*0.45)} ${ff(-h*0.72)} ${ff(topX+sw*0.3)} ${ff(topY)}'/>`;
+  out+=`<path d='M${ff(-sw*0.25)} ${ff(-h*0.08)} C${ff(-sw*0.15)} ${ff(-h*0.4)} ${ff(topX*0.8)} ${ff(-h*0.58)} ${ff(topX)} ${ff(-h*0.82)}' stroke-opacity='0.45'/>`;
+  // crown: pick leaf slots, alternating sides, uprights longer
+  const slots=[-80,-48,-16,14,46,78];
+  const nL=4+Math.floor(rnd()*3);
+  const start=Math.floor(rnd()*2);
+  for(let k=0;k<nL;k++){
+    const a=slots[(start+k)%slots.length]+R(-8,8);
+    const mag=Math.abs(a);
+    const len=h*(0.74-0.36*(mag/80))*R(0.85,1.15);
+    const d=Math.min(1,droop*R(0.7,1.3)*(0.35+0.65*mag/80));
+    out+=leafAt(topX, topY+h*0.03, a, len, a<0, d, tear, fillOp, rnd);
+  }
+  return out;
+}
+
+/* ============================================================
+   Grove layouts per variant
+   ============================================================ */
+function groveSVG(W,H,seed,variant,scale,dens,tear,droop,fillOp,layers){
+  const rnd=mulberry32(seed), R=(a,b)=>a+(b-a)*rnd();
+  const seeds=()=>1+Math.floor(rnd()*999999);
+  let back='', front='';
+  const plant=(x,h,toBack)=>{
+    const m=`<g transform='translate(${ff(x)} ${ff(H+4)})'>${plantMarkup(h,seeds(),droop,tear,fillOp)}</g>`;
+    if(toBack) back+=m; else front+=m;
+  };
+  if(variant==='margins'){
+    const perSide=Math.round(4*dens);
+    for(const side of [0,1]){
+      for(let i=0;i<perSide;i++){
+        const x=side? W-R(8,W*0.15) : R(8,W*0.15);
+        plant(x, H*R(0.45,0.88)*scale, false);
+        if(layers) plant(x+R(-30,30), H*R(0.3,0.55)*scale, true);
+      }
+    }
+  } else if(variant==='hedge'){
+    const n=Math.round(9*dens);
+    for(let i=0;i<n;i++){
+      const x=(i+0.5)*W/n+R(-W*0.03,W*0.03);
+      plant(x, H*R(0.2,0.36)*scale, false);
+      if(layers) plant(x+R(-25,25), H*R(0.13,0.22)*scale, true);
+    }
+  } else if(variant==='corners'){
+    const per=Math.round(3*dens);
+    for(const side of [0,1]){
+      for(let i=0;i<per;i++){
+        const x=side? W-R(8,W*0.16) : R(8,W*0.16);
+        plant(x, H*R(0.3,0.55)*scale, false);
+        if(layers) plant(x+R(-25,25), H*R(0.2,0.34)*scale, true);
+      }
+    }
+  } else if(variant==='backdrop'){
+    const n=Math.round(10*dens);
+    for(let i=0;i<n;i++){
+      const x=R(0,W), y=R(H*0.1,H*0.95);
+      const m=leafAt(x,y,R(-50,50),H*R(0.16,0.3)*scale,rnd()<0.5,droop,tear,fillOp,rnd);
+      if(layers && rnd()<0.45) back+=m; else front+=m;
+    }
+  }
+  let inner='';
+  if(back) inner+=`<g opacity='0.45'>${back}</g>`;
+  inner+=front;
+  return inner;
+}
+
+/* ============================================================
+   Render + controls
+   ============================================================ */
+const $=id=>document.getElementById(id);
+const MASKS={
+  margins:'linear-gradient(90deg, black 0%, black 14%, transparent 30%, transparent 70%, black 86%, black 100%)',
+  hedge:'none',
+  corners:'linear-gradient(90deg, black 0%, black 18%, transparent 32%, transparent 68%, black 82%, black 100%)',
+  backdrop:'radial-gradient(58% 50% at 50% 38%, transparent 28%, black 74%)',
+  off:'none',
+};
+function renderLayer(secId, layerId, variant, seedOff){
+  const sec=$(secId), el=$(layerId);
+  el.style.color=COLORS[$('color').value];
+  el.style.opacity=$('op').value;
+  el.style.maskImage=MASKS[variant];
+  el.style.webkitMaskImage=MASKS[variant];
+  const inner = variant==='off' ? '' :
+    groveSVG(sec.clientWidth, sec.clientHeight, (+$('seed').value||11)+seedOff,
+      variant, +$('scale').value, +$('dens').value, +$('tear').value,
+      +$('droop').value, +$('fill').value, $('layers').checked);
+  el.innerHTML=`<svg class='fx' width='100%' height='100%' viewBox='0 0 ${sec.clientWidth} ${sec.clientHeight}' fill='none' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'>${inner}</svg>`;
+}
+function render(){
+  renderLayer('secA','layerA',$('a_var').value,0);
+  renderLayer('secB','layerB',$('b_var').value,500);
+}
+
+document.querySelectorAll('aside input,aside select').forEach(el=>el.addEventListener('input',render));
+$('shuffle').addEventListener('click',()=>{$('seed').value=1+Math.floor(Math.random()*9999);render()});
+$('copy').addEventListener('click',()=>{
+  const ids=['a_var','b_var','color','op','scale','dens','tear','droop','fill','layers','seed'];
+  const o={}; ids.forEach(id=>{const el=$(id); o[id]=el.type==='checkbox'?el.checked:el.value});
+  navigator.clipboard.writeText(JSON.stringify(o,null,2));
+  $('copy').textContent='Copiat ✓'; setTimeout(()=>$('copy').textContent='Copiază setările',1400);
+});
+
+const PRESETS={
+  reco:{a_var:'margins',b_var:'corners',color:'sea',op:.16,scale:1,dens:1,tear:.6,droop:.55,fill:.04,layers:true},
+  lush:{a_var:'margins',b_var:'margins',color:'palm',op:.14,scale:1.2,dens:1.6,tear:.7,droop:.6,fill:.06,layers:true},
+  min:{a_var:'off',b_var:'off'},
+};
+document.querySelectorAll('[data-preset]').forEach(b=>b.addEventListener('click',()=>{
+  const p=PRESETS[b.dataset.preset];
+  for(const [k,v] of Object.entries(p)){const el=$(k); if(!el) continue; if(el.type==='checkbox') el.checked=v; else el.value=v;}
+  render();
+}));
+
+let rT; window.addEventListener('resize',()=>{clearTimeout(rT);rT=setTimeout(render,150)});
+render();
+</script>
+</body>
+</html>

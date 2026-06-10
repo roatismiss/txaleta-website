@@ -1,7 +1,13 @@
 import Image from "next/image";
 import { Waves, BedDouble, Plane } from "lucide-react";
 import { Reveal, Kicker } from "../reveal";
-import { BotanicalAccent, PaperGrain, PalmCorner } from "../brand-texture";
+import {
+  BotanicalAccent,
+  CalachuchiCorner,
+  DriftingPetals,
+  PaperGrain,
+  PalmCorner,
+} from "../brand-texture";
 
 const features = [
   { icon: Waves, label: "Infinity Pool", note: "Meeting the horizon" },
@@ -15,6 +21,9 @@ export function Intro() {
       <PaperGrain className="opacity-[0.06]" />
       <PalmCorner corner="tl" className="text-palm opacity-[0.12] lg:opacity-[0.18]" />
       <PalmCorner corner="br" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
+      <CalachuchiCorner corner="tr" seed={20} className="text-brand opacity-[0.14] lg:opacity-[0.2]" />
+      <CalachuchiCorner corner="bl" seed={33} className="text-brand opacity-[0.13] lg:opacity-[0.19]" />
+      <DriftingPetals className="text-blush opacity-[0.18] lg:opacity-[0.25]" />
       <BotanicalAccent
         variant="sampaguita"
         className="bottom-16 left-6 hidden w-20 text-brand opacity-[0.22] lg:block"

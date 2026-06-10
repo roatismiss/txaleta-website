@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { experiences, signature, rentals, site } from "@/lib/site";
 import { Reveal, Kicker } from "@/components/reveal";
 import { ExperienceCardImage } from "@/components/experience-card-image";
-import { TilePattern, PaperGrain, PalmCorner, RattanWeave } from "@/components/brand-texture";
+import { BananaGrove, PaperGrain, PalmCorner, RattanWeave } from "@/components/brand-texture";
 
 export const metadata: Metadata = {
   title: "Experiences",
@@ -109,8 +109,11 @@ export default function ExperiencesPage() {
       </section>
 
       {/* Island adventures — the on-the-water + on-the-trail activities */}
-      <section className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative overflow-hidden bg-white py-24 sm:py-32">
+        {/* Banana thicket up both margins (tuner: "Margini laterale", seed 11) */}
+        <BananaGrove corner="bl" width={300} size={760} plants={4} seed={11} className="hidden text-sea opacity-[0.22] lg:block" />
+        <BananaGrove corner="br" width={300} size={760} plants={4} seed={211} className="hidden text-sea opacity-[0.22] lg:block" />
+        <div className="relative z-10 mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker className="text-brand">Out on the Island</Kicker>
             <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
@@ -190,8 +193,11 @@ export default function ExperiencesPage() {
       </section>
 
       {/* Beyond the resort — Camiguin island guide */}
-      <section className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative overflow-hidden bg-white py-24 sm:py-32">
+        {/* Discreet banana clumps in the bottom corners (tuner: "Colțuri jos") */}
+        <BananaGrove corner="bl" width={260} size={420} plants={3} seed={511} className="hidden text-sea opacity-[0.2] lg:block" />
+        <BananaGrove corner="br" width={260} size={420} plants={3} seed={711} className="hidden text-sea opacity-[0.2] lg:block" />
+        <div className="relative z-10 mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker>Beyond the Resort</Kicker>
             <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
