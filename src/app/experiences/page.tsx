@@ -110,14 +110,14 @@ export default function ExperiencesPage() {
 
       {/* Island adventures — the on-the-water + on-the-trail activities */}
       <section className="relative overflow-hidden bg-white pt-24 pb-52 sm:pt-32 lg:pb-32">
-        {/* Solid bg-ink banana silhouettes sprouting from the dark band below.
+        {/* Solid mango banana silhouettes rising from the bottom edge.
             Mobile gets small corner clumps sized to stay inside the extra
             bottom padding (crowns overflow ~1.6× the plant box, so size must
             stay well under the padding); desktop gets full margin thickets. */}
-        <BananaGrove corner="bl" width={120} size={130} plants={2} seed={11} fillOpacity={1} className="text-ink lg:hidden" />
-        <BananaGrove corner="br" width={120} size={130} plants={2} seed={211} fillOpacity={1} className="text-ink lg:hidden" />
-        <BananaGrove corner="bl" width={300} size={760} plants={4} seed={11} fillOpacity={1} className="hidden text-ink lg:block" />
-        <BananaGrove corner="br" width={300} size={760} plants={4} seed={211} fillOpacity={1} className="hidden text-ink lg:block" />
+        <BananaGrove corner="bl" width={120} size={130} plants={2} seed={11} fillOpacity={1} className="text-mango lg:hidden" />
+        <BananaGrove corner="br" width={120} size={130} plants={2} seed={211} fillOpacity={1} className="text-mango lg:hidden" />
+        <BananaGrove corner="bl" width={300} size={760} plants={4} seed={11} fillOpacity={1} className="hidden text-mango lg:block" />
+        <BananaGrove corner="br" width={300} size={760} plants={4} seed={211} fillOpacity={1} className="hidden text-mango lg:block" />
         <div className="text-halo relative z-10 mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker className="text-brand">Out on the Island</Kicker>
@@ -199,11 +199,11 @@ export default function ExperiencesPage() {
 
       {/* Beyond the resort — Camiguin island guide */}
       <section className="relative overflow-hidden bg-white pt-24 pb-48 sm:pt-32 lg:pb-32">
-        {/* Solid bg-ink clumps growing out of "The Island, at Your Own Pace" below */}
-        <BananaGrove corner="bl" width={110} size={120} plants={2} seed={511} fillOpacity={1} className="text-ink lg:hidden" />
-        <BananaGrove corner="br" width={110} size={120} plants={2} seed={711} fillOpacity={1} className="text-ink lg:hidden" />
-        <BananaGrove corner="bl" width={260} size={420} plants={3} seed={511} fillOpacity={1} className="hidden text-ink lg:block" />
-        <BananaGrove corner="br" width={260} size={420} plants={3} seed={711} fillOpacity={1} className="hidden text-ink lg:block" />
+        {/* Solid mango clumps in the bottom corners, above "The Island, at Your Own Pace" */}
+        <BananaGrove corner="bl" width={110} size={120} plants={2} seed={511} fillOpacity={1} className="text-mango lg:hidden" />
+        <BananaGrove corner="br" width={110} size={120} plants={2} seed={711} fillOpacity={1} className="text-mango lg:hidden" />
+        <BananaGrove corner="bl" width={260} size={420} plants={3} seed={511} fillOpacity={1} className="hidden text-mango lg:block" />
+        <BananaGrove corner="br" width={260} size={420} plants={3} seed={711} fillOpacity={1} className="hidden text-mango lg:block" />
         <div className="text-halo relative z-10 mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker>Beyond the Resort</Kicker>
