@@ -46,6 +46,15 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* White halo (inherited text-shadow) so ink text stays legible where it sits
+   on top of solid bg-ink foliage silhouettes; invisible on white backgrounds. */
+.text-halo {
+  text-shadow:
+    0 0 2px #fff, 0 0 2px #fff,
+    0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff,
+    0 0 12px #fff, 0 0 12px #fff;
+}
+
 /* Drifting calachuchi petals (brand-texture DriftingPetals) — gentle float;
    duration/delay are set per petal inline. */
 @keyframes petal-drift {

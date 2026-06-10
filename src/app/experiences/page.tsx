@@ -118,7 +118,7 @@ export default function ExperiencesPage() {
         <BananaGrove corner="br" width={120} size={130} plants={2} seed={211} fillOpacity={1} className="text-ink lg:hidden" />
         <BananaGrove corner="bl" width={300} size={760} plants={4} seed={11} fillOpacity={1} className="hidden text-ink lg:block" />
         <BananaGrove corner="br" width={300} size={760} plants={4} seed={211} fillOpacity={1} className="hidden text-ink lg:block" />
-        <div className="relative z-10 mx-auto max-w-7xl px-6">
+        <div className="text-halo relative z-10 mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker className="text-brand">Out on the Island</Kicker>
             <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
@@ -204,7 +204,7 @@ export default function ExperiencesPage() {
         <BananaGrove corner="br" width={110} size={120} plants={2} seed={711} fillOpacity={1} className="text-ink lg:hidden" />
         <BananaGrove corner="bl" width={260} size={420} plants={3} seed={511} fillOpacity={1} className="hidden text-ink lg:block" />
         <BananaGrove corner="br" width={260} size={420} plants={3} seed={711} fillOpacity={1} className="hidden text-ink lg:block" />
-        <div className="relative z-10 mx-auto max-w-7xl px-6">
+        <div className="text-halo relative z-10 mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker>Beyond the Resort</Kicker>
             <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
