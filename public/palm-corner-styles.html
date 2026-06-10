@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Txaleta · Palm Corner Styles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --clay:#9c6b66; --palm:#2c3a2c; --sage:#6f8a6a; --mango:#e3a53e;
+    --cream:#f4efe3; --coconut:#fbf7ef; --ink:#2c3a2c;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:"Lato",system-ui,sans-serif;color:var(--ink);background:#e9e3d6}
+
+  /* ---- control bar ---- */
+  .bar{
+    position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;gap:18px 26px;
+    align-items:flex-end;padding:14px 22px;background:rgba(20,26,20,.92);
+    color:#f4efe3;backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)
+  }
+  .bar h1{font-family:"Playfair Display",serif;font-weight:500;font-size:16px;margin:0 14px 0 0;letter-spacing:.02em;white-space:nowrap}
+  .grp{display:flex;flex-direction:column;gap:5px}
+  .grp > label{font-size:9px;letter-spacing:.22em;text-transform:uppercase;opacity:.62}
+  .seg{display:flex;border:1px solid rgba(255,255,255,.18);border-radius:2px;overflow:hidden}
+  .seg button{font:inherit;font-size:11px;letter-spacing:.04em;padding:6px 11px;background:transparent;color:#f4efe3;border:0;cursor:pointer;opacity:.7}
+  .seg button.on{background:var(--clay);opacity:1}
+  input[type=range]{width:118px;accent-color:var(--clay)}
+  .val{font-variant-numeric:tabular-nums;font-size:11px;opacity:.85;min-width:34px;display:inline-block}
+  .swatches{display:flex;gap:7px}
+  .sw{width:21px;height:21px;border-radius:50%;border:2px solid transparent;cursor:pointer}
+  .sw.on{border-color:#fff}
+  .presets{display:flex;gap:7px}
+  .presets button{font:inherit;font-size:11px;letter-spacing:.06em;padding:6px 12px;background:transparent;color:#f4efe3;border:1px solid rgba(255,255,255,.25);border-radius:2px;cursor:pointer}
+  .presets button:hover{background:rgba(255,255,255,.1)}
+
+  /* ---- stage ---- */
+  .stage{position:relative;height:88vh;min-height:560px;overflow:hidden;display:grid;place-items:center;transition:background .4s}
+  .stage.light{background:radial-gradient(120% 120% at 50% 30%,#fdfaf3 0%,var(--cream) 60%,#e7dcc4 100%)}
+  .stage.dark{background:radial-gradient(120% 120% at 50% 35%,#33422f 0%,var(--palm) 70%,#1c2620 100%)}
+  .stage.photo{background:#222}
+  .photo-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .photo .scrim{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.35),rgba(0,0,0,.15),rgba(0,0,0,.5))}
+
+  .corner{position:absolute;line-height:0;pointer-events:none}
+  .corner svg{display:block;overflow:visible}
+  .c-tl{top:0;left:0}
+  .c-tr{top:0;right:0;transform:scaleX(-1)}
+  .c-bl{bottom:0;left:0;transform:scaleY(-1)}
+  .c-br{bottom:0;right:0;transform:scale(-1,-1)}
+
+  .hero{position:relative;z-index:5;text-align:center;padding:0 24px;max-width:760px}
+  .kicker{font-size:11px;letter-spacing:.36em;text-transform:uppercase;font-weight:700}
+  .stage.light .kicker{color:var(--clay)}
+  .stage.dark .kicker,.stage.photo .kicker{color:var(--mango)}
+  .hero h2{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(38px,6vw,76px);line-height:1.04;margin:18px 0 0}
+  .stage.light .hero h2{color:var(--ink)}
+  .stage.dark .hero h2,.stage.photo .hero h2{color:#fff}
+  .hero p{margin:22px auto 0;max-width:430px;font-size:16px;line-height:1.6}
+  .stage.light .hero p{color:rgba(44,58,44,.72)}
+  .stage.dark .hero p,.stage.photo .hero p{color:rgba(255,255,255,.82)}
+  .photo .hero h2,.photo .hero p{text-shadow:0 2px 18px rgba(0,0,0,.6)}
+  .cta{margin-top:30px;display:inline-block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding:14px 34px;background:var(--clay);color:#fff;text-decoration:none}
+
+  .note{padding:16px 22px;font-size:12.5px;color:#5a5448;background:#f1ebdd;border-top:1px solid #ddd3c1}
+  .note b{color:#3a3527}
+  .readout{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--clay)}
+  @media(max-width:720px){.bar h1{display:none}}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <h1>Palm Corners</h1>
+
+  <div class="grp"><label>Style</label>
+    <div class="seg" id="style">
+      <button data-v="line" class="on">Line</button>
+      <button data-v="solid">Silhouette</button>
+      <button data-v="duo">Duotone</button>
+    </div>
+  </div>
+
+  <div class="grp"><label>Corners</label>
+    <div class="seg" id="corners">
+      <button data-v="2" class="on">2 (diag)</button>
+      <button data-v="4">4</button>
+    </div>
+  </div>
+
+  <div class="grp"><label>Fronds / corner</label>
+    <div class="seg" id="cluster">
+      <button data-v="1">1</button>
+      <button data-v="2">2</button>
+      <button data-v="3" class="on">3</button>
+    </div>
+  </div>
+
+  <div class="grp"><label>Leaflet density <span class="val" id="densV">22</span></label>
+    <input type="range" id="dens" min="10" max="30" value="22" />
+  </div>
+
+  <div class="grp"><label>Size <span class="val" id="sizeV">460</span></label>
+    <input type="range" id="size" min="300" max="680" value="460" />
+  </div>
+
+  <div class="grp"><label>Opacity <span class="val" id="opV">28%</span></label>
+    <input type="range" id="op" min="5" max="70" value="28" />
+  </div>
+
+  <div class="grp"><label>Colour</label>
+    <div class="swatches" id="color">
+      <div class="sw on" data-v="clay" style="background:#9c6b66" title="Clay"></div>
+      <div class="sw" data-v="palm" style="background:#2c3a2c" title="Palm"></div>
+      <div class="sw" data-v="sage" style="background:#6f8a6a" title="Sage"></div>
+      <div class="sw" data-v="mango" style="background:#e3a53e" title="Mango"></div>
+      <div class="sw" data-v="cream" style="background:#f4efe3" title="Cream"></div>
+    </div>
+  </div>
+
+  <div class="grp"><label>Background</label>
+    <div class="seg" id="bg">
+      <button data-v="light" class="on">Light</button>
+      <button data-v="dark">Dark</button>
+      <button data-v="photo">Photo</button>
+    </div>
+  </div>
+
+  <div class="grp"><label>Presets</label>
+    <div class="presets" id="presets">
+      <button data-p="editorial">Editorial</button>
+      <button data-p="lush">Lush</button>
+      <button data-p="dramatic">Dramatic</button>
+    </div>
+  </div>
+</div>
+
+<div class="stage light" id="stage">
+  <img class="photo-img" id="photo" src="/images/resort/txaleta_infinity_pool.jpg" alt="" style="display:none" />
+  <div class="scrim" style="display:none" id="scrim"></div>
+
+  <div class="corner c-tl" id="tl"></div>
+  <div class="corner c-tr" id="tr"></div>
+  <div class="corner c-bl" id="bl"></div>
+  <div class="corner c-br" id="br"></div>
+
+  <div class="hero">
+    <div class="kicker">Camiguin Island · Philippines</div>
+    <h2>Come Home<br/>to Camiguin</h2>
+    <p>Seaview suites, ocean-view glamping and an infinity pool — warm Filipino hospitality.</p>
+    <a class="cta" href="#">Book Your Stay</a>
+  </div>
+</div>
+
+<div class="note">
+  <b>Tune it, then tell me the combo</b> — e.g. <span class="readout" id="readout">line · 3 fronds · 4 corners · dens 22 · size 460 · op 28% · clay</span>.
+  Frondele sunt generate parametric (rahis curbat + foliole cu profil de lungime), deci se scalează curat și le pot porta 1:1 în componenta React.
+</div>
+
+<script>
+const PAL = { clay:'#9c6b66', palm:'#2c3a2c', sage:'#6f8a6a', mango:'#e3a53e', cream:'#f4efe3' };
+const S = { style:'line', corners:2, cluster:3, dens:22, size:460, op:28, color:'clay', bg:'light' };
+
+/* ---------- vector helpers ---------- */
+const rot=(v,a)=>({x:v.x*Math.cos(a)-v.y*Math.sin(a), y:v.x*Math.sin(a)+v.y*Math.cos(a)});
+const add=(a,b)=>({x:a.x+b.x,y:a.y+b.y});
+const mul=(v,s)=>({x:v.x*s,y:v.y*s});
+const nrm=(v)=>{const l=Math.hypot(v.x,v.y)||1;return {x:v.x/l,y:v.y/l};};
+const perp=(v)=>({x:-v.y,y:v.x});
+const f=(n)=>n.toFixed(1);
+const P=(p)=>f(p.x)+' '+f(p.y);
+
+/* cubic bezier point + tangent */
+function bez(p0,p1,p2,p3,t){
+  const u=1-t;
+  return {
+    x:u*u*u*p0.x+3*u*u*t*p1.x+3*u*t*t*p2.x+t*t*t*p3.x,
+    y:u*u*u*p0.y+3*u*u*t*p1.y+3*u*t*t*p2.y+t*t*t*p3.y
+  };
+}
+function bezT(p0,p1,p2,p3,t){
+  const u=1-t;
+  return nrm({
+    x:3*u*u*(p1.x-p0.x)+6*u*t*(p2.x-p1.x)+3*t*t*(p3.x-p2.x),
+    y:3*u*u*(p1.y-p0.y)+6*u*t*(p2.y-p1.y)+3*t*t*(p3.y-p2.y)
+  });
+}
+
+/* ---------- one frond, rooted at (0,0), arcing into +x / down ---------- */
+function frond(L, dens, style, col, back){
+  // rachis control points (local), grows right, rises then droops at the tip
+  const p0={x:0,y:0},
+        p1={x:L*0.34,y:-L*0.20},
+        p2={x:L*0.72,y:-L*0.06},
+        p3={x:L*1.00,y:L*0.26};
+  const rib = 'M'+P(p0)+' C'+P(p1)+' '+P(p2)+' '+P(p3);
+
+  let leaves='';
+  const Lmax=L*0.46;
+  for(let side of [1,-1]){
+    for(let i=0;i<dens;i++){
+      const t=(i+0.5)/dens;
+      const O=bez(p0,p1,p2,p3,t);
+      const tan=bezT(p0,p1,p2,p3,t);
+      // length profile — longest in the middle, short at base & tip
+      const prof=Math.pow(Math.sin(Math.PI*Math.min(Math.max(0.06+0.88*t,0),1)),0.72);
+      const len=Lmax*prof;
+      if(len<3) continue;
+      // angle to rachis: wide at base, acute near the tip
+      const ang=(58-38*t)*Math.PI/180;
+      let dir=rot(tan, side*ang);
+      // forward curl (toward the frond tip) for a natural droop
+      const curl=len*0.16;
+      const tip=add(add(O,mul(dir,len)), mul(tan,curl));
+      const cFwd=add(add(O,mul(dir,len*0.55)), mul(tan,curl*0.5));
+      if(style==='line'){
+        leaves+='<path d="M'+P(O)+' Q'+P(cFwd)+' '+P(tip)+'"/>';
+      }else{
+        // filled lanceolate blade
+        const pd=perp(dir);
+        const w=Math.max(len*0.055,1.1);
+        const bPlus=add(O,mul(pd,side*w*0.5));
+        const bMinus=add(O,mul(pd,-side*w*0.5));
+        const e1=add(cFwd,mul(pd,side*w*0.55));
+        const e2=add(cFwd,mul(pd,-side*w*0.55));
+        leaves+='<path d="M'+P(bPlus)+' Q'+P(e1)+' '+P(tip)+' Q'+P(e2)+' '+P(bMinus)+' Z"/>';
+      }
+    }
+  }
+
+  if(style==='line'){
+    return '<g fill="none" stroke="'+col+'" stroke-width="'+f(L*0.012)+'" '
+      +'stroke-linecap="round" stroke-linejoin="round">'
+      +'<path d="'+rib+'"/>'+leaves+'</g>';
+  }
+  if(style==='solid'){
+    return '<g fill="'+col+'" stroke="'+col+'" stroke-width="'+f(L*0.02)+'" '
+      +'stroke-linejoin="round">'+leaves
+      +'<path fill="none" d="'+rib+'" stroke-width="'+f(L*0.022)+'" stroke-linecap="round"/></g>';
+  }
+  // duotone: filled back leaf + line front leaf is done at cluster level; here solid w/ given col
+  return '<g fill="'+col+'" stroke="'+col+'" stroke-width="'+f(L*0.018)+'" stroke-linejoin="round">'
+    +leaves+'<path fill="none" d="'+rib+'" stroke-width="'+f(L*0.022)+'" stroke-linecap="round"/></g>';
+}
+
+/* ---------- a lush cluster of fronds for one corner ---------- */
+function cluster(){
+  const L=S.size*0.92;
+  const col=PAL[S.color];
+  const back=PAL.sage;
+  const layouts=[
+    {rot:-26,sc:0.78,op:0.55},
+    {rot:-3,sc:1.00,op:1.00},
+    {rot:19,sc:0.66,op:0.72}
+  ].slice(0, S.cluster===1?1:S.cluster===2?2:3);
+  // for a single frond, center it
+  if(S.cluster===1) layouts[0]={rot:6,sc:1,op:1};
+
+  let inner='';
+  for(const ly of layouts){
+    const tf='translate(10,10) rotate('+ly.rot+') scale('+ly.sc+')';
+    if(S.style==='duo'){
+      // back frond: filled sage, slightly larger & offset; front frond: line in colour
+      inner+='<g transform="'+tf+'" opacity="'+(ly.op*0.5).toFixed(2)+'">'
+        + frond(L*1.06, S.dens, 'solid', back, back) + '</g>';
+      inner+='<g transform="'+tf+'" opacity="'+ly.op.toFixed(2)+'">'
+        + frond(L, S.dens, 'line', col, col) + '</g>';
+    }else{
+      inner+='<g transform="'+tf+'" opacity="'+ly.op.toFixed(2)+'">'
+        + frond(L, S.dens, S.style, col, back) + '</g>';
+    }
+  }
+  const sz=S.size;
+  return '<svg width="'+sz+'" height="'+sz+'" viewBox="0 0 '+sz+' '+sz+'">'+inner+'</svg>';
+}
+
+/* ---------- render ---------- */
+function render(){
+  const svg=cluster();
+  const show4 = S.corners===4;
+  for(const id of ['tl','tr','bl','br']){
+    const el=document.getElementById(id);
+    const on = show4 || id==='tl' || id==='br';
+    el.innerHTML = on ? svg : '';
+    el.style.opacity = (S.op/100).toString();
+  }
+  const stage=document.getElementById('stage');
+  stage.className='stage '+S.bg;
+  document.getElementById('photo').style.display = S.bg==='photo'?'block':'none';
+  document.getElementById('scrim').style.display = S.bg==='photo'?'block':'none';
+  document.getElementById('readout').textContent =
+    S.style+' · '+S.cluster+' fronds · '+S.corners+' corners · dens '+S.dens+' · size '+S.size+' · op '+S.op+'% · '+S.color;
+}
+
+/* ---------- wiring ---------- */
+function seg(id,key,cast){
+  document.querySelectorAll('#'+id+' button').forEach(b=>{
+    b.onclick=()=>{
+      document.querySelectorAll('#'+id+' button').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on'); S[key]=cast?cast(b.dataset.v):b.dataset.v; render();
+    };
+  });
+}
+seg('style','style');
+seg('corners','corners',Number);
+seg('cluster','cluster',Number);
+seg('bg','bg');
+
+document.querySelectorAll('#color .sw').forEach(s=>{
+  s.onclick=()=>{document.querySelectorAll('#color .sw').forEach(x=>x.classList.remove('on'));s.classList.add('on');S.color=s.dataset.v;render();};
+});
+
+function rng(id,key,suffix){
+  const inp=document.getElementById(id), out=document.getElementById(id+'V');
+  inp.oninput=()=>{S[key]=Number(inp.value);out.textContent=inp.value+(suffix||'');render();};
+}
+rng('dens','dens');
+rng('size','size');
+rng('op','op','%');
+
+const PRESETS={
+  editorial:{style:'line',corners:2,cluster:2,dens:20,size:440,op:22,color:'clay'},
+  lush:{style:'duo',corners:4,cluster:3,dens:24,size:520,op:34,color:'palm'},
+  dramatic:{style:'solid',corners:2,cluster:3,dens:26,size:640,op:42,color:'palm'}
+};
+document.querySelectorAll('#presets button').forEach(b=>{
+  b.onclick=()=>{Object.assign(S,PRESETS[b.dataset.p]);syncUI();render();};
+});
+function syncUI(){
+  for(const [id,key] of [['style','style'],['corners','corners'],['cluster','cluster'],['bg','bg']]){
+    document.querySelectorAll('#'+id+' button').forEach(x=>x.classList.toggle('on', x.dataset.v==String(S[key])));
+  }
+  document.querySelectorAll('#color .sw').forEach(x=>x.classList.toggle('on',x.dataset.v===S.color));
+  for(const [id,key,suf] of [['dens','dens',''],['size','size',''],['op','op','%']]){
+    document.getElementById(id).value=S[key];
+    document.getElementById(id+'V').textContent=S[key]+(suf||'');
+  }
+}
+
+render();
+</script>
+</body>
+</html>

@@ -655,14 +655,17 @@ function _bananaLeafM(len: number, droop: number, tear: number, fillOp: number, 
   }
   out += `<path d='M${_ff(p0.x)} ${_ff(p0.y)} C${_ff(p1.x)} ${_ff(p1.y)} ${_ff(p2.x)} ${_ff(p2.y)} ${_ff(p3.x)} ${_ff(p3.y)}'${_VE}/>`;
   out += `<path d='${poly(eL)}'${_VE}/><path d='${poly(eR)}'${_VE}/>`;
-  let veins = "";
-  for (let i = 2; i < N - 1; i++) {
-    if (rnd() < 0.25) continue;
-    const j = Math.min(N, i + 1); // slant toward the tip, like real banana venation
-    veins += `M${_ff(pts[i].x)} ${_ff(pts[i].y)} L${_ff(eL[j].x)} ${_ff(eL[j].y)}`;
-    veins += `M${_ff(pts[i].x)} ${_ff(pts[i].y)} L${_ff(eR[j].x)} ${_ff(eR[j].y)}`;
+  if (fillOp < 0.95) {
+    // veins are invisible against a solid blade — only draw them in line mode
+    let veins = "";
+    for (let i = 2; i < N - 1; i++) {
+      if (rnd() < 0.25) continue;
+      const j = Math.min(N, i + 1); // slant toward the tip, like real banana venation
+      veins += `M${_ff(pts[i].x)} ${_ff(pts[i].y)} L${_ff(eL[j].x)} ${_ff(eL[j].y)}`;
+      veins += `M${_ff(pts[i].x)} ${_ff(pts[i].y)} L${_ff(eR[j].x)} ${_ff(eR[j].y)}`;
+    }
+    out += `<path d='${veins}' stroke-opacity='0.5'${_VE}/>`;
   }
-  out += `<path d='${veins}' stroke-opacity='0.5'${_VE}/>`;
   return out;
 }
 
@@ -671,7 +674,8 @@ function _bananaLeafAt(x: number, y: number, rot: number, len: number, mirror: b
   return `<g transform='translate(${_ff(x)} ${_ff(y)}) rotate(${_ff(rot)})${mirror ? " scale(-1 1)" : ""}'>${_bananaLeafM(len, droop, tear, fillOp, rnd)}</g>`;
 }
 
-// One plant rooted at (0,0), growing up
+// One plant rooted at (0,0), growing up. fillOp >= 0.95 renders as a solid
+// silhouette: blades fully filled (veins skipped), stem a closed filled shape.
 function _bananaPlantM(h: number, seed: number, droop: number, tear: number, fillOp: number) {
   const rnd = _mulberry32(seed);
   const R = (a: number, b: number) => a + (b - a) * rnd();
@@ -679,9 +683,13 @@ function _bananaPlantM(h: number, seed: number, droop: number, tear: number, fil
   const topX = lean * h, topY = -h * 0.96;
   const sw = Math.max(2.5, h * 0.04);
   let out = "";
-  out += `<path d='M${_ff(-sw)} 0 C${_ff(-sw * 0.8)} ${_ff(-h * 0.4)} ${_ff(topX - sw * 0.45)} ${_ff(-h * 0.72)} ${_ff(topX - sw * 0.3)} ${_ff(topY)}'${_VE}/>`;
-  out += `<path d='M${_ff(sw)} 0 C${_ff(sw * 0.8)} ${_ff(-h * 0.4)} ${_ff(topX + sw * 0.45)} ${_ff(-h * 0.72)} ${_ff(topX + sw * 0.3)} ${_ff(topY)}'${_VE}/>`;
-  out += `<path d='M${_ff(-sw * 0.25)} ${_ff(-h * 0.08)} C${_ff(-sw * 0.15)} ${_ff(-h * 0.4)} ${_ff(topX * 0.8)} ${_ff(-h * 0.58)} ${_ff(topX)} ${_ff(-h * 0.82)}' stroke-opacity='0.45'${_VE}/>`;
+  if (fillOp >= 0.95) {
+    out += `<path d='M${_ff(-sw)} 0 C${_ff(-sw * 0.8)} ${_ff(-h * 0.4)} ${_ff(topX - sw * 0.45)} ${_ff(-h * 0.72)} ${_ff(topX - sw * 0.3)} ${_ff(topY)} L${_ff(topX + sw * 0.3)} ${_ff(topY)} C${_ff(topX + sw * 0.45)} ${_ff(-h * 0.72)} ${_ff(sw * 0.8)} ${_ff(-h * 0.4)} ${_ff(sw)} 0 Z' fill='currentColor'${_VE}/>`;
+  } else {
+    out += `<path d='M${_ff(-sw)} 0 C${_ff(-sw * 0.8)} ${_ff(-h * 0.4)} ${_ff(topX - sw * 0.45)} ${_ff(-h * 0.72)} ${_ff(topX - sw * 0.3)} ${_ff(topY)}'${_VE}/>`;
+    out += `<path d='M${_ff(sw)} 0 C${_ff(sw * 0.8)} ${_ff(-h * 0.4)} ${_ff(topX + sw * 0.45)} ${_ff(-h * 0.72)} ${_ff(topX + sw * 0.3)} ${_ff(topY)}'${_VE}/>`;
+    out += `<path d='M${_ff(-sw * 0.25)} ${_ff(-h * 0.08)} C${_ff(-sw * 0.15)} ${_ff(-h * 0.4)} ${_ff(topX * 0.8)} ${_ff(-h * 0.58)} ${_ff(topX)} ${_ff(-h * 0.82)}' stroke-opacity='0.45'${_VE}/>`;
+  }
   const slots = [-80, -48, -16, 14, 46, 78];
   const nL = 4 + Math.floor(rnd() * 3);
   const start = Math.floor(rnd() * 2);
@@ -718,7 +726,9 @@ function _bananaGroveM(w: number, h: number, plants: number, seed: number, droop
  *  section (content above with `relative z10`). Set colour with a text-*
  *  class (text-sea reads most like foliage) and intensity with opacity-*.
  *  `size` is the plant-box height; bump it for full-margin "jungle" strips,
- *  keep it low for discreet corner clumps. */
+ *  keep it low for discreet corner clumps. fillOpacity={1} switches to solid
+ *  silhouettes — pair with text-ink so the grove reads as sprouting out of an
+ *  adjacent bg-ink section. */
 export function BananaGrove({
   corner = "bl",
   width = 300,

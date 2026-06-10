@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Txaleta · Footer — Spanish Azulejo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --clay:#9c6b66; --palm:#2c3a2c; --sage:#6f8a6a; --mango:#e3a53e;
+    --cream:#f4efe3; --coconut:#fbf7ef;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:"Lato",system-ui,sans-serif;background:#e9e3d6;color:#2c3a2c}
+
+  .bar{
+    position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;gap:16px 24px;
+    align-items:flex-end;padding:13px 22px;background:rgba(18,24,18,.93);
+    color:#f4efe3;backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)
+  }
+  .bar h1{font-family:"Playfair Display",serif;font-weight:500;font-size:15px;margin:0 12px 0 0;white-space:nowrap}
+  .grp{display:flex;flex-direction:column;gap:5px}
+  .grp>label{font-size:9px;letter-spacing:.22em;text-transform:uppercase;opacity:.6}
+  .seg{display:flex;border:1px solid rgba(255,255,255,.18);border-radius:2px;overflow:hidden}
+  .seg button{font:inherit;font-size:11px;padding:6px 12px;background:transparent;color:#f4efe3;border:0;cursor:pointer;opacity:.7;white-space:nowrap}
+  .seg button.on{background:var(--clay);opacity:1}
+  input[type=range]{width:120px;accent-color:var(--clay)}
+  .val{font-variant-numeric:tabular-nums;font-size:11px;opacity:.85}
+  label.chk{display:flex;align-items:center;gap:7px;font-size:11px;cursor:pointer}
+
+  .frame{padding:30px clamp(12px,4vw,60px) 70px}
+  .label-strip{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#7a7361;margin:26px 0 10px}
+
+  /* the green section that sits ABOVE the footer on the real site */
+  .pre{
+    background:var(--palm);color:#fff;text-align:center;padding:56px 24px 64px;position:relative;overflow:hidden
+  }
+  .pre h3{font-family:"Playfair Display",serif;font-weight:400;font-size:30px;margin:0}
+  .pre p{margin:14px auto 0;max-width:420px;color:rgba(255,255,255,.7);font-size:14px}
+  .pre .btn{display:inline-block;margin-top:22px;background:var(--clay);color:#fff;text-decoration:none;font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:13px 30px}
+
+  /* ===== FOOTER ===== */
+  .ft{position:relative;overflow:hidden;color:#eef1f5}
+  .ft .azu-band{position:relative;height:78px;width:100%;display:flex;overflow:hidden;z-index:2}
+  .ft .azu-band svg{height:100%;width:auto;flex:0 0 auto;display:block}
+  .ft .azu-bg{position:absolute;inset:0;background-repeat:repeat;z-index:0;pointer-events:none}
+  .ft .body{position:relative;z-index:3;max-width:1120px;margin:0 auto;padding:54px 28px 30px}
+  .ft .cols{display:grid;gap:40px;grid-template-columns:2fr 1fr 1fr}
+  .ft .word{font-family:"Playfair Display",serif;font-size:30px;letter-spacing:.06em}
+  .ft .word .x{color:var(--mango)}
+  .ft .sub{font-size:9px;letter-spacing:.4em;text-transform:uppercase;margin-top:6px;opacity:.65}
+  .ft .blurb{margin-top:18px;max-width:300px;font-size:13px;line-height:1.65;opacity:.62}
+  .ft h4{font-size:10px;letter-spacing:.24em;text-transform:uppercase;margin:0 0 16px}
+  .ft ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px}
+  .ft a,.ft li{color:inherit;text-decoration:none;font-size:13px;opacity:.72}
+  .ft .socials{display:flex;gap:14px;margin-top:20px}
+  .ft .socials span{width:30px;height:30px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center;opacity:.6;font-size:12px}
+  .ft .rule{margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:11px;opacity:.5}
+  .ft.accent-h4 h4{}
+  @media(max-width:760px){.ft .cols{grid-template-columns:1fr}.bar h1{display:none}}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <h1>Footer · Azulejo</h1>
+  <div class="grp"><label>Treatment</label>
+    <div class="seg" id="treat">
+      <button data-v="classic" class="on">Navy + Cobalt</button>
+      <button data-v="warm">Navy + Cream/Gold</button>
+      <button data-v="trans">Transition</button>
+    </div>
+  </div>
+  <div class="grp"><label>Navy shade</label>
+    <div class="seg" id="navy">
+      <button data-v="#14223d" class="on">Deep</button>
+      <button data-v="#1b3052">Mid</button>
+      <button data-v="#0f1b30">Ink</button>
+    </div>
+  </div>
+  <div class="grp"><label>Band tile size <span class="val" id="tszV">78</span></label>
+    <input type="range" id="tsz" min="56" max="120" value="78" />
+  </div>
+  <div class="grp"><label>Backdrop op <span class="val" id="bgopV">7%</span></label>
+    <input type="range" id="bgop" min="0" max="22" value="7" />
+  </div>
+  <div class="grp"><label>&nbsp;</label>
+    <label class="chk"><input type="checkbox" id="showpre" checked /> show green section above</label>
+  </div>
+</div>
+
+<div class="frame">
+  <div class="label-strip" id="caption">Navy + Cobalt — classic Spanish azulejo</div>
+
+  <section class="pre" id="pre">
+    <h3>Come Home to Camiguin</h3>
+    <p>Tell us your dates and we&apos;ll hold the right room — and help you plan the days around it.</p>
+    <a class="btn" href="#">Book Your Stay</a>
+  </section>
+
+  <footer class="ft" id="ft">
+    <div class="azu-band" id="band"></div>
+    <div class="azu-bg" id="bg"></div>
+    <div class="body">
+      <div class="cols">
+        <div>
+          <div class="word">TXALETA</div>
+          <div class="sub">de Camiguin</div>
+          <p class="blurb">A boutique coastal resort on Camiguin Island. Seaview suites, ocean-view glamping and an infinity pool — your peaceful island escape.</p>
+          <div class="socials"><span>f</span><span>◎</span><span>♪</span></div>
+        </div>
+        <div>
+          <h4 id="h4a">Explore</h4>
+          <ul><li>Accommodation</li><li>Dining</li><li>Experiences</li><li>Gallery</li><li>Book Now</li></ul>
+        </div>
+        <div>
+          <h4 id="h4b">Contact</h4>
+          <ul><li>Mambajao, Camiguin 9100</li><li>+63 917 818 2277</li><li>stay@txaleta.com</li></ul>
+        </div>
+      </div>
+      <div class="rule"><span>© 2026 Txaleta de Camiguin. All rights reserved.</span><span>Crafted on Camiguin · CloudReef</span></div>
+    </div>
+  </footer>
+</div>
+
+<script>
+/* ---------- parametric azulejo tile generator (framed ceramic tile) ---------- */
+function wedge(kind){
+  // a motif pointing UP from centre (50,50), to be rotated N times
+  switch(kind){
+    case 'lance': return "<path d='M50 40 L50 9'/><path d='M50 16 L45 25 M50 16 L55 25'/>";
+    case 'petal': return "<path d='M50 43 C43 32 43 18 50 9 C57 18 57 32 50 43 Z'/>";
+    case 'leafdot': return "<path d='M50 42 C45 34 45 22 50 14 C55 22 55 34 50 42 Z'/><circle cx='50' cy='7' r='2.4'/>";
+    case 'trefoil': return "<path d='M50 40 C46 33 46 25 50 20 C54 25 54 33 50 40 Z'/><circle cx='50' cy='14' r='4'/>";
+    case 'hook': return "<path d='M50 41 L50 18 C50 12 55 12 56 17'/>";
+    default: return "<circle cx='50' cy='15' r='3'/>";
+  }
+}
+function azulejo(o){
+  const g = o.ground, l = o.line, a = o.accent || o.line;
+  let s = `<rect x='0' y='0' width='100' height='100' fill='${g}'/>`;
+  // double frame (the ceramic tile border)
+  s += `<rect x='2.5' y='2.5' width='95' height='95' fill='none' stroke='${l}' stroke-width='2.4'/>`;
+  s += `<rect x='6.5' y='6.5' width='87' height='87' fill='none' stroke='${a}' stroke-width='0.8'/>`;
+  // corner quarter-flowers (read as a continuous wall when tiled)
+  for(const [cx,cy] of [[6.5,6.5],[93.5,6.5],[6.5,93.5],[93.5,93.5]]){
+    s += `<g fill='none' stroke='${a}' stroke-width='1.1'><circle cx='${cx}' cy='${cy}' r='7'/><circle cx='${cx}' cy='${cy}' r='3'/></g>`;
+  }
+  // central mandala — layered rotated rings
+  const ring = (kind,col,w,fold)=>{
+    let r='';
+    for(let k=0;k<fold;k++) r += `<g transform='rotate(${k*360/fold} 50 50)'>${wedge(kind)}</g>`;
+    return `<g fill='none' stroke='${col}' stroke-width='${w}' stroke-linecap='round' stroke-linejoin='round'>${r}</g>`;
+  };
+  for(const ly of o.layers) s += ring(ly.kind, ly.accent?a:l, ly.w, o.fold);
+  s += `<circle cx='50' cy='50' r='6.5' fill='none' stroke='${l}' stroke-width='1.4'/>`;
+  s += `<circle cx='50' cy='50' r='2.4' fill='${l}'/>`;
+  return `<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>${s}</svg>`;
+}
+
+/* six distinct tile recipes for a varied wall (like real azulejo grids) */
+const RECIPES = [
+  { fold:8, layers:[{kind:'lance',w:1.5},{kind:'petal',w:1.3,accent:true},{kind:'dot',w:1.2}] },
+  { fold:8, layers:[{kind:'petal',w:1.5},{kind:'leafdot',w:1.2,accent:true}] },
+  { fold:6, layers:[{kind:'trefoil',w:1.4},{kind:'lance',w:1.2,accent:true}] },
+  { fold:8, layers:[{kind:'hook',w:1.5},{kind:'dot',w:1.2,accent:true}] },
+  { fold:12, layers:[{kind:'lance',w:1.2},{kind:'dot',w:1.1,accent:true}] },
+  { fold:6, layers:[{kind:'petal',w:1.5},{kind:'trefoil',w:1.2,accent:true}] },
+];
+
+const TREAT = {
+  classic: { footer:null, ground:'#f5f2e8', line:'#21458f', accent:'#21458f', text:'#eef1f5', accentText:'#9db8ef', caption:'Navy + Cobalt — classic Spanish azulejo' },
+  warm:    { footer:null, ground:'#f4efe3', line:'#9c6b66', accent:'#e3a53e', text:'#f1ece0', accentText:'#e3a53e', caption:'Navy + Cream/Gold — warm, tied to the brand palette' },
+  trans:   { footer:null, ground:'#f5f2e8', line:'#21458f', accent:'#21458f', text:'#eef1f5', accentText:'#9db8ef', caption:'Transition — green threshold band + green→navy gradient' },
+};
+
+const S = { treat:'classic', navy:'#14223d', tsz:78, bgop:7, showpre:true };
+
+function dataURI(svg){ return "data:image/svg+xml;utf8," + svg.replace(/#/g,'%23').replace(/"/g,"'"); }
+
+function render(){
+  const t = TREAT[S.treat];
+  const ft = document.getElementById('ft');
+  const band = document.getElementById('band');
+  const bg = document.getElementById('bg');
+  const pre = document.getElementById('pre');
+
+  // footer base
+  if(S.treat==='trans'){
+    ft.style.background = `linear-gradient(${S.navy} 0%, ${S.navy} 100%)`;
+    // green->navy gradient overlay at the top of the footer body
+    ft.style.background = `linear-gradient(180deg, var(--palm) 0%, ${S.navy} 120px)`;
+  } else {
+    ft.style.background = S.navy;
+  }
+  ft.style.color = t.text;
+  document.getElementById('h4a').style.color = t.accentText;
+  document.getElementById('h4b').style.color = t.accentText;
+  ft.querySelectorAll('.word').forEach(w=>{});
+  document.getElementById('caption').textContent = t.caption;
+
+  // azulejo band — a row of varied framed tiles
+  const sz = S.tsz;
+  const need = Math.ceil((window.innerWidth) / sz) + 2;
+  let html='';
+  for(let i=0;i<need;i++){
+    const r = RECIPES[i % RECIPES.length];
+    const svg = azulejo({ ...r, ground:t.ground, line:t.line, accent:t.accent });
+    html += svg.replace("<svg ", `<svg height='${sz}' width='${sz}' `);
+  }
+  band.innerHTML = html;
+  band.style.height = sz+'px';
+  band.style.boxShadow = '0 10px 30px rgba(0,0,0,.25)';
+
+  // faint full-bleed backdrop tile behind the columns (motif in the text colour)
+  const back = azulejo({ ...RECIPES[1], ground:'transparent', line:t.accentText, accent:t.accentText });
+  bg.style.backgroundImage = `url("${dataURI(back)}")`;
+  bg.style.backgroundSize = (sz*1.6)+'px '+(sz*1.6)+'px';
+  bg.style.opacity = (S.bgop/100).toString();
+
+  pre.style.display = S.showpre ? 'block' : 'none';
+}
+
+/* wiring */
+function seg(id,key,cb){
+  document.querySelectorAll('#'+id+' button').forEach(b=>{
+    b.onclick=()=>{document.querySelectorAll('#'+id+' button').forEach(x=>x.classList.remove('on'));b.classList.add('on');S[key]=b.dataset.v;if(cb)cb();render();};
+  });
+}
+seg('treat','treat');
+seg('navy','navy');
+document.getElementById('tsz').oninput=e=>{S.tsz=+e.target.value;document.getElementById('tszV').textContent=e.target.value;render();};
+document.getElementById('bgop').oninput=e=>{S.bgop=+e.target.value;document.getElementById('bgopV').textContent=e.target.value+'%';render();};
+document.getElementById('showpre').onchange=e=>{S.showpre=e.target.checked;render();};
+window.addEventListener('resize',render);
+render();
+</script>
+</body>
+</html>
