@@ -6,7 +6,7 @@ import { BotanicalAccent, PaperGrain, PalmCorner } from "../brand-texture";
 const features = [
   { icon: Waves, label: "Infinity Pool", note: "Meeting the horizon" },
   { icon: BedDouble, label: "Seaview Rooms", note: "Wake to the ocean" },
-  { icon: Plane, label: "5 min from Airport", note: "Camiguin Airport" },
+  { icon: Plane, label: "15 min from Airport", note: "Camiguin Airport" },
 ];
 
 export function Intro() {
