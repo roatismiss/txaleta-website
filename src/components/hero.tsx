@@ -1,49 +1,28 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { site } from "@/lib/site";
 import { BookingBar } from "./booking-bar";
 
 export function Hero() {
-  const { videos, slides } = site.hero;
+  const { videos } = site.hero;
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Image slideshow state (runs before video kicks in)
-  const [slideIdx, setSlideIdx] = useState(0);
-  const [showVideo, setShowVideo] = useState(false);
   const [videoIdx, setVideoIdx] = useState(0);
 
-  // Cycle slides every 4 s; after all slides shown once, switch to video
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSlideIdx((i) => {
-        const next = i + 1;
-        if (next >= slides.length) {
-          clearInterval(interval);
-          setShowVideo(true);
-          return i;
-        }
-        return next;
-      });
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [slides.length]);
-
-  // Play the active video — on the slideshow hand-off AND every time videoIdx
-  // changes. Swapping a <video>'s src in React does NOT auto-resume playback,
+  // Play the active video — on mount AND every time videoIdx changes.
+  // Swapping a <video>'s src in React does NOT auto-resume playback,
   // so without this the 2nd/3rd video in the cycle just froze on its first
   // frame. load() picks up the new src, then play() starts it (this order does
   // not trigger the "play() interrupted by load()" abort).
   useEffect(() => {
-    if (!showVideo) return;
     const v = videoRef.current;
     if (!v) return;
     v.load();
     v.play().catch(() => {});
-  }, [videoIdx, showVideo]);
+  }, [videoIdx]);
 
   const handleEnded = () => {
     if (videos.length > 1) setVideoIdx((i) => (i + 1) % videos.length);
@@ -52,46 +31,8 @@ export function Hero() {
 
   return (
     <section className="relative flex h-[100svh] min-h-[640px] w-full flex-col overflow-hidden">
-      {/* ── Static image slideshow ── */}
-      <AnimatePresence>
-        {!showVideo && (
-          <motion.div
-            key="slides"
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
-            className="absolute inset-0"
-          >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={slideIdx}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1.0, ease: "easeInOut" }}
-                className="absolute inset-0"
-              >
-                <Image
-                  src={slides[slideIdx]}
-                  alt=""
-                  fill
-                  priority={slideIdx === 0}
-                  sizes="100vw"
-                  className="object-cover"
-                />
-              </motion.div>
-            </AnimatePresence>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* ── Video (fades in after slideshow) ── */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: showVideo ? 1 : 0 }}
-        transition={{ duration: 1.2, ease: "easeInOut" }}
-        className="absolute inset-0"
-      >
+      {/* ── Video (plays first thing) ── */}
+      <div className="absolute inset-0">
         <video
           ref={videoRef}
           src={videos[videoIdx]}
@@ -102,7 +43,7 @@ export function Hero() {
           playsInline
           preload="auto"
         />
-      </motion.div>
+      </div>
 
       {/* Cinematic gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-black/55" />
@@ -139,20 +80,6 @@ export function Hero() {
           warm Filipino hospitality on Camiguin Island.
         </motion.p>
       </div>
-
-      {/* Slide dots */}
-      {!showVideo && (
-        <div className="absolute bottom-24 left-1/2 z-10 hidden -translate-x-1/2 gap-2 lg:flex">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setSlideIdx(i)}
-              className={`h-1 rounded-full transition-all duration-500 ${i === slideIdx ? "w-6 bg-white" : "w-2 bg-white/40"}`}
-              aria-label={`Slide ${i + 1}`}
-            />
-          ))}
-        </div>
-      )}
 
       {/* Booking bar */}
       <motion.div
