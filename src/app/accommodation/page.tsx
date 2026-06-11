@@ -10,7 +10,7 @@ import { RattanWeave, PalmCorner } from "@/components/brand-texture";
 export const metadata: Metadata = {
   title: "Accommodation",
   description:
-    "Seaview suites, cliff-edge ocean-view glamping and garden retreats at Txaleta de Camiguin — ten rooms between the volcano and the Bohol Sea, minutes from Camiguin Airport.",
+    "Seaview suites, cliff-edge ocean-view glamping and garden retreats at Txaleta de Camiguin — fourteen rooms between the volcano and the Bohol Sea (ten more coming soon), fifteen minutes from Camiguin Airport.",
   alternates: { canonical: "/accommodation" },
 };
 
@@ -19,7 +19,7 @@ const inclusions = [
   { icon: Waves, label: "Infinity Pool & Beach", note: "Open from sunrise, looking straight onto the Bohol Sea." },
   { icon: Wifi, label: "Fast Free WiFi", note: "Throughout the rooms and the common areas." },
   { icon: Wind, label: "Air Conditioning", note: "In every suite and garden room, with natural airflow in the tents." },
-  { icon: Car, label: "Free Parking & Transfers", note: "Airport pick-up arranged — five minutes from Camiguin Airport." },
+  { icon: Car, label: "Free Parking & Transfers", note: "Airport pick-up arranged — fifteen minutes from Camiguin Airport." },
   { icon: Utensils, label: "Beachfront Café", note: "Fresh Filipino cooking and easy international plates, all day." },
   { icon: Sparkles, label: "Daily Housekeeping", note: "Rooms turned down while you are out on the island." },
   { icon: Bell, label: "Warm Filipino Hosts", note: "On hand to line up boats, treks and the quiet corners." },
@@ -53,9 +53,9 @@ export default function AccommodationPage() {
       <section className="bg-white py-20 sm:py-28">
         <Reveal className="mx-auto max-w-3xl px-6 text-center">
           <p className="font-display text-2xl font-light italic leading-snug text-ink/80 sm:text-3xl">
-            Ten rooms sit between the volcano and the sea, close enough to hear both, and no
-            two open onto the same view. Choose the one that matches how you want to meet the
-            morning.
+            Fourteen rooms sit between the volcano and the sea, close enough to hear both, and
+            no two open onto the same view — with ten more coming soon. Choose the one that
+            matches how you want to meet the morning.
           </p>
         </Reveal>
       </section>

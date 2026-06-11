@@ -36,7 +36,7 @@ export function Contact() {
             Come the Long Way
           </h2>
           <p className="mt-6 max-w-md text-[15px] leading-relaxed text-white/65">
-            Five minutes from Camiguin Airport, the road gives way to the sound of the
+            Fifteen minutes from Camiguin Airport, the road gives way to the sound of the
             Bohol Sea and the volcano standing watch behind you. Tell us when you arrive
             and we&apos;ll have the transfer waiting, the island boat ready, and the right
             room held against the tide.

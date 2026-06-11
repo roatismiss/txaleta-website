@@ -16,7 +16,7 @@ export const site = {
     city: "Mambajao",
     region: "Camiguin",
     country: "Philippines",
-    airportNote: "5 minutes from Camiguin Airport",
+    airportNote: "15 minutes from Camiguin Airport",
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=Txaleta+de+Camiguin",
   },
 
@@ -669,7 +669,7 @@ const accommodationMega: MegaMenu = {
   kicker: "Stay With Us",
   heading: "Rooms by the Sea",
   blurb:
-    "Ten rooms between the volcano and the Bohol Sea — seaview suites, cliff-edge glamping and quiet garden retreats.",
+    "Fourteen rooms between the volcano and the Bohol Sea, with ten more on the way — seaview suites, cliff-edge glamping and quiet garden retreats.",
   viewAll: { label: "All Accommodation", href: "/accommodation" },
   links: [
     { label: "Inclusions & Amenities", href: "/accommodation#inclusions" },
