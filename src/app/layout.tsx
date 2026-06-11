@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
@@ -74,8 +75,13 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-white text-ink">
         {/* Pre-paint: hide the splash for visitors who already saw it this
-            session, before the React effect can run (avoids any flicker). */}
-        <script
+            session, before the React effect can run (avoids any flicker).
+            next/script with `beforeInteractive` is injected into the server HTML
+            (hoisted to <head>) and runs before hydration — a raw <script> in the
+            component tree is NOT executed on the client in this Next/React. */}
+        <Script
+          id="splash-seen-init"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html:
               "try{if(sessionStorage.getItem('txaleta:splash-seen'))document.documentElement.dataset.splashSeen='1'}catch(e){}",
