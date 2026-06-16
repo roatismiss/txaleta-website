@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { site } from "@/lib/site";
 import { useMenu } from "@/contexts/menu-context";
 
@@ -10,6 +11,7 @@ import { useMenu } from "@/contexts/menu-context";
  */
 export function ChatbotEmbed() {
   const { isMenuOpen } = useMenu();
+  const pathname = usePathname();
 
   useEffect(() => {
     if (document.getElementById("cloudreef-chatbot-script")) return;
@@ -43,6 +45,16 @@ export function ChatbotEmbed() {
     document.documentElement.classList.toggle("menu-open", isMenuOpen);
     return () => document.documentElement.classList.remove("menu-open");
   }, [isMenuOpen]);
+
+  // Hide the floating chatbot on /book: there the Cloudbeds engine is embedded
+  // in-page (be-plus), and the FAB (pinned bottom-right at z-index ~2147483646)
+  // covers the engine's Confirm/Cancel buttons on mobile. Same class + global
+  // CSS pattern as `menu-open` above so it survives the widget mounting late.
+  useEffect(() => {
+    const onBooking = pathname === "/book" || pathname.startsWith("/book/");
+    document.documentElement.classList.toggle("booking-open", onBooking);
+    return () => document.documentElement.classList.remove("booking-open");
+  }, [pathname]);
 
   return null;
 }

@@ -332,6 +332,19 @@ html.menu-open [data-cloudreef-chatbot] {
   display: none !important;
 }
 
+/* ==========================================================================
+   Hide the CloudReef floating chatbot on the /book page. There the Cloudbeds
+   booking engine is embedded in-page (be-plus); the FAB pins itself bottom-right
+   above everything and covers the engine's Confirm/Cancel buttons on mobile
+   (confirmed by client screenshot). `html.booking-open` is toggled by
+   ChatbotEmbed from the route. Same hooks + `!important` rationale as above.
+   ========================================================================== */
+html.booking-open #cloudreef-widget-root,
+html.booking-open [data-cloudreef-widget],
+html.booking-open [data-cloudreef-chatbot] {
+  display: none !important;
+}
+
 /* Respect reduced-motion: neutralize CSS animations/transitions site-wide.
    (framer-motion is handled separately via useReducedMotion.) */
 @media (prefers-reduced-motion: reduce) {
