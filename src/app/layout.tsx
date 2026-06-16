@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer";
 import { ChatbotEmbed } from "@/components/chatbot-embed";
 import { SplashScreen } from "@/components/splash-screen";
 import { MenuProvider } from "@/contexts/menu-context";
+import { Analytics } from "@vercel/analytics/next";
 
 // Brand typography (txaleta_branding.pdf — Visual Identity):
 //   Playfair Display — elegant heritage serif for titles/headers
@@ -107,6 +108,7 @@ export default function RootLayout({
             </svg>
           </a>
         </MenuProvider>
+        <Analytics />
       </body>
     </html>
   );
