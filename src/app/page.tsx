@@ -4,6 +4,7 @@ import { Intro } from "@/components/sections/intro";
 import { Accommodation } from "@/components/sections/accommodation";
 import { Dining } from "@/components/sections/dining";
 import { Experiences } from "@/components/sections/experiences";
+import { Watersports } from "@/components/sections/watersports";
 import { Seamless } from "@/components/sections/seamless";
 import { Gallery } from "@/components/sections/gallery";
 import { Testimonials } from "@/components/sections/testimonials";
@@ -27,6 +28,7 @@ export default function Home() {
       <Accommodation />
       <Dining />
       <Experiences />
+      <Watersports />
       <Seamless />
       <Gallery />
       <Testimonials />
