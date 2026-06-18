@@ -12,7 +12,7 @@ import {
 const features = [
   { icon: Waves, label: "Infinity Pool", note: "Meeting the horizon" },
   { icon: BedDouble, label: "Seaview Rooms", note: "Wake to the ocean" },
-  { icon: Plane, label: "5 min from Airport", note: "Camiguin Airport" },
+  { icon: Plane, label: "15 min from Airport", note: "Camiguin Airport" },
 ];
 
 export function Intro() {
@@ -75,7 +75,7 @@ export function Intro() {
             <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-ink/70">
               Txaleta de Camiguin sits where all of it comes closest: the volcano at your
               back, the Bohol Sea at your feet, the white sandbar of White Island a short
-              banca ride off the shore. Ten rooms, an infinity pool that meets the
+              banca ride off the shore. Fourteen rooms, an infinity pool that meets the
               horizon, and the rare luxury of being somewhere the world hasn&apos;t
               crowded yet.
             </p>

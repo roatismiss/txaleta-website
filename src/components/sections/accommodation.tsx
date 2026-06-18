@@ -15,12 +15,12 @@ export async function Accommodation() {
       <PalmCorner corner="bl" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Kicker className="text-brand">The Ten Rooms</Kicker>
+          <Kicker className="text-brand">The Fourteen Rooms</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
             Where You Wake on Camiguin
           </h2>
           <p className="mt-6 text-[15px] leading-relaxed text-ink/65">
-            Ten rooms sit between the volcano and the sea, close enough to hear both, and
+            Fourteen rooms sit between the volcano and the sea, close enough to hear both, and
             no two open onto the same view. Some face the Bohol Sea, others the garden or
             the cliff&apos;s edge. Choose the one that matches how you want to meet the morning.
           </p>
