@@ -8,6 +8,7 @@ import { ChatbotEmbed } from "@/components/chatbot-embed";
 import { SplashScreen } from "@/components/splash-screen";
 import { MenuProvider } from "@/contexts/menu-context";
 import { Analytics } from "@vercel/analytics/next";
+import { AnalyticsBeacon } from "@/components/analytics-beacon";
 
 // Brand typography (txaleta_branding.pdf — Visual Identity):
 //   Playfair Display — elegant heritage serif for titles/headers
@@ -109,6 +110,8 @@ export default function RootLayout({
           </a>
         </MenuProvider>
         <Analytics />
+        {/* First-party pageview beacon → CloudReef /analytics (per-resort). */}
+        <AnalyticsBeacon />
       </body>
     </html>
   );
