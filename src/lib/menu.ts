@@ -4,7 +4,7 @@
 //
 // Transcribed from the client's "NEW MENU" PDF (June 2026). Prices are in
 // Philippine Peso (₱); store the number only (e.g. "220", "1,330") — the ₱ sign
-// is rendered in the UI / Peso() helper. A 3% service charge applies (see
+// is rendered in the UI / Peso() helper. A 5% service charge applies (see
 // SERVICE_NOTE). Keep this in sync with the chatbot KB
 // (cloudreef-platform/supabase/migrations/095_txaleta_dining_menu_kb.sql) —
 // the AI concierge reads from a mirror of this data, so prices must match.
@@ -50,7 +50,7 @@ export type MenuPage = {
 };
 
 export const SERVICE_NOTE =
-  "A 3% service charge applies. All prices are in Philippine Peso (₱).";
+  "Kindly note that all prices are subject to a 5% service charge, in support of our dedicated service team. Prices are in Philippine Peso (₱).";
 
 export const menuMeta = {
   eyebrow: "The Café · À la Carte",
