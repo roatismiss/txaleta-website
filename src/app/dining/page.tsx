@@ -48,6 +48,12 @@ export default function DiningPage() {
             simple pleasures of island life.
           </p>
           <p className="mt-8 text-[15px] leading-relaxed text-ink/65">{dining.body}</p>
+          <Link
+            href="/dining/menu"
+            className="label mt-10 inline-flex items-center gap-3 bg-brand px-9 py-4 text-[11px] text-white transition-colors hover:bg-brand-dark"
+          >
+            View the Menu <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+          </Link>
         </Reveal>
       </section>
 
