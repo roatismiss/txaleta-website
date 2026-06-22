@@ -36,7 +36,7 @@ Here is the short answer — the one you can screenshot and send to whoever you'
 | **Best for** | Springs, volcano, activities, couples | White-sand beaches, chill, diving day-trips |
 | **Beaches** | Mostly dark volcanic sand; white sand at White Island, Mantigue & the Giant Clam Sanctuary | White-sand main-island beaches (Paliton, Salagdoong) |
 | **Diving** | Quiet reefs, the Sunken Cemetery, Mantigue sanctuary | Better access — Apo Island & Dumaguete muck nearby |
-| **Getting there** | Own airport at Mambajao; short flight from Cebu, or ferry via Jagna, Bohol | No commercial airport — fly to Dumaguete, then a short ferry |
+| **Getting there** | Own airport at Mambajao; near-daily Cebgo flights from Cebu (~55 min), or ferry via Jagna, Bohol | Own airport since Dec 2025 (Sunlight Air from Cebu, ~3-4x/week), or fly to Dumaguete + short ferry |
 | **Days needed** | 3 for highlights, 5-7 to relax | 3-4 |
 | **Nightlife** | Minimal, intentionally quiet | Minimal, a few San Juan bars |
 | **Touristy** | Low — "yet to be ravaged by mass tourism" | Low, slightly busier on the beach strip |
@@ -44,7 +44,7 @@ Here is the short answer — the one you can screenshot and send to whoever you'
 | **Where to stay** | Clifftop boutique, glamping, infinity pools | Beach guesthouses, backpacker hostels |
 | **Signature** | White Island sandbar + Sunken Cemetery | Old Enchanted Balete Tree + Cambugahay |
 
-**Choose Camiguin** for volcanic landscapes, hot springs, more to do and a genuinely quieter island, easy access via its own airport, and clifftop stays the smaller island can't match. **Choose Siquijor** if your top priority is white-sand main-island beaches, waterfall rope swings, easy diving day-trips to Apo Island and simpler beach lodgings.
+**Choose Camiguin** for volcanic landscapes, hot springs, more to do and a genuinely quieter island, easy, frequent flights into its own airport, and clifftop stays the smaller island can't match. **Choose Siquijor** if your top priority is white-sand main-island beaches, waterfall rope swings, easy diving day-trips to Apo Island and simpler beach lodgings.
 
 That's the verdict in two sentences. The rest of this guide is the *why* — and the honest case for each.
 
@@ -80,15 +80,15 @@ Siquijor is a three-to-four-day island, and it knows it. Camiguin gives you thre
 
 Both islands are blessedly low on tourists. But Camiguin is the one repeatedly described as "yet to be ravaged by mass tourism," and on the ground that holds. There's no real beach strip, no party row, no queue. You can have a stretch of black sand to yourself at golden hour. If your idea of luxury is *absence* — of crowds, of noise, of having to book a sunset spot — Camiguin edges it.
 
-### Better access — this is the deciding factor
+### Access — both easy now, with one Camiguin edge
 
 Here's the thing the beach photos never tell you. **Camiguin has its own airport.**
 
 Fly into Camiguin (Mambajao) and you're only a short hop from Cebu — around an hour in the air, with several Cebgo flights a week. You land, and your resort is **just minutes away**. We arrange a complimentary pickup; you could be in your room, or in the pool, before lunch. (For the full breakdown of routes and timings, see our guide on [how to get to Camiguin from Cebu](/guides/how-to-get-to-camiguin-from-cebu).)
 
-Siquijor has **no commercial airport**. To get there you fly to **Dumaguete** — on a different island — then take an **OceanJet ferry** across, roughly an hour, with frequent daily sailings. It's well run, but it's a flight *plus* a transfer-and-ferry, every single time. (A direct Sunlight Air route from Cebu to Siquijor has launched, but it's still limited — check current schedules before you plan around it.)
+Here's what has changed: **Siquijor now has its own airport too.** Since December 2025, Sunlight Air has flown direct from Cebu in about the same fifty-five minutes — currently three to four times a week — and you can still fly into **Dumaguete** and cross on the hourly **OceanJet ferry**. Reaching Siquijor is no longer the flight-plus-ferry chore it used to be.
 
-When you're comparing two islands that "feel like twins," the one you can fly straight into and reach your bed in minutes is not a small advantage. It's the whole difference between a travel day and a holiday day.
+The honest difference now is **frequency**: Cebgo serves Camiguin close to daily, while Sunlight Air flies Siquijor three or four times a week — so Camiguin is simply easier to slot into the dates you want, and you wake nearer the runway. But access is no longer *the* deciding factor it once was. Which throws the real question back where it belongs: not how you get there, but **where you wake up**.
 
 ### A level of stay Siquijor can't match
 
@@ -145,7 +145,7 @@ Siquijor is romantic in a barefoot, backpacker way. Camiguin can be romantic in 
 ## Frequently asked questions
 
 ### Is Camiguin or Siquijor better?
-Neither is universally "better" — they suit different travellers. Camiguin wins for volcanic landscapes, hot and cold springs, more things to do, a genuinely quieter island, easier access via its own airport, and a far higher level of stay. Siquijor wins for convenient white-sand main-island beaches, waterfall rope swings, lively backpacker culture and easy diving day-trips to Apo Island. Choose by your priority.
+Neither is universally "better" — they suit different travellers. Camiguin wins for volcanic landscapes, hot and cold springs, more things to do, a genuinely quieter island, more frequent flights into its own airport, and a far higher level of stay. Siquijor wins for convenient white-sand main-island beaches, waterfall rope swings, lively backpacker culture and easy diving day-trips to Apo Island. Choose by your priority.
 
 ### Can you visit both in one trip?
 Yes, and it's a great pairing. Give Siquijor three or four days, then move to Camiguin to slow down. Just know there's no direct ferry — you route via Bohol (a full day) or fly via Dumaguete or Cebu.
@@ -178,7 +178,7 @@ Very. Its slow pace, clifftop infinity pools, ocean-view rooms, cliff-edge glamp
 Because Camiguin is a volcanic island — the "Island Born of Fire." Its main ring-road beaches are dark, volcanic sand. Genuine white sand is found at White Island (a shifting sandbar), Mantigue Island and the Cantaan Giant Clam Sanctuary, all a short banca ride away.
 
 ### Does Camiguin have an airport?
-Yes — Camiguin (Mambajao) Airport, with several Cebgo flights a week from Cebu (about an hour in the air). This is a major advantage over Siquijor, which has no commercial airport and is reached via a flight to Dumaguete plus a ferry.
+Yes — Camiguin (Mambajao) Airport, with near-daily Cebgo flights from Cebu (about fifty-five minutes). Siquijor now has its own airport too, opened to commercial flights in December 2025 (Sunlight Air from Cebu, about three to four times a week); you can also still fly to Dumaguete and take the ferry. Both are easy to reach — Camiguin simply has more frequent flights.
 
 ## Come home to Camiguin
 
@@ -249,7 +249,7 @@ Come for the views. Stay for the feeling. Welcome home.
           "name": "Is Camiguin or Siquijor better?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Neither is universally better — they suit different travellers. Camiguin wins for volcanic landscapes, hot and cold springs, more things to do, a genuinely quieter island, easier access via its own airport, and a higher level of stay. Siquijor wins for convenient white-sand main-island beaches, waterfall rope swings, lively backpacker culture and easy diving day-trips to Apo Island. Choose by your priority."
+            "text": "Neither is universally better — they suit different travellers. Camiguin wins for volcanic landscapes, hot and cold springs, more things to do, a genuinely quieter island, more frequent flights into its own airport, and a higher level of stay. Siquijor wins for convenient white-sand main-island beaches, waterfall rope swings, lively backpacker culture and easy diving day-trips to Apo Island. Choose by your priority."
           }
         },
         {
@@ -337,7 +337,7 @@ Come for the views. Stay for the feeling. Welcome home.
           "name": "Does Camiguin have an airport?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — Camiguin (Mambajao) Airport, with several Cebgo flights a week from Cebu (about an hour in the air). This is a major advantage over Siquijor, which has no commercial airport and is reached via a flight to Dumaguete plus a ferry."
+            "text": "Yes — Camiguin (Mambajao) Airport, with near-daily Cebgo flights from Cebu (about fifty-five minutes). Siquijor now has its own airport too, opened to commercial flights in December 2025 (Sunlight Air from Cebu, about three to four times a week), plus the option of flying to Dumaguete and taking the ferry. Both are easy to reach — Camiguin simply has more frequent flights."
           }
         }
       ]
