@@ -654,6 +654,7 @@ const diningMega: MegaMenu = {
     "Fresh Filipino cooking at the water's edge — breakfast with the tide, long lunches, and dinners that last past dark.",
   viewAll: { label: "See the Full Story", href: "/dining" },
   links: [
+    { label: "View the Menu", href: "/dining/menu" },
     { label: "Breakfast & Coffee", href: "/dining#morning" },
     { label: "Filipino Kitchen", href: "/dining#all-day" },
     { label: "Evening Menu", href: "/dining#evening" },
