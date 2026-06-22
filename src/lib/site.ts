@@ -711,6 +711,7 @@ export const nav: NavItem[] = [
   { label: "Accommodation", href: "/accommodation", mega: accommodationMega },
   { label: "Dining", href: "/dining", mega: diningMega },
   { label: "Experiences", href: "/experiences", mega: experiencesMega },
+  { label: "Guides", href: "/guides" },
   { label: "About", href: "/about" },
   { label: "Gallery", href: "/#gallery" },
   { label: "Contact", href: "/#contact" },
