@@ -8,7 +8,7 @@ import {
   type PanInfo,
   type Variants,
 } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Volume2, VolumeX } from "lucide-react";
 import {
   menuMeta,
   menuPages,
@@ -170,17 +170,90 @@ export function MenuBook() {
     return () => io.disconnect();
   }, []);
 
+  // ── Page-flip sound (synthesised — ships no audio file) ──
+  const audioRef = useRef<AudioContext | null>(null);
+  const [sound, setSound] = useState(true);
+
+  // Release the AudioContext when the book unmounts.
+  useEffect(() => {
+    const ctx = audioRef;
+    return () => {
+      ctx.current?.close().catch(() => {});
+    };
+  }, []);
+
+  const toggleSound = useCallback(() => setSound((s) => !s), []);
+
+  // A soft paper "whoosh": a short burst of decaying noise swept through a
+  // band-pass filter. Web Audio API, so no asset to ship; it starts on the
+  // first turn (a user gesture, so the autoplay policy is satisfied).
+  const playFlip = useCallback(
+    (direction: number) => {
+      if (!sound) return;
+      try {
+        let ctx = audioRef.current;
+        if (!ctx) {
+          const AC =
+            window.AudioContext ||
+            (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+          if (!AC) return;
+          ctx = new AC();
+          audioRef.current = ctx;
+        }
+        if (ctx.state === "suspended") void ctx.resume();
+        const now = ctx.currentTime;
+        const dur = 0.22;
+        const buffer = ctx.createBuffer(1, Math.floor(ctx.sampleRate * dur), ctx.sampleRate);
+        const data = buffer.getChannelData(0);
+        for (let i = 0; i < data.length; i++) {
+          data[i] = (Math.random() * 2 - 1) * (1 - i / data.length); // decaying noise
+        }
+        const src = ctx.createBufferSource();
+        src.buffer = buffer;
+        const filter = ctx.createBiquadFilter();
+        filter.type = "bandpass";
+        filter.Q.value = 0.8;
+        // Slightly brighter forward, softer back — a subtle directional cue.
+        filter.frequency.setValueAtTime(direction >= 0 ? 1900 : 1500, now);
+        filter.frequency.exponentialRampToValueAtTime(direction >= 0 ? 620 : 520, now + dur);
+        const gain = ctx.createGain();
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.exponentialRampToValueAtTime(0.12, now + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + dur);
+        src.connect(filter).connect(gain).connect(ctx.destination);
+        src.start(now);
+        src.stop(now + dur);
+      } catch {
+        /* audio is a nice-to-have — never let it break navigation */
+      }
+    },
+    [sound],
+  );
+
   const paginate = useCallback((target: number, direction: number) => {
     const clamped = Math.max(0, Math.min(TOTAL - 1, target));
     setState(([cur]) => (clamped === cur ? [cur, direction] : [clamped, direction]));
   }, []);
 
-  const next = useCallback(() => paginate(index + 1, 1), [index, paginate]);
-  const prev = useCallback(() => paginate(index - 1, -1), [index, paginate]);
+  const next = useCallback(() => {
+    if (index >= TOTAL - 1) return;
+    playFlip(1);
+    paginate(index + 1, 1);
+  }, [index, paginate, playFlip]);
+  const prev = useCallback(() => {
+    if (index <= 0) return;
+    playFlip(-1);
+    paginate(index - 1, -1);
+  }, [index, paginate, playFlip]);
   // Jump to a content page (1-based into menuPages).
   const goTo = useCallback(
-    (pageNo: number) => paginate(pageNo, pageNo > index ? 1 : -1),
-    [index, paginate],
+    (pageNo: number) => {
+      if (pageNo === index) return;
+      const d = pageNo > index ? 1 : -1;
+      playFlip(d);
+      paginate(pageNo, d);
+    },
+    [index, paginate, playFlip],
   );
 
   // Keyboard: ← / → turn pages (ignore while typing in a field).
@@ -312,7 +385,7 @@ export function MenuBook() {
       </div>
 
       {/* ── Bottom control bar (all sizes) ── */}
-      <div className="mt-7 flex items-center justify-center gap-6">
+      <div className="relative mt-7 flex items-center justify-center gap-6">
         <button
           type="button"
           onClick={prev}
@@ -333,6 +406,22 @@ export function MenuBook() {
           className="flex items-center justify-center rounded-full border border-ink/15 p-2.5 text-ink/60 transition-colors hover:border-brand hover:text-brand disabled:pointer-events-none disabled:opacity-30"
         >
           <ChevronRight className="h-5 w-5" strokeWidth={1.5} />
+        </button>
+
+        {/* Page-turn sound toggle — pinned right so the pager stays centered */}
+        <button
+          type="button"
+          onClick={toggleSound}
+          aria-label={sound ? "Mute page-turn sound" : "Unmute page-turn sound"}
+          aria-pressed={sound}
+          title={sound ? "Sound on" : "Sound off"}
+          className="absolute right-0 flex items-center justify-center rounded-full border border-ink/15 p-2.5 text-ink/50 transition-colors hover:border-brand hover:text-brand"
+        >
+          {sound ? (
+            <Volume2 className="h-4 w-4" strokeWidth={1.5} />
+          ) : (
+            <VolumeX className="h-4 w-4" strokeWidth={1.5} />
+          )}
         </button>
       </div>
     </div>
