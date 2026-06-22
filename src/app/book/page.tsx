@@ -10,6 +10,7 @@ import { site, bookingProvider } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Book Your Stay",
   description: `Request a booking at ${site.name} — seaview suites, ocean-view glamping and garden rooms on Camiguin Island.`,
+  alternates: { canonical: "/book" },
 };
 
 function first(v: string | string[] | undefined): string | undefined {

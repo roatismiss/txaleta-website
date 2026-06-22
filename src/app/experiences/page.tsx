@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Experiences",
   description:
     "Island boat tours, Mount Hibok-Hibok treks, jet ski and scooter & vehicle rentals, and a guide to Camiguin — White Island, the Sunken Cemetery, cold springs and waterfalls, from Txaleta de Camiguin.",
+  alternates: { canonical: "/experiences" },
 };
 
 const island = [

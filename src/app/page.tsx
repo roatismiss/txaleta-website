@@ -9,7 +9,7 @@ import { Seamless } from "@/components/sections/seamless";
 import { Gallery } from "@/components/sections/gallery";
 import { Testimonials } from "@/components/sections/testimonials";
 import { BrandMoment } from "@/components/sections/brand-moment";
-import { site } from "@/lib/site";
+import { site, rooms } from "@/lib/site";
 
 // Refresh the homepage hourly (ISR) so the Accommodation section picks up live
 // Cloudbeds rooms/photos without a Cloudbeds call on every visit.
@@ -64,12 +64,28 @@ function JsonLd() {
       { "@type": "LocationFeatureSpecification", name: "Free Parking", value: true },
       { "@type": "LocationFeatureSpecification", name: "Restaurant", value: true },
     ],
+    // One HotelRoom per room type, each pointing at /book — makes the room
+    // types eligible for hotel rich results. (geo, hasMap, check-in times and
+    // aggregateRating are added once we have the Maps pin, the real check-in/out
+    // hours, and real on-site reviews — see the SEO plan.)
+    containsPlace: rooms.map((room) => ({
+      "@type": "HotelRoom",
+      name: room.name,
+      description: room.description,
+      occupancy: { "@type": "QuantitativeValue", maxValue: room.maxOccupancy },
+      amenityFeature: room.amenities.map((name) => ({
+        "@type": "LocationFeatureSpecification",
+        name,
+        value: true,
+      })),
+      potentialAction: { "@type": "ReserveAction", target: `${site.url}/book` },
+    })),
     sameAs: [site.social.facebook, site.social.instagram, site.social.tiktok],
   };
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }}
     />
   );
 }
