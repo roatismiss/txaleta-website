@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ChatbotEmbed } from "@/components/chatbot-embed";
+import { AnalyticsBeacon } from "@/components/analytics-beacon";
 import { SplashScreen } from "@/components/splash-screen";
 import { MenuProvider } from "@/contexts/menu-context";
 import { Analytics } from "@vercel/analytics/next";
@@ -91,6 +92,9 @@ export default function RootLayout({
               questions and captures leads into the CRM (it never creates
               bookings), so it's safe alongside the Cloudbeds engine. */}
           <ChatbotEmbed />
+          {/* First-party pageview beacon → CloudReef /analytics (self-owned, no
+              Vercel drain). Fires on every client route change. */}
+          <AnalyticsBeacon />
           {/* NOTE: the CloudReef promo popup (PromoPopup / promo-popup.tsx) is part
               of the not-yet-committed promotions feature and is intentionally left
               out of this Cloudbeds commit. Re-add it with that feature when
