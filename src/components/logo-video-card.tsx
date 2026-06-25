@@ -54,13 +54,13 @@ export function LogoVideoCard({
   }, [trigger]);
 
   const card =
-    "block aspect-[4/3] overflow-hidden rounded-2xl bg-black shadow-[0_24px_60px_-24px_rgba(11,28,34,0.55)] ring-1 ring-ink/10";
+    "block aspect-[1440/1352] overflow-hidden rounded-2xl bg-black shadow-[0_24px_60px_-24px_rgba(11,28,34,0.55)] ring-1 ring-ink/10";
 
   const video = (
     <video
       ref={videoRef}
-      src="/txaleta-logo.mp4"
-      poster="/images/brand/logo-reveal.webp"
+      src="/txaleta-logo-reveal.mp4"
+      poster="/images/brand/logo-reveal-2.webp"
       muted
       playsInline
       preload="metadata"

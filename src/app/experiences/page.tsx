@@ -10,12 +10,12 @@ import { BananaGrove, PaperGrain, PalmCorner, RattanWeave } from "@/components/b
 export const metadata: Metadata = {
   title: "Experiences",
   description:
-    "Island boat tours, Mount Hibok-Hibok treks, jet ski and scooter & vehicle rentals, and a guide to Camiguin — White Island, the Sunken Cemetery, cold springs and waterfalls, from Txaleta de Camiguin.",
+    "Island boat tours, Mount Hibok-Hibok treks, jet ski and scooter & vehicle rentals, and a guide to Camiguin — White Island, the sea-turtle sanctuary of Mantigue Island, the Sunken Cemetery, cold springs and waterfalls, from Txaleta de Camiguin.",
 };
 
 const island = [
   { name: "White Island", note: "A bare crescent of white sand off Mambajao, reached by banca at first light — no trees, no shade, just the sandbar, the reef and the volcano across the water." },
-  { name: "Mantigue Island", note: "A green islet ringed by a marine sanctuary, twenty minutes out. Snorkel the drop-off, then lunch in the shade of the trees." },
+  { name: "Mantigue Island", note: "A green islet twenty minutes out, ringed by a protected marine sanctuary that shelters resident sea turtles. Snorkel the drop-off where they glide over the coral, then lunch in the shade of the trees." },
   { name: "The Sunken Cemetery", note: "A single white cross stands over the town the 1871 eruption pulled into the sea — best met by kayak as the sun goes down." },
   { name: "Katibawasan Falls", note: "Seventy metres of water falling in one clean ribbon into a cold, fern-ringed pool at the foot of the highlands." },
   { name: "Cold Springs & Soda Pool", note: "Sto. Niño's spring-fed pools run clear and cold; nearby, the Bura pool fizzes with natural soda water you can swim in." },

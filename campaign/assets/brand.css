@@ -1,0 +1,53 @@
+/* ============================================================================
+   TXALETA 2026 OUTDOOR CAMPAIGN — shared brand system
+   "Come Home to Txaleta"
+   Fonts + color tokens pulled 1:1 from the live site (globals.css / layout.tsx)
+   ============================================================================ */
+
+@font-face { font-family:'Lato'; font-style:normal; font-weight:300; font-display:block; src:url(fonts/lato-300.ttf) format('truetype'); }
+@font-face { font-family:'Lato'; font-style:normal; font-weight:400; font-display:block; src:url(fonts/lato-400.ttf) format('truetype'); }
+@font-face { font-family:'Lato'; font-style:normal; font-weight:700; font-display:block; src:url(fonts/lato-700.ttf) format('truetype'); }
+@font-face { font-family:'Playfair Display'; font-style:normal; font-weight:400; font-display:block; src:url(fonts/playfair-400.ttf) format('truetype'); }
+@font-face { font-family:'Playfair Display'; font-style:normal; font-weight:600; font-display:block; src:url(fonts/playfair-600.ttf) format('truetype'); }
+@font-face { font-family:'Playfair Display'; font-style:normal; font-weight:700; font-display:block; src:url(fonts/playfair-700.ttf) format('truetype'); }
+@font-face { font-family:'Playfair Display'; font-style:italic; font-weight:400; font-display:block; src:url(fonts/playfair-italic-400.ttf) format('truetype'); }
+
+:root{
+  --clay:#9c6b66;        /* Heritage Clay — primary */
+  --clay-dark:#7e534f;
+  --coconut:#f4efe3;     /* Coconut White — base */
+  --coconut-bright:#fbf7ef;
+  --palm:#2c3a2c;        /* Palm Leaf Green (deep) */
+  --palm-soft:#3a4a37;
+  --palm-mid:#6f8a6a;
+  --mango:#e3a53e;       /* Sunset Mango — accent */
+  --mango-dark:#c6862a;
+  --blush:#c4848c;
+  --logo-red:#c0392b;    /* the brand "X" accent */
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; -webkit-font-smoothing:antialiased; text-rendering:geometricPrecision; }
+html,body{ background:#000; }
+
+.serif{ font-family:'Playfair Display', Georgia, serif; }
+.sans{ font-family:'Lato', system-ui, sans-serif; }
+
+/* ---- shared atoms reused across every billboard ---------------------------- */
+
+/* Wordmark typeset to match logo-txaleta-mark.png (TXALETA with a clay/red X) */
+.wordmark{ font-family:'Playfair Display',serif; font-weight:700; color:var(--coconut);
+  letter-spacing:.06em; line-height:1; }
+.wordmark .x{ color:var(--logo-red); }
+.wordmark-sub{ font-family:'Lato',sans-serif; font-weight:300; color:var(--coconut);
+  letter-spacing:.42em; text-transform:uppercase; opacity:.92; }
+
+.kicker{ font-family:'Lato',sans-serif; font-weight:400; text-transform:uppercase;
+  letter-spacing:.46em; color:var(--coconut); }
+
+.signature{ font-family:'Playfair Display',serif; font-style:italic; color:var(--coconut); }
+
+/* thin rule with mango center node */
+.rule{ display:flex; align-items:center; justify-content:center; gap:28px; }
+.rule .line{ height:2px; background:linear-gradient(90deg,transparent,var(--coconut)); opacity:.7; }
+.rule .line.r{ background:linear-gradient(90deg,var(--coconut),transparent); }
+.rule .dot{ width:12px; height:12px; transform:rotate(45deg); background:var(--mango); flex:none; }

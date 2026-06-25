@@ -138,7 +138,7 @@ The catch is timing: the **Jagna-Camiguin RORO runs limited days**, so pre-book 
 
 This is where Camiguin doesn't just compete — it pulls clear. The whole island runs at the pace of a long, slow morning, and the right base turns that into something quietly unforgettable.
 
-Picture it. Sunrise from the [Ocean View Glamping](/book?room=ocean-view-glamping) deck, the canvas open to the Bohol Sea. *Almusal sa Bahay*, our heritage breakfast, by the water — tsokolate, pan de sal con keso de bola, longganisa, Camiguin mango. *Sunrise Saludo* yoga on the cliff edge. A banca to White Island, then *La Merienda*, a sunset picnic, with a Spanish latte and the volcano going gold behind you. *Tahimik Nights* under more stars than a city traveller has seen in years. For couples, the [Premier Seaview Suite](/accommodation#premier-seaview-suite) puts White Island on the water beyond your own private terrace through floor-to-ceiling glass.
+Picture it. Sunrise from the [Ocean View Glamping](/book?room=ocean-view-glamping) deck, the canvas open to the Bohol Sea. *Almusal sa Bahay*, our heritage breakfast, by the water — tsokolate, pan de sal con keso de bola, garlic adobo, Camiguin mango. *Sunrise Saludo* yoga on the cliff edge. A banca to White Island, then *La Merienda*, a sunset picnic, with a Spanish latte and the volcano going gold behind you. *Tahimik Nights* under more stars than a city traveller has seen in years. For couples, the [Premier Seaview Suite](/accommodation#premier-seaview-suite) puts White Island on the water beyond your own private terrace through floor-to-ceiling glass.
 
 Siquijor is romantic in a barefoot, backpacker way. Camiguin can be romantic in a *come-home-to-it* way. For honeymoons, that's the difference that lingers.
 

@@ -73,7 +73,7 @@ Drop your bags. Do not unpack yet. The [infinity pool](/accommodation) is open f
 
 **Late afternoon — sunset kayak at the Sunken Cemetery.** Camiguin's most famous landmark is a large white cross standing alone in the sea, marking a town the 1871 eruption pulled beneath the water. Most visitors photograph it from the shore. We send you out on the water instead — a calm sunset paddle as the light goes gold and then rose behind the cross. It is haunting and beautiful and utterly Camiguin, and it is the right way to understand this island before you do anything else: it was made, and remade, by its volcanoes.
 
-**Dinner.** Back at the cliff, our [Filipino-Spanish kitchen](/dining) is open — to our guests and to walk-in visitors alike. Start with tapas: gambas al ajillo, croquetas, a plate of pork sisig. Then the paella, which is the reason people come back. A Spanish latte or a sunset cocktail to finish. "Filipino Heart, Spanish Soul" is not a slogan we made up for a wall; it is genuinely how we cook and how we host.
+**Dinner.** Back at the cliff, our [Filipino-Spanish kitchen](/dining) is open — to our guests and to walk-in visitors alike. Start with tapas: gambas al ajillo, croquetas, a plate of pork sisig. Then the paella, which is the reason people come back. A Spanish latte or a moonlight cocktail to finish. "Filipino Heart, Spanish Soul" is not a slogan we made up for a wall; it is genuinely how we cook and how we host.
 
 **Where you sleep:** in one of our [fourteen ocean-view rooms](/accommodation), the sea murmuring below the cliff. If it is your first night, ask for the [Premier Seaview Suite](/book?room=premier-seaview-suite) — king bed, floor-to-ceiling glass, a private terrace, and White Island sitting out there on the water, waiting for you to reach it at dawn.
 
@@ -161,7 +161,7 @@ Here is the single decision that makes this whole itinerary work: **stay in one 
 
 This is, frankly, the one thing a travel blog cannot offer you: a *base*. We are not just a stop on the map — we are [Txaleta de Camiguin](/about), a family-owned boutique resort of fourteen rooms on a Mambajao clifftop, between the volcano and the Bohol Sea. The name "Txaleta" comes from the Spanish word for a small home, a cottage, and that is exactly what we built: more than a resort, a place to belong.
 
-Every day in this plan ends here on purpose. Breakfast by the water is part of every morning — our **Almusal sa Bahay** heritage table of tsokolate, pan de sal con keso de bola, longganisa, and sweet Camiguin mango. The infinity pool is open from first light. The hosts who pour your coffee are the same people who arranged your banca and checked your tide times. That continuity *is* the luxury — luxury without pretense.
+Every day in this plan ends here on purpose. Breakfast by the water is part of every morning — our **Almusal sa Bahay** heritage table of tsokolate, pan de sal con keso de bola, garlic adobo, and sweet Camiguin mango. The infinity pool is open from first light. The hosts who pour your coffee are the same people who arranged your banca and checked your tide times. That continuity *is* the luxury — luxury without pretense.
 
 Ready to lock it in? [Book direct with us](/book) — it lets us arrange your airport pick-up, boats, and rentals before you even land.
 

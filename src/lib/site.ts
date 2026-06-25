@@ -200,7 +200,7 @@ export const dining = {
   heading: "Dining at Txaleta",
   subheading: "One of Camiguin's Most Memorable Dining Experiences",
   body:
-    "Perched on a scenic clifftop overlooking the sea, Txaleta offers a unique dining experience that brings together Filipino warmth, Spanish heritage, breathtaking ocean views, and thoughtfully prepared cuisine. Whether you're looking for breakfast in Camiguin, a leisurely lunch with a view, sunset cocktails, or dinner under the stars, our restaurant welcomes both resort guests and walk-in visitors seeking great food and unforgettable island hospitality.",
+    "Perched on a scenic clifftop overlooking the sea, Txaleta offers a unique dining experience that brings together Filipino warmth, Spanish heritage, breathtaking ocean views, and thoughtfully prepared cuisine. Whether you're looking for breakfast in Camiguin, a leisurely lunch with a view, moonlight cocktails, or dinner under the stars, our restaurant welcomes both resort guests and walk-in visitors seeking great food and unforgettable island hospitality.",
   images: [
     "/images/dining/food_txaleta.webp",
     "/images/dining/breakfest_txaleta.webp",
@@ -306,7 +306,7 @@ export const experiences: Experience[] = [
   {
     title: "Out to the Sandbars",
     description:
-      "A banca carries you past quiet coves to White Island's bare white spit and the reefs below, where the Bohol Sea turns clear over coral and the island's sheltered giant clams.",
+      "A private speedboat carries you past quiet coves to White Island's bare white spit and the reefs below, where the Bohol Sea turns clear over coral and the island's sheltered giant clams.",
     image: "/images/experiences/txaleta_private_boat.webp",
     hoverImage: "/images/experiences/Txaleta_private_boat_interior.webp",
   },
@@ -470,7 +470,7 @@ export const signature = {
       name: "Almusal sa Bahay",
       tagline: "Family Heritage Breakfast",
       body:
-        "A slow morning ritual served in-room or al fresco — heirloom Filipino-Spanish plates like tsokolate-e, pan de sal con keso de bola, longganisa, and fresh Camiguin mango. Comfort food, storytelling, and shared moments.",
+        "A slow morning ritual served in-room or al fresco — heirloom Filipino-Spanish plates like tsokolate-e, pan de sal con keso de bola, garlic adobo, and fresh Camiguin mango. Comfort food, storytelling, and shared moments.",
       image: "/images/dining/breakfest_txaleta.webp",
     },
     {

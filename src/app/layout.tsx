@@ -60,6 +60,13 @@ export const metadata: Metadata = {
     description: site.description,
     images: [site.hero.poster],
   },
+  // Google Search Console verification. Set GOOGLE_SITE_VERIFICATION in the
+  // Vercel env (the token from Search Console → "HTML tag" method) and the
+  // <meta name="google-site-verification"> tag is emitted automatically. Until
+  // it's set, nothing is rendered — safe to ship.
+  ...(process.env.GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }
+    : {}),
   robots: { index: true, follow: true },
 };
 

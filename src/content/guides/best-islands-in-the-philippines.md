@@ -136,7 +136,7 @@ A few ways to come home to Camiguin:
 - **[Premier Seaview Suite](/accommodation#premier-seaview-suite)** — a king bed, floor-to-ceiling glass, a private terrace, and White Island sitting right out there on the water.
 - **[Deluxe Garden Room](/accommodation#deluxe-garden-room)** — a double bed wrapped in tropical garden, cooler and greener, for travellers who want the trees over the tide.
 
-Mornings here have their own rhythm. *Almusal sa Bahay*, our heritage breakfast — *tsokolate*, *pan de sal* con *keso de bola*, *longganisa*, and Camiguin mango — on the water. *Sunrise Saludo*, gentle cliffside yoga as the sun comes up. *La Merienda* at golden hour. And when the day is done, *Tahimik Nights* under more stars than a city ever shows you. The kitchen's paella is the house favourite; the *gambas al ajillo* and *croquetas* are how the evening should start. (A 5% service charge applies; see the full [menu](/dining/menu).)
+Mornings here have their own rhythm. *Almusal sa Bahay*, our heritage breakfast — *tsokolate*, *pan de sal* con *keso de bola*, *garlic adobo*, and Camiguin mango — on the water. *Sunrise Saludo*, gentle cliffside yoga as the sun comes up. *La Merienda* at golden hour. And when the day is done, *Tahimik Nights* under more stars than a city ever shows you. The kitchen's paella is the house favourite; the *gambas al ajillo* and *croquetas* are how the evening should start. (A 5% service charge applies; see the full [menu](/dining/menu).)
 
 ## Frequently asked questions
 

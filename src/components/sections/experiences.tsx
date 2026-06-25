@@ -17,7 +17,7 @@ export function Experiences() {
             Four Ways to Meet the Island
           </h2>
           <p className="mt-6 text-[15px] leading-relaxed text-ink/65">
-            Camiguin gives up its best on its own terms — by banca, by ridgeline, by the
+            Camiguin gives up its best on its own terms — by speedboat, by ridgeline, by the
             slow turn of a coastal road. Choose how you go.
           </p>
         </Reveal>

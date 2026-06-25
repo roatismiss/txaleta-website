@@ -73,7 +73,7 @@ export default function MenuPage() {
           </h2>
           <p className="mx-auto mt-6 max-w-md text-[15px] leading-relaxed text-ink/65">
             The café welcomes resort guests and walk-in visitors alike — breakfast by the infinity
-            pool, long lunches, sunset cocktails and dinners that last past dark. Message us to
+            pool, long lunches, moonlight cocktails and dinners that last past dark. Message us to
             reserve a table or order to your terrace.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">

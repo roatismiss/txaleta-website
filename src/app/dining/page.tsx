@@ -212,7 +212,7 @@ export default function DiningPage() {
               A Table Worth Staying At
             </h2>
             <p className="mt-6 text-[15px] leading-relaxed text-white/60">
-              Breakfast in Camiguin, a leisurely lunch with a view, sunset cocktails, or dinner
+              Breakfast in Camiguin, a leisurely lunch with a view, moonlight cocktails, or dinner
               under the stars — the café welcomes resort guests and walk-in visitors alike.
             </p>
           </Reveal>
