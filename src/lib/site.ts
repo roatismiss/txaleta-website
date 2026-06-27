@@ -502,7 +502,7 @@ export const signature = {
       name: "Sunrise Saludo",
       tagline: "Cliffside Yoga at Dawn",
       body:
-        "Gentle, breath-centered yoga overlooking the sea at sunrise, set to birdsong and the rhythm of Camiguin's early light. Designed for all levels — a calm, grounded way to begin the day.",
+        "Gentle, breath-centered yoga overlooking the sea at sunrise — with Mantigue Island on the horizon, visible right from Txaleta and framed by birdsong and the rhythm of Camiguin's early light. Designed for all levels — a calm, grounded way to begin the day.",
       image: "/images/resort/terrace_view.webp",
     },
     {
@@ -523,28 +523,28 @@ export const signature = {
       name: "La Merienda",
       tagline: "Sunset Picnic",
       body:
-        "A curated seaside or garden picnic with ensaymada, churros con tsokolate, fresh coconut juice or sangria — blankets, woven mats, and a reflection journal included. Made for golden-hour bonding.",
+        "A curated seaside or garden picnic — or a barefoot spread on White Island's powder-white sandbar — with ensaymada, churros con tsokolate, fresh coconut juice or sangria, blankets, woven mats, and a reflection journal included. Made for golden-hour bonding.",
       image: "/images/resort/txaleta_sand.webp",
     },
     {
       name: "Camiguin Roots",
       tagline: "Island Heritage Tour",
       body:
-        "A soulful exploration of Camiguin's old churches, springs, and ancestral homes, guided by local storytellers sharing Filipino-Spanish history. Depth, learning, and real cultural connection.",
+        "A soulful exploration of Camiguin's heritage — the Old Spanish Church Ruins, the Sunken Cemetery, ancestral homes, and the slopes of Mt. Hibok-Hibok — guided by local storytellers sharing Filipino-Spanish history. Depth, learning, and real cultural connection.",
       image: "/images/resort/txaleta_rice_field.webp",
     },
     {
       name: "Pamilya sa Palayok",
       tagline: "Family Cooking Session",
       body:
-        "An interactive kitchen experience — cook paella filipina, rellenong bangus, or bibingka alongside a local chef and learn the stories behind each dish. Joyful bonding through food and shared tradition.",
+        "An interactive kitchen experience at Txaleta's restaurant — fast becoming one of the best up-and-coming tables in Camiguin — where you cook paella filipina, rellenong bangus, or bibingka alongside a local chef and learn the stories behind each dish. Joyful bonding through food and shared tradition.",
       image: "/images/dining/food_txaleta.webp",
     },
     {
       name: "Tahimik Nights",
       tagline: "Digital Detox & Stargazing",
       body:
-        "A tech-free night of oil lamps, stars, and local myths — cacao or salabat in hand, slow music and gentle storytelling under the Camiguin sky. A soul-soothing break from the noise.",
+        "After an evening swim in Ardent Hot Springs, settle into a tech-free night of oil lamps, stars, and local myths — cacao or salabat in hand, slow music and gentle storytelling under the Camiguin sky. A soul-soothing break from the noise.",
       image: "/images/resort/night_view.webp",
     },
   ] as SignatureExperience[],
