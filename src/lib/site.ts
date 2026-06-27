@@ -194,6 +194,31 @@ export const rooms: Room[] = [
   },
 ];
 
+// Marketing display order for the Accommodation page + homepage section. Names
+// are matched case-insensitively against the LIVE Cloudbeds room-type names —
+// the ones listed here surface first, in this order; everything else follows by
+// ascending rate. Lets the client feature rooms WITHOUT a CloudReef redeploy.
+// (Use the exact Cloudbeds names, e.g. "Glamping Dome Tent", not "Glamping Tent".)
+export const featuredRoomOrder: string[] = [
+  "Glamping Dome Tent",
+  "Balcony Seaview Room",
+  "Villa Room with Shared Lanai",
+];
+
+// The small uppercase label above each room name on the cards. Price is
+// intentionally NOT shown on the marketing cards — the exact, live rate lives in
+// the Cloudbeds booking engine at /book. Keyed by the live Cloudbeds room-type
+// name (whitespace-insensitive); unlisted rooms use `roomKickerFallback`.
+export const roomKickers: Record<string, string> = {
+  "Glamping Dome Tent": "Canvas on the Cliff",
+  "Balcony Seaview Room": "Sea from the Balcony",
+  "Villa Room with Shared Lanai": "Shared Lanai Living",
+  "Premier Seaview Room": "Sea at Eye Level",
+  "Garden & Pool View Family Room": "Garden & Pool",
+  "Ocean View Family Nook Lower deck": "Ocean View Nook",
+};
+export const roomKickerFallback = "Oceanfront Stay";
+
 export const dining = {
   // Short kicker for the homepage section; the long line lives in `subheading`.
   kicker: "Filipino Heart, Spanish Soul",

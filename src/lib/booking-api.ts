@@ -5,7 +5,13 @@
 // come from src/lib/site.ts.
 // ============================================================================
 
-import { site, rooms as fallbackRooms } from "@/lib/site";
+import {
+  site,
+  rooms as fallbackRooms,
+  featuredRoomOrder,
+  roomKickers,
+  roomKickerFallback,
+} from "@/lib/site";
 
 const BASE = site.cloudreef.baseUrl;
 const KEY = site.cloudreef.widgetKey;
@@ -135,19 +141,43 @@ function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
+/** Whitespace-insensitive, lower-cased key so live Cloudbeds names (which can
+ *  carry stray double spaces) still match the site.ts maps. */
+function normName(s: string): string {
+  return s.toLowerCase().replace(/\s+/g, " ").trim();
+}
+
+/** The non-price marketing kicker for a live room (editable in site.ts). */
+function kickerFor(name: string): string {
+  const target = normName(name);
+  for (const [k, v] of Object.entries(roomKickers)) {
+    if (normName(k) === target) return v;
+  }
+  return roomKickerFallback;
+}
+
+/** Featured rooms first (in `featuredRoomOrder`), the rest keep their incoming
+ *  order. Stable sort, so non-featured stay in the API's ascending-rate order. */
+function sortFeatured(list: DisplayRoom[]): DisplayRoom[] {
+  const order = featuredRoomOrder.map(normName);
+  const rank = (name: string) => {
+    const i = order.indexOf(normName(name));
+    return i === -1 ? Number.MAX_SAFE_INTEGER : i;
+  };
+  return [...list].sort((a, b) => rank(a.name) - rank(b.name));
+}
+
 export async function fetchDisplayRooms(): Promise<DisplayRoom[]> {
   try {
     const data = await fetchRooms();
-    const cur = data.currency || "PHP";
     const types = (data.roomTypes ?? []).filter((t) => t.images && t.images.length > 0);
     if (!types.length) throw new Error("no cloudbeds rooms");
-    return types.map((t) => ({
+    // Price is intentionally NOT shown on the cards — the exact live rate lives in
+    // the Cloudbeds booking engine at /book. The kicker is a non-price label.
+    const mapped: DisplayRoom[] = types.map((t) => ({
       slug: slugify(t.name),
       name: t.name,
-      kicker:
-        t.base_rate > 0
-          ? `From ${cur} ${Math.round(t.base_rate).toLocaleString()} / night`
-          : "Oceanfront Stay",
+      kicker: kickerFor(t.name),
       description:
         t.description ||
         "A comfortable room at Txaleta de Camiguin, moments from the Bohol Sea.",
@@ -156,17 +186,20 @@ export async function fetchDisplayRooms(): Promise<DisplayRoom[]> {
       cover: t.images[0],
       maxOccupancy: t.max_occupancy,
     }));
+    return sortFeatured(mapped);
   } catch {
-    return fallbackRooms.map((r) => ({
-      slug: r.slug,
-      name: r.name,
-      kicker: r.kicker,
-      description: r.description,
-      amenities: r.amenities,
-      images: r.images,
-      cover: r.cover,
-      maxOccupancy: r.maxOccupancy,
-    }));
+    return sortFeatured(
+      fallbackRooms.map((r) => ({
+        slug: r.slug,
+        name: r.name,
+        kicker: r.kicker,
+        description: r.description,
+        amenities: r.amenities,
+        images: r.images,
+        cover: r.cover,
+        maxOccupancy: r.maxOccupancy,
+      }))
+    );
   }
 }
 
