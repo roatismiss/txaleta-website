@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, type Variants } from "framer-motion";
-import { Search, Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { FacebookIcon, InstagramIcon, TikTokIcon } from "./icons";
 import { MegaPanel } from "./mega-menu";
 import { Logo } from "./logo";
@@ -182,7 +182,6 @@ export function Navbar() {
               <Phone className="h-3.5 w-3.5" strokeWidth={1.5} /> {site.contact.phone}
             </a>
             <div className="flex items-center gap-5">
-              <Link href="/#contact" className="hidden label text-[10px] text-ink/60 transition-colors hover:text-brand sm:inline">Contact</Link>
               <Link href="/book" className="hidden bg-brand px-5 py-2 label text-[10px] text-white transition-colors hover:bg-brand-dark sm:inline-block">
                 Book Now
               </Link>
@@ -256,9 +255,6 @@ export function Navbar() {
                 onLeaveToNavigate={() => setActiveMega(null)}
               />
             ))}
-            <button aria-label="Search" className="opacity-70 transition-opacity hover:opacity-100">
-              <Search className="h-4 w-4" strokeWidth={1.5} />
-            </button>
           </nav>
         </div>
 

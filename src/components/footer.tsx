@@ -10,6 +10,7 @@ const explore = [
   { label: "Dining", href: "/#dining" },
   { label: "Experiences", href: "/experiences" },
   { label: "Guides", href: "/guides" },
+  { label: "Community", href: "/community" },
   { label: "Gallery", href: "/#gallery" },
   { label: "Book Now", href: "/book" },
 ];

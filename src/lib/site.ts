@@ -668,6 +668,149 @@ export const about = {
 };
 
 // ============================================================================
+// Community page content — "The Heart of Camiguin" (client copywriting).
+// Single source of truth for /community. Image paths reuse existing resort
+// photography as placeholders; swap for real artisan / team / guide photos.
+// ============================================================================
+export const community = {
+  hero: {
+    kicker: "Community, Culture & Island Stewardship",
+    heading: "The Heart of Camiguin",
+    image: "/images/resort/txaleta_rice_field.webp",
+  },
+  quote:
+    "Luxury is not only found in beautiful places, but in the people who make those places unforgettable.",
+  intro: [
+    "A stay at Txaleta de Camiguin is a way into something larger than a destination.",
+    "This island was shaped by hand — by fishermen and boatmen, guides and farmers, artists and families who have looked after Camiguin for generations. They are its storytellers and its keepers. When we built Txaleta, we didn't want to sit apart from that. We wanted to belong to it.",
+    "So we made a decision early on: tourism here should give back more than it takes. Through local hiring, real partnerships, and a lighter footprint on the land and sea, we want every stay to leave Camiguin a little better than we found it.",
+  ],
+  stories: [
+    {
+      kicker: "People First",
+      heading: "We Hire From the Community",
+      body: [
+        "We hire from the community first — and we mean it.",
+        "Some of the people who welcome you today came to us with no hospitality background at all. Our best cook started as a helper on our construction site; we saw how he worked, trained him, and gave him a kitchen. We've hired housewives stepping into their first job, and a senior woman whom others might have passed over.",
+        "What they brought wasn't a résumé. It was character — and that, we've learned, you can build a resort on.",
+      ],
+      image: "/images/community/the-staff.jpg",
+    },
+    {
+      kicker: "Growing Together",
+      heading: "We Hire for Potential, Not Polish",
+      body: [
+        "Most of our team began their journey without formal training. What they had instead was integrity, kindness, and the willingness to learn — and we've built everything else around that.",
+        "Through hands-on mentoring and patient, day-by-day coaching, our people gain real skills, real confidence, and a real path forward. The goal was never just to give someone a job. It's to give them a future.",
+        "As Txaleta grows, we want our team to grow with it — today's helpers becoming tomorrow's supervisors, chefs, and managers, all from right here on the island.",
+      ],
+      image: "/images/community/staff-growing.jpg",
+    },
+  ],
+  promise: {
+    heading: "Our Promise",
+    points: ["We hire for character.", "We train for excellence.", "We grow together."],
+  },
+  artisans: {
+    kicker: "Celebrating Local Artisans",
+    heading: "The Hands Behind Camiguin",
+    items: [
+      {
+        name: "Natalia Sea Glass",
+        body: [
+          "Twenty years ago, sea glass jewelry quietly faded from Camiguin. It came back through the hands of one artist who revived the craft — and the work speaks for itself.",
+          "We're proud to feature Natalia Sea Glass, who turns glass weathered smooth by decades of tides into jewelry and keepsakes you can carry home. Each piece is a fragment of Camiguin's own shoreline — proof that the most sustainable luxury is the kind the ocean already made.",
+        ],
+        link: {
+          label: "Follow @nataliaseaglass",
+          href: "https://www.instagram.com/nataliaseaglass/",
+        },
+        image: "/images/resort/txaleta_sand.webp",
+      },
+      {
+        name: "Local Artists",
+        body: [
+          "Walk through Txaleta — especially the new wing — and you'll find the island on the walls.",
+          "Paintings, photography, handcrafted décor: works by Camiguin artists who capture the place better than any brochure could. We surround our guests with their work to put island talent in front of new eyes, and to let the people who live here tell their own story.",
+        ],
+        image: "/images/resort/terrace_view.webp",
+      },
+    ],
+  },
+  mountain: {
+    kicker: "Walking With the Mountain",
+    heading: "Mt. Hibok-Hibok Guides",
+    body: [
+      "Guests ask us almost every week how to reach the summit. We always answer the same way: with the people who know it best.",
+      "Our local mountain guides carry generations of knowledge about Camiguin's volcanic slopes — its forests, its wildlife, its moods — and they make every trek both safe and unforgettable. By sending climbers their way, we help keep both the mountain and a way of life intact.",
+    ],
+    image: "/images/resort/txaleta_forest.webp",
+  },
+  sea: {
+    kicker: "Guardians of the Sea",
+    heading: "Camiguin Below the Surface",
+    items: [
+      {
+        name: "Mantigue Island",
+        body: [
+          "Just offshore, clear water opens onto living coral and sea turtles gliding through the shallows.",
+          "We send guests out with local Mantigue guides who know how to share this place without disturbing it — keeping a respectful distance from the wildlife and helping protect one of the island's most treasured sanctuaries.",
+        ],
+        image: "/images/resort/txaleta_beach.webp",
+      },
+      {
+        name: "Scuba Diving with Scuba de Oro",
+        body: [
+          "There's a whole other Camiguin below the surface: volcanic reefs, healthy coral, and marine life that makes this one of the Philippines' quietest diving secrets.",
+          "We work hand in hand with Scuba de Oro — they look after our guests underwater, and we send divers their way. It's a real partnership, the kind where two local businesses lift each other instead of competing, and where every dive is run safely and with respect for the reef.",
+        ],
+        image: "/images/experiences/txaleta_bed_shark.webp",
+      },
+    ],
+  },
+  partners: {
+    kicker: "Supporting Local Businesses",
+    heading: "Every Stay Sends Opportunity Outward",
+    body:
+      "Each stay at Txaleta reaches family businesses and small operators across the island. Together, these are how tourism becomes something the whole of Camiguin can feel.",
+    list: [
+      "Local artists",
+      "Natalia Sea Glass",
+      "Mt. Hibok-Hibok mountain guides",
+      "Dive masters & dive operators",
+      "Boat operators",
+      "Tour guides",
+      "Transportation providers",
+      "Family-owned businesses",
+      "Local musicians & performers",
+      "Local wellness practitioners",
+    ],
+  },
+  vision: {
+    kicker: "Our Vision",
+    heading: "Hospitality Should Leave Every Place Better Than It Found It",
+    body:
+      "That's still the whole of it. As we grow, our commitment stays the same:",
+    points: [
+      "Create meaningful work",
+      "Invest in local talent",
+      "Celebrate Camiguin's artists and entrepreneurs",
+      "Practice tourism that gives back",
+      "Protect the island's natural beauty",
+      "Share the real Camiguin with guests from around the world",
+    ],
+  },
+  sharedJourney: {
+    heading: "A Shared Journey",
+    body: [
+      "When you choose Txaleta, you step into a story that outlasts your holiday.",
+      "You help a local family find steady work. You put money into the hands of an artist and a small business owner. You make room for the next island kid to imagine a career in hospitality. And you help protect the culture, the coast, and the mountain that make this place what it is.",
+    ],
+    closing: "Thank you for being part of our journey.",
+  },
+};
+
+// ============================================================================
 // Navigation — top bar + desktop mega menus
 // Declared last so the mega cards can read from `rooms` / `experiences` above.
 // ============================================================================
@@ -738,6 +881,6 @@ export const nav: NavItem[] = [
   { label: "Experiences", href: "/experiences", mega: experiencesMega },
   { label: "Guides", href: "/guides" },
   { label: "About", href: "/about" },
+  { label: "Community", href: "/community" },
   { label: "Gallery", href: "/#gallery" },
-  { label: "Contact", href: "/#contact" },
 ];
