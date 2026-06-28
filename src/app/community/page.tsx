@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { community, site } from "@/lib/site";
 import { InstagramIcon } from "@/components/icons";
+import { InstagramEmbed } from "@/components/instagram-embed";
 import { Reveal, Kicker } from "@/components/reveal";
 import { TilePattern, PaperGrain, PalmCorner, RattanWeave } from "@/components/brand-texture";
 
@@ -123,15 +124,21 @@ export default function CommunityPage() {
             {community.artisans.items.map((a, i) => (
               <Reveal key={a.name} delay={(i % 2) * 0.08}>
                 <article className="flex h-full flex-col">
-                  <div className="group relative aspect-[16/10] w-full overflow-hidden">
-                    <Image
-                      src={a.image}
-                      alt={a.name}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"
-                    />
-                  </div>
+                  {"embed" in a && a.embed ? (
+                    <div className="flex w-full justify-center">
+                      <InstagramEmbed url={a.embed} />
+                    </div>
+                  ) : (
+                    <div className="group relative aspect-[16/10] w-full overflow-hidden">
+                      <Image
+                        src={a.image}
+                        alt={a.name}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"
+                      />
+                    </div>
+                  )}
                   <h3 className="font-display mt-7 text-3xl font-light text-ink">{a.name}</h3>
                   {a.body.map((p) => (
                     <p key={p.slice(0, 24)} className="mt-5 text-[15px] leading-relaxed text-ink/70">
@@ -156,12 +163,30 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      {/* ── Walking with the mountain — single feature row ── */}
-      <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-6">
+      {/* ── Walking with the mountain — leaf-backed feature row ── */}
+      <section className="relative overflow-hidden bg-ink py-20 text-white sm:py-28">
+        {/* Jungle-leaf backdrop — portrait crop on mobile, landscape on larger screens */}
+        <Image
+          src="/images/textures/tropical-leaves-mobile.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover sm:hidden"
+          aria-hidden
+        />
+        <Image
+          src="/images/textures/tropical-leaves.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="hidden object-cover sm:block"
+          aria-hidden
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/55 to-black/72" />
+        <div className="relative z-10 mx-auto max-w-7xl px-6">
           <Reveal>
-            <div className="grid items-center gap-12 border-t border-ink/10 py-20 sm:py-28 lg:grid-cols-2 lg:gap-20">
-              <div className="group relative aspect-[16/10] w-full overflow-hidden">
+            <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+              <div className="group relative aspect-[16/10] w-full overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
                 <Image
                   src={community.mountain.image}
                   alt={community.mountain.heading}
@@ -170,13 +195,13 @@ export default function CommunityPage() {
                   className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"
                 />
               </div>
-              <div>
-                <Kicker className="text-brand">{community.mountain.kicker}</Kicker>
-                <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
+              <div className="[text-shadow:0_2px_18px_rgba(0,0,0,0.55)]">
+                <Kicker className="text-sand">{community.mountain.kicker}</Kicker>
+                <h2 className="font-display mt-5 text-4xl font-light leading-tight text-cream sm:text-5xl">
                   {community.mountain.heading}
                 </h2>
                 {community.mountain.body.map((p) => (
-                  <p key={p.slice(0, 24)} className="mt-6 max-w-lg text-[15px] leading-relaxed text-ink/70">
+                  <p key={p.slice(0, 24)} className="mt-6 max-w-lg text-[15px] leading-relaxed text-white/80">
                     {p}
                   </p>
                 ))}
@@ -186,12 +211,30 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      {/* ── Guardians of the sea — cards ── */}
-      <section className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6">
-          <Reveal className="mx-auto max-w-2xl text-center">
-            <Kicker className="text-brand">{community.sea.kicker}</Kicker>
-            <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
+      {/* ── Guardians of the sea — ocean-backed cards ── */}
+      <section className="relative overflow-hidden bg-ink py-24 text-white sm:py-32">
+        {/* Turquoise ocean backdrop — portrait crop on mobile, landscape on larger screens */}
+        <Image
+          src="/images/experiences/ocean_cali_mobile.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover sm:hidden"
+          aria-hidden
+        />
+        <Image
+          src="/images/experiences/ocean_cali.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="hidden object-cover sm:block"
+          aria-hidden
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/52 to-black/72" />
+        <div className="relative z-10 mx-auto max-w-7xl px-6">
+          <Reveal className="mx-auto max-w-2xl text-center [text-shadow:0_2px_18px_rgba(0,0,0,0.6)]">
+            <Kicker className="text-sand">{community.sea.kicker}</Kicker>
+            <h2 className="font-display mt-5 text-4xl font-light leading-tight text-cream sm:text-5xl">
               {community.sea.heading}
             </h2>
           </Reveal>
@@ -200,7 +243,7 @@ export default function CommunityPage() {
             {community.sea.items.map((s, i) => (
               <Reveal key={s.name} delay={(i % 2) * 0.08}>
                 <article className="flex h-full flex-col">
-                  <div className="group relative aspect-[16/10] w-full overflow-hidden">
+                  <div className="group relative aspect-[16/10] w-full overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
                     <Image
                       src={s.image}
                       alt={s.name}
@@ -209,9 +252,9 @@ export default function CommunityPage() {
                       className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"
                     />
                   </div>
-                  <h3 className="font-display mt-7 text-3xl font-light text-ink">{s.name}</h3>
+                  <h3 className="font-display mt-7 text-3xl font-light text-cream">{s.name}</h3>
                   {s.body.map((p) => (
-                    <p key={p.slice(0, 24)} className="mt-5 text-[15px] leading-relaxed text-ink/70">
+                    <p key={p.slice(0, 24)} className="mt-5 text-[15px] leading-relaxed text-white/80">
                       {p}
                     </p>
                   ))}
