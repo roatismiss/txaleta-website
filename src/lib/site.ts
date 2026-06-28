@@ -411,6 +411,10 @@ export const gallery = [
   "/images/resort/common-area.webp",
   "/images/resort/txaleta_sand.webp",
   "/images/resort/telescope.webp",
+  "/images/wildlife/camiguin_hanging_parrot.jpg",
+  "/images/wildlife/camiguin_scops_owl.jpg",
+  "/images/wildlife/camiguin_white_eye.jpg",
+  "/images/wildlife/camiguin_hanging_parrot_perch.jpg",
 ];
 
 export type Testimonial = { quote: string; name: string; date: string };
