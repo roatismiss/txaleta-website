@@ -28,18 +28,16 @@ export default function ExperiencesPage() {
   return (
     <>
       {/* Banner */}
-      <section className="relative flex h-[75vh] min-h-[500px] items-end overflow-hidden">
-        <video
-          src="https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Camiguin%20Island%20Scooter%20Rental.mp4"
-          poster="/images/experiences/txaleta_boat.webp"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className="absolute inset-0 h-full w-full object-cover"
+      <section className="relative flex h-[100svh] min-h-[600px] items-end overflow-hidden bg-ink">
+        {/* Full-bleed hero photo — object-cover fills the whole screen. */}
+        <Image
+          src="/images/experiences/txaleta_experiences_hero.webp"
+          alt="Guests on a Txaleta boat tour with Mount Hibok-Hibok rising behind them"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/40" />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-14 text-white">
           <Kicker className="font-bold text-brand [text-shadow:0_0_8px_rgba(0,0,0,1),0_0_16px_rgba(0,0,0,1),0_2px_4px_rgba(0,0,0,0.95),0_4px_24px_rgba(0,0,0,0.8)]">Things to Do on Camiguin</Kicker>
           <h1 className="font-display mt-4 text-5xl font-light sm:text-6xl md:text-7xl">Experiences</h1>

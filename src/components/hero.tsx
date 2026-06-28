@@ -8,16 +8,33 @@ import { site } from "@/lib/site";
 import { BookingBar } from "./booking-bar";
 
 export function Hero() {
-  const { videos, slides } = site.hero;
+  const { videos: desktopVideos, mobileVideos, slides } = site.hero;
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Image slideshow state (runs before video kicks in)
+  // Image slideshow state (runs before video kicks in). With no slides
+  // configured, skip straight to the video on the first frame.
   const [slideIdx, setSlideIdx] = useState(0);
-  const [showVideo, setShowVideo] = useState(false);
+  const [showVideo, setShowVideo] = useState(slides.length === 0);
   const [videoIdx, setVideoIdx] = useState(0);
+
+  // Serve the portrait cut on phones. Starts false to match SSR, then syncs to
+  // the real viewport on mount (and on resize/orientation change).
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    const sync = () => setIsMobile(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
+
+  const videos =
+    isMobile && mobileVideos.length ? mobileVideos : desktopVideos;
+  const activeSrc = videos[videoIdx] ?? videos[0];
 
   // Cycle slides every 4 s; after all slides shown once, switch to video
   useEffect(() => {
+    if (slides.length === 0) return;
     const interval = setInterval(() => {
       setSlideIdx((i) => {
         const next = i + 1;
@@ -43,7 +60,7 @@ export function Hero() {
     if (!v) return;
     v.load();
     v.play().catch(() => {});
-  }, [videoIdx, showVideo]);
+  }, [activeSrc, showVideo]);
 
   const handleEnded = () => {
     if (videos.length > 1) setVideoIdx((i) => (i + 1) % videos.length);
@@ -94,7 +111,7 @@ export function Hero() {
       >
         <video
           ref={videoRef}
-          src={videos[videoIdx]}
+          src={activeSrc}
           onEnded={handleEnded}
           poster={site.hero.poster}
           className="h-full w-full object-cover"

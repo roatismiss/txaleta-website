@@ -37,15 +37,16 @@ export const site = {
   hero: {
     // Cloudflare R2 — videos cycle in order. Add/remove URLs freely.
     videos: [
-      "https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Camiguin%20Island%20Video.mp4",
-      "https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Camiguin%20Island%20Scooter%20Rental.mp4",
+      "https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Hero%20First%20Page.mp4",
     ],
-    poster: "/images/resort/Aerialview_txaleta.webp",
-    // Static images that slide in sequence before the video starts.
-    slides: [
-      "/images/resort/Aerialview_txaleta.webp",
-      "/images/resort/txaleta_infinity_pool.jpg",
+    // Portrait-friendly cut shown on phones. Falls back to `videos` if empty.
+    mobileVideos: [
+      "https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Txaleta%20%20Obile%20Hero.mp4",
     ],
+    // Thumbnail of the hero clip — shows instantly while the video loads.
+    poster: "/images/resort/hero_first_page_poster.webp",
+    // No pre-roll slideshow: the hero video plays from the first frame.
+    slides: [],
   },
 
   // CloudReef integration. Bookings POST here and land in CloudReef as `pending`.

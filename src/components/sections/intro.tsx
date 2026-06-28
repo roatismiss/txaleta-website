@@ -45,10 +45,10 @@ export function Intro() {
         <div className="mt-16 grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <Reveal delay={0.1}>
             <div className="group relative aspect-[4/5] w-full overflow-hidden">
-              {/* Base image — infinity pool, visible first */}
+              {/* Base image — infinity pool over the Bohol Sea, visible first */}
               <Image
-                src="/images/resort/txaleta_infinity_pool.jpg"
-                alt="Infinity pool at Txaleta de Camiguin"
+                src="/images/resort/txaleta_pool_lounge.webp"
+                alt="Infinity pool overlooking the Bohol Sea at Txaleta de Camiguin"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -107,7 +107,7 @@ export function Intro() {
             {/* Video — left, large (fills the gallery height on desktop) */}
             <div className="relative aspect-[16/9] overflow-hidden lg:aspect-auto">
               <video
-                src="https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Mount%20Hibok-Hibok.mp4"
+                src="https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/The%20Quite%20Other%20Island%20Lost.mp4"
                 autoPlay
                 muted
                 loop
@@ -129,8 +129,8 @@ export function Intro() {
               </div>
               <div className="relative aspect-[4/5] w-full overflow-hidden">
                 <Image
-                  src="/images/resort/aerial_view_camiguin_2.jpg"
-                  alt="Aerial view of Camiguin island from Txaleta"
+                  src="/images/resort/txaleta_picnic.webp"
+                  alt="Seaside picnic at Txaleta de Camiguin"
                   fill
                   sizes="(max-width: 1024px) 100vw, 24vw"
                   className="object-cover"
