@@ -125,6 +125,10 @@ export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCh
             selected={range}
             onSelect={handleSelect}
             defaultMonth={range.from ?? (minDate ?? new Date())}
+            // Render the leading/trailing days of adjacent months. Without this the
+            // first week's empty cells collapse (our `day` className drops rdp's
+            // fixed width), shifting every date under the wrong weekday column.
+            showOutsideDays
             disabled={[{ before: minDate ?? new Date() }, ...(disabledDates ?? [])]}
             classNames={{
               root: "p-3 w-[280px] sm:p-5 sm:w-[320px]",
@@ -244,6 +248,7 @@ export function DatePicker({ label, value, onChange, minDate, placeholder, disab
             selected={selected}
             defaultMonth={selected ?? defaultMonth ?? minDate}
             onSelect={handleSelect}
+            showOutsideDays
             disabled={[
               { before: minDate ?? new Date() },
               ...(maxDate ? [{ after: maxDate }] : []),
