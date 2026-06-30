@@ -270,8 +270,8 @@ export const dining = {
     heading: "Family Dining, Celebrations & Special Occasions",
     body:
       "Some of life's best memories are made around the table. Whether you're celebrating a birthday, anniversary, family reunion, wedding gathering, or simply enjoying a meal together, our team is happy to help create a dining experience that feels personal and memorable. Private dining arrangements and customized menus are available upon request.",
-    image: "/images/resort/common-area.webp",
-    imageAlt: "Family dining and celebrations at Txaleta de Camiguin",
+    image: "/images/dining/family_dining_guests.webp",
+    imageAlt: "Guests sharing paella and tapas at a seaside table at Txaleta de Camiguin",
   },
   local: {
     kicker: "From the Island",
