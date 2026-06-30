@@ -40,8 +40,10 @@ export const site = {
       "https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Hero%20First%20Page.mp4",
     ],
     // Portrait-friendly cut shown on phones. Falls back to `videos` if empty.
+    // H.264/mp4 (re-encoded from the original HEVC .MOV so it plays on Android
+    // Chrome too, not just iOS Safari).
     mobileVideos: [
-      "https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Txaleta%20%20Obile%20Hero.mp4",
+      "https://pub-7bd148d1ea414fca914e9afdafcbe074.r2.dev/Txaleta%20Mobile%20Hero.mp4",
     ],
     // Thumbnail of the hero clip — shows instantly while the video loads.
     poster: "/images/resort/hero_first_page_poster.webp",

@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { experiences, signature, rentals, site } from "@/lib/site";
 import { Reveal, Kicker } from "@/components/reveal";
 import { ExperienceCardImage } from "@/components/experience-card-image";
+import { ExperiencesHeroSlideshow } from "@/components/experiences-hero-slideshow";
 import { BananaGrove, PaperGrain, PalmCorner, RattanWeave } from "@/components/brand-texture";
 
 export const metadata: Metadata = {
@@ -29,14 +30,15 @@ export default function ExperiencesPage() {
     <>
       {/* Banner */}
       <section className="relative flex h-[100svh] min-h-[600px] items-end overflow-hidden bg-ink">
-        {/* Full-bleed hero photo — object-cover fills the whole screen. */}
-        <Image
-          src="/images/experiences/txaleta_experiences_hero.webp"
-          alt="Guests on a Txaleta boat tour with Mount Hibok-Hibok rising behind them"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
+        {/* Full-bleed crossfading slideshow — object-cover fills the whole screen. */}
+        <ExperiencesHeroSlideshow
+          slides={[
+            { src: "/images/experiences/txaleta_experiences_hero.webp", alt: "Guests on a Txaleta boat tour with Mount Hibok-Hibok rising behind them" },
+            { src: "/images/experiences/hero2.webp", alt: "Island experiences on Camiguin with Txaleta de Camiguin" },
+            { src: "/images/experiences/hero3.webp", alt: "Exploring the waters and shore of Camiguin" },
+            { src: "/images/experiences/hero4.webp", alt: "Coastal adventures around Camiguin island" },
+            { src: "/images/experiences/hero5.webp", alt: "A day out on the island with Txaleta de Camiguin" },
+          ]}
         />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-14 text-white">
           <Kicker className="font-bold text-brand [text-shadow:0_0_8px_rgba(0,0,0,1),0_0_16px_rgba(0,0,0,1),0_2px_4px_rgba(0,0,0,0.95),0_4px_24px_rgba(0,0,0,0.8)]">Things to Do on Camiguin</Kicker>

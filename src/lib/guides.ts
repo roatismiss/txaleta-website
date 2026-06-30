@@ -33,6 +33,7 @@ const ORDER = [
   "camiguin-itinerary",
   "how-to-get-to-camiguin-from-cebu",
   "best-islands-in-the-philippines",
+  "birdwatching-camiguin-hibok-hibok",
 ];
 
 function toISO(d: unknown): string {
