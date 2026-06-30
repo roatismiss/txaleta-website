@@ -16,13 +16,13 @@ keywords:
   - "best time for birdwatching in Camiguin"
 date: 2026-06-29
 author: "Txaleta de Camiguin"
-image: "/images/resort/txaleta_forest.webp"
-imageAlt: "Rainforest on the slopes of Mt. Hibok-Hibok, Camiguin — habitat of the island's endemic birds"
+image: "/images/wildlife/camiguin_hanging_parrot_perch.jpg"
+imageAlt: "A Camiguin Hanging-Parrot, the bright-green parrot found only on Camiguin Island"
 ---
 
 # Camiguin Birdwatching: Endemic Birds & Where to Find Them
 
-![Rainforest on the slopes of Mt. Hibok-Hibok, Camiguin — habitat of the island's endemic birds](/images/resort/txaleta_forest.webp)
+![A Camiguin Hanging-Parrot, the bright-green parrot found only on Camiguin Island](/images/wildlife/camiguin_hanging_parrot_perch.jpg)
 
 We live here. From our clifftop in Mambajao, with Mt. Hibok-Hibok at our backs and the Bohol Sea at our feet, the first sound most mornings isn't the surf — it's birdsong drifting down off the volcano's forest. Camiguin is a small island, but it carries something rare: a handful of birds that live **here and nowhere else on Earth**. Travellers ask us where to find them, and we'd rather give you the honest version than the hyped one. So this is our local guide to **Camiguin birdwatching** — what you can genuinely see, where, when, and with whom.
 
@@ -42,11 +42,15 @@ A tiny green parrot, described as a full species only in **2006** by researchers
 
 We'll be honest about its status, because honesty matters more than flourish here. The IUCN Red List has **not given it a standalone category** — not because it's safe, but because the world's bird authorities haven't all agreed it's a separate species yet (some checklists still file it as a form of the wider Philippine Hanging-Parrot, pending DNA work). So the accurate phrasing is *threatened and at risk* — its population is small and declining, pressured chiefly by forest loss and the illegal cagebird trade — rather than a specific Red List rating it doesn't formally have. Please never buy or handle a caged "colasisi"; that trade is part of what threatens this bird.
 
+![A Camiguin Hanging-Parrot in the forest canopy above Mambajao — a bird found only on this island.](/images/wildlife/camiguin_hanging_parrot.jpg)
+
 ### Camiguin Boobook / Camiguin Hawk-Owl (*Ninox leventisi*)
 
 The island's flagship owl, split off from the Philippine Hawk-Owl as a distinct species in **2012** on the strength of its voice. It is endemic to Camiguin alone. A bird of remnant broadleaf forest up to around 700 m, it's nocturnal and crepuscular — you find it after dark, by call, and lucky pairs will duet back at a patient guide.
 
 On conservation status we'll flag genuine uncertainty rather than fake confidence. BirdLife/IUCN's citable standing assessment is **Vulnerable** (a tiny population, on the order of a few hundred mature birds), though several recent sources suggest it may have been uplisted to Endangered. We couldn't confirm that change at the primary source, so we'll call it *Vulnerable, possibly recently uplisted* — and encourage you to check the live IUCN Red List if you need the current category. Either way, it is a small population that deserves a quiet, respectful visit.
+
+![A forest owl photographed at night on Camiguin — owls here are found after dark by their call.](/images/wildlife/camiguin_scops_owl.jpg)
 
 ### Camiguin Bulbul (*Hypsipetes catarmanensis*)
 
@@ -66,11 +70,15 @@ Beyond the headline three, Camiguin holds several **endemic island forms** — d
 
 You may also encounter wider Philippine and resident species in the forest and along the coast — serpent-eagles soaring on the thermals, green pigeons in fruiting trees, a Brahminy Kite over the lagoons. The realistic island checklist runs to **roughly 50-plus species** — a number to set expectations honestly, not a single-day promise. One careful birder logged 47 species in a March visit; a brief survey logged fewer. Quality over quantity, always.
 
+![A Camiguin white-eye (Zosterops nigrorum catarmanensis) in the island's highland forest.](/images/wildlife/camiguin_white_eye.jpg)
+
 ---
 
 ## Where to go birdwatching in Camiguin
 
 Almost all of Camiguin's endemic action happens in one place: the forest of the **Mounts Timpoong–Hibok-Hibok Natural Monument (MTHNM)** — a roughly 2,228-hectare protected forest declared an ASEAN Heritage Park in 2015, sitting between the lowlands and the volcano's summit (Hibok-Hibok rises to about 1,332 m).
+
+![Rainforest on the slopes of Mt. Hibok-Hibok — the habitat that holds Camiguin's endemic birds.](/images/resort/txaleta_forest.webp)
 
 | Spot | What it's good for | Effort |
 |---|---|---|
@@ -189,9 +197,15 @@ Come for the views. Stay for the birdsong. Welcome home.
       "description": "A local, honest guide to Camiguin birdwatching — the island's endemic birds, where to find them around Mt. Hibok-Hibok, the best hours to go, and the guides who know the calls.",
       "url": "https://txaletadecamiguin.com/guides/birdwatching-camiguin-hibok-hibok",
       "datePublished": "2026-06-29",
-      "dateModified": "2026-06-29",
+      "dateModified": "2026-06-30",
       "inLanguage": "en",
-      "image": "https://txaletadecamiguin.com/images/resort/txaleta_forest.webp",
+      "image": [
+        "https://txaletadecamiguin.com/images/wildlife/camiguin_hanging_parrot_perch.jpg",
+        "https://txaletadecamiguin.com/images/wildlife/camiguin_hanging_parrot.jpg",
+        "https://txaletadecamiguin.com/images/wildlife/camiguin_white_eye.jpg",
+        "https://txaletadecamiguin.com/images/wildlife/camiguin_scops_owl.jpg",
+        "https://txaletadecamiguin.com/images/resort/txaleta_forest.webp"
+      ],
       "keywords": "Camiguin birdwatching, birds of Camiguin, Camiguin endemic birds, Camiguin Hanging Parrot, Camiguin Hawk-Owl, Camiguin Boobook, Mt. Hibok-Hibok wildlife, where to go birdwatching in Camiguin, best time for birdwatching in Camiguin",
       "articleSection": "Travel Guides",
       "author": {
