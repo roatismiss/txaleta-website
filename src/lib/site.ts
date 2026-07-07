@@ -252,8 +252,8 @@ export const dining = {
       heading: "Breakfast with a View in Camiguin",
       body:
         "Mornings at Txaleta are unhurried. Wake up to freshly brewed coffee, tropical fruits, homemade specialties, and breakfast dishes served alongside panoramic ocean views and the gentle rhythm of island life. Whether you're preparing for a day of adventure or simply enjoying a slow morning, breakfast at Txaleta is one of the most peaceful ways to begin your day in Camiguin.",
-      image: "/images/dining/breakfest_txaleta.webp",
-      imageAlt: "Breakfast with an ocean view at Txaleta de Camiguin",
+      image: "/images/dining/omelette_breakfast.webp",
+      imageAlt: "A fresh omelette breakfast served over the sea at Txaleta de Camiguin",
     },
     {
       id: "evening",
@@ -278,14 +278,14 @@ export const dining = {
     heading: "Local Ingredients, Island Flavors",
     body:
       "Whenever possible, we source ingredients locally and support the Camiguin community that makes this island so special. Fresh seafood, tropical fruits, locally grown produce, and regional flavors inspire much of what we serve — letting guests enjoy an authentic taste of Camiguin while supporting local farmers, fishermen, and suppliers.",
-    image: "/images/dining/nachos_sendiv.webp",
-    imageAlt: "Local Camiguin ingredients and island flavors at Txaleta",
+    image: "/images/dining/leche_flan_dessert.webp",
+    imageAlt: "Leche flan, turon and homemade ice cream — island desserts at Txaleta",
   },
   atmosphere: [
-    "/images/resort/rayligh_lounge.webp",
-    "/images/resort/common-area.webp",
-    "/images/resort/terrace_view.webp",
-    "/images/resort/night_view.webp",
+    "/images/dining/breakfast_clifftop.webp",
+    "/images/dining/coconut_pancakes.webp",
+    "/images/dining/dessert_sea_view.webp",
+    "/images/dining/guests_photographing_breakfast.webp",
   ],
   // QR room service — order from your phone, brought to your terrace.
   // (The "order" CTA points at the LIVE concierge/WhatsApp until QR ordering
@@ -404,19 +404,47 @@ export const rentals = {
   note: "Every rental comes with essential inclusions, flexible durations and a clear fuel-return policy — making each journey smooth, comfortable and tailored to your stay.",
 };
 
+// Full photo library — shown on the dedicated /gallery page. The homepage
+// section shows only `galleryPreview` below.
 export const gallery = [
   "/images/resort/txaleta_hero.webp",
+  "/images/resort/camiguin_coast_aerial.webp",
+  "/images/resort/infinity_pool_seaview.webp",
+  "/images/resort/terrace_sunset.webp",
   "/images/resort/night_view.webp",
-  "/images/resort/terrace_view.webp",
+  "/images/resort/villa_pool.webp",
   "/images/resort/txaleta_beach.webp",
+  "/images/experiences/boat_logo_white_island.webp",
+  "/images/resort/garden_buddha.webp",
   "/images/resort/rayligh_lounge.webp",
+  "/images/experiences/txaleta_bottle_hibok.webp",
   "/images/resort/common-area.webp",
+  "/images/resort/sunset_bohol_sea.webp",
+  "/images/experiences/beach_toast_bottles.webp",
+  "/images/experiences/hero5.webp",
+  "/images/resort/camiguin_lagoon_aerial.webp",
   "/images/resort/txaleta_sand.webp",
   "/images/resort/telescope.webp",
+  "/images/resort/txaleta_night_aerial.webp",
   "/images/wildlife/camiguin_hanging_parrot.jpg",
   "/images/wildlife/camiguin_scops_owl.jpg",
   "/images/wildlife/camiguin_white_eye.jpg",
   "/images/wildlife/camiguin_hanging_parrot_perch.jpg",
+];
+
+// Homepage "The Long Look" section — a curated taste; the rest lives on /gallery.
+// (Skips infinity_pool_seaview and terrace_sunset, which already appear in Intro.)
+export const galleryPreview = [
+  "/images/resort/txaleta_hero.webp",
+  "/images/resort/camiguin_coast_aerial.webp",
+  "/images/resort/txaleta_beach.webp",
+  "/images/resort/garden_buddha.webp",
+  "/images/resort/night_view.webp",
+  "/images/resort/villa_pool.webp",
+  "/images/experiences/boat_logo_white_island.webp",
+  "/images/resort/sunset_bohol_sea.webp",
+  "/images/resort/camiguin_lagoon_aerial.webp",
+  "/images/resort/txaleta_night_aerial.webp",
 ];
 
 export type Testimonial = { quote: string; name: string; date: string };
@@ -851,7 +879,7 @@ const accommodationMega: MegaMenu = {
   links: [
     { label: "Inclusions & Amenities", href: "/accommodation#inclusions" },
     { label: "Dining by the Sea", href: "/#dining" },
-    { label: "The Gallery", href: "/#gallery" },
+    { label: "The Gallery", href: "/gallery" },
     { label: "Book Direct", href: "/book" },
   ],
   cards: rooms.map((r) => ({
@@ -890,5 +918,5 @@ export const nav: NavItem[] = [
   { label: "Guides", href: "/guides" },
   { label: "About", href: "/about" },
   { label: "Community", href: "/community" },
-  { label: "Gallery", href: "/#gallery" },
+  { label: "Gallery", href: "/gallery" },
 ];

@@ -90,8 +90,8 @@ export default function DiningPage() {
             </div>
             <div className="group relative col-span-1 aspect-square overflow-hidden sm:col-span-2 sm:row-span-1 sm:aspect-auto">
               <Image
-                src="/images/resort/rayligh_lounge.webp"
-                alt="The lounge at Txaleta"
+                src="/images/dining/margaritas_pool.webp"
+                alt="Margaritas in the pool at Txaleta"
                 fill
                 sizes="(max-width: 640px) 50vw, 15vw"
                 className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"
@@ -223,7 +223,7 @@ export default function DiningPage() {
                 <div className="group relative aspect-[3/4] overflow-hidden">
                   <Image
                     src={src}
-                    alt="Atmosphere at Txaleta de Camiguin"
+                    alt="From the kitchen at Txaleta de Camiguin"
                     fill
                     sizes="(max-width: 640px) 50vw, 25vw"
                     className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"

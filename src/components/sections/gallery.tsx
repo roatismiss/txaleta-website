@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { gallery } from "@/lib/site";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { galleryPreview } from "@/lib/site";
 import { Reveal, Kicker } from "../reveal";
 
 export function Gallery() {
@@ -35,7 +37,7 @@ export function Gallery() {
 
         <Reveal delay={0.1}>
           <div className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-            {gallery.map((src, i) => (
+            {galleryPreview.map((src, i) => (
               <div
                 key={src}
                 className={`group relative overflow-hidden ${
@@ -52,6 +54,15 @@ export function Gallery() {
               </div>
             ))}
           </div>
+        </Reveal>
+
+        <Reveal delay={0.15} className="mt-12 text-center">
+          <Link
+            href="/gallery"
+            className="label inline-flex items-center gap-3 border border-cream/40 px-9 py-4 text-[11px] text-cream transition-colors hover:border-cream hover:bg-cream hover:text-ink"
+          >
+            View the Full Gallery <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+          </Link>
         </Reveal>
       </div>
     </section>

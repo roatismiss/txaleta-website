@@ -34,10 +34,10 @@ export default function ExperiencesPage() {
         <ExperiencesHeroSlideshow
           slides={[
             { src: "/images/experiences/txaleta_experiences_hero.webp", alt: "Guests on a Txaleta boat tour with Mount Hibok-Hibok rising behind them" },
-            { src: "/images/experiences/hero2.webp", alt: "Island experiences on Camiguin with Txaleta de Camiguin" },
-            { src: "/images/experiences/hero3.webp", alt: "Exploring the waters and shore of Camiguin" },
-            { src: "/images/experiences/hero4.webp", alt: "Coastal adventures around Camiguin island" },
-            { src: "/images/experiences/hero5.webp", alt: "A day out on the island with Txaleta de Camiguin" },
+            { src: "/images/experiences/hero2.webp", alt: "The white sandbar of White Island with Mount Hibok-Hibok behind it" },
+            { src: "/images/experiences/hero_group_boat.webp", alt: "A group of guests beside the Txaleta boat at White Island" },
+            { src: "/images/experiences/boat_logo_white_island.webp", alt: "The Txaleta boat moored off White Island, Camiguin" },
+            { src: "/images/resort/camiguin_coast_aerial.webp", alt: "Aerial view of the Camiguin coastline and its reefs" },
           ]}
         />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-14 text-white">
@@ -242,6 +242,29 @@ export default function ExperiencesPage() {
             </h2>
             <p className="mt-6 text-[15px] leading-relaxed text-cream/65">{rentals.body}</p>
           </Reveal>
+
+          {/* Rental fleet — jet skis and the Txaleta boat on the water */}
+          <div className="mt-16 grid grid-cols-2 gap-3 lg:grid-cols-4">
+            {[
+              { src: "/images/experiences/hero4.webp", alt: "A Txaleta jet ski resting in the shallows off Camiguin" },
+              { src: "/images/experiences/jetski_action.webp", alt: "A jet ski cutting across the Bohol Sea below Mount Hibok-Hibok" },
+              { src: "/images/experiences/jetski_white_island.webp", alt: "Riding a jet ski over the clear waters of White Island" },
+              { src: "/images/experiences/hero3.webp", alt: "The Txaleta boat over the turquoise shallows of White Island" },
+            ].map((img, i) => (
+              <Reveal key={img.src} delay={(i % 4) * 0.06}>
+                <div className="group relative aspect-[3/4] overflow-hidden">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/45 to-transparent" />
+                </div>
+              </Reveal>
+            ))}
+          </div>
 
           <div className="mt-16 grid gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
             {rentals.items.map((r, i) => (

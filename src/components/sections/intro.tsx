@@ -47,16 +47,16 @@ export function Intro() {
             <div className="group relative aspect-[4/5] w-full overflow-hidden">
               {/* Base image — infinity pool over the Bohol Sea, visible first */}
               <Image
-                src="/images/resort/txaleta_pool_lounge.webp"
+                src="/images/resort/infinity_pool_seaview.webp"
                 alt="Infinity pool overlooking the Bohol Sea at Txaleta de Camiguin"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
-              {/* Terrace image — fades in on hover */}
+              {/* Sunset terrace — fades in on hover */}
               <Image
-                src="/images/resort/terrace_view.webp"
-                alt="Seaview terrace at Txaleta de Camiguin"
+                src="/images/resort/terrace_sunset_chairs.webp"
+                alt="Two chairs facing the sunset over the Bohol Sea at Txaleta de Camiguin"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover opacity-0 transition-opacity duration-700 group-hover:opacity-100"
@@ -129,8 +129,8 @@ export function Intro() {
               </div>
               <div className="relative aspect-[4/5] w-full overflow-hidden">
                 <Image
-                  src="/images/resort/txaleta_picnic.webp"
-                  alt="Seaside picnic at Txaleta de Camiguin"
+                  src="/images/resort/terrace_sunset.webp"
+                  alt="Sunset over the Bohol Sea from the terrace at Txaleta de Camiguin"
                   fill
                   sizes="(max-width: 1024px) 100vw, 24vw"
                   className="object-cover"
