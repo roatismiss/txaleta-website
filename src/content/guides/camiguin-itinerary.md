@@ -225,24 +225,24 @@ Come for the views. Stay for the feeling. Welcome home.
   "@graph": [
     {
       "@type": "BlogPosting",
-      "@id": "https://txaletadecamiguin.com/guides/camiguin-itinerary#article",
+      "@id": "https://www.txaletadecamiguin.com/guides/camiguin-itinerary#article",
       "headline": "Camiguin Itinerary: The Perfect 3-Day Island Plan",
       "description": "Plan the perfect 3 days in Camiguin: a day-by-day itinerary covering White Island, the Sunken Cemetery, waterfalls & Mantigue — plus how many days you really need.",
-      "url": "https://txaletadecamiguin.com/guides/camiguin-itinerary",
+      "url": "https://www.txaletadecamiguin.com/guides/camiguin-itinerary",
       "datePublished": "2026-06-22",
       "dateModified": "2026-06-22",
       "inLanguage": "en",
-      "image": "https://txaletadecamiguin.com/images/guides/camiguin-itinerary-white-island-sunrise.png",
+      "image": "https://www.txaletadecamiguin.com/images/guides/camiguin-itinerary-white-island-sunrise.png",
       "keywords": "Camiguin itinerary, Camiguin 3 day itinerary, how many days do you need in Camiguin, Camiguin 4 days 3 nights itinerary, where to stay in Camiguin Mambajao, Camiguin itinerary from Cebu, things to do in Camiguin",
       "author": {
         "@type": "Organization",
         "name": "Txaleta de Camiguin",
-        "url": "https://txaletadecamiguin.com"
+        "url": "https://www.txaletadecamiguin.com"
       },
       "publisher": {
         "@type": "Organization",
         "name": "Txaleta de Camiguin",
-        "url": "https://txaletadecamiguin.com",
+        "url": "https://www.txaletadecamiguin.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Purok 6, Puting Balas",
@@ -255,12 +255,12 @@ Come for the views. Stay for the feeling. Welcome home.
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://txaletadecamiguin.com/guides/camiguin-itinerary"
+        "@id": "https://www.txaletadecamiguin.com/guides/camiguin-itinerary"
       }
     },
     {
       "@type": "ItemList",
-      "@id": "https://txaletadecamiguin.com/guides/camiguin-itinerary#itinerary",
+      "@id": "https://www.txaletadecamiguin.com/guides/camiguin-itinerary#itinerary",
       "name": "Camiguin 3-Day Itinerary",
       "description": "A day-by-day 3-day plan for Camiguin Island, Philippines.",
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
@@ -288,7 +288,7 @@ Come for the views. Stay for the feeling. Welcome home.
     },
     {
       "@type": "FAQPage",
-      "@id": "https://txaletadecamiguin.com/guides/camiguin-itinerary#faq",
+      "@id": "https://www.txaletadecamiguin.com/guides/camiguin-itinerary#faq",
       "mainEntity": [
         {
           "@type": "Question",

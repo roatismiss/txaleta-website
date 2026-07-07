@@ -192,34 +192,34 @@ Come for the views. Stay for the birdsong. Welcome home.
   "@graph": [
     {
       "@type": "BlogPosting",
-      "@id": "https://txaletadecamiguin.com/guides/birdwatching-camiguin-hibok-hibok#article",
+      "@id": "https://www.txaletadecamiguin.com/guides/birdwatching-camiguin-hibok-hibok#article",
       "headline": "Camiguin Birdwatching: Endemic Birds & Where to Find Them",
       "description": "A local, honest guide to Camiguin birdwatching — the island's endemic birds, where to find them around Mt. Hibok-Hibok, the best hours to go, and the guides who know the calls.",
-      "url": "https://txaletadecamiguin.com/guides/birdwatching-camiguin-hibok-hibok",
+      "url": "https://www.txaletadecamiguin.com/guides/birdwatching-camiguin-hibok-hibok",
       "datePublished": "2026-06-29",
       "dateModified": "2026-06-30",
       "inLanguage": "en",
       "image": [
-        "https://txaletadecamiguin.com/images/wildlife/camiguin_hanging_parrot_perch.jpg",
-        "https://txaletadecamiguin.com/images/wildlife/camiguin_hanging_parrot.jpg",
-        "https://txaletadecamiguin.com/images/wildlife/camiguin_white_eye.jpg",
-        "https://txaletadecamiguin.com/images/wildlife/camiguin_scops_owl.jpg",
-        "https://txaletadecamiguin.com/images/resort/txaleta_forest.webp"
+        "https://www.txaletadecamiguin.com/images/wildlife/camiguin_hanging_parrot_perch.jpg",
+        "https://www.txaletadecamiguin.com/images/wildlife/camiguin_hanging_parrot.jpg",
+        "https://www.txaletadecamiguin.com/images/wildlife/camiguin_white_eye.jpg",
+        "https://www.txaletadecamiguin.com/images/wildlife/camiguin_scops_owl.jpg",
+        "https://www.txaletadecamiguin.com/images/resort/txaleta_forest.webp"
       ],
       "keywords": "Camiguin birdwatching, birds of Camiguin, Camiguin endemic birds, Camiguin Hanging Parrot, Camiguin Hawk-Owl, Camiguin Boobook, Mt. Hibok-Hibok wildlife, where to go birdwatching in Camiguin, best time for birdwatching in Camiguin",
       "articleSection": "Travel Guides",
       "author": {
         "@type": "Organization",
         "name": "Txaleta de Camiguin",
-        "url": "https://txaletadecamiguin.com"
+        "url": "https://www.txaletadecamiguin.com"
       },
       "publisher": {
         "@type": "Organization",
         "name": "Txaleta de Camiguin",
-        "url": "https://txaletadecamiguin.com",
+        "url": "https://www.txaletadecamiguin.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://txaletadecamiguin.com/images/brand/logo-reveal.webp"
+          "url": "https://www.txaletadecamiguin.com/images/brand/logo-reveal.webp"
         },
         "address": {
           "@type": "PostalAddress",
@@ -233,7 +233,7 @@ Come for the views. Stay for the birdsong. Welcome home.
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://txaletadecamiguin.com/guides/birdwatching-camiguin-hibok-hibok"
+        "@id": "https://www.txaletadecamiguin.com/guides/birdwatching-camiguin-hibok-hibok"
       },
       "about": [
         { "@type": "Place", "name": "Camiguin, Philippines" },
@@ -243,7 +243,7 @@ Come for the views. Stay for the birdsong. Welcome home.
     },
     {
       "@type": "FAQPage",
-      "@id": "https://txaletadecamiguin.com/guides/birdwatching-camiguin-hibok-hibok#faq",
+      "@id": "https://www.txaletadecamiguin.com/guides/birdwatching-camiguin-hibok-hibok#faq",
       "mainEntity": [
         {
           "@type": "Question",

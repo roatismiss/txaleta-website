@@ -189,23 +189,23 @@ You've found the flight. You've untangled the ports. Now the only thing left is 
   "@graph": [
     {
       "@type": "BlogPosting",
-      "@id": "https://txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu#article",
+      "@id": "https://www.txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu#article",
       "headline": "How to Get to Camiguin from Cebu (2026): Flights & Ferries",
       "description": "How to get to Camiguin from Cebu in 2026: the 55-minute flight vs the Cagayan de Oro & Bohol ferries — real door-to-door times, PHP costs and the easiest route, mapped.",
-      "url": "https://txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu",
+      "url": "https://www.txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu",
       "datePublished": "2026-06-22",
       "dateModified": "2026-06-22",
       "inLanguage": "en",
-      "image": "https://txaletadecamiguin.com/images/guides/camiguin-from-cebu-aerial.png",
+      "image": "https://www.txaletadecamiguin.com/images/guides/camiguin-from-cebu-aerial.png",
       "author": {
         "@type": "Organization",
         "name": "Txaleta de Camiguin",
-        "url": "https://txaletadecamiguin.com"
+        "url": "https://www.txaletadecamiguin.com"
       },
       "publisher": {
         "@type": "Organization",
         "name": "Txaleta de Camiguin",
-        "url": "https://txaletadecamiguin.com",
+        "url": "https://www.txaletadecamiguin.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Purok 6, Puting Balas",
@@ -218,7 +218,7 @@ You've found the flight. You've untangled the ports. Now the only thing left is 
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu"
+        "@id": "https://www.txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu"
       },
       "about": [
         { "@type": "Thing", "name": "How to get to Camiguin from Cebu" },
@@ -228,7 +228,7 @@ You've found the flight. You've untangled the ports. Now the only thing left is 
     },
     {
       "@type": "HowTo",
-      "@id": "https://txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu#howto",
+      "@id": "https://www.txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu#howto",
       "name": "How to get to Camiguin from Cebu by flight",
       "description": "The fastest way to reach Camiguin from Cebu: a roughly 55-minute Cebgo flight from Cebu (CEB) to Camiguin Airport (CGM), then a short transfer to Mambajao.",
       "totalTime": "PT2H20M",
@@ -246,34 +246,34 @@ You've found the flight. You've untangled the ports. Now the only thing left is 
           "position": 1,
           "name": "Get to Mactan-Cebu International Airport (CEB)",
           "text": "From Cebu City, take an airport bus from around PHP 50 or a taxi for roughly PHP 250. Allow about an hour with traffic.",
-          "url": "https://txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu#fly-from-cebu"
+          "url": "https://www.txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu#fly-from-cebu"
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "Fly Cebu (CEB) to Camiguin (CGM) on Cebgo",
           "text": "Book through Cebu Pacific; the nonstop is operated by Cebgo on a turboprop ATR, about 55 minutes in the air. There is typically one departure a day, so confirm the current schedule and book early.",
-          "url": "https://txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu#fly-from-cebu"
+          "url": "https://www.txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu#fly-from-cebu"
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Clear Camiguin (Mambajao) Airport",
           "text": "CGM is small and friendly; bags come off quickly and you are outside within minutes.",
-          "url": "https://txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu#fly-from-cebu"
+          "url": "https://www.txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu#fly-from-cebu"
         },
         {
           "@type": "HowToStep",
           "position": 4,
           "name": "Transfer to Mambajao",
           "text": "The airport is about 7 km from Mambajao town. A tricycle runs from around PHP 50 and the ride is a short hop. Resort guests at Txaleta de Camiguin receive a complimentary pick-up, as there is no ride-hailing on the island.",
-          "url": "https://txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu#camiguin-airport-to-mambajao"
+          "url": "https://www.txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu#camiguin-airport-to-mambajao"
         }
       ]
     },
     {
       "@type": "FAQPage",
-      "@id": "https://txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu#faq",
+      "@id": "https://www.txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu#faq",
       "mainEntity": [
         {
           "@type": "Question",

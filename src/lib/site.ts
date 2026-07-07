@@ -9,7 +9,7 @@ export const site = {
   tagline: "Come Home to Camiguin",
   description:
     "A family-owned boutique resort on a Camiguin clifftop — Filipino-Spanish heritage, ocean-view rooms, an infinity pool, personalized island experiences and heartfelt hospitality, just minutes from Camiguin Airport.",
-  url: "https://txaletadecamiguin.com",
+  url: "https://www.txaletadecamiguin.com",
 
   location: {
     address: "Purok 6, Puting Balas, Mambajao, 9100 Camiguin, Philippines",

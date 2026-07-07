@@ -198,28 +198,28 @@ Come for the views. Stay for the feeling. Welcome home.
   "@graph": [
     {
       "@type": "BlogPosting",
-      "@id": "https://txaletadecamiguin.com/guides/camiguin-vs-siquijor#article",
+      "@id": "https://www.txaletadecamiguin.com/guides/camiguin-vs-siquijor#article",
       "headline": "Camiguin vs Siquijor: Which Island to Choose (2026)",
       "description": "Camiguin vs Siquijor, settled. Compare beaches, diving, vibe, getting there and days needed in one honest table, then see which island fits your trip best.",
-      "url": "https://txaletadecamiguin.com/guides/camiguin-vs-siquijor",
+      "url": "https://www.txaletadecamiguin.com/guides/camiguin-vs-siquijor",
       "datePublished": "2026-06-22",
       "dateModified": "2026-06-22",
       "inLanguage": "en",
-      "image": "https://txaletadecamiguin.com/images/guides/camiguin-vs-siquijor-volcanic-coast.png",
+      "image": "https://www.txaletadecamiguin.com/images/guides/camiguin-vs-siquijor-volcanic-coast.png",
       "keywords": "Camiguin vs Siquijor, Siquijor or Camiguin, is Camiguin worth visiting, Camiguin or Siquijor for beaches, Camiguin or Siquijor for diving, how to get from Siquijor to Camiguin, Camiguin vs Siquijor how many days",
       "articleSection": "Travel Guides",
       "author": {
         "@type": "Organization",
         "name": "Txaleta de Camiguin",
-        "url": "https://txaletadecamiguin.com"
+        "url": "https://www.txaletadecamiguin.com"
       },
       "publisher": {
         "@type": "Organization",
         "name": "Txaleta de Camiguin",
-        "url": "https://txaletadecamiguin.com",
+        "url": "https://www.txaletadecamiguin.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://txaletadecamiguin.com/images/brand/logo-reveal.webp"
+          "url": "https://www.txaletadecamiguin.com/images/brand/logo-reveal.webp"
         },
         "address": {
           "@type": "PostalAddress",
@@ -233,7 +233,7 @@ Come for the views. Stay for the feeling. Welcome home.
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://txaletadecamiguin.com/guides/camiguin-vs-siquijor"
+        "@id": "https://www.txaletadecamiguin.com/guides/camiguin-vs-siquijor"
       },
       "about": [
         { "@type": "Place", "name": "Camiguin, Philippines" },
@@ -242,7 +242,7 @@ Come for the views. Stay for the feeling. Welcome home.
     },
     {
       "@type": "FAQPage",
-      "@id": "https://txaletadecamiguin.com/guides/camiguin-vs-siquijor#faq",
+      "@id": "https://www.txaletadecamiguin.com/guides/camiguin-vs-siquijor#faq",
       "mainEntity": [
         {
           "@type": "Question",

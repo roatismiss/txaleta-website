@@ -59,7 +59,7 @@ export const menuMeta = {
   intro:
     "Dishes made to be shared, on a clifftop above the Bohol Sea — paella and tapas, beloved Filipino plates, slow mornings and moonlight cocktails. Turn the page to explore the table.",
   // Public URL the concierge chatbot shares when guests ask for the menu.
-  url: "https://txaletadecamiguin.com/dining/menu",
+  url: "https://www.txaletadecamiguin.com/dining/menu",
 };
 
 export const menuPages: MenuPage[] = [

@@ -178,9 +178,9 @@ When you are ready, we will have the airport transfer arranged and the pool open
 
 Come for the views. Stay for the feeling. Welcome home.
 
-*Txaleta de Camiguin · Purok 6, Puting Balas, Mambajao, 9100 Camiguin, Philippines · +63 917 770 4656 · [WhatsApp / Viber](https://wa.me/639178182277) · [txaletadecamiguin.com](https://txaletadecamiguin.com)*
+*Txaleta de Camiguin · Purok 6, Puting Balas, Mambajao, 9100 Camiguin, Philippines · +63 917 770 4656 · [WhatsApp / Viber](https://wa.me/639178182277) · [txaletadecamiguin.com](https://www.txaletadecamiguin.com)*
 
-![White Island sandbar off Camiguin, one of the best islands in the Philippines, with the volcanic skyline behind](https://txaletadecamiguin.com/images/guides/best-islands-philippines-white-island-sandbar.png)
+![White Island sandbar off Camiguin, one of the best islands in the Philippines, with the volcanic skyline behind](https://www.txaletadecamiguin.com/images/guides/best-islands-philippines-white-island-sandbar.png)
 
 ```json
 {
@@ -188,27 +188,27 @@ Come for the views. Stay for the feeling. Welcome home.
   "@graph": [
     {
       "@type": "BlogPosting",
-      "@id": "https://txaletadecamiguin.com/guides/best-islands-in-the-philippines#article",
+      "@id": "https://www.txaletadecamiguin.com/guides/best-islands-in-the-philippines#article",
       "headline": "Best Islands in the Philippines? Camiguin Is the One the Lists Forget",
       "description": "Looking for the best islands in the Philippines? Skip the Boracay crowds. Discover why Camiguin tops our shortlist of underrated islands — volcanoes, the White Island sandbar, springs & where to stay.",
-      "url": "https://txaletadecamiguin.com/guides/best-islands-in-the-philippines",
+      "url": "https://www.txaletadecamiguin.com/guides/best-islands-in-the-philippines",
       "datePublished": "2026-06-22",
       "dateModified": "2026-06-22",
       "inLanguage": "en",
-      "image": "https://txaletadecamiguin.com/images/guides/best-islands-philippines-white-island-sandbar.png",
+      "image": "https://www.txaletadecamiguin.com/images/guides/best-islands-philippines-white-island-sandbar.png",
       "keywords": "best islands in the Philippines, underrated islands in the Philippines, is Camiguin worth visiting, most underrated island in the Philippines, Camiguin hidden gem, Camiguin vs Siquijor",
       "author": {
         "@type": "Organization",
         "name": "Txaleta de Camiguin",
-        "url": "https://txaletadecamiguin.com"
+        "url": "https://www.txaletadecamiguin.com"
       },
       "publisher": {
         "@type": "Organization",
         "name": "Txaleta de Camiguin",
-        "url": "https://txaletadecamiguin.com",
+        "url": "https://www.txaletadecamiguin.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://txaletadecamiguin.com/images/brand/logo-reveal.webp"
+          "url": "https://www.txaletadecamiguin.com/images/brand/logo-reveal.webp"
         },
         "address": {
           "@type": "PostalAddress",
@@ -222,12 +222,12 @@ Come for the views. Stay for the feeling. Welcome home.
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://txaletadecamiguin.com/guides/best-islands-in-the-philippines"
+        "@id": "https://www.txaletadecamiguin.com/guides/best-islands-in-the-philippines"
       }
     },
     {
       "@type": "ItemList",
-      "@id": "https://txaletadecamiguin.com/guides/best-islands-in-the-philippines#itemlist",
+      "@id": "https://www.txaletadecamiguin.com/guides/best-islands-in-the-philippines#itemlist",
       "name": "Most underrated best islands in the Philippines",
       "description": "A ranked shortlist of the Philippines' most underrated islands, led by Camiguin.",
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
@@ -279,7 +279,7 @@ Come for the views. Stay for the feeling. Welcome home.
     },
     {
       "@type": "FAQPage",
-      "@id": "https://txaletadecamiguin.com/guides/best-islands-in-the-philippines#faq",
+      "@id": "https://www.txaletadecamiguin.com/guides/best-islands-in-the-philippines#faq",
       "mainEntity": [
         {
           "@type": "Question",
