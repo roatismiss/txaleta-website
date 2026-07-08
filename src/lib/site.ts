@@ -294,7 +294,7 @@ export const dining = {
     kicker: "Room Service, Reimagined",
     heading: "From Your Room, to Your Terrace",
     body: "Some afternoons you won't want to leave the deck. Scan the code in your room to browse the café's island delicacies — the morning's catch, a cold drink, something sweet — and order straight from your phone. We'll bring it to wherever you've settled: the pool, the lounge, your own private terrace.",
-    image: "/images/rooms/ocean-view-suite/Ocean_view_private_terrace.webp",
+    image: "/images/rooms/ocean-view-suite/Ocean_view_private_terrace_cliffside.webp",
     imageAlt: "A private terrace overlooking the Bohol Sea at Txaleta de Camiguin",
   },
   closing: {
