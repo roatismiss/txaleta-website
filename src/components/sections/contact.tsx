@@ -60,7 +60,7 @@ export function Contact() {
             </a>
             <a href={`viber://chat?number=%2B${site.contact.viber}`} className="flex items-center gap-4 text-white/80 transition-colors hover:text-white">
               <ViberIcon className="h-5 w-5 shrink-0 text-brand" />
-              <span className="text-sm">Viber · +63 917 818 2277</span>
+              <span className="text-sm">Viber · +63 917 582 2277</span>
             </a>
             <a href={`mailto:${site.contact.email}`} className="flex items-center gap-4 text-white/80 transition-colors hover:text-white">
               <Mail className="h-5 w-5 shrink-0 text-brand" strokeWidth={1.5} />

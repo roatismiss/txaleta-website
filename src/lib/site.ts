@@ -24,7 +24,7 @@ export const site = {
     phone: "+63 917 770 4656",
     phoneRaw: "+639177704656",
     whatsapp: "639175822277",
-    viber: "639178182277",
+    viber: "639175822277",
     email: "txaletadecamiguin@gmail.com",
   },
 
