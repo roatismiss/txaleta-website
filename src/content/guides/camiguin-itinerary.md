@@ -217,7 +217,7 @@ This is the plan we would follow ourselves, and most days, in pieces, we do. Thr
 
 Come for the views. Stay for the feeling. Welcome home.
 
-*Txaleta de Camiguin — Purok 6, Puting Balas, Mambajao, 9100 Camiguin, Philippines. Call +63 917 770 4656 or message us on [WhatsApp](https://wa.me/39175822277).*
+*Txaleta de Camiguin — Purok 6, Puting Balas, Mambajao, 9100 Camiguin, Philippines. Call +63 917 770 4656 or message us on [WhatsApp](https://wa.me/639175822277).*
 
 ```json
 {

@@ -56,7 +56,7 @@ export function Contact() {
             </a>
             <a href={`https://wa.me/${site.contact.whatsapp}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-white/80 transition-colors hover:text-white">
               <WhatsAppIcon className="h-5 w-5 shrink-0 text-brand" />
-              <span className="text-sm">WhatsApp · +39 175 822 277</span>
+              <span className="text-sm">WhatsApp · +63 917 582 2277</span>
             </a>
             <a href={`viber://chat?number=%2B${site.contact.viber}`} className="flex items-center gap-4 text-white/80 transition-colors hover:text-white">
               <ViberIcon className="h-5 w-5 shrink-0 text-brand" />

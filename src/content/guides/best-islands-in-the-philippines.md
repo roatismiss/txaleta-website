@@ -178,7 +178,7 @@ When you are ready, we will have the airport transfer arranged and the pool open
 
 Come for the views. Stay for the feeling. Welcome home.
 
-*Txaleta de Camiguin · Purok 6, Puting Balas, Mambajao, 9100 Camiguin, Philippines · +63 917 770 4656 · [WhatsApp](https://wa.me/39175822277) · [txaletadecamiguin.com](https://www.txaletadecamiguin.com)*
+*Txaleta de Camiguin · Purok 6, Puting Balas, Mambajao, 9100 Camiguin, Philippines · +63 917 770 4656 · [WhatsApp](https://wa.me/639175822277) · [txaletadecamiguin.com](https://www.txaletadecamiguin.com)*
 
 ![White Island sandbar off Camiguin, one of the best islands in the Philippines, with the volcanic skyline behind](https://www.txaletadecamiguin.com/images/guides/best-islands-philippines-white-island-sandbar.png)
 

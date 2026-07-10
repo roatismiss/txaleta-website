@@ -186,7 +186,7 @@ If you've read this far, you already know which traveller you are. The backpacke
 
 We'll arrange your airport pickup. We'll book your banca to White Island, your *hilot* massage, your quiet corner of the cliff. We'll pour the Spanish latte at sunrise and the cocktail at sunset.
 
-[Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/39175822277) and tell us your dates. Reach us anytime at +63 917 770 4656, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
+[Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277) and tell us your dates. Reach us anytime at +63 917 770 4656, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 
 Come for the views. Stay for the feeling. Welcome home.
 

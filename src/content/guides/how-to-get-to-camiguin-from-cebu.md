@@ -181,7 +181,7 @@ Fly. It's faster, usually cheaper once you count the buses, and far simpler — 
 
 You've found the flight. You've untangled the ports. Now the only thing left is the easy part. [Book your stay direct](/book), tell us your arrival, and we'll be waiting at the runway with the engine running and the sea already in view. Come for the views. Stay for the feeling. Welcome home.
 
-📍 Txaleta de Camiguin · Purok 6, Puting Balas, Mambajao, 9100 Camiguin, Philippines · Call +63 917 770 4656 · [WhatsApp +39 175 822 277](https://wa.me/39175822277)
+📍 Txaleta de Camiguin · Purok 6, Puting Balas, Mambajao, 9100 Camiguin, Philippines · Call +63 917 770 4656 · [WhatsApp +63 917 582 2277](https://wa.me/639175822277)
 
 ```json
 {
