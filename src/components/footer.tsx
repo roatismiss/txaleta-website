@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { FacebookIcon, InstagramIcon, TikTokIcon } from "./icons";
@@ -61,7 +62,7 @@ export function Footer() {
             <h3 className="label text-[10px] text-[#9db8ef]">Contact</h3>
             <ul className="mt-5 space-y-3 text-sm text-white/65">
               <li>{site.location.address}</li>
-              <li><a href={`tel:${site.contact.phoneRaw}`} className="transition-colors hover:text-white">{site.contact.phone}</a></li>
+              <li><a href={`tel:+${site.contact.whatsapp}`} className="transition-colors hover:text-white">+63 917 582 2277</a></li>
               <li><a href={`mailto:${site.contact.email}`} className="transition-colors hover:text-white">{site.contact.email}</a></li>
             </ul>
           </div>
