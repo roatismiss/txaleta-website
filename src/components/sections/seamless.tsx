@@ -1,29 +1,34 @@
 import Link from "next/link";
 import { CalendarCheck, Languages, UtensilsCrossed, ArrowRight } from "lucide-react";
 import { seamless } from "@/lib/site";
+import { homeSections } from "@/locales/content/home-sections";
+import { localePath, type Locale } from "@/lib/i18n";
+
 import { Reveal, Kicker } from "../reveal";
 import { PoweredByCloudReef } from "../powered-by";
 
 // One icon per pillar, mapped by index to the copy in site.ts.
 const icons = [CalendarCheck, Languages, UtensilsCrossed] as const;
 
-export function Seamless() {
+export function Seamless({ lang = "en" }: { lang?: Locale }) {
+  const t = homeSections[lang].seamless;
+  const pillars = seamless.pillars.map((p, i) => ({ ...p, ...t.pillars[i] }));
   return (
     <section className="bg-ink py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Kicker className="text-sand">{seamless.kicker}</Kicker>
+          <Kicker className="text-sand">{t.kicker}</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight text-cream sm:text-5xl">
-            {seamless.heading}
+            {t.heading}
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-[15px] leading-relaxed text-cream/65">
-            {seamless.body}
+            {t.body}
           </p>
         </Reveal>
 
         {/* Three pillars — the CloudReef-powered guest experience */}
         <div className="mt-16 grid gap-10 sm:grid-cols-3 sm:gap-8">
-          {seamless.pillars.map((pillar, i) => {
+          {pillars.map((pillar, i) => {
             const Icon = icons[i] ?? CalendarCheck;
             return (
               <Reveal key={pillar.title} delay={i * 0.08}>
@@ -43,10 +48,10 @@ export function Seamless() {
 
         <Reveal className="mt-14 flex flex-col items-center gap-5 text-center">
           <Link
-            href="/dining#room-service"
+            href={localePath(lang, "/dining") + "#room-service"}
             className="group inline-flex items-center gap-3 border-b border-sand pb-1 text-cream transition-colors hover:text-sand"
           >
-            <span className="label text-[11px]">See It in Action</span>
+            <span className="label text-[11px]">{t.cta}</span>
             <ArrowRight
               className="h-4 w-4 transition-transform group-hover:translate-x-1"
               strokeWidth={1.5}

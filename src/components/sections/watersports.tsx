@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Reveal, Kicker } from "../reveal";
+import { homeSections } from "@/locales/content/home-sections";
+import { localePath, type Locale } from "@/lib/i18n";
 
 // Two watersports rides shown over the turquoise ocean banner. Photos live in
 // public/images/experiences; the ocean backdrop (ocean_cali.jpg) carries the
@@ -19,7 +21,9 @@ const rides = [
   },
 ];
 
-export function Watersports() {
+export function Watersports({ lang = "en" }: { lang?: Locale }) {
+  const t = homeSections[lang].watersports;
+  const localRides = rides.map((r, i) => ({ ...r, ...t.rides[i] }));
   return (
     <section id="watersports" className="relative overflow-hidden py-24 sm:py-32">
       {/* Ocean backdrop — Vila Cali turquoise water */}
@@ -36,18 +40,17 @@ export function Watersports() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 [text-shadow:0_2px_18px_rgba(18,26,18,0.55)]">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Kicker className="text-sand">On the Water</Kicker>
+          <Kicker className="text-sand">{t.kicker}</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight text-cream sm:text-5xl">
-            Jet Ski &amp; Speedboat
+            {t.title}
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-[15px] leading-relaxed text-cream/85">
-            The Bohol Sea is yours to open up. Carve across it on a jet ski, or let our
-            private speedboat run you out to White Island and the quiet coves beyond.
+            {t.intro}
           </p>
         </Reveal>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2">
-          {rides.map((ride, i) => (
+          {localRides.map((ride, i) => (
             <Reveal key={ride.title} delay={i * 0.08}>
               <div className="group relative h-[24rem] overflow-hidden sm:h-[28rem]">
                 <Image
@@ -71,16 +74,16 @@ export function Watersports() {
 
         <Reveal className="mt-14 flex flex-col items-center gap-6 text-center">
           <Link
-            href="/book"
+            href={localePath(lang, "/book")}
             className="label bg-brand px-8 py-5 text-[11px] text-white transition-colors hover:bg-brand-dark"
           >
             Book Your Time on the Water
           </Link>
           <Link
-            href="/experiences"
+            href={localePath(lang, "/experiences")}
             className="group inline-flex items-center gap-3 border-b border-sand pb-1 text-cream transition-colors hover:text-sand"
           >
-            <span className="label text-[11px]">All Experiences</span>
+            <span className="label text-[11px]">{t.ctaAll}</span>
             <ArrowRight
               className="h-4 w-4 transition-transform group-hover:translate-x-1"
               strokeWidth={1.5}

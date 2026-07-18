@@ -2,10 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { dining } from "@/lib/site";
+import { homeSections } from "@/locales/content/home-sections";
+import { localePath, type Locale } from "@/lib/i18n";
+
 import { Reveal, Kicker } from "../reveal";
 import { TilePattern, PalmCorner } from "../brand-texture";
 
-export function Dining() {
+export function Dining({ lang = "en" }: { lang?: Locale }) {
+  const t = homeSections[lang].dining;
   return (
     <section id="dining" className="relative overflow-hidden bg-ink py-24 text-white sm:py-32">
       <TilePattern tone="cream" fade="top" className="opacity-[0.08]" />
@@ -13,18 +17,18 @@ export function Dining() {
       <PalmCorner corner="br" className="text-cream opacity-[0.07] lg:opacity-[0.10]" />
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20">
         <Reveal>
-          <Kicker className="text-brand">{dining.kicker}</Kicker>
+          <Kicker className="text-brand">{t.kicker}</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight sm:text-5xl">
-            {dining.heading}
+            {t.heading}
           </h2>
           <p className="mt-7 max-w-lg text-[15px] leading-relaxed text-white/70">
-            {dining.body}
+            {t.body}
           </p>
           <Link
-            href="/dining"
+            href={localePath(lang, "/dining")}
             className="group mt-9 inline-flex items-center gap-3 border-b border-sand pb-1 transition-colors hover:text-sand"
           >
-            <span className="label text-[11px]">Explore Our Cuisine</span>
+            <span className="label text-[11px]">{t.cta}</span>
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
           </Link>
         </Reveal>

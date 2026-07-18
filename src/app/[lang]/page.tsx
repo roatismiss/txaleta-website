@@ -27,7 +27,9 @@ export async function generateMetadata({ params }: PageProps<"/[lang]">) {
   };
 }
 
-export default function Home() {
+export default async function Home({ params }: PageProps<"/[lang]">) {
+  const { lang } = await params;
+  const locale = lang as Locale;
   return (
     <>
       <Hero />
@@ -36,14 +38,14 @@ export default function Home() {
       <section className="relative z-30 -mt-28 px-4 pb-2 lg:hidden">
         <BookingBar />
       </section>
-      <Intro />
-      <Accommodation />
-      <Dining />
-      <Experiences />
-      <Watersports />
-      <Seamless />
-      <Gallery />
-      <Testimonials />
+      <Intro lang={locale} />
+      <Accommodation lang={locale} />
+      <Dining lang={locale} />
+      <Experiences lang={locale} />
+      <Watersports lang={locale} />
+      <Seamless lang={locale} />
+      <Gallery lang={locale} />
+      <Testimonials lang={locale} />
       <BrandMoment />
       <JsonLd />
     </>

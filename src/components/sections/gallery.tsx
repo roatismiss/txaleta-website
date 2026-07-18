@@ -2,9 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { galleryPreview } from "@/lib/site";
+import { homeSections } from "@/locales/content/home-sections";
+import { localePath, type Locale } from "@/lib/i18n";
+
 import { Reveal, Kicker } from "../reveal";
 
-export function Gallery() {
+export function Gallery({ lang = "en" }: { lang?: Locale }) {
+  const t = homeSections[lang].gallery;
   return (
     <section id="gallery" className="relative overflow-hidden bg-ink py-24 sm:py-32">
       {/* Jungle-leaf backdrop (Vila Cali) — portrait crop on mobile, landscape on
@@ -29,9 +33,9 @@ export function Gallery() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/48 to-black/66" />
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center [text-shadow:0_2px_18px_rgba(0,0,0,0.6)]">
-          <Kicker className="text-sand">Between Volcano and Sea</Kicker>
+          <Kicker className="text-sand">{t.kicker}</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight text-cream sm:text-5xl">
-            The Long Look
+            {t.title}
           </h2>
         </Reveal>
 
@@ -58,10 +62,10 @@ export function Gallery() {
 
         <Reveal delay={0.15} className="mt-12 text-center">
           <Link
-            href="/gallery"
+            href={localePath(lang, "/gallery")}
             className="label inline-flex items-center gap-3 border border-cream/40 px-9 py-4 text-[11px] text-cream transition-colors hover:border-cream hover:bg-cream hover:text-ink"
           >
-            View the Full Gallery <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+            {t.cta} <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
           </Link>
         </Reveal>
       </div>

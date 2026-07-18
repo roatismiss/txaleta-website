@@ -1,24 +1,27 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { experiences } from "@/lib/site";
+import { homeSections } from "@/locales/content/home-sections";
+import { localePath, type Locale } from "@/lib/i18n";
+
 import { Reveal, Kicker } from "../reveal";
 import { ExperienceCardImage } from "../experience-card-image";
 import { PalmCorner } from "../brand-texture";
 
-export function Experiences() {
+export function Experiences({ lang = "en" }: { lang?: Locale }) {
+  const t = homeSections[lang].experiences;
   return (
     <section id="experiences" className="relative overflow-hidden bg-white py-24 sm:py-32">
       <PalmCorner corner="tr" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
       <PalmCorner corner="bl" className="text-palm opacity-[0.12] lg:opacity-[0.18]" />
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Kicker className="text-brand">Things to Do</Kicker>
+          <Kicker className="text-brand">{t.kicker}</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
-            Four Ways to Meet the Island
+            {t.title}
           </h2>
           <p className="mt-6 text-[15px] leading-relaxed text-ink/65">
-            Camiguin gives up its best on its own terms — by speedboat, by ridgeline, by the
-            slow turn of a coastal road. Choose how you go.
+            {t.intro}
           </p>
         </Reveal>
 
@@ -46,10 +49,10 @@ export function Experiences() {
 
         <Reveal className="mt-14 text-center">
           <Link
-            href="/experiences"
+            href={localePath(lang, "/experiences")}
             className="group inline-flex items-center gap-3 border-b border-sand pb-1 text-ink transition-colors hover:text-sand"
           >
-            <span className="label text-[11px]">Explore All Experiences</span>
+            <span className="label text-[11px]">{t.cta}</span>
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
           </Link>
         </Reveal>

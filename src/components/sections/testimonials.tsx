@@ -1,15 +1,19 @@
 import { Quote } from "lucide-react";
 import { testimonials } from "@/lib/site";
+import { homeSections } from "@/locales/content/home-sections";
+import type { Locale } from "@/lib/i18n";
+
 import { Reveal, Kicker } from "../reveal";
 
-export function Testimonials() {
+export function Testimonials({ lang = "en" }: { lang?: Locale }) {
+  const tt = homeSections[lang].testimonials;
   return (
     <section className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Kicker className="text-brand">Voices from Puting Balas</Kicker>
+          <Kicker className="text-brand">{tt.kicker}</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
-            What Stayed With Them
+            {tt.title}
           </h2>
         </Reveal>
 
