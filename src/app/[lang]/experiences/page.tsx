@@ -4,7 +4,10 @@ import { getPageSeo } from "@/locales/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { experiences, signature, rentals, site } from "@/lib/site";
+import { experiences, signature, site } from "@/lib/site";
+import { experiencesContent } from "@/locales/content/experiences";
+import { experiencesPage } from "@/locales/content/experiences-page";
+import { localePath } from "@/lib/i18n";
 import { Reveal, Kicker } from "@/components/reveal";
 import { ExperienceCardImage } from "@/components/experience-card-image";
 import { ExperiencesHeroSlideshow } from "@/components/experiences-hero-slideshow";
@@ -27,7 +30,14 @@ const island = [
   { name: "Lanzones", note: "Camiguin grows the sweetest lanzones in the country. Come in October and the whole island turns out to celebrate them." },
 ];
 
-export default function ExperiencesPage() {
+export default async function ExperiencesPage({ params }: PageProps<"/[lang]">) {
+  const { lang: rawLang } = await params;
+  const lang = rawLang as Locale;
+  const t = experiencesContent[lang];
+  const P = experiencesPage[lang];
+  const rentals = t.rentals;
+  const sigItems = signature.items.map((it, i) => ({ ...it, ...t.signature.items[i] }));
+  const expCards = experiences.map((e, i) => ({ ...e, ...t.cards[i] }));
   return (
     <>
       {/* Banner */}
@@ -43,8 +53,8 @@ export default function ExperiencesPage() {
           ]}
         />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-14 text-white">
-          <Kicker className="font-bold text-brand [text-shadow:0_0_8px_rgba(0,0,0,1),0_0_16px_rgba(0,0,0,1),0_2px_4px_rgba(0,0,0,0.95),0_4px_24px_rgba(0,0,0,0.8)]">Things to Do on Camiguin</Kicker>
-          <h1 className="font-display mt-4 text-5xl font-light sm:text-6xl md:text-7xl">Experiences</h1>
+          <Kicker className="font-bold text-brand [text-shadow:0_0_8px_rgba(0,0,0,1),0_0_16px_rgba(0,0,0,1),0_2px_4px_rgba(0,0,0,0.95),0_4px_24px_rgba(0,0,0,0.8)]">{P.heroKicker}</Kicker>
+          <h1 className="font-display mt-4 text-5xl font-light sm:text-6xl md:text-7xl">{P.heroTitle}</h1>
         </div>
       </section>
 
@@ -52,9 +62,7 @@ export default function ExperiencesPage() {
       <section className="bg-white py-20 sm:py-28">
         <Reveal className="mx-auto max-w-3xl px-6 text-center">
           <p className="font-display text-2xl font-light italic leading-snug text-ink/80 sm:text-3xl">
-            The best journeys are the ones that feel personal. Whether you&apos;re chasing
-            waterfalls, island hopping, or watching the sunrise with a coffee in hand, we&apos;ll
-            help you experience Camiguin in a way that matches your pace.
+            {P.introQuote}
           </p>
         </Reveal>
       </section>
@@ -66,15 +74,15 @@ export default function ExperiencesPage() {
         <PalmCorner corner="br" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <Kicker className="text-brand">{signature.kicker}</Kicker>
+            <Kicker className="text-brand">{t.signature.kicker}</Kicker>
             <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
-              {signature.heading}
+              {t.signature.heading}
             </h2>
-            <p className="mt-6 text-[15px] leading-relaxed text-ink/65">{signature.body}</p>
+            <p className="mt-6 text-[15px] leading-relaxed text-ink/65">{t.signature.body}</p>
           </Reveal>
 
           <div className="mt-16 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-            {signature.items.map((exp, i) => (
+            {sigItems.map((exp, i) => (
               <Reveal key={exp.name} delay={(i % 4) * 0.06}>
                 <div className="group flex h-full flex-col">
                   <div className="relative aspect-[4/5] w-full overflow-hidden">
@@ -122,18 +130,17 @@ export default function ExperiencesPage() {
         <BananaGrove corner="br" width={300} size={760} plants={4} seed={211} fillOpacity={1} className="hidden text-mango lg:block" />
         <div className="text-halo relative z-10 mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <Kicker className="text-brand">Out on the Island</Kicker>
+            <Kicker className="text-brand">{P.adventuresKicker}</Kicker>
             <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
-              Island Adventures
+              {P.adventuresHeading}
             </h2>
             <p className="mt-6 text-[15px] leading-relaxed text-ink/65">
-              By banca, by ridgeline, by the slow turn of a coastal road — Camiguin gives up its
-              best on its own terms. Choose how you go.
+              {P.adventuresBody}
             </p>
           </Reveal>
 
           <div className="mt-16 flex flex-col gap-20 sm:gap-28">
-            {experiences.map((exp, i) => (
+            {expCards.map((exp, i) => (
               <Reveal key={exp.title}>
                 <div className={`grid items-center gap-8 lg:grid-cols-2 lg:gap-16 ${i % 2 === 1 ? "lg:[direction:rtl]" : ""}`}>
                   <div className="relative aspect-[4/3] w-full overflow-hidden [direction:ltr]">
@@ -158,7 +165,7 @@ export default function ExperiencesPage() {
                     )}
                   </div>
                   <div className="[direction:ltr]">
-                    <Kicker>{`0${i + 1} · Adventure`}</Kicker>
+                    <Kicker>{`0${i + 1} · ${P.adventureLabel}`}</Kicker>
                     <h2 className="font-display mt-4 text-3xl font-light text-ink sm:text-4xl">{exp.title}</h2>
                     <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-ink/70">{exp.description}</p>
                   </div>
@@ -173,9 +180,9 @@ export default function ExperiencesPage() {
       <section className="bg-ink py-20 text-white sm:py-28">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <Kicker>The Shore &amp; the Sea</Kicker>
+            <Kicker>{P.shoreKicker}</Kicker>
             <h2 className="font-display mt-5 text-4xl font-light sm:text-5xl">
-              Days That Begin at the Waterline
+              {P.shoreHeading}
             </h2>
           </Reveal>
           <div className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -208,18 +215,17 @@ export default function ExperiencesPage() {
         <BananaGrove corner="br" width={260} size={420} plants={3} seed={711} fillOpacity={1} className="hidden text-mango lg:block" />
         <div className="text-halo relative z-10 mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <Kicker>Beyond the Resort</Kicker>
+            <Kicker>{P.beyondKicker}</Kicker>
             <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
-              The Whole Island Is the Day Trip
+              {P.beyondHeading}
             </h2>
             <p className="mt-6 text-[15px] leading-relaxed text-ink/65">
-              One road, sixty-four kilometres, and more than enough to fill every morning
-              of your stay. We&apos;ll help you plan the order.
+              {P.beyondBody}
             </p>
           </Reveal>
 
           <div className="mt-16 grid gap-x-12 gap-y-10 sm:grid-cols-2">
-            {island.map((p, i) => (
+            {P.island.map((p, i) => (
               <Reveal key={p.name} delay={(i % 2) * 0.08}>
                 <div className="flex gap-5 border-t border-ink/10 pt-6">
                   <span className="font-display text-2xl font-light text-brand">{`0${i + 1}`}</span>
@@ -295,7 +301,7 @@ export default function ExperiencesPage() {
               rel="noopener noreferrer"
               className="label mt-8 inline-flex items-center gap-3 bg-brand px-9 py-4 text-[11px] text-white transition-colors hover:bg-brand-dark"
             >
-              Arrange a Rental <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+              {P.arrangeRental} <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
             </a>
           </Reveal>
         </div>
@@ -307,16 +313,15 @@ export default function ExperiencesPage() {
         <PalmCorner corner="tl" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
         <PalmCorner corner="br" className="text-palm opacity-[0.10] lg:opacity-[0.14]" />
         <Reveal className="relative z-10 mx-auto max-w-2xl px-6 text-center">
-          <h2 className="font-display text-3xl font-light text-ink sm:text-4xl">Let Us Plan Your Days</h2>
+          <h2 className="font-display text-3xl font-light text-ink sm:text-4xl">{P.planHeading}</h2>
           <p className="mx-auto mt-5 max-w-md text-[15px] leading-relaxed text-ink/65">
-            Tell us how long you&apos;re staying and we&apos;ll line up the boats, the
-            treks and the quiet corners — and hold the right room for it.
+            {P.planBody}
           </p>
           <Link
-            href="/book"
+            href={localePath(lang, "/book")}
             className="label mt-9 inline-flex items-center gap-3 bg-brand px-9 py-4 text-[11px] text-white transition-colors hover:bg-brand-dark"
           >
-            Plan Your Stay <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+            {P.planCta} <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
           </Link>
         </Reveal>
       </section>

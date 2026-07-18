@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { experiences } from "@/lib/site";
 import { homeSections } from "@/locales/content/home-sections";
+import { experiencesContent } from "@/locales/content/experiences";
 import { localePath, type Locale } from "@/lib/i18n";
 
 import { Reveal, Kicker } from "../reveal";
@@ -10,6 +11,7 @@ import { PalmCorner } from "../brand-texture";
 
 export function Experiences({ lang = "en" }: { lang?: Locale }) {
   const t = homeSections[lang].experiences;
+  const cards = experiences.map((e, i) => ({ ...e, ...experiencesContent[lang].cards[i] }));
   return (
     <section id="experiences" className="relative overflow-hidden bg-white py-24 sm:py-32">
       <PalmCorner corner="tr" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
@@ -26,7 +28,7 @@ export function Experiences({ lang = "en" }: { lang?: Locale }) {
         </Reveal>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {experiences.map((exp, i) => (
+          {cards.map((exp, i) => (
             <Reveal key={exp.title} delay={i * 0.08}>
               <div className="relative h-[26rem] overflow-hidden">
                 <ExperienceCardImage
