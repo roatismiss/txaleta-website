@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { community, site } from "@/lib/site";
+import { communityContent } from "@/locales/content/community";
+import { localePath } from "@/lib/i18n";
 import { InstagramIcon } from "@/components/icons";
 import { InstagramEmbed } from "@/components/instagram-embed";
 import { Reveal, Kicker } from "@/components/reveal";
@@ -16,7 +18,13 @@ const meta: Metadata = {
     "Community, culture and island stewardship at Txaleta de Camiguin — local hiring, artisan partnerships with Natalia Sea Glass, Mt. Hibok-Hibok guides, Scuba de Oro and the people who make the island unforgettable.",
 };
 
-export default function CommunityPage() {
+export default async function CommunityPage({ params }: PageProps<"/[lang]">) {
+  const { lang: rawLang } = await params;
+  const lang = rawLang as Locale;
+  const t = communityContent[lang];
+  const stories = community.stories.map((st, i) => ({ ...st, ...t.stories[i] }));
+  const artisanItems = community.artisans.items.map((it, i) => ({ ...it, ...t.artisans.items[i] }));
+  const seaItems = community.sea.items.map((it, i) => ({ ...it, ...t.sea.items[i] }));
   return (
     <>
       {/* ── Banner ── */}
@@ -32,10 +40,10 @@ export default function CommunityPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/40" />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-16 text-white">
           <Kicker className="font-bold text-brand [text-shadow:0_0_8px_rgba(0,0,0,1),0_0_16px_rgba(0,0,0,1),0_2px_4px_rgba(0,0,0,0.95),0_4px_24px_rgba(0,0,0,0.8)]">
-            {community.hero.kicker}
+            {t.hero.kicker}
           </Kicker>
           <h1 className="font-display mt-4 max-w-3xl text-4xl font-light leading-[1.08] sm:text-5xl md:text-6xl">
-            {community.hero.heading}
+            {t.hero.heading}
           </h1>
         </div>
       </section>
@@ -47,9 +55,9 @@ export default function CommunityPage() {
         <PalmCorner corner="br" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
         <Reveal className="relative z-10 mx-auto max-w-3xl px-6 text-center">
           <p className="font-display text-2xl font-light italic leading-snug text-ink/80 sm:text-3xl">
-            &ldquo;{community.quote}&rdquo;
+            &ldquo;{t.quote}&rdquo;
           </p>
-          {community.intro.map((p) => (
+          {t.intro.map((p) => (
             <p key={p.slice(0, 24)} className="mt-7 text-[15px] leading-relaxed text-ink/65">
               {p}
             </p>
@@ -60,7 +68,7 @@ export default function CommunityPage() {
       {/* ── Our people — alternating story rows ── */}
       <section className="bg-cream">
         <div className="mx-auto max-w-7xl px-6">
-          {community.stories.map((s, i) => (
+          {stories.map((s, i) => (
             <Reveal key={s.kicker}>
               <div
                 className={`grid items-center gap-12 border-t border-ink/10 py-20 sm:py-28 lg:grid-cols-2 lg:gap-20 ${
@@ -100,9 +108,9 @@ export default function CommunityPage() {
       <section className="relative overflow-hidden bg-ink py-20 text-white sm:py-24">
         <TilePattern tone="cream" fade="center" className="opacity-[0.12]" />
         <Reveal className="relative z-10 mx-auto max-w-4xl px-6 text-center">
-          <Kicker className="text-sand">{community.promise.heading}</Kicker>
+          <Kicker className="text-sand">{t.promise.heading}</Kicker>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-10">
-            {community.promise.points.map((p) => (
+            {t.promise.points.map((p) => (
               <p key={p} className="font-display text-2xl font-light sm:text-3xl">
                 {p}
               </p>
@@ -115,14 +123,14 @@ export default function CommunityPage() {
       <section className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <Kicker className="text-brand">{community.artisans.kicker}</Kicker>
+            <Kicker className="text-brand">{t.artisans.kicker}</Kicker>
             <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
-              {community.artisans.heading}
+              {t.artisans.heading}
             </h2>
           </Reveal>
 
           <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:gap-16">
-            {community.artisans.items.map((a, i) => (
+            {artisanItems.map((a, i) => (
               <Reveal key={a.name} delay={(i % 2) * 0.08}>
                 <article className="flex h-full flex-col">
                   {"embed" in a && a.embed ? (
@@ -190,18 +198,18 @@ export default function CommunityPage() {
               <div className="group relative aspect-[16/10] w-full overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
                 <Image
                   src={community.mountain.image}
-                  alt={community.mountain.heading}
+                  alt={t.mountain.heading}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"
                 />
               </div>
               <div className="[text-shadow:0_2px_18px_rgba(0,0,0,0.55)]">
-                <Kicker className="text-sand">{community.mountain.kicker}</Kicker>
+                <Kicker className="text-sand">{t.mountain.kicker}</Kicker>
                 <h2 className="font-display mt-5 text-4xl font-light leading-tight text-cream sm:text-5xl">
-                  {community.mountain.heading}
+                  {t.mountain.heading}
                 </h2>
-                {community.mountain.body.map((p) => (
+                {t.mountain.body.map((p) => (
                   <p key={p.slice(0, 24)} className="mt-6 max-w-lg text-[15px] leading-relaxed text-white/80">
                     {p}
                   </p>
@@ -234,14 +242,14 @@ export default function CommunityPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/52 to-black/72" />
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <Reveal className="mx-auto max-w-2xl text-center [text-shadow:0_2px_18px_rgba(0,0,0,0.6)]">
-            <Kicker className="text-sand">{community.sea.kicker}</Kicker>
+            <Kicker className="text-sand">{t.sea.kicker}</Kicker>
             <h2 className="font-display mt-5 text-4xl font-light leading-tight text-cream sm:text-5xl">
-              {community.sea.heading}
+              {t.sea.heading}
             </h2>
           </Reveal>
 
           <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:gap-16">
-            {community.sea.items.map((s, i) => (
+            {seaItems.map((s, i) => (
               <Reveal key={s.name} delay={(i % 2) * 0.08}>
                 <article className="flex h-full flex-col">
                   <div className="group relative aspect-[16/10] w-full overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
@@ -272,18 +280,18 @@ export default function CommunityPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <div className="grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
             <Reveal>
-              <Kicker className="text-sand">{community.partners.kicker}</Kicker>
+              <Kicker className="text-sand">{t.partners.kicker}</Kicker>
               <h2 className="font-display mt-5 text-4xl font-light leading-tight sm:text-5xl">
-                {community.partners.heading}
+                {t.partners.heading}
               </h2>
               <p className="mt-7 max-w-md text-[15px] leading-relaxed text-white/65">
-                {community.partners.body}
+                {t.partners.body}
               </p>
             </Reveal>
 
             <Reveal delay={0.1}>
               <ul className="grid gap-x-10 gap-y-1 sm:grid-cols-2">
-                {community.partners.list.map((name) => (
+                {t.partners.list.map((name) => (
                   <li
                     key={name}
                     className="flex items-start gap-3 border-t border-white/15 py-4 text-[15px] leading-snug text-white/75"
@@ -303,18 +311,18 @@ export default function CommunityPage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-14 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
             <Reveal>
-              <Kicker className="text-brand">{community.vision.kicker}</Kicker>
+              <Kicker className="text-brand">{t.vision.kicker}</Kicker>
               <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
-                {community.vision.heading}
+                {t.vision.heading}
               </h2>
               <p className="mt-7 max-w-md text-[15px] leading-relaxed text-ink/70">
-                {community.vision.body}
+                {t.vision.body}
               </p>
             </Reveal>
 
             <Reveal delay={0.1}>
               <ul className="grid gap-x-10 gap-y-1 sm:grid-cols-2">
-                {community.vision.points.map((point) => (
+                {t.vision.points.map((point) => (
                   <li
                     key={point}
                     className="flex items-start gap-3 border-t border-ink/10 py-4 text-[15px] leading-snug text-ink/75"
@@ -336,18 +344,18 @@ export default function CommunityPage() {
         <PalmCorner corner="br" className="text-palm opacity-[0.10] lg:opacity-[0.14]" />
         <Reveal className="relative z-10 mx-auto max-w-2xl px-6 text-center">
           <h2 className="font-display text-4xl font-light text-ink sm:text-5xl">
-            {community.sharedJourney.heading}
+            {t.sharedJourney.heading}
           </h2>
-          {community.sharedJourney.body.map((p) => (
+          {t.sharedJourney.body.map((p) => (
             <p key={p.slice(0, 24)} className="mx-auto mt-6 max-w-md text-[15px] leading-relaxed text-ink/65">
               {p}
             </p>
           ))}
           <p className="font-display mt-8 text-2xl font-light italic leading-snug text-sand">
-            {community.sharedJourney.closing}
+            {t.sharedJourney.closing}
           </p>
           <Link
-            href="/book"
+            href={localePath(lang, "/book")}
             className="label mt-10 inline-flex items-center gap-3 bg-brand px-9 py-4 text-[11px] text-white transition-colors hover:bg-brand-dark"
           >
             Book Your Stay <ArrowRight className="h-4 w-4" strokeWidth={1.5} />

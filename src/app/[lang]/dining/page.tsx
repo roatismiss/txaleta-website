@@ -5,6 +5,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { dining, site } from "@/lib/site";
+import { diningContent } from "@/locales/content/dining";
+import { localePath } from "@/lib/i18n";
+
+const ctaStrings: Record<Locale, { menu: string; privateDining: string; concierge: string; book: string; orReach: string }> = {
+  en: { menu: "View the Menu", privateDining: "Enquire About Private Dining", concierge: "Message Our Concierge", book: "Book Your Stay", orReach: "Or reach us directly" },
+  fr: { menu: "Voir le menu", privateDining: "Demander un dîner privé", concierge: "Écrire à notre concierge", book: "Réserver votre séjour", orReach: "Ou contactez-nous directement" },
+  de: { menu: "Zur Speisekarte", privateDining: "Privates Dinner anfragen", concierge: "Concierge kontaktieren", book: "Aufenthalt buchen", orReach: "Oder erreichen Sie uns direkt" },
+  ja: { menu: "メニューを見る", privateDining: "プライベートダイニングを相談", concierge: "コンシェルジュに連絡", book: "宿泊を予約する", orReach: "または直接ご連絡ください" },
+  ko: { menu: "메뉴 보기", privateDining: "프라이빗 다이닝 문의", concierge: "컨시어지에게 문의", book: "숙박 예약하기", orReach: "또는 직접 연락 주세요" },
+  zh: { menu: "查看菜单", privateDining: "咨询私人晚宴", concierge: "联系礼宾部", book: "预订您的假期", orReach: "或直接联系我们" },
+};
 import { Reveal, Kicker } from "@/components/reveal";
 import { TilePattern, PaperGrain, PalmCorner, RattanWeave } from "@/components/brand-texture";
 
@@ -13,7 +24,12 @@ const meta: Metadata = {
   description:
     "Filipino-Spanish cuisine on a Camiguin clifftop — breakfast with an ocean view, sunset dining over the sea, paella and tapas, and meals made for family and celebrations at Txaleta de Camiguin.",};
 
-export default function DiningPage() {
+export default async function DiningPage({ params }: PageProps<"/[lang]">) {
+  const { lang: rawLang } = await params;
+  const lang = rawLang as Locale;
+  const t = diningContent[lang];
+  const C = ctaStrings[lang];
+  const stories = dining.stories.map((st, i) => ({ ...st, ...t.stories[i] }));
   return (
     <>
       {/* ── Banner — aerial table shot, full bleed ── */}
@@ -29,10 +45,10 @@ export default function DiningPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/40" />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-16 text-white">
           <Kicker className="font-bold text-brand [text-shadow:0_0_8px_rgba(0,0,0,1),0_0_16px_rgba(0,0,0,1),0_2px_4px_rgba(0,0,0,0.95),0_4px_24px_rgba(0,0,0,0.8)]">
-            {dining.subheading}
+            {t.subheading}
           </Kicker>
           <h1 className="font-display mt-4 text-5xl font-light sm:text-7xl md:text-8xl">
-            {dining.heading}
+            {t.heading}
           </h1>
         </div>
       </section>
@@ -47,12 +63,12 @@ export default function DiningPage() {
             More than a restaurant, Txaleta is a place to gather, connect, and enjoy the
             simple pleasures of island life.
           </p>
-          <p className="mt-8 text-[15px] leading-relaxed text-ink/65">{dining.body}</p>
+          <p className="mt-8 text-[15px] leading-relaxed text-ink/65">{t.body}</p>
           <Link
-            href="/dining/menu"
+            href={localePath(lang, "/dining/menu")}
             className="label mt-10 inline-flex items-center gap-3 bg-brand px-9 py-4 text-[11px] text-white transition-colors hover:bg-brand-dark"
           >
-            View the Menu <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+            {C.menu} <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
           </Link>
         </Reveal>
       </section>
@@ -104,7 +120,7 @@ export default function DiningPage() {
       {/* ── Story sections — Cuisine · Breakfast · Sunset (alternating) ── */}
       <section className="bg-cream">
         <div className="mx-auto max-w-7xl px-6">
-          {dining.stories.map((story, i) => (
+          {stories.map((story, i) => (
             <Reveal key={story.id}>
               <div
                 id={story.id}
@@ -144,12 +160,12 @@ export default function DiningPage() {
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:gap-20">
           <Reveal>
-            <Kicker className="text-brand">{dining.family.kicker}</Kicker>
+            <Kicker className="text-brand">{t.family.kicker}</Kicker>
             <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
-              {dining.family.heading}
+              {t.family.heading}
             </h2>
             <p className="mt-7 max-w-lg text-[15px] leading-relaxed text-ink/70">
-              {dining.family.body}
+              {t.family.body}
             </p>
             <a
               href={`https://wa.me/${site.contact.whatsapp}?text=${encodeURIComponent("Hi, I'd like to ask about private dining / a celebration at Txaleta.")}`}
@@ -157,7 +173,7 @@ export default function DiningPage() {
               rel="noopener noreferrer"
               className="group mt-9 inline-flex items-center gap-3 border-b border-sand pb-1 text-ink transition-colors hover:text-sand"
             >
-              <span className="label text-[11px]">Enquire About Private Dining</span>
+              <span className="label text-[11px]">{C.privateDining}</span>
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} aria-hidden />
             </a>
           </Reveal>
@@ -192,12 +208,12 @@ export default function DiningPage() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <Kicker className="text-brand">{dining.local.kicker}</Kicker>
+            <Kicker className="text-brand">{t.local.kicker}</Kicker>
             <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
-              {dining.local.heading}
+              {t.local.heading}
             </h2>
             <p className="mt-7 max-w-lg text-[15px] leading-relaxed text-ink/70">
-              {dining.local.body}
+              {t.local.body}
             </p>
           </Reveal>
         </div>
@@ -253,12 +269,12 @@ export default function DiningPage() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <Kicker className="text-brand">{dining.roomService.kicker}</Kicker>
+            <Kicker className="text-brand">{t.roomService.kicker}</Kicker>
             <h2 className="font-display mt-5 text-4xl font-light leading-tight text-ink sm:text-5xl">
-              {dining.roomService.heading}
+              {t.roomService.heading}
             </h2>
             <p className="mt-7 max-w-lg text-[15px] leading-relaxed text-ink/70">
-              {dining.roomService.body}
+              {t.roomService.body}
             </p>
             <a
               href={`https://wa.me/${site.contact.whatsapp}`}
@@ -266,7 +282,7 @@ export default function DiningPage() {
               rel="noopener noreferrer"
               className="group mt-9 inline-flex items-center gap-3 border-b border-sand pb-1 text-ink transition-colors hover:text-sand"
             >
-              <span className="label text-[11px]">Message Our Concierge</span>
+              <span className="label text-[11px]">{C.concierge}</span>
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} aria-hidden />
             </a>
             <p className="mt-4 text-[13px] leading-relaxed text-ink/50">
@@ -282,21 +298,21 @@ export default function DiningPage() {
         <PalmCorner corner="tl" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
         <PalmCorner corner="br" className="text-palm opacity-[0.10] lg:opacity-[0.14]" />
         <Reveal className="relative z-10 mx-auto max-w-2xl px-6 text-center">
-          <h2 className="font-display text-4xl font-light text-ink sm:text-5xl">{dining.closing.heading}</h2>
+          <h2 className="font-display text-4xl font-light text-ink sm:text-5xl">{t.closing.heading}</h2>
           <p className="mx-auto mt-6 max-w-md text-[15px] leading-relaxed text-ink/65">
-            {dining.closing.body}
+            {t.closing.body}
           </p>
           <p className="font-display mt-8 text-2xl font-light italic leading-snug text-sand">
-            {dining.closing.signoff.join(" ")}
+            {t.closing.signoff.join(" ")}
           </p>
           <Link
-            href="/book"
+            href={localePath(lang, "/book")}
             className="label mt-10 inline-flex items-center gap-3 bg-brand px-9 py-4 text-[11px] text-white transition-colors hover:bg-brand-dark"
           >
-            Book Your Stay <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+            {C.book} <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
           </Link>
           <p className="mt-8 text-[13px] text-ink/45">
-            Or reach us directly ·{" "}
+            {C.orReach} ·{" "}
             <a
               href={`tel:${site.contact.phoneRaw}`}
               className="text-ink/60 transition-colors hover:text-ink"
