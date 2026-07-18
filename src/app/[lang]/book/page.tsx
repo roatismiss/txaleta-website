@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageAlternates, type Locale } from "@/lib/i18n";
+import { getPageSeo } from "@/locales/seo";
 import Image from "next/image";
 import { CalendarCheck, Zap, ShieldCheck, Mail, type LucideIcon } from "lucide-react";
 import { BookingFlow } from "@/components/booking-flow";
@@ -7,7 +9,7 @@ import { Kicker } from "@/components/reveal";
 import { PoweredByCloudReef } from "@/components/powered-by";
 import { site, bookingProvider } from "@/lib/site";
 
-export const metadata: Metadata = {
+const meta: Metadata = {
   title: "Book Your Stay",
   description: `Request a booking at ${site.name} — seaview suites, ocean-view glamping and garden rooms on Camiguin Island.`,
 };
@@ -101,4 +103,15 @@ export default async function BookPage({
       </section>
     </>
   );
+}
+
+export async function generateMetadata({ params }: PageProps<"/[lang]">): Promise<Metadata> {
+  const { lang } = await params;
+  const seo = getPageSeo(lang as Locale, "/book");
+  return {
+    ...meta,
+    ...(seo ? { title: seo.title, description: seo.description } : {}),
+    ...(seo?.keywords ? { keywords: seo.keywords } : {}),
+    alternates: pageAlternates(lang as Locale, "/book"),
+  };
 }

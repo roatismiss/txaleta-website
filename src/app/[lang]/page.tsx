@@ -10,10 +10,22 @@ import { Gallery } from "@/components/sections/gallery";
 import { Testimonials } from "@/components/sections/testimonials";
 import { BrandMoment } from "@/components/sections/brand-moment";
 import { site } from "@/lib/site";
+import { pageAlternates, type Locale } from "@/lib/i18n";
+import { getPageSeo } from "@/locales/seo";
 
 // Refresh the homepage hourly (ISR) so the Accommodation section picks up live
 // Cloudbeds rooms/photos without a Cloudbeds call on every visit.
 export const revalidate = 3600;
+
+export async function generateMetadata({ params }: PageProps<"/[lang]">) {
+  const { lang } = await params;
+  const seo = getPageSeo(lang as Locale, "/");
+  return {
+    ...(seo ? { title: seo.title, description: seo.description } : {}),
+    ...(seo?.keywords ? { keywords: seo.keywords } : {}),
+    alternates: pageAlternates(lang as Locale, "/"),
+  };
+}
 
 export default function Home() {
   return (

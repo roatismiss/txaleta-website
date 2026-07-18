@@ -9,9 +9,27 @@ import { MegaPanel } from "./mega-menu";
 import { Logo } from "./logo";
 import { nav, site, type NavItem } from "@/lib/site";
 import { useMenu } from "@/contexts/menu-context";
+import { localePath, type Locale } from "@/lib/i18n";
+import { ui } from "@/locales/ui";
+import { LanguageSwitcher, LanguageLinks } from "./language-switcher";
 
-const leftNav = nav.slice(0, 3);
-const rightNav = nav.slice(3);
+// Localize the nav model for the active locale: native labels from the UI
+// dictionary + locale-prefixed hrefs (including every link inside a mega).
+function localizeNav(lang: Locale): NavItem[] {
+  const labels = ui[lang].nav;
+  return nav.map((n) => ({
+    ...n,
+    label: labels[n.href] ?? n.label,
+    href: localePath(lang, n.href),
+    mega: n.mega
+      ? {
+          ...n.mega,
+          links: n.mega.links.map((l) => ({ ...l, href: localePath(lang, l.href) })),
+          cards: n.mega.cards.map((c) => ({ ...c, href: localePath(lang, c.href) })),
+        }
+      : undefined,
+  }));
+}
 
 function Social({ className = "" }: { className?: string }) {
   return (
@@ -80,7 +98,11 @@ function DesktopNavItem({
   );
 }
 
-export function Navbar() {
+export function Navbar({ lang = "en" }: { lang?: Locale }) {
+  const t = ui[lang];
+  const localizedNav = localizeNav(lang);
+  const leftNav = localizedNav.slice(0, 3);
+  const rightNav = localizedNav.slice(3);
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [activeMega, setActiveMega] = useState<string | null>(null);
@@ -130,7 +152,7 @@ export function Navbar() {
     closeTimer.current = setTimeout(() => setActiveMega(null), 140);
   };
 
-  const activeItem = activeMega ? nav.find((n) => n.label === activeMega && n.mega) : undefined;
+  const activeItem = activeMega ? localizedNav.find((n) => n.label === activeMega && n.mega) : undefined;
 
   // Logo + paddings track scroll ONLY — not megaOpen — so opening a mega never
   // collapses the header (which would fight the panel's drop-in animation).
@@ -176,14 +198,15 @@ export function Navbar() {
           <div className="flex h-11 items-center justify-between px-14">
             <div className="hidden items-center gap-5 md:flex">
               <Social />
-              <span className="label text-[10px] text-ink/60">Stay Connected</span>
+              <span className="label text-[10px] text-ink/60">{t.stayConnected}</span>
             </div>
             <a href={`tel:${site.contact.phoneRaw}`} className="label flex items-center gap-2 text-[10px] md:hidden">
               <Phone className="h-3.5 w-3.5" strokeWidth={1.5} /> {site.contact.phone}
             </a>
             <div className="flex items-center gap-5">
-              <Link href="/book" className="hidden bg-brand px-5 py-2 label text-[10px] text-white transition-colors hover:bg-brand-dark sm:inline-block">
-                Book Now
+              <LanguageSwitcher lang={lang} />
+              <Link href={localePath(lang, "/book")} className="hidden bg-brand px-5 py-2 label text-[10px] text-white transition-colors hover:bg-brand-dark sm:inline-block">
+                {t.bookNow}
               </Link>
             </div>
           </div>
@@ -207,7 +230,7 @@ export function Navbar() {
             />
           </div>
           <button onClick={() => setOpen(true)} aria-label="Open menu" className="flex items-center gap-2 pt-1 transition-colors hover:text-brand">
-            <span className="label text-[11px]">Menu</span>
+            <span className="label text-[11px]">{t.menu}</span>
             <Menu className="h-7 w-7" strokeWidth={1.5} />
           </button>
         </div>
@@ -290,11 +313,11 @@ export function Navbar() {
 
       {/* Vertical BOOK NOW tab (desktop) — red */}
       <Link
-        href="/book"
+        href={localePath(lang, "/book")}
         className="fixed right-0 top-1/2 z-40 hidden -translate-y-1/2 bg-brand px-2.5 py-5 text-white shadow-lg transition-colors hover:bg-brand-dark lg:block"
         style={{ writingMode: "vertical-rl" }}
       >
-        <span className="label text-[11px] rotate-180">Book Now</span>
+        <span className="label text-[11px] rotate-180">{t.bookNow}</span>
       </Link>
 
       {/* ── Mobile drawer — slides in from the right, glassmorphism, staggered ── */}
@@ -329,7 +352,7 @@ export function Navbar() {
               </div>
 
               <nav className="flex flex-1 flex-col justify-center gap-1 px-6">
-                {nav.map((n) => (
+                {localizedNav.map((n) => (
                   <motion.div key={n.href} variants={itemVariants} className="border-b border-ink/10">
                     <Link
                       href={n.href}
@@ -342,16 +365,17 @@ export function Navbar() {
                 ))}
                 <motion.div variants={itemVariants} className="pt-6">
                   <Link
-                    href="/book"
+                    href={localePath(lang, "/book")}
                     onClick={() => setOpen(false)}
                     className="label block bg-brand py-3.5 text-center text-[11px] text-white transition-colors hover:bg-brand-dark"
                   >
-                    Book Now
+                    {t.bookNow}
                   </Link>
                 </motion.div>
               </nav>
 
               <motion.div variants={itemVariants} className="flex flex-col items-end gap-3 px-6 py-6">
+                <LanguageLinks lang={lang} />
                 <Social />
                 <a href={`tel:${site.contact.phoneRaw}`} className="text-[13px] text-ink/70">{site.contact.phone}</a>
               </motion.div>

@@ -1,7 +1,16 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Playfair_Display, Lato } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { site } from "@/lib/site";
+import {
+  locales,
+  hasLocale,
+  localeTags,
+  ogLocales,
+  hreflangAlternates,
+  type Locale,
+} from "@/lib/i18n";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ChatbotEmbed } from "@/components/chatbot-embed";
@@ -28,54 +37,74 @@ const sans = Lato({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
-  title: {
-    default: `${site.name} — Luxury Coastal Resort in Camiguin`,
-    template: `%s · ${site.name}`,
-  },
-  description: site.description,
-  keywords: [
-    "Camiguin resort",
-    "Mambajao hotel",
-    "Camiguin accommodation",
-    "seaview rooms Camiguin",
-    "glamping Philippines",
-    "Txaleta de Camiguin",
-    "infinity pool Camiguin",
-  ],
-  alternates: { canonical: "/" },
-  openGraph: {
-    type: "website",
-    locale: "en_PH",
-    url: site.url,
-    siteName: site.name,
-    title: `${site.name} — Luxury Coastal Resort in Camiguin`,
-    description: site.description,
-    images: [{ url: site.hero.poster, width: 1200, height: 630, alt: site.name }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${site.name} — Luxury Coastal Resort in Camiguin`,
-    description: site.description,
-    images: [site.hero.poster],
-  },
-  // Google Search Console verification. Set GOOGLE_SITE_VERIFICATION in the
-  // Vercel env (the token from Search Console → "HTML tag" method) and the
-  // <meta name="google-site-verification"> tag is emitted automatically. Until
-  // it's set, nothing is rendered — safe to ship.
-  ...(process.env.GOOGLE_SITE_VERIFICATION
-    ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }
-    : {}),
-  robots: { index: true, follow: true },
-};
+// Every locale is prebuilt; anything else 404s (the proxy only rewrites
+// unprefixed paths to /en, so unknown prefixes land here as `lang`).
+export const dynamicParams = false;
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return locales.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({
+  params,
+}: LayoutProps<"/[lang]">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!hasLocale(lang)) notFound();
+  const locale = lang as Locale;
+
+  return {
+    metadataBase: new URL(site.url),
+    title: {
+      default: `${site.name} — Luxury Coastal Resort in Camiguin`,
+      template: `%s · ${site.name}`,
+    },
+    description: site.description,
+    keywords: [
+      "Camiguin resort",
+      "Mambajao hotel",
+      "Camiguin accommodation",
+      "seaview rooms Camiguin",
+      "glamping Philippines",
+      "Txaleta de Camiguin",
+      "infinity pool Camiguin",
+    ],
+    openGraph: {
+      type: "website",
+      locale: ogLocales[locale],
+      url: site.url,
+      siteName: site.name,
+      title: `${site.name} — Luxury Coastal Resort in Camiguin`,
+      description: site.description,
+      images: [{ url: site.hero.poster, width: 1200, height: 630, alt: site.name }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${site.name} — Luxury Coastal Resort in Camiguin`,
+      description: site.description,
+      images: [site.hero.poster],
+    },
+    // Google Search Console verification. Set GOOGLE_SITE_VERIFICATION in the
+    // Vercel env (the token from Search Console → "HTML tag" method) and the
+    // <meta name="google-site-verification"> tag is emitted automatically. Until
+    // it's set, nothing is rendered — safe to ship.
+    ...(process.env.GOOGLE_SITE_VERIFICATION
+      ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }
+      : {}),
+    robots: { index: true, follow: true },
+  };
+}
+
+export default async function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+  params,
+}: LayoutProps<"/[lang]">) {
+  const { lang } = await params;
+  if (!hasLocale(lang)) notFound();
+  const locale = lang as Locale;
+
   return (
     <html
-      lang="en"
+      lang={localeTags[locale]}
       // The pre-paint splash script sets `data-splash-seen` on <html> before
       // hydration; suppress the (expected) attribute mismatch on this element only.
       suppressHydrationWarning
@@ -92,9 +121,9 @@ export default function RootLayout({
         />
         <SplashScreen />
         <MenuProvider>
-          <Navbar />
+          <Navbar lang={locale} />
           <main className="flex-1">{children}</main>
-          <Footer />
+          <Footer lang={locale} />
           {/* Concierge chatbot stays on in every phase — it only answers
               questions and captures leads into the CRM (it never creates
               bookings), so it's safe alongside the Cloudbeds engine. */}

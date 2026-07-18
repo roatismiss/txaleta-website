@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import { pageAlternates, type Locale } from "@/lib/i18n";
+import { getPageSeo } from "@/locales/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { gallery } from "@/lib/site";
 import { Reveal, Kicker } from "@/components/reveal";
 
-export const metadata: Metadata = {
+const meta: Metadata = {
   title: "Gallery",
   description:
     "Txaleta de Camiguin in pictures — the infinity pool over the Bohol Sea, White Island sandbars, clifftop sunsets, endemic birds and life around the resort.",
-  alternates: { canonical: "/gallery" },
 };
 
 export default function GalleryPage() {
@@ -84,4 +85,15 @@ export default function GalleryPage() {
       </section>
     </>
   );
+}
+
+export async function generateMetadata({ params }: PageProps<"/[lang]">): Promise<Metadata> {
+  const { lang } = await params;
+  const seo = getPageSeo(lang as Locale, "/gallery");
+  return {
+    ...meta,
+    ...(seo ? { title: seo.title, description: seo.description } : {}),
+    ...(seo?.keywords ? { keywords: seo.keywords } : {}),
+    alternates: pageAlternates(lang as Locale, "/gallery"),
+  };
 }

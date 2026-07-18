@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageAlternates, type Locale } from "@/lib/i18n";
+import { getPageSeo } from "@/locales/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -8,7 +10,7 @@ import { ExperienceCardImage } from "@/components/experience-card-image";
 import { ExperiencesHeroSlideshow } from "@/components/experiences-hero-slideshow";
 import { BananaGrove, PaperGrain, PalmCorner, RattanWeave } from "@/components/brand-texture";
 
-export const metadata: Metadata = {
+const meta: Metadata = {
   title: "Experiences",
   description:
     "Island boat tours, Mount Hibok-Hibok treks, jet ski and scooter & vehicle rentals, and a guide to Camiguin — White Island, the sea-turtle sanctuary of Mantigue Island, the Sunken Cemetery, cold springs and waterfalls, from Txaleta de Camiguin.",
@@ -320,4 +322,15 @@ export default function ExperiencesPage() {
       </section>
     </>
   );
+}
+
+export async function generateMetadata({ params }: PageProps<"/[lang]">): Promise<Metadata> {
+  const { lang } = await params;
+  const seo = getPageSeo(lang as Locale, "/experiences");
+  return {
+    ...meta,
+    ...(seo ? { title: seo.title, description: seo.description } : {}),
+    ...(seo?.keywords ? { keywords: seo.keywords } : {}),
+    alternates: pageAlternates(lang as Locale, "/experiences"),
+  };
 }

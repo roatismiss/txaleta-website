@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageAlternates, type Locale } from "@/lib/i18n";
+import { getPageSeo } from "@/locales/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
@@ -8,11 +10,10 @@ import { InstagramEmbed } from "@/components/instagram-embed";
 import { Reveal, Kicker } from "@/components/reveal";
 import { TilePattern, PaperGrain, PalmCorner, RattanWeave } from "@/components/brand-texture";
 
-export const metadata: Metadata = {
+const meta: Metadata = {
   title: "The Heart of Camiguin — Community & Stewardship",
   description:
     "Community, culture and island stewardship at Txaleta de Camiguin — local hiring, artisan partnerships with Natalia Sea Glass, Mt. Hibok-Hibok guides, Scuba de Oro and the people who make the island unforgettable.",
-  alternates: { canonical: "/community" },
 };
 
 export default function CommunityPage() {
@@ -364,4 +365,15 @@ export default function CommunityPage() {
       </section>
     </>
   );
+}
+
+export async function generateMetadata({ params }: PageProps<"/[lang]">): Promise<Metadata> {
+  const { lang } = await params;
+  const seo = getPageSeo(lang as Locale, "/community");
+  return {
+    ...meta,
+    ...(seo ? { title: seo.title, description: seo.description } : {}),
+    ...(seo?.keywords ? { keywords: seo.keywords } : {}),
+    alternates: pageAlternates(lang as Locale, "/community"),
+  };
 }

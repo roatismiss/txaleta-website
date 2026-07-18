@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { getAllGuides, getGuide, getRelatedGuides } from "@/lib/guides";
 import { site } from "@/lib/site";
+import { pageAlternates, localePath, type Locale } from "@/lib/i18n";
 import { Kicker } from "@/components/reveal";
 import { GuideArticle } from "@/components/guide-article";
 import { PaperGrain, PalmCorner, RattanWeave } from "@/components/brand-texture";
@@ -18,20 +19,20 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ lang: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { lang, slug } = await params;
   const guide = getGuide(slug);
   if (!guide) return {};
   return {
     title: guide.title,
     description: guide.description,
     keywords: guide.keywords,
-    alternates: { canonical: `/guides/${guide.slug}` },
+    alternates: pageAlternates(lang as Locale, `/guides/${guide.slug}`),
     openGraph: {
       title: guide.title,
       description: guide.description,
-      url: `${site.url}/guides/${guide.slug}`,
+      url: `${site.url}${localePath(lang as Locale, `/guides/${guide.slug}`)}`,
       type: "article",
       images: [{ url: `${site.url}${guide.image}`, alt: guide.imageAlt }],
     },
