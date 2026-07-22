@@ -769,8 +769,29 @@ export const community = {
           "Walk through Txaleta — especially the new wing — and you'll find the island on the walls.",
           "Paintings, photography, handcrafted décor: works by Camiguin artists who capture the place better than any brochure could. We surround our guests with their work to put island talent in front of new eyes, and to let the people who live here tell their own story.",
         ],
-        image: "/images/community/local-artists.webp",
+        // Grei the Merchant — textured relief sea-life works hung throughout the
+        // resort (esp. the new wing). Full set shown in `paintings` below.
+        link: {
+          label: "Follow @greithemerchant",
+          href: "https://www.instagram.com/greithemerchant",
+        },
+        image: "/images/community/paintings/sea-turtles-diptych.webp",
       },
+    ],
+    // The gallery wall — Grei the Merchant's relief paintings of Camiguin sea
+    // life, shown as a mosaic beneath the artisan cards on /community.
+    paintings: [
+      { src: "/images/community/paintings/blue-starfish.webp", alt: "Blue starfish sculpted in textured relief on a sand-toned board" },
+      { src: "/images/community/paintings/orange-conch.webp", alt: "Orange conch shell in relief, angled on a dark table" },
+      { src: "/images/community/paintings/white-scallop.webp", alt: "White scallop shell in textured relief on a sandy board" },
+      { src: "/images/community/paintings/turtle-hatchlings.webp", alt: "Sea turtle hatchlings crossing a warm sand relief" },
+      { src: "/images/community/paintings/blue-mussels.webp", alt: "Blue mussels in glossy relief on a sculpted board" },
+      { src: "/images/community/paintings/conch-relief.webp", alt: "Conch shell relief framed by shells on a sandy board" },
+      { src: "/images/community/paintings/lone-hatchling.webp", alt: "A single sea turtle hatchling crossing pale sand and surf" },
+      { src: "/images/community/paintings/blue-starfish-detail.webp", alt: "Close detail of a blue starfish relief" },
+      { src: "/images/community/paintings/sea-turtle-detail.webp", alt: "Close detail of two sea turtles gliding over reef" },
+      { src: "/images/community/paintings/starfish-closeup.webp", alt: "Blue starfish relief seen up close" },
+      { src: "/images/community/paintings/sea-turtles.webp", alt: "Two sea turtles painted over turquoise water, mounted on the wall" },
     ],
   },
   mountain: {
