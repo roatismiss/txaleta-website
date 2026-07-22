@@ -169,6 +169,23 @@ export default async function CommunityPage({ params }: PageProps<"/[lang]">) {
               </Reveal>
             ))}
           </div>
+
+          {/* Gallery wall — Grei the Merchant's relief paintings, the island on the walls */}
+          <div className="mt-14 grid grid-cols-2 gap-2.5 sm:mt-20 sm:gap-3 md:grid-cols-3 lg:grid-cols-4">
+            {community.artisans.paintings.map((p, i) => (
+              <Reveal key={p.src} delay={(i % 4) * 0.06}>
+                <div className="group relative aspect-[3/2] w-full overflow-hidden">
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"
+                  />
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
