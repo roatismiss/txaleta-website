@@ -32,11 +32,11 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
   const locale = lang as Locale;
   return (
     <>
-      <Hero />
+      <Hero lang={locale} />
       {/* Mobile-only booking bar — straddles the hero/Intro seam (~half over the video,
           half into the next section) for the premium floating-card feel. */}
       <section className="relative z-30 -mt-28 px-4 pb-2 lg:hidden">
-        <BookingBar />
+        <BookingBar lang={locale} />
       </section>
       <Intro lang={locale} />
       <Accommodation lang={locale} />

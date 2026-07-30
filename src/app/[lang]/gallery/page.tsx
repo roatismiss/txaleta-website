@@ -8,7 +8,7 @@ import { gallery } from "@/lib/site";
 import { localePath } from "@/lib/i18n";
 
 const P: Record<Locale, { kicker: string; title: string; intro: string; quote: string; cta: string }> = {
-  en: { kicker: "Between Volcano and Sea", title: "The Gallery", intro: "The island as we live it — mornings over the Bohol Sea, the sandbar a banca ride away, the resort turning gold at dusk. Take the long look.", quote: "{p.quote}", cta: "Book Your Stay" },
+  en: { kicker: "Between Volcano and Sea", title: "The Gallery", intro: "The island as we live it — mornings over the Bohol Sea, the sandbar a banca ride away, the resort turning gold at dusk. Take the long look.", quote: "Some islands you visit. Camiguin, you remember.", cta: "Book Your Stay" },
   fr: { kicker: "Entre volcan et mer", title: "La galerie", intro: "L’île telle que nous la vivons — les matins sur la mer de Bohol, le banc de sable à quelques minutes de banca, le resort qui se dore au crépuscule. Prenez le temps de regarder.", quote: "Certaines îles se visitent. Camiguin, elle, se grave dans la mémoire.", cta: "Réserver votre séjour" },
   de: { kicker: "Zwischen Vulkan und Meer", title: "Die Galerie", intro: "Die Insel, wie wir sie leben — Morgen über der Bohol-See, die Sandbank eine Bootsfahrt entfernt, das Resort golden in der Dämmerung. Nehmen Sie sich Zeit für den langen Blick.", quote: "Manche Inseln besucht man. An Camiguin erinnert man sich.", cta: "Aufenthalt buchen" },
   ja: { kicker: "火山と海のあいだ", title: "ギャラリー", intro: "私たちが暮らす島の姿 — ボホール海の朝、バンカ船でひとっ走りの砂州、夕暮れに金色へ染まるリゾート。ゆっくり、眺めてください。", quote: "訪れるだけの島もある。カミギンは、心に残る島。", cta: "宿泊を予約する" },
@@ -84,7 +84,7 @@ export default async function GalleryPage({ params }: PageProps<"/[lang]">) {
 
           <Reveal delay={0.1} className="mt-16 text-center">
             <p className="font-display text-2xl font-light italic text-cream/80">
-              Some islands you visit. Camiguin, you remember.
+              {p.quote}
             </p>
             <Link
               href={localePath(lang, "/book")}

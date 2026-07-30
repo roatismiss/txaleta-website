@@ -125,32 +125,50 @@ function PageFace({ page, n }: { page: MenuPage; n: number }) {
 }
 
 /** The opening cover spread. */
-function CoverFace({ onOpen }: { onOpen: () => void }) {
+function CoverFace({ onOpen, cover }: { onOpen: () => void; cover: CoverStrings }) {
   return (
     <div className="flex h-full flex-col items-center justify-center py-10 text-center">
-      <p className="label text-[11px] text-brand">{menuMeta.eyebrow}</p>
+      <p className="label text-[11px] text-brand">{cover.eyebrow}</p>
       <h2 className="font-display mt-6 text-5xl font-light leading-none text-ink sm:text-7xl">
-        {menuMeta.title}
+        {cover.title}
       </h2>
       <p className="rule-line mt-7 text-[11px] uppercase tracking-[0.3em] text-ink/55">
-        {menuMeta.subtitle}
+        {cover.subtitle}
       </p>
       <p className="mx-auto mt-8 max-w-sm text-[14px] leading-relaxed text-ink/60">
-        {menuMeta.intro}
+        {cover.intro}
       </p>
       <button
         type="button"
         onClick={onOpen}
         className="label mt-10 inline-flex items-center gap-3 bg-brand px-8 py-3.5 text-[11px] text-white transition-colors hover:bg-brand-dark"
       >
-        Open the Menu <ChevronRight className="h-4 w-4" strokeWidth={1.5} />
+        {cover.openMenu} <ChevronRight className="h-4 w-4" strokeWidth={1.5} />
       </button>
-      <p className="mt-6 text-[11px] text-ink/40">Use the arrows, swipe, or tap a section to turn the page.</p>
+      <p className="mt-6 text-[11px] text-ink/40">{cover.swipeHint}</p>
     </div>
   );
 }
 
-export function MenuBook() {
+export type CoverStrings = {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  intro: string;
+  openMenu: string;
+  swipeHint: string;
+};
+
+const defaultCover: CoverStrings = {
+  eyebrow: menuMeta.eyebrow,
+  title: menuMeta.title,
+  subtitle: menuMeta.subtitle,
+  intro: menuMeta.intro,
+  openMenu: "Open the Menu",
+  swipeHint: "Use the arrows, swipe, or tap a section to turn the page.",
+};
+
+export function MenuBook({ cover = defaultCover }: { cover?: CoverStrings }) {
   const reduce = useReducedMotion();
   const [[index, dir], setState] = useState<[number, number]>([0, 0]);
   const stageRef = useRef<HTMLDivElement>(null);
@@ -378,7 +396,7 @@ export function MenuBook() {
             />
 
             <div className="relative z-10 h-full">
-              {isCover ? <CoverFace onOpen={next} /> : page && <PageFace page={page} n={index} />}
+              {isCover ? <CoverFace onOpen={next} cover={cover} /> : page && <PageFace page={page} n={index} />}
             </div>
           </motion.article>
         </AnimatePresence>

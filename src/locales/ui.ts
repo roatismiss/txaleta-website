@@ -22,6 +22,15 @@ export type UiDict = {
     rights: string;
     crafted: string;
   };
+  booking: {
+    arrival: string;
+    departure: string;
+    selectDate: string;
+    guests: string;
+    guestOne: string;
+    guestMany: string;
+    checkAvailability: string;
+  };
 };
 
 export const ui: Record<Locale, UiDict> = {
@@ -47,6 +56,7 @@ export const ui: Record<Locale, UiDict> = {
       rights: "All rights reserved.",
       crafted: "Crafted on Camiguin",
     },
+    booking: { arrival: "Arrival", departure: "Departure", selectDate: "Select date", guests: "Guests", guestOne: "guest", guestMany: "guests", checkAvailability: "Check Availability" },
   },
 
   fr: {
@@ -71,6 +81,7 @@ export const ui: Record<Locale, UiDict> = {
       rights: "Tous droits réservés.",
       crafted: "Conçu à Camiguin",
     },
+    booking: { arrival: "Arrivée", departure: "Départ", selectDate: "Choisir la date", guests: "Voyageurs", guestOne: "voyageur", guestMany: "voyageurs", checkAvailability: "Voir les disponibilités" },
   },
 
   de: {
@@ -95,6 +106,7 @@ export const ui: Record<Locale, UiDict> = {
       rights: "Alle Rechte vorbehalten.",
       crafted: "Gestaltet auf Camiguin",
     },
+    booking: { arrival: "Anreise", departure: "Abreise", selectDate: "Datum wählen", guests: "Gäste", guestOne: "Gast", guestMany: "Gäste", checkAvailability: "Verfügbarkeit prüfen" },
   },
 
   ja: {
@@ -119,6 +131,7 @@ export const ui: Record<Locale, UiDict> = {
       rights: "無断転載を禁じます。",
       crafted: "カミギン島にて制作",
     },
+    booking: { arrival: "チェックイン", departure: "チェックアウト", selectDate: "日付を選択", guests: "人数", guestOne: "名", guestMany: "名", checkAvailability: "空室を確認" },
   },
 
   ko: {
@@ -143,6 +156,7 @@ export const ui: Record<Locale, UiDict> = {
       rights: "모든 권리 보유.",
       crafted: "카미긴에서 제작",
     },
+    booking: { arrival: "체크인", departure: "체크아웃", selectDate: "날짜 선택", guests: "인원", guestOne: "명", guestMany: "명", checkAvailability: "예약 가능 여부 확인" },
   },
 
   zh: {
@@ -167,5 +181,6 @@ export const ui: Record<Locale, UiDict> = {
       rights: "版权所有。",
       crafted: "匠心打造于卡米金岛",
     },
+    booking: { arrival: "入住", departure: "退房", selectDate: "选择日期", guests: "人数", guestOne: "位", guestMany: "位", checkAvailability: "查询空房" },
   },
 };

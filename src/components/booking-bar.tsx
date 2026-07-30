@@ -4,8 +4,11 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Users } from "lucide-react";
 import { DateRangePicker } from "./date-picker";
+import { localePath, type Locale } from "@/lib/i18n";
+import { ui } from "@/locales/ui";
 
-export function BookingBar() {
+export function BookingBar({ lang = "en" }: { lang?: Locale }) {
+  const t = ui[lang].booking;
   const router = useRouter();
   const [checkin, setCheckin] = useState("");
   const [checkout, setCheckout] = useState("");
@@ -22,7 +25,7 @@ export function BookingBar() {
     if (checkin) params.set("checkin", checkin);
     if (checkout) params.set("checkout", checkout);
     params.set("guests", String(guests));
-    router.push(`/book?${params.toString()}`);
+    router.push(`${localePath(lang, "/book")}?${params.toString()}`);
   }
 
   return (
@@ -37,11 +40,12 @@ export function BookingBar() {
           onChangeCheckin={setCheckin}
           onChangeCheckout={setCheckout}
           minDate={today}
+          labels={{ arrival: t.arrival, departure: t.departure, selectDate: t.selectDate }}
         />
 
         {/* Guests */}
         <label className="relative flex-1 border-b border-black/10 px-6 py-4 sm:border-b-0 sm:border-r">
-          <span className="label block text-[9px] tracking-widest text-ink/45">Guests</span>
+          <span className="label block text-[9px] tracking-widest text-ink/45">{t.guests}</span>
           <select
             value={guests}
             onChange={(e) => setGuests(Number(e.target.value))}
@@ -49,7 +53,7 @@ export function BookingBar() {
           >
             {Array.from({ length: 8 }, (_, i) => i + 1).map((n) => (
               <option key={n} value={n}>
-                {n} {n === 1 ? "guest" : "guests"}
+                {n} {n === 1 ? t.guestOne : t.guestMany}
               </option>
             ))}
           </select>
@@ -60,7 +64,7 @@ export function BookingBar() {
           type="submit"
           className="label bg-brand px-8 py-5 text-[11px] text-white transition-colors hover:bg-brand-dark"
         >
-          Check Availability
+          {t.checkAvailability}
         </button>
       </div>
     </form>

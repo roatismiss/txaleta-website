@@ -6,8 +6,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { site } from "@/lib/site";
 import { BookingBar } from "./booking-bar";
+import type { Locale } from "@/lib/i18n";
+import { homeContent } from "@/locales/content/home";
 
-export function Hero() {
+export function Hero({ lang = "en" }: { lang?: Locale }) {
+  const t = homeContent[lang].hero;
   const { videos: desktopVideos, mobileVideos, slides } = site.hero;
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -133,7 +136,7 @@ export function Hero() {
           className="label text-[11px] font-bold text-brand [text-shadow:0_0_8px_rgba(0,0,0,1),0_0_16px_rgba(0,0,0,1),0_2px_4px_rgba(0,0,0,0.95),0_4px_24px_rgba(0,0,0,0.8)]"
           style={{ fontWeight: 700 }}
         >
-          Camiguin Island · Philippines
+          {t.kicker}
         </motion.p>
 
         <motion.h1
@@ -143,7 +146,7 @@ export function Hero() {
           style={{ fontWeight: 600 }}
           className="font-display mt-5 max-w-4xl text-balance text-5xl leading-[1.05] [text-shadow:0_1px_2px_rgba(0,0,0,0.9),0_3px_10px_rgba(0,0,0,0.85),0_6px_24px_rgba(0,0,0,0.7),0_10px_60px_rgba(0,0,0,0.55)] sm:text-6xl md:text-7xl"
         >
-          Come Home<br className="hidden sm:block" /> to Camiguin
+          {t.title}
         </motion.h1>
 
         <motion.p
@@ -152,8 +155,7 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.55 }}
           className="mt-6 max-w-xl text-base font-medium text-white/90 [text-shadow:0_1px_3px_rgba(0,0,0,0.95),0_2px_10px_rgba(0,0,0,0.85),0_4px_26px_rgba(0,0,0,0.6)] sm:text-lg"
         >
-          Seaview suites, ocean-view glamping and an infinity pool —
-          warm Filipino hospitality on Camiguin Island.
+          {t.subtitle}
         </motion.p>
       </div>
 
@@ -178,7 +180,7 @@ export function Hero() {
         transition={{ duration: 0.9, delay: 0.7 }}
         className="relative z-20 hidden w-full px-4 pb-8 sm:px-6 sm:pb-12 lg:block"
       >
-        <BookingBar />
+        <BookingBar lang={lang} />
       </motion.div>
 
       {/* Scroll cue */}

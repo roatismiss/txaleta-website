@@ -16,9 +16,11 @@ type Props = {
   disabledDates?: Date[];
   /** Which way the calendar opens. "up" suits the hero bar; "down" the booking flow. */
   dropDirection?: "up" | "down";
+  labels?: { arrival: string; departure: string; selectDate: string };
 };
 
-export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCheckout, minDate, disabledDates, dropDirection = "up" }: Props) {
+export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCheckout, minDate, disabledDates, dropDirection = "up", labels }: Props) {
+  const L = { arrival: "Arrival", departure: "Departure", selectDate: "Select date", ...labels };
   const [open, setOpen] = useState(false);
   const [activeField, setActiveField] = useState<"checkin" | "checkout">("checkin");
   const containerRef = useRef<HTMLDivElement>(null);
@@ -82,9 +84,9 @@ export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCh
         onClick={() => openOn("checkin")}
         className="relative flex-1 border-b border-black/10 px-6 py-4 text-left transition-colors hover:bg-cream/30 sm:border-b-0 sm:border-r"
       >
-        <span className="label block text-[9px] tracking-widest text-ink/45">Arrival</span>
+        <span className="label block text-[9px] tracking-widest text-ink/45">{L.arrival}</span>
         <span className={`mt-1.5 block text-sm ${checkin ? "text-ink" : "text-ink/35"}`}>
-          {fmt(checkin) || "Select date"}
+          {fmt(checkin) || L.selectDate}
         </span>
         <CalendarDays className="absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 text-brand" strokeWidth={1.5} />
       </button>
@@ -95,9 +97,9 @@ export function DateRangePicker({ checkin, checkout, onChangeCheckin, onChangeCh
         onClick={() => openOn("checkout")}
         className="relative flex-1 border-b border-black/10 px-6 py-4 text-left transition-colors hover:bg-cream/30 sm:border-b-0 sm:border-r"
       >
-        <span className="label block text-[9px] tracking-widest text-ink/45">Departure</span>
+        <span className="label block text-[9px] tracking-widest text-ink/45">{L.departure}</span>
         <span className={`mt-1.5 block text-sm ${checkout ? "text-ink" : "text-ink/35"}`}>
-          {fmt(checkout) || "Select date"}
+          {fmt(checkout) || L.selectDate}
         </span>
         <CalendarDays className="absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 text-brand" strokeWidth={1.5} />
       </button>

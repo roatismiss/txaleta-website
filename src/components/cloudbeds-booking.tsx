@@ -3,11 +3,13 @@ import { ArrowUpRight } from "lucide-react";
 import { site, cloudbedsEmbedMode } from "@/lib/site";
 import { cloudbedsEngineUrl, cloudbedsEnabled } from "@/lib/cloudbeds";
 import { BookingBar } from "@/components/booking-bar";
+import type { Locale } from "@/lib/i18n";
 
 type Props = {
   checkin?: string;
   checkout?: string;
   guests?: string;
+  lang?: Locale;
 };
 
 /**
@@ -22,7 +24,7 @@ type Props = {
  * Set `cloudbedsEmbedMode = "be-plus"` once we have the Booking Engine Plus /
  * Immersive Experience embed code, for a true in-page embed.
  */
-export function CloudbedsBooking({ checkin, checkout, guests }: Props) {
+export function CloudbedsBooking({ checkin, checkout, guests, lang = "en" }: Props) {
   // Not configured → never render a broken/blank engine; offer human channels.
   if (!cloudbedsEnabled) {
     return (
@@ -145,7 +147,7 @@ export function CloudbedsBooking({ checkin, checkout, guests }: Props) {
       <p className="mb-6 text-[14px] leading-relaxed text-ink/65">
         Choose your dates to check live availability and book your room.
       </p>
-      <BookingBar />
+      <BookingBar lang={lang} />
       <div className="mt-7 text-center">
         <a
           href={url}

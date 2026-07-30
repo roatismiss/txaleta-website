@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 import { localePath } from "@/lib/i18n";
 
 const P: Record<Locale, { kicker: string; title: string; intro: string; read: string; minRead: string; updated: string }> = {
-  en: { kicker: "Travel Guides", title: "Camiguin, by the people who live here", intro: "Honest, first-hand guides to getting here, choosing your island, and spending your days well — written from our clifftop in Mambajao.", read: "{p.read}", minRead: "min read", updated: "Updated" },
+  en: { kicker: "Travel Guides", title: "Camiguin, by the people who live here", intro: "Honest, first-hand guides to getting here, choosing your island, and spending your days well — written from our clifftop in Mambajao.", read: "Read guide", minRead: "min read", updated: "Updated" },
   fr: { kicker: "Guides de voyage", title: "Camiguin, par ceux qui y vivent", intro: "Des guides honnêtes et de première main : comment venir, quelle île choisir, comment bien remplir vos journées — écrits depuis notre falaise de Mambajao.", read: "Lire le guide", minRead: "min de lecture", updated: "Mis à jour" },
   de: { kicker: "Reiseführer", title: "Camiguin — von denen, die hier leben", intro: "Ehrliche Reiseführer aus erster Hand: Anreise, Inselwahl und gut gefüllte Tage — geschrieben auf unserer Klippe in Mambajao.", read: "Guide lesen", minRead: "Min. Lesezeit", updated: "Aktualisiert" },
   ja: { kicker: "旅行ガイド", title: "ここに暮らす私たちが書くカミギン", intro: "行き方、島選び、日々の過ごし方 — マンバハオの崖の上から書いた、正直で実体験にもとづくガイドです。", read: "ガイドを読む", minRead: "分で読めます", updated: "更新" },
@@ -100,7 +100,7 @@ export default async function GuidesIndexPage({ params }: PageProps<"/[lang]">) 
                     {g.description}
                   </p>
                   <span className="btn mt-5 inline-flex items-center gap-2.5 text-[11px] uppercase tracking-[0.18em] text-ink transition-colors group-hover:text-brand">
-                    Read guide
+                    {p.read}
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
                   </span>
                 </Link>

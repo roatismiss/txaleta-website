@@ -20,11 +20,23 @@ export type IntroDict = {
   quote: string;
 };
 
+export type HeroDict = {
+  kicker: string;
+  title: string;
+  subtitle: string;
+};
+
 export type HomeDict = {
+  hero: HeroDict;
   intro: IntroDict;
 };
 
 const en: HomeDict = {
+  hero: {
+    kicker: "Camiguin Island · Philippines",
+    title: "Come Home to Camiguin",
+    subtitle: "Seaview suites, ocean-view glamping and an infinity pool — warm Filipino hospitality on Camiguin Island.",
+  },
   intro: {
     kicker: "Camiguin · The Island Born of Fire",
     title: "The Quiet the Other Islands Lost",
@@ -44,6 +56,11 @@ const en: HomeDict = {
 };
 
 const fr: HomeDict = {
+  hero: {
+    kicker: "Île de Camiguin · Philippines",
+    title: "Revenez chez vous, à Camiguin",
+    subtitle: "Suites vue mer, glamping face à l’océan et piscine à débordement — l’hospitalité philippine, sur l’île de Camiguin.",
+  },
   intro: {
     kicker: "Camiguin · L’île née du feu",
     title: "Le calme que les autres îles ont perdu",
@@ -63,6 +80,11 @@ const fr: HomeDict = {
 };
 
 const de: HomeDict = {
+  hero: {
+    kicker: "Insel Camiguin · Philippinen",
+    title: "Kommen Sie heim nach Camiguin",
+    subtitle: "Suiten mit Meerblick, Glamping am Ozean und ein Infinity-Pool — herzliche philippinische Gastfreundschaft auf der Insel Camiguin.",
+  },
   intro: {
     kicker: "Camiguin · Die Insel, aus Feuer geboren",
     title: "Die Stille, die andere Inseln verloren haben",
@@ -82,6 +104,11 @@ const de: HomeDict = {
 };
 
 const ja: HomeDict = {
+  hero: {
+    kicker: "カミギン島 · フィリピン",
+    title: "カミギンへ、おかえりなさい",
+    subtitle: "オーシャンビューのスイート、海を望むグランピング、インフィニティプール — カミギン島の温かなおもてなし。",
+  },
   intro: {
     kicker: "カミギン · 火から生まれた島",
     title: "ほかの島が失った静けさ",
@@ -101,6 +128,11 @@ const ja: HomeDict = {
 };
 
 const ko: HomeDict = {
+  hero: {
+    kicker: "카미긴 섬 · 필리핀",
+    title: "카미긴으로, 어서 오세요",
+    subtitle: "오션뷰 스위트, 바다를 마주한 글램핑, 인피니티 풀 — 카미긴 섬의 따뜻한 필리핀식 환대.",
+  },
   intro: {
     kicker: "카미긴 · 불에서 태어난 섬",
     title: "다른 섬들이 잃어버린 고요",
@@ -120,6 +152,11 @@ const ko: HomeDict = {
 };
 
 const zh: HomeDict = {
+  hero: {
+    kicker: "卡米金岛 · 菲律宾",
+    title: "回家吧，回到卡米金",
+    subtitle: "海景套房、海景豪华露营与无边泳池——卡米金岛上温暖的菲律宾式款待。",
+  },
   intro: {
     kicker: "卡米金 · 火中诞生的岛屿",
     title: "别的海岛失去的宁静",

@@ -5,17 +5,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { site } from "@/lib/site";
-import { menuMeta } from "@/lib/menu";
 import { Reveal, Kicker } from "@/components/reveal";
 import { MenuBook } from "@/components/menu-book";
 import { PaperGrain, PalmCorner, RattanWeave } from "@/components/brand-texture";
+import { menuPage } from "@/locales/content/menu-page";
+import { localePath } from "@/lib/i18n";
 
 const meta: Metadata = {
   title: "Menu",
   description:
     "The à la carte menu at Txaleta de Camiguin — Filipino-Spanish tapas, paella, Filipino classics, rice bowls, pasta, breakfast by the infinity pool, signature cocktails and happy hour. Prices in Philippine Peso.",};
 
-export default function MenuPage() {
+export default async function MenuPage({ params }: PageProps<"/[lang]">) {
+  const { lang: rawLang } = await params;
+  const lang = rawLang as Locale;
+  const t = menuPage[lang];
   return (
     <>
       {/* ── Banner ── */}
@@ -31,11 +35,11 @@ export default function MenuPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/45" />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-14 text-white">
           <Kicker className="font-bold text-brand [text-shadow:0_0_8px_rgba(0,0,0,1),0_0_16px_rgba(0,0,0,1),0_2px_4px_rgba(0,0,0,0.95)]">
-            {menuMeta.eyebrow}
+            {t.eyebrow}
           </Kicker>
-          <h1 className="font-display mt-4 text-5xl font-light sm:text-7xl">{menuMeta.title}</h1>
+          <h1 className="font-display mt-4 text-5xl font-light sm:text-7xl">{t.title}</h1>
           <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-white/80">
-            {menuMeta.subtitle} — served on a clifftop above the Bohol Sea.
+            {t.subtitle} — {t.servedOn}
           </p>
         </div>
       </section>
@@ -48,16 +52,25 @@ export default function MenuPage() {
 
         <Reveal className="relative z-10 mx-auto mb-10 max-w-2xl px-6 text-center">
           <Link
-            href="/dining"
+            href={localePath(lang, "/dining")}
             className="group inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.24em] text-ink/50 transition-colors hover:text-brand"
           >
             <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" strokeWidth={1.5} />
-            Back to Dining
+            {t.backToDining}
           </Link>
         </Reveal>
 
         <div className="relative z-10 px-5 sm:px-6">
-          <MenuBook />
+          <MenuBook
+            cover={{
+              eyebrow: t.eyebrow,
+              title: t.title,
+              subtitle: t.subtitle,
+              intro: t.coverIntro,
+              openMenu: t.openMenu,
+              swipeHint: t.swipeHint,
+            }}
+          />
         </div>
       </section>
 
@@ -67,14 +80,12 @@ export default function MenuPage() {
         <PalmCorner corner="tl" className="text-palm opacity-[0.11]" />
         <PalmCorner corner="br" className="text-palm opacity-[0.10]" />
         <Reveal className="relative z-10 mx-auto max-w-2xl px-6 text-center">
-          <Kicker className="text-brand">A Table by the Sea</Kicker>
+          <Kicker className="text-brand">{t.ctaKicker}</Kicker>
           <h2 className="font-display mt-5 text-4xl font-light text-ink sm:text-5xl">
-            Reserve a Table or Order In
+            {t.ctaHeading}
           </h2>
           <p className="mx-auto mt-6 max-w-md text-[15px] leading-relaxed text-ink/65">
-            The café welcomes resort guests and walk-in visitors alike — breakfast by the infinity
-            pool, long lunches, moonlight cocktails and dinners that last past dark. Message us to
-            reserve a table or order to your terrace.
+            {t.ctaBody}
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
@@ -83,17 +94,17 @@ export default function MenuPage() {
               rel="noopener noreferrer"
               className="label inline-flex items-center gap-3 bg-brand px-9 py-4 text-[11px] text-white transition-colors hover:bg-brand-dark"
             >
-              Reserve a Table <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+              {t.reserveTable} <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
             </a>
             <Link
-              href="/dining#room-service"
+              href={`${localePath(lang, "/dining")}#room-service`}
               className="label inline-flex items-center gap-3 border-b border-sand pb-1 text-[11px] text-ink transition-colors hover:text-sand"
             >
-              Room Service
+              {t.roomService}
             </Link>
           </div>
           <p className="mt-8 text-[13px] text-ink/45">
-            Or reach us directly ·{" "}
+            {t.orReach} ·{" "}
             <a href={`tel:${site.contact.phoneRaw}`} className="text-ink/60 transition-colors hover:text-ink">
               {site.contact.phone}
             </a>

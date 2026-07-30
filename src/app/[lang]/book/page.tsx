@@ -94,6 +94,7 @@ export default async function BookPage({ params, searchParams }: PageProps<"/[la
                 checkin={first(sp.checkin)}
                 checkout={first(sp.checkout)}
                 guests={first(sp.guests)}
+                lang={lang}
               />
             ) : (
               <BookingFlow
