@@ -96,7 +96,7 @@ This is where the islands part company most clearly. Siquijor's lodgings are, fo
 
 Camiguin lets you stay somewhere else entirely. At [Txaleta de Camiguin](/about), home is a clifftop in Mambajao between Mt. Hibok-Hibok and the Bohol Sea: fourteen rooms, an **infinity pool that opens at sunrise** and seems to spill straight into the sea, ocean-view rooms where the water sits at eye level, and cliff-edge **glamping** — a proper bed under canvas on a private deck above the water. There's daily breakfast served beside the sea, a Filipino-Spanish kitchen, and hosts who'll arrange your banca, your trek, your quiet corner. "Filipino Heart, Spanish Soul," as we put it. *Txaleta* is Spanish for a small home — and that's what we're after. Luxury without pretense.
 
-Siquijor doesn't have a clifftop infinity pool over the Bohol Sea. Camiguin does. If *where you wake up* is part of the trip — and for the slow, romantic traveller it's most of the trip — that settles it.
+Siquijor doesn't have a clifftop infinity pool over the Bohol Sea. Camiguin does. If *where you wake up* is part of the trip — and for the slow, romantic traveller it's most of the trip — that settles it. (Our area-by-area breakdown of [where to stay in Camiguin](/guides/where-to-stay-in-camiguin) covers the whole island, not just our corner of it.)
 
 ## Camiguin or Siquijor for beaches: the honest answer
 
@@ -120,7 +120,7 @@ Camiguin's diving is quieter and more intimate. The **Sunken Cemetery** is a gen
 
 Short version: **Siquijor, 3-4 days. Camiguin, 3 for the highlights, 5-7 if you've come to exhale.**
 
-And yes — you can absolutely do both in one trip, which is what we'd quietly recommend. Pair them. Give Siquijor three or four days of beaches and folklore, then come to Camiguin to slow down at the end. (We've laid out exactly how in our [Camiguin itinerary](/guides/camiguin-itinerary), and Camiguin features prominently in our roundup of the [best islands in the Philippines](/guides/best-islands-in-the-philippines).)
+And yes — you can absolutely do both in one trip, which is what we'd quietly recommend. Pair them. Give Siquijor three or four days of beaches and folklore, then come to Camiguin to slow down at the end. (We've laid out exactly how in our [Camiguin itinerary](/guides/camiguin-itinerary), which months to do it in under [best time to visit Camiguin](/guides/best-time-to-visit-camiguin), and Camiguin features prominently in our roundup of the [best islands in the Philippines](/guides/best-islands-in-the-philippines).)
 
 There is one thing you must know if you're combining them: **there is no direct ferry between Siquijor and Camiguin.** The honest route runs via Bohol, and it's a full day. We'll lay it out properly below — because getting this wrong is the single most common planning mistake.
 

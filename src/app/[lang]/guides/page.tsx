@@ -4,9 +4,9 @@ import { getPageSeo } from "@/locales/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { getAllGuides } from "@/lib/guides";
+import { getGuides } from "@/lib/guides";
 import { site } from "@/lib/site";
-import { localePath } from "@/lib/i18n";
+import { localePath, localeTags } from "@/lib/i18n";
 
 const P: Record<Locale, { kicker: string; title: string; intro: string; read: string; minRead: string; updated: string }> = {
   en: { kicker: "Travel Guides", title: "Camiguin, by the people who live here", intro: "Honest, first-hand guides to getting here, choosing your island, and spending your days well — written from our clifftop in Mambajao.", read: "Read guide", minRead: "min read", updated: "Updated" },
@@ -28,19 +28,22 @@ export default async function GuidesIndexPage({ params }: PageProps<"/[lang]">) 
   const { lang: rawLang } = await params;
   const lang = rawLang as Locale;
   const p = P[lang];
-  const guides = getAllGuides();
+  // Only the articles that exist in THIS language — an untranslated guide is
+  // simply absent from the localized index rather than shown in English.
+  const guides = getGuides(lang);
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Camiguin Travel Guides",
-    description: meta.description,
-    url: `${site.url}/guides`,
+    name: p.title,
+    description: p.intro,
+    url: `${site.url}${localePath(lang, "/guides")}`,
+    inLanguage: localeTags[lang],
     isPartOf: { "@type": "WebSite", name: site.name, url: site.url },
     hasPart: guides.map((g) => ({
       "@type": "Article",
       headline: g.title,
-      url: `${site.url}/guides/${g.slug}`,
+      url: `${site.url}${localePath(lang, `/guides/${g.slug}`)}`,
       image: `${site.url}${g.image}`,
     })),
   };

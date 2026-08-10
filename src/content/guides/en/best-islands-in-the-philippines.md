@@ -124,9 +124,9 @@ We keep prices transparent so you can plan before you arrive. These are the real
 
 The most romantic way to take the island is the slowest: rent a scooter, ride the sixty-four-kilometre ring road, and stop wherever the light is good. Everything you need is on our [experiences page](/experiences#rentals), and our hosts will tailor any of it to how you like to travel.
 
-## Where to stay: a clifftop home in Mambajao
+## Where to base yourself: a clifftop home in Mambajao
 
-You can sleep cheap and basic in Camiguin, and many do. But if you have chosen a quiet island precisely to feel something, where you stay becomes the trip.
+You can sleep cheap and basic in Camiguin, and many do. But if you have chosen a quiet island precisely to feel something, where you stay becomes the trip. (For the full picture — every coast, every barangay, what each costs — see [where to stay in Camiguin](/guides/where-to-stay-in-camiguin).)
 
 Txaleta de Camiguin is a family-owned boutique resort — fourteen rooms — set on a clifftop in Mambajao, between Mt. Hibok-Hibok and the Bohol Sea. The name *Txaleta* is Spanish for a small home, a cottage, and that is the whole idea: not a hotel that processes you, but a house that takes you in. Filipino Heart, Spanish Soul. Our infinity pool reaches out over the Bohol Sea and is open from sunrise; breakfast by the water is included every morning; and the [Filipino-Spanish restaurant](/dining) is open to resort guests and walk-in visitors alike.
 
@@ -167,8 +167,8 @@ One to two days for a whistle-stop loop, three days for the highlights done prop
 ### What is the quietest island in the Philippines?
 For accessible quiet, Camiguin leads the pack. For deeper isolation, Sibuyan (within Romblon) and Catanduanes offer wild, near-empty landscapes — but expect longer, more complicated journeys to reach them.
 
-### When is the best time to visit Camiguin?
-The drier months from roughly March to early June are the most reliable for swimming and island-hopping. October is special in its own right: the Lanzones Festival celebrates the island's famously sweet, volcanic-ash-grown fruit.
+### Which months are most reliable for island-hopping in Camiguin?
+March, April and May are the driest and calmest, so the boat trips to White Island and Mantigue actually happen on the morning you booked them. October is special in its own right: the Lanzones Festival celebrates the island's famously sweet, volcanic-ash-grown fruit. We break down all twelve months in our guide to the [best time to visit Camiguin](/guides/best-time-to-visit-camiguin).
 
 ## Come home to Camiguin
 
@@ -355,10 +355,10 @@ Come for the views. Stay for the feeling. Welcome home.
         },
         {
           "@type": "Question",
-          "name": "When is the best time to visit Camiguin?",
+          "name": "Which months are most reliable for island-hopping in Camiguin?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The drier months from roughly March to early June are the most reliable for swimming and island-hopping. October is special in its own right: the Lanzones Festival celebrates the island's famously sweet, volcanic-ash-grown fruit."
+            "text": "March, April and May are the driest and calmest, so the boat trips to White Island and Mantigue actually happen on the morning you booked them. October is special in its own right: the Lanzones Festival celebrates the island's famously sweet, volcanic-ash-grown fruit."
           }
         }
       ]

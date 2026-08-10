@@ -8,7 +8,7 @@ keywords:
   - "Camiguin 3 day itinerary"
   - "how many days do you need in Camiguin"
   - "Camiguin 4 days 3 nights itinerary"
-  - "where to stay in Camiguin Mambajao"
+  - "Camiguin 3 days 2 nights itinerary"
   - "Camiguin itinerary from Cebu"
   - "things to do in Camiguin"
 date: 2026-06-22
@@ -155,9 +155,11 @@ If you are travelling with family or want a cooler, greener room set among the t
 
 ---
 
-## Where to stay in Camiguin: base yourself in Mambajao
+## Your base for these three days
 
 Here is the single decision that makes this whole itinerary work: **stay in one place and let the island come to you.** Camiguin is small, so there is no good reason to change hotels — and **Mambajao**, the main town, sits at the perfect midpoint. White Island launches from its coast, the airport is close, the ring road begins at your door, and the Sunken Cemetery is a short hop along the shore.
+
+(Choosing between the island's coasts and barangays is a whole subject of its own — we break it down area by area in [where to stay in Camiguin](/guides/where-to-stay-in-camiguin).)
 
 This is, frankly, the one thing a travel blog cannot offer you: a *base*. We are not just a stop on the map — we are [Txaleta de Camiguin](/about), a family-owned boutique resort of fourteen rooms on a Mambajao clifftop, between the volcano and the Bohol Sea. The name "Txaleta" comes from the Spanish word for a small home, a cottage, and that is exactly what we built: more than a resort, a place to belong.
 
@@ -167,9 +169,11 @@ Ready to lock it in? [Book direct with us](/book) — it lets us arrange your ai
 
 ---
 
-## When is the best time to visit Camiguin?
+## Which months suit this itinerary best
 
-Camiguin is good year-round, but the **dry months from roughly March to early November** give you the most reliable sea days and the calmest banca crossings to White Island and Mantigue. If you can time it, come in **October for the Lanzones Festival** — Camiguin's signature celebration of the sweet lanzones fruit it is famous for, with street dancing, costume, and the island at its most joyful. Just book early; rooms go quickly that week.
+This plan works year-round, but Day 2 is a sea day, and sea days reward dry weather. **March, April and May** give the calmest banca crossings to White Island and Mantigue; **June and September** are the quiet, good-value alternatives. If you can time it, **October** brings the Lanzones Festival — Camiguin's signature celebration of the sweet fruit it is famous for — and the island at its most joyful. Book early; rooms go quickly that week.
+
+The full month-by-month breakdown, including what to do when the rain arrives, is in our guide to the [best time to visit Camiguin](/guides/best-time-to-visit-camiguin).
 
 The island is small, safe, and refreshingly uncrowded whenever you come — one of the genuine pleasures of Camiguin over busier Philippine destinations.
 
@@ -198,14 +202,14 @@ White Island (a sunrise sandbar reached by banca), the Sunken Cemetery cross, Ma
 ### How do you get around Camiguin?
 The 64-kilometre ring road circles the whole island in about an hour, so most travellers rent a scooter (PHP 450/day) or an SUV/AUV (PHP 2,850/day, or PHP 1,500 half day, plus PHP 1,000/day for a local driver). A jet ski (PHP 7,000 for 3 hours) is an option for the coast. We arrange any of these at the resort.
 
-### Where should you stay in Camiguin?
-Stay in Mambajao, the island's main town and natural midpoint — it puts White Island, the airport, the Sunken Cemetery, and the ring road all within easy reach, so you never need to change hotels. Txaleta de Camiguin is a fourteen-room boutique resort on a Mambajao clifftop with an infinity pool over the Bohol Sea, ocean-view rooms, and breakfast by the water.
+### Where should you base yourself for this itinerary?
+Base yourself in Mambajao, the island's main town and natural midpoint — it puts White Island, the airport, the Sunken Cemetery, and the ring road all within easy reach, so you never need to change hotels. Txaleta de Camiguin is a fourteen-room boutique resort on a Mambajao clifftop with an infinity pool over the Bohol Sea, ocean-view rooms, and breakfast by the water.
 
 ### Is Camiguin worth visiting?
 Yes — Camiguin is one of the Philippines' most rewarding small islands precisely because it is uncrowded, safe, and easy to navigate. In a few days you get sandbars, snorkelling, waterfalls, hot and cold springs, an active volcano, and warm Filipino hospitality, all on an island you can circle in an hour.
 
-### When is the best time to go to Camiguin?
-The dry season from around March to early November offers the calmest seas and most reliable boat days to White Island and Mantigue. October brings the Lanzones Festival, Camiguin's liveliest celebration — book well ahead if you want to be here for it.
+### Which months suit this itinerary best?
+March, April and May bring the calmest seas and the most reliable boat days to White Island and Mantigue, with June and September the quieter, better-value alternatives. October brings the Lanzones Festival, Camiguin's liveliest celebration — book well ahead if you want to be here for it.
 
 ---
 
@@ -233,7 +237,7 @@ Come for the views. Stay for the feeling. Welcome home.
       "dateModified": "2026-06-22",
       "inLanguage": "en",
       "image": "https://www.txaletadecamiguin.com/images/guides/camiguin-itinerary-white-island-sunrise.png",
-      "keywords": "Camiguin itinerary, Camiguin 3 day itinerary, how many days do you need in Camiguin, Camiguin 4 days 3 nights itinerary, where to stay in Camiguin Mambajao, Camiguin itinerary from Cebu, things to do in Camiguin",
+      "keywords": "Camiguin itinerary, Camiguin 3 day itinerary, how many days do you need in Camiguin, Camiguin 4 days 3 nights itinerary, Camiguin 3 days 2 nights itinerary, Camiguin itinerary from Cebu, things to do in Camiguin",
       "author": {
         "@type": "Organization",
         "name": "Txaleta de Camiguin",
@@ -332,10 +336,10 @@ Come for the views. Stay for the feeling. Welcome home.
         },
         {
           "@type": "Question",
-          "name": "Where should you stay in Camiguin?",
+          "name": "Where should you base yourself for this Camiguin itinerary?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Stay in Mambajao, the island's main town and natural midpoint — it puts White Island, the airport, the Sunken Cemetery, and the ring road all within easy reach, so you never need to change hotels. Txaleta de Camiguin is a fourteen-room boutique resort on a Mambajao clifftop with an infinity pool over the Bohol Sea, ocean-view rooms, and breakfast by the water."
+            "text": "Base yourself in Mambajao, the island's main town and natural midpoint — it puts White Island, the airport, the Sunken Cemetery, and the ring road all within easy reach, so you never need to change hotels. Txaleta de Camiguin is a fourteen-room boutique resort on a Mambajao clifftop with an infinity pool over the Bohol Sea, ocean-view rooms, and breakfast by the water."
           }
         },
         {
@@ -348,10 +352,10 @@ Come for the views. Stay for the feeling. Welcome home.
         },
         {
           "@type": "Question",
-          "name": "When is the best time to go to Camiguin?",
+          "name": "Which months suit this Camiguin itinerary best?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The dry season from around March to early November offers the calmest seas and most reliable boat days to White Island and Mantigue. October brings the Lanzones Festival, Camiguin's liveliest celebration — book well ahead if you want to be here for it."
+            "text": "March, April and May bring the calmest seas and the most reliable boat days to White Island and Mantigue, with June and September the quieter, better-value alternatives. October brings the Lanzones Festival, Camiguin's liveliest celebration — book well ahead if you want to be here for it."
           }
         }
       ]
