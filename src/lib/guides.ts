@@ -48,6 +48,7 @@ const GUIDES_DIR = path.join(process.cwd(), "src", "content", "guides");
 // (highest intent), then logistics, then the top-of-funnel pillar.
 const ORDER = [
   "camiguin-vs-siquijor",
+  "camiguin-honeymoon",
   "where-to-stay-in-camiguin",
   "things-to-do-in-camiguin",
   "white-island-camiguin",

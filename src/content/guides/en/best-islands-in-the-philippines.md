@@ -11,7 +11,7 @@ keywords:
   - Camiguin hidden gem
   - Camiguin vs Siquijor
   - quietest island in the Philippines
-  - best island for couples Philippines
+  - least touristy island Philippines
 date: 2026-06-22
 author: "Txaleta de Camiguin"
 image: "/images/guides/best-islands-philippines-white-island-sandbar.png"
@@ -146,8 +146,8 @@ Beauty is subjective, but for sheer variety packed into a small space, Camiguin 
 ### What is the least touristy island in the Philippines?
 Among genuinely accessible islands, Camiguin is one of the least touristy — quieter even than Siquijor, with no party scene and few crowds. Romblon, Sibuyan, Catanduanes and Biri are even quieter still, but harder to reach.
 
-### Which island is best for couples?
-Camiguin. It is calm, safe, romantic and small enough that nothing feels like effort — sunrise swims, sunset on Tongatok Cliff, a private banca to a sandbar, and cliff-edge glamping with the sea at eye level. Couples come for the quiet and stay for the feeling.
+### Which underrated island is best for couples?
+Camiguin. It is calm, safe, romantic and small enough that nothing feels like effort — sunrise swims, sunset on Tongatok Cliff, a private banca to a sandbar, and cliff-edge glamping with the sea at eye level. Our [Camiguin honeymoon guide](/guides/camiguin-honeymoon) plans it out in full.
 
 ### What is the best island to relax?
 Again, Camiguin — built for slowness. Most travellers spend three days on highlights, but five to seven is where the island really works on you: hot springs, an infinity pool open from sunrise, breakfast by the water, and no schedule worth keeping.
@@ -299,7 +299,7 @@ Come for the views. Stay for the feeling. Welcome home.
         },
         {
           "@type": "Question",
-          "name": "Which island is best for couples?",
+          "name": "Which underrated Philippine island is best for couples?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Camiguin. It is calm, safe, romantic and small enough that nothing feels like effort — sunrise swims, sunset on Tongatok Cliff, a private banca to a sandbar, and cliff-edge glamping with the sea at eye level."

@@ -227,7 +227,7 @@ Near the airport, for almost everyone. Camiguin's airport at Mambajao sits on th
 Yes, though on a small scale — this is an island of family-run properties rather than international chains. The boutique end is concentrated on the north-west coast of Mambajao and includes clifftop resorts with infinity pools, sea-view rooms and glamping. Expect design and personal service rather than large-resort facilities.
 
 ### Where should couples or honeymooners stay in Camiguin?
-On the quieter, clifftop end of the north-west Mambajao coast, where the land rises above the sea and the sunsets come in over open water. Look for sea-view rooms, private terraces or cliff-edge glamping, and a property small enough to arrange your days for you.
+On the quieter, clifftop end of the north-west Mambajao coast, where the land rises above the sea and the sunsets come in over open water. Look for sea-view rooms, private terraces or cliff-edge glamping, and a property small enough to arrange your days for you. Our [Camiguin honeymoon guide](/guides/camiguin-honeymoon) covers the rooms, the months and a five-day plan.
 
 ### Is Camiguin good for families?
 Very. It's safe, quiet, short on traffic, and everything is close together. Stay on the north-west coast, choose a property with a pool as well as sea access, and pick family rooms over connecting doubles. The springs, the sandbar and the giant clam sanctuary all work brilliantly with children.

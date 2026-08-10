@@ -134,9 +134,9 @@ There is **no direct Siquijor-Camiguin ferry**. The real journey is a three-leg 
 
 The catch is timing: the **Jagna-Camiguin RORO runs limited days**, so pre-book your Bohol van to connect with a specific sailing or you risk being stranded in Jagna overnight. The alternative — and often the saner one — is to skip the marathon and **fly**: Siquijor back to Dumaguete or Cebu, then onward to Camiguin's own airport. Tell us your dates and we'll help you plot the smoothest version. Our [arrival guide](/guides/how-to-get-to-camiguin-from-cebu) covers the flight side in full.
 
-## Is Camiguin good for couples and honeymoons?
+## Which one suits a slow, romantic trip?
 
-This is where Camiguin doesn't just compete — it pulls clear. The whole island runs at the pace of a long, slow morning, and the right base turns that into something quietly unforgettable.
+This is where Camiguin doesn't just compete — it pulls clear. (We've written the whole case out separately in our [Camiguin honeymoon guide](/guides/camiguin-honeymoon).) The whole island runs at the pace of a long, slow morning, and the right base turns that into something quietly unforgettable.
 
 Picture it. Sunrise from the [Ocean View Glamping](/book?room=ocean-view-glamping) deck, the canvas open to the Bohol Sea. *Almusal sa Bahay*, our heritage breakfast, by the water — tsokolate, pan de sal con keso de bola, garlic adobo, Camiguin mango. *Sunrise Saludo* yoga on the cliff edge. A banca to White Island, then *La Merienda*, a sunset picnic, with a Spanish latte and the volcano going gold behind you. *Tahimik Nights* under more stars than a city traveller has seen in years. For couples, the [Premier Seaview Suite](/accommodation#premier-seaview-suite) puts White Island on the water beyond your own private terrace through floor-to-ceiling glass.
 
@@ -171,8 +171,8 @@ For convenient white-sand beaches you can walk straight onto, Siquijor wins (Pal
 ### Which is better for diving?
 Siquijor, mainly for access — it's the springboard to Apo Island and the muck diving off Dumaguete. Camiguin offers quieter, uncrowded diving including the Sunken Cemetery coral garden and the Mantigue sanctuary.
 
-### Is Camiguin good for couples and honeymoons?
-Very. Its slow pace, clifftop infinity pools, ocean-view rooms, cliff-edge glamping and heritage dining make it one of the most romantic islands in the region — a step above Siquijor's simpler beach lodgings for a honeymoon.
+### Which of the two is more romantic?
+Camiguin, clearly. Siquijor is romantic in a barefoot, backpacker way; Camiguin offers clifftop infinity pools, ocean-view rooms, cliff-edge glamping and heritage dining — a step above Siquijor's simpler beach lodgings. Our [Camiguin honeymoon guide](/guides/camiguin-honeymoon) lays out a full five-day plan.
 
 ### Why are Camiguin beaches black sand?
 Because Camiguin is a volcanic island — the "Island Born of Fire." Its main ring-road beaches are dark, volcanic sand. Genuine white sand is found at White Island (a shifting sandbar), Mantigue Island and the Cantaan Giant Clam Sanctuary, all a short banca ride away.
@@ -318,10 +318,10 @@ Come for the views. Stay for the feeling. Welcome home.
         },
         {
           "@type": "Question",
-          "name": "Is Camiguin good for couples and honeymoons?",
+          "name": "Which is more romantic, Camiguin or Siquijor?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Very. Its slow pace, clifftop infinity pools, ocean-view rooms, cliff-edge glamping and heritage dining make it one of the most romantic islands in the region — a step above Siquijor's simpler beach lodgings for a honeymoon."
+            "text": "Camiguin, clearly. Siquijor is romantic in a barefoot, backpacker way; Camiguin offers clifftop infinity pools, ocean-view rooms, cliff-edge glamping and heritage dining — a step above Siquijor's simpler beach lodgings."
           }
         },
         {
