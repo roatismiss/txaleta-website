@@ -50,6 +50,7 @@ const ORDER = [
   "camiguin-vs-siquijor",
   "where-to-stay-in-camiguin",
   "things-to-do-in-camiguin",
+  "white-island-camiguin",
   "camiguin-itinerary",
   "best-time-to-visit-camiguin",
   "camiguin-lanzones-festival",

@@ -128,7 +128,7 @@ Nobody visits an island in the abstract. Pick your priority and the month picks 
 
 | You came for… | Best window | Why |
 |---|---|---|
-| **White Island sandbar** | March–May | Calm crossing, glass shallows; go at sunrise for shade and low tide |
+| **[White Island sandbar](/guides/white-island-camiguin)** | March–May | Calm crossing, glass shallows; go at sunrise for shade and low tide |
 | **Snorkelling & diving** | March–June | Best visibility on the reefs, Sunken Cemetery and Mantigue |
 | **Hiking Mt. Hibok-Hibok** | February–May | Driest trail, clearest summit view, safest footing |
 | **Waterfalls at full flow** | July–December | Katibawasan and Tuasan are at their most dramatic |

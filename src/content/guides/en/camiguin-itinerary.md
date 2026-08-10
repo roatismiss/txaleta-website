@@ -91,7 +91,7 @@ This is the big one. An early start, but the best morning of your trip.
 
 Two things matter here, and the blogs often skip them. First, the light: at sunrise the sandbar glows and the heat is gentle, whereas by ten o'clock it is blinding and there is genuinely nowhere to hide from the sun. Second, the **tide** — White Island's shape changes with the tide, and at high water it can shrink to a sliver. We check the tide tables for your date and time the boat accordingly. This is the kind of thing you only know if you live here.
 
-Bring water, a hat, reef-safe sunscreen, and a sense of stillness. You will have the place nearly to yourselves.
+Bring water, a hat, reef-safe sunscreen, and a sense of stillness. You will have the place nearly to yourselves. (Fares, tide timing and the full packing list are in our dedicated [White Island guide](/guides/white-island-camiguin).)
 
 ### The Giant Clam Sanctuary
 

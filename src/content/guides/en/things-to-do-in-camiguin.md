@@ -66,7 +66,7 @@ A bare crescent of white sand sitting on turquoise water off the Mambajao coast,
 
 Go at **sunrise**, around 5:30–6:00 am, by *banca* from Yumbing or Agoho. Two reasons: the light, and the fact that by ten o'clock there is genuinely nowhere to hide from the sun. The sandbar also changes shape with the tide and can shrink to a sliver at high water, so the boat should be timed to the tide table, not to when you feel like waking up. We check it for our guests' dates.
 
-**Worth:** a whole morning. It's the single best thing on the island.
+**Worth:** a whole morning. It's the single best thing on the island — and we've written up the boat fares, the tide problem and everything else in a [full White Island guide](/guides/white-island-camiguin).
 
 ### 2. Mantigue Island
 
