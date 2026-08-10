@@ -250,6 +250,8 @@ Camiguin is a three-day island if you treat it as a checklist and a seven-day on
 
 **What you should book ahead:** the Hibok-Hibok guide and permit, the private banca, and anything at all during Lanzones Festival week.
 
+**What it all costs:** less than you'd think. Every entrance fee on this list, plus flights, rooms and boats, is worked out in [how much a Camiguin trip costs](/guides/camiguin-travel-cost).
+
 ## How many days do you need for all this?
 
 - **2 days** — the five essentials, rushed but real.

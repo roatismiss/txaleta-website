@@ -142,6 +142,8 @@ Camiguin is not an expensive island, and the spread is wide. As a rough guide to
 
 Prices climb in the four windows that sell out every year: **Holy Week**, the **Filipino summer** from late March to May, **Lanzones Festival week** in October, and **Christmas to New Year**. Our [best time to visit Camiguin](/guides/best-time-to-visit-camiguin) guide covers exactly when those fall and how far ahead to book.
 
+A full worked budget for the whole trip — flights, boats, entrance fees and all — is in [how much a Camiguin trip costs](/guides/camiguin-travel-cost).
+
 Two costs travellers forget: **airport or port transfer** (ask whether it's included — ours is), and **the ring road itself**. A scooter runs around ₱450 a day, an SUV around ₱2,850, and a driver on top of that if you'd rather look out of the window than at the road.
 
 ## What to check before you book — the Camiguin-specific list

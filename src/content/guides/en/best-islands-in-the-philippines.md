@@ -111,7 +111,7 @@ One number tells the whole story. Island-hopping in Romblon runs about ₱2,500 
 
 ## What it costs to explore Camiguin
 
-We keep prices transparent so you can plan before you arrive. These are the real rates our hosts arrange:
+We keep prices transparent so you can plan before you arrive. These are the real rates our hosts arrange — and there's a full worked budget, including flights, rooms and every entrance fee, in [how much a Camiguin trip costs](/guides/camiguin-travel-cost):
 
 | Experience | Price (PHP) |
 |---|---|

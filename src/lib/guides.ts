@@ -52,6 +52,7 @@ const ORDER = [
   "things-to-do-in-camiguin",
   "white-island-camiguin",
   "camiguin-itinerary",
+  "camiguin-travel-cost",
   "best-time-to-visit-camiguin",
   "camiguin-lanzones-festival",
   "how-to-get-to-camiguin-from-cebu",
