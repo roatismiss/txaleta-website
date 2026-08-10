@@ -62,7 +62,7 @@ So: worth visiting? We are biased, and we will own it. But the travellers who ar
 
 ## What is there to actually do in Camiguin?
 
-A common worry about an island this size is that it will run out of things to do by day two. It does not. It simply asks you to slow down enough to find them.
+A common worry about an island this size is that it will run out of things to do by day two. It does not. It simply asks you to slow down enough to find them. (The full inventory is in our list of [25 things to do in Camiguin](/guides/things-to-do-in-camiguin); here are the ones that define the place.)
 
 ### White Island, the sandbar that moves
 

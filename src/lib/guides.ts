@@ -49,6 +49,7 @@ const GUIDES_DIR = path.join(process.cwd(), "src", "content", "guides");
 const ORDER = [
   "camiguin-vs-siquijor",
   "where-to-stay-in-camiguin",
+  "things-to-do-in-camiguin",
   "camiguin-itinerary",
   "best-time-to-visit-camiguin",
   "camiguin-lanzones-festival",

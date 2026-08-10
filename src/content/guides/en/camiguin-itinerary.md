@@ -10,7 +10,7 @@ keywords:
   - "Camiguin 4 days 3 nights itinerary"
   - "Camiguin 3 days 2 nights itinerary"
   - "Camiguin itinerary from Cebu"
-  - "things to do in Camiguin"
+  - "Camiguin day by day plan"
 date: 2026-06-22
 author: "Txaleta de Camiguin"
 image: "/images/guides/camiguin-itinerary-white-island-sunrise.png"
@@ -196,8 +196,8 @@ The classic three-day plan: Day 1 arrive and settle in with a sunset kayak at th
 ### Can you do Camiguin in 3 days?
 Yes. Three full days is the sweet spot for a first visit and comfortably covers every highlight without rushing. The island is compact — the entire ring road takes about an hour to drive — so three days lets you see the sea, the land, and the volcanic landmarks while still slowing down each evening.
 
-### What is there to do in Camiguin?
-White Island (a sunrise sandbar reached by banca), the Sunken Cemetery cross, Mantigue Island and its coral drop-off, the Giant Clam Sanctuary, Katibawasan and Tuasan waterfalls, Sto. Niño Cold Spring, Ardent Hot Springs, the Gui-ob Church Ruins, and — for the fit and properly guided — a climb up the active Mt. Hibok-Hibok volcano.
+### What does this itinerary actually cover?
+Day 1 arrival, the infinity pool and a sunset kayak at the Sunken Cemetery; Day 2 the sea — White Island at sunrise, the Giant Clam Sanctuary and Mantigue Island; Day 3 the ring road — Katibawasan Falls, Sto. Niño Cold Spring, the Bura soda pool, Ardent Hot Springs and the Gui-ob Church Ruins. Our full list of [25 things to do in Camiguin](/guides/things-to-do-in-camiguin) covers everything else the island holds.
 
 ### How do you get around Camiguin?
 The 64-kilometre ring road circles the whole island in about an hour, so most travellers rent a scooter (PHP 450/day) or an SUV/AUV (PHP 2,850/day, or PHP 1,500 half day, plus PHP 1,000/day for a local driver). A jet ski (PHP 7,000 for 3 hours) is an option for the coast. We arrange any of these at the resort.
@@ -237,7 +237,7 @@ Come for the views. Stay for the feeling. Welcome home.
       "dateModified": "2026-06-22",
       "inLanguage": "en",
       "image": "https://www.txaletadecamiguin.com/images/guides/camiguin-itinerary-white-island-sunrise.png",
-      "keywords": "Camiguin itinerary, Camiguin 3 day itinerary, how many days do you need in Camiguin, Camiguin 4 days 3 nights itinerary, Camiguin 3 days 2 nights itinerary, Camiguin itinerary from Cebu, things to do in Camiguin",
+      "keywords": "Camiguin itinerary, Camiguin 3 day itinerary, how many days do you need in Camiguin, Camiguin 4 days 3 nights itinerary, Camiguin 3 days 2 nights itinerary, Camiguin itinerary from Cebu, Camiguin day by day plan",
       "author": {
         "@type": "Organization",
         "name": "Txaleta de Camiguin",
@@ -320,10 +320,10 @@ Come for the views. Stay for the feeling. Welcome home.
         },
         {
           "@type": "Question",
-          "name": "What is there to do in Camiguin?",
+          "name": "What does this Camiguin itinerary actually cover?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "White Island (a sunrise sandbar reached by banca), the Sunken Cemetery cross, Mantigue Island and its coral drop-off, the Giant Clam Sanctuary, Katibawasan and Tuasan waterfalls, Sto. Niño Cold Spring, Ardent Hot Springs, the Gui-ob Church Ruins, and — for the fit and properly guided — a climb up the active Mt. Hibok-Hibok volcano."
+            "text": "Day 1 arrival, the infinity pool and a sunset kayak at the Sunken Cemetery; Day 2 the sea — White Island at sunrise, the Giant Clam Sanctuary and Mantigue Island; Day 3 the ring road — Katibawasan Falls, Sto. Niño Cold Spring, the Bura soda pool, Ardent Hot Springs and the Gui-ob Church Ruins."
           }
         },
         {
