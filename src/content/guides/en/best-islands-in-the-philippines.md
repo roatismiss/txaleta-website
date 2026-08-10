@@ -168,7 +168,7 @@ One to two days for a whistle-stop loop, three days for the highlights done prop
 For accessible quiet, Camiguin leads the pack. For deeper isolation, Sibuyan (within Romblon) and Catanduanes offer wild, near-empty landscapes — but expect longer, more complicated journeys to reach them.
 
 ### Which months are most reliable for island-hopping in Camiguin?
-March, April and May are the driest and calmest, so the boat trips to White Island and Mantigue actually happen on the morning you booked them. October is special in its own right: the Lanzones Festival celebrates the island's famously sweet, volcanic-ash-grown fruit. We break down all twelve months in our guide to the [best time to visit Camiguin](/guides/best-time-to-visit-camiguin).
+March, April and May are the driest and calmest, so the boat trips to White Island and Mantigue actually happen on the morning you booked them. October is special in its own right: the [Lanzones Festival](/guides/camiguin-lanzones-festival) celebrates the island's famously sweet, volcanic-ash-grown fruit. We break down all twelve months in our guide to the [best time to visit Camiguin](/guides/best-time-to-visit-camiguin).
 
 ## Come home to Camiguin
 

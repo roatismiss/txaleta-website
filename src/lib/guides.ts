@@ -51,6 +51,7 @@ const ORDER = [
   "where-to-stay-in-camiguin",
   "camiguin-itinerary",
   "best-time-to-visit-camiguin",
+  "camiguin-lanzones-festival",
   "how-to-get-to-camiguin-from-cebu",
   "best-islands-in-the-philippines",
   "birdwatching-camiguin-hibok-hibok",

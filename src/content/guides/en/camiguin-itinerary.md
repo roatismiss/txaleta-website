@@ -171,7 +171,7 @@ Ready to lock it in? [Book direct with us](/book) — it lets us arrange your ai
 
 ## Which months suit this itinerary best
 
-This plan works year-round, but Day 2 is a sea day, and sea days reward dry weather. **March, April and May** give the calmest banca crossings to White Island and Mantigue; **June and September** are the quiet, good-value alternatives. If you can time it, **October** brings the Lanzones Festival — Camiguin's signature celebration of the sweet fruit it is famous for — and the island at its most joyful. Book early; rooms go quickly that week.
+This plan works year-round, but Day 2 is a sea day, and sea days reward dry weather. **March, April and May** give the calmest banca crossings to White Island and Mantigue; **June and September** are the quiet, good-value alternatives. If you can time it, **October** brings the [Lanzones Festival](/guides/camiguin-lanzones-festival) — Camiguin's signature celebration of the sweet fruit it is famous for — and the island at its most joyful. Book early; rooms go quickly that week.
 
 The full month-by-month breakdown, including what to do when the rain arrives, is in our guide to the [best time to visit Camiguin](/guides/best-time-to-visit-camiguin).
 

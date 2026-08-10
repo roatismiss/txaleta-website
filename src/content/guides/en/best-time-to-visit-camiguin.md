@@ -9,7 +9,7 @@ keywords:
   - "Camiguin dry season"
   - "Camiguin rainy season"
   - "when to visit Camiguin"
-  - "Lanzones Festival Camiguin"
+  - "Camiguin busiest month"
   - "Camiguin in October"
   - "Camiguin peak season"
   - "cheapest time to visit Camiguin"
@@ -94,15 +94,15 @@ From June the rain returns, but in Camiguin it usually returns *politely* — bu
 
 The honest caveats: boat trips to White Island and Mantigue depend on sea conditions, so build a **flexible day** into a green-season trip and let us re-time your banca rather than cancel it. And bring a dry bag.
 
-## October: the Lanzones Festival
+## October: the week the island fills up
 
-Once a year Mambajao stops being a sleepy capital and becomes a street party.
-
-The **Lanzones Festival** celebrates the small, sweet, translucent fruit that grows better here than almost anywhere in the Philippines — a week of street dancing in costume, parades, pageants, food stalls and an island-wide reunion of everyone who ever left. For **2026 the festival falls in the second half of October**, centred on Mambajao; exact schedules are released by the provincial tourism office closer to the date, and we're happy to send you the confirmed programme when it lands.
+Once a year Mambajao stops being a sleepy capital and becomes a street party. For a week in the second half of October, the island celebrates its lanzones harvest with street dancing in costume, parades, pageants and an island-wide reunion of everyone who ever left.
 
 If cultural travel is the point of your trip, this is the single best week to be on Camiguin. If solitude is the point, it's the one week to avoid.
 
 Either way: **book months ahead.** Fourteen rooms, one island, one festival. October fills first.
+
+We've written the whole week up properly — the fruit, the events, where to stand, and the honest case for and against — in our [Lanzones Festival guide](/guides/camiguin-lanzones-festival).
 
 ## The wet months: November, December, January
 
@@ -199,8 +199,8 @@ November, December and January are the wettest, with December and January usuall
 ### Is Camiguin worth visiting in the rainy season?
 Yes, with the right expectations. The island is greener, the waterfalls run heavier, prices are lower and you'll have the roads and springs largely to yourself. Ardent Hot Springs, the cold springs, the ring road and the food are unaffected by rain. Just keep one flexible day for boat trips to White Island and Mantigue.
 
-### When is the Lanzones Festival in Camiguin?
-The Lanzones Festival is held each October in Mambajao, the island's capital, and in 2026 it falls in the second half of the month. It's a week of street dancing, parades, pageants and food celebrating Camiguin's famous lanzones fruit. Exact schedules are published by the provincial tourism office closer to the date, and it's the busiest week of the year on the island — book accommodation several months ahead.
+### Which month is Camiguin busiest?
+October, by a wide margin — the island's lanzones harvest festival fills Mambajao for a week in the second half of the month, and Filipino families return home from all over the country. The days between Christmas and New Year are the second busiest. Our [Lanzones Festival guide](/guides/camiguin-lanzones-festival) covers that week in full.
 
 ### What is the cheapest time to visit Camiguin?
 June through September, plus the second half of January, are the cheapest and quietest weeks. Rates soften, flights are easier to get, and you can often book two weeks out instead of two months.
@@ -252,7 +252,7 @@ Come for the views. Stay for the feeling. Welcome home.
       "dateModified": "2026-08-10",
       "inLanguage": "en",
       "image": "https://www.txaletadecamiguin.com/images/resort/camiguin_coast_aerial.webp",
-      "keywords": "best time to visit Camiguin, Camiguin weather by month, Camiguin dry season, Camiguin rainy season, when to visit Camiguin, Lanzones Festival Camiguin, Camiguin in October, cheapest time to visit Camiguin, does Camiguin get typhoons",
+      "keywords": "best time to visit Camiguin, Camiguin weather by month, Camiguin dry season, Camiguin rainy season, when to visit Camiguin, Camiguin busiest month, Camiguin in October, cheapest time to visit Camiguin, does Camiguin get typhoons",
       "articleSection": "Travel Guides",
       "author": {
         "@type": "Organization",
@@ -321,10 +321,10 @@ Come for the views. Stay for the feeling. Welcome home.
         },
         {
           "@type": "Question",
-          "name": "When is the Lanzones Festival in Camiguin?",
+          "name": "Which month is Camiguin busiest?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Lanzones Festival is held each October in Mambajao, the island's capital, and in 2026 it falls in the second half of the month. It is a week of street dancing, parades, pageants and food celebrating Camiguin's famous lanzones fruit. Exact schedules are published by the provincial tourism office closer to the date, and it is the busiest week of the year on the island — book several months ahead."
+            "text": "October, by a wide margin — the island's lanzones harvest festival fills Mambajao for a week in the second half of the month, and Filipino families return home from all over the country. The days between Christmas and New Year are the second busiest."
           }
         },
         {

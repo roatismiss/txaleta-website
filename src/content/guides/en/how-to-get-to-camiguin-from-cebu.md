@@ -135,7 +135,7 @@ The getting-here is the easy part. The staying is the point. Once you're on the 
 
 When you're ready to rest, our [fourteen rooms](/accommodation) sit at the cliff's edge with the sea at eye level. The [Ocean View Glamping](/book?room=ocean-view-glamping) puts a proper bed under canvas above the Bohol Sea; the [Premier Seaview Suite](/book?room=premier-seaview-suite) frames White Island through floor-to-ceiling glass. Mornings begin with *Almusal sa Bahay* — *tsokolate*, *pan de sal con keso de bola*, *garlic adobo*, and Camiguin mango — served by the water in our [Filipino-Spanish kitchen](/dining). It is comfort without pretense: Filipino Heart, Spanish Soul.
 
-Still mapping the trip? Read on in our companion guides: the [best time to visit Camiguin](/guides/best-time-to-visit-camiguin) month by month, [where to stay in Camiguin](/guides/where-to-stay-in-camiguin) coast by coast, a day-by-day [Camiguin itinerary](/guides/camiguin-itinerary), the [Camiguin vs Siquijor](/guides/camiguin-vs-siquijor) question, and where the island lands among the [best islands in the Philippines](/guides/best-islands-in-the-philippines).
+Still mapping the trip? Read on in our companion guides: the [best time to visit Camiguin](/guides/best-time-to-visit-camiguin) month by month, [where to stay in Camiguin](/guides/where-to-stay-in-camiguin) coast by coast, a day-by-day [Camiguin itinerary](/guides/camiguin-itinerary), the [Camiguin vs Siquijor](/guides/camiguin-vs-siquijor) question, the [Lanzones Festival](/guides/camiguin-lanzones-festival) if you're coming in October, and where the island lands among the [best islands in the Philippines](/guides/best-islands-in-the-philippines).
 
 ## Frequently Asked Questions
 
