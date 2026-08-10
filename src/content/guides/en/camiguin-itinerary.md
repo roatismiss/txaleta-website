@@ -141,7 +141,7 @@ See everything on our [experiences and rentals page](/experiences#rentals). What
 
 The fourth day is a fork in the road, and both paths are good.
 
-**The adventure:** a **guided ascent of Mt. Hibok-Hibok**, the active volcano on whose flank the whole island rests. This is a real climb — Hibok-Hibok is *active*, the trail is steep, and a registered guide and permit are required. It is not a casual stroll, and we will only book it for you if you are fit for it. The reward is a crater lake and a view across the Bohol Sea to Bohol itself. We arrange the guide, the permit, and an early breakfast packed to go.
+**The adventure:** a **guided ascent of Mt. Hibok-Hibok**, the active volcano on whose flank the whole island rests. This is a real climb — Hibok-Hibok is *active*, the trail is steep, and a registered guide and permit are required. It is not a casual stroll, and we will only book it for you if you are fit for it. The reward is a crater lake and a view across the Bohol Sea to Bohol itself. We arrange the guide, the permit, and an early breakfast packed to go — and our [honest Hibok-Hibok trekking guide](/guides/hibok-hibok-hike) tells you whether you're actually up for it.
 
 **Or the stillness:** a wellness day with no agenda. Begin with **Sunrise Saludo**, our cliffside yoga as the sun comes up over the sea. A **hilot** massage — traditional Filipino healing touch — through the warm part of the day. And in the evening, **La Merienda**, a sunset picnic set out on the cliff: small plates, a glass of something cold, the sky doing its slow work. Some of our guests who chose the climb their first trip choose the stillness their second.
 

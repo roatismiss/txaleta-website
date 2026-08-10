@@ -90,7 +90,7 @@ Almost all of Camiguin's endemic action happens in one place: the forest of the 
 | **Taguines Lagoon, Mahinog** | Open-country and water-edge birds — herons, egrets, Brahminy Kite | Easy |
 | **Mantigue Island Nature Park** | A gentle forest-trail nature walk (marine sanctuary, not an endemic-bird site) | Easy; boat trip |
 
-The honest headline: **you do not need to climb the volcano to see the endemics.** The forest near the Visitors Information Center and the Itum road deliver the headline birds without a summit push. The full Hibok-Hibok ascent is a wonderful day in its own right — a guided activity we love — but treat it as trekking that happens to pass good forest, not as the only way to bird. (If the summit is calling you, that's its own adventure; see our [experiences](/experiences) for how we arrange guided treks.)
+The honest headline: **you do not need to climb the volcano to see the endemics.** The forest near the Visitors Information Center and the Itum road deliver the headline birds without a summit push. The full Hibok-Hibok ascent is a wonderful day in its own right — a guided activity we love — but treat it as trekking that happens to pass good forest, not as the only way to bird. (If the summit is calling you, that's its own adventure — we've written it up honestly in our [Mt. Hibok-Hibok trekking guide](/guides/hibok-hibok-hike).)
 
 One more honest note, because we won't oversell our own neighbour: **Mantigue Island is a marine sanctuary, not an endemic-bird hotspot.** Its draw is turtles, coral and a lovely short forest trail. Don't go to Mantigue expecting the hanging-parrot — go for the snorkelling and the trees, and route your endemic birding to Hibok-Hibok.
 

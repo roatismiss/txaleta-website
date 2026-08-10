@@ -126,7 +126,7 @@ The island's serious hike, and a real one: Hibok-Hibok is an **active volcano**,
 
 Start before dawn. Dry-season mornings (February–May) give you the ridgeline instead of the inside of a cloud. Confirm current guide and permit fees with the tourism office when you book — they change.
 
-**Worth:** a full day, if you're fit for it. Not a casual stroll.
+**Worth:** a full day, if you're fit for it. Not a casual stroll — we've written the permit, the fees and the honest difficulty into a [full Hibok-Hibok guide](/guides/hibok-hibok-hike).
 
 ### 10. The Sunken Cemetery
 

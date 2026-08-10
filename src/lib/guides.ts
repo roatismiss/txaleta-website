@@ -54,6 +54,7 @@ const ORDER = [
   "white-island-camiguin",
   "camiguin-itinerary",
   "camiguin-travel-cost",
+  "hibok-hibok-hike",
   "best-time-to-visit-camiguin",
   "camiguin-lanzones-festival",
   "how-to-get-to-camiguin-from-cebu",
