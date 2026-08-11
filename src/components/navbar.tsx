@@ -106,6 +106,7 @@ export function Navbar({ lang = "en" }: { lang?: Locale }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [activeMega, setActiveMega] = useState<string | null>(null);
+  const [langOpen, setLangOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { setIsMenuOpen } = useMenu();
 
@@ -193,7 +194,11 @@ export function Navbar({ lang = "en" }: { lang?: Locale }) {
           initial={false}
           animate={{ height: scrolled ? 0 : 44, opacity: scrolled ? 0 : 1 }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="hidden overflow-hidden border-b border-ink/10 lg:block"
+          // The row clips itself so the height animation reads clean — but that
+          // also clips the language dropdown, so un-clip while it is open.
+          className={`relative hidden border-b border-ink/10 lg:block ${
+            langOpen && !scrolled ? "z-20 overflow-visible" : "overflow-hidden"
+          }`}
         >
           <div className="flex h-11 items-center justify-between px-14">
             <div className="hidden items-center gap-5 md:flex">
@@ -204,7 +209,7 @@ export function Navbar({ lang = "en" }: { lang?: Locale }) {
               <Phone className="h-3.5 w-3.5" strokeWidth={1.5} /> {site.contact.phone}
             </a>
             <div className="flex items-center gap-5">
-              <LanguageSwitcher lang={lang} />
+              <LanguageSwitcher lang={lang} onOpenChange={setLangOpen} />
               <Link href={localePath(lang, "/book")} className="hidden bg-brand px-5 py-2 label text-[10px] text-white transition-colors hover:bg-brand-dark sm:inline-block">
                 {t.bookNow}
               </Link>

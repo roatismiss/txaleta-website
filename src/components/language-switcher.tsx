@@ -30,15 +30,22 @@ export function LanguageSwitcher({
   lang,
   align = "right",
   className = "",
+  onOpenChange,
 }: {
   lang: Locale;
   align?: "left" | "right";
   className?: string;
+  /** Lets a clipping parent (the animated utility row) un-clip while open. */
+  onOpenChange?: (open: boolean) => void;
 }) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement | null>(null);
   const pathname = usePathname() || "/";
   const path = unprefixedPath(pathname);
+
+  useEffect(() => {
+    onOpenChange?.(open);
+  }, [open, onOpenChange]);
 
   // Close on outside click / Escape.
   useEffect(() => {
