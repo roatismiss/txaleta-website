@@ -74,7 +74,7 @@ A small forested islet ringed by white sand off the east coast, with a sharp cor
 
 Pack lunch rather than relying on what's there. And note: it's a **marine** sanctuary, not a birding site, despite what a few guides imply.
 
-**Worth:** a long, unhurried half-day.
+**Worth:** a long, unhurried half-day — though note there's a three-hour cap on the island, which we explain along with the fares in our [Mantigue and giant clams guide](/guides/mantigue-island-camiguin).
 
 ### 3. Cantaan Giant Clam Sanctuary
 
@@ -154,7 +154,7 @@ Go early or late — there's little shade.
 
 Volcanically heated mineral pools set into forest on the flank of Hibok-Hibok, warm year-round and completely indifferent to the weather. This is the island's answer to a rainy afternoon, and it's genuinely better at **dusk**, when the air cools and the heat of the water finally makes sense.
 
-**Worth:** a late afternoon, ideally after a waterfall.
+**Worth:** a late afternoon, ideally after a waterfall. All three springs, in the right order, are in our [Camiguin springs guide](/guides/camiguin-springs).
 
 ### 14. Sto. Niño Cold Spring
 
@@ -279,8 +279,8 @@ Yes, though you'll miss some of the pleasure. Most resorts arrange a driver, and
 ### What is there to do in Camiguin when it rains?
 Plenty. Ardent Hot Springs is volcanically heated and better in cool weather, the cold springs and the Bura soda pool are unaffected, the waterfalls run heavier, and the ring road, the church ruins, the market and a long lunch all work fine. Only the boat trips are weather-dependent.
 
-### Is Camiguin good for families with children?
-Very. It's safe, quiet and short on traffic, and everything is close together. Sto. Niño Cold Spring is shallow and shaded, the Giant Clam Sanctuary is shallow snorkelling, and White Island is a sandbar with no waves. Skip the Hibok-Hibok climb with small children.
+### Which of these attractions work with children?
+Sto. Niño Cold Spring (shallow and shaded), the Giant Clam Sanctuary (shallow snorkelling), White Island early in the day, and the waterfalls as short stops. Skip the Hibok-Hibok climb entirely with small children. Our [Camiguin with kids guide](/guides/camiguin-with-kids) rates every attraction by age.
 
 ### What can you do in Camiguin in one day?
 Pick the sea or the land, not both. Either a sunrise banca to White Island plus the Giant Clam Sanctuary, or the western loop — Sunken Cemetery, Gui-ob Church Ruins, Sto. Niño Cold Spring and Katibawasan Falls — finishing at Ardent Hot Springs at dusk.
@@ -439,10 +439,10 @@ Come for the views. Stay for the feeling. Welcome home.
         },
         {
           "@type": "Question",
-          "name": "Is Camiguin good for families with children?",
+          "name": "Which Camiguin attractions work with children?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Very. It is safe, quiet and short on traffic, and everything is close together. Sto. Niño Cold Spring is shallow and shaded, the Giant Clam Sanctuary is shallow snorkelling, and White Island is a sandbar with no waves. Skip the Hibok-Hibok climb with small children."
+            "text": "Sto. Niño Cold Spring (shallow and shaded), the Giant Clam Sanctuary (shallow snorkelling), White Island early in the day, and the waterfalls as short stops. Skip the Hibok-Hibok climb entirely with small children."
           }
         },
         {

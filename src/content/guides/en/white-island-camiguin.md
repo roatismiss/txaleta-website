@@ -99,7 +99,7 @@ The smartest version of a White Island trip doesn't end at White Island.
 
 Most boatmen will happily continue to the **Cantaan Giant Clam Sanctuary**, where giant clams the size of armchairs sit in clear shallows and you snorkel directly above them. It's the island's most underrated stop and it makes a sunrise sandbar trip into a proper sea morning.
 
-If you want the full day on the water, **Mantigue Island** — white sand, forest, and a sharp coral drop-off with the best snorkelling in the area — is the natural third stop, though it's on the opposite coast and works better as its own trip. Our [three-day itinerary](/guides/camiguin-itinerary) sequences all of this into a single sea day, and the [full list of things to do in Camiguin](/guides/things-to-do-in-camiguin) puts it in context with everything else on the island.
+If you want the full day on the water, **[Mantigue Island](/guides/mantigue-island-camiguin)** — white sand, forest, and a sharp coral drop-off with the best snorkelling in the area — is the natural third stop, though it's on the opposite coast and works better as its own trip. Our [three-day itinerary](/guides/camiguin-itinerary) sequences all of this into a single sea day, and the [full list of things to do in Camiguin](/guides/things-to-do-in-camiguin) puts it in context with everything else on the island.
 
 ## The honest bit
 

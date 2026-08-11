@@ -111,7 +111,7 @@ November through January is Camiguin's wettest stretch, with December and Januar
 We're not going to tell you it's the best time to visit Camiguin. It isn't. But we will tell you who it *is* for:
 
 - **Couples who want the island to themselves.** The rooms are cheaper, the restaurant is quiet, and a storm over the Bohol Sea watched from under a roof with a drink in your hand is a genuinely great evening.
-- **Anyone who came for the springs, not the sea.** Ardent Hot Springs is warmed by the volcano and does not care what the weather is doing. Neither do the Sto. Niño Cold Spring, the Bura Soda Water Pool, or a hilot massage.
+- **Anyone who came for the [springs](/guides/camiguin-springs), not the sea.** Ardent Hot Springs is warmed by the volcano and does not care what the weather is doing. Neither do the Sto. Niño Cold Spring, the Bura Soda Water Pool, or a hilot massage.
 - **Travellers who like a country in its real clothes.** December in the Philippines is Christmas at full strength — lanterns, carols, family, food. It's lovely.
 
 The exception inside the exception: **the last week of December and the first days of January** are the busiest domestic travel days of the year. Filipino families come home to Camiguin. Availability disappears. Price is not the problem; *space* is. If you want those dates, book them now.

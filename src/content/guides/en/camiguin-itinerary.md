@@ -99,7 +99,7 @@ On the way, your banca can stop at the **Giant Clam Sanctuary** off Cantaan — 
 
 ### Mantigue Island
 
-By late morning, on to **Mantigue Island** — a small forested islet ringed by white sand, with a sharp coral drop-off just off one shore that is among the best snorkelling in the region. Reef fish, soft corals, the blue going suddenly deep. We pack you a **Picnic To-Go** from the kitchen so you eat well on the sand instead of settling for whatever is there.
+By late morning, on to **[Mantigue Island](/guides/mantigue-island-camiguin)** — a small forested islet ringed by white sand, with a sharp coral drop-off just off one shore that is among the best snorkelling in the region. (Note the three-hour cap on the island; our dedicated guide explains how to work around it.) Reef fish, soft corals, the blue going suddenly deep. We pack you a **Picnic To-Go** from the kitchen so you eat well on the sand instead of settling for whatever is there.
 
 Spend the warm middle of the day here. Swim, snorkel the drop-off, lie under the trees. There is no rush — this is, after all, the sea day.
 
