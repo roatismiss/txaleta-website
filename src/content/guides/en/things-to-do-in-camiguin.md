@@ -134,7 +134,7 @@ The island's signature image: a large white cross standing alone in the sea, mar
 
 Best at **sunset**, when the light goes gold and the water turns to copper.
 
-**Worth:** twenty minutes, or an hour if you take the kayak.
+**Worth:** twenty minutes, or an hour if you take the kayak. The full story of what happened in 1871 and what's under the water is in our [Sunken Cemetery guide](/guides/sunken-cemetery-camiguin).
 
 ### 11. Gui-ob (Bonbon) Church Ruins
 
@@ -172,7 +172,7 @@ A local curiosity worth the detour: naturally carbonated water rising from the g
 
 A single seventy-metre ribbon of water dropping into a cold, clear pool ringed by ferns and orchids, a short ride inland from Mambajao town. Go early, before the day-trippers — the morning light through the spray is the whole point. Swim if you dare; the water is bracing.
 
-**Worth:** a morning hour. The island's best waterfall for effort-to-reward.
+**Worth:** a morning hour. The island's best waterfall for effort-to-reward — and our [waterfalls guide](/guides/camiguin-waterfalls) compares it properly with Tuasan.
 
 ### 17. Tuasan Falls
 
@@ -212,7 +212,7 @@ The island's capital: small, tidy, and the place to buy fruit, meet people who a
 
 Not a joke, and not a filler entry. Camiguin's volcanic soil produces the sweetest lanzones in the Philippines, and buying a bag from a stall on the ring road costs very little, tastes better than anything that reaches a city market, and puts money directly in the hands of the family that grew it.
 
-**Worth:** doing at least twice.
+**Worth:** doing at least twice. Everything else worth eating here — pastel, kiping, sikwate — is in our guide to [what to eat in Camiguin](/guides/what-to-eat-in-camiguin).
 
 ### 23. Meet the island's artisans
 

@@ -20,7 +20,7 @@ imageAlt: "Camiguin vs Siquijor — the volcanic Camiguin coastline seen from th
 
 # Camiguin vs Siquijor: Which Island to Choose (2026)
 
-They feel like twins. Search **Camiguin vs Siquijor** and you meet the same question asked over and over on Reddit, Tripadvisor and in Facebook travel groups — two small volcanic islands in the southern Philippines, both off the beaten track, both quieter than Boracay or Siargao. They really do rhyme. But spend a little time with each and the truth surfaces: one is for the backpacker, and one is for the slow, romantic traveller. And the deciding factor isn't the beaches at all. It's how you arrive, and where you wake up.
+They feel like twins. Search **Camiguin vs Siquijor** and you meet the same question asked over and over on Reddit, Tripadvisor and in Facebook travel groups — two small volcanic islands in the southern Philippines, both off the beaten track, both quieter than Boracay or [Siargao](/guides/camiguin-vs-siargao). They really do rhyme. But spend a little time with each and the truth surfaces: one is for the backpacker, and one is for the slow, romantic traveller. And the deciding factor isn't the beaches at all. It's how you arrive, and where you wake up.
 
 We write this from a clifftop in Mambajao, on the Camiguin side of the Bohol Sea. We're going to be honest about Siquijor — genuinely, generously honest, because it's a wonderful island and you deserve the real picture. Then we'll let the facts speak.
 

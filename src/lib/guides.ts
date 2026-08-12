@@ -48,6 +48,7 @@ const GUIDES_DIR = path.join(process.cwd(), "src", "content", "guides");
 // (highest intent), then logistics, then the top-of-funnel pillar.
 const ORDER = [
   "camiguin-vs-siquijor",
+  "camiguin-vs-siargao",
   "camiguin-honeymoon",
   "camiguin-with-kids",
   "where-to-stay-in-camiguin",
@@ -57,7 +58,10 @@ const ORDER = [
   "camiguin-itinerary",
   "camiguin-travel-cost",
   "camiguin-springs",
+  "camiguin-waterfalls",
+  "sunken-cemetery-camiguin",
   "hibok-hibok-hike",
+  "what-to-eat-in-camiguin",
   "best-time-to-visit-camiguin",
   "camiguin-lanzones-festival",
   "how-to-get-to-camiguin-from-cebu",

@@ -88,7 +88,7 @@ We walk through every route, schedule logic and connection in our full guide on 
 
 If you have been researching quiet Philippine islands, you have hit this fork: **Camiguin vs Siquijor**. They are cousins, not twins.
 
-Both are small, soulful, and gloriously low on crowds. Siquijor leans mystical — folk healers, *hilot*, an air of old magic, waterfalls and a backpacker-friendly scene that has grown noticeably busier. Siargao, by contrast, is the social one: surf, hostels, a young crowd, music after dark.
+Both are small, soulful, and gloriously low on crowds. Siquijor leans mystical — folk healers, *hilot*, an air of old magic, waterfalls and a backpacker-friendly scene that has grown noticeably busier. Siargao, by contrast, is the social one: surf, hostels, a young crowd, music after dark — we compare it with Camiguin properly in [Camiguin vs Siargao](/guides/camiguin-vs-siargao).
 
 Camiguin sits where many travellers actually want to be: quiet like Siquijor, but volcanic, greener, more dramatic underfoot — and even less crowded. You get the calm without the growing crowds, plus seven volcanoes, a sunken cemetery and a sandbar Siquijor cannot match. We made the full, fair case in [Camiguin vs Siquijor](/guides/camiguin-vs-siquijor), including who should pick which.
 
