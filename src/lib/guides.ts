@@ -225,6 +225,25 @@ export function hasEnglish(key: string): boolean {
 }
 
 /**
+ * The guides immediately before and after this one in cluster order, within the
+ * same locale. Powers the prev/next rail at the foot of an article — it keeps
+ * readers moving through the cluster instead of bouncing, and gives every guide
+ * two more internal links from a consistent position.
+ */
+export function getAdjacentGuides(
+  locale: Locale,
+  key: string
+): { prev: Guide | null; next: Guide | null } {
+  const all = getGuides(locale);
+  const i = all.findIndex((g) => g.key === key);
+  if (i === -1) return { prev: null, next: null };
+  return {
+    prev: i > 0 ? all[i - 1] : null,
+    next: i < all.length - 1 ? all[i + 1] : null,
+  };
+}
+
+/**
  * Related reading, within the same locale. Prefers guides that share keywords
  * with this one (a real topical relationship), then falls back to cluster order
  * so the slots are always filled.

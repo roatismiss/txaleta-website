@@ -3,7 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, ArrowLeft } from "lucide-react";
-import { getAllGuidePaths, getGuide, getGuideAlternates, getRelatedGuides } from "@/lib/guides";
+import {
+  getAllGuidePaths,
+  getGuide,
+  getGuideAlternates,
+  getRelatedGuides,
+  getAdjacentGuides,
+} from "@/lib/guides";
 import { site } from "@/lib/site";
 import { localePath, localeTags, defaultLocale, type Locale } from "@/lib/i18n";
 import { Kicker } from "@/components/reveal";
@@ -16,14 +22,14 @@ export const dynamicParams = false;
 // locales/ui.ts) because it is specific to a guide page.
 const CHROME: Record<
   Locale,
-  { back: string; kicker: string; byline: string; updated: string; minRead: string; readAlso: string; home: string; guides: string; ctaHeading: string; ctaBody: string; ctaButton: string; or: string }
+  { prev: string; next: string; back: string; kicker: string; byline: string; updated: string; minRead: string; readAlso: string; home: string; guides: string; ctaHeading: string; ctaBody: string; ctaButton: string; or: string }
 > = {
-  en: { back: "All guides", kicker: "Camiguin Travel Guide", byline: "By the family at", updated: "Updated", minRead: "min read", readAlso: "Read also", home: "Home", guides: "Guides", ctaHeading: "Come home to Camiguin", ctaBody: "Fourteen ocean-view rooms on a Mambajao clifftop, an infinity pool over the Bohol Sea, and hosts who arrange everything from your airport pickup to your banca to White Island.", ctaButton: "Book your stay direct", or: "Or message us on" },
-  fr: { back: "Tous les guides", kicker: "Guide de voyage Camiguin", byline: "Par la famille de", updated: "Mis à jour", minRead: "min de lecture", readAlso: "À lire aussi", home: "Accueil", guides: "Guides", ctaHeading: "Rentrez à la maison, à Camiguin", ctaBody: "Quatorze chambres avec vue sur l'océan sur une falaise de Mambajao, une piscine à débordement au-dessus de la mer de Bohol, et des hôtes qui organisent tout, de votre transfert depuis l'aéroport à votre banca vers White Island.", ctaButton: "Réservez en direct", or: "Ou écrivez-nous sur" },
-  de: { back: "Alle Reiseführer", kicker: "Camiguin Reiseführer", byline: "Von der Familie im", updated: "Aktualisiert", minRead: "Min. Lesezeit", readAlso: "Auch lesenswert", home: "Startseite", guides: "Reiseführer", ctaHeading: "Kommen Sie heim nach Camiguin", ctaBody: "Vierzehn Zimmer mit Meerblick auf einer Klippe in Mambajao, ein Infinity-Pool über der Bohol-See und Gastgeber, die alles arrangieren — vom Flughafentransfer bis zur Banca nach White Island.", ctaButton: "Direkt buchen", or: "Oder schreiben Sie uns auf" },
-  ja: { back: "ガイド一覧", kicker: "カミギン旅行ガイド", byline: "書き手：", updated: "更新", minRead: "分で読めます", readAlso: "あわせて読みたい", home: "ホーム", guides: "ガイド", ctaHeading: "カミギンへ、おかえりなさい", ctaBody: "マンバハオの崖の上に海を望む14室、ボホール海へ流れ込むようなインフィニティプール、そして空港送迎からホワイトアイランドへのバンカ船まで手配するホストがお待ちしています。", ctaButton: "公式サイトから予約する", or: "またはこちらからご連絡ください：" },
-  ko: { back: "가이드 전체보기", kicker: "카미긴 여행 가이드", byline: "글쓴이:", updated: "업데이트", minRead: "분 소요", readAlso: "함께 읽기", home: "홈", guides: "가이드", ctaHeading: "카미긴으로 돌아오세요", ctaBody: "맘바하오 절벽 위 바다 전망 객실 14개, 보홀해로 이어지는 인피니티 풀, 그리고 공항 픽업부터 화이트 아일랜드행 방카까지 모두 준비해 드리는 호스트가 있습니다.", ctaButton: "공식 홈페이지에서 예약하기", or: "또는 이곳으로 연락 주세요:" },
-  zh: { back: "全部攻略", kicker: "卡米金旅行攻略", byline: "作者：", updated: "更新于", minRead: "分钟阅读", readAlso: "延伸阅读", home: "首页", guides: "攻略", ctaHeading: "回家吧，回卡米金", ctaBody: "曼巴豪悬崖之上的十四间海景客房，一座仿佛流入保和海的无边泳池，以及从机场接送到前往白岛的螃蟹船都为你安排妥当的主人。", ctaButton: "官网直接预订", or: "或通过以下方式联系我们：" },
+  en: { prev: "Previous guide", next: "Next guide", back: "All guides", kicker: "Camiguin Travel Guide", byline: "By the family at", updated: "Updated", minRead: "min read", readAlso: "Read also", home: "Home", guides: "Guides", ctaHeading: "Come home to Camiguin", ctaBody: "Fourteen ocean-view rooms on a Mambajao clifftop, an infinity pool over the Bohol Sea, and hosts who arrange everything from your airport pickup to your banca to White Island.", ctaButton: "Book your stay direct", or: "Or message us on" },
+  fr: { prev: "Guide précédent", next: "Guide suivant", back: "Tous les guides", kicker: "Guide de voyage Camiguin", byline: "Par la famille de", updated: "Mis à jour", minRead: "min de lecture", readAlso: "À lire aussi", home: "Accueil", guides: "Guides", ctaHeading: "Rentrez à la maison, à Camiguin", ctaBody: "Quatorze chambres avec vue sur l'océan sur une falaise de Mambajao, une piscine à débordement au-dessus de la mer de Bohol, et des hôtes qui organisent tout, de votre transfert depuis l'aéroport à votre banca vers White Island.", ctaButton: "Réservez en direct", or: "Ou écrivez-nous sur" },
+  de: { prev: "Vorheriger Guide", next: "Nächster Guide", back: "Alle Reiseführer", kicker: "Camiguin Reiseführer", byline: "Von der Familie im", updated: "Aktualisiert", minRead: "Min. Lesezeit", readAlso: "Auch lesenswert", home: "Startseite", guides: "Reiseführer", ctaHeading: "Kommen Sie heim nach Camiguin", ctaBody: "Vierzehn Zimmer mit Meerblick auf einer Klippe in Mambajao, ein Infinity-Pool über der Bohol-See und Gastgeber, die alles arrangieren — vom Flughafentransfer bis zur Banca nach White Island.", ctaButton: "Direkt buchen", or: "Oder schreiben Sie uns auf" },
+  ja: { prev: "前のガイド", next: "次のガイド", back: "ガイド一覧", kicker: "カミギン旅行ガイド", byline: "書き手：", updated: "更新", minRead: "分で読めます", readAlso: "あわせて読みたい", home: "ホーム", guides: "ガイド", ctaHeading: "カミギンへ、おかえりなさい", ctaBody: "マンバハオの崖の上に海を望む14室、ボホール海へ流れ込むようなインフィニティプール、そして空港送迎からホワイトアイランドへのバンカ船まで手配するホストがお待ちしています。", ctaButton: "公式サイトから予約する", or: "またはこちらからご連絡ください：" },
+  ko: { prev: "이전 가이드", next: "다음 가이드", back: "가이드 전체보기", kicker: "카미긴 여행 가이드", byline: "글쓴이:", updated: "업데이트", minRead: "분 소요", readAlso: "함께 읽기", home: "홈", guides: "가이드", ctaHeading: "카미긴으로 돌아오세요", ctaBody: "맘바하오 절벽 위 바다 전망 객실 14개, 보홀해로 이어지는 인피니티 풀, 그리고 공항 픽업부터 화이트 아일랜드행 방카까지 모두 준비해 드리는 호스트가 있습니다.", ctaButton: "공식 홈페이지에서 예약하기", or: "또는 이곳으로 연락 주세요:" },
+  zh: { prev: "上一篇攻略", next: "下一篇攻略", back: "全部攻略", kicker: "卡米金旅行攻略", byline: "作者：", updated: "更新于", minRead: "分钟阅读", readAlso: "延伸阅读", home: "首页", guides: "攻略", ctaHeading: "回家吧，回卡米金", ctaBody: "曼巴豪悬崖之上的十四间海景客房，一座仿佛流入保和海的无边泳池，以及从机场接送到前往白岛的螃蟹船都为你安排妥当的主人。", ctaButton: "官网直接预订", or: "或通过以下方式联系我们：" },
 };
 
 // Bottom-up: this page generates BOTH dynamic segments, so each locale only
@@ -86,6 +92,7 @@ export default async function GuidePage({
 
   const t = CHROME[locale];
   const related = getRelatedGuides(locale, guide.key, 3);
+  const { prev, next } = getAdjacentGuides(locale, guide.key);
   const guidesHref = localePath(locale, "/guides");
 
   const breadcrumb = {
@@ -158,6 +165,42 @@ export default async function GuidePage({
           </p>
         </div>
       </section>
+
+      {/* Prev / next — keeps readers moving through the cluster */}
+      {(prev || next) && (
+        <nav className="relative border-t border-ink/10 bg-white" aria-label={t.readAlso}>
+          <div className="mx-auto grid max-w-5xl gap-px px-6 sm:grid-cols-2">
+            {prev ? (
+              <Link
+                href={localePath(locale, `/guides/${prev.slug}`)}
+                className="group flex flex-col justify-center gap-2 py-10 pr-6 sm:border-r sm:border-ink/10"
+              >
+                <span className="label inline-flex items-center gap-2 text-[10px] text-ink/45">
+                  <ArrowLeft className="h-3.5 w-3.5" strokeWidth={1.5} /> {t.prev}
+                </span>
+                <span className="font-display text-xl font-light leading-snug text-ink transition-colors group-hover:text-brand">
+                  {prev.title}
+                </span>
+              </Link>
+            ) : (
+              <span className="hidden sm:block" />
+            )}
+            {next && (
+              <Link
+                href={localePath(locale, `/guides/${next.slug}`)}
+                className="group flex flex-col justify-center gap-2 py-10 sm:items-end sm:pl-6 sm:text-right"
+              >
+                <span className="label inline-flex items-center gap-2 text-[10px] text-ink/45">
+                  {t.next} <ArrowRight className="h-3.5 w-3.5" strokeWidth={1.5} />
+                </span>
+                <span className="font-display text-xl font-light leading-snug text-ink transition-colors group-hover:text-brand">
+                  {next.title}
+                </span>
+              </Link>
+            )}
+          </div>
+        </nav>
+      )}
 
       {/* Read also — related guides */}
       {related.length > 0 && (
