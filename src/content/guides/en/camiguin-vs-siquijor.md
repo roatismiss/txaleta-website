@@ -84,7 +84,7 @@ Both islands are blessedly low on tourists. But Camiguin is the one repeatedly d
 
 Here's the thing the beach photos never tell you. **Camiguin has its own airport.**
 
-Fly into Camiguin (Mambajao) and you're only a short hop from Cebu — around an hour in the air, with several Cebgo flights a week. You land, and your resort is **just minutes away**. We arrange a complimentary pickup; you could be in your room, or in the pool, before lunch. (For the full breakdown of routes and timings, see our guide on [how to get to Camiguin from Cebu](/guides/how-to-get-to-camiguin-from-cebu).)
+Fly into Camiguin (Mambajao) and you're only a short hop from Cebu — around an hour in the air, with several Cebgo flights a week. You land, and your resort is **just minutes away**. We can arrange your pickup; you could be in your room, or in the pool, before lunch. (For the full breakdown of routes and timings, see our guide on [how to get to Camiguin from Cebu](/guides/how-to-get-to-camiguin-from-cebu).)
 
 Here's what has changed: **Siquijor now has its own airport too.** Since December 2025, Sunlight Air has flown direct from Cebu in about the same fifty-five minutes — currently three to four times a week — and you can still fly into **Dumaguete** and cross on the hourly **OceanJet ferry**. Reaching Siquijor is no longer the flight-plus-ferry chore it used to be.
 

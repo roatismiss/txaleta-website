@@ -80,7 +80,7 @@ If you want this mapped into actual days, we keep a separate, road-tested [Camig
 
 ## How to get to Camiguin (it's easier than the lists imply)
 
-Part of why Camiguin stays underrated is a stubborn myth that it is hard to reach. It is not, anymore. There is a daily direct flight from Cebu to Camiguin on Cebu Pacific / Cebgo that lands in under an hour. If you prefer the slow road, the ferry route via Bohol takes roughly eight to twelve hours and is its own kind of pleasure. The island's airport is a short drive from us, and we arrange a complimentary transfer, so the gap between "wheels down" and "feet up by the pool" is mercifully short.
+Part of why Camiguin stays underrated is a stubborn myth that it is hard to reach. It is not, anymore. There is a daily direct flight from Cebu to Camiguin on Cebu Pacific / Cebgo that lands in under an hour. If you prefer the slow road, the ferry route via Bohol takes roughly eight to twelve hours and is its own kind of pleasure. The island's airport is a short drive from us and we can arrange your transfer, so the gap between "wheels down" and "feet up by the pool" is mercifully short.
 
 We walk through every route, schedule logic and connection in our full guide on [how to get to Camiguin from Cebu](/guides/how-to-get-to-camiguin-from-cebu) — worth a read before you book flights.
 

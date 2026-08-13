@@ -73,7 +73,7 @@ Nightly, for a double room. Rates rise sharply during Holy Week, the Filipino su
 | Boutique / premium | ₱5,000 – ₱12,000+ | Sea views, design, breakfast, real service |
 | Glamping / unusual stays | varies widely | A proper bed somewhere you'd never otherwise sleep |
 
-Two things worth checking before you compare prices: **is breakfast included** (on this island it's often the best meal of the day and it's served over the sea), and **is the airport transfer included** — ours is, and it saves both the fare and the negotiation. We break the coasts and areas down in [where to stay in Camiguin](/guides/where-to-stay-in-camiguin).
+Two things worth checking before you compare prices: **is breakfast included** (on this island it's often the best meal of the day and it's served over the sea), and **is the airport transfer included, or extra** — asking up front saves both the fare and the negotiation. We break the coasts and areas down in [where to stay in Camiguin](/guides/where-to-stay-in-camiguin).
 
 ## Getting around the island
 
@@ -221,7 +221,7 @@ The all-ferry chain via Bohol — fastcraft from Cebu to Tagbilaran, bus to Jagn
 
 The best news in this whole guide is that the expensive part is behind you the moment you land. From then on, the island is one of the cheapest good weeks you can have in Asia — and most of what makes it memorable costs nothing at all.
 
-Tell us your dates and your budget and we'll be straight with you about what fits: which room, which boat, whether a scooter or a driver makes more sense for how you travel. We'll have the airport pickup arranged before you land, and it's included.
+Tell us your dates and your budget and we'll be straight with you about what fits: which room, which boat, whether a scooter or a driver makes more sense for how you travel. We can have the airport pickup arranged before you land.
 
 [Browse our rooms](/accommodation), [check live rates and book direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 770 4656, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 

@@ -144,7 +144,7 @@ Prices climb in the four windows that sell out every year: **Holy Week**, the **
 
 A full worked budget for the whole trip — flights, boats, entrance fees and all — is in [how much a Camiguin trip costs](/guides/camiguin-travel-cost).
 
-Two costs travellers forget: **airport or port transfer** (ask whether it's included — ours is), and **the ring road itself**. A scooter runs around ₱450 a day, an SUV around ₱2,850, and a driver on top of that if you'd rather look out of the window than at the road.
+Two costs travellers forget: **airport or port transfer** (ask whether it's included, and at what cost), and **the ring road itself**. A scooter runs around ₱450 a day, an SUV around ₱2,850, and a driver on top of that if you'd rather look out of the window than at the road.
 
 ## What to check before you book — the Camiguin-specific list
 

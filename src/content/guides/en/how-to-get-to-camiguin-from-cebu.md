@@ -63,7 +63,7 @@ Fares typically run **₱1,300–1,900 one-way**. Seat sales can drop to around 
 1. **Get to Mactan-Cebu International Airport (CEB).** From Cebu City, take an airport bus from around ₱50, or a taxi for roughly ₱250. Allow about an hour with traffic.
 2. **Fly Cebu (CEB) → Camiguin (CGM) on Cebgo.** Book through Cebu Pacific; it's a turboprop ATR, about 55 minutes in the air. There's typically one departure a day — confirm the current schedule.
 3. **Clear the small Camiguin (Mambajao) Airport.** CGM is tiny and friendly; bags come off fast and you're outside in minutes.
-4. **Transfer to Mambajao.** The airport sits about 7 km from Mambajao town; a tricycle runs from around ₱50 and the ride is a short hop, not an expedition. If you're staying with us, [we arrange a complimentary pick-up](/book) — your driver is waiting when the propellers stop.
+4. **Transfer to Mambajao.** The airport sits about 7 km from Mambajao town; a tricycle runs from around ₱50 and the ride is a short hop, not an expedition. If you're staying with us, [we can arrange your pick-up](/book) — your driver is waiting when the propellers stop.
 
 Add it up and the whole thing — Cebu hotel to bed in Mambajao — is about **two hours twenty minutes and roughly ₱1,800 all-in**, fare swings aside. That is faster than many people's *commute to a domestic airport*, let alone to a remote island. So much for the grueling ferry ordeal.
 
@@ -119,7 +119,7 @@ Your options for the **Camiguin airport to Mambajao** leg:
 - **Multicab:** shared or private, for groups and luggage.
 - **Resort transfer:** the one we recommend, because there is no Grab here and you've just flown across two seas.
 
-[Txaleta de Camiguin](/about) arranges **free airport pick-up** for guests. You walk out of CGM, your name is on a sign, and the last unknown of your journey dissolves. We're about fifteen minutes by road from the airport, with a complimentary transfer for guests — clifftop, in Purok 6, Puting Balas, with the Bohol Sea spread out below and Mt. Hibok-Hibok rising behind. You will have left Cebu after breakfast and be standing at the edge of an [infinity pool over the sea](/accommodation) by early afternoon.
+[Txaleta de Camiguin](/about) can arrange **airport pick-up** for guests on request. You walk out of CGM, your name is on a sign, and the last unknown of your journey dissolves. We're about fifteen minutes by road from the airport — clifftop, in Purok 6, Puting Balas, with the Bohol Sea spread out below and Mt. Hibok-Hibok rising behind. You will have left Cebu after breakfast and be standing at the edge of an [infinity pool over the sea](/accommodation) by early afternoon.
 
 ## So Is It Better to Fly or Take the Ferry to Camiguin?
 
@@ -266,7 +266,7 @@ You've found the flight. You've untangled the ports. Now the only thing left is 
           "@type": "HowToStep",
           "position": 4,
           "name": "Transfer to Mambajao",
-          "text": "The airport is about 7 km from Mambajao town. A tricycle runs from around PHP 50 and the ride is a short hop. Resort guests at Txaleta de Camiguin receive a complimentary pick-up, as there is no ride-hailing on the island.",
+          "text": "The airport is about 7 km from Mambajao town. A tricycle runs from around PHP 50 and the ride is a short hop. Txaleta de Camiguin can arrange a pick-up for guests on request, as there is no ride-hailing on the island.",
           "url": "https://www.txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu#camiguin-airport-to-mambajao"
         }
       ]
