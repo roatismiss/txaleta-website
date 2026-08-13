@@ -161,7 +161,7 @@ Yes, but not quickly. A Super Shuttle ferry has run directly from Cebu's Pier 8 
 Only Cebgo, sold through Cebu Pacific, flies nonstop into Camiguin (CGM). For the backup route, Cebu Pacific and PAL both serve nearby Cagayan de Oro (Laguindingan, CGY).
 
 **How do you get from Camiguin airport to your hotel?**
-Camiguin (Mambajao) Airport is about 7 km from town. Options are a tricycle (from around ₱50) or a multicab. There is no Grab on the island — Txaleta de Camiguin arranges a free transfer so a driver is waiting when you land.
+Camiguin (Mambajao) Airport is about 7 km from town. Options are a tricycle (from around ₱50) or a multicab. There is no Grab on the island — Txaleta de Camiguin can arrange a transfer so a driver is waiting when you land.
 
 **How long does the whole trip take?**
 By the recommended flight from Cebu, about 2 hours 20 minutes door-to-door. Via Cagayan de Oro and the Balingoan RoRo, around 5–6 hours. Via the Bohol ferry chain, about 9–10.5 hours.
@@ -336,7 +336,7 @@ You've found the flight. You've untangled the ports. Now the only thing left is 
           "name": "How do you get from Camiguin airport to your hotel?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Camiguin (Mambajao) Airport is about 7 km from town. Options are a tricycle (from around PHP 50) or a multicab. There is no Grab on the island, so Txaleta de Camiguin arranges a free transfer with a driver waiting when you land."
+            "text": "Camiguin (Mambajao) Airport is about 7 km from town. Options are a tricycle (from around PHP 50) or a multicab. There is no Grab on the island, so Txaleta de Camiguin can arrange a transfer with a driver waiting when you land."
           }
         },
         {
