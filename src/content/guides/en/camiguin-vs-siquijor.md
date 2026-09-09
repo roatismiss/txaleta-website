@@ -122,7 +122,7 @@ Short version: **Siquijor, 3-4 days. Camiguin, 3 for the highlights, 5-7 if you'
 
 And yes — you can absolutely do both in one trip, which is what we'd quietly recommend. Pair them. Give Siquijor three or four days of beaches and folklore, then come to Camiguin to slow down at the end. (We've laid out exactly how in our [Camiguin itinerary](/guides/camiguin-itinerary), which months to do it in under [best time to visit Camiguin](/guides/best-time-to-visit-camiguin), and Camiguin features prominently in our roundup of the [best islands in the Philippines](/guides/best-islands-in-the-philippines).)
 
-There is one thing you must know if you're combining them: **there is no direct ferry between Siquijor and Camiguin.** The honest route runs via Bohol, and it's a full day. We'll lay it out properly below — because getting this wrong is the single most common planning mistake.
+There is one thing you must know if you're combining them: **there is no direct ferry between Siquijor and Camiguin.** The honest route runs via Bohol, and it's a full day. (If Bohol itself is on your shortlist rather than just a transit stop, we've compared it properly in [Camiguin vs Bohol](/guides/camiguin-vs-bohol).) We'll lay it out properly below — because getting this wrong is the single most common planning mistake.
 
 ## How do you get from Siquijor to Camiguin?
 

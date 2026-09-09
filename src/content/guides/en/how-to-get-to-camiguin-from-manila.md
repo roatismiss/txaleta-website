@@ -124,7 +124,7 @@ It is a genuinely pleasant half-day. The highway runs along the Macajalar Bay co
 
 ## The two ways to arrive by sea, and the one to avoid
 
-**Via Bohol.** If you are already island-hopping, the chain runs Cebu → Tagbilaran fastcraft (about 2 hr, around ₱965), bus to Jagna (about 2 hr, from around ₱150), then the Jagna → **Balbagon** ferry — roughly 4.5 hours for about ₱965, sailing **once daily in the early afternoon**. From Manila this is realistically a two-day journey, because you will not land at Mactan and make that single afternoon departure. It is lovely and it is slow. Do it if the journey is the point.
+**Via Bohol.** If you are already island-hopping, the chain runs Cebu → Tagbilaran fastcraft (about 2 hr, around ₱965), bus to Jagna (about 2 hr, from around ₱150), then the Jagna → **Balbagon** ferry — roughly 4.5 hours for about ₱965, sailing **once daily in the early afternoon**. From Manila this is realistically a two-day journey, because you will not land at Mactan and make that single afternoon departure. It is lovely and it is slow. Do it if the journey is the point — or if you are pairing the two islands deliberately, which is a genuinely good trip and one we have laid out in [Camiguin vs Bohol](/guides/camiguin-vs-bohol).
 
 **Overland from Manila.** Yes, it is technically possible to reach Camiguin by bus and ferry from Manila — down through the Bicol peninsula, across to Samar and Leyte, over into Mindanao, then east. It takes two to three days, it is not meaningfully cheaper than a promo fare, and we have never once met a guest who arrived that way and recommended it. If a seat sale exists, fly.
 

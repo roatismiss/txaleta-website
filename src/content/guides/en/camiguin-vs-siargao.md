@@ -114,7 +114,7 @@ Yes, but be realistic about the geography — they're on opposite sides of Minda
 
 **If you only have ten days total**, we'd honestly pick one and do it properly rather than spending a day and a half in airports.
 
-For the comparison people ask about more often — Camiguin against its nearest neighbour in character — see [Camiguin vs Siquijor](/guides/camiguin-vs-siquijor), and for where both land on a wider shortlist, [best islands in the Philippines](/guides/best-islands-in-the-philippines).
+For the comparison people ask about more often — Camiguin against its nearest neighbour in character — see [Camiguin vs Siquijor](/guides/camiguin-vs-siquijor). If you want the pairing that genuinely works as one trip, [Camiguin vs Bohol](/guides/camiguin-vs-bohol) is the one to read, because a ferry links them and no flight is needed. And for where all of them land on a wider shortlist, [best islands in the Philippines](/guides/best-islands-in-the-philippines).
 
 ## Frequently asked questions
 

@@ -50,6 +50,7 @@ const GUIDES_DIR = path.join(process.cwd(), "src", "content", "guides");
 const ORDER = [
   "camiguin-vs-siquijor",
   "camiguin-vs-siargao",
+  "camiguin-vs-bohol",
   "camiguin-honeymoon",
   "camiguin-with-kids",
   "where-to-stay-in-camiguin",
