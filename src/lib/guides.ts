@@ -21,6 +21,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { locales, defaultLocale, type Locale } from "@/lib/i18n";
+import { site } from "@/lib/site";
 
 export type Guide = {
   /** Stable cross-language identifier — always the ENGLISH slug. */
@@ -62,9 +63,11 @@ const ORDER = [
   "sunken-cemetery-camiguin",
   "hibok-hibok-hike",
   "what-to-eat-in-camiguin",
+  "best-paella-in-camiguin",
   "best-time-to-visit-camiguin",
   "camiguin-lanzones-festival",
   "how-to-get-to-camiguin-from-cebu",
+  "how-to-get-to-camiguin-from-manila",
   "best-islands-in-the-philippines",
   "birdwatching-camiguin-hibok-hibok",
 ];
@@ -272,4 +275,17 @@ export function getRelatedGuides(locale: Locale, key: string, limit = 3): Guide[
 // means the day that changes, nothing else has to.
 export function bookHref(opts: { room?: string } = {}): string {
   return opts.room ? `/book?room=${encodeURIComponent(opts.room)}` : "/book";
+}
+
+/**
+ * Rewrite the site-relative Markdown links in a guide body to absolute URLs.
+ *
+ * Guides link to each other and to /book with root-relative hrefs, which is
+ * right for the rendered page. But the plain-text surfaces (/llms.txt's corpus
+ * and the /guides/<slug>.md mirror) get read far from this origin, where
+ * "/book" means nothing. Absolute URLs there mean a model that cites us can
+ * hand the reader a link that actually works.
+ */
+export function absoluteLinks(markdown: string): string {
+  return markdown.replace(/\]\((\/[^)\s]*)\)/g, `](${site.url}$1)`);
 }

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { pageAlternates, type Locale } from "@/lib/i18n";
 import { getPageSeo } from "@/locales/seo";
+import { accommodationGraph, pageChrome } from "@/lib/schema";
+import { JsonLd } from "@/components/json-ld";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Wifi, Waves, Coffee, Wind, Car, Utensils, Sparkles, Bell } from "lucide-react";
@@ -28,6 +30,10 @@ export default async function AccommodationPage({ params }: PageProps<"/[lang]">
   const t = accommodationContent[lang];
   const inclusions = inclusionIcons.map((icon, i) => ({ icon, ...t.inclusions[i] }));
   const displayRooms = await fetchDisplayRooms();
+  const chrome = pageChrome(lang, "/accommodation", {
+    name: meta.title as string,
+    description: meta.description as string,
+  });
   return (
     <>
       {/* ── Banner ── */}
@@ -178,6 +184,9 @@ export default async function AccommodationPage({ params }: PageProps<"/[lang]">
           </p>
         </Reveal>
       </section>
+      {/* One HotelRoom node per live room type, each contained in the Resort.
+          Rates are deliberately absent — they live in the Cloudbeds engine. */}
+      <JsonLd data={accommodationGraph(lang, displayRooms, chrome)} />
     </>
   );
 }

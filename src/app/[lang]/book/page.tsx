@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { pageAlternates, type Locale } from "@/lib/i18n";
 import { getPageSeo } from "@/locales/seo";
+import { bookGraph, pageChrome } from "@/lib/schema";
+import { JsonLd } from "@/components/json-ld";
 import Image from "next/image";
 import { CalendarCheck, Zap, ShieldCheck, Mail, type LucideIcon } from "lucide-react";
 import { BookingFlow } from "@/components/booking-flow";
@@ -31,6 +33,10 @@ export default async function BookPage({ params, searchParams }: PageProps<"/[la
   const lang = rawLang as Locale;
   const p = P[lang];
   const sp = await searchParams;
+  const chrome = pageChrome(lang, "/book", {
+    name: meta.title as string,
+    description: meta.description as string,
+  });
 
   return (
     <>
@@ -107,6 +113,8 @@ export default async function BookPage({ params, searchParams }: PageProps<"/[la
           </div>
         </div>
       </section>
+      {/* Resolves the ReserveAction target that every HotelRoom points at. */}
+      <JsonLd data={bookGraph(lang, chrome)} />
     </>
   );
 }

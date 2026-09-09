@@ -12,6 +12,8 @@ export type UiDict = {
   /** Nav labels keyed by the UNPREFIXED href from site.ts `nav`. */
   nav: Record<string, string>;
   bookNow: string;
+  /** Breadcrumb labels for routes that are not in `nav` (schema.org BreadcrumbList). */
+  crumbs: { home: string; menu: string; book: string };
   menu: string;
   stayConnected: string;
   language: string;
@@ -45,6 +47,7 @@ export const ui: Record<Locale, UiDict> = {
       "/gallery": "Gallery",
     },
     bookNow: "Book Now",
+    crumbs: { home: "Home", menu: "Menu", book: "Book" },
     menu: "Menu",
     stayConnected: "Stay Connected",
     language: "Language",
@@ -70,6 +73,7 @@ export const ui: Record<Locale, UiDict> = {
       "/gallery": "Galerie",
     },
     bookNow: "Réserver",
+    crumbs: { home: "Accueil", menu: "Menu", book: "Réserver" },
     menu: "Menu",
     stayConnected: "Suivez-nous",
     language: "Langue",
@@ -95,6 +99,7 @@ export const ui: Record<Locale, UiDict> = {
       "/gallery": "Galerie",
     },
     bookNow: "Jetzt buchen",
+    crumbs: { home: "Startseite", menu: "Speisekarte", book: "Buchen" },
     menu: "Menü",
     stayConnected: "Folgen Sie uns",
     language: "Sprache",
@@ -120,6 +125,7 @@ export const ui: Record<Locale, UiDict> = {
       "/gallery": "ギャラリー",
     },
     bookNow: "予約する",
+    crumbs: { home: "ホーム", menu: "メニュー", book: "予約" },
     menu: "メニュー",
     stayConnected: "フォローする",
     language: "言語",
@@ -145,6 +151,7 @@ export const ui: Record<Locale, UiDict> = {
       "/gallery": "갤러리",
     },
     bookNow: "예약하기",
+    crumbs: { home: "홈", menu: "메뉴", book: "예약" },
     menu: "메뉴",
     stayConnected: "팔로우하기",
     language: "언어",
@@ -170,6 +177,7 @@ export const ui: Record<Locale, UiDict> = {
       "/gallery": "图库",
     },
     bookNow: "立即预订",
+    crumbs: { home: "首页", menu: "菜单", book: "预订" },
     menu: "菜单",
     stayConnected: "关注我们",
     language: "语言",

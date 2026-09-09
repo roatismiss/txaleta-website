@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { pageAlternates, type Locale } from "@/lib/i18n";
 import { getPageSeo } from "@/locales/seo";
+import { experiencesGraph, pageChrome } from "@/lib/schema";
+import { JsonLd } from "@/components/json-ld";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -38,6 +40,10 @@ export default async function ExperiencesPage({ params }: PageProps<"/[lang]">) 
   const rentals = t.rentals;
   const sigItems = signature.items.map((it, i) => ({ ...it, ...t.signature.items[i] }));
   const expCards = experiences.map((e, i) => ({ ...e, ...t.cards[i] }));
+  const chrome = pageChrome(lang, "/experiences", {
+    name: meta.title as string,
+    description: meta.description as string,
+  });
   return (
     <>
       {/* Banner */}
@@ -325,6 +331,10 @@ export default async function ExperiencesPage({ params }: PageProps<"/[lang]">) 
           </Link>
         </Reveal>
       </section>
+      {/* Each activity as a TouristAttraction we provide, and the island
+          landmarks as the destinations they are — the nodes that put us in
+          "things to do in Camiguin" answers. */}
+      <JsonLd data={experiencesGraph(lang, expCards, P.island, chrome)} />
     </>
   );
 }

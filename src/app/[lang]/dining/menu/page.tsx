@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { pageAlternates, type Locale } from "@/lib/i18n";
 import { getPageSeo } from "@/locales/seo";
+import { menuGraph, pageChrome } from "@/lib/schema";
+import { JsonLd } from "@/components/json-ld";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -20,6 +22,10 @@ export default async function MenuPage({ params }: PageProps<"/[lang]">) {
   const { lang: rawLang } = await params;
   const lang = rawLang as Locale;
   const t = menuPage[lang];
+  const chrome = pageChrome(lang, "/dining/menu", {
+    name: meta.title as string,
+    description: meta.description as string,
+  });
   return (
     <>
       {/* ── Banner ── */}
@@ -111,6 +117,10 @@ export default async function MenuPage({ params }: PageProps<"/[lang]">) {
           </p>
         </Reveal>
       </section>
+      {/* The full a la carte menu as Menu -> MenuSection -> MenuItem, so the
+          dishes and their prices are answerable from the markup alone, without
+          parsing the flip-book UI. */}
+      <JsonLd data={menuGraph(lang, chrome)} />
     </>
   );
 }

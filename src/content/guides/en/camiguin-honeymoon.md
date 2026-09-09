@@ -83,7 +83,7 @@ Fly in from Cebu, about fifty-five minutes. The airport is fifteen minutes from 
 
 Don't plan anything. Swim in the infinity pool as the afternoon cools. Then a **sunset kayak at the Sunken Cemetery** — paddling out to the white cross standing alone in the sea as the light goes gold and then rose. It's quiet, slightly haunting, and the right way to understand this island before you do anything else.
 
-Dinner: tapas and paella by the water. *Gambas al ajillo* to start, because it should be.
+Dinner: [tapas and paella](/guides/best-paella-in-camiguin) by the water. *Gambas al ajillo* to start, because it should be. Order the rice when you sit down — it is cooked from raw and takes the better part of an hour.
 
 ### Day 2 — The sea, early
 

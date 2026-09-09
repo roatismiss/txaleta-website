@@ -87,6 +87,64 @@ export const site = {
   },
 } as const;
 
+// ── Structured-data facts (schema.org) ──────────────────────────────────────
+// Consumed by lib/schema.ts, which asserts every value here to Google and to
+// the crawlers behind AI answers as FACT about a real business. So: nothing in
+// this block may be a guess. Unconfirmed values stay `null` and are dropped
+// from the emitted JSON-LD — an absent property costs nothing, a wrong one is
+// a trust penalty.
+export const entity = {
+  // ⚠ NEEDS THE CLIENT. The exact map pin: open Google Maps, right-click the
+  // property, click the "9.xxxx, 124.xxxx" readout to copy it. Do NOT
+  // approximate from the town name — a geo that is off by a kilometre puts the
+  // local pack on someone else's beach, which is worse than having no geo.
+  geo: null as { lat: number; lng: number } | null,
+
+  // ⚠ NEEDS THE CLIENT. 24-hour "HH:MM". Not published anywhere on the site
+  // today, so left null rather than invented.
+  checkinTime: null as string | null,
+  checkoutTime: null as string | null,
+
+  // Sourced from the /accommodation page copy ("fourteen rooms").
+  numberOfRooms: 14,
+
+  priceRange: "₱₱",
+  currency: "PHP",
+
+  // Feeds `sameAs` alongside the social links in `site.social`. Add the Google
+  // Business Profile URL, TripAdvisor, Booking.com, Agoda — every profile that
+  // is provably THIS business. `sameAs` is how Google reconciles this site with
+  // the entity it already knows from Maps, and how an LLM confirms we are the
+  // same place it saw on an OTA. This is the single highest-leverage line in
+  // the file once the GBP link is in.
+  profiles: [] as string[],
+
+  // Resort-level amenities (the homepage `Resort` node). Room-level amenities
+  // come from each room in `rooms` / the live Cloudbeds data instead.
+  amenities: [
+    "Infinity Pool",
+    "Sea View",
+    "Free WiFi",
+    "Free Parking",
+    "Restaurant",
+    "Bar",
+    "Airport Transfer",
+    "Room Service",
+    "Garden",
+    "Terrace",
+  ],
+
+  // For the `Restaurant` node on /dining.
+  cuisine: ["Filipino", "Spanish", "Seafood"],
+
+  // Extra images for the business node, beyond the hero poster.
+  images: [
+    "/images/resort/Aerialview_txaleta.webp",
+    "/images/resort/txaleta_hero.webp",
+    "/images/dining/aerial_view_table.webp",
+  ],
+};
+
 // Which booking engine the public site uses RIGHT NOW.
 //   "cloudbeds" → /book embeds the Cloudbeds Booking Engine. Cloudbeds is the
 //                 single source of truth for PAID bookings + the OTA channel

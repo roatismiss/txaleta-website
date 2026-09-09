@@ -11,6 +11,8 @@ import {
   getAdjacentGuides,
 } from "@/lib/guides";
 import { site } from "@/lib/site";
+import { guideEntityGraph, linkGuideGraph } from "@/lib/schema";
+import { JsonLd } from "@/components/json-ld";
 import { localePath, localeTags, defaultLocale, type Locale } from "@/lib/i18n";
 import { Kicker } from "@/components/reveal";
 import { GuideArticle } from "@/components/guide-article";
@@ -234,10 +236,11 @@ export default async function GuidePage({
         </section>
       )}
 
-      {guide.jsonLd ? (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(guide.jsonLd) }} />
-      ) : null}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      {/* The business + website nodes, so the author/publisher @id references
+          below resolve for a crawler that landed here straight from search. */}
+      <JsonLd data={guideEntityGraph(locale)} />
+      {guide.jsonLd ? <JsonLd data={linkGuideGraph(guide.jsonLd)} /> : null}
+      <JsonLd data={breadcrumb} />
     </>
   );
 }

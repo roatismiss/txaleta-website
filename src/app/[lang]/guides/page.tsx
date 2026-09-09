@@ -6,6 +6,8 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { getGuides } from "@/lib/guides";
 import { site } from "@/lib/site";
+import { websiteNode, organizationNode, schemaId } from "@/lib/schema";
+import { JsonLd } from "@/components/json-ld";
 import { localePath, localeTags } from "@/lib/i18n";
 
 const P: Record<Locale, { kicker: string; title: string; intro: string; read: string; minRead: string; updated: string }> = {
@@ -39,7 +41,8 @@ export default async function GuidesIndexPage({ params }: PageProps<"/[lang]">) 
     description: p.intro,
     url: `${site.url}${localePath(lang, "/guides")}`,
     inLanguage: localeTags[lang],
-    isPartOf: { "@type": "WebSite", name: site.name, url: site.url },
+    isPartOf: { "@id": schemaId.website },
+    publisher: { "@id": schemaId.org },
     hasPart: guides.map((g) => ({
       "@type": "Article",
       headline: g.title,
@@ -113,7 +116,8 @@ export default async function GuidesIndexPage({ params }: PageProps<"/[lang]">) 
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <JsonLd data={{ "@context": "https://schema.org", "@graph": [organizationNode(), websiteNode(lang)] }} />
+      <JsonLd data={jsonLd} />
     </>
   );
 }

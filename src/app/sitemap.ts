@@ -13,20 +13,57 @@ type Entry = {
   priority: number;
 };
 
+// ── Content-change dates, NOT build dates ───────────────────────────────────
+// `lastModified: new Date()` re-stamps all 70 URLs on every deploy. Google
+// learns within a few weeks that the signal is noise and stops reading it —
+// which costs us the one place we can honestly tell it a page is fresh.
+//
+// So each page carries the date its VISIBLE CONTENT last changed. Seeded from
+// `git log -1 --format=%cs -- <page file>`.
+//
+// BUMP THE DATE when you change a page's copy, photos or rooms.
+// LEAVE IT ALONE for styling, refactors, dependency bumps and markup-only
+// changes (adding JSON-LD does not make a page newer to a reader).
+//
+// /guides is absent on purpose: it is derived from the newest article below.
+const CONTENT_UPDATED: Record<string, string> = {
+  "/": "2026-07-30",
+  "/accommodation": "2026-07-30",
+  "/dining": "2026-07-18",
+  "/dining/menu": "2026-07-30",
+  "/experiences": "2026-07-18",
+  "/about": "2026-07-18",
+  "/community": "2026-07-22",
+  "/gallery": "2026-07-30",
+  "/book": "2026-07-30",
+};
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
+  // The hub is exactly as fresh as its freshest article — real, and it updates
+  // itself every time a guide ships, with nothing to remember.
+  const guideDates = locales
+    .flatMap((l) => getGuides(l).map((g) => g.dateISO))
+    .filter(Boolean) as string[];
+  const guidesUpdated = guideDates.length
+    ? new Date(guideDates.reduce((a, b) => (a > b ? a : b)))
+    : now;
+
+  const on = (path: string) =>
+    CONTENT_UPDATED[path] ? new Date(CONTENT_UPDATED[path]) : now;
+
   const pages: Entry[] = [
-    { path: "/", lastModified: now, changeFrequency: "weekly", priority: 1 },
-    { path: "/accommodation", lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { path: "/dining", lastModified: now, changeFrequency: "weekly", priority: 0.85 },
-    { path: "/dining/menu", lastModified: now, changeFrequency: "weekly", priority: 0.8 },
-    { path: "/experiences", lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { path: "/about", lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { path: "/community", lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { path: "/gallery", lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { path: "/guides", lastModified: now, changeFrequency: "weekly", priority: 0.8 },
-    { path: "/book", lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { path: "/", lastModified: on("/"), changeFrequency: "weekly", priority: 1 },
+    { path: "/accommodation", lastModified: on("/accommodation"), changeFrequency: "weekly", priority: 0.9 },
+    { path: "/dining", lastModified: on("/dining"), changeFrequency: "weekly", priority: 0.85 },
+    { path: "/dining/menu", lastModified: on("/dining/menu"), changeFrequency: "weekly", priority: 0.8 },
+    { path: "/experiences", lastModified: on("/experiences"), changeFrequency: "monthly", priority: 0.8 },
+    { path: "/about", lastModified: on("/about"), changeFrequency: "monthly", priority: 0.7 },
+    { path: "/community", lastModified: on("/community"), changeFrequency: "monthly", priority: 0.7 },
+    { path: "/gallery", lastModified: on("/gallery"), changeFrequency: "monthly", priority: 0.6 },
+    { path: "/guides", lastModified: guidesUpdated, changeFrequency: "weekly", priority: 0.8 },
+    { path: "/book", lastModified: on("/book"), changeFrequency: "monthly", priority: 0.9 },
   ];
 
   // Fixed pages: every route × every locale, since all six exist everywhere.

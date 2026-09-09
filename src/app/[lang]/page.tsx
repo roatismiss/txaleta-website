@@ -12,6 +12,8 @@ import { BrandMoment } from "@/components/sections/brand-moment";
 import { site } from "@/lib/site";
 import { pageAlternates, type Locale } from "@/lib/i18n";
 import { getPageSeo } from "@/locales/seo";
+import { homeGraph } from "@/lib/schema";
+import { JsonLd } from "@/components/json-ld";
 
 // Refresh the homepage hourly (ISR) so the Accommodation section picks up live
 // Cloudbeds rooms/photos without a Cloudbeds call on every visit.
@@ -30,6 +32,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]">) {
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
   const locale = lang as Locale;
+  const seo = getPageSeo(locale, "/");
   return (
     <>
       <Hero lang={locale} />
@@ -47,43 +50,15 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <Gallery lang={locale} />
       <Testimonials lang={locale} />
       <BrandMoment />
-      <JsonLd />
+      {/* Root of the site-wide entity graph: the Resort node every other page
+          references by @id, plus the WebSite node that owns it. */}
+      <JsonLd
+        data={homeGraph(
+          locale,
+          seo?.title ?? `${site.name} — Luxury Coastal Resort in Camiguin`,
+          seo?.description ?? site.description
+        )}
+      />
     </>
-  );
-}
-
-function JsonLd() {
-  const data = {
-    "@context": "https://schema.org",
-    "@type": "Resort",
-    name: site.name,
-    description: site.description,
-    url: site.url,
-    telephone: site.contact.phone,
-    email: site.contact.email,
-    image: [`${site.url}${site.hero.poster}`],
-    priceRange: "₱₱",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Purok 6, Puting Balas",
-      addressLocality: "Mambajao",
-      addressRegion: "Camiguin",
-      postalCode: "9100",
-      addressCountry: "PH",
-    },
-    amenityFeature: [
-      { "@type": "LocationFeatureSpecification", name: "Infinity Pool", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Sea View", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Free WiFi", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Free Parking", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Restaurant", value: true },
-    ],
-    sameAs: [site.social.facebook, site.social.instagram, site.social.tiktok],
-  };
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
   );
 }

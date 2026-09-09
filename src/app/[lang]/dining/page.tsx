@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { pageAlternates, type Locale } from "@/lib/i18n";
 import { getPageSeo } from "@/locales/seo";
+import { diningGraph, pageChrome } from "@/lib/schema";
+import { JsonLd } from "@/components/json-ld";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -30,6 +32,10 @@ export default async function DiningPage({ params }: PageProps<"/[lang]">) {
   const t = diningContent[lang];
   const C = ctaStrings[lang];
   const stories = dining.stories.map((st, i) => ({ ...st, ...t.stories[i] }));
+  const chrome = pageChrome(lang, "/dining", {
+    name: meta.title as string,
+    description: meta.description as string,
+  });
   return (
     <>
       {/* ── Banner — aerial table shot, full bleed ── */}
@@ -322,6 +328,9 @@ export default async function DiningPage({ params }: PageProps<"/[lang]">) {
           </p>
         </Reveal>
       </section>
+      {/* Restaurant node — open to walk-ins, so an entity of its own, pointing
+          at the Menu published on /dining/menu. */}
+      <JsonLd data={diningGraph(lang, chrome)} />
     </>
   );
 }

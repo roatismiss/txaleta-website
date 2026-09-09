@@ -7,10 +7,9 @@ keywords:
   - how to get to Camiguin from Cebu
   - how to get to Camiguin
   - Cebu to Camiguin flight
-  - Cagayan de Oro to Camiguin
   - Camiguin airport
   - Camiguin airport to Mambajao
-  - how to get to Camiguin from Manila
+  - Cebu to Camiguin ferry
   - Bohol Jagna to Camiguin ferry
   - cheapest way to get to Camiguin
   - best way to get to Camiguin
@@ -69,24 +68,15 @@ Add it up and the whole thing — Cebu hotel to bed in Mambajao — is about **t
 
 A note we wish more guides included: **there is no Grab or ride-hailing on Camiguin.** Your last mile is a tricycle, a multicab, or a resort transfer — which is exactly why we built the airport pick-up into every stay. You step off a propeller plane and into a quiet car; the logistics simply end there.
 
-## How to Get to Camiguin from Manila
+## Coming from Manila?
 
-There is no nonstop flight from Manila to Camiguin, so the honest answer to "**how to get to Camiguin from Manila**" is: **connect through Cebu.** Fly MNL → CEB (a frequent, competitive route on every major carrier), then pick up the Cebgo CEB → CGM leg described above.
+You connect through Cebu — there is no nonstop Manila service — and then pick up the CEB → CGM leg described above. The catch is the timing of that single daily turboprop, which on many days departs too early for a same-day Manila connection. We've mapped the whole thing, including the Cagayan de Oro alternative, in our [guide to getting to Camiguin from Manila](/guides/how-to-get-to-camiguin-from-manila).
 
-Plan the connection generously — at least a couple of hours in Cebu — because you are moving between a flood of Manila arrivals and a single small daily turboprop. With layover, expect **five to six hours** of total travel from a Manila doorstep to a Mambajao one. The smart play is to book the morning Cebu departure out of Manila so you catch the same-day Camiguin flight rather than overnighting in Cebu. If your timing slips, an overnight in Cebu is no hardship — and you'll make the early CGM flight fresh.
+## The Cagayan de Oro backup, in brief
 
-## Cagayan de Oro to Camiguin: The Smart Backup Route
+If the direct Camiguin flight is sold out, cancelled, or simply doesn't fit your dates, this is the route we point friends to: **fly Cebu → Cagayan de Oro (Laguindingan, CGY)**, about 50–55 minutes from around ₱1,410, then a Rural Transit bus to Balingoan port and the RoRo ferry across to **Benoni**. End to end from Cebu it lands at roughly **five to six hours** and **₱2,300–2,600** — the route that turns "the flight is full" from a trip-ender into a minor detour.
 
-If the direct Camiguin flight is sold out, cancelled, or simply doesn't fit your dates, this is the route we point friends to. It trades a little time for a lot of reliability, because Cagayan de Oro's Laguindingan airport is a busy hub with many daily flights, and the onward bus-and-ferry chain runs frequently.
-
-Here's the **Cagayan de Oro to Camiguin** sequence:
-
-1. **Fly Cebu → Cagayan de Oro (Laguindingan, CGY).** About 50–55 minutes, fares from around ₱1,410 on Cebu Pacific and PAL. (Coming from elsewhere, CGY is well connected.)
-2. **Bus from CDO to Balingoan port.** From the Agora or Bulua terminal, board a Rural Transit bus toward Balingoan. It's about 2–2.5 hours and ₱160–200, with frequent departures through the day.
-3. **Take the RoRo ferry Balingoan → Benoni (Camiguin).** Super Shuttle Ferry runs about 1 hr 30 min for around ₱359; St. Benedict Ocean Shipping is closer to 1 hour at about ₱300. Multiple daily sailings — board 30 minutes early.
-4. **Cross the island from Benoni to Mambajao.** A shared multicab or jeepney is about ₱25; a private multicab (up to eight people) runs around ₱1,700. It's a short cross-island hop. Tell us your boat and we'll help you sort the last leg.
-
-End to end, this lands at roughly **five to six hours** and **₱2,300–2,600**. It's the route that turns "the flight is full" from a trip-ender into a minor detour. **Benoni** is the port you want here — keep reading, because the island has two and people mix them up.
+Full step-by-step timings, fares and the airport-to-port geography that catches people out are in our [Manila and Cagayan de Oro route guide](/guides/how-to-get-to-camiguin-from-manila). **Benoni** is the port you want here — keep reading, because the island has two and people mix them up.
 
 ## All-Ferry via Bohol: The Cheapest (and Slowest) Way to Get to Camiguin
 
@@ -169,15 +159,15 @@ By the recommended flight from Cebu, about 2 hours 20 minutes door-to-door. Via 
 **Do I have to go through Cagayan de Oro?**
 No. The direct Cebgo flight from Cebu skips it entirely. Cagayan de Oro is the smart backup route — useful when the single daily Camiguin flight is sold out or cancelled.
 
-**Is there a direct flight from Manila to Camiguin?**
-No. From Manila you connect through Cebu (MNL → CEB → CGM), about 5–6 hours total with the layover.
+**Can I connect to the Camiguin flight from Manila?**
+Yes, via Cebu (MNL → CEB → CGM), about 5–6 hours total with the layover — but only on days when the Camiguin departure is late enough to connect to. Our [Manila route guide](/guides/how-to-get-to-camiguin-from-manila) covers the timing trap and the Cagayan de Oro alternative.
 
 **Is it better to fly or take the ferry to Camiguin?**
 Fly. It's faster, usually cheaper once you count the buses, and far simpler — about 2 hours 20 minutes versus 9–10 hours. Choose a ferry only for the slow-travel experience, a tight budget, or a Bohol island-hopping itinerary.
 
 ---
 
-*Written by the family at Txaleta de Camiguin. Last updated June 2026.*
+*Written by the family at Txaleta de Camiguin. Last updated September 2026.*
 
 You've found the flight. You've untangled the ports. Now the only thing left is the easy part. [Book your stay direct](/book), tell us your arrival, and we'll be waiting at the runway with the engine running and the sea already in view. Come for the views. Stay for the feeling. Welcome home.
 
@@ -194,7 +184,7 @@ You've found the flight. You've untangled the ports. Now the only thing left is 
       "description": "How to get to Camiguin from Cebu in 2026: the 55-minute flight vs the Cagayan de Oro & Bohol ferries — real door-to-door times, PHP costs and the easiest route, mapped.",
       "url": "https://www.txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-cebu",
       "datePublished": "2026-06-22",
-      "dateModified": "2026-06-22",
+      "dateModified": "2026-09-09",
       "inLanguage": "en",
       "image": "https://www.txaletadecamiguin.com/images/guides/camiguin-from-cebu-aerial.png",
       "author": {
@@ -357,10 +347,10 @@ You've found the flight. You've untangled the ports. Now the only thing left is 
         },
         {
           "@type": "Question",
-          "name": "Is there a direct flight from Manila to Camiguin?",
+          "name": "Can I connect to the Camiguin flight from Manila?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. From Manila you connect through Cebu (MNL to CEB to CGM), about 5 to 6 hours total with the layover."
+            "text": "Yes, via Cebu (MNL to CEB to CGM), about 5 to 6 hours total with the layover, but only on days when the Camiguin departure is late enough to connect to. There is no nonstop Manila to Camiguin flight."
           }
         },
         {

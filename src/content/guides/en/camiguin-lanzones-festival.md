@@ -104,7 +104,7 @@ We are not creating urgency. We are describing arithmetic.
 
 Camiguin has one small airport served by roughly one Cebgo flight a day from Cebu, on a turboprop with limited seats. The island's accommodation is mostly small, family-run properties — ours has fourteen rooms. During festival week, everyone who left the island comes home, and they book first.
 
-**Book three to four months ahead.** For October 2026, that means the window is now, not September. **Book the flight before the room** — seats are the tighter constraint, and our full breakdown of routes is in [how to get to Camiguin from Cebu](/guides/how-to-get-to-camiguin-from-cebu).
+**Book three to four months ahead.** For October 2026, that means the window is now, not September. **Book the flight before the room** — seats are the tighter constraint, and our full breakdown of routes is in [how to get to Camiguin from Cebu](/guides/how-to-get-to-camiguin-from-cebu). Festival week is exactly when that one daily turboprop sells out, so if you're flying from the capital, read [the Manila and Cagayan de Oro options](/guides/how-to-get-to-camiguin-from-manila) before you commit — the ferry route via Balingoan is often the only seat left in October.
 
 If you are choosing where to base yourself, note that Mambajao is where the festival happens, so the north-west coast of Mambajao is both the best base for the island generally *and* the shortest ride to the grandstand. We cover the coasts and barangays properly in [where to stay in Camiguin](/guides/where-to-stay-in-camiguin).
 

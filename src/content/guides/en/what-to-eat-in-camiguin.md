@@ -99,7 +99,7 @@ Broadly, you have three categories:
 
 **Resort kitchens** — ₱400–800 a main. On this island these do more of the heavy lifting than elsewhere, because most guests eat where they're staying. Which means the kitchen at your accommodation matters more here than it would in a city.
 
-Our own is Filipino-Spanish and open to walk-ins as well as guests — paella, *gambas al ajillo*, *croquetas*, and the island's seafood done properly. Full detail on the [dining page](/dining) and the [menu](/dining/menu). A 5% service charge applies, and it goes to the team.
+Our own is Filipino-Spanish and open to walk-ins as well as guests — paella, *gambas al ajillo*, *croquetas*, and the island's seafood done properly. Full detail on the [dining page](/dining) and the [menu](/dining/menu). A 5% service charge applies, and it goes to the team. If you want to know how to tell a real paella from the yellow-rice impostor before you order one, we've set out the five tests — and where the dish fits on this island — in [our honest guide to the best paella in Camiguin](/guides/best-paella-in-camiguin).
 
 ## What to bring home
 

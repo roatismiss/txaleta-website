@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { pageAlternates, type Locale } from "@/lib/i18n";
 import { getPageSeo } from "@/locales/seo";
+import { aboutGraph, pageChrome } from "@/lib/schema";
+import { JsonLd } from "@/components/json-ld";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check, MapPin } from "lucide-react";
@@ -30,6 +32,10 @@ export default async function AboutPage({ params }: PageProps<"/[lang]">) {
   const lang = rawLang as Locale;
   const t = aboutContent[lang];
   const P = pageStrings[lang];
+  const chrome = pageChrome(lang, "/about", {
+    name: meta.title as string,
+    description: meta.description as string,
+  });
   return (
     <>
       {/* ── Banner ── */}
@@ -261,6 +267,9 @@ export default async function AboutPage({ params }: PageProps<"/[lang]">) {
           </p>
         </Reveal>
       </section>
+      {/* AboutPage + the full business node: this is the page Google reads
+          to decide who the operator behind the guides actually is. */}
+      <JsonLd data={aboutGraph(lang, chrome)} />
     </>
   );
 }

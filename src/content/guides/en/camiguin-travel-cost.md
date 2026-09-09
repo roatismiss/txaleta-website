@@ -47,7 +47,7 @@ For a rough foreign-currency sense, the peso has historically traded somewhere a
 
 ## Getting there: your biggest single cost
 
-Every route onto the island, with real door-to-door numbers. The full breakdown lives in [how to get to Camiguin from Cebu](/guides/how-to-get-to-camiguin-from-cebu).
+Every route onto the island, with real door-to-door numbers. The full breakdown lives in [how to get to Camiguin from Cebu](/guides/how-to-get-to-camiguin-from-cebu), and if you're starting further north, [the Manila and Cagayan de Oro routes](/guides/how-to-get-to-camiguin-from-manila) are costed the same way.
 
 | Route | Cost (PHP) | Time |
 |---|---|---|
