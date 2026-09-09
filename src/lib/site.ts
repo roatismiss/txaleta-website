@@ -17,7 +17,12 @@ export const site = {
     region: "Camiguin",
     country: "Philippines",
     airportNote: "15 minutes from Camiguin Airport",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Txaleta+de+Camiguin",
+    // Resolves to THIS business, not a name search that could land on anything.
+    // `cid` is the numeric form of the place's Google feature id
+    // (0x330065004f0d7aef:0x54a5a0716aab13a7) and is the stable, tracking-free
+    // way to link a Google Business Profile. Used for the footer map link,
+    // schema.org `hasMap`, and /llms.txt.
+    mapsUrl: "https://maps.google.com/?cid=6099457679324550055",
   },
 
   contact: {
@@ -94,16 +99,15 @@ export const site = {
 // from the emitted JSON-LD — an absent property costs nothing, a wrong one is
 // a trust penalty.
 export const entity = {
-  // ⚠ NEEDS THE CLIENT. The exact map pin: open Google Maps, right-click the
-  // property, click the "9.xxxx, 124.xxxx" readout to copy it. Do NOT
-  // approximate from the town name — a geo that is off by a kilometre puts the
-  // local pack on someone else's beach, which is worse than having no geo.
-  geo: null as { lat: number; lng: number } | null,
+  // The pin Google itself holds for this business, read off the place URL
+  // (…!3d9.2120935!4d124.7671187). Confirmed against a manual right-click
+  // reading on the property, which landed 15 m away — the same spot.
+  // Google's own value is used so our markup and its Maps record agree exactly.
+  geo: { lat: 9.2120935, lng: 124.7671187 } as { lat: number; lng: number } | null,
 
-  // ⚠ NEEDS THE CLIENT. 24-hour "HH:MM". Not published anywhere on the site
-  // today, so left null rather than invented.
-  checkinTime: null as string | null,
-  checkoutTime: null as string | null,
+  // 24-hour "HH:MM", confirmed by the client 2026-09-09.
+  checkinTime: "14:00",
+  checkoutTime: "12:00",
 
   // Sourced from the /accommodation page copy ("fourteen rooms").
   numberOfRooms: 14,
@@ -111,13 +115,20 @@ export const entity = {
   priceRange: "₱₱",
   currency: "PHP",
 
-  // Feeds `sameAs` alongside the social links in `site.social`. Add the Google
-  // Business Profile URL, TripAdvisor, Booking.com, Agoda — every profile that
-  // is provably THIS business. `sameAs` is how Google reconciles this site with
-  // the entity it already knows from Maps, and how an LLM confirms we are the
-  // same place it saw on an OTA. This is the single highest-leverage line in
-  // the file once the GBP link is in.
-  profiles: [] as string[],
+  // Feeds `sameAs` alongside the social links in `site.social`. Every profile
+  // here must be provably THIS business — `sameAs` is how Google reconciles the
+  // site with the entity it already knows from Maps, and how an LLM confirms we
+  // are the same place it saw listed elsewhere.
+  //
+  // The Google Business Profile is confirmed: the knowledge-panel share link
+  // and the Maps place link both carry the same Knowledge Graph id,
+  // /g/11wg80q2hn. The `cid` form below is the stable, tracking-free URL for it
+  // (a share link is personalised, locale-pinned and goes through a consent
+  // redirect, so it must never be used here).
+  //
+  // STILL TO ADD when the client confirms the listings are theirs:
+  // TripAdvisor, Booking.com, Agoda.
+  profiles: [site.location.mapsUrl] as string[],
 
   // Resort-level amenities (the homepage `Resort` node). Room-level amenities
   // come from each room in `rooms` / the live Cloudbeds data instead.
