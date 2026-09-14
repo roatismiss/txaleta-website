@@ -297,7 +297,7 @@ Twenty-five things, one small island, and a ring road that ties them together. T
 
 Tell us your dates and we'll build the days around the tide, the light and the weather: which morning for the sandbar, which afternoon for the springs, which evening to do nothing at all. We'll arrange the banca, the guide, the scooter and the airport pickup before you land.
 
-[Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 770 4656, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
+[Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 
 Come for the views. Stay for the feeling. Welcome home.
 
@@ -340,7 +340,7 @@ Come for the views. Stay for the feeling. Welcome home.
           "postalCode": "9100",
           "addressCountry": "PH"
         },
-        "telephone": "+63 917 770 4656"
+        "telephone": "+63 917 582 2277"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",

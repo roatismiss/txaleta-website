@@ -149,7 +149,7 @@ The best meal you'll have here probably won't be in a restaurant. It'll be lanzo
 
 We'll point you at the roadside stalls, tell you honestly what came in this morning, and pack you a picnic for the sandbar. And breakfast by the water is part of every stay.
 
-[See the menu](/dining/menu), [browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 770 4656, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
+[See the menu](/dining/menu), [browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 
 Come hungry. Leave nourished. Welcome home.
 
@@ -185,7 +185,7 @@ Come hungry. Leave nourished. Welcome home.
           "postalCode": "9100",
           "addressCountry": "PH"
         },
-        "telephone": "+63 917 770 4656"
+        "telephone": "+63 917 582 2277"
       },
       "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.txaletadecamiguin.com/guides/what-to-eat-in-camiguin" },
       "about": [

@@ -250,7 +250,7 @@ Choose the coast first, the property second. Get that right and this island is v
 
 If the clifftop version of that sounds like yours, we'd love to host you. Fourteen rooms, one infinity pool that opens at sunrise, a kitchen with a Spanish accent, and a family who'll have your airport pickup arranged before you land.
 
-[Browse our rooms](/accommodation), [check live rates and book direct](/book), or message us on [WhatsApp](https://wa.me/639175822277) and tell us your dates. Reach us anytime at +63 917 770 4656, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
+[Browse our rooms](/accommodation), [check live rates and book direct](/book), or message us on [WhatsApp](https://wa.me/639175822277) and tell us your dates. Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 
 Come for the views. Stay for the feeling. Welcome home.
 
@@ -293,7 +293,7 @@ Come for the views. Stay for the feeling. Welcome home.
           "postalCode": "9100",
           "addressCountry": "PH"
         },
-        "telephone": "+63 917 770 4656"
+        "telephone": "+63 917 582 2277"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",

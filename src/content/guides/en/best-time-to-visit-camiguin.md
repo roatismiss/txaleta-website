@@ -232,7 +232,7 @@ Whatever month you land in, the shape of a good day here is the same: the sea be
 
 We'll help you build it. Tell us your dates and we'll tell you honestly what the sea is likely to be doing, when to take the banca to White Island, which morning to climb, and which afternoon to do nothing at all. We'll arrange your airport pickup — we're about fifteen minutes from Camiguin's runway — and have the coffee ready.
 
-[Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277) and tell us when you're thinking of coming. Reach us anytime at +63 917 770 4656, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
+[Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277) and tell us when you're thinking of coming. Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 
 Come for the views. Stay for the feeling. Welcome home.
 
@@ -275,7 +275,7 @@ Come for the views. Stay for the feeling. Welcome home.
           "postalCode": "9100",
           "addressCountry": "PH"
         },
-        "telephone": "+63 917 770 4656"
+        "telephone": "+63 917 582 2277"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",

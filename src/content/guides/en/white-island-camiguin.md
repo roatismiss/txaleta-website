@@ -147,7 +147,7 @@ The best version of this is simple: we wake you before the light, hand you coffe
 
 That's a morning we set up several times a week, and it never stops being the thing guests talk about at dinner.
 
-[Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277) with your dates and we'll check the tide tables for you. Reach us anytime at +63 917 770 4656, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
+[Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277) with your dates and we'll check the tide tables for you. Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 
 Come for the views. Stay for the feeling. Welcome home.
 
@@ -190,7 +190,7 @@ Come for the views. Stay for the feeling. Welcome home.
           "postalCode": "9100",
           "addressCountry": "PH"
         },
-        "telephone": "+63 917 770 4656"
+        "telephone": "+63 917 582 2277"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",

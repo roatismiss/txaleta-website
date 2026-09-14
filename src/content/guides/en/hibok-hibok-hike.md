@@ -158,7 +158,7 @@ If you're climbing, we'll set it up properly: the guide and permit arranged in a
 
 And if you read the honest parts above and decided against it — good. That's what they were for. There's a spring in the forest, a sandbar at sunrise and a terrace with your name on it.
 
-[Browse our rooms](/accommodation), see what else fills your days in our [experiences](/experiences), or [book your stay direct](/book). Message us on [WhatsApp](https://wa.me/639175822277), call +63 917 770 4656, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
+[Browse our rooms](/accommodation), see what else fills your days in our [experiences](/experiences), or [book your stay direct](/book). Message us on [WhatsApp](https://wa.me/639175822277), call +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 
 Come for the views. Stay for the feeling. Welcome home.
 
@@ -201,7 +201,7 @@ Come for the views. Stay for the feeling. Welcome home.
           "postalCode": "9100",
           "addressCountry": "PH"
         },
-        "telephone": "+63 917 770 4656"
+        "telephone": "+63 917 582 2277"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",

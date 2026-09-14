@@ -154,7 +154,7 @@ If you come in October, come for the whole thing: the drums at the grandstand, t
 
 We'll have your airport pickup arranged, a spot on the route to recommend, a banca ready for the quiet morning before it all starts, and cold drinks for when you come back off the street. And on the days the town is loud, the cliff is still the cliff — the pool open from sunrise, the sea at eye level, the Bohol Sea doing what it always does.
 
-[Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277) and we'll send you the confirmed festival programme the day it's published. Reach us anytime at +63 917 770 4656, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
+[Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277) and we'll send you the confirmed festival programme the day it's published. Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 
 Come for the views. Stay for the feeling. Welcome home.
 
@@ -197,7 +197,7 @@ Come for the views. Stay for the feeling. Welcome home.
           "postalCode": "9100",
           "addressCountry": "PH"
         },
-        "telephone": "+63 917 770 4656"
+        "telephone": "+63 917 582 2277"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",

@@ -154,7 +154,7 @@ If you want a board under your feet and a bar at the end of the day, Siargao is 
 
 But if what you actually pictured was an empty sandbar at sunrise, a spring warmed by a volcano, and an evening where the loudest thing is the sea below the cliff — that's here, and it's still here, which is getting rarer every year.
 
-[Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277) and tell us your dates. Reach us anytime at +63 917 770 4656, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
+[Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277) and tell us your dates. Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 
 Come for the views. Stay for the feeling. Welcome home.
 
@@ -190,7 +190,7 @@ Come for the views. Stay for the feeling. Welcome home.
           "postalCode": "9100",
           "addressCountry": "PH"
         },
-        "telephone": "+63 917 770 4656"
+        "telephone": "+63 917 582 2277"
       },
       "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.txaletadecamiguin.com/guides/camiguin-vs-siargao" },
       "about": [

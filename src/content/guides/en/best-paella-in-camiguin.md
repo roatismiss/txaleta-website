@@ -187,7 +187,7 @@ The best version of this is not really about the rice. It is a wide pan in the m
 
 That is what the dish is for. It has been that for six hundred years in Valencia and about four hundred here, and it works exactly the same way on a volcanic island as it does in a rice field outside Albufera.
 
-[See the menu](/dining/menu), [browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 770 4656, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
+[See the menu](/dining/menu), [browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 
 Order it when you sit down. Save the socarrat for last. Welcome home.
 
@@ -223,7 +223,7 @@ Order it when you sit down. Save the socarrat for last. Welcome home.
           "postalCode": "9100",
           "addressCountry": "PH"
         },
-        "telephone": "+63 917 770 4656"
+        "telephone": "+63 917 582 2277"
       },
       "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.txaletadecamiguin.com/guides/best-paella-in-camiguin" },
       "about": [

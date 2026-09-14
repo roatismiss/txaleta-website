@@ -26,8 +26,8 @@ export const site = {
   },
 
   contact: {
-    phone: "+63 917 770 4656",
-    phoneRaw: "+639177704656",
+    phone: "+63 917 582 2277",
+    phoneRaw: "+639175822277",
     whatsapp: "639175822277",
     viber: "639175822277",
     email: "txaletadecamiguin@gmail.com",
@@ -126,9 +126,22 @@ export const entity = {
   // (a share link is personalised, locale-pinned and goes through a consent
   // redirect, so it must never be used here).
   //
-  // STILL TO ADD when the client confirms the listings are theirs:
-  // TripAdvisor, Booking.com, Agoda.
-  profiles: [site.location.mapsUrl] as string[],
+  // Booking.com is stripped to its bare property URL on purpose. The link as it
+  // arrives from a search result carries `sid` (a live session id), `gclid`,
+  // `label`, `aid` and `srepoch` — none of which belong in a public page, and
+  // the session id least of all. The `.ro.html` suffix is dropped too: that is
+  // whichever language the person copying the link happened to be browsing in,
+  // and pinning our OTA listing to Romanian would be nonsense.
+  //
+  // Agoda gets the same treatment: `cid` is an affiliate/campaign id and `ds` a
+  // tracking token, both dropped, and the `/en-gb/` locale segment with them.
+  //
+  // STILL TO ADD when the client confirms the listing is theirs: TripAdvisor.
+  profiles: [
+    site.location.mapsUrl,
+    "https://www.booking.com/hotel/ph/txaleta-de-camiguin.html",
+    "https://www.agoda.com/txaleta-de-camiguin/hotel/camiguin-ph.html",
+  ] as string[],
 
   // Resort-level amenities (the homepage `Resort` node). Room-level amenities
   // come from each room in `rooms` / the live Cloudbeds data instead.

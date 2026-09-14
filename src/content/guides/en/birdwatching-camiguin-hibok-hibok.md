@@ -180,7 +180,7 @@ Binoculars (essential — the birds are small and quick), a field guide or the e
 
 If the idea of waking to birdsong off a volcano and being on a forest road by sunrise sounds like your kind of morning, come and let us set it up. We'll help you arrange an accredited local guide, point you to the Itum road and the MTHNM, and have a Spanish latte waiting for when you come down off the mountain. You can dip into the rest of the island too — White Island, the waterfalls, Mantigue with Mang Ikoy and his trees — and close each day with the sea at eye level.
 
-[Browse our rooms](/accommodation), see what else fills your days in our [experiences](/experiences), [book your stay direct](/book), or message us and tell us your dates — we live here, and we're happy to help you find these birds the right way. Reach us anytime at +63 917 770 4656, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
+[Browse our rooms](/accommodation), see what else fills your days in our [experiences](/experiences), [book your stay direct](/book), or message us and tell us your dates — we live here, and we're happy to help you find these birds the right way. Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 
 Come for the views. Stay for the birdsong. Welcome home.
 
@@ -229,7 +229,7 @@ Come for the views. Stay for the birdsong. Welcome home.
           "postalCode": "9100",
           "addressCountry": "PH"
         },
-        "telephone": "+63 917 770 4656"
+        "telephone": "+63 917 582 2277"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",

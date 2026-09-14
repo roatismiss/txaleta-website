@@ -223,7 +223,7 @@ The best news in this whole guide is that the expensive part is behind you the m
 
 Tell us your dates and your budget and we'll be straight with you about what fits: which room, which boat, whether a scooter or a driver makes more sense for how you travel. We can have the airport pickup arranged before you land.
 
-[Browse our rooms](/accommodation), [check live rates and book direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 770 4656, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
+[Browse our rooms](/accommodation), [check live rates and book direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 
 Come for the views. Stay for the feeling. Welcome home.
 
@@ -266,7 +266,7 @@ Come for the views. Stay for the feeling. Welcome home.
           "postalCode": "9100",
           "addressCountry": "PH"
         },
-        "telephone": "+63 917 770 4656"
+        "telephone": "+63 917 582 2277"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",

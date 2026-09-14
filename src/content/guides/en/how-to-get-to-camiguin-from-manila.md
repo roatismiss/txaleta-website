@@ -212,7 +212,7 @@ Two flights, or a flight and a boat. Either way the last thing that happens is t
 
 We will take it from there — the transfer arranged, the pool open, breakfast by the water in the morning.
 
-[Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 770 4656, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
+[Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 
 Tell us your flight. We will be there. Welcome home.
 
@@ -248,7 +248,7 @@ Tell us your flight. We will be there. Welcome home.
           "postalCode": "9100",
           "addressCountry": "PH"
         },
-        "telephone": "+63 917 770 4656"
+        "telephone": "+63 917 582 2277"
       },
       "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.txaletadecamiguin.com/guides/how-to-get-to-camiguin-from-manila" },
       "about": [

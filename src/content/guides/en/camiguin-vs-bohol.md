@@ -183,7 +183,7 @@ If you have read this far and you are still weighing it, here is the short versi
 
 Plenty of our guests do both, arrive here off the Jagna boat with Bohol behind them, and spend the first afternoon adjusting to how little is happening. By the second morning it is the thing they say they will miss.
 
-[Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 770 4656, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
+[Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 
 Come for the quiet. Stay for the feeling. Welcome home.
 
@@ -219,7 +219,7 @@ Come for the quiet. Stay for the feeling. Welcome home.
           "postalCode": "9100",
           "addressCountry": "PH"
         },
-        "telephone": "+63 917 770 4656"
+        "telephone": "+63 917 582 2277"
       },
       "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.txaletadecamiguin.com/guides/camiguin-vs-bohol" },
       "about": [
