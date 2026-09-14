@@ -69,6 +69,8 @@ const ORDER = [
   "camiguin-lanzones-festival",
   "how-to-get-to-camiguin-from-cebu",
   "how-to-get-to-camiguin-from-manila",
+  "2-weeks-in-the-philippines",
+  "best-time-to-visit-the-philippines",
   "best-islands-in-the-philippines",
   "birdwatching-camiguin-hibok-hibok",
 ];

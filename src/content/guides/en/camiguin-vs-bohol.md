@@ -126,7 +126,7 @@ Fly into **Bohol-Panglao** (easy, direct from Manila), give Bohol four to five d
 
 That is an open-jaw trip with no backtracking, and domestic tickets in the Philippines usually price it the same as two one-ways. You get the marquee sights and the beaches first, then the quiet island at the end, in the order that works — because coming to Camiguin *after* Bohol feels like arriving somewhere, whereas doing it the other way round can feel like leaving somewhere to go be busy.
 
-**Ten to twelve days** covers both without rushing. If you have only a week, pick one.
+**Ten to twelve days** covers both without rushing. If you have only a week, pick one. And if you are building a longer trip around this pairing, [2 weeks in the Philippines](/guides/2-weeks-in-the-philippines) shows where it sits alongside the other routes — and why three islands is the honest ceiling for a fortnight.
 
 ## So which should you pick?
 

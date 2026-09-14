@@ -96,6 +96,8 @@ Camiguin sits where many travellers actually want to be: quiet like Siquijor, bu
 
 Camiguin is our home and our number one, but we promised honesty, so here are the other islands the awards keep overlooking — each with a real reason, not just a pretty adjective. Note the categories: some are single islands, some are whole provinces.
 
+One caveat that applies to every row below: **which of these is enjoyable depends heavily on when you go**, because two monsoons hit opposite coasts of the archipelago and there is no single national dry season. Check [the best time to visit the Philippines](/guides/best-time-to-visit-the-philippines) against whichever island you shortlist before you book.
+
 | Island / Province | What makes it special | Best for |
 |---|---|---|
 | **Camiguin** (island) | Seven volcanoes, White Island sandbar, springs, sunken cemetery — and almost no crowds | Quiet couples, slow travellers, heritage |

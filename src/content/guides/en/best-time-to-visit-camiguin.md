@@ -27,6 +27,8 @@ Ask ten travel sites for the **best time to visit Camiguin** and you'll get the 
 
 We live here. We watch this island change hands with the seasons from a clifftop in Mambajao, and we have opinions about all twelve months, not three. So this is the honest version: what each month really feels like, what the sea does to White Island, what's on, what it costs, and the weeks we'd book if we were the ones flying in.
 
+One thing to know before you read on, because it explains why our dates differ from the national ones: **the Philippines has no single season.** Two monsoons soak opposite coasts, and this island sits outside the pattern most guides describe. We've mapped that out properly in [the best time to visit the Philippines](/guides/best-time-to-visit-the-philippines) — read it if you're building a wider trip than Camiguin.
+
 *Written by the family at Txaleta de Camiguin. Last updated August 2026.*
 
 ## The short answer
