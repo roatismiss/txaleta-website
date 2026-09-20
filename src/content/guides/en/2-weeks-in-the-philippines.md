@@ -119,6 +119,8 @@ The most useful thing in any itinerary article is what it tells you to remove.
 
 The flights dominate. Internal Philippine fares are cheap when booked early and punishing when booked late, and every island change is another fare. A three-island fortnight with fares bought months ahead can cost less than a five-island one bought a fortnight out, before counting the days you get back.
 
+The full arithmetic — daily budgets, worked one- and two-week totals, and what each extra island actually adds — is in [how much a trip to the Philippines costs](/guides/philippines-trip-cost).
+
 On the ground it is inexpensive. We break our own island down peso by peso in the [Camiguin trip cost guide](/guides/camiguin-travel-cost) — entrance fees in the tens of pesos, a scooter for a day costing less than a city taxi ride.
 
 ## The honest part

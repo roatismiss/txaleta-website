@@ -57,6 +57,8 @@ Every route onto the island, with real door-to-door numbers. The full breakdown 
 | Cebu city → Mactan airport (bus / taxi) | ₱50 / ~₱250 | ~1 hr |
 | Camiguin airport → Mambajao (tricycle) | from ~₱50 | ~15 min |
 
+If you are budgeting a wider trip than this island, the same arithmetic scaled up to the whole archipelago is in [how much a trip to the Philippines costs](/guides/philippines-trip-cost) — short version, the country is cheap to be in and expensive to move around.
+
 **The counterintuitive bit:** the cheapest route is barely cheaper. The all-ferry Bohol chain saves you a few hundred pesos and costs you seven hours. Unless the journey itself is the point, fly.
 
 **Where you actually save:** booking early. Camiguin's airport takes roughly one small turboprop a day from Cebu, so seat prices climb steeply as it fills. The difference between booking in January and booking in September for an October trip can be more than the rest of your week's activities combined.

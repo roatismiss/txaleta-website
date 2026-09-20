@@ -146,7 +146,7 @@ For couples it is the dinner at the middle of a [Camiguin honeymoon](/guides/cam
 The paella at Txaleta de Camiguin, the Filipino-Spanish kitchen on the clifftop in Mambajao. It is cooked to order from raw rice in a wide pan — 30 to 45 minutes, with socarrat at the bottom — using seafood landed the same day, and it is served in three versions: Marisco, en su Tinta, and the house Txaleta Paella with chicken, pork, shrimp and chorizo. It is open to walk-in visitors as well as staying guests.
 
 ### Where can I eat paella in Camiguin?
-At the island's Filipino-Spanish kitchens, of which there are very few — paella is not a carinderia dish, and most of the island's casual restaurants do not attempt it. Txaleta de Camiguin, on the clifftop in Mambajao, is the one we would send you to. Current prices are on the menu page, and a 5% service charge applies.
+At the island's Filipino-Spanish kitchens, of which there are very few — paella is not a carinderia dish, and most of the island's casual restaurants do not attempt it. Txaleta de Camiguin, on the clifftop in Mambajao, is the one we would send you to. The wider picture — carinderias, the casual strip, and which resort kitchens take walk-ins — is in [the best restaurant in Camiguin](/guides/best-restaurant-in-camiguin). Current prices are on the menu page, and a 5% service charge applies.
 
 ### How much does paella cost in Camiguin?
 Ours sits in the ₱999–1,330 band depending on the promotion running. Paella is priced as a sharing dish for two or more rather than per person, so compare it per table. Set against typical island prices — ₱250–450 for a casual main, ₱400–800 at a resort kitchen — a shared pan is mid-range for a group and expensive for one.
@@ -244,7 +244,7 @@ Order it when you sit down. Save the socarrat for last. Welcome home.
         {
           "@type": "Question",
           "name": "Where can I eat paella in Camiguin?",
-          "acceptedAnswer": { "@type": "Answer", "text": "At the island's Filipino-Spanish kitchens, of which there are very few. Paella is not a carinderia dish, and most of the island's casual restaurants do not attempt it. Txaleta de Camiguin, on the clifftop in Mambajao, is the one we would send you to. Current prices are on the menu page, and a 5% service charge applies." }
+          "acceptedAnswer": { "@type": "Answer", "text": "At the island's Filipino-Spanish kitchens, of which there are very few. Paella is not a carinderia dish, and most of the island's casual restaurants do not attempt it. Txaleta de Camiguin, on the clifftop in Mambajao, is the one we would send you to. The wider picture — carinderias, the casual strip, and which resort kitchens take walk-ins — is in [the best restaurant in Camiguin](/guides/best-restaurant-in-camiguin). Current prices are on the menu page, and a 5% service charge applies." }
         },
         {
           "@type": "Question",

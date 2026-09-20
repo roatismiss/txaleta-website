@@ -87,7 +87,7 @@ Grilled fish with calamansi, garlic and a little salt. Squid. Prawns. That's the
 
 **A practical note:** on a small island, "fresh" varies with the weather. When the sea has been rough for two days, the catch is thinner. Ask what came in today rather than ordering off the menu — any decent kitchen will tell you straight, and ours does.
 
-## Where to eat
+## Where the restaurants are
 
 Camiguin's dining is concentrated on the **north-west coast of Mambajao**, along with everything else. Off that stretch, options thin out fast and close early — which is one more reason to base yourself there, as we explain in [where to stay in Camiguin](/guides/where-to-stay-in-camiguin).
 
@@ -131,8 +131,8 @@ A Camiguin snack made from sun-dried cassava paste, fried and sprinkled with lat
 ### Do restaurants in Camiguin close early?
 Yes, and this catches people out. Outside the north-west coast of Mambajao, kitchens thin out fast and many close by early evening. Plan dinner rather than wandering out at nine hoping to find something — or eat where you're staying, which is what most visitors end up doing. Full price points are in our [trip cost guide](/guides/camiguin-travel-cost).
 
-### Where is the best place to eat in Camiguin?
-The north-west coast of Mambajao has almost all of the island's restaurants and cafés. Elsewhere on the ring road, options thin out quickly and close early — so plan meals around that coast, or eat where you're staying.
+### Which coast has the restaurants in Camiguin?
+The north-west coast of Mambajao has almost all of the island's restaurants and cafés. Elsewhere on the ring road, options thin out quickly and close early — so plan meals around that coast, or eat where you're staying. For the restaurants themselves, including which resort kitchens take walk-ins, see [the best restaurant in Camiguin](/guides/best-restaurant-in-camiguin).
 
 ### Is the seafood good in Camiguin?
 Yes, when it's fresh, which depends on the weather. After rough seas the catch is thinner. Ask what came in that morning rather than ordering from the menu, and take it grilled simply with calamansi and garlic. Kinilaw is the dish that reveals whether a kitchen knows what it's doing.
@@ -229,7 +229,7 @@ Come hungry. Leave nourished. Welcome home.
         },
         {
           "@type": "Question",
-          "name": "Where is the best place to eat in Camiguin?",
+          "name": "Which coast has the restaurants in Camiguin?",
           "acceptedAnswer": { "@type": "Answer", "text": "The north-west coast of Mambajao has almost all of the island's restaurants and cafés. Elsewhere on the ring road, options thin out quickly and close early — so plan meals around that coast, or eat where you are staying." }
         },
         {
