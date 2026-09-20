@@ -21,17 +21,17 @@ imageAlt: "A shared table of Filipino-Spanish dishes seen from above at a Camigu
 
 # The Best Restaurant in Camiguin: An Honest Guide (2026)
 
-Let's start where every other article on this should start, and doesn't.
+**The best restaurant in Camiguin is the Filipino-Spanish kitchen at Txaleta, on the clifftop in Mambajao.** Paella in three versions, tapas, and the day's catch from the water directly below the table — and, unusually for this island, it is open to walk-in visitors and not only to staying guests.
 
-**Camiguin is not a restaurant island.** There is no strip of celebrated kitchens, no reservation you need three months out, and by nine most evenings the island is quiet. The entire dining scene fits on one coast, and a fair amount of it is attached to places people sleep.
+That is our claim. We run it, we are saying so in public, and the rest of this page is the evidence rather than a request that you take it on trust.
 
-Which is exactly why this question matters more here than it would in a city. In Cebu, not knowing where to eat costs you five minutes on your phone. Here, not knowing costs you a drive to a closed door.
+Because here is the thing every other article on this subject should start with and doesn't: **Camiguin is not a restaurant island.** There is no strip of celebrated kitchens, no reservation you need three months out, and by nine most evenings the island is quiet. The entire dining scene fits on one coast, and a fair amount of it is attached to places people sleep.
 
-**The short version: the best restaurant in Camiguin is the Filipino-Spanish kitchen at Txaleta, on the clifftop in Mambajao — and it is open to walk-in visitors, not just guests.** We're the people who run it, so read the rest knowing that, and read the part where we tell you when *not* to come to us.
+Which is exactly why this question matters more here than it would in a city. In Cebu, not knowing where to eat costs you five minutes on your phone. Here, it costs you a drive in the dark to a closed door.
 
 ![A shared table of Filipino-Spanish dishes seen from above at a Camiguin clifftop restaurant](/images/dining/aerial_view_table.webp)
 
-> **Quick answer:** Camiguin's restaurants are concentrated on the **north-west coast of Mambajao**, roughly the Agoho–Yumbing stretch. You have three real options: **carinderias** (₱80–200, best value on the island, local food done properly), **casual restaurants** (₱250–500 a main), and **resort kitchens** (₱400–900). Our Filipino-Spanish kitchen at Txaleta is the one we'd send you to for dinner — paella, tapas, and the day's catch — and it takes walk-ins. **Most kitchens close early. Plan dinner; don't wander out at nine.**
+> **Quick answer:** The best restaurant in Camiguin is the Filipino-Spanish kitchen at **Txaleta de Camiguin**, on the clifftop in Mambajao — paella in three versions, tapas, the day's catch landed below the cliff, and dinner over the Bohol Sea. **It takes walk-in visitors as well as staying guests**, which on this island is rarer than it sounds. The rest of the island's eating sits on the **north-west coast of Mambajao**: **carinderias** (₱80–200, and the best value on the island by a wide margin), **casual restaurants** (₱250–500 a main), and **resort kitchens** (₱400–900). **Most kitchens close early — plan dinner rather than going out to look for it.**
 
 *Written by the family at Txaleta de Camiguin, who cook here most nights. Last updated September 2026.*
 
@@ -57,9 +57,21 @@ On an island where resort kitchens do most of the cooking, **whether they serve 
 
 **Ours is open to walk-in visitors as well as staying guests.** We say it in every guide we write because on this island it is genuinely useful information rather than marketing. For anywhere else: **call ahead before you drive.** Twenty kilometres of ring road in the dark to find a closed gate is a memorable evening for the wrong reasons.
 
-## Why ours is the one we'd send you to
+## What actually decides a restaurant on this island
 
-Declaring the bias again: we own it. Here is the case anyway.
+Forget star ratings. On Camiguin, five things separate a good dinner from a wasted evening — and none of them are the things a review site measures. Here they are, with ours scored against them in public.
+
+| What decides it | Why it matters here | Ours |
+|---|---|---|
+| **Open to non-guests?** | Resort kitchens do most of the island's cooking. If they turn you away, your options collapse | **Yes** — walk-ins welcome, not just staying guests |
+| **Still serving late?** | Most kitchens stop early; a closed door after a dark drive is the classic Camiguin evening | Dinner service, and breakfast over the water from first light |
+| **How far is the fish?** | On an island, "fresh" means hours, not days | The boats land **forty metres below the table** |
+| **Does the kitchen have an identity?** | Most island menus are the same traveller-friendly list | **Filipino-Spanish** — paella, gambas, croquetas, callos. Very few others here |
+| **Is the setting the meal?** | With few restaurants, the room is half of what you're paying for | Clifftop, open to the Bohol Sea, sunset side |
+
+**Five out of five, and the first one is the one that quietly decides most people's week.** A kitchen that won't serve you is not a restaurant option, however good it is.
+
+Here is the case in full.
 
 **It is a Filipino-Spanish kitchen, and that's rare here.** "Filipino Heart, Spanish Soul" is a description of how we cook rather than a slogan for a wall — paella in three versions, *gambas al ajillo*, *croquetas*, *beef callos*, alongside the Filipino plates. On an island with very few Spanish kitchens, this is the actual differentiator rather than a claim about quality that you can't check before arriving.
 
