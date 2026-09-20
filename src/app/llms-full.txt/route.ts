@@ -43,7 +43,7 @@ export function GET() {
         `# ${g.title}`,
         "",
         `Source: ${site.url}${localePath("en", `/guides/${g.slug}`)}`,
-        g.dateISO ? `Updated: ${g.dateISO}` : null,
+        g.updatedISO ? `Updated: ${g.updatedISO}` : null,
         `Author: ${g.author}`,
         "",
         g.description,

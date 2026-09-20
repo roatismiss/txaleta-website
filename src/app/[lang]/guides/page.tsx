@@ -97,7 +97,7 @@ export default async function GuidesIndexPage({ params }: PageProps<"/[lang]">) 
                     />
                   </div>
                   <p className="mt-5 text-[11px] uppercase tracking-[0.18em] text-brand">
-                    {g.readingTime} {p.minRead} · {p.updated} {g.dateLabel}
+                    {g.readingTime} {p.minRead} · {p.updated} {g.updatedLabel}
                   </p>
                   <h2 className="font-display mt-3 text-2xl font-light leading-snug text-ink transition-colors group-hover:text-brand sm:text-3xl">
                     {g.title}

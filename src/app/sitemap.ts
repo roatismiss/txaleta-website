@@ -44,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // The hub is exactly as fresh as its freshest article — real, and it updates
   // itself every time a guide ships, with nothing to remember.
   const guideDates = locales
-    .flatMap((l) => getGuides(l).map((g) => g.dateISO))
+    .flatMap((l) => getGuides(l).map((g) => g.updatedISO))
     .filter(Boolean) as string[];
   const guidesUpdated = guideDates.length
     ? new Date(guideDates.reduce((a, b) => (a > b ? a : b)))
@@ -98,7 +98,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       );
       return {
         url: `${site.url}${localePath(locale, `/guides/${g.slug}`)}`,
-        lastModified: g.dateISO ? new Date(g.dateISO) : now,
+        lastModified: g.updatedISO ? new Date(g.updatedISO) : now,
         changeFrequency: "monthly" as const,
         priority: locale === defaultLocale ? 0.7 : 0.5,
         alternates: { languages },

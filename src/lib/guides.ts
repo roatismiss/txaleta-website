@@ -4,6 +4,19 @@
 // Layout:  src/content/guides/<locale>/<localized-slug>.md
 //
 // Each file is frontmatter + body + a trailing ```json JSON-LD fence.
+//
+// Frontmatter dates:
+//   date:    first publication. Set once, never touched again.
+//   updated: OPTIONAL. The last time the article's SUBSTANCE changed — new
+//            prices, a rewritten section, a corrected ferry schedule. Omit it
+//            until that happens; it falls back to `date`.
+//
+//            Bump it for a real revision. Do NOT bump it for a typo, a styling
+//            pass or a site-wide find-and-replace — claiming freshness that a
+//            reader would not notice is how the signal stops being believed.
+//            The `dateModified` written inside the JSON-LD fence is IGNORED and
+//            overridden from here (see linkGuideGraph in lib/schema.ts), so the
+//            frontmatter is the only date you ever need to edit.
 // Translations carry their OWN slug in the target language — /ko/guides/카미긴-여행-시기
 // rather than /ko/guides/best-time-to-visit-camiguin — because a URL that
 // contains the keyword in the reader's language ranks and converts better.
@@ -33,8 +46,20 @@ export type Guide = {
   description: string;
   primaryKeyword: string;
   keywords: string[];
+  /** First publication — frontmatter `date`. Never changes once shipped. */
   dateISO: string;
   dateLabel: string;
+  /**
+   * Last substantive revision — frontmatter `updated`, falling back to
+   * `date` when the article has not been revised since publication.
+   *
+   * This is the ONE place a guide's freshness is declared. It feeds the visible
+   * "Updated …" byline, the OpenGraph `modifiedTime`, schema.org `dateModified`,
+   * the sitemap's `lastmod` and the plain-text mirrors — so a refresh is a
+   * one-line edit, not six places to remember.
+   */
+  updatedISO: string;
+  updatedLabel: string;
   author: string;
   image: string;
   imageAlt: string;
@@ -64,12 +89,14 @@ const ORDER = [
   "sunken-cemetery-camiguin",
   "hibok-hibok-hike",
   "what-to-eat-in-camiguin",
+  "best-restaurant-in-camiguin",
   "best-paella-in-camiguin",
   "best-time-to-visit-camiguin",
   "camiguin-lanzones-festival",
   "how-to-get-to-camiguin-from-cebu",
   "how-to-get-to-camiguin-from-manila",
   "2-weeks-in-the-philippines",
+  "philippines-trip-cost",
   "best-time-to-visit-the-philippines",
   "best-islands-in-the-philippines",
   "birdwatching-camiguin-hibok-hibok",
@@ -127,10 +154,19 @@ function parseGuide(locale: Locale, file: string): Guide {
     : Math.max(1, Math.round(body.split(/\s+/).filter(Boolean).length / 220));
 
   const slug = (data.slug as string) || file.replace(/\.md$/, "");
+  const monthYear = (iso: string) =>
+    iso ? new Date(iso).toLocaleDateString(DATE_LOCALES[locale], { month: "long", year: "numeric" }) : "";
+
   const dateISO = toISO(data.date);
-  const dateLabel = dateISO
-    ? new Date(dateISO).toLocaleDateString(DATE_LOCALES[locale], { month: "long", year: "numeric" })
-    : "";
+  const dateLabel = monthYear(dateISO);
+
+  // `updated` is optional and deliberately NOT derived from git: the last commit
+  // to touch a guide file is usually a site-wide sweep (a phone number, a round
+  // of internal relinking), and stamping every article as fresh on the strength
+  // of that is the exact noise that teaches Google to ignore the signal. Set it
+  // by hand when the article's substance actually changes.
+  const updatedISO = toISO(data.updated) || dateISO;
+  const updatedLabel = updatedISO === dateISO ? dateLabel : monthYear(updatedISO);
 
   return {
     key: (data.key as string) || slug,
@@ -142,6 +178,8 @@ function parseGuide(locale: Locale, file: string): Guide {
     keywords: (data.keywords as string[]) || [],
     dateISO,
     dateLabel,
+    updatedISO,
+    updatedLabel,
     author: (data.author as string) || "Txaleta de Camiguin",
     image,
     imageAlt: (data.imageAlt as string) || (data.title as string),

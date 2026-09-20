@@ -46,7 +46,10 @@ export async function GET(_request: Request, ctx: RouteContext<"/guides/[slug]">
     `title: ${JSON.stringify(guide.title)}`,
     `description: ${JSON.stringify(guide.description)}`,
     `source: ${canonical}`,
-    guide.dateISO ? `updated: ${guide.dateISO}` : null,
+    // Both dates, so a model can tell a freshly written article from an old one
+    // that has been kept current — they mean different things when citing.
+    guide.dateISO ? `published: ${guide.dateISO}` : null,
+    guide.updatedISO ? `updated: ${guide.updatedISO}` : null,
     `author: ${JSON.stringify(guide.author)}`,
     "---",
     "",

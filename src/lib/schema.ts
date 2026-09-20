@@ -371,7 +371,10 @@ export function experiencesGraph(
  * Unrecognised shapes are returned untouched — a malformed fence must never
  * take a page down.
  */
-export function linkGuideGraph(jsonLd: unknown): unknown {
+export function linkGuideGraph(
+  jsonLd: unknown,
+  dates: { datePublished: string; dateModified: string }
+): unknown {
   if (!jsonLd || typeof jsonLd !== "object") return jsonLd;
   const doc = jsonLd as { "@graph"?: unknown[] };
   if (!Array.isArray(doc["@graph"])) return jsonLd;
@@ -387,6 +390,11 @@ export function linkGuideGraph(jsonLd: unknown): unknown {
         author: { "@id": schemaId.org },
         publisher: { "@id": schemaId.org },
         isPartOf: { "@id": schemaId.website },
+        // The fences were authored with dateModified === datePublished and
+        // would drift the moment an article is revised. Frontmatter wins, so
+        // refreshing a guide is one line in the file it belongs to.
+        ...(dates.datePublished ? { datePublished: dates.datePublished } : {}),
+        ...(dates.dateModified ? { dateModified: dates.dateModified } : {}),
       };
     }),
   };

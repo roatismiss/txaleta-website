@@ -75,7 +75,7 @@ export async function generateMetadata({
       url: `${site.url}${localePath(locale, `/guides/${guide.slug}`)}`,
       type: "article",
       publishedTime: guide.dateISO || undefined,
-      modifiedTime: guide.dateISO || undefined,
+      modifiedTime: guide.updatedISO || undefined,
       authors: [guide.author],
       images: [{ url: `${site.url}${guide.image}`, alt: guide.imageAlt }],
     },
@@ -130,7 +130,7 @@ export default async function GuidePage({
           </Kicker>
           <h1 className="font-display mt-4 text-4xl font-light leading-[1.1] sm:text-5xl">{guide.title}</h1>
           <p className="mt-5 text-[13px] text-white/75">
-            {t.byline} {guide.author} · {t.updated} {guide.dateLabel} · {guide.readingTime} {t.minRead}
+            {t.byline} {guide.author} · {t.updated} {guide.updatedLabel} · {guide.readingTime} {t.minRead}
           </p>
         </div>
       </section>
@@ -239,7 +239,7 @@ export default async function GuidePage({
       {/* The business + website nodes, so the author/publisher @id references
           below resolve for a crawler that landed here straight from search. */}
       <JsonLd data={guideEntityGraph(locale)} />
-      {guide.jsonLd ? <JsonLd data={linkGuideGraph(guide.jsonLd)} /> : null}
+      {guide.jsonLd ? <JsonLd data={linkGuideGraph(guide.jsonLd, { datePublished: guide.dateISO, dateModified: guide.updatedISO })} /> : null}
       <JsonLd data={breadcrumb} />
     </>
   );
