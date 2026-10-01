@@ -188,7 +188,7 @@ Essentially none, and that is deliberate. Evenings are a drink on a terrace, din
 Yes — small resorts do this well because they're small. A private sunrise banca to the sandbar, a picnic set out on the cliff at golden hour, or a table apart with the sea below. Tell your hosts in advance rather than on the day.
 
 ### Is Camiguin safe for couples?
-Very. It has very low crime and a relaxed, unguarded culture — people leave helmets on parked scooters without a thought. Visitors consistently mention the ease of it as one of the first things they notice.
+Very. It has very low crime and a relaxed, unguarded culture — people leave helmets on parked scooters without a thought. Visitors consistently mention the ease of it as one of the first things they notice. For the wider picture — including the Mindanao question people search but rarely find a straight answer to — see [is the Philippines safe](/guides/is-the-philippines-safe).
 
 ## Come home to Camiguin
 

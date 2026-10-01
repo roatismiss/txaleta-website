@@ -78,7 +78,7 @@ The rest of the ring — Catarman's ruins and cold springs, Mahinog's Mantigue I
 
 If Camiguin has a tourist centre, this is it, and it's about as unthreatening as tourist centres come: a few kilometres of coast with beach resorts, a handful of restaurants and cafés, dive operators, scooter rental, and the bancas drawn up on the sand waiting for the morning run to White Island.
 
-Sand here is a mix — dark volcanic grey in most places, paler in a few — because Camiguin is a volcanic island and its beaches are honest about it. If you're expecting Boracay, read our [Camiguin vs Siquijor comparison](/guides/camiguin-vs-siquijor) first; we settle the black-sand question there properly.
+Sand here is a mix — dark volcanic grey in most places, paler in a few — because Camiguin is a volcanic island and its beaches are honest about it. If you're expecting Boracay, read our [Camiguin vs Boracay comparison](/guides/camiguin-vs-boracay) first; we settle the black-sand question there properly, honestly, and with Boracay's own numbers alongside ours.
 
 **Stay here if:** it's your first visit, you're travelling with children, you want to walk to dinner, or you want a boat outside your door.
 

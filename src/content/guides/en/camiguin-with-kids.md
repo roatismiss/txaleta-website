@@ -130,7 +130,7 @@ Full month-by-month detail is in [best time to visit Camiguin](/guides/best-time
 Very. It's safe, quiet, has little traffic, and everything is close together on a 64-kilometre ring road, so there are no long transfers. Attractions are short — a waterfall is twenty minutes, a spring an hour — which suits shorter attention spans. What it doesn't have is kids' clubs or water parks.
 
 ### Is Camiguin safe for kids?
-Yes. Crime is very low, traffic is light, and Filipino culture is genuinely welcoming to children. The main practical risks are sun, slippery wet stone at the springs and waterfalls, and boats without rails — all manageable with normal supervision.
+Yes. Crime is very low, traffic is light, and Filipino culture is genuinely welcoming to children. The main practical risks are sun, slippery wet stone at the springs and waterfalls, and boats without rails — all manageable with normal supervision. For the bigger picture on Philippine travel safety, including the Mindanao question, see [is the Philippines safe](/guides/is-the-philippines-safe).
 
 ### What is the best attraction in Camiguin for children?
 Sto. Niño Cold Spring — shaded by tall trees, shallow in parts, clear and cold, with huts to rent for the day. The Cantaan Giant Clam Sanctuary is a close second and usually the bigger surprise: giant clams in water shallow enough for children to stand in.

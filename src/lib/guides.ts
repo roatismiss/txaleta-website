@@ -76,6 +76,7 @@ const ORDER = [
   "camiguin-vs-siquijor",
   "camiguin-vs-siargao",
   "camiguin-vs-bohol",
+  "camiguin-vs-boracay",
   "camiguin-honeymoon",
   "camiguin-with-kids",
   "where-to-stay-in-camiguin",
@@ -99,6 +100,7 @@ const ORDER = [
   "philippines-trip-cost",
   "best-time-to-visit-the-philippines",
   "best-islands-in-the-philippines",
+  "is-the-philippines-safe",
   "birdwatching-camiguin-hibok-hibok",
 ];
 

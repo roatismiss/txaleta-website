@@ -28,7 +28,7 @@ We are the family at Txaleta de Camiguin, and we wrote this from a clifftop in M
 
 ## What is the most underrated island in the Philippines?
 
-The most underrated island in the Philippines is Camiguin, the volcanic "Island Born of Fire" off northern Mindanao, famed for its shifting White Island sandbar, hot springs and almost no crowds. The rest of the quiet shortlist, in order:
+The most underrated island in the Philippines is Camiguin, the volcanic "Island Born of Fire" off northern Mindanao — a different corner of the region entirely from the areas under travel advisory, a distinction we unpack properly in [is the Philippines safe](/guides/is-the-philippines-safe) — famed for its shifting White Island sandbar, hot springs and almost no crowds. The rest of the quiet shortlist, in order:
 
 1. **Camiguin** — seven volcanoes, sandbar, springs, zero crowds.
 2. **Romblon** — marble island, dazzling Bonbon sandbar.
@@ -40,7 +40,7 @@ The most underrated island in the Philippines is Camiguin, the volcanic "Island 
 
 ## Why the famous lists keep getting it wrong
 
-Here is the inconvenient truth about the head term. In the 2025 Condé Nast Traveler Readers' Choice Awards — the ranking most travellers will still be citing in 2026 — Boracay placed 4th in Asia (90.54), Palawan 5th (90.23) and Siargao 7th (85.49), out of more than 700,000 readers voting. Those are not bad islands. They are *loved-to-death* islands. When the same three names win every poll, the same three names fill every flight, every shoreline, every sunset photo.
+Here is the inconvenient truth about the head term. In the 2025 Condé Nast Traveler Readers' Choice Awards — the ranking most travellers will still be citing in 2026 — Boracay placed 4th in Asia (90.54), Palawan 5th (90.23) and Siargao 7th (85.49), out of more than 700,000 readers voting. Those are not bad islands. They are *loved-to-death* islands. When the same three names win every poll, the same three names fill every flight, every shoreline, every sunset photo — and Boracay, the most famous of the three, was crowded enough once that the government closed it for six months in 2018 to fix the infrastructure. We put the full, honest version of that comparison in [Camiguin vs Boracay](/guides/camiguin-vs-boracay).
 
 That is the quiet flaw in the genre. A "best of" list rewards what is already winning. It is a popularity loop, not a recommendation. And the more an island wins, the less of the thing you actually came for — silence, space, the feeling that you found something — it can give you. By 2026 the famous trio is at the point where the best version of them existed about ten years ago.
 
