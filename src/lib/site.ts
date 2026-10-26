@@ -570,6 +570,32 @@ export type Testimonial = {
 };
 
 export const testimonials: Testimonial[] = [
+  // Real Google reviews. Each `quote` is a CONTIGUOUS verbatim passage from the
+  // review as posted — no words changed, nothing stitched together from
+  // different paragraphs, no ellipsis doing quiet work. The full reviews run
+  // well past what a homepage can hold and are a click away on the Google
+  // profile, which is what the link under this section is for.
+  //
+  // Dates are derived from Google's relative stamps ("4 months ago", read on
+  // 26 Oct 2026) and so are approximate to the month.
+  {
+    quote:
+      "I never thought I’d get emotional while traveling, but Camiguin truly left a special place in my heart. Our stay at Txaleta was one of the highlights of our trip.",
+    name: "Alyssa",
+    date: "June 2026",
+    source: "Google",
+    rating: 5,
+    verified: true,
+  },
+  {
+    quote:
+      "Exceptional service and a wonderful stay! The accommodation was clean, comfortable, and incredibly relaxing. The peaceful, quiet atmosphere made it the perfect getaway, and the staff were genuinely hospitable, kind, and attentive.",
+    name: "Bernadette",
+    date: "July 2026",
+    source: "Google",
+    rating: 5,
+    verified: true,
+  },
   {
     quote:
       "The most peaceful stay we've had in the Philippines. The seaview suite woke us up to the ocean every single morning.",

@@ -5,6 +5,23 @@ import type { Locale } from "@/lib/i18n";
 
 import { Reveal, Kicker } from "../reveal";
 
+function Stars({ rating }: { rating: number }) {
+  return (
+    <div className="flex gap-0.5" aria-label={`${rating} out of 5`}>
+      {Array.from({ length: 5 }, (_, s) => (
+        <Star
+          key={s}
+          aria-hidden
+          className={
+            s < rating ? "h-4 w-4 fill-brand text-brand" : "h-4 w-4 text-sand"
+          }
+          strokeWidth={1.2}
+        />
+      ))}
+    </div>
+  );
+}
+
 export function Testimonials({ lang = "en" }: { lang?: Locale }) {
   const tt = homeSections[lang].testimonials;
 
@@ -12,6 +29,12 @@ export function Testimonials({ lang = "en" }: { lang?: Locale }) {
   // are none, and never alongside the Google link.
   const hasVerified = verifiedTestimonials.length > 0;
   const shown = hasVerified ? verifiedTestimonials : testimonials;
+
+  // One review does not belong in a three-column grid with two empty cells
+  // beside it, so the layout follows the count: a single centred quote, a
+  // pair, or the full three-up grid.
+  const featured = shown.length === 1;
+  const cols = shown.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3";
 
   return (
     <section className="bg-white py-24 sm:py-32">
@@ -23,37 +46,43 @@ export function Testimonials({ lang = "en" }: { lang?: Locale }) {
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid gap-10 md:grid-cols-3">
+        <div
+          className={
+            featured
+              ? "mt-16 flex flex-col items-center gap-16"
+              : `mt-16 grid gap-10 ${cols} ${shown.length === 2 ? "mx-auto max-w-5xl" : ""}`
+          }
+        >
           {shown.map((t, i) => (
-            <Reveal key={`${t.name}-${t.date}`} delay={i * 0.1}>
+            <Reveal
+              key={`${t.name}-${t.date}`}
+              delay={i * 0.1}
+              className={featured ? "w-full max-w-3xl" : undefined}
+            >
               <figure className="flex h-full flex-col items-center text-center">
                 {t.rating ? (
-                  <div
-                    className="flex gap-0.5"
-                    aria-label={`${t.rating} out of 5`}
-                  >
-                    {Array.from({ length: 5 }, (_, s) => (
-                      <Star
-                        key={s}
-                        aria-hidden
-                        className={
-                          s < t.rating!
-                            ? "h-4 w-4 fill-brand text-brand"
-                            : "h-4 w-4 text-sand"
-                        }
-                        strokeWidth={1.2}
-                      />
-                    ))}
-                  </div>
+                  <Stars rating={t.rating} />
                 ) : (
                   <Quote className="h-7 w-7 text-sand" strokeWidth={1.2} />
                 )}
 
-                <blockquote className="font-display mt-6 text-xl font-light leading-relaxed text-ink/85">
-                  “{t.quote}”
+                <blockquote
+                  className={
+                    featured
+                      ? "font-display mt-7 space-y-5 text-xl font-light leading-relaxed text-ink/85 sm:text-2xl"
+                      : "font-display mt-6 text-xl font-light leading-relaxed text-ink/85"
+                  }
+                >
+                  {t.quote.split("\n\n").map((para, p) => (
+                    <p key={p}>
+                      {p === 0 ? "“" : ""}
+                      {para}
+                      {p === t.quote.split("\n\n").length - 1 ? "”" : ""}
+                    </p>
+                  ))}
                 </blockquote>
 
-                <figcaption className="mt-6">
+                <figcaption className="mt-7">
                   <span className="label text-[11px] text-ink">{t.name}</span>
                   <span className="mt-1 block text-xs text-ink/45">
                     {t.source ? `${t.source} · ${t.date}` : t.date}
