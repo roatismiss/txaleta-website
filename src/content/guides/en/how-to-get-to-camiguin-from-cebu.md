@@ -121,7 +121,7 @@ Whichever way you arrive, the island ends the same: green, volcanic, slow, and w
 
 ## What to Do Once You Land
 
-The getting-here is the easy part. The staying is the point. Once you're on the island, the [64-km ring road](/experiences) is a single unhurried loop past cold springs, sunken cemeteries, soda springs, and the white sandbar of White Island. Rent a [scooter](/experiences#rentals), or let a local driver take the wheel.
+The getting-here is the easy part. The staying is the point. Once you're on the island, the [64-km ring road](/experiences) is a single unhurried loop past cold springs, sunken cemeteries, soda springs, and the white sandbar of White Island. Rent a [scooter](/experiences#rentals), or let a local driver take the wheel — our guide to [getting around Camiguin](/guides/getting-around-camiguin) has the rates for both, the public multicabs almost no visitor uses, and the one honest warning about the road after dark.
 
 When you're ready to rest, our [fourteen rooms](/accommodation) sit at the cliff's edge with the sea at eye level. The [Ocean View Glamping](/book?room=ocean-view-glamping) puts a proper bed under canvas above the Bohol Sea; the [Premier Seaview Suite](/book?room=premier-seaview-suite) frames White Island through floor-to-ceiling glass. Mornings begin with *Almusal sa Bahay* — *tsokolate*, *pan de sal con keso de bola*, *garlic adobo*, and Camiguin mango — served by the water in our [Filipino-Spanish kitchen](/dining). It is comfort without pretense: Filipino Heart, Spanish Soul.
 

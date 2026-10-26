@@ -54,7 +54,7 @@ The single most useful thing to understand before you plan anything.
 | **East (Mahinog)** | Mantigue Island, Benoni port, Taguines Lagoon | One morning, boat-dependent |
 | **South (Guinsiliban / Sagay)** | Cantaan Giant Clam Sanctuary, the quietest coast | Add to the Mantigue day |
 
-Base yourself on the north-west coast and everything above is a day trip. We break the coasts down properly in [where to stay in Camiguin](/guides/where-to-stay-in-camiguin).
+Base yourself on the north-west coast and everything above is a day trip. We break the coasts down properly in [where to stay in Camiguin](/guides/where-to-stay-in-camiguin), and how you actually reach each of these — scooter, SUV with a driver, multicab or tricycle, on an island with no ride-hailing at all — is in [getting around Camiguin](/guides/getting-around-camiguin).
 
 ---
 

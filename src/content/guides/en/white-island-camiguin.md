@@ -62,7 +62,7 @@ The shape also changes across the year — the monsoon seasons redistribute the 
 
 ## Getting there: the practical detail
 
-**The jump-off** is at **Yumbing**, a barangay on Mambajao's north-west coast, where the bancas are drawn up on the beach. Agoho, next door, also runs boats. If you're staying anywhere along this coast you're five to fifteen minutes from the departure point — one more reason the north-west coast is where you want to sleep, which we cover in [where to stay in Camiguin](/guides/where-to-stay-in-camiguin).
+**The jump-off** is at **Yumbing**, a barangay on Mambajao's north-west coast, where the bancas are drawn up on the beach. Getting yourself there before dawn is the one piece of logistics worth sorting the night before — there is no ride-hailing on this island, as [our transport guide](/guides/getting-around-camiguin) explains. Agoho, next door, also runs boats. If you're staying anywhere along this coast you're five to fifteen minutes from the departure point — one more reason the north-west coast is where you want to sleep, which we cover in [where to stay in Camiguin](/guides/where-to-stay-in-camiguin).
 
 **The crossing** takes 10–15 minutes in an outrigger. It is not walkable and not swimmable — the channel is deep and there's boat traffic.
 
@@ -103,7 +103,7 @@ If you want the full day on the water, **[Mantigue Island](/guides/mantigue-isla
 
 ## The honest bit
 
-**White Island is a sandbar.** It is beautiful, and it is also small, bare and quickly seen. People who arrive expecting an island with things on it are briefly puzzled. People who arrive at sunrise expecting an hour of extraordinary light on an empty spit of sand in the middle of the sea leave delighted. Set the right expectation and it delivers completely.
+**White Island is a sandbar.** It is beautiful, and it is also small, bare and quickly seen. A sandbar is its own category of beach — tide-dependent, shadeless, two hours rather than a day — and we sort it against the walk-out strips and offshore islands in [the best beaches in the Philippines](/guides/best-beaches-in-the-philippines). People who arrive expecting an island with things on it are briefly puzzled. People who arrive at sunrise expecting an hour of extraordinary light on an empty spit of sand in the middle of the sea leave delighted. Set the right expectation and it delivers completely.
 
 **It is not a snorkelling destination in itself.** The water around it is clear and shallow and pleasant, but the reef life is better at the Giant Clam Sanctuary and considerably better at Mantigue. Go to White Island for the place and the light, not the fish.
 

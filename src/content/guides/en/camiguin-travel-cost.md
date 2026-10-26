@@ -89,7 +89,7 @@ Two things worth checking before you compare prices: **is breakfast included** (
 | Private multicab (up to 8 people) | ~₱1,700 |
 | Jet ski | ₱7,000 / 3 hrs (+₱1,500 per extra hour) |
 
-**There is no Grab or ride-hailing on Camiguin.** Budget for a scooter, a resort transfer or a tricycle — not an app.
+**There is no Grab or ride-hailing on Camiguin.** Budget for a scooter, a resort transfer or a tricycle — not an app. Which of those actually suits your trip, and what the roads are like at night, is the whole subject of [our guide to moving around the island](/guides/getting-around-camiguin).
 
 For most couples, a scooter for two days (₱900 total) covers the entire island. That is the single best value on this list.
 

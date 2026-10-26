@@ -124,6 +124,23 @@ from all five older guides.
 | **Jan 2027** | What to Pack for Camiguin · Camiguin for Digital Nomads | Q1 review: prune or merge anything with zero impressions after 90 days |
 | **Feb 2027** | Weddings & Elopements at Txaleta · Camiguin vs Bohol | Full-library refresh pass; roll 2026 titles to 2027 |
 
+**Actual output has run ahead of this table.** By October 2026 the library holds 31 English guides,
+including every article listed above for Sep–Dec plus four island comparisons, three Philippines-level
+pillars and a food cluster. The two added in **October 2026** came off the backlog below rather than the
+table above:
+
+- **`getting-around-camiguin`** — "how to get around Camiguin". The last practical gap in the Camiguin
+  cluster: the ring road, scooter/SUV/driver rates, multicabs, tricycles, habal-habal, the two ports, and
+  the honest warning about an unlit road at night. Required demoting a colliding section and FAQ in
+  `camiguin-itinerary` (§6).
+- **`best-beaches-in-the-philippines`** — "best beaches in the Philippines". Top-of-funnel volume, built on
+  a four-category frame (walk-out strips, offshore islands, sandbars, surf coasts) that lets the honest
+  black-sand admission do the converting. Feeds `best-islands-in-the-philippines`.
+
+**Note on the "best places to visit in Camiguin" / "what to do in Camiguin" idea:** already owned by
+`things-to-do-in-camiguin`, which targets both as keywords. A second page on either is a §6 collision, not
+a new article.
+
 **Further backlog** if the cadence stays at 2/week: Camiguin from Manila · Camiguin from Cagayan
 de Oro · the 64km ring road self-drive guide · Camiguin in 2 days · solo travel in Camiguin ·
 Camiguin for seniors/accessibility · the Walkway to the Old Volcano · Camiguin's beaches ranked ·

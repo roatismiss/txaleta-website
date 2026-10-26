@@ -124,7 +124,9 @@ We keep prices transparent so you can plan before you arrive. These are the real
 | Private banca to White Island + Giant Clam Sanctuary | arranged on request |
 | Guided Mt. Hibok-Hibok ascent | arranged on request |
 
-The most romantic way to take the island is the slowest: rent a scooter, ride the sixty-four-kilometre ring road, and stop wherever the light is good. Everything you need is on our [experiences page](/experiences#rentals), and our hosts will tailor any of it to how you like to travel.
+The most romantic way to take the island is the slowest: rent a scooter, ride the sixty-four-kilometre ring road, and stop wherever the light is good. Everything you need is on our [experiences page](/experiences#rentals), and [what each option costs to drive](/guides/getting-around-camiguin) — scooter, SUV, driver, or the multicabs nobody tells you about — is set out in full elsewhere.
+
+One honest note for anyone choosing an island on the strength of its sand: ours is dark volcanic grey on the mainland, and the white is offshore. If that is the deciding factor, read [which Philippine beaches are actually worth flying for](/guides/best-beaches-in-the-philippines) before you book anywhere.
 
 ## Where to base yourself: a clifftop home in Mambajao
 

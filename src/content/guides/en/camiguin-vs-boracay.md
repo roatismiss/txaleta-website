@@ -124,7 +124,7 @@ A small but genuinely common mix-up, so we'll settle it here.
 
 **Camiguin's "White Island"** is a bare sandbar off our own coast, with no trees and no buildings, that appears and shifts with the tide. Different island, different ocean, and not even the same *kind* of place — one is a beach you walk along, the other is a spit of sand you reach by boat and that is sometimes mostly underwater.
 
-If a search engine or a friend's photo has you confused about which is which, our own [White Island guide](/guides/white-island-camiguin) covers ours in full — boat fares, timing, what to bring.
+If a search engine or a friend's photo has you confused about which is which, our own [White Island guide](/guides/white-island-camiguin) covers ours in full — boat fares, timing, what to bring. And if you are still deciding which sand you actually want, we sort the whole country into four kinds of beach in [the best beaches in the Philippines](/guides/best-beaches-in-the-philippines).
 
 ## So which should you pick?
 

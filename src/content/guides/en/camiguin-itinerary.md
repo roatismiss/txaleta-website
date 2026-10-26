@@ -111,15 +111,11 @@ Spend the warm middle of the day here. Swim, snorkel the drop-off, lie under the
 
 Today you drive the island. The **64-kilometre ring road** circles all of Camiguin and can be driven non-stop in about an hour — but you will not drive it non-stop, because the whole point is what you stop for. Take a full, unhurried day.
 
-### How you'll get around (and what it costs)
+### What you'll be driving today
 
-You have options, and we arrange any of them at the front desk:
+A **scooter (PHP 450/day)** if you ride confidently, or an **SUV/AUV (PHP 2,850/day, plus PHP 1,000/day for a local driver)** if you have children, luggage, or an afternoon of green-season rain ahead of you. We arrange either at the front desk — see the [experiences and rentals page](/experiences#rentals) for rates.
 
-- **Scooter — PHP 450/day.** The classic Camiguin way. The roads are quiet and in good condition, the island is small, and a scooter gives you total freedom. Our pick for confident riders.
-- **SUV / AUV — PHP 2,850/day** (or PHP 1,500 for a half day). Cooler, drier when the afternoon rain comes, and roomier for families or couples with gear. Add a **local driver for PHP 1,000/day** and you simply look out the window — which, on the ring road, is the whole pleasure.
-- **Jet ski — PHP 7,000 for 3 hours** (+PHP 1,500 per extra hour), if you would rather take to the water.
-
-See everything on our [experiences and rentals page](/experiences#rentals). Whatever you choose, the loop below works in either direction; we will tell you which way to go based on the day's light and tide.
+Everything else about moving around this island — public multicabs, tricycles, habal-habal, fuel, licences, and the honest truth about the unlit road at night — is in our dedicated guide to [getting around Camiguin](/guides/getting-around-camiguin). Whatever you choose, the loop below works in either direction; we will tell you which way to go based on the day's light and tide.
 
 ### The stops, in order
 
@@ -199,8 +195,8 @@ Yes. Three full days is the sweet spot for a first visit and comfortably covers 
 ### What does this itinerary actually cover?
 Day 1 arrival, the infinity pool and a sunset kayak at the Sunken Cemetery; Day 2 the sea — White Island at sunrise, the Giant Clam Sanctuary and Mantigue Island; Day 3 the ring road — Katibawasan Falls, Sto. Niño Cold Spring, the Bura soda pool, Ardent Hot Springs and the Gui-ob Church Ruins. Our full list of [25 things to do in Camiguin](/guides/things-to-do-in-camiguin) covers everything else the island holds.
 
-### How do you get around Camiguin?
-The 64-kilometre ring road circles the whole island in about an hour, so most travellers rent a scooter (PHP 450/day) or an SUV/AUV (PHP 2,850/day, or PHP 1,500 half day, plus PHP 1,000/day for a local driver). A jet ski (PHP 7,000 for 3 hours) is an option for the coast. We arrange any of these at the resort.
+### Which vehicle suits this three-day itinerary?
+A scooter (PHP 450/day) for two confident riders, or an SUV/AUV (PHP 2,850/day, plus PHP 1,000/day for a local driver) for families, luggage or the green season — the Day 3 ring-road loop works either way, and we arrange both at the resort. Fares for multicabs, tricycles and habal-habal, plus the caveats about driving after dark, are in our guide to [getting around Camiguin](/guides/getting-around-camiguin).
 
 ### Where should you base yourself for this itinerary?
 Base yourself in Mambajao, the island's main town and natural midpoint — it puts White Island, the airport, the Sunken Cemetery, and the ring road all within easy reach, so you never need to change hotels. Txaleta de Camiguin is a fourteen-room boutique resort on a Mambajao clifftop with an infinity pool over the Bohol Sea, ocean-view rooms, and breakfast by the water.
@@ -328,10 +324,10 @@ Come for the views. Stay for the feeling. Welcome home.
         },
         {
           "@type": "Question",
-          "name": "How do you get around Camiguin?",
+          "name": "Which vehicle suits this three-day itinerary?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The 64-kilometre ring road circles the whole island in about an hour, so most travellers rent a scooter (PHP 450/day) or an SUV/AUV (PHP 2,850/day, or PHP 1,500 half day, plus PHP 1,000/day for a local driver). A jet ski (PHP 7,000 for 3 hours) is an option for the coast. Txaleta de Camiguin arranges any of these at the resort."
+            "text": "A scooter (PHP 450/day) for two confident riders, or an SUV/AUV (PHP 2,850/day, plus PHP 1,000/day for a local driver) for families, luggage or the green season. The Day 3 ring-road loop works either way, and Txaleta de Camiguin arranges both at the resort. Fares for multicabs, tricycles and habal-habal, plus the caveats about driving after dark, are covered in the dedicated guide to getting around Camiguin."
           }
         },
         {
