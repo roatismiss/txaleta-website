@@ -137,6 +137,33 @@ table above:
   a four-category frame (walk-out strips, offshore islands, sandbars, surf coasts) that lets the honest
   black-sand admission do the converting. Feeds `best-islands-in-the-philippines`.
 
+Four more followed later in **October 2026**, chosen for AI-answer visibility and local
+intent rather than raw volume:
+
+- **`camiguin-travel-tips`** — ATMs, the SIM-registration rule, tap water, power, medical,
+  what closes on a Sunday. The answer-engine workhorse: every section is a short extractable
+  fact, and almost none of it is published anywhere else.
+- **`mambajao-camiguin`** — the town entity page. Builds out the geo entity the business sits
+  inside (barangay by barangay, the airport, both ports, the market), which is the content
+  side of local-pack and "near me" visibility. Carries `City` schema with the Google-matched pin.
+- **`camiguin-sunset-spots`** — captures "best view in Camiguin" without colliding with
+  `where-to-stay`, because the page is about viewpoints rather than rooms. Signature insight:
+  the sunset azimuth swings about 45° through the year, so the right coast in June is the
+  wrong one in January.
+- **`diving-in-camiguin`** — the last activity gap. Named dive sites (entity density is what
+  the answer engines quote) plus the Scuba de Oro partnership for E-E-A-T.
+
+**On "best restaurants near me" and "best view hotel Mambajao":** these are not won with
+articles. The levers are the Google Business Profile, NAP consistency, the `Resort` /
+`LodgingBusiness` node (already complete, carrying Google's own pin) and real reviews — which
+are blocked behind the placeholder testimonials at §8 P1 item 7. **That item is now the
+highest-value job on this plan**, ahead of any further article.
+
+**Known debt found while auditing §6 compliance (Oct 2026):** twelve FAQ questions are
+duplicated verbatim across older articles — "How many days do you need in Camiguin?" appears
+on four pages, "Is Camiguin worth visiting?" on three — each one mirrored into its own
+`FAQPage` schema. None of the 2026 articles are involved. Worth one cleanup pass.
+
 **Note on the "best places to visit in Camiguin" / "what to do in Camiguin" idea:** already owned by
 `things-to-do-in-camiguin`, which targets both as keywords. A second page on either is a §6 collision, not
 a new article.

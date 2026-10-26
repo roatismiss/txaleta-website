@@ -88,7 +88,7 @@ Easy to combine with Mantigue on the same boat day.
 
 Above the water it's a landmark (see #10). Below it, it's a hard-coral garden grown over a town the sea took in the nineteenth century, with the cross above as your marker. Quiet, strange, and completely unlike any other dive site we know.
 
-Camiguin's diving is uncrowded rather than world-famous — the **Jicco / Old Volcano** lava wall and the Mantigue sanctuary round it out. We work with **Scuba de Oro** and send divers their way; more on our local partners on the [community page](/community).
+Camiguin's diving is uncrowded rather than world-famous — the **Jicco / Old Volcano** lava wall, Jigdup Shoal and the Mantigue sanctuary round it out, with Burias Shoal for experienced divers only. Every site, and an honest comparison against Bohol and Siquijor, is in our [guide to diving in Camiguin](/guides/diving-in-camiguin). We work with **Scuba de Oro** and send divers their way; more on our local partners on the [community page](/community).
 
 **Worth:** a half-day if you dive; twenty minutes of snorkelling if you don't.
 
@@ -204,7 +204,7 @@ Once a year, in the second half of October, Mambajao stops being a sleepy capita
 
 ### 21. Mambajao town and the public market
 
-The island's capital: small, tidy, and the place to buy fruit, meet people who aren't in hospitality, and see what an ordinary Tuesday looks like here. The market is the best of it. Bring cash — ATMs are few.
+The island's capital: small, tidy, and the place to buy fruit, meet people who aren't in hospitality, and see what an ordinary Tuesday looks like here. The market is the best of it. Bring cash — ATMs are few. Our [guide to Mambajao](/guides/mambajao-camiguin) breaks the town and its barangays down properly, and the [practical page](/guides/camiguin-travel-tips) covers the money, SIM and water questions.
 
 **Worth:** an hour, and more if you like markets.
 
@@ -226,7 +226,7 @@ Sea glass jewellery made from glass the tides have worn smooth over decades. Rel
 
 ### 24. Stargazing
 
-Camiguin has very little light pollution, and on a clear night the sky over the Bohol Sea is the thing guests message us about months later. We put a telescope on the cliff for exactly this reason. Our *Tahimik Nights* — a tech-free evening of oil lamps, stars and local stories — is built around it.
+Camiguin has very little light pollution, and on a clear night the sky over the Bohol Sea is the thing guests message us about months later. It is the second half of a good evening here — where to watch the first half is in our guide to [Camiguin's sunset spots](/guides/camiguin-sunset-spots). We put a telescope on the cliff for exactly this reason. Our *Tahimik Nights* — a tech-free evening of oil lamps, stars and local stories — is built around it.
 
 **Worth:** one clear night. You'll want two.
 

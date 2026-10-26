@@ -172,7 +172,7 @@ Excluding the flight. Assumes two people sharing a scooter and a boat.
 
 ## What people forget to budget for
 
-1. **ATMs.** There are few on Camiguin and they run out of cash, especially at weekends and during festival week. Bring pesos with you from Cebu. This is the single most common practical mistake visitors make.
+1. **ATMs.** There are few on Camiguin and they run out of cash, especially at weekends and during festival week. Bring pesos with you from Cebu. This is the single most common practical mistake visitors make — along with the SIM-card rule and the tap water, both covered in our [practical guide to the island](/guides/camiguin-travel-tips).
 2. **The airport transfer.** Ask whether it's included before you compare room rates.
 3. **The 5% service charge** on resort dining.
 4. **Guide and permit fees** for Hibok-Hibok and protected-area birding — not large, but not zero, and easy to overlook.

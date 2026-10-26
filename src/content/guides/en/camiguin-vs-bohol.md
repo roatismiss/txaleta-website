@@ -159,8 +159,8 @@ It is a good alternative if what you did not like about Bohol was the crowds, th
 ### Which is cheaper, Camiguin or Bohol?
 Camiguin, across rooms, food, transport and entrance fees. Camiguin's attractions cost tens of pesos and its accommodation is mostly small family-run properties. Panglao in particular is priced as a developed beach destination.
 
-### Does Camiguin have white sand beaches?
-Not on the mainland — the island's own sand is black volcanic sand. The white sand is offshore, at the White Island sandbar and at Mantigue Island, both reached by a short boat ride. If you want white sand directly outside your room, Panglao in Bohol is the better choice.
+### Is Camiguin's sand like Panglao's?
+No, and this is the clearest physical difference between the two. Panglao is a limestone island with white sand you walk onto from your room; Camiguin is volcanic, and the mainland sand is black. The white sand is offshore, at the White Island sandbar and at Mantigue Island, both reached by a short boat ride. If you want white sand directly outside your room, Panglao in Bohol is the better choice.
 
 ### How many days do you need in Bohol and Camiguin?
 Four to five days for Bohol, three to four for Camiguin, so ten to twelve days including the ferry day gives you both without rushing. With only a week, choose one rather than splitting it.
@@ -258,8 +258,8 @@ Come for the quiet. Stay for the feeling. Welcome home.
         },
         {
           "@type": "Question",
-          "name": "Does Camiguin have white sand beaches?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Not on the mainland. The island's own sand is black volcanic sand. The white sand is offshore, at the White Island sandbar and at Mantigue Island, both reached by a short boat ride. If you want white sand directly outside your room, Panglao in Bohol is the better choice." }
+          "name": "Is Camiguin's sand like Panglao's?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No, and this is the clearest physical difference between the two. Panglao is a limestone island with white sand you walk onto from your room; Camiguin is volcanic, and the mainland sand is black. The white sand is offshore, at the White Island sandbar and at Mantigue Island, both reached by a short boat ride. If you want white sand directly outside your room, Panglao in Bohol is the better choice." }
         },
         {
           "@type": "Question",

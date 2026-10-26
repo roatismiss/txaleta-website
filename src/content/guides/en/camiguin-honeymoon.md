@@ -97,7 +97,7 @@ Evening: **Tahimik Nights.** Camiguin has very little light pollution, and on a 
 
 ### Day 3 — The island, slowly
 
-Take the ring road. A scooter if you both like that, an SUV with a driver if you'd rather watch.
+Take the ring road. A scooter if you both like that, an SUV with a driver if you'd rather watch. Time the end of it for the west coast — [where to watch the sunset in Camiguin](/guides/camiguin-sunset-spots) explains why the Sunken Cemetery shore beats every paid view on the island.
 
 **Katibawasan Falls** in the morning, before anyone else — seventy metres of water into a cold, clear pool. **Sto. Niño Cold Spring** through the heat. The **Gui-ob Church Ruins** and the **Sunken Cemetery** in the late afternoon, when the light comes sideways through the empty windows.
 

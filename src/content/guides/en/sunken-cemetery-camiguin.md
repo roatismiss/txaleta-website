@@ -67,7 +67,7 @@ A few minutes away stand the roofless remains of the **Gui-ob Church** — also 
 
 **What's left:** thick walls of coral stone and lime, scoured by lava and open to the sky, with the bell tower's stump and the outline of the nave still legible. Vines are taking the stonework back. There's no roof, so the whole interior is lit by whatever the sky is doing.
 
-**Why go at the end of the day:** at sunset the light comes sideways through the empty window openings and the site goes very quiet. It's the most atmospheric half-hour on Camiguin, and it costs nothing.
+**Why go at the end of the day:** at sunset the light comes sideways through the empty window openings and the site goes very quiet. It's the most atmospheric half-hour on Camiguin, and it costs nothing. It is also the one sunset on this island that works in every month of the year, for reasons of simple astronomy we set out in [where to watch the sunset in Camiguin](/guides/camiguin-sunset-spots).
 
 **Do both together.** The cross and the ruins are two halves of the same story — the sea took one, the fire took the other, both in the same event. Seeing them separately halves the effect.
 

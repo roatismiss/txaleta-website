@@ -49,6 +49,8 @@ Everything else is detail. Useful detail, but detail.
 
 ## Camiguin's areas at a glance
 
+Five of the six areas below sit inside one municipality — Mambajao — which is where the airport, the port, the market and most of the island's accommodation are. If the names in this table are new to you, [our guide to Mambajao](/guides/mambajao-camiguin) explains what each barangay actually is.
+
 | Area | What it is | Best for | Trade-off |
 |---|---|---|---|
 | **Agoho / Yumbing / Bug-ong** (NW Mambajao) | The resort strip: beach front, restaurants, dive shops, White Island boats | First-timers, families, anyone without a car | Busiest stretch on the island — which here still means quiet |

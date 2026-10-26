@@ -114,7 +114,7 @@ So: **Siquijor wins on convenience of white-sand beaches.** Camiguin wins on dra
 
 Divers, we'll be straight with you: **Siquijor has the better access.** Its real draw underwater is the day trip to **Apo Island** — pristine, protected, turtle-rich — and the famous muck diving off Dumaguete a short hop away. For sheer variety and big-name sites, Siquijor's location is hard to beat.
 
-Camiguin's diving is quieter and more intimate. The **Sunken Cemetery** is a genuinely special dive and snorkel — a hard-coral garden grown over the graves that sank in the nineteenth century, with the cross above as your marker. There's the **Jicco / Old Volcano** lava wall and the **Mantigue** marine sanctuary. You won't share the water with many people, and that solitude is its own reward. But if ticking off world-class sites is your mission, we'll tip our hat to Siquijor and Apo Island.
+Camiguin's diving is quieter and more intimate. The **Sunken Cemetery** is a genuinely special dive and snorkel — a hard-coral garden grown over the graves that sank in the nineteenth century, with the cross above as your marker. There's the **Jicco / Old Volcano** lava wall and the **Mantigue** marine sanctuary. You won't share the water with many people, and that solitude is its own reward. But if ticking off world-class sites is your mission, we'll tip our hat to Siquijor and Apo Island. Every Camiguin site, including Jigdup Shoal, the Black Forest coral slope and Burias Shoal for experienced divers, is in our [guide to diving in Camiguin](/guides/diving-in-camiguin).
 
 ## How many days in each — and can you do both?
 

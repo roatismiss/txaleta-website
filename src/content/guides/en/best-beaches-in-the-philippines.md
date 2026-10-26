@@ -172,8 +172,8 @@ Boracay for a single famous strip, Bantayan in northern Cebu for shallow turquoi
 ### What is the best sandbar in the Philippines?
 Kalanggaman Island off Palompon in Leyte, by most accounts, with long curving spits at either end of a tiny palm-covered island. Visitor numbers are capped and advance registration through the municipal ecotourism office is required. White Island in Camiguin, Naked Island in Siargao and the Manjuyod bar off Bais are the other standouts.
 
-### Does Camiguin have white sand beaches?
-Camiguin's mainland sand is dark volcanic grey — the island is young and volcanic, and that is simply what the sand is. The white sand is offshore at the White Island sandbar, ten minutes by boat from Yumbing, and on the small beach at Mantigue Island off the east coast. It is the first thing we tell people who are booking primarily for sand.
+### Are all Philippine beaches white sand?
+No, and assuming so is the most common booking mistake in the country. Volcanic islands — Camiguin, parts of Negros and Albay, the ash coves of Zambales — have grey or black sand, while the famous white strips are mostly on limestone and coral coasts like Boracay, Bantayan and Palawan. Check which geology you have booked before you picture the beach.
 
 ### Are the beaches in Siargao good for swimming?
 Mostly not, and this is the most common misunderstanding about the island. Cloud 9 is a reef break reached by a boardwalk over coral — a surf and spectating spot rather than a swimming beach. The sandy swimming on Siargao happens on the island-hopping day out at Daku, Naked and Guyam islands.
@@ -272,8 +272,8 @@ Come for the sandbar at sunrise. Stay for the rest of it. Welcome home.
         },
         {
           "@type": "Question",
-          "name": "Does Camiguin have white sand beaches?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Camiguin's mainland sand is dark volcanic grey — the island is young and volcanic, and that is simply what the sand is. The white sand is offshore at the White Island sandbar, ten minutes by boat from Yumbing, and on the small beach at Mantigue Island off the east coast. It is the first thing we tell people who are booking primarily for sand." }
+          "name": "Are all Philippine beaches white sand?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No, and assuming so is the most common booking mistake in the country. Volcanic islands — Camiguin, parts of Negros and Albay, the ash coves of Zambales — have grey or black sand, while the famous white strips are mostly on limestone and coral coasts like Boracay, Bantayan and Palawan. Check which geology you have booked before you picture the beach." }
         },
         {
           "@type": "Question",
