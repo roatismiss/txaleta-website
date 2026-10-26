@@ -597,6 +597,26 @@ export const testimonials: Testimonial[] = [
     verified: true,
   },
   {
+    // The only one whose star count is certain rather than inferred — Victor
+    // typed five stars into the body of the review.
+    quote:
+      "The rooms are spotless, cozy, and the sound of the waves gently lulls you to sleep each night. Waking up with the sea right in front of you is simply unforgettable.",
+    name: "Victor",
+    date: "June 2026",
+    source: "Google",
+    rating: 5,
+    verified: true,
+  },
+  {
+    quote:
+      "The food was great, and we especially loved the island hopping and fishing activities—definitely the highlights of our trip!",
+    name: "Abby",
+    date: "July 2026",
+    source: "Google",
+    rating: 5,
+    verified: true,
+  },
+  {
     quote:
       "The most peaceful stay we've had in the Philippines. The seaview suite woke us up to the ocean every single morning.",
     name: "Chris",

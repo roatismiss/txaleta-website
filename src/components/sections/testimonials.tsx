@@ -30,11 +30,14 @@ export function Testimonials({ lang = "en" }: { lang?: Locale }) {
   const hasVerified = verifiedTestimonials.length > 0;
   const shown = hasVerified ? verifiedTestimonials : testimonials;
 
-  // One review does not belong in a three-column grid with two empty cells
-  // beside it, so the layout follows the count: a single centred quote, a
-  // pair, or the full three-up grid.
-  const featured = shown.length === 1;
-  const cols = shown.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3";
+  // The layout follows the count so a row is never left with an orphan: one
+  // review renders as a single centred quote, four as a 2×2, and anything
+  // divisible by three as the full three-up grid. Five falls back to 3+2,
+  // which is the least bad option for an awkward number.
+  const n = shown.length;
+  const featured = n === 1;
+  const twoUp = n % 3 !== 0 && n % 2 === 0;
+  const cols = twoUp ? "md:grid-cols-2" : "md:grid-cols-3";
 
   return (
     <section className="bg-white py-24 sm:py-32">
@@ -50,7 +53,7 @@ export function Testimonials({ lang = "en" }: { lang?: Locale }) {
           className={
             featured
               ? "mt-16 flex flex-col items-center gap-16"
-              : `mt-16 grid gap-10 ${cols} ${shown.length === 2 ? "mx-auto max-w-5xl" : ""}`
+              : `mt-16 grid gap-10 ${cols} ${twoUp ? "mx-auto max-w-5xl" : ""}`
           }
         >
           {shown.map((t, i) => (
