@@ -27,7 +27,7 @@ export type SectionsDict = {
     cta: string;
   };
   gallery: { kicker: string; title: string; cta: string };
-  testimonials: { kicker: string; title: string };
+  testimonials: { kicker: string; title: string; cta: string };
 };
 
 const en: SectionsDict = {
@@ -92,7 +92,11 @@ const en: SectionsDict = {
     cta: "See It in Action",
   },
   gallery: { kicker: "Between Volcano and Sea", title: "The Long Look", cta: "View the Full Gallery" },
-  testimonials: { kicker: "Voices from Puting Balas", title: "What Stayed With Them" },
+  testimonials: {
+    kicker: "Voices from Puting Balas",
+    title: "What Stayed With Them",
+    cta: "Read all reviews on Google",
+  },
 };
 
 const fr: SectionsDict = {
@@ -157,7 +161,11 @@ const fr: SectionsDict = {
     cta: "Voir comment ça marche",
   },
   gallery: { kicker: "Entre volcan et mer", title: "Le long regard", cta: "Voir toute la galerie" },
-  testimonials: { kicker: "Voix de Puting Balas", title: "Ce qu'ils ont gardé en mémoire" },
+  testimonials: {
+    kicker: "Voix de Puting Balas",
+    title: "Ce qu'ils ont gardé en mémoire",
+    cta: "Lire tous les avis sur Google",
+  },
 };
 
 const de: SectionsDict = {
@@ -222,7 +230,11 @@ const de: SectionsDict = {
     cta: "So funktioniert es",
   },
   gallery: { kicker: "Zwischen Vulkan und Meer", title: "Der lange Blick", cta: "Zur ganzen Galerie" },
-  testimonials: { kicker: "Stimmen aus Puting Balas", title: "Was ihnen geblieben ist" },
+  testimonials: {
+    kicker: "Stimmen aus Puting Balas",
+    title: "Was ihnen geblieben ist",
+    cta: "Alle Bewertungen auf Google lesen",
+  },
 };
 
 const ja: SectionsDict = {
@@ -287,7 +299,11 @@ const ja: SectionsDict = {
     cta: "実際の流れを見る",
   },
   gallery: { kicker: "火山と海のあいだ", title: "ながめる時間", cta: "ギャラリーをすべて見る" },
-  testimonials: { kicker: "プティン・バラスからの声", title: "心に残ったもの" },
+  testimonials: {
+    kicker: "プティン・バラスからの声",
+    title: "心に残ったもの",
+    cta: "Googleですべてのクチコミを読む",
+  },
 };
 
 const ko: SectionsDict = {
@@ -352,7 +368,11 @@ const ko: SectionsDict = {
     cta: "실제로 보기",
   },
   gallery: { kicker: "화산과 바다 사이", title: "오래 바라보는 풍경", cta: "갤러리 전체 보기" },
-  testimonials: { kicker: "푸팅 발라스에서 온 목소리", title: "마음에 남은 것들" },
+  testimonials: {
+    kicker: "푸팅 발라스에서 온 목소리",
+    title: "마음에 남은 것들",
+    cta: "Google에서 모든 리뷰 보기",
+  },
 };
 
 const zh: SectionsDict = {
@@ -417,7 +437,11 @@ const zh: SectionsDict = {
     cta: "看看实际体验",
   },
   gallery: { kicker: "火山与海之间", title: "久久凝望", cta: "查看完整图库" },
-  testimonials: { kicker: "来自Puting Balas的声音", title: "留在他们心里的" },
+  testimonials: {
+    kicker: "来自Puting Balas的声音",
+    title: "留在他们心里的",
+    cta: "在 Google 上查看全部评价",
+  },
 };
 
 export const homeSections: Record<Locale, SectionsDict> = { en, fr, de, ja, ko, zh };

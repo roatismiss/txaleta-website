@@ -529,9 +529,46 @@ export const galleryPreview = [
   "/images/resort/txaleta_night_aerial.webp",
 ];
 
-export type Testimonial = { quote: string; name: string; date: string };
+// ============================================================================
+// Guest reviews — shown on the homepage.
+//
+// `verified: true` means this is a real review a real guest left, quoted as
+// they wrote it. Only verified entries render; the unverified ones below are
+// placeholder copy kept purely so the homepage is not missing a section, and
+// they disappear the moment the first real review is added.
+//
+// The "read all reviews on Google" link only appears once at least one entry
+// is verified — a link to our Google profile sitting under invented quotes
+// would imply they came from there, which is the one thing we will not do.
+//
+// IMPORTANT, and the reason this is hand-curated rather than pulled from an
+// API: these quotes are NOT marked up as `Review` / `AggregateRating` schema,
+// and should not be. Google has not shown review snippets for self-serving
+// reviews — reviews about us, hosted by us — on `LocalBusiness` or
+// `Organization` since 2019, and that explicitly includes reviews injected by
+// a third-party widget. The stars we get in search come from the Google
+// Business Profile, not from this file. These exist to convince readers and to
+// give the AI answer engines something real to quote.
+//
+// Quotes stay in the language the guest wrote them in and are never
+// translated (see locales/content/home-sections.ts).
+// ============================================================================
+export type Testimonial = {
+  quote: string;
+  /** As the guest signs it. First name is enough and is what reviews show. */
+  name: string;
+  /** Free text, e.g. "March 2026" — the month the review was left. */
+  date: string;
+  /** Where the guest left it. Drives the attribution line. */
+  source?: "Google" | "Booking.com" | "Agoda" | "Facebook" | "Direct";
+  /** Stars the guest gave, 1–5. Displayed for readers, never marked up. */
+  rating?: number;
+  /** Deep link to the review itself, where the platform provides one. */
+  url?: string;
+  /** True only for a real, attributable review. Gates rendering. */
+  verified?: boolean;
+};
 
-// PLACEHOLDER reviews — swap with real Google / Facebook guest reviews.
 export const testimonials: Testimonial[] = [
   {
     quote:
@@ -552,6 +589,9 @@ export const testimonials: Testimonial[] = [
     date: "April 2025",
   },
 ];
+
+/** The real ones, if any. Empty until the first verified review lands. */
+export const verifiedTestimonials = testimonials.filter((t) => t.verified);
 
 // ============================================================================
 // Brand pillars — the five core ideas from the brand book (txaleta_branding.pdf).

@@ -311,9 +311,35 @@ article. Convert to WebP (or AVIF) — typically a 60–80% size cut and a direc
 the strongest available E-E-A-T signal and costs one page. Add `/about/authors`, reference it from
 each article's JSON-LD `author`.
 
-**7. Placeholder testimonials.** `src/lib/site.ts:452` is explicitly marked PLACEHOLDER. Real
-Google reviews should replace them before any `Review`/`AggregateRating` schema is added —
-marking up invented reviews is a manual-action risk, not a shortcut.
+**7. Placeholder testimonials — and a correction to what this item used to say.**
+The three homepage quotes were invented. `testimonials` in `src/lib/site.ts` now carries a
+`verified` flag, only verified entries render, and the "read all reviews on Google" link
+appears only once one exists — so the placeholders vanish the moment a real review is added
+and we never imply invented praise came from Google.
+
+**This item previously said to add `Review`/`AggregateRating` schema once the reviews were
+real. Do not.** Google has not shown review snippets for *self-serving* reviews — reviews
+about us, hosted by us — on `LocalBusiness` or `Organization` since September 2019, and that
+explicitly includes reviews injected by a third-party widget, because embedding one still
+means we control the process. It is not a manual-action risk; it simply produces nothing.
+The stars we get in search come from the Google Business Profile. The reviews on this site
+exist to convince readers and to give the AI answer engines something real to quote.
+
+**A second distinction worth keeping straight, because it decides where effort goes:**
+
+| Goal | What moves it |
+|---|---|
+| Conversion, and being quoted by ChatGPT / AI Overviews | Reviews **displayed on this site** |
+| Local pack — "near me", "hotels in Mambajao" | Reviews **collected on Google**: count, recency, and the words guests use in them |
+
+Displaying reviews does nothing for the second row. Collecting them is a separate, higher-value
+project: the GBP short review link in the post-stay email, asked for at checkout.
+
+**Not the Places API.** It returns a maximum of 5 reviews, needs billing, and its policy
+forbids caching or storing Places content beyond narrow exceptions (the place ID indefinitely,
+lat/lng for 30 days) — which rules out baking review text into a statically prerendered page.
+Hand-curated quotes we have permission to use are ours to keep, and they sit in the HTML
+permanently where the answer engines can read them.
 
 ### P2 — this quarter
 
