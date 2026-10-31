@@ -16,6 +16,7 @@ import { JsonLd } from "@/components/json-ld";
 import { localePath, localeTags, defaultLocale, type Locale } from "@/lib/i18n";
 import { Kicker } from "@/components/reveal";
 import { GuideArticle } from "@/components/guide-article";
+import { GuideToc } from "@/components/guide-toc";
 import { PaperGrain, PalmCorner, RattanWeave } from "@/components/brand-texture";
 
 export const dynamicParams = false;
@@ -24,14 +25,14 @@ export const dynamicParams = false;
 // locales/ui.ts) because it is specific to a guide page.
 const CHROME: Record<
   Locale,
-  { prev: string; next: string; back: string; kicker: string; byline: string; updated: string; minRead: string; readAlso: string; home: string; guides: string; ctaHeading: string; ctaBody: string; ctaButton: string; or: string }
+  { prev: string; next: string; back: string; kicker: string; byline: string; updated: string; minRead: string; readAlso: string; home: string; guides: string; ctaHeading: string; ctaBody: string; ctaButton: string; or: string; toc: string }
 > = {
-  en: { prev: "Previous guide", next: "Next guide", back: "All guides", kicker: "Camiguin Travel Guide", byline: "By the family at", updated: "Updated", minRead: "min read", readAlso: "Read also", home: "Home", guides: "Guides", ctaHeading: "Come home to Camiguin", ctaBody: "Fourteen ocean-view rooms on a Mambajao clifftop, an infinity pool over the Bohol Sea, and hosts who arrange everything from your airport pickup to your banca to White Island.", ctaButton: "Book your stay direct", or: "Or message us on" },
-  fr: { prev: "Guide précédent", next: "Guide suivant", back: "Tous les guides", kicker: "Guide de voyage Camiguin", byline: "Par la famille de", updated: "Mis à jour", minRead: "min de lecture", readAlso: "À lire aussi", home: "Accueil", guides: "Guides", ctaHeading: "Rentrez à la maison, à Camiguin", ctaBody: "Quatorze chambres avec vue sur l'océan sur une falaise de Mambajao, une piscine à débordement au-dessus de la mer de Bohol, et des hôtes qui organisent tout, de votre transfert depuis l'aéroport à votre banca vers White Island.", ctaButton: "Réservez en direct", or: "Ou écrivez-nous sur" },
-  de: { prev: "Vorheriger Guide", next: "Nächster Guide", back: "Alle Reiseführer", kicker: "Camiguin Reiseführer", byline: "Von der Familie im", updated: "Aktualisiert", minRead: "Min. Lesezeit", readAlso: "Auch lesenswert", home: "Startseite", guides: "Reiseführer", ctaHeading: "Kommen Sie heim nach Camiguin", ctaBody: "Vierzehn Zimmer mit Meerblick auf einer Klippe in Mambajao, ein Infinity-Pool über der Bohol-See und Gastgeber, die alles arrangieren — vom Flughafentransfer bis zur Banca nach White Island.", ctaButton: "Direkt buchen", or: "Oder schreiben Sie uns auf" },
-  ja: { prev: "前のガイド", next: "次のガイド", back: "ガイド一覧", kicker: "カミギン旅行ガイド", byline: "書き手：", updated: "更新", minRead: "分で読めます", readAlso: "あわせて読みたい", home: "ホーム", guides: "ガイド", ctaHeading: "カミギンへ、おかえりなさい", ctaBody: "マンバハオの崖の上に海を望む14室、ボホール海へ流れ込むようなインフィニティプール、そして空港送迎からホワイトアイランドへのバンカ船まで手配するホストがお待ちしています。", ctaButton: "公式サイトから予約する", or: "またはこちらからご連絡ください：" },
-  ko: { prev: "이전 가이드", next: "다음 가이드", back: "가이드 전체보기", kicker: "카미긴 여행 가이드", byline: "글쓴이:", updated: "업데이트", minRead: "분 소요", readAlso: "함께 읽기", home: "홈", guides: "가이드", ctaHeading: "카미긴으로 돌아오세요", ctaBody: "맘바하오 절벽 위 바다 전망 객실 14개, 보홀해로 이어지는 인피니티 풀, 그리고 공항 픽업부터 화이트 아일랜드행 방카까지 모두 준비해 드리는 호스트가 있습니다.", ctaButton: "공식 홈페이지에서 예약하기", or: "또는 이곳으로 연락 주세요:" },
-  zh: { prev: "上一篇攻略", next: "下一篇攻略", back: "全部攻略", kicker: "卡米金旅行攻略", byline: "作者：", updated: "更新于", minRead: "分钟阅读", readAlso: "延伸阅读", home: "首页", guides: "攻略", ctaHeading: "回家吧，回卡米金", ctaBody: "曼巴豪悬崖之上的十四间海景客房，一座仿佛流入保和海的无边泳池，以及从机场接送到前往白岛的螃蟹船都为你安排妥当的主人。", ctaButton: "官网直接预订", or: "或通过以下方式联系我们：" },
+  en: { toc: "In this guide", prev: "Previous guide", next: "Next guide", back: "All guides", kicker: "Camiguin Travel Guide", byline: "By the family at", updated: "Updated", minRead: "min read", readAlso: "Read also", home: "Home", guides: "Guides", ctaHeading: "Come home to Camiguin", ctaBody: "Fourteen ocean-view rooms on a Mambajao clifftop, an infinity pool over the Bohol Sea, and hosts who arrange everything from your airport pickup to your banca to White Island.", ctaButton: "Book your stay direct", or: "Or message us on" },
+  fr: { toc: "Dans ce guide", prev: "Guide précédent", next: "Guide suivant", back: "Tous les guides", kicker: "Guide de voyage Camiguin", byline: "Par la famille de", updated: "Mis à jour", minRead: "min de lecture", readAlso: "À lire aussi", home: "Accueil", guides: "Guides", ctaHeading: "Rentrez à la maison, à Camiguin", ctaBody: "Quatorze chambres avec vue sur l'océan sur une falaise de Mambajao, une piscine à débordement au-dessus de la mer de Bohol, et des hôtes qui organisent tout, de votre transfert depuis l'aéroport à votre banca vers White Island.", ctaButton: "Réservez en direct", or: "Ou écrivez-nous sur" },
+  de: { toc: "In diesem Guide", prev: "Vorheriger Guide", next: "Nächster Guide", back: "Alle Reiseführer", kicker: "Camiguin Reiseführer", byline: "Von der Familie im", updated: "Aktualisiert", minRead: "Min. Lesezeit", readAlso: "Auch lesenswert", home: "Startseite", guides: "Reiseführer", ctaHeading: "Kommen Sie heim nach Camiguin", ctaBody: "Vierzehn Zimmer mit Meerblick auf einer Klippe in Mambajao, ein Infinity-Pool über der Bohol-See und Gastgeber, die alles arrangieren — vom Flughafentransfer bis zur Banca nach White Island.", ctaButton: "Direkt buchen", or: "Oder schreiben Sie uns auf" },
+  ja: { toc: "この記事の内容", prev: "前のガイド", next: "次のガイド", back: "ガイド一覧", kicker: "カミギン旅行ガイド", byline: "書き手：", updated: "更新", minRead: "分で読めます", readAlso: "あわせて読みたい", home: "ホーム", guides: "ガイド", ctaHeading: "カミギンへ、おかえりなさい", ctaBody: "マンバハオの崖の上に海を望む14室、ボホール海へ流れ込むようなインフィニティプール、そして空港送迎からホワイトアイランドへのバンカ船まで手配するホストがお待ちしています。", ctaButton: "公式サイトから予約する", or: "またはこちらからご連絡ください：" },
+  ko: { toc: "이 가이드의 목차", prev: "이전 가이드", next: "다음 가이드", back: "가이드 전체보기", kicker: "카미긴 여행 가이드", byline: "글쓴이:", updated: "업데이트", minRead: "분 소요", readAlso: "함께 읽기", home: "홈", guides: "가이드", ctaHeading: "카미긴으로 돌아오세요", ctaBody: "맘바하오 절벽 위 바다 전망 객실 14개, 보홀해로 이어지는 인피니티 풀, 그리고 공항 픽업부터 화이트 아일랜드행 방카까지 모두 준비해 드리는 호스트가 있습니다.", ctaButton: "공식 홈페이지에서 예약하기", or: "또는 이곳으로 연락 주세요:" },
+  zh: { toc: "本文目录", prev: "上一篇攻略", next: "下一篇攻略", back: "全部攻略", kicker: "卡米金旅行攻略", byline: "作者：", updated: "更新于", minRead: "分钟阅读", readAlso: "延伸阅读", home: "首页", guides: "攻略", ctaHeading: "回家吧，回卡米金", ctaBody: "曼巴豪悬崖之上的十四间海景客房，一座仿佛流入保和海的无边泳池，以及从机场接送到前往白岛的螃蟹船都为你安排妥当的主人。", ctaButton: "官网直接预订", or: "或通过以下方式联系我们：" },
 };
 
 // Bottom-up: this page generates BOTH dynamic segments, so each locale only
@@ -68,6 +69,15 @@ export async function generateMetadata({
     alternates: {
       canonical: localePath(locale, `/guides/${guide.slug}`),
       languages,
+      // Point agents at the Markdown mirror from the page itself. llms.txt
+      // already lists it, but a crawler that lands here straight from a search
+      // result never reads llms.txt and has to guess the URL. English only,
+      // because that is the only locale the mirror is built for (see
+      // app/guides/[slug]/route.ts) — a Japanese page must not advertise an
+      // English body as its alternate.
+      ...(locale === defaultLocale
+        ? { types: { "text/markdown": `/guides/${guide.slug}.md` } }
+        : {}),
     },
     openGraph: {
       title: guide.title,
@@ -139,6 +149,7 @@ export default async function GuidePage({
       <section className="relative overflow-hidden bg-white py-16 sm:py-20">
         <PaperGrain className="opacity-[0.05]" />
         <article className="relative z-10 mx-auto max-w-3xl px-6">
+          <GuideToc body={guide.body} label={t.toc} />
           <GuideArticle body={guide.body} />
         </article>
       </section>

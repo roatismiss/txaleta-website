@@ -2,12 +2,29 @@ import Link from "next/link";
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 
+import { slugify, headingText } from "@/lib/toc";
+
 // Brand-styled Markdown renderer for /guides articles. Server component — no
 // client JS shipped. Headings use the Playfair display face; internal links go
 // through next/link; GFM tables are scrollable on mobile.
-const components: Components = {
-  h2: ({ children }) => (
-    <h2 className="font-display mt-16 scroll-mt-24 text-3xl font-light leading-tight text-ink sm:text-4xl">
+function buildComponents(): Components {
+  // Same text can head two sections; suffix repeats exactly as guideToc does.
+  const seen = new Map<string, number>();
+
+  const headingId = (node: unknown): string => {
+    const text = headingText(nodeText(node));
+    const base = slugify(text);
+    const n = seen.get(base) ?? 0;
+    seen.set(base, n + 1);
+    return n ? `${base}-${n}` : base;
+  };
+
+  return {
+  h2: ({ children, node }) => (
+    <h2
+      id={headingId(node)}
+      className="font-display mt-16 scroll-mt-24 text-3xl font-light leading-tight text-ink sm:text-4xl"
+    >
       {children}
     </h2>
   ),
@@ -71,12 +88,22 @@ const components: Components = {
     <th className="border border-ink/15 px-4 py-3 font-semibold uppercase tracking-wide">{children}</th>
   ),
   td: ({ children }) => <td className="border border-ink/15 px-4 py-3 align-top text-ink/80">{children}</td>,
-};
+  };
+}
+
+/** Plain text of an mdast heading node, including any `**bold**` runs. */
+function nodeText(node: unknown): string {
+  if (!node || typeof node !== "object") return "";
+  const n = node as { value?: unknown; children?: unknown[] };
+  if (typeof n.value === "string") return n.value;
+  if (!Array.isArray(n.children)) return "";
+  return n.children.map(nodeText).join("");
+}
 
 export function GuideArticle({ body }: { body: string }) {
   return (
     <div className="guide-prose">
-      <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
+      <ReactMarkdown remarkPlugins={[remarkGfm]} components={buildComponents()}>
         {body}
       </ReactMarkdown>
     </div>
