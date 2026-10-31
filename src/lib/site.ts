@@ -109,6 +109,16 @@ export const entity = {
   checkinTime: "14:00",
   checkoutTime: "12:00",
 
+  // Restaurant opening hours, confirmed by the client 2026-10-31: 08:00–21:00,
+  // every day. Feeds `openingHoursSpecification` on the `Restaurant` node only.
+  //
+  // Deliberately NOT applied to the `Resort` node: Google's guidance is that
+  // lodging should not declare opening hours at all — a hotel's equivalent is
+  // check-in/check-out, which is what the two fields above are for. The
+  // restaurant is a different matter, because it takes walk-ins and "open now"
+  // is a real question people ask about it.
+  restaurantHours: { opens: "08:00", closes: "21:00" },
+
   // Sourced from the /accommodation page copy ("fourteen rooms").
   numberOfRooms: 14,
 

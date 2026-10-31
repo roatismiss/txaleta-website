@@ -240,6 +240,26 @@ export function diningGraph(locale: Locale, page: PageChrome) {
       priceRange: entity.priceRange,
       currenciesAccepted: entity.currency,
       acceptsReservations: true,
+      // The field "open now" and "restaurants near me" results are actually
+      // built from. One span, every day — see entity.restaurantHours.
+      openingHoursSpecification: entity.restaurantHours
+        ? [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday",
+              ],
+              opens: entity.restaurantHours.opens,
+              closes: entity.restaurantHours.closes,
+            },
+          ]
+        : null,
       // The restaurant is inside the resort but open to walk-ins (see
       // dining.body), so it is a real, separately-searchable entity — while
       // still declaring the resort as its parent so the two never compete.
