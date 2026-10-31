@@ -6,6 +6,8 @@
 import type { Locale } from "@/lib/i18n";
 
 export type DiningDict = {
+  /** Links into /guides — SEO_PLAN §5 rule 6. */
+  guides: { kicker: string; heading: string; intro: string };
   heading: string;
   subheading: string;
   body: string;
@@ -17,6 +19,12 @@ export type DiningDict = {
 };
 
 const en: DiningDict = {
+  guides: {
+    kicker: "Eating on Camiguin",
+    heading: "What to Eat, and Where",
+    intro:
+      "Honest guides to the island's food — including the places that aren't ours.",
+  },
   heading: "Dining at Txaleta",
   subheading: "One of Camiguin's Most Memorable Dining Experiences",
   body:
@@ -68,6 +76,12 @@ const en: DiningDict = {
 };
 
 const fr: DiningDict = {
+  guides: {
+    kicker: "Manger à Camiguin",
+    heading: "Quoi Manger, et Où",
+    intro:
+      "Des guides honnêtes sur la cuisine de l'île, y compris les adresses qui ne sont pas les nôtres.",
+  },
   heading: "La table de Txaleta",
   subheading: "L'une des expériences culinaires les plus mémorables de Camiguin",
   body:
@@ -119,6 +133,12 @@ const fr: DiningDict = {
 };
 
 const de: DiningDict = {
+  guides: {
+    kicker: "Essen auf Camiguin",
+    heading: "Was man isst, und wo",
+    intro:
+      "Ehrliche Guides zum Essen der Insel — auch zu Orten, die nicht unsere sind.",
+  },
   heading: "Kulinarik im Txaleta",
   subheading: "Eines der unvergesslichsten Restauranterlebnisse auf Camiguin",
   body:
@@ -170,6 +190,12 @@ const de: DiningDict = {
 };
 
 const ja: DiningDict = {
+  guides: {
+    kicker: "カミギン島で食べる",
+    heading: "何を、どこで食べるか",
+    intro:
+      "島の食についての正直なガイド。私たちの店ではない場所も含めて。",
+  },
   heading: "Txaletaのダイニング",
   subheading: "カミギンで最も記憶に残る食体験のひとつ",
   body:
@@ -221,6 +247,12 @@ const ja: DiningDict = {
 };
 
 const ko: DiningDict = {
+  guides: {
+    kicker: "카미긴에서 먹기",
+    heading: "무엇을, 어디서 먹을까",
+    intro:
+      "섬의 음식에 대한 솔직한 안내. 저희 식당이 아닌 곳도 함께.",
+  },
   heading: "Txaleta 다이닝",
   subheading: "카미긴에서 가장 기억에 남는 식사 경험",
   body:
@@ -272,6 +304,12 @@ const ko: DiningDict = {
 };
 
 const zh: DiningDict = {
+  guides: {
+    kicker: "在卡米金吃什么",
+    heading: "吃什么，去哪吃",
+    intro:
+      "关于岛上美食的诚实指南，也包括不属于我们的地方。",
+  },
   heading: "Txaleta餐厅",
   subheading: "卡米金最难忘的用餐体验之一",
   body:

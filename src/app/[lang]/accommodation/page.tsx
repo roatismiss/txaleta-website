@@ -12,6 +12,7 @@ import { RoomGallery } from "@/components/room-gallery";
 import { RattanWeave, PalmCorner } from "@/components/brand-texture";
 import { fetchDisplayRooms } from "@/lib/booking-api";
 import { accommodationContent } from "@/locales/content/accommodation";
+import { GuideLinks } from "@/components/sections/guide-links";
 import { localePath } from "@/lib/i18n";
 
 // Refresh the live Cloudbeds rooms hourly (ISR) — avoids a Cloudbeds call per view.
@@ -20,7 +21,8 @@ export const revalidate = 3600;
 const meta: Metadata = {
   title: "Accommodation",
   description:
-    "Seaview suites, cliff-edge ocean-view glamping and garden retreats at Txaleta de Camiguin — fourteen rooms between the volcano and the Bohol Sea, minutes from Camiguin Airport.",};
+    "Seaview suites, cliff-edge ocean-view glamping and garden retreats at Txaleta de Camiguin — fourteen rooms between the volcano and the Bohol Sea, minutes from Camiguin Airport.",
+};
 
 const inclusionIcons = [Coffee, Waves, Wifi, Wind, Car, Utensils, Sparkles, Bell];
 
@@ -159,6 +161,15 @@ export default async function AccommodationPage({ params }: PageProps<"/[lang]">
           </div>
         </div>
       </section>
+
+      {/* ── Into the guides (SEO_PLAN §5 rule 6) ── */}
+      <GuideLinks
+        lang={lang}
+        keys={["best-time-to-visit-camiguin", "camiguin-itinerary", "mambajao-camiguin"]}
+        kicker={t.guides.kicker}
+        heading={t.guides.heading}
+        intro={t.guides.intro}
+      />
 
       {/* ── CTA ── */}
       <section className="relative overflow-hidden bg-cream py-20 sm:py-28">

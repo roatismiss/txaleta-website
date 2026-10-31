@@ -8,6 +8,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { dining, site } from "@/lib/site";
 import { diningContent } from "@/locales/content/dining";
+import { GuideLinks } from "@/components/sections/guide-links";
 import { localePath } from "@/lib/i18n";
 
 const ctaStrings: Record<Locale, { menu: string; privateDining: string; concierge: string; book: string; orReach: string }> = {
@@ -24,7 +25,8 @@ import { TilePattern, PaperGrain, PalmCorner, RattanWeave } from "@/components/b
 const meta: Metadata = {
   title: "Dining",
   description:
-    "Filipino-Spanish cuisine on a Camiguin clifftop — breakfast with an ocean view, sunset dining over the sea, paella and tapas, and meals made for family and celebrations at Txaleta de Camiguin.",};
+    "Filipino-Spanish cuisine on a Camiguin clifftop — breakfast with an ocean view, sunset dining over the sea, paella and tapas, and meals made for family and celebrations at Txaleta de Camiguin.",
+};
 
 export default async function DiningPage({ params }: PageProps<"/[lang]">) {
   const { lang: rawLang } = await params;
@@ -297,6 +299,15 @@ export default async function DiningPage({ params }: PageProps<"/[lang]">) {
           </Reveal>
         </div>
       </section>
+
+      {/* ── Into the food guides (SEO_PLAN §5 rule 6) ── */}
+      <GuideLinks
+        lang={lang}
+        keys={["best-restaurant-in-camiguin", "what-to-eat-in-camiguin", "best-paella-in-camiguin"]}
+        kicker={t.guides.kicker}
+        heading={t.guides.heading}
+        intro={t.guides.intro}
+      />
 
       {/* ── Closing CTA — Come Hungry. Leave Nourished. ── */}
       <section className="relative overflow-hidden bg-cream py-24 sm:py-32">

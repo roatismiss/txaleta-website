@@ -6,6 +6,8 @@
 import type { Locale } from "@/lib/i18n";
 
 export type AccommodationDict = {
+  /** Links into /guides — SEO_PLAN §5 rule 6. */
+  guides: { kicker: string; heading: string; intro: string };
   heroKicker: string;
   heroTitle: string;
   intro: string;
@@ -21,6 +23,12 @@ export type AccommodationDict = {
 };
 
 const en: AccommodationDict = {
+  guides: {
+    kicker: "Before You Arrive",
+    heading: "Plan the Rest of It",
+    intro:
+      "We write these ourselves, from the island. They answer what a booking page cannot.",
+  },
   heroKicker: "Where You Wake on Camiguin",
   heroTitle: "Accommodation",
   intro:
@@ -49,6 +57,12 @@ const en: AccommodationDict = {
 };
 
 const fr: AccommodationDict = {
+  guides: {
+    kicker: "Avant Votre Arrivée",
+    heading: "Préparez le Reste du Séjour",
+    intro:
+      "Nous les écrivons nous-mêmes, depuis l'île. Ils répondent à ce qu'une page de réservation ne peut pas.",
+  },
   heroKicker: "Là où vous vous réveillez à Camiguin",
   heroTitle: "Hébergement",
   intro:
@@ -77,6 +91,12 @@ const fr: AccommodationDict = {
 };
 
 const de: AccommodationDict = {
+  guides: {
+    kicker: "Vor Ihrer Ankunft",
+    heading: "Planen Sie den Rest",
+    intro:
+      "Wir schreiben sie selbst, von der Insel aus. Sie beantworten, was eine Buchungsseite nicht kann.",
+  },
   heroKicker: "Wo Sie auf Camiguin aufwachen",
   heroTitle: "Unterkünfte",
   intro:
@@ -105,6 +125,12 @@ const de: AccommodationDict = {
 };
 
 const ja: AccommodationDict = {
+  guides: {
+    kicker: "ご到着前に",
+    heading: "旅の残りを計画する",
+    intro:
+      "島に暮らす私たちが書いています。予約ページでは答えられないことを。",
+  },
   heroKicker: "カミギンで迎える朝",
   heroTitle: "客室",
   intro:
@@ -133,6 +159,12 @@ const ja: AccommodationDict = {
 };
 
 const ko: AccommodationDict = {
+  guides: {
+    kicker: "도착하기 전에",
+    heading: "나머지 여행을 계획하세요",
+    intro:
+      "섬에 사는 저희가 직접 씁니다. 예약 페이지가 답할 수 없는 것들을.",
+  },
   heroKicker: "카미긴에서 맞는 아침",
   heroTitle: "객실",
   intro:
@@ -161,6 +193,12 @@ const ko: AccommodationDict = {
 };
 
 const zh: AccommodationDict = {
+  guides: {
+    kicker: "抵达之前",
+    heading: "规划旅程的其余部分",
+    intro:
+      "我们住在岛上，亲手写下这些。它们回答预订页面无法回答的问题。",
+  },
   heroKicker: "在卡米金醒来的地方",
   heroTitle: "客房",
   intro:
