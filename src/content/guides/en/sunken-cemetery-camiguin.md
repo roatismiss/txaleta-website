@@ -14,8 +14,8 @@ keywords:
   - "Camiguin heritage sites"
 date: 2026-08-12
 author: "Txaleta de Camiguin"
-image: "/images/resort/sunset_bohol_sea.webp"
-imageAlt: "Sunset over the Bohol Sea off Camiguin — the hour when the Sunken Cemetery cross is at its most striking"
+image: "/images/resort/camiguin_coast_aerial.webp"
+imageAlt: "The Camiguin coast from the air, looking across the strait toward mainland Mindanao"
 ---
 
 # The Sunken Cemetery, Camiguin: What Actually Happened Here
@@ -146,7 +146,7 @@ Come for the views. Stay for the feeling. Welcome home.
       "datePublished": "2026-08-12",
       "dateModified": "2026-08-12",
       "inLanguage": "en",
-      "image": "https://www.txaletadecamiguin.com/images/resort/sunset_bohol_sea.webp",
+      "image": "https://www.txaletadecamiguin.com/images/resort/camiguin_coast_aerial.webp",
       "keywords": "Sunken Cemetery Camiguin, Camiguin sunken cemetery history, Gui-ob Church Ruins, Bonbon church ruins Camiguin, Mt Vulcan eruption 1871, Sunken Cemetery diving, Camiguin heritage sites",
       "articleSection": "Travel Guides",
       "author": { "@type": "Organization", "name": "Txaleta de Camiguin", "url": "https://www.txaletadecamiguin.com" },

@@ -23,7 +23,7 @@ imageAlt: "The view north from a Mambajao clifftop over the Bohol Sea, the coast
 
 Almost every Camiguin trip happens in Mambajao, and almost nobody arrives knowing that. Guests book "Camiguin", land at an airport whose name they have not quite registered, get driven along a coast road past a string of barangays, and spend four days somewhere whose actual name they never learn.
 
-**Mambajao is the capital of Camiguin and its largest municipality**, in both area and population. It holds the airport, one of the island's two ports, the provincial offices, the public market, and the stretch of north coast where most of the island's resorts — including ours — are built. It is also the answer to the question most visitors are really asking when they search for a town here: *where do I actually sleep, eat and buy things?*
+**Mambajao is the capital of Camiguin and its largest municipality**, in both area and population. It holds the airport, one of the island's two ports, the provincial offices, the public market, and the stretch of north coast where most of the island's resorts are built. It is also the answer to the question most visitors are really asking when they search for a town here: *where do I actually sleep, eat and buy things?*
 
 This is a guide to the place itself, not to the island. If you want the island, start with [25 things to do in Camiguin](/guides/things-to-do-in-camiguin).
 
@@ -57,7 +57,7 @@ This is the most practically useful section on the page, and it is the thing no 
 | **Kuguita** | East of the town centre | Coastal road, residential, a few places to stay |
 | **Balbagon** | East edge of town | **The port for ferries from Jagna, Bohol** |
 
-**The practical rule: anywhere in the Agoho–Yumbing–Naasag run puts you five to fifteen minutes from the White Island boats and twenty minutes from the market.** That is the stretch we mean when we say "the north-west coast" in our [where to stay in Camiguin](/guides/where-to-stay-in-camiguin) guide, which compares the coasts and the property types properly. We are at **Puting Balas**, on the cliff above that coast — the name is Bisaya for "white sand", which is also what the islanders call the sandbar offshore.
+**The practical rule: anywhere in the Agoho–Yumbing–Naasag run puts you five to fifteen minutes from the White Island boats and twenty minutes from the market.** That is the stretch we mean when we say "the north-west coast" in our [where to stay in Camiguin](/guides/where-to-stay-in-camiguin) guide, which compares the coasts and the property types properly. We are not on that stretch. We are at **Puting Balas** — Bisaya for "white sand" — on the cliffs **east of the poblacion**, which trades the White Island boats and the walk to dinner for a horizon that faces the sunrise. The two coasts are compared properly in our [clifftop guide](/guides/best-clifftop-resort-in-camiguin).
 
 ## What is actually in the town centre
 

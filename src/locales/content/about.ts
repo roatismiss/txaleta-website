@@ -123,7 +123,7 @@ const en: AboutDict = {
       kicker: "A Unique Location in Camiguin",
       heading: "The Heart of the Island, a Peaceful Retreat from the Crowds",
       body:
-        "Located in Mambajao, Txaleta offers easy access to many of Camiguin's most famous attractions while remaining a quiet retreat. After a day of exploring the island's natural wonders, return to panoramic ocean views, island breezes, and unforgettable sunsets.",
+        "Located in Mambajao, Txaleta offers easy access to many of Camiguin's most famous attractions while remaining a quiet retreat. After a day of exploring the island's natural wonders, return to panoramic ocean views, island breezes, and a volcano that goes gold as the light leaves.",
       attractions: [
         "White Island Sandbar",
         "Mantigue Island Nature Park",
@@ -260,7 +260,7 @@ const fr: AboutDict = {
       kicker: "Un emplacement unique à Camiguin",
       heading: "Le cœur de l'île, à l'écart de la foule",
       body:
-        "Situé à Mambajao, Txaleta offre un accès facile aux attractions les plus célèbres de Camiguin tout en restant un refuge paisible. Après une journée d'exploration, retrouvez les vues panoramiques sur l'océan, la brise de l'île et des couchers de soleil inoubliables.",
+        "Situé à Mambajao, Txaleta offre un accès facile aux attractions les plus célèbres de Camiguin tout en restant un refuge paisible. Après une journée d'exploration, retrouvez les vues panoramiques sur l'océan, la brise de l'île et un volcan qui vire à l'or quand la lumière s'en va.",
       attractions: [
         "Banc de sable de White Island",
         "Parc naturel de l'île Mantigue",
@@ -397,7 +397,7 @@ const de: AboutDict = {
       kicker: "Eine einzigartige Lage auf Camiguin",
       heading: "Das Herz der Insel — ein ruhiger Rückzugsort abseits der Menge",
       body:
-        "In Mambajao gelegen, bietet Txaleta leichten Zugang zu Camiguins berühmtesten Sehenswürdigkeiten — und bleibt doch ein stiller Rückzugsort. Nach einem Tag voller Naturwunder erwarten Sie Panoramablicke aufs Meer, Inselbrise und unvergessliche Sonnenuntergänge.",
+        "In Mambajao gelegen, bietet Txaleta leichten Zugang zu Camiguins berühmtesten Sehenswürdigkeiten — und bleibt doch ein stiller Rückzugsort. Nach einem Tag voller Naturwunder erwarten Sie Panoramablicke aufs Meer, Inselbrise und ein Vulkan, der golden wird, wenn das Licht geht.",
       attractions: [
         "White-Island-Sandbank",
         "Mantigue-Island-Naturpark",
@@ -534,7 +534,7 @@ const ja: AboutDict = {
       kicker: "カミギンでも特別なロケーション",
       heading: "島の中心にありながら、喧騒から遠く",
       body:
-        "マンバハオに位置するTxaletaは、カミギンの名所へのアクセスに恵まれながら、静かな隠れ家であり続けます。島の自然を巡った一日の終わりには、パノラマの海、島の風、忘れられない夕日が待っています。",
+        "マンバハオに位置するTxaletaは、カミギンの名所へのアクセスに恵まれながら、静かな隠れ家であり続けます。島の自然を巡った一日の終わりには、パノラマの海、島の風、そして光が去るときに黄金色に染まる火山が待っています。",
       attractions: [
         "ホワイトアイランドの砂州",
         "マンティゲ島自然公園",
@@ -671,7 +671,7 @@ const ko: AboutDict = {
       kicker: "카미긴에서도 특별한 위치",
       heading: "섬의 중심에서, 인파와는 멀리",
       body:
-        "맘바하오에 자리한 Txaleta는 카미긴의 명소들로 쉽게 닿으면서도 고요한 안식처로 남아 있습니다. 섬의 자연을 누빈 하루 끝에는 파노라마 바다와 섬바람, 잊지 못할 노을이 기다립니다.",
+        "맘바하오에 자리한 Txaleta는 카미긴의 명소들로 쉽게 닿으면서도 고요한 안식처로 남아 있습니다. 섬의 자연을 누빈 하루 끝에는 파노라마 바다와 섬바람, 그리고 빛이 물러갈 때 금빛으로 물드는 화산이 기다립니다.",
       attractions: [
         "화이트 아일랜드 모래톱",
         "만티게 섬 자연공원",
@@ -808,7 +808,7 @@ const zh: AboutDict = {
       kicker: "卡米金独一无二的位置",
       heading: "岛之中心，远离人潮的静谧居所",
       body:
-        "Txaleta位于曼巴豪，坐拥卡米金众多著名景点的便利，却始终是一处安静的避世之所。探索海岛自然奇观一天之后，回到这里，迎接您的是全景海色、海岛清风与难忘的日落。",
+        "Txaleta位于曼巴豪，坐拥卡米金众多著名景点的便利，却始终是一处安静的避世之所。探索海岛自然奇观一天之后，回到这里，迎接您的是全景海色、海岛清风，以及在天光散去时染成金色的火山。",
       attractions: [
         "白岛沙洲",
         "曼蒂格岛自然公园",

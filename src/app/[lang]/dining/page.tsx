@@ -25,7 +25,7 @@ import { TilePattern, PaperGrain, PalmCorner, RattanWeave } from "@/components/b
 const meta: Metadata = {
   title: "Dining",
   description:
-    "Filipino-Spanish cuisine on a Camiguin clifftop — breakfast with an ocean view, sunset dining over the sea, paella and tapas, and meals made for family and celebrations at Txaleta de Camiguin.",
+    "Filipino-Spanish cuisine on a Camiguin clifftop — breakfast with an ocean view, evening dining above the sea, paella and tapas, and meals made for family and celebrations at Txaleta de Camiguin.",
 };
 
 export default async function DiningPage({ params }: PageProps<"/[lang]">) {
@@ -125,7 +125,7 @@ export default async function DiningPage({ params }: PageProps<"/[lang]">) {
         </div>
       </section>
 
-      {/* ── Story sections — Cuisine · Breakfast · Sunset (alternating) ── */}
+      {/* ── Story sections — Cuisine · Breakfast · Evening (alternating) ── */}
       <section className="bg-cream">
         <div className="mx-auto max-w-7xl px-6">
           {stories.map((story, i) => (

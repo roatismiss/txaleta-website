@@ -75,7 +75,7 @@ What that buys you, concretely:
 - **White Island at its best.** The sandbar is a bare spit of white sand with no shade and no shelter, reached by a short banca ride. Calm water means the crossing is easy, the shallows are glass, and the sunrise trip actually happens on the morning you booked it.
 - **The clearest water for snorkelling and diving** — the Cantaan Giant Clam Sanctuary, the Sunken Cemetery's coral garden, the Mantigue Island sanctuary.
 - **The best odds on Hibok-Hibok.** A guided ascent of an active volcano is a weather-dependent thing. Dry-season mornings give you the ridgeline view instead of the inside of a cloud.
-- **Reliable sunsets** from the west-facing cliffs, which — we'll be honest — is half of why people come.
+- **Reliable sunrises** over open water from the east-facing cliffs, and **reliable sunsets** from the west coast — on this island those are two different shores and, usually, two different drives.
 
 The trade-offs are real too. April and May are Filipino **summer holidays**, so domestic travel peaks; add **Holy Week**, which moves between late March and mid-April depending on the year, and you have the tightest booking window on the island. And it is *hot*: 31–32 °C in the afternoon, higher in the sun, with the humidity you'd expect. Plan your island days for the morning, and let the middle of the day belong to the pool.
 

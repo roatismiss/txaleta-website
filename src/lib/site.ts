@@ -254,7 +254,7 @@ export const rooms: Room[] = [
     name: "Ocean View Glamping",
     kicker: "Canvas on the Cliff",
     description:
-      "A proper bed under canvas at the cliff's edge, with an en-suite rain shower and a private deck above the Bohol Sea. Each evening the sunset reaches straight into the tent, and the only sounds are the water below and the wind off the sea.",
+      "A proper bed under canvas at the cliff's edge, with an en-suite rain shower and a private deck above the Bohol Sea. The cliff faces east, so every morning of the year the sunrise comes straight into the tent off open water, and the only sounds are the water below and the wind off the sea.",
     cover: "/images/rooms/glamping/glamping_sunset_view.webp",
     images: [
       "/images/rooms/glamping/glamping_sunset_view.webp",
@@ -350,11 +350,11 @@ export const dining = {
     {
       id: "evening",
       kicker: "Evening",
-      heading: "Sunset Dining Overlooking the Sea",
+      heading: "Evening Dining Above the Sea",
       body:
-        "As the sun begins to set, our clifftop location offers one of the most beautiful dining settings in Camiguin. Gather with family and friends, enjoy fresh island flavors, and watch the sky transform into shades of gold, orange, and pink while overlooking the sea. These are the moments our guests remember long after their holiday ends.",
+        "We face east, so the last of the day does something particular here: the sea below goes from blue to pewter, the sky over the water turns rose, and Mt. Hibok-Hibok catches the final light behind you. Gather with family and friends, enjoy fresh island flavors, and let the light go while you eat. These are the moments our guests remember long after their holiday ends.",
       image: "/images/dining/aerial_view_table.webp",
-      imageAlt: "Sunset dining overlooking the sea at Txaleta de Camiguin",
+      imageAlt: "Evening dining above the sea at Txaleta de Camiguin",
     },
   ],
   family: {
@@ -634,7 +634,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Glamping at Txaleta is unreal — the sunset pours right into the tent and breakfast is over the water. We'll be back.",
+      "Glamping at Txaleta is unreal — the sunrise pours right into the tent and breakfast is over the water. We'll be back.",
     name: "Sheerie",
     date: "July 2025",
   },
@@ -842,7 +842,7 @@ export const about = {
     kicker: "A Unique Location in Camiguin",
     heading: "The Heart of the Island, a Peaceful Retreat from the Crowds",
     body:
-      "Located in Mambajao, Txaleta offers easy access to many of Camiguin's most famous attractions while remaining a quiet retreat. After a day of exploring the island's natural wonders, return to panoramic ocean views, island breezes, and unforgettable sunsets.",
+      "Located in Mambajao, Txaleta offers easy access to many of Camiguin's most famous attractions while remaining a quiet retreat. After a day of exploring the island's natural wonders, return to panoramic ocean views, island breezes, and a volcano that goes gold as the light leaves.",
     attractions: [
       "White Island Sandbar",
       "Mantigue Island Nature Park",

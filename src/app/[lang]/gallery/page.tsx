@@ -20,7 +20,7 @@ import { Reveal, Kicker } from "@/components/reveal";
 const meta: Metadata = {
   title: "Gallery",
   description:
-    "Txaleta de Camiguin in pictures — the infinity pool over the Bohol Sea, White Island sandbars, clifftop sunsets, endemic birds and life around the resort.",
+    "Txaleta de Camiguin in pictures — the infinity pool over the Bohol Sea, White Island sandbars, sunrise from the cliff, endemic birds and life around the resort.",
 };
 
 export default async function GalleryPage({ params }: PageProps<"/[lang]">) {

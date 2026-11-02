@@ -44,9 +44,9 @@ const en: DiningDict = {
     },
     {
       kicker: "Evening",
-      heading: "Sunset Dining Overlooking the Sea",
+      heading: "Evening Dining Above the Sea",
       body:
-        "As the sun begins to set, our clifftop location offers one of the most beautiful dining settings in Camiguin. Gather with family and friends, enjoy fresh island flavors, and watch the sky transform into shades of gold, orange, and pink while overlooking the sea. These are the moments our guests remember long after their holiday ends.",
+        "We face east, so the last of the day does something particular here: the sea below goes from blue to pewter, the sky over the water turns rose, and Mt. Hibok-Hibok catches the final light behind you. Gather with family and friends, enjoy fresh island flavors, and let the light go while you eat. These are the moments our guests remember long after their holiday ends.",
     },
   ],
   family: {
@@ -101,9 +101,9 @@ const fr: DiningDict = {
     },
     {
       kicker: "Le soir",
-      heading: "Dîner au coucher du soleil, face à la mer",
+      heading: "Dîner au-dessus de la mer, à la tombée du jour",
       body:
-        "Quand le soleil descend, notre falaise offre l'un des plus beaux décors de table de Camiguin. Réunissez famille et amis, savourez les saveurs fraîches de l'île et regardez le ciel se teinter d'or, d'orange et de rose au-dessus de la mer. Ce sont ces moments que nos hôtes gardent longtemps après la fin des vacances.",
+        "Nous sommes tournés vers l'est, et la fin du jour y produit quelque chose de particulier : la mer en contrebas passe du bleu à l'étain, le ciel au-dessus de l'eau vire au rose, et le Hibok-Hibok capte la dernière lumière dans votre dos. Réunissez famille et amis, savourez les saveurs fraîches de l'île, et laissez le jour s'en aller pendant que vous dînez. Ce sont ces moments que nos hôtes gardent longtemps après la fin des vacances.",
     },
   ],
   family: {
@@ -158,9 +158,9 @@ const de: DiningDict = {
     },
     {
       kicker: "Der Abend",
-      heading: "Abendessen über dem Meer, zum Sonnenuntergang",
+      heading: "Abendessen über dem Meer",
       body:
-        "Wenn die Sonne sinkt, bietet unsere Klippenlage eine der schönsten Tafelkulissen Camiguins. Versammeln Sie Familie und Freunde, genießen Sie frische Inselaromen und sehen Sie zu, wie sich der Himmel über dem Meer in Gold, Orange und Rosa verwandelt. Das sind die Momente, an die sich unsere Gäste noch lange nach dem Urlaub erinnern.",
+        "Wir liegen nach Osten, und das Ende des Tages tut hier etwas Eigenes: Das Meer unter Ihnen geht von Blau in Zinn über, der Himmel über dem Wasser färbt sich rosa, und der Hibok-Hibok fängt hinter Ihnen das letzte Licht. Versammeln Sie Familie und Freunde, genießen Sie frische Inselaromen und lassen Sie das Licht gehen, während Sie essen. Das sind die Momente, an die sich unsere Gäste noch lange nach dem Urlaub erinnern.",
     },
   ],
   family: {
@@ -215,9 +215,9 @@ const ja: DiningDict = {
     },
     {
       kicker: "夜",
-      heading: "海を見下ろすサンセットディナー",
+      heading: "海の上の、夕暮れのディナー",
       body:
-        "日が傾きはじめると、崖の上のこの場所はカミギン随一の美しい食卓になります。家族や友人と集い、島の新鮮な味を楽しみながら、海の上で金色から茜、桃色へと移ろう空を眺めて。休暇が終わったあとも、お客様の心に長く残る時間です。",
+        "この崖は東を向いています。だから一日の終わりには、ここだけの光景が現れます。眼下の海は青から錫色へ、海の上の空は薔薇色へ。そして背後では、ヒボクヒボク山が最後の光を受けて輝きます。家族や友人と集い、島の新鮮な味を楽しみながら、食事とともに光が消えていく時間を。休暇が終わったあとも、お客様の心に長く残る時間です。",
     },
   ],
   family: {
@@ -272,9 +272,9 @@ const ko: DiningDict = {
     },
     {
       kicker: "저녁",
-      heading: "바다를 내려다보는 선셋 다이닝",
+      heading: "바다 위, 저녁의 다이닝",
       body:
-        "해가 기울기 시작하면, 절벽 위 이곳은 카미긴에서 가장 아름다운 식탁이 됩니다. 가족, 친구와 둘러앉아 섬의 신선한 맛을 즐기며, 바다 위 하늘이 금빛에서 주황, 분홍으로 물드는 것을 바라보세요. 휴가가 끝난 뒤에도 오래 기억되는 순간들입니다.",
+        "이곳 절벽은 동쪽을 향합니다. 그래서 하루의 끝에 이곳만의 풍경이 펼쳐집니다. 아래 바다는 푸른빛에서 주석빛으로, 바다 위 하늘은 장밋빛으로 물들고, 등 뒤에서는 히복히복 산이 마지막 빛을 받습니다. 가족, 친구와 둘러앉아 섬의 신선한 맛을 즐기며, 식사와 함께 빛이 저무는 시간을 보내세요. 휴가가 끝난 뒤에도 오래 기억되는 순간들입니다.",
     },
   ],
   family: {
@@ -329,9 +329,9 @@ const zh: DiningDict = {
     },
     {
       kicker: "傍晚",
-      heading: "俯瞰大海的日落晚餐",
+      heading: "海上的傍晚晚餐",
       body:
-        "当太阳西沉，悬崖上的这方餐桌便成了卡米金最美的用餐之地。与家人朋友围坐，品尝海岛的新鲜风味，看天空在海面上由金转橙、再染成粉色。这些时刻，客人们在假期结束后仍会久久想起。",
+        "我们朝东而立，因此一天将尽时，这里会出现别处没有的景象：脚下的海由蓝转为锡灰，海面上的天空染成玫瑰色，而身后的希博克-希博克火山接住了最后一道光。与家人朋友围坐，品尝海岛的新鲜风味，让光线在用餐时慢慢退去。这些时刻，客人们在假期结束后仍会久久想起。",
     },
   ],
   family: {

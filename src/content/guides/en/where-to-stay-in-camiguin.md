@@ -22,7 +22,7 @@ date: 2026-08-10
 updated: 2026-09-20
 author: "Txaleta de Camiguin"
 image: "/images/resort/infinity_pool_seaview.webp"
-imageAlt: "A clifftop infinity pool above the Bohol Sea in Mambajao — where to stay in Camiguin, on the island's north-west coast"
+imageAlt: "A clifftop infinity pool above the Bohol Sea in Mambajao — where to stay in Camiguin, on the island's east-facing cliffs"
 ---
 
 # Where to Stay in Camiguin: Best Areas & Best Places (2026)
@@ -43,6 +43,7 @@ Three refinements:
 
 - **First time on the island, three or four nights?** North-west Mambajao, near the White Island jump-off. Don't overthink it.
 - **Want a view rather than beach access?** The **clifftop stretch** of the same coast, where the land rises above the water and the sunsets arrive uninterrupted.
+- **Want the sunrise over open water, every day of the year?** The **east-facing cliffs** past the town, around **Puting Balas** — the one stretch whose best hour is not seasonal.
 - **Coming for the ferry, for Mantigue, or for a working farmstay?** Look at **Benoni / Mahinog** on the east coast — but know what you're trading away.
 
 Everything else is detail. Useful detail, but detail.
@@ -55,6 +56,7 @@ Five of the six areas below sit inside one municipality — Mambajao — which i
 |---|---|---|---|
 | **Agoho / Yumbing / Bug-ong** (NW Mambajao) | The resort strip: beach front, restaurants, dive shops, White Island boats | First-timers, families, anyone without a car | Busiest stretch on the island — which here still means quiet |
 | **Naasag / Kuguita / Baylao** (NW Mambajao) | The quieter end of the same coast; cliffs, headlands, small resorts | Couples, views, sunsets, calm | Fewer walk-out restaurants; you'll ride or drive to dinner |
+| **Puting Balas** and east (E Mambajao) | Low cliffs facing open sea; a handful of boutique properties | Sunrise, long views, quiet, couples | You drive to dinner and to the White Island boats |
 | **Mambajao Poblacion** (town) | The capital: market, ATMs, bakeries, pharmacies, hospital | Budget stays, long trips, practicalities | Not on the beach; it's a town, not a view |
 | **Catarman** (west) | Sunken Cemetery, church ruins, cold springs, Tuasan Falls | Sightseeing-heavy trips, cheap local stays | Thin on good accommodation and dining |
 | **Benoni / Mahinog** (east) | The RORO ferry port and the jump-off for Mantigue Island | Ferry arrivals, divers, a night before an early sailing | Far from the airport, the boats to White Island and the restaurants |
@@ -90,11 +92,23 @@ Sand here is a mix — dark volcanic grey in most places, paler in a few — bec
 
 Keep going and the coast changes character. The land lifts, headlands push out into the Bohol Sea, and the properties get smaller and further apart. Some sit on the sand; some sit thirty feet above it, which is a different proposition entirely — the sea at eye level from your bed, the sunset arriving over open water with nothing in front of it.
 
-This is where the island's boutique end has grown, and it's where we are: a clifftop in **Puting Balas**, about fifteen minutes from the runway.
+This is where a good part of the island's boutique end has grown. (We are not on this stretch ourselves — we are further east, which is the next section.)
 
 **Stay here if:** you're a couple, you're on honeymoon, you value the view and the quiet over walking distance to a beach bar, or you simply sleep better without a road outside.
 
 **Don't if:** you want to step out of your room onto a stretch of public beach with a rental kayak on it.
+
+### The east-facing cliffs — Puting Balas and the stretch toward Benoni
+
+Carry on past the town and the coast does something most visitors never find out about: it turns. East of Mambajao Poblacion the shoreline swings round to face the open Bohol Sea, the land lifts into low cliffs, and the few properties out here look at a horizon with nothing on it at all.
+
+**What this coast has that no other part of the island has is the sunrise.** At this latitude the sun comes up between roughly **66° and 114°** on the compass across the course of a year, and from these cliffs every degree of that is open water. There is no month when it rises behind land. The north-west coast cannot say the same about its sunsets, which are seasonal — we work through why in the [sunset guide](/guides/camiguin-sunset-spots).
+
+**What you trade is walking distance.** You are about seven kilometres from the town and rather more from the White Island jump-off, so dinner and the sandbar are drives rather than strolls. You want your own wheels, or a property that provides them.
+
+**Stay here if:** the view is the point, you wake early, you want quiet, and you don't mind driving to dinner.
+
+**Don't if:** you want to walk to a beach bar — or you want the sun going down in front of your balcony, which belongs to the north-west coast and which we will happily send you to.
 
 ### Mambajao Poblacion — the town
 
@@ -158,7 +172,7 @@ Everything above sorts the island by geography, which is the decision that matte
 
 **There are no international chains here. None.** Camiguin is an island of family-run properties, which is either the whole appeal or a dealbreaker depending on what you're used to. Nobody is going to have a 24-hour front desk, a concierge team or a loyalty programme.
 
-**Boutique and clifftop stays** — the top of the island's range, ₱5,000–12,000+. Concentrated on the north-west Mambajao coast, generally small, generally with a pool over the sea and a kitchen that does most of your meals because there is nowhere else nearby. Expect design and personal service rather than facilities. This is the band we sit in, so treat what follows as declared bias: fourteen rooms on a cliff, breakfast over the water, and a [Filipino-Spanish kitchen](/dining) open to visitors as well as guests.
+**Boutique and clifftop stays** — the top of the island's range, ₱5,000–12,000+. Concentrated in Mambajao — the north-west coast and the east-facing cliffs past the town — generally small, generally with a pool over the sea and a kitchen that does most of your meals because there is nowhere else nearby. Expect design and personal service rather than facilities. This is the band we sit in, so treat what follows as declared bias: fourteen rooms on a cliff, breakfast over the water, and a [Filipino-Spanish kitchen](/dining) open to visitors as well as guests. How to judge a clifftop property on this island — ours included, and we fail one of the tests — is its own guide: [the five tests](/guides/best-clifftop-resort-in-camiguin).
 
 **Mid-range beach resorts** — ₱2,800–5,000, the widest category and the one most visitors book. Pool, restaurant, beach access, tours arranged. Mostly along the Agoho–Yumbing stretch.
 
@@ -189,9 +203,9 @@ Standard hotel checklists don't cover island realities. These do.
 
 We're not going to pretend to be a neutral referee, so here is our position plainly.
 
-[Txaleta de Camiguin](/about) is a family-owned, fourteen-room boutique resort on a clifftop in **Puting Balas, Mambajao** — on the quiet end of the north-west coast, about fifteen minutes from the runway. *Txaleta* is Spanish for a small home, and that's the whole idea: **Filipino Heart, Spanish Soul**, luxury without pretense.
+[Txaleta de Camiguin](/about) is a family-owned, fourteen-room boutique resort on a clifftop in **Puting Balas, Mambajao** — on the island's east-facing cliffs, about fifteen minutes from the runway and seven kilometres past the town. *Txaleta* is Spanish for a small home, and that's the whole idea: **Filipino Heart, Spanish Soul**, luxury without pretense.
 
-What that looks like in practice: an **infinity pool that opens at sunrise** and appears to spill straight into the Bohol Sea; rooms with the water at eye level; **cliff-edge glamping** — a proper bed under canvas on a private deck above the sea; breakfast served beside the water; a Filipino-Spanish kitchen that welcomes walk-ins as well as guests; and hosts who will arrange your banca, your trek, your massage and your airport pickup before you've unpacked.
+What that looks like in practice: an **infinity pool that opens at sunrise** and appears to spill straight into the Bohol Sea; rooms with the water at eye level; **[cliff-edge glamping](/guides/glamping-in-camiguin)** — a proper bed under canvas on a private deck above the sea; breakfast served beside the water; a Filipino-Spanish kitchen that welcomes walk-ins as well as guests; and hosts who will arrange your banca, your trek, your massage and your airport pickup before you've unpacked.
 
 **We're a good fit if** you're a couple slowing down, a family that wants a table to gather around, a honeymooner, or a traveller who thinks *where you wake up* is a real part of the trip.
 
@@ -201,8 +215,8 @@ What that looks like in practice: an **infinity pool that opens at sunrise** and
 
 | You are… | We'd put you in | Why |
 |---|---|---|
-| A couple, first trip | **Premier Seaview Room** | Floor-to-ceiling glass, private terrace, White Island on the horizon |
-| Honeymooners | **Glamping Dome Tent** | Canvas at the cliff edge, en-suite rain shower, the sunset arriving inside the tent |
+| A couple, first trip | **Premier Seaview Room** | Floor-to-ceiling glass, private terrace, open sea all the way to the horizon |
+| Honeymooners | **Glamping Dome Tent** | Canvas at the cliff edge, en-suite rain shower, the sunrise arriving inside the tent |
 | A family | **Garden & Pool View Family Room** | Space, shade, and the pool a few steps away |
 | A family who wants the sea | **Ocean View Family Nook (lower deck)** | The water right there, with room for everyone |
 | Friends travelling together | **Villa Room with Shared Lanai** | Your own rooms, one shared veranda to sit out on |
@@ -233,7 +247,7 @@ If you're unsure: message the property first. How a small resort answers a quest
 ## Frequently asked questions
 
 ### What is the best place to stay in Camiguin?
-On the north-west coast of Mambajao, in a property small enough to arrange your days for you and with a kitchen worth eating at — on an island with few restaurants and no ride-hailing, those two things decide more than the star rating. Within that coast, pick the resort strip at Agoho–Yumbing for convenience, or the quieter clifftop end for views and calm.
+In Mambajao, in a property small enough to arrange your days for you and with a kitchen worth eating at — on an island with few restaurants and no ride-hailing, those two things decide more than the star rating. Then pick your coast: the resort strip at Agoho–Yumbing for convenience, the quieter north-west clifftops for sunsets, or the east-facing cliffs past the town for sunrise over open water and more quiet than either.
 
 ### Where is the best area to stay in Camiguin?
 The north-west coast of Mambajao — the barangays of Kuguita, Baylao, Naasag, Yumbing, Agoho and Bug-ong. It has the airport, almost all of the island's resorts and restaurants, the boats to White Island, and quick access to Ardent Hot Springs and Mt. Hibok-Hibok. Everywhere else on the ring road is better as a day trip than as a base.
@@ -251,10 +265,10 @@ Roughly ₱800–₱1,500 for a hostel or basic room, ₱1,500–₱2,800 for a 
 Near the airport, for almost everyone. Camiguin's airport at Mambajao sits on the same north-west coast as the resorts, the restaurants and the White Island boats. Benoni port is on the opposite side of the island, about 45 minutes to an hour away — worth a night only if you're sailing early or heading to Mantigue Island.
 
 ### Does Camiguin have luxury or boutique resorts?
-Yes, though on a small scale — this is an island of family-run properties rather than international chains. The boutique end is concentrated on the north-west coast of Mambajao and includes clifftop resorts with infinity pools, sea-view rooms and glamping. Expect design and personal service rather than large-resort facilities.
+Yes, though on a small scale — this is an island of family-run properties rather than international chains. The boutique end is concentrated in Mambajao — along the north-west resort strip and on the quieter east-facing cliffs past the town — and includes clifftop resorts with infinity pools, sea-view rooms and glamping. Expect design and personal service rather than large-resort facilities.
 
 ### Where should couples or honeymooners stay in Camiguin?
-On the quieter, clifftop end of the north-west Mambajao coast, where the land rises above the sea and the sunsets come in over open water. Look for sea-view rooms, private terraces or cliff-edge glamping, and a property small enough to arrange your days for you. Our [Camiguin honeymoon guide](/guides/camiguin-honeymoon) covers the rooms, the months and a five-day plan.
+On Mambajao's clifftop stretches, where the land rises above the sea — the north-west end for sunsets over open water from April to August, or the east-facing cliffs past the town for sunrise over it every morning of the year. Look for sea-view rooms, private terraces or cliff-edge glamping, and a property small enough to arrange your days for you. Our [Camiguin honeymoon guide](/guides/camiguin-honeymoon) covers the rooms, the months and a five-day plan.
 
 ### Is Camiguin good for families?
 Very. It's safe, quiet, short on traffic, and everything is close together. Stay on the north-west coast, choose a property with a pool as well as sea access, and pick family rooms over connecting doubles. The springs, the sandbar and the giant clam sanctuary all work brilliantly with children.
@@ -343,7 +357,7 @@ Come for the views. Stay for the feeling. Welcome home.
         {
           "@type": "Question",
           "name": "What is the best place to stay in Camiguin?",
-          "acceptedAnswer": { "@type": "Answer", "text": "On the north-west coast of Mambajao, in a property small enough to arrange your days for you and with a kitchen worth eating at. On an island with few restaurants and no ride-hailing, those two things decide more than the star rating. Within that coast, pick the resort strip at Agoho-Yumbing for convenience, or the quieter clifftop end for views and calm." }
+          "acceptedAnswer": { "@type": "Answer", "text": "In Mambajao, in a property small enough to arrange your days for you and with a kitchen worth eating at. On an island with few restaurants and no ride-hailing, those two things decide more than the star rating. Then pick your coast: the resort strip at Agoho-Yumbing for convenience, the quieter north-west clifftops for sunsets, or the east-facing cliffs past the town for sunrise over open water and more quiet than either." }
         },
         {
           "@type": "Question",
@@ -390,7 +404,7 @@ Come for the views. Stay for the feeling. Welcome home.
           "name": "Does Camiguin have luxury or boutique resorts?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, though on a small scale — this is an island of family-run properties rather than international chains. The boutique end is concentrated on the north-west coast of Mambajao and includes clifftop resorts with infinity pools, sea-view rooms and glamping. Expect design and personal service rather than large-resort facilities."
+            "text": "Yes, though on a small scale — this is an island of family-run properties rather than international chains. The boutique end is concentrated in Mambajao — along the north-west resort strip and on the quieter east-facing cliffs past the town — and includes clifftop resorts with infinity pools, sea-view rooms and glamping. Expect design and personal service rather than large-resort facilities."
           }
         },
         {
@@ -398,7 +412,7 @@ Come for the views. Stay for the feeling. Welcome home.
           "name": "Where should couples or honeymooners stay in Camiguin?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "On the quieter, clifftop end of the north-west Mambajao coast, where the land rises above the sea and the sunsets come in over open water. Look for sea-view rooms, private terraces or cliff-edge glamping, and a property small enough to arrange your days for you."
+            "text": "On Mambajao's clifftop stretches, where the land rises above the sea — the north-west end for sunsets over open water from April to August, or the east-facing cliffs past the town for sunrise over it every morning of the year. Look for sea-view rooms, private terraces or cliff-edge glamping, and a property small enough to arrange your days for you."
           }
         },
         {

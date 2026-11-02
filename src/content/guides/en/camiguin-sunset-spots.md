@@ -14,8 +14,8 @@ keywords:
   - "best sunset Philippines island"
 date: 2026-10-26
 author: "Txaleta de Camiguin"
-image: "/images/resort/sunset_bohol_sea.webp"
-imageAlt: "The sun going down over the Bohol Sea from a Camiguin clifftop, the water turning copper"
+image: "/images/resort/camiguin_coast_aerial.webp"
+imageAlt: "Camiguin's coast from the air, with the strait and the mountains of mainland Mindanao beyond"
 ---
 
 # Best Sunsets in Camiguin: Where to Stand, and When (2026)
@@ -24,13 +24,13 @@ Here is the thing that no guide to this island mentions, and it is the reason pe
 
 At nine degrees north, the point where the sun drops swings along the horizon by about forty-five degrees between December and June. On an island whose coasts face four different directions, that matters enormously. **It means the best sunset spot on Camiguin in the dry season is not the best sunset spot in the middle of the year**, and it means that if you stand on the wrong coast in February you will watch the light go out behind a volcano instead of into the sea.
 
-We have watched this from the same cliff for years. This is where to stand, in which month, and at what hour.
+We got this wrong ourselves, in the most permanent way available: our own cliff faces east. We watch the sunrise from the terrace and we drive for the sunset, like everybody else. This is where to stand, in which month, and at what hour.
 
-![The sun going down over the Bohol Sea from a Camiguin clifftop, the water turning copper](/images/resort/sunset_bohol_sea.webp)
+![Camiguin's coast from the air, with the strait and the mountains of mainland Mindanao beyond](/images/resort/camiguin_coast_aerial.webp)
 
 > **Quick answer:** **The island's single best sunset is at the Sunken Cemetery at Bonbon**, on the west coast — a cross standing alone in the sea with the sun going down behind it. It is free, it faces west, and it works in every month of the year. **The north coast around Agoho, Yumbing and Mambajao** gives you the sun dropping straight into open water **from roughly April to August**, when it sets north of due west; in the **December-to-February** dry season it sets further south and slips behind the island's own bulk, which is when the west coast wins outright. Be in position **forty minutes before** sunset, not five — the best colour here is often after the sun has gone. And one piece of local advice: **turn around.** Mt. Hibok-Hibok going pink behind you is frequently the better photograph.
 
-*Written by the family at Txaleta de Camiguin, on a west-facing clifftop above the Bohol Sea. Published October 2026.*
+*Written by the family at Txaleta de Camiguin, on an east-facing clifftop above the Bohol Sea. Published October 2026.*
 
 ## First, the thing about the horizon
 
@@ -52,7 +52,7 @@ This is also why the dry season, which is the best time for almost everything el
 |---|---|---|---|---|
 | **Sunken Cemetery, Bonbon** | West | West | All year | Free to view from shore |
 | **Walkway to the Old Volcano** | West | West, elevated | All year | Small fee |
-| **A north-coast clifftop** | North | North-west | April–August | Where you sleep |
+| **A north-coast clifftop** | North | North-west | April–August | Free, if you sleep there |
 | **Agoho / Yumbing beachfront** | North | North-west | April–August | Free |
 | **The southern coast, Guinsiliban** | South | West over mainland | All year | Free, and empty |
 | **Taguines Lagoon, Mahinog** | East | East — *sunrise* | All year | Free |
@@ -83,9 +83,7 @@ The Agoho–Yumbing–Naasag coast, where most of the island's good accommodatio
 
 **From April to August this is as good as the island gets**: the sun sets north of west and drops into open water, the sea turns copper, and you are holding a drink rather than standing in a car park. **From December to February** the disc sets further south, behind the land, and what you get is a long indirect glow over the water instead of a sunset with a sun in it. Beautiful, different, and worth knowing in advance.
 
-This is the view we have, so treat the recommendation with appropriate suspicion — but it is also why the properties on this coast are where they are, and the comparison by coast is in [where to stay in Camiguin](/guides/where-to-stay-in-camiguin).
-
-If a west-facing terrace is the reason you are choosing a room at all, the [Premier Seaview Suite](/book?room=premier-seaview-suite) and the [cliff-edge glamping](/book?room=ocean-view-glamping) are the two that put you at the edge of it.
+**This is not our coast, and the reason we are saying so matters.** We are on the other side of Mambajao, on an east-facing cliff, which makes us exactly the wrong people to sell you a sunset. If an evening on your own balcony with the sun going down in front of you is the thing you are booking for, book this coast rather than ours — the comparison is in [where to stay in Camiguin](/guides/where-to-stay-in-camiguin).
 
 ### 4. The Agoho and Yumbing beachfront — the same thing at sea level
 
@@ -114,6 +112,16 @@ The inland road and the rice fields between the coast and the volcano are where 
 The sandbar is the most photographed place on Camiguin and it is **a sunrise destination, not a sunset one.**
 
 The standard banca trips run at dawn, there is no shade, no facilities and no light out there once the sun is down, and the boats are drawn up on the beach by late afternoon. Some operators will take you out in the evening if conditions and arrangements allow — ask, do not assume — but the island's own rhythm puts you on that sandbar at 5:30am, which is what our [White Island guide](/guides/white-island-camiguin) recommends and why.
+
+## The trade nobody mentions: sunrise or sunset, not both
+
+Camiguin is small enough that people assume the coast they sleep on is a detail. On this island it decides which end of the day you get.
+
+- **The north-west coast** — Agoho, Yumbing, Naasag, where most of the good accommodation sits — gives you the sunset from your own balcony for roughly five months of the year, and an indirect glow for the rest. The sunrise comes up behind the volcano.
+- **The east-facing cliffs**, the stretch running from Mambajao town down toward Benoni, give you **the sunrise over open water every single day of the year.** The sunrise point here swings only between about 66° and 114°, and all of that is sea — there is no month when it comes up behind land. In exchange the sun sets behind the island's own bulk, and what you watch instead is Hibok-Hibok going rose-gold.
+- **Mambajao town** gives you neither, and puts you five minutes from both.
+
+**No balcony on this island gives you both ends of the day.** Decide which one you actually get up for, and book accordingly. We made that choice years ago and we made it for the mornings — which is the bias you should read the rest of this page with. The five tests we use to judge any clifftop property, ours included, are in [the clifftop guide](/guides/best-clifftop-resort-in-camiguin).
 
 ## How to actually watch a sunset here
 
@@ -186,7 +194,7 @@ The west coast is the reliable answer, because it faces the setting sun in every
 For the sea and the sunset, a clifftop on the north-west coast or the shore at the Sunken Cemetery. For the island itself, the Walkway to the Old Volcano, which adds elevation to the same west-facing horizon. And for the most underrated view on Camiguin: inland, at Mt. Hibok-Hibok turning rose-gold in the last ten minutes of light, which happens behind most people while they face the sea.
 
 ### Where do you watch the sunrise in Camiguin?
-The east coast: Taguines Lagoon in Mahinog, with still water and mainland Mindanao across the strait, or the White Island sandbar, which is the island's great dawn trip and the reason to get up at five. The east side of the island gets the first light; the west side gets the last.
+The east coast: Taguines Lagoon in Mahinog, with still water and mainland Mindanao across the strait, or the White Island sandbar, which is the island's great dawn trip and the reason to get up at five. If you are staying on the east-facing cliffs between Mambajao town and Benoni you do not have to go anywhere at all — the sunrise point here swings only between about 66 and 114 degrees, and all of it is open water, so it arrives over the sea every morning of the year. The east side of the island gets the first light; the west side gets the last.
 
 ### Is the Sunken Cemetery worth visiting at sunset?
 Yes — it is the difference between a five-minute photo stop and the most memorable half-hour on the island. In daylight it is a cross in the water seen from the road. At sunset the light comes sideways through the church ruins, the site empties and quietens, and paddling out to the cross as the colour turns is what guests tend to describe first afterwards.
@@ -205,11 +213,11 @@ Very. There is little light pollution anywhere on the island, and on a clear nig
 
 ## Come home to Camiguin
 
-Our bias is total: we built a terrace on a cliff above the Bohol Sea because of what happens there at six o'clock, and we would rather you saw it from here than anywhere else.
+Our bias is total, and it points the other way: we built a terrace on a cliff above the Bohol Sea because of what happens there at six in the *morning*. The sunset belongs to the west coast, and we will happily point you at it.
 
 But if you take one thing from this page, take the drive to Bonbon. Stand on that shore while the light goes sideways through the ruins and the cross turns black against the water. It costs nothing, it belongs to everybody, and it is the best thing this island does.
 
-Then come back, and we will have something cold waiting on the terrace while the stars come out. [Browse our rooms](/accommodation), [book your stay direct](/book) — the [cliff-edge glamping](/book?room=ocean-view-glamping) puts you at the very edge of it — or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
+Then come back, and we will have something cold waiting on the terrace while the stars come out. [Browse our rooms](/accommodation), [book your stay direct](/book) — the [cliff-edge glamping](/book?room=ocean-view-glamping) puts you where the first light lands — or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 
 Be there forty minutes early. Welcome home.
 
@@ -228,7 +236,7 @@ Be there forty minutes early. Welcome home.
       "datePublished": "2026-10-26",
       "dateModified": "2026-10-26",
       "inLanguage": "en",
-      "image": "https://www.txaletadecamiguin.com/images/resort/sunset_bohol_sea.webp",
+      "image": "https://www.txaletadecamiguin.com/images/resort/camiguin_coast_aerial.webp",
       "keywords": "best sunset in Camiguin, sunset spots Camiguin, best view in Camiguin, Camiguin viewpoint, Sunken Cemetery sunset, where to watch the sunset in Camiguin, Camiguin sunrise, best sunset Philippines island",
       "articleSection": "Travel Guides",
       "author": { "@type": "Organization", "name": "Txaleta de Camiguin", "url": "https://www.txaletadecamiguin.com" },
@@ -290,7 +298,7 @@ Be there forty minutes early. Welcome home.
         {
           "@type": "Question",
           "name": "Where do you watch the sunrise in Camiguin?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The east coast: Taguines Lagoon in Mahinog, with still water and mainland Mindanao across the strait, or the White Island sandbar, which is the island's great dawn trip and the reason to get up at five. The east side of the island gets the first light; the west side gets the last." }
+          "acceptedAnswer": { "@type": "Answer", "text": "The east coast: Taguines Lagoon in Mahinog, with still water and mainland Mindanao across the strait, or the White Island sandbar, which is the island's great dawn trip and the reason to get up at five. If you are staying on the east-facing cliffs between Mambajao town and Benoni you do not have to go anywhere at all — the sunrise point here swings only between about 66 and 114 degrees, and all of it is open water, so it arrives over the sea every morning of the year. The east side of the island gets the first light; the west side gets the last." }
         },
         {
           "@type": "Question",
