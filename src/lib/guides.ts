@@ -234,6 +234,24 @@ export function getGuides(locale: Locale): Guide[] {
 }
 
 /**
+ * The locales that have at least one translated article.
+ *
+ * The /guides hub is the one page that is NOT simply "translated everywhere":
+ * it is a list, and in a language with nothing in it the page is a banner, a
+ * heading and no content. So the hub follows its articles — the footer does
+ * not link it and the sitemap does not advertise it where the list would be
+ * empty. Translate one article into a locale and both come back on their own.
+ */
+export function localesWithGuides(): Locale[] {
+  return locales.filter((l) => getGuides(l).length > 0);
+}
+
+/** Does this locale have any guides at all? */
+export function hasGuides(locale: Locale): boolean {
+  return getGuides(locale).length > 0;
+}
+
+/**
  * One guide by its slug **in that locale**.
  *
  * Translated slugs are written in the target script (/ko/guides/카미긴-여행-시기),

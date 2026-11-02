@@ -15,9 +15,13 @@ import { LanguageSwitcher, LanguageLinks } from "./language-switcher";
 
 // Localize the nav model for the active locale: native labels from the UI
 // dictionary + locale-prefixed hrefs (including every link inside a mega).
-function localizeNav(lang: Locale): NavItem[] {
+//
+// `showGuides` is false in the languages with no translated articles, where
+// /guides renders a banner over an empty list. This component is client-side
+// and cannot read the guide files itself, so the layout decides and passes it.
+function localizeNav(lang: Locale, showGuides: boolean): NavItem[] {
   const labels = ui[lang].nav;
-  return nav.map((n) => ({
+  return nav.filter((n) => n.href !== "/guides" || showGuides).map((n) => ({
     ...n,
     label: labels[n.href] ?? n.label,
     href: localePath(lang, n.href),
@@ -98,9 +102,9 @@ function DesktopNavItem({
   );
 }
 
-export function Navbar({ lang = "en" }: { lang?: Locale }) {
+export function Navbar({ lang = "en", showGuides = true }: { lang?: Locale; showGuides?: boolean }) {
   const t = ui[lang];
-  const localizedNav = localizeNav(lang);
+  const localizedNav = localizeNav(lang, showGuides);
   const leftNav = localizedNav.slice(0, 3);
   const rightNav = localizedNav.slice(3);
   const [scrolled, setScrolled] = useState(false);

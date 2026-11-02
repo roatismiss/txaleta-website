@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { localePath, type Locale } from "@/lib/i18n";
+import { hasGuides } from "@/lib/guides";
 import { ui } from "@/locales/ui";
 import { FacebookIcon, InstagramIcon, TikTokIcon } from "./icons";
 import { LogoWordmark } from "./logo";
@@ -18,6 +19,11 @@ const explore: { navKey: string; href: string }[] = [
   { navKey: "/community", href: "/community" },
   { navKey: "/gallery", href: "/gallery" },
 ];
+
+// The guides hub is a list of translated articles, so in a language that has
+// none of them the link leads to an empty page. Drop it there rather than
+// sending a French reader to a banner with nothing under it; it returns by
+// itself the moment one article is translated.
 
 /** localePath that keeps in-page anchors ("/#dining") working per locale. */
 function localeHref(lang: Locale, href: string): string {
@@ -58,7 +64,9 @@ export function Footer({ lang = "en" }: { lang?: Locale }) {
           <div>
             <h3 className="label text-[10px] text-[#9db8ef]">{t.footer.explore}</h3>
             <ul className="mt-5 space-y-3">
-              {explore.map((l) => (
+              {explore
+                .filter((l) => l.navKey !== "/guides" || hasGuides(lang))
+                .map((l) => (
                 <li key={l.href}>
                   <Link href={localeHref(lang, l.href)} className="text-sm text-white/65 transition-colors hover:text-white">
                     {t.nav[l.navKey]}

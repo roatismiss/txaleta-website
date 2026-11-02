@@ -12,6 +12,7 @@ import {
   type Locale,
 } from "@/lib/i18n";
 import { Navbar } from "@/components/navbar";
+import { hasGuides } from "@/lib/guides";
 import { Footer } from "@/components/footer";
 import { ChatbotEmbed } from "@/components/chatbot-embed";
 import { AnalyticsBeacon } from "@/components/analytics-beacon";
@@ -121,7 +122,7 @@ export default async function RootLayout({
         />
         <SplashScreen />
         <MenuProvider>
-          <Navbar lang={locale} />
+          <Navbar lang={locale} showGuides={hasGuides(locale)} />
           <main className="flex-1">{children}</main>
           <Footer lang={locale} />
           {/* Concierge chatbot stays on in every phase — it only answers

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
-import { getGuides, getGuideAlternates } from "@/lib/guides";
+import { getGuides, getGuideAlternates, localesWithGuides } from "@/lib/guides";
 import { locales, localeTags, localePath, defaultLocale, type Locale } from "@/lib/i18n";
 
 // Every route × every locale, each entry carrying its hreflang alternates so
@@ -62,7 +62,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/about", lastModified: on("/about"), changeFrequency: "monthly", priority: 0.7 },
     { path: "/community", lastModified: on("/community"), changeFrequency: "monthly", priority: 0.7 },
     { path: "/gallery", lastModified: on("/gallery"), changeFrequency: "monthly", priority: 0.6 },
-    { path: "/guides", lastModified: guidesUpdated, changeFrequency: "weekly", priority: 0.8 },
     { path: "/book", lastModified: on("/book"), changeFrequency: "monthly", priority: 0.9 },
   ];
 
@@ -82,6 +81,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages },
     }));
   });
+
+  // The /guides hub is not a fixed page: it is a list, so it exists only where
+  // the list has something in it. /fr/guides, /de/guides and /zh/guides render
+  // a banner and nothing else today, and advertising three empty collection
+  // pages — with hreflang swearing they are translations of a page holding 37
+  // articles — is the kind of thin content we would flag on anyone else's site.
+  // Translate one article into a locale and its hub reappears here by itself.
+  const hubLocales = localesWithGuides();
+  const hubLanguages = Object.fromEntries(
+    hubLocales.map((l) => [localeTags[l], `${site.url}${localePath(l, "/guides")}`])
+  );
+  const hubEntries = hubLocales.map((locale) => ({
+    url: `${site.url}${localePath(locale, "/guides")}`,
+    lastModified: guidesUpdated,
+    changeFrequency: "weekly" as const,
+    priority: locale === defaultLocale ? 0.8 : 0.6,
+    alternates: { languages: hubLanguages },
+  }));
 
   // Guides are different: each article exists only in the languages it has
   // actually been translated into, and every translation has its OWN slug. So
@@ -106,5 +123,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  return [...staticEntries, ...guideEntries];
+  return [...staticEntries, ...hubEntries, ...guideEntries];
 }

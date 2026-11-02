@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { pageAlternates, type Locale } from "@/lib/i18n";
+import { type Locale } from "@/lib/i18n";
 import { getPageSeo } from "@/locales/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { getGuides } from "@/lib/guides";
+import { getGuides, localesWithGuides } from "@/lib/guides";
 import { site } from "@/lib/site";
 import { websiteNode, organizationNode, schemaId } from "@/lib/schema";
 import { JsonLd } from "@/components/json-ld";
@@ -24,7 +24,8 @@ import { PaperGrain, PalmCorner } from "@/components/brand-texture";
 const meta: Metadata = {
   title: "Camiguin Travel Guides",
   description:
-    "Honest, first-hand Camiguin travel guides from the family at Txaleta — how to get here from Cebu, a day-by-day itinerary, Camiguin vs Siquijor, and the best islands in the Philippines.",};
+    "Honest, first-hand Camiguin travel guides from the family at Txaleta — how to get here from Cebu, a day-by-day itinerary, Camiguin vs Siquijor, and the best islands in the Philippines.",
+};
 
 export default async function GuidesIndexPage({ params }: PageProps<"/[lang]">) {
   const { lang: rawLang } = await params;
@@ -125,10 +126,31 @@ export default async function GuidesIndexPage({ params }: PageProps<"/[lang]">) 
 export async function generateMetadata({ params }: PageProps<"/[lang]">): Promise<Metadata> {
   const { lang } = await params;
   const seo = getPageSeo(lang as Locale, "/guides");
+  const hubs = localesWithGuides();
   return {
     ...meta,
     ...(seo ? { title: seo.title, description: seo.description } : {}),
     ...(seo?.keywords ? { keywords: seo.keywords } : {}),
-    alternates: pageAlternates(lang as Locale, "/guides"),
+    // The hub exists only in the languages that actually have articles. A
+    // locale with an empty list gets a canonical and no hreflang cluster, and
+    // is kept out of the index: the page still works if someone types the URL,
+    // but we are not claiming it is a translation of a hub holding 37 guides.
+    // See localesWithGuides() in lib/guides.ts.
+    alternates: {
+      canonical: localePath(lang as Locale, "/guides"),
+      ...(hubs.includes(lang as Locale)
+        ? {
+            languages: {
+              ...Object.fromEntries(
+                hubs.map((l) => [localeTags[l], localePath(l, "/guides")])
+              ),
+              "x-default": localePath("en", "/guides"),
+            },
+          }
+        : {}),
+    },
+    ...(hubs.includes(lang as Locale)
+      ? {}
+      : { robots: { index: false, follow: true } }),
   };
 }
