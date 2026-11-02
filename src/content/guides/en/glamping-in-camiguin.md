@@ -49,6 +49,22 @@ So the honest test for any glamping listing anywhere is four questions:
 
 Our domes answer: yes, yes, yes, and **none — it is sea air through the dome, and that is the deal.** We would rather lose the booking than have you find out at eleven at night.
 
+## Why a dome, and not a tent
+
+Nobody asks this and it is the most interesting thing about the structure, so here it is.
+
+**A dome is a sphere cut off at the floor, and a sphere encloses the most space for the least skin.** Every consequence below follows from that one fact.
+
+**Wind.** A ridge tent presents a flat side to the weather, and a flat side is a sail. A dome has no flat anywhere — wind divides around it and the load spreads through the whole frame instead of concentrating on two poles and a guy line. On an exposed cliff, which is where you want to be for the view and the worst place to be in a blow, that is not a design flourish. It is the reason the thing can be there at all.
+
+**Usable floor.** In a ridge tent you can only stand along the spine; the walls fall away and the edges of the floor are good for luggage. A dome holds its height much closer to the perimeter, so a bed does not have to sit in the middle and the floor area on the plan is roughly the floor area you can use.
+
+**Air.** Warm air collects at the apex, which on a dome is a single high point rather than a long ridge, so venting at the top moves the whole volume. This matters more than it sounds in the tropics, and it is the reason the next section is a refusal rather than an apology.
+
+**And the sky.** This is the part people actually book it for. Lying flat on your back in a ridge tent you are looking at fabric a metre from your face. In a dome you are looking at the apex, which means the overhead surface is the thing above you rather than beside you — and when that surface is clear, you are in the sky rather than looking out at it.
+
+**The test, if you are booking glamping anywhere:** ask what shape the structure is and how it is anchored. "Dome" and "safari tent" and "bell tent" are three genuinely different products with three different relationships to weather, and the listing will usually tell you only the word.
+
 ## Why Camiguin has almost no glamping
 
 Camiguin is a small island — 238 square kilometres, around ninety thousand people — and its accommodation grew up as family-run beach resorts along one stretch of the north-west coast. That is a sensible thing to build and it is what the market asked for.
@@ -76,7 +92,7 @@ Glamping is one row in this table. If you came here searching for somewhere that
 
 This is the part we can describe first-hand.
 
-**Late afternoon.** You arrive at the deck and the first thing most people do is stop talking. The dome sits at the cliff edge facing open sea, so there is nothing in the frame but water, the low green dot of Mantigue Island to the south-east, and the mountains of mainland Mindanao along the southern horizon in clear weather.
+**Late afternoon.** You arrive at the deck and the first thing most people do is stop talking. The dome sits at the cliff edge **forty metres above the Bohol Sea**, facing open water, which puts the horizon about **twenty-two kilometres out** — roughly five times what you see standing on a beach. There is nothing in the frame but sea, the low green dot of Mantigue Island to the south-east, and the mountains of mainland Mindanao along the southern horizon in clear weather. We work through why that height changes the view, and not just its distance, in the [clifftop guide](/guides/best-clifftop-resort-in-camiguin).
 
 **Six o'clock.** This is the hour we lose and we may as well say it here. **We face east, so the sun does not set in front of you** — it goes down behind the island. What happens instead is that the sea below turns from blue to pewter, the sky over the water goes rose, and Mt. Hibok-Hibok catches the last gold behind the tent. If a sun dropping into the water from your own deck is the specific picture in your head, that is the north-west coast, and our [sunset guide](/guides/camiguin-sunset-spots) will tell you exactly where to stand for it.
 
@@ -87,6 +103,18 @@ This is the part we can describe first-hand.
 **Half past five.** The reason the dome exists. The sunrise point here swings only between about 66° and 114° across the whole year, and every degree of it is open water, so **there is no month when the sun comes up behind land.** The light arrives through the canvas and into the tent, and you do not have to go anywhere, set an alarm for a boat, or hope.
 
 **Breakfast.** Served over the water. The [restaurant](/dining) is open from eight, and takes walk-ins as well as guests.
+
+## The one thing we refuse to add, and why
+
+**There is no air conditioning in the domes, we are not going to install any, and that is a decision rather than a shortfall.**
+
+The straightforward version: you cannot air-condition a tent. You can only do one of two things to it. You can insulate and seal it, at which point it has stopped being a tent and has become a small room with canvas wallpaper — and everything you came for, the air, the sound of the sea, the weather happening a few feet away, is on the wrong side of the envelope. Or you can fit a unit that fights the outside air continuously, which roars, which is why you would be paying extra to stop hearing the thing you booked.
+
+So the dome is cooled the way a dome on a cliff is supposed to be cooled: **the sea breeze, which on this edge runs most of the day and nearly every night.** The siting is the climate control. It is also the reason the domes are where they are rather than in a nicer spot further back from the drop.
+
+**And there are nights it is not enough.** In the still, humid weeks — typically the end of the dry season running into the first rains, with afternoons at 31–32 °C — the air stops moving and a canvas room gets warm and stays warm. That is not a rare event and we are not going to pretend it away. It is the single most common reason a guest would be happier in a room, and the reason we ask.
+
+If a thermostat is part of what you mean by comfortable, book a room. You will have a better week, the view from it is identical, and we would rather have that conversation now than at eleven o'clock at night.
 
 ## The honest bit
 
@@ -103,6 +131,22 @@ Every section above is the case for it. This is the case against, and it is the 
 **It is two people, and it is not for small children.** The dome sleeps two, and a cliff-edge deck with a toddler is a holiday spent watching rather than resting. We say the same about the cliff generally in [Camiguin with kids](/guides/camiguin-with-kids).
 
 **And it is not a cheap bed.** Glamping is not budget accommodation here or anywhere. If what you want is an unusual, inexpensive night on Camiguin, a homestay in the south will give you a better story and cost a fraction.
+
+## How to actually sleep in a dome
+
+Most of this transfers to glamping anywhere warm, and nobody tells you any of it.
+
+**Open it up before dark, not when you get hot.** Canvas holds the afternoon's heat and a dome that was closed all day starts the night warm. Get the air moving through it while the sun is still up and you are working with the structure instead of against it.
+
+**Lie with your head toward the opening, not away from it.** Moving air over your head and shoulders is what does the work; air over your feet does almost nothing. It is a small adjustment and it is the difference between a warm night and an uncomfortable one.
+
+**Expect to wake at about four.** The breeze usually freshens before dawn and the temperature drops more than you think it will. This is why a light layer matters far more here than a thicker blanket — you want something you can pull over your shoulders at four and push off at six.
+
+**Decide the night before whether you want the sunrise.** If you do, leave the opening clear and do not bring an eye mask; the light will handle the alarm. If you do not, bring one, because the light arrives at around half past five and it is not subtle.
+
+**Do your packing before dark.** Finding a charger by torchlight on a cliff deck is an avoidable category of problem.
+
+**And accept the first night is the worst one.** Almost everybody sleeps lightly the first night under canvas and properly the second, which is one more argument for two nights in the dome rather than one.
 
 ## Glamping or a room? The comparison that sometimes costs us the booking
 
@@ -153,6 +197,9 @@ Yes, though very little of it. The island's accommodation grew up as family-run 
 
 ### What is a glamping dome tent like to sleep in?
 A proper queen bed with real linen, an en-suite rain shower, power, lighting and WiFi, on a private deck at the cliff edge. What you give up is the sealed, climate-controlled box that a hotel room is: there is no air conditioning, the dome is cooled by sea air, and rain on canvas is loud. Most guests describe the night sky through the dome as the thing they remember longest.
+
+### Why are glamping tents dome-shaped?
+Because a dome is a sphere cut off at the floor, and that single fact decides everything else. Wind divides around it instead of striking a flat side, and the load spreads through the whole frame rather than two poles and a guy line, which is what makes an exposed cliff possible at all. It holds its height close to the perimeter, so the floor area on the plan is roughly the floor area you can use. Warm air gathers at one apex, so venting the top moves the whole volume. And lying on your back you are looking at that apex, which is why the sky is above you rather than through a door.
 
 ### Does glamping in Camiguin have air conditioning?
 Ours does not, and that is by design rather than omission — the domes are cooled by moving sea air, which on an exposed cliff is usually ample. In the still, humid weeks it is warm at night. If you sleep badly in heat, book a room with a thermostat instead; it is a better holiday and we would rather say so before you arrive.
@@ -247,6 +294,11 @@ Bring repellent. Welcome home.
           "@type": "Question",
           "name": "What is a glamping dome tent like to sleep in?",
           "acceptedAnswer": { "@type": "Answer", "text": "A proper queen bed with real linen, an en-suite rain shower, power, lighting and WiFi, on a private deck at the cliff edge. What you give up is the sealed, climate-controlled box that a hotel room is: there is no air conditioning, the dome is cooled by sea air, and rain on canvas is loud. Most guests describe the night sky through the dome as the thing they remember longest." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are glamping tents dome-shaped?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Because a dome is a sphere cut off at the floor, and that single fact decides everything else. Wind divides around it instead of striking a flat side, and the load spreads through the whole frame rather than two poles and a guy line, which is what makes an exposed cliff possible at all. It holds its height close to the perimeter, so the floor area on the plan is roughly the floor area you can use. Warm air gathers at one apex, so venting the top moves the whole volume. And lying on your back you are looking at that apex, which is why the sky is above you rather than through a door." }
         },
         {
           "@type": "Question",

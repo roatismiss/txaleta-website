@@ -60,6 +60,32 @@ But where old lava flows met the sea and cooled, the land stops abruptly instead
 
 This matters for one practical reason: **a clifftop room on Camiguin is a scarce thing, not a category.** The island has perhaps a handful of properties that genuinely pass test 1. When a booking site returns forty results for "Camiguin sea view", it is describing the direction the window faces, not the drop below it.
 
+## What forty metres actually changes
+
+This is the part worth understanding properly, because it is the difference between a view and a *better* view, and almost nobody selling one will explain it to you.
+
+**Elevation does not simply let you see further. It changes what is in the frame.**
+
+The distance to the horizon over water follows a rule you can do in your head:
+
+> **Distance to the horizon, in kilometres ≈ 3.57 × the square root of your height above the water, in metres.**
+
+Run it on the two ends of this island:
+
+| Where you are standing | Height | Horizon |
+|---|---|---|
+| On the sand at Agoho | about 1.7 m | **4.7 km** |
+| A first-floor balcony | about 6 m | **8.7 km** |
+| A clifftop terrace here | **40 m** | **22.6 km** |
+
+**That is roughly five times as much sea, on the same island, on the same afternoon.** And it is not just quantity. A beach view is a wall of water a few kilometres out, which means weather arrives without warning. A clifftop view is an arc of open ocean wide enough to have *different weather in different parts of it* — rain falling in one place and not another, a squall crossing left to right over an hour, light moving across the surface in bands. You watch systems instead of surface.
+
+Height also changes the geometry of everything inside that arc. From sea level a boat is a silhouette against a line. From forty metres you are looking **down** onto the water, so the boat sits on a plane, and the pale shoal and the darker deep water separate into two different colours instead of one.
+
+**The test you can run on anybody:** take a property's claimed height, square-root it, multiply by 3.57, and you know how much sea it is actually selling. Then look at its photographs and see whether they agree. A listing showing a horizon three kilometres out while describing a dramatic clifftop setting is doing something to you.
+
+**And the honest limit.** Height does nothing at all for *detail*. Everything is further away, which is why nobody photographs a turtle from a cliff and why the snorkelling conversation happens at sea level. What elevation buys is scale. What it costs is intimacy with the water. That is the entire trade, and the rest of this page is just working out which side of it you are on.
+
 ## Where the cliffs are, and what each coast gives you
 
 | Coast | What is there | The hour it gives you | Reliable? |
@@ -77,13 +103,25 @@ The first is that the sunset on Camiguin is seasonal from everywhere except the 
 
 The second is that **the sunrise has no such problem.** The sunrise point swings between about 66° and 114°, and from the eastern cliffs every degree of that is open sea. There is no month when it comes up behind land, no season when it disappoints, and no need to drive anywhere at six in the morning.
 
+## The beach coast is not the consolation prize
+
+Worth saying plainly, by a property that would do better commercially not saying it.
+
+**Camiguin's north-west coast does something we cannot do, and it does it better than we do anything.** A few kilometres of dark volcanic sand with bancas drawn up on it waiting for the morning run to White Island, restaurants you can walk to, dive shops, local families in the shallows at six in the evening. You step out of your room into the sea. For a first visit, with children, or on a short trip, that is not a compromise — it is the correct choice, and we send people there.
+
+**The black sand is not a defect either.** Camiguin is a young volcanic island and its beaches are made of what seven volcanoes gave them. Dark sand holds heat, which is a real nuisance at midday and the reason people arrive assuming it is second-rate. It is also inseparable from the things that *do* make this island worth the flight: the reefs sitting close inshore, the springs, the soil the lanzones grow in. We put Camiguin's sand next to Boracay's honestly, with their numbers beside ours, in the [comparison](/guides/camiguin-vs-boracay).
+
+**And the island's two best views belong to nobody.** The Sunken Cemetery at Bonbon as the light goes, and the White Island sandbar at dawn. Both are free. No resort on Camiguin owns a view that beats either, ours emphatically included, and a page about clifftop resorts that did not say so would be a brochure with a table in it.
+
+What a cliff is actually for is narrower than the marketing suggests. It is for people who would rather look at the sea than be in it, and who want the morning more than the afternoon. If that is not you, the sand is right there and it is excellent.
+
 ## Our clifftop, run through all five tests
 
 Now the part where we stop being neutral.
 
 ### Test 1 — Real height: pass
 
-[Txaleta de Camiguin](/about) is fourteen rooms on a cliff at Puting Balas, in Mambajao, with the Bohol Sea directly below. The sea-view rooms and the [cliff-edge glamping](/book?room=ocean-view-glamping) put the water below your own deck rather than across a lawn, and the [infinity pool](/accommodation) is built at the edge, so its surface reads against the open sea rather than against a hedge.
+[Txaleta de Camiguin](/about) is fourteen rooms on a cliff at Puting Balas, in Mambajao, **forty metres above the Bohol Sea**, with the water directly below. The boats land underneath us — it is how the kitchen gets the day's catch, and it is also why we can give you a number rather than an adjective. The sea-view rooms and the [cliff-edge glamping](/book?room=ocean-view-glamping) put the water below your own deck rather than across a lawn, and the [infinity pool](/accommodation) is built at the edge, so its surface reads against the open sea rather than against a hedge.
 
 This is the test that is easiest to verify from photographs and hardest to fake, which is why it is first. Look at any property's pool shot: if the far lip of the pool meets sea, the pool is on the edge. If it meets vegetation, it is not.
 
@@ -119,6 +157,20 @@ We are seven kilometres east of Mambajao Poblacion, which is far enough that the
 
 The island caveat applies everywhere on Camiguin equally: roosters start before the sunrise does, and a *fiesta* in a nearby barangay is audible and absolutely worth being woken up by. Nobody on this island will promise you silence. Anybody who does has not spent a December here.
 
+### The one thing we did on purpose that every brochure on this island would object to
+
+**We built for the morning, on an island that sells evenings.**
+
+Every resort brochure in the Philippines leads with a sunset. It is the most reliable image in tropical hospitality, it photographs beautifully, and it sells rooms. Building a terrace that structurally cannot produce one is, commercially, a strange decision.
+
+We made it anyway, and the reasoning has two halves.
+
+**The first is reliability.** A sunset from this island is seasonal and a sunrise is not. A north-west-facing terrace puts the sun into the water for roughly five months of the year and offers an indirect glow for the other seven. An east-facing one delivers every morning without exception, because the geometry has no off-season. Given the choice between owning the photogenic half of the day and the dependable half, we took the dependable one.
+
+**The second is when it happens to you.** A sunset is the end of a day you have spent driving the ring road, climbing to a waterfall and swimming; most people watch it tired and half-finished. A sunrise starts the day instead — and Camiguin at six in the morning, before the heat and before the road fills, is the best version of this island there is. The cliff hands you that one without asking you to do anything about it.
+
+It is still a trade, and you should price it honestly: we gave up the single most saleable thirty minutes in the hospitality business, and on three hundred and sixty-five mornings a year we think we came out ahead.
+
 ## The scorecard, without the adjectives
 
 | Test | Us | The NW beach strip | The NW cliffs |
@@ -144,6 +196,20 @@ Not a sales list — a mapping of the five tests onto actual doors.
 | Shade and a pool rather than the edge | **Garden & Pool View Family Room** | Quieter, cooler, steps from the water that is actually swimmable |
 
 Live rates and what is genuinely free are on the [booking page](/book) — that list updates as rooms sell, which this page does not.
+
+## How to actually watch a sunrise here
+
+Shorter than it sounds, and most of it transfers to any east-facing coast anywhere.
+
+**Be awake twenty minutes before the sun, not at it.** Sunrise here runs roughly 5:15 to 5:45 all year, because this close to the equator day length barely moves. The twenty minutes *before* the disc clears the water are when the sky does the work — the band of rose above the horizon, the sea going black to pewter to blue. Set an alarm for the sunrise itself and you arrive for the least interesting part of it.
+
+**You do not have to go anywhere.** This is the whole argument for the coast and it is easy to undervalue until you have done the alternative: no boat booked the night before, no drive on an unlit road, no standing somewhere hoping.
+
+**Turn round at least once.** First light reaches Mt. Hibok-Hibok before it reaches the sea, and the volcano goes grey to rose while every single person faces east. It is the sunset trick in reverse and almost nobody does it.
+
+**Coffee is the genuine obstacle.** Kitchens on this island open at eight, ours included. If you intend to be up at five, say so the night before.
+
+**Then go back to bed.** That is not a failure of commitment, it is the correct use of a holiday, and it is the real reason a sunrise you can see from the bed beats one you have to travel for.
 
 ## How to judge any clifftop property from its own photographs
 
@@ -200,6 +266,9 @@ Yes, at a small number of the clifftop properties, ours among them. The test wor
 
 ### What is the difference between a sea-view room and a clifftop room?
 A sea view is the direction a window faces. A clifftop room is a sea view with a drop under it, which changes three things: the horizon sits lower in the frame so you see much more water, you can hear the sea, and nothing can be built between you and it. Plenty of rooms sold as sea view on this island are on flat ground a few hundred metres inland, which is pleasant and is not the same thing.
+
+### How far can you see from a clifftop hotel?
+Further than most people expect, and there is a rule you can apply anywhere: the distance to the horizon in kilometres is roughly 3.57 times the square root of your height above the water in metres. Standing on a beach at about 1.7 metres you see 4.7 km. From a first-floor balcony at 6 metres, 8.7 km. From a terrace 40 metres up, 22.6 km — about five times as much sea. Height also changes what is *in* the frame rather than only how far it extends, because you are looking down onto the water instead of across it, so shoals and deep water separate into different colours.
 
 ### How far is the east coast of Camiguin from everything?
 About seven kilometres from Mambajao town and the restaurants, around five from Benoni ferry port, and roughly six and a half from Mantigue Island — so it is nearer to the south-east of the island and further from White Island and the north-west strip. On an island with a sixty-four-kilometre ring road, "far" is a relative term: the full circuit is a comfortable day from any bed on it.
@@ -306,6 +375,11 @@ The sun comes up over the water at about half past five. Welcome home.
           "@type": "Question",
           "name": "What is the difference between a sea-view room and a clifftop room?",
           "acceptedAnswer": { "@type": "Answer", "text": "A sea view is the direction a window faces. A clifftop room is a sea view with a drop under it, which changes three things: the horizon sits lower in the frame so you see much more water, you can hear the sea, and nothing can be built between you and it. Plenty of rooms sold as sea view on this island are on flat ground a few hundred metres inland, which is pleasant and is not the same thing." }
+        },
+        {
+          "@type": "Question",
+          "name": "How far can you see from a clifftop hotel?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Further than most people expect, and there is a rule you can apply anywhere: the distance to the horizon in kilometres is roughly 3.57 times the square root of your height above the water in metres. Standing on a beach at about 1.7 metres you see 4.7 km. From a first-floor balcony at 6 metres, 8.7 km. From a terrace 40 metres up, 22.6 km, about five times as much sea. Height also changes what is in the frame rather than only how far it extends, because you are looking down onto the water instead of across it, so shoals and deep water separate into different colours." }
         },
         {
           "@type": "Question",
