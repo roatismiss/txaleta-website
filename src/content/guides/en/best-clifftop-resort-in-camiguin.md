@@ -24,7 +24,7 @@ imageAlt: "A clifftop infinity pool above the Bohol Sea at Txaleta de Camiguin, 
 
 # The Best Clifftop Resort in Camiguin: An Honest Guide (2026)
 
-**The best clifftop resort in Camiguin is the one that faces east.** That is our claim, we are the people who own one, and we are going to prove it rather than ask you to take it on trust.
+**The best clifftop resort in Camiguin is ours, and the reason is a compass bearing: we face east, so the sun comes up out of the sea in front of the rooms on every morning of the year.** That is our claim, we are the people who own the place, and we are going to prove it rather than ask you to take it on trust.
 
 Here is how. Below are **five tests that separate a genuine clifftop from a garden with a sea view** — real height, open horizon, the hour your orientation actually gives you, water access, and noise. They take about a minute each, you can run them on any property's own photographs before you book, and they are not ours. They are simply what a view is made of.
 
@@ -42,7 +42,7 @@ Run these in order. The first two decide whether a property is actually on a cli
 
 **1. Real height, from where you sleep.** Not from the restaurant, not from a drone shot, not from a viewpoint you have to walk to. Can you see the water *directly below you* from the bed or the terrace of the room you are booking? A great many "clifftop" properties are on raised ground several hundred metres inland, which is a sea view, not a cliff.
 
-**2. An open horizon, measured in degrees.** Count how much uninterrupted sea the room looks at. A headland or a neighbouring roof taking a third of the frame is the difference between a view and a glimpse. You can measure this from photographs: look at the edges, not the middle.
+**2. An open horizon, and a pass mark for it.** Count how much of the window is sea rather than land, roof or vegetation. **Two-thirds or better is a view; under half is a sea glimpse with a nice foreground**, whatever the listing calls it. You can judge this from photographs if you look at the edges of the frame rather than the middle, which is where the composition is hiding things.
 
 **3. The hour the orientation gives you.** A cliff faces one way. That decides whether you get sunrise, sunset, or neither — and, crucially, whether you get it *all year* or only for part of it. This is the test almost nobody applies and the one that changes the holiday most.
 
@@ -217,7 +217,7 @@ Useful whether or not you ever look at us. Four habits:
 
 **Look at the edges of the frame, not the middle.** Marketing photographs are composed to hide what is beside the view. If every shot is tightly cropped on water, ask what is being kept out.
 
-**Find the pool shot and look at the far lip.** Sea beyond it means the pool is on the edge. Trees, a wall or a roofline beyond it means the pool is set back, which usually means the rooms are too.
+**Find a photograph taken *from* the room, not of it.** Galleries are full of beds, and a bed tells you nothing. If there is no frame shot from inside the room looking out — or worse, if the only wide view in the gallery is a drone shot from somewhere nobody can stand — the view from the pillow is probably not the view being sold.
 
 **Check the shadows for the orientation.** A property photographed in warm low light with the sun *in front of the camera* over water is facing the sun. Whether that is the morning or the evening sun is exactly the question — and if the listing never says which, ask. We have seen properties use sunrise photographs to sell sunsets, and we did it ourselves on this website until recently.
 
