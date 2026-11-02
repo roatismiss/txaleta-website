@@ -165,7 +165,16 @@ export default async function AccommodationPage({ params }: PageProps<"/[lang]">
       {/* ── Into the guides (SEO_PLAN §5 rule 6) ── */}
       <GuideLinks
         lang={lang}
-        keys={["best-time-to-visit-camiguin", "camiguin-itinerary", "mambajao-camiguin"]}
+        // Six, not three: English fills two clean rows, and the locales that
+        // only have some of these translated still fill one.
+        keys={[
+          "where-to-stay-in-camiguin",
+          "best-clifftop-resort-in-camiguin",
+          "glamping-in-camiguin",
+          "camiguin-itinerary",
+          "best-time-to-visit-camiguin",
+          "mambajao-camiguin",
+        ]}
         kicker={t.guides.kicker}
         heading={t.guides.heading}
         intro={t.guides.intro}

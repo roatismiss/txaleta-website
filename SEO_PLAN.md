@@ -166,7 +166,43 @@ on four pages, "Is Camiguin worth visiting?" on three — each one mirrored into
 
 **Note on the "best places to visit in Camiguin" / "what to do in Camiguin" idea:** already owned by
 `things-to-do-in-camiguin`, which targets both as keywords. A second page on either is a §6 collision, not
-a new article.
+a new article. Same verdict for **"best places to stay in Camiguin"**, which is already a declared
+keyword on `where-to-stay-in-camiguin` (5,300 words, 13 FAQs).
+
+### November 2026 — two articles, and a factual correction that had to come first
+
+- **`best-clifftop-resort-in-camiguin`** — built on the mechanic that demonstrably works for
+  `best-paella-in-camiguin` (which now surfaces in ChatGPT answers): claim it outright, declare the
+  bias in the first paragraph, then hand the reader objective tests and submit to them in public.
+  Five tests of a clifftop — real height from the room, open horizon, the hour the orientation
+  gives you, water access, noise — and we fail one of them on the page. Targets "best view hotel
+  in Camiguin" and "clifftop hotel Camiguin", neither of which `where-to-stay` claims.
+- **`glamping-in-camiguin`** — merges the glamping category with "unique places to stay", so the
+  page answers both the narrow booking query and the broad one. Near-zero competition on-island.
+  The section arguing *against* booking it (no air conditioning, rain on canvas, wind, not for
+  children) is longer than the section selling it, which is the part that earns the citation.
+
+**⚠ Orientation correction (2 Nov 2026).** The site asserted throughout that the property sits on
+Camiguin's **north-west coast** with a **west-facing, sunset** outlook. It does not. The pin in
+`site.ts` (9.2120935, 124.7671187 — Google's own, confirmed on the property) is **10.4 km east of
+Hibok-Hibok**, 7 km from the poblacion and 5 km north of Benoni: an **east-facing cliff**. Booking
+corroborates the distance (7.1 km from Mambajao) and labels the property near Hubangon and Mahinog.
+
+At 9.21°N the sunrise azimuth runs **66°–114°**, all of it open water — so the sunrise is visible
+over the sea **every day of the year**, which is a stronger and more defensible claim than the
+seasonal sunset the copy had been making. Sunset runs 246°–294°, behind the island.
+
+Corrected across: `site.ts` (glamping description, evening dining story, location body, a
+placeholder testimonial), `dining.ts` and `about.ts` in **all six locales**, the `/dining` and
+`/gallery` metadata, and seven guides — `camiguin-sunset-spots` (byline, hero image, section 3,
+closing, plus a new section on the sunrise/sunset trade by coast), `where-to-stay-in-camiguin`
+(the resort was filed under Naasag/Kuguita; the east-facing cliffs are now a seventh area),
+`camiguin-honeymoon`, `best-time-to-visit-camiguin`, `mambajao-camiguin`, and
+`sunken-cemetery-camiguin` in EN/JA/KO, whose hero was our sunrise photo captioned as a sunset.
+
+**Still worth the client confirming:** the airport claim (`airportNote` says 15 minutes; Booking and
+Expedia both say a 20-minute drive / 6 miles), and whether there is any path down to the water from
+the cliff — test 4 of the clifftop article is currently answered as a loss.
 
 **Further backlog** if the cadence stays at 2/week: Camiguin from Manila · Camiguin from Cagayan
 de Oro · the 64km ring road self-drive guide · Camiguin in 2 days · solo travel in Camiguin ·

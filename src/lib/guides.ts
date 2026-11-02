@@ -80,6 +80,8 @@ const ORDER = [
   "camiguin-honeymoon",
   "camiguin-with-kids",
   "where-to-stay-in-camiguin",
+  "best-clifftop-resort-in-camiguin",
+  "glamping-in-camiguin",
   "things-to-do-in-camiguin",
   "white-island-camiguin",
   "mantigue-island-camiguin",
