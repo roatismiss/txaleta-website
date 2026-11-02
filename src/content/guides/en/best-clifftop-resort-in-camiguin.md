@@ -46,7 +46,7 @@ Run these in order. The first two decide whether a property is actually on a cli
 
 **3. The hour the orientation gives you.** A cliff faces one way. That decides whether you get sunrise, sunset, or neither — and, crucially, whether you get it *all year* or only for part of it. This is the test almost nobody applies and the one that changes the holiday most.
 
-**4. Whether you can reach the water.** A cliff is a view and a barrier at the same time. Ask plainly: is there a way down, and how long does it take? If there is not, ask what the property gives you instead.
+**4. Whether you can reach the water.** A cliff is a view and a barrier at the same time. Ask plainly: is there a way down, how long does it take, and what is at the bottom? “Beach access” on a clifftop listing can mean a private cove, a flight of steps, or a ten-minute drive. If there is no way down at all, ask what the property gives you instead.
 
 **5. What you hear at three in the afternoon.** On small islands the coast road usually runs along the top of the cliff, because that is where the flat land is. Noise is the most common unpleasant surprise in a sea-view room and the easiest one to ask about in advance.
 
@@ -103,11 +103,15 @@ In practical terms that means the thing most people drive somewhere to see happe
 
 If an evening sun dropping into the water in front of your balcony is the specific thing you are booking a holiday for, **book the north-west coast instead.** We would rather tell you that here than have you discover it on your second night.
 
-### Test 4 — Water access: this is the one we lose
+### Test 4 — Water access: a qualified pass, and read the qualification
 
-A cliff is a barrier. That is not a flaw in any particular property, it is what a cliff is, and every clifftop resort on this island faces the same arithmetic: you have bought elevation, and elevation is the opposite of walking into the sea.
+A cliff is a barrier. That is what a cliff is, and it is the arithmetic every clifftop property on this island has to answer: you have bought elevation, and elevation is the opposite of walking into the sea.
 
-What we have instead is the infinity pool, which is where people actually spend the afternoon, and a short run to everything wet on this half of the island. **If stepping off your terrace onto sand matters more to you than looking down at the water, the beach strip at Agoho and Yumbing is the honest answer, and it is a good one.** We say the same thing in [where to stay in Camiguin](/guides/where-to-stay-in-camiguin), where the coasts are compared properly.
+**We have a path down from the cliff**, which is more than most properties up here can say and is the reason this is a pass rather than the loss we expected it to be.
+
+**It is still not a walk-out beach, and we are not going to let that phrase do work it has not earned.** Going down is a walk down, and coming back up is a walk up, in heat. In practice the infinity pool is where guests spend the afternoon, and the path is something you do once or twice in a stay, usually early.
+
+**So: if stepping off your terrace straight onto sand is the thing you want, the beach strip at Agoho and Yumbing is the honest answer and it is a good one.** We say the same in [where to stay in Camiguin](/guides/where-to-stay-in-camiguin), where the coasts are compared properly. If you want the view, and you are content for the sea to be a short descent rather than a doorstep, this is the better side.
 
 ### Test 5 — Noise: pass, with the usual island caveat
 
@@ -122,10 +126,10 @@ The island caveat applies everywhere on Camiguin equally: roosters start before 
 | 1. Real height from the room | **Pass** | No — beach level | **Pass** |
 | 2. Open horizon | **Pass** | Partly — headlands | **Pass** |
 | 3. The hour, all year | **Sunrise, every day** | Sunset, Apr–Aug | Sunset, Apr–Aug |
-| 4. Water access | **Fail** — pool, not sand | **Pass** — step out | Fail |
+| 4. Water access | **Path down**, plus the pool | **Pass** — step out onto sand | Usually none |
 | 5. Quiet | Pass | Busiest stretch | Pass |
 
-**Three of five, one failed, one shared.** If you want the honest summary: we win the view and the morning, we lose the beach, and on the sunset we are not even in the race.
+**Four of five, one of them qualified, and one we do not contest at all.** The honest summary: we win the view and the morning, we have a way down to the water but not a beach you step onto, and on the sunset we are not even in the race.
 
 ## Which room, for which view
 
@@ -189,7 +193,7 @@ On the east-facing cliffs, yes, every morning of the year. At this latitude the 
 Decide by hour, not by scenery. The north-west coast gives you the sunset from your own balcony from roughly April to August and an indirect glow the rest of the year. The east-facing cliffs give you the sunrise over water every day, and no sunset at all. Mambajao town gives you neither and puts you five minutes from both. No balcony on this island gives you both ends of the day.
 
 ### Do clifftop resorts in Camiguin have beach access?
-Usually not directly, and that is the structural trade of a cliff rather than a failing of any one property: elevation is the opposite of walking into the sea. Most clifftop properties here answer it with a pool, and the swimming and snorkelling happen on day trips. If stepping off your terrace onto sand is the priority, the beach strip at Agoho and Yumbing is the right choice.
+Mostly not, and where one exists it is a path down rather than a doorstep. That is the structural trade of a cliff rather than a failing of any one property: elevation is the opposite of walking into the sea. Ours has a path down from the cliff, which is more than most, but going down is a walk and coming back up is a walk in heat, so the pool is still where afternoons happen. If stepping off your terrace straight onto sand is the priority, the beach strip at Agoho and Yumbing is the right choice.
 
 ### Is there an infinity pool in Camiguin?
 Yes, at a small number of the clifftop properties, ours among them. The test worth applying to any photograph of one is simple: look at the far lip of the pool. If the sea is beyond it, the pool is genuinely on the edge. If vegetation, a wall or a roofline is beyond it, the pool is set back from the drop and the rooms very likely are too.
@@ -291,7 +295,7 @@ The sun comes up over the water at about half past five. Welcome home.
         {
           "@type": "Question",
           "name": "Do clifftop resorts in Camiguin have beach access?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Usually not directly, and that is the structural trade of a cliff rather than a failing of any one property: elevation is the opposite of walking into the sea. Most clifftop properties here answer it with a pool, and the swimming and snorkelling happen on day trips. If stepping off your terrace onto sand is the priority, the beach strip at Agoho and Yumbing is the right choice." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Mostly not, and where one exists it is a path down rather than a doorstep. That is the structural trade of a cliff rather than a failing of any one property: elevation is the opposite of walking into the sea. Ours has a path down from the cliff, which is more than most, but going down is a walk and coming back up is a walk in heat, so the pool is still where afternoons happen. If stepping off your terrace straight onto sand is the priority, the beach strip at Agoho and Yumbing is the right choice." }
         },
         {
           "@type": "Question",

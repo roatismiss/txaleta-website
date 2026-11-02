@@ -200,9 +200,13 @@ closing, plus a new section on the sunrise/sunset trade by coast), `where-to-sta
 `camiguin-honeymoon`, `best-time-to-visit-camiguin`, `mambajao-camiguin`, and
 `sunken-cemetery-camiguin` in EN/JA/KO, whose hero was our sunrise photo captioned as a sunset.
 
-**Still worth the client confirming:** the airport claim (`airportNote` says 15 minutes; Booking and
-Expedia both say a 20-minute drive / 6 miles), and whether there is any path down to the water from
-the cliff — test 4 of the clifftop article is currently answered as a loss.
+**Both open questions closed by the client, 2 Nov 2026.** The airport really is **15 minutes**, so
+`airportNote` stands as written and the 20-minute / 6-mile figure on Booking and Expedia is their
+estimate rather than ours — no change made. And **there is a path down the cliff to the water**, so
+test 4 of the clifftop article was rewritten from a loss to a qualified pass: a descent you make
+once or twice in a stay, not a beach you step onto, with the pool still carrying the afternoons.
+That leaves the scorecard at four of five with one qualified, which is a stronger result than the
+article originally claimed and is still not a clean sweep.
 
 **Further backlog** if the cadence stays at 2/week: Camiguin from Manila · Camiguin from Cagayan
 de Oro · the 64km ring road self-drive guide · Camiguin in 2 days · solo travel in Camiguin ·
