@@ -147,7 +147,7 @@ A cliff is a barrier. That is what a cliff is, and it is the arithmetic every cl
 
 **We have a path down from the cliff, and what it goes down to is rock.** Not sand. That is more than most properties up here can say, and naming the material is worth more to you than the word "access" would have been.
 
-**Rock is not a lesser shore, it is a different one.** There is no sand in suspension, so the water at the bottom is clear in a way a beach cannot be, and the depth starts straight away rather than after a wade - which is why the boats come alongside below us at all. The same geometry is the catch: a rock shore gives you no shallows to ease into, so a flat sea and a bit of swell are two completely different propositions on the same stones. Put something on your feet, and ask at the desk what the water is doing before you go down.
+**Rock is not a lesser shore, it is a different one.** There is no sand in suspension, so the water at the bottom is clear in a way a beach cannot be, and the depth starts straight away rather than after a wade — which is why the boats come alongside below us at all. The same geometry is the catch: a rock shore gives you no shallows to ease into, so a flat sea and a bit of swell are two completely different propositions on the same stones. Put something on your feet, and ask at the desk what the water is doing before you go down.
 
 **What it is not is a walk-out beach, and we are not going to let that phrase do work it has not earned.** Going down is a walk down, and coming back up is a walk up, in heat. In practice the infinity pool is where guests spend the afternoon, and the path is something you do once or twice in a stay, usually early.
 
