@@ -145,15 +145,17 @@ If an evening sun dropping into the water in front of your balcony is the specif
 
 A cliff is a barrier. That is what a cliff is, and it is the arithmetic every clifftop property on this island has to answer: you have bought elevation, and elevation is the opposite of walking into the sea.
 
-**We have a path down from the cliff**, which is more than most properties up here can say and is the reason this is a pass rather than the loss we expected it to be.
+**We have a path down from the cliff, and what it goes down to is rock.** Not sand. That is more than most properties up here can say, and naming the material is worth more to you than the word "access" would have been.
 
-**It is still not a walk-out beach, and we are not going to let that phrase do work it has not earned.** Going down is a walk down, and coming back up is a walk up, in heat. In practice the infinity pool is where guests spend the afternoon, and the path is something you do once or twice in a stay, usually early.
+**Rock is not a lesser shore, it is a different one.** There is no sand in suspension, so the water at the bottom is clear in a way a beach cannot be, and the depth starts straight away rather than after a wade - which is why the boats come alongside below us at all. The same geometry is the catch: a rock shore gives you no shallows to ease into, so a flat sea and a bit of swell are two completely different propositions on the same stones. Put something on your feet, and ask at the desk what the water is doing before you go down.
+
+**What it is not is a walk-out beach, and we are not going to let that phrase do work it has not earned.** Going down is a walk down, and coming back up is a walk up, in heat. In practice the infinity pool is where guests spend the afternoon, and the path is something you do once or twice in a stay, usually early.
 
 **So: if stepping off your terrace straight onto sand is the thing you want, the beach strip at Agoho and Yumbing is the honest answer and it is a good one.** We say the same in [where to stay in Camiguin](/guides/where-to-stay-in-camiguin), where the coasts are compared properly. If you want the view, and you are content for the sea to be a short descent rather than a doorstep, this is the better side.
 
-### Test 5 — Noise: pass, with the usual island caveat
+### Test 5 — Noise: pass, and the reason is that there is nothing out here to make any
 
-We are seven kilometres east of Mambajao Poblacion, which is far enough that the town is a drive rather than a sound. What you hear is water below and wind off the sea.
+**It is quiet, and that is a fact about the geography rather than a promise from management.** We are seven kilometres east of Mambajao Poblacion and about five north of Benoni, so the town is a drive rather than a sound and the port is somebody else's horizon. There is no resort strip on this coast — almost nothing is built along it — which means there is no row of bars for the evening to collect at the end of. The loudest thing most guests mention is the water forty metres below.
 
 The island caveat applies everywhere on Camiguin equally: roosters start before the sunrise does, and a *fiesta* in a nearby barangay is audible and absolutely worth being woken up by. Nobody on this island will promise you silence. Anybody who does has not spent a December here.
 
@@ -178,10 +180,10 @@ It is still a trade, and you should price it honestly: we gave up the single mos
 | 1. Real height from the room | **Pass** | No — beach level | **Pass** |
 | 2. Open horizon | **Pass** | Partly — headlands | **Pass** |
 | 3. The hour, all year | **Sunrise, every day** | Sunset, Apr–Aug | Sunset, Apr–Aug |
-| 4. Water access | **Path down**, plus the pool | **Pass** — step out onto sand | Usually none |
-| 5. Quiet | Pass | Busiest stretch | Pass |
+| 4. Water access | **Path down to rock**, plus the pool | **Pass** — step out onto sand | Usually none |
+| 5. Quiet | **Pass** | Busiest stretch | Pass |
 
-**Four of five, one of them qualified, and one we do not contest at all.** The honest summary: we win the view and the morning, we have a way down to the water but not a beach you step onto, and on the sunset we are not even in the race.
+**Four of five, one of them qualified, and one we do not contest at all.** The honest summary: we win the view and the morning, we have a path down to rock rather than a beach you step onto, and on the sunset we are not even in the race.
 
 ## Which room, for which view
 
@@ -259,7 +261,7 @@ On the east-facing cliffs, yes, every morning of the year. At this latitude the 
 Decide by hour, not by scenery. The north-west coast gives you the sunset from your own balcony from roughly April to August and an indirect glow the rest of the year. The east-facing cliffs give you the sunrise over water every day, and no sunset at all. Mambajao town gives you neither and puts you five minutes from both. No balcony on this island gives you both ends of the day.
 
 ### Do clifftop resorts in Camiguin have beach access?
-Mostly not, and where one exists it is a path down rather than a doorstep. That is the structural trade of a cliff rather than a failing of any one property: elevation is the opposite of walking into the sea. Ours has a path down from the cliff, which is more than most, but going down is a walk and coming back up is a walk in heat, so the pool is still where afternoons happen. If stepping off your terrace straight onto sand is the priority, the beach strip at Agoho and Yumbing is the right choice.
+Mostly not, and where one exists it is a path down rather than a doorstep. That is the structural trade of a cliff rather than a failing of any one property: elevation is the opposite of walking into the sea. Ours goes down to rock rather than sand, which is more than most properties up here can say and is worth knowing before you pack: clear water and no shallows to wade through, but going down is a walk and coming back up is a walk in heat, so the pool is still where afternoons happen. If stepping off your terrace straight onto sand is the priority, the beach strip at Agoho and Yumbing is the right choice.
 
 ### Is there an infinity pool in Camiguin?
 Yes, at a small number of the clifftop properties, ours among them. The test worth applying to any photograph of one is simple: look at the far lip of the pool. If the sea is beyond it, the pool is genuinely on the edge. If vegetation, a wall or a roofline is beyond it, the pool is set back from the drop and the rooms very likely are too.
@@ -364,7 +366,7 @@ The sun comes up over the water at about half past five. Welcome home.
         {
           "@type": "Question",
           "name": "Do clifftop resorts in Camiguin have beach access?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Mostly not, and where one exists it is a path down rather than a doorstep. That is the structural trade of a cliff rather than a failing of any one property: elevation is the opposite of walking into the sea. Ours has a path down from the cliff, which is more than most, but going down is a walk and coming back up is a walk in heat, so the pool is still where afternoons happen. If stepping off your terrace straight onto sand is the priority, the beach strip at Agoho and Yumbing is the right choice." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Mostly not, and where one exists it is a path down rather than a doorstep. That is the structural trade of a cliff rather than a failing of any one property: elevation is the opposite of walking into the sea. Ours goes down to rock rather than sand, which is more than most properties up here can say and is worth knowing before you pack: clear water and no shallows to wade through, but going down is a walk and coming back up is a walk in heat, so the pool is still where afternoons happen. If stepping off your terrace straight onto sand is the priority, the beach strip at Agoho and Yumbing is the right choice." }
         },
         {
           "@type": "Question",
