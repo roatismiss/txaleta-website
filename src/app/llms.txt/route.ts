@@ -1,4 +1,4 @@
-import { site, entity } from "@/lib/site";
+import { site, entity, restaurant } from "@/lib/site";
 import { getGuides } from "@/lib/guides";
 import { localePath } from "@/lib/i18n";
 
@@ -33,8 +33,9 @@ export function GET() {
     "",
     `${site.name} is a family-owned boutique resort in ${site.location.address}.`,
     `It has ${entity.numberOfRooms} rooms — seaview suites, cliff-edge ocean-view glamping`,
-    `and garden rooms — an infinity pool above the Bohol Sea, and a Filipino-Spanish`,
-    `restaurant open to walk-in guests as well as residents. ${site.location.airportNote}.`,
+    `and garden rooms — an infinity pool above the Bohol Sea, and ${restaurant.name}, its`,
+    `Filipino-Spanish restaurant, open to walk-in guests as well as residents.`,
+    `${site.location.airportNote}.`,
     "",
     "The site also publishes a library of long-form, first-hand travel guides to",
     "Camiguin island, written by the family who lives there. They are the most",
@@ -56,7 +57,7 @@ export function GET() {
     "## Key pages",
     "",
     `- [Accommodation](${abs("/accommodation")}): every room type, occupancy and amenities.`,
-    `- [Dining](${abs("/dining")}): the restaurant, open to non-residents.`,
+    `- [Dining](${abs("/dining")}): ${restaurant.name}, the resort's restaurant, open to non-residents.`,
     `- [Menu](${abs("/dining/menu")}): the full à la carte menu with prices in Philippine Peso.`,
     `- [Experiences](${abs("/experiences")}): island activities and what the resort arranges.`,
     `- [About](${abs("/about")}): who runs the place and why that matters.`,

@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/json-ld";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { dining, site } from "@/lib/site";
+import { dining, restaurant, site } from "@/lib/site";
 import { diningContent } from "@/locales/content/dining";
 import { GuideLinks } from "@/components/sections/guide-links";
 import { localePath } from "@/lib/i18n";
@@ -67,9 +67,13 @@ export default async function DiningPage({ params }: PageProps<"/[lang]">) {
         <PalmCorner corner="tr" className="text-palm opacity-[0.12] lg:opacity-[0.18]" />
         <PalmCorner corner="bl" className="text-palm opacity-[0.11] lg:opacity-[0.16]" />
         <Reveal className="relative z-10 mx-auto max-w-3xl px-6 text-center">
-          <p className="font-display text-2xl font-light italic leading-snug text-ink/80 sm:text-3xl">
-            More than a restaurant, Txaleta is a place to gather, connect, and enjoy the
-            simple pleasures of island life.
+          {/* The restaurant's own name, on the page and not only in the
+              markup: a Business Profile is matched against what the website
+              visibly says, and a reviewer checking the listing looks here. */}
+          <Kicker className="text-brand">{restaurant.name}</Kicker>
+          <p className="font-display mt-5 text-2xl font-light italic leading-snug text-ink/80 sm:text-3xl">
+            More than a restaurant, {restaurant.name} is a place to gather, connect, and
+            enjoy the simple pleasures of island life.
           </p>
           <p className="mt-8 text-[15px] leading-relaxed text-ink/65">{t.body}</p>
           <Link

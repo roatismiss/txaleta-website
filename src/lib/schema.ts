@@ -13,7 +13,7 @@
 // the local pack to the wrong beach.
 // ============================================================================
 
-import { site, entity, dining, type Room } from "@/lib/site";
+import { site, entity, dining, restaurant, type Room } from "@/lib/site";
 import { menuPages, SERVICE_NOTE } from "@/lib/menu";
 import { localePath, localeTags, type Locale } from "@/lib/i18n";
 import { ui } from "@/locales/ui";
@@ -228,7 +228,15 @@ export function diningGraph(locale: Locale, page: PageChrome) {
     compact({
       "@type": "Restaurant",
       "@id": schemaId.restaurant,
-      name: `${site.name} — ${dining.heading}`,
+      // The restaurant's own name, from site.ts — not the resort name with a
+      // page heading welded onto it. A Business Profile is reconciled against
+      // the site by an EXACT name match, and a label that changes with the
+      // page language can never produce one. The association the old string
+      // was trying to express lives in `alternateName` below, where it is
+      // machine-readable without polluting the name itself.
+      name: restaurant.name,
+      alternateName: `${restaurant.name} at ${site.name}`,
+      disambiguatingDescription: restaurant.descriptor,
       description: dining.body,
       url: absLocale(locale, path),
       image: dining.images.map(abs),
@@ -265,6 +273,10 @@ export function diningGraph(locale: Locale, page: PageChrome) {
       // still declaring the resort as its parent so the two never compete.
       parentOrganization: { "@id": schemaId.org },
       isPartOf: { "@id": schemaId.org },
+      // The "located in" relation, stated in markup. Google asks for the same
+      // thing on the Profile itself, where it has to be requested through
+      // support — this is the half we can assert ourselves.
+      containedInPlace: { "@id": schemaId.org },
       hasMenu: { "@id": schemaId.menu },
       sameAs: [site.social.facebook, site.social.instagram].filter(Boolean),
     }),

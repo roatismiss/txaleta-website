@@ -314,6 +314,31 @@ export const roomKickers: Record<string, string> = {
 };
 export const roomKickerFallback = "Oceanfront Stay";
 
+// ============================================================================
+// The restaurant, as an entity of its own.
+//
+// It sits inside the resort but takes walk-ins (see `dining.body`), which is
+// exactly the condition Google sets for an on-site business to hold its OWN
+// Business Profile. So it needs a NAME — not a label stitched together at
+// render time from the resort name plus a page heading, which is what the
+// `Restaurant` node used to carry ("Txaleta de Camiguin — Dining at Txaleta",
+// and a different string in every locale).
+//
+// A proper noun: NEVER translated, NEVER re-worded per locale. The string
+// below must match the Google Business Profile, the Facebook page, the printed
+// menu and the signage CHARACTER FOR CHARACTER. A near-miss is how Google ends
+// up holding two half-confident records of one business instead of one
+// confident record — so this value changes in one place, here, or not at all.
+//
+// Read by: the `Restaurant` node in lib/schema.ts, /llms.txt, /dining.
+// Hours live in `entity.restaurantHours`; cuisine in `entity.cuisine`.
+// ============================================================================
+export const restaurant = {
+  name: "Cafe Mamba",
+  /** What it is, in the fewest words that answer "what is this place". */
+  descriptor: "Filipino-Spanish kitchen at Txaleta de Camiguin",
+} as const;
+
 export const dining = {
   // Short kicker for the homepage section; the long line lives in `subheading`.
   kicker: "Filipino Heart, Spanish Soul",
