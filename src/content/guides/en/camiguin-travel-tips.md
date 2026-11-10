@@ -60,7 +60,7 @@ This is the single most useful line in this guide. **Camiguin runs on cash.**
 2. **A travel eSIM**, bought before you leave home and activated on landing. This sidesteps the physical-SIM registration question entirely and is what an increasing number of our guests do. Check your phone supports eSIM first.
 3. **Roaming**, which works and costs what roaming costs.
 
-**Wi-Fi on the island** is real but modest. Resorts, hotels and the better restaurants have it; expect it to be good enough for messages, maps and a video call that you do not mind dropping once, rather than for uploading a day's photographs. Ours reaches the rooms and the public areas. If your trip depends on being reliably online, bring mobile data as the backup rather than the other way round.
+**Wi-Fi on the island** is real but modest. Resorts, hotels and the better restaurants have it; expect it to be good enough for messages, maps and a video call that you do not mind dropping once, rather than for uploading a day's photographs. Ours comes in over Starlink, reaches the rooms and the public areas, and stays up through a power cut, because our generator runs the router. If your trip depends on being reliably online, bring mobile data as the backup rather than the other way round — and if you are planning to work from here, our [honest guide for digital nomads](/guides/camiguin-digital-nomads) explains how to make an island connection dependable.
 
 ## Water: do not drink from the tap
 
@@ -76,7 +76,7 @@ This is the single most useful line in this guide. **Camiguin runs on cash.**
 
 **220 volts, 60 hertz.** The sockets are the flat two-pin type (A), with some taking the flat-pins-plus-round-earth type (B) and a few older round two-pin (C) fittings still around. If you are coming from the UK, Europe or Australia you need an adapter; from North America you need the adapter less than you need to check your device handles 220V, though almost all modern chargers do.
 
-**Bring a power bank.** Not for power cuts — though brief ones happen on any small island, usually after weather — but because a day out here is long, your phone is also your camera and your map, and there is no café socket at a waterfall.
+**Bring a power bank.** Not for power cuts — though brief ones happen on any small island, usually after weather — but because a day out here is long, your phone is also your camera and your map, and there is no café socket at a waterfall. The rest of the bag — shoes for rock and black sand, rain gear by season, and the 7 kg cabin limit on the Camiguin flight — is in our [packing list for Camiguin](/guides/what-to-pack-for-camiguin).
 
 ## Medical: the honest version
 

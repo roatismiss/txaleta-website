@@ -108,7 +108,7 @@ Outside those months it's still done, but your odds of a view drop and your odds
 - **A dry bag** for phone and camera.
 - **A head torch** for the pre-dawn start.
 
-Leave behind anything heavy. You'll regret every extra kilo by the halfway point.
+Leave behind anything heavy. You'll regret every extra kilo by the halfway point. If the climb is one day of a longer trip, our [what to pack for Camiguin](/guides/what-to-pack-for-camiguin) list covers the other days — and the 7 kg cabin allowance on the flight in, which is a good reason to wear your trail shoes on the plane.
 
 ## The middle path: forest without the summit
 

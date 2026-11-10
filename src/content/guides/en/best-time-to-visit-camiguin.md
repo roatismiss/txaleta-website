@@ -168,15 +168,9 @@ On Camiguin the **hour beats the month**. A wet-season morning is usually better
 
 Plan a trip around mornings and Camiguin will be good to you in any month on the calendar.
 
-## What to pack, by season
+## What the season changes in your bag
 
-**Dry season (March–May):** reef-safe sunscreen, a hat you don't mind losing to the wind, a rash guard for the sandbar (there is no shade on White Island), and more water than you think. Evenings are warm; you'll never need a jacket.
-
-**Green season (June–October):** a light rain shell, a dry bag for the banca, quick-dry clothes, and shoes with grip — the trails and the falls' steps get slick. Add a small torch.
-
-**Wet season (November–January):** all of the above, plus a second pair of shoes, and a genuinely waterproof phone pouch. Bring a book. You'll want an afternoon indoors and you'll enjoy it more than you expect.
-
-**Every season:** mosquito repellent, a power bank, and cash — Camiguin's ATMs are few and not always in the mood.
+The month you choose changes the bag more than anything else: sun protection that actually works on a shadeless sandbar from March to May, a rain shell and a dry bag from June, a second pair of shoes and a layer for the dawn boat from November to January. The full list — shoes for rock and black sand, the 7 kg cabin limit on the Camiguin flight, and what to leave at home — is in our [Camiguin packing list](/guides/what-to-pack-for-camiguin).
 
 ## So when should *you* come?
 

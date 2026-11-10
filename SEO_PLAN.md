@@ -208,6 +208,48 @@ once or twice in a stay, not a beach you step onto, with the pool still carrying
 That leaves the scorecard at four of five with one qualified, which is a stronger result than the
 article originally claimed and is still not a clean sweep.
 
+### November 2026 — a second pair, pulled forward from January
+
+Requested on 10 Nov 2026 on top of the clifftop and glamping pair, so **November carries four
+English articles, not two**. Both topics come from the Jan 2027 row of the table above, which is
+now empty. Library: **39 English guides.**
+
+- **`what-to-pack-for-camiguin`** — "what to pack for Camiguin" / "Camiguin packing list". The
+  angle no generic Philippine list has: pack for rock and black sand, not powder beaches. The
+  concept explained to the bottom is albedo (black sand absorbs, the white sandbar reflects UV
+  from below), with the shadow rule as the test a reader can run on any beach. The hard current
+  fact is the cabin allowance: Cebu Pacific mainline went to 10 kg from 15 Sep 2026, but the
+  Cebgo (DG) turboprop that flies Cebu–Camiguin stayed at 7 kg (press reports, confirmed by the
+  client 10 Nov 2026). The honest bit is
+  ours: seven kilometres from the pharmacies, and a shore of rock.
+- **`camiguin-digital-nomads`** — "Camiguin digital nomad" / "working remotely in Camiguin".
+  Written against itself, consistent with `camiguin-vs-siargao` and `camiguin-travel-tips`:
+  Camiguin is not a nomad base, and the page says who should go to Siargao or Cebu City
+  instead. What it does argue is narrower — a two- to four-week async sprint, and a UTC+8 clock
+  that puts a European working day in the island's afternoon. The concept is redundancy
+  arithmetic (two independent 95% links cut monthly downtime from 36 hours to under 2).
+
+**§6 compliance.** `best-time-to-visit-camiguin` carried an H2 "What to pack, by season", which
+is the new article's keyword. Demoted to "What the season changes in your bag" — one paragraph
+plus a link. Inbound links added from `best-time-to-visit`, `camiguin-travel-tips` (twice — one
+per article), `glamping-in-camiguin`, `hibok-hibok-hike`, `camiguin-vs-siargao` and
+`where-to-stay-in-camiguin`.
+
+**Confirmed by the client, 10 Nov 2026:** the resort Wi-Fi is **Starlink**, and the **generator
+runs the router**. Both are now stated in resort voice in `camiguin-digital-nomads`,
+`camiguin-travel-tips` and `where-to-stay-in-camiguin`. The KO/JA where-to-stay translations do
+not mention either fact yet. The Cebgo 7 kg allowance is no longer hedged.
+
+**Still needs the client:**
+
+1. **A Wi-Fi speed test from the Premier Seaview Suite** (upload and download, evening). The
+   nomad article deliberately prints no number and tells readers to ask us for one — so somebody
+   at the front desk has to be ready to send that screenshot.
+2. **Long-stay / monthly pricing.** The article tells remote workers to ask about it. If there is
+   no such thing, that sentence should change.
+3. **The digital nomad visa** (EO 86, Apr 2025) and the BI field office in Mambajao are stated
+   with hedges — re-check both when the article is next refreshed.
+
 **Further backlog** if the cadence stays at 2/week: Camiguin from Manila · Camiguin from Cagayan
 de Oro · the 64km ring road self-drive guide · Camiguin in 2 days · solo travel in Camiguin ·
 Camiguin for seniors/accessibility · the Walkway to the Old Volcano · Camiguin's beaches ranked ·

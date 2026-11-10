@@ -190,10 +190,10 @@ Standard hotel checklists don't cover island realities. These do.
 
 1. **How far from the airport, honestly?** Ask for minutes, not kilometres. The ring road is slow and beautiful in equal measure.
 2. **How far from the White Island jump-off?** If the answer isn't "we launch from here" or "ten minutes", your sunrise trip becomes a pre-dawn drive.
-3. **Is there back-up power?** Island-wide outages happen. Ask whether there's a generator and what it runs.
+3. **Is there back-up power?** Island-wide outages happen. Ask whether there's a generator and what it runs — ours keeps the Wi-Fi router on, which matters more than it sounds if you are working.
 4. **Hot water and water pressure.** Not universal outside the resorts, and worth confirming in writing.
 5. **Is breakfast included, and where is it served?** On this island, the answer "on the terrace, over the sea" is worth more than the food.
-6. **Wi-Fi speed, if you're working.** Ask for a number, not a yes.
+6. **Wi-Fi speed, if you're working.** Ask for a number, not a yes — upload as well as download. Our guide to [working remotely from Camiguin](/guides/camiguin-digital-nomads) covers the rest.
 7. **Do they arrange the boat, the trek, the driver?** A resort that books your banca, your Hibok-Hibok guide and your airport pickup saves you a day of WhatsApp.
 8. **Beach access vs sea view.** These are different products. Decide which you're buying before you look at photos.
 9. **Sand colour.** If white sand under your feet is a non-negotiable, know that Camiguin's is mostly volcanic and the white stuff is a short boat ride offshore.

@@ -172,7 +172,7 @@ So: **one or two nights in the dome and the rest in a room** is the arrangement 
 
 **Bring:** insect repellent, a light layer for after midnight, an eye mask if you are the sort of person who wakes at first light and does not want to (the whole point of the tent is that you will), and a torch for moving around the property after dark — the ring road and most island grounds are unlit, which our [getting-around guide](/guides/getting-around-camiguin) treats as a genuine planning fact rather than a detail.
 
-**Do not bother bringing:** a sleeping bag, a mat, or anything else from a camping list. This is not camping and you will carry it for nothing.
+**Do not bother bringing:** a sleeping bag, a mat, or anything else from a camping list. This is not camping and you will carry it for nothing. For the rest of the trip, our [Camiguin packing list](/guides/what-to-pack-for-camiguin) covers the island beyond the dome.
 
 ## When to book it
 

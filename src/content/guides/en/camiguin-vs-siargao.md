@@ -56,7 +56,7 @@ We won't be grudging about it.
 
 **The surf, obviously.** Siargao is the Philippines' surfing capital, and Cloud 9 is a genuinely world-class reef break with a name that reaches well beyond the country. There are breaks for every level, boards to rent everywhere, and an entire culture built around it. Camiguin has nothing remotely comparable and never will — we're a sheltered volcanic island in the Bohol Sea, which is precisely why our water is calm.
 
-**The cafés and the working infrastructure.** Siargao developed a proper café culture — good coffee, decent wifi, places to sit with a laptop for four hours. It's become a real digital-nomad base. Camiguin has not, and if you need to work reliably from a café, we'd honestly steer you elsewhere.
+**The cafés and the working infrastructure.** Siargao developed a proper café culture — good coffee, decent wifi, places to sit with a laptop for four hours. It's become a real digital-nomad base. Camiguin has not, and if you need to work reliably from a café, we'd honestly steer you elsewhere. (If your work is mostly asynchronous, there is a narrower case for a focused fortnight here, which we make — with all its caveats — in our [guide to working remotely from Camiguin](/guides/camiguin-digital-nomads).)
 
 **The social side.** If you're travelling solo and want to meet people, Siargao does it effortlessly — hostels, group tours, bars, a scene that absorbs newcomers. Camiguin is a place for people who arrive with the company they want.
 
