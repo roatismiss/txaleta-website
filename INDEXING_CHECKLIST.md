@@ -102,5 +102,25 @@ For a domain this young, those five links are worth more than the next five arti
 - [ ] **Bing Webmaster Tools** — imports directly from Search Console, indexes faster than
       Google, and feeds ChatGPT Search.
 
+## IndexNow — Bing, Naver and the rest, without waiting for a crawl
+
+The site carries an IndexNow key (`public/624df1cbb5c8d346d74fd34354fa18ca.txt`), and
+`scripts/indexnow.mjs` submits URLs to `api.indexnow.org`, which shares them with Bing (and so
+ChatGPT search and Copilot), Naver (the Korean guides), Seznam, Yandex and Yep. **Google does not
+take part** — Google still needs Search Console.
+
+Run it **after** the production deploy is live, never before:
+
+```
+npm run indexnow -- --since 2026-11-10 --dry-run   # see what would go
+npm run indexnow -- --since 2026-11-10             # new + updated guides since that date
+npm run indexnow -- guides/some-slug               # one page (no leading slash in Git Bash)
+npm run indexnow -- --all                          # everything, once, on first setup
+```
+
+`--since` uses each guide's `updated` date (falling back to `date`), so bump `updated` when a
+change matters and the script picks it up. Don't resubmit unchanged pages: engines throttle
+sites that do. In Bing Webmaster Tools, the **IndexNow** report shows what arrived.
+
 **Avoid:** the Google Indexing API. It is officially supported only for `JobPosting` and
 `BroadcastEvent`. Using it for ordinary articles is against Google's stated terms.
