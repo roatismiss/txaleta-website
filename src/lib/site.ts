@@ -266,7 +266,7 @@ export const rooms: Room[] = [
       "/images/rooms/glamping/Glamping_raylight.webp",
     ],
     maxOccupancy: 2,
-    amenities: ["Ocean view", "Private deck", "En-suite shower", "Queen bed", "Natural airflow", "WiFi"],
+    amenities: ["Ocean view", "Private deck", "En-suite shower", "King bed", "Air conditioning", "WiFi"],
   },
   {
     slug: "deluxe-garden-room",

@@ -192,7 +192,7 @@ Not a sales list — a mapping of the five tests onto actual doors.
 | If what you want is… | The room | Why |
 |---|---|---|
 | The first light, with nothing between you and it | **Glamping Dome Tent** | Canvas at the cliff edge, private deck, en-suite rain shower; the sunrise comes into the tent |
-| The same view with walls and air conditioning | **Premier Seaview Suite** | Floor-to-ceiling glass and a private terrace above the water |
+| The same view behind walls and glass | **Premier Seaview Suite** | Floor-to-ceiling glass and a private terrace above the water |
 | The view at the friendlier end of the rates | **Balcony Seaview Room** | Your own balcony, same horizon, lower number |
 | Space for a family, sea included | **Ocean View Family Nook** | The water right there, with room for everyone |
 | Shade and a pool rather than the edge | **Garden & Pool View Family Room** | Quieter, cooler, steps from the water that is actually swimmable |

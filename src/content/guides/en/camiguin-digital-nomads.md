@@ -175,7 +175,7 @@ Our own answers, room by room:
 
 - **The [Premier Seaview Suite](/book?room=premier-seaview-suite)** is the room we would put a remote worker in. It has a **work desk**, air conditioning, a king bed and a private terrace over the sea, and it is the one with a desk.
 - **The Deluxe Garden Room** is air-conditioned and set back in the garden — cooler and greener, with no sea view to distract you.
-- **The glamping domes are not an office.** There is no air conditioning, by design, and a canvas dome at three in the afternoon in the dry season is no place for a laptop. One or two nights under canvas at the end of a working stay is a lovely way to finish; a month of work in one is not. Our [glamping guide](/guides/glamping-in-camiguin) says the same.
+- **The glamping domes are not an office.** They are air-conditioned, but a canvas dome is built for lying down and looking up, not for eight hours at a screen. One or two nights under canvas at the end of a working stay is a lovely way to finish; a month of work in one is not. Our [glamping guide](/guides/glamping-in-camiguin) says the same.
 
 We are **fifteen minutes from the airport** and about **five kilometres from Benoni port**, which matters more than it sounds when you are arriving with a laptop bag after a day of connections. If you are working, tell us when you enquire, and tell us your client's time zone — the answers above, and the speed test, are a WhatsApp message away.
 
@@ -218,7 +218,7 @@ Brief ones happen, as on any small island, usually after heavy weather, and most
 Siargao is the best-known nomad base, with working cafés, coliving and a large remote-work community. Cebu City has coworking spaces, faster fixed connections and the country's second hub airport. Dumaguete is a slower university city with an expat community. A good pattern is to base yourself in one of those for call-heavy weeks and come to Camiguin for a focused two-week sprint.
 
 ### Which room should a remote worker book on Camiguin?
-Wherever you stay, look for a proper desk and chair, air conditioning for the afternoon heat, a tested connection with upload figures, and backup power for the router. At Txaleta de Camiguin that is the Premier Seaview Suite, which has a work desk, air conditioning and a terrace over the sea. Glamping domes have no air conditioning and are not a place to work through a hot afternoon.
+Wherever you stay, look for a proper desk and chair, air conditioning for the afternoon heat, a tested connection with upload figures, and backup power for the router. At Txaleta de Camiguin that is the Premier Seaview Suite, which has a work desk, air conditioning and a terrace over the sea. The glamping domes are air-conditioned but built for sleeping, not for a working day.
 
 ## Come home to Camiguin
 
@@ -397,7 +397,7 @@ Bring the second SIM. Welcome home.
           "name": "Which room should a remote worker book on Camiguin?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Wherever you stay, look for a proper desk and chair, air conditioning for the afternoon heat, a tested connection with upload figures, and backup power for the router. At Txaleta de Camiguin that is the Premier Seaview Suite, which has a work desk, air conditioning and a terrace over the sea. Glamping domes have no air conditioning and are not a place to work through a hot afternoon."
+            "text": "Wherever you stay, look for a proper desk and chair, air conditioning for the afternoon heat, a tested connection with upload figures, and backup power for the router. At Txaleta de Camiguin that is the Premier Seaview Suite, which has a work desk, air conditioning and a terrace over the sea. The glamping domes are air-conditioned but built for sleeping, not for a working day."
           }
         }
       ]

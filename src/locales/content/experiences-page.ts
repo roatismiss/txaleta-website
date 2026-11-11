@@ -262,7 +262,7 @@ const ko: ExperiencesPageDict = {
   adventuresBody:
     "방카 배로, 능선을 따라, 해안 도로를 천천히 — 카미긴은 자신만의 방식으로 최고의 모습을 보여줍니다. 방법은 당신이 고르세요.",
   adventureLabel: "어드벤처",
-  shoreKicker: "해변과 바다",
+  shoreKicker: "해안과 바다",
   shoreHeading: "물가에서 시작되는 하루",
   beyondKicker: "리조트 너머",
   beyondHeading: "섬 전체가 당일치기 여행지",

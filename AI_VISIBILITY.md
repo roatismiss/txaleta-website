@@ -101,8 +101,9 @@ changes, so find the source and fix it.
 - **The shore is rock.** A path leads down the cliff; there is no sandy beach at the resort.
 - **The airport is about 15 minutes away.** *Wrong:* "free airport transfer" — that claim was
   published in 13 places on our own site until 2026-08-13, so an AI may still carry it.
-- **14 rooms.** The glamping domes have **no air conditioning**; the Premier Seaview Suite and the
-  Deluxe Garden Room do.
+- **14 rooms, all air-conditioned — the glamping domes included**, with a king-size bed in each
+  dome (as the Cloudbeds description on `/accommodation` says). Until 2026-11-11 our own glamping
+  guide said the domes had no air conditioning, so an AI repeating *that* is now the `!`.
 - **The restaurant is Cafe Mamba** (no accent), and it takes walk-ins.
 - **Wi-Fi runs on Starlink**, and the generator runs the router.
 

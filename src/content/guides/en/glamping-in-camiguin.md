@@ -17,6 +17,7 @@ keywords:
   - "Camiguin dome tent"
   - "best unique accommodation Mindanao"
 date: 2026-11-02
+updated: 2026-11-11
 author: "Txaleta de Camiguin"
 image: "/images/rooms/glamping/glamping_private_terrace.webp"
 imageAlt: "A glamping dome tent with a private deck at the edge of a Camiguin cliff, above the Bohol Sea"
@@ -30,7 +31,7 @@ This page does two jobs. The first is an honest account of **what a night under 
 
 ![A glamping dome tent with a private deck at the edge of a Camiguin cliff, above the Bohol Sea](/images/rooms/glamping/glamping_private_terrace.webp)
 
-> **Quick answer:** Glamping in Camiguin means a **dome tent on the cliff edge** — a proper queen bed, an en-suite rain shower, a private deck above the Bohol Sea, and no walls between you and the weather. The cliff faces **east**, so the sunrise comes into the tent over open water every morning of the year. **There is no air conditioning**, by design: the dome is cooled by sea air, which works beautifully from roughly **November to May** and is hard work in the still, hot weeks either side of it. The island's other unusual stays are **homestays** in Guinsiliban and Sagay, **farmstays** inland, **dive lodges** near Benoni, **beach cottages** on the north-west strip, and **guesthouses** in Mambajao town. If you want a unique place to stay and you also want a thermostat, book a room — we will say so again below.
+> **Quick answer:** Glamping in Camiguin means a **dome tent on the cliff edge** — a king-size bed, **air conditioning**, a private bathroom with a hot shower, Starlink Wi-Fi, a private deck above the Bohol Sea, and canvas rather than walls between you and the weather. The cliff faces **east**, so the sunrise comes into the tent over open water every morning of the year. The air conditioning takes care of the heat; what no tent can take care of is the sound, because **rain on canvas is loud**, which is why the dome is at its best from roughly **November to May**. The island's other unusual stays are **homestays** in Guinsiliban and Sagay, **farmstays** inland, **dive lodges** near Benoni, **beach cottages** on the north-west strip, and **guesthouses** in Mambajao town. If you want a unique place to stay and you are a light sleeper, book a room — we will say so again below.
 
 *Written by the family at Txaleta de Camiguin, on an east-facing clifftop above the Bohol Sea. Published November 2026.*
 
@@ -38,7 +39,7 @@ This page does two jobs. The first is an honest account of **what a night under 
 
 The word has been stretched to cover a lot of things, several of which are just tents.
 
-**Glamping is camping with the discomfort engineered out and the exposure left in.** That second half is the point and it is what people get wrong. You keep the bed, the bathroom, the lighting and the door that closes. You give up the thermal envelope — the insulated, sealed, climate-controlled box that a hotel room is.
+**Glamping is camping with the discomfort engineered out and the exposure left in.** That second half is the point and it is what people get wrong. You keep the bed, the bathroom, the lighting and the door that closes. You give up the envelope — the insulated, soundproofed, light-proof box that a hotel room is.
 
 So the honest test for any glamping listing anywhere is four questions:
 
@@ -47,7 +48,7 @@ So the honest test for any glamping listing anywhere is four questions:
 3. **Is there power and light that does not involve a torch?**
 4. **What climate control is there, honestly stated?** This is the one that is most often fudged.
 
-Our domes answer: yes, yes, yes, and **none — it is sea air through the dome, and that is the deal.** We would rather lose the booking than have you find out at eleven at night.
+Our domes answer: yes, yes, yes, and **air conditioning in every dome.** What no glamping anywhere can honestly promise is quiet, and we would rather tell you that now than have you find out at two in the morning.
 
 ## Why a dome, and not a tent
 
@@ -59,7 +60,7 @@ Nobody asks this and it is the most interesting thing about the structure, so he
 
 **Usable floor.** In a ridge tent you can only stand along the spine; the walls fall away and the edges of the floor are good for luggage. A dome holds its height much closer to the perimeter, so a bed does not have to sit in the middle and the floor area on the plan is roughly the floor area you can use.
 
-**Air.** Warm air collects at the apex, which on a dome is a single high point rather than a long ridge, so venting at the top moves the whole volume. This matters more than it sounds in the tropics, and it is the reason the next section is a refusal rather than an apology.
+**Air.** Warm air collects at the apex, which on a dome is a single high point rather than a long ridge, so venting at the top moves the whole volume. This matters more than it sounds in the tropics. And the geometry that spreads the wind load helps the air conditioning too: the least skin for the volume is also the least surface for the afternoon sun to heat through.
 
 **And the sky.** This is the part people actually book it for. Lying flat on your back in a ridge tent you are looking at fabric a metre from your face. In a dome you are looking at the apex, which means the overhead surface is the thing above you rather than beside you — and when that surface is clear, you are in the sky rather than looking out at it.
 
@@ -79,7 +80,7 @@ Glamping is one row in this table. If you came here searching for somewhere that
 
 | The stay | Where | What it gives you | The catch |
 |---|---|---|---|
-| **Glamping dome** | The eastern cliffs | Sunrise over open water from the bed; no walls | No air conditioning; weather-dependent |
+| **Glamping dome** | The eastern cliffs | Sunrise over open water from the bed; no walls | Rain on canvas is loud; weather-dependent |
 | **Homestay** | Guinsiliban, Sagay, the south | The island as people actually live it, at the lowest cost on it | Very simple; you need your own wheels |
 | **Farmstay** | Inland, the volcano's skirts | Cool nights, fruit trees, genuine quiet | Far from the sea and from dinner |
 | **Dive lodge** | Benoni / Mahinog, the east | Tanks, boats and like-minded company | Functional rooms; the sea is the point |
@@ -104,23 +105,23 @@ This is the part we can describe first-hand.
 
 **Breakfast.** Served over the water. The [restaurant](/dining) is open from eight, and takes walk-ins as well as guests.
 
-## The one thing we refuse to add, and why
+## Air conditioning, and what it does not fix
 
-**There is no air conditioning in the domes, we are not going to install any, and that is a decision rather than a shortfall.**
+**Every dome is fully air-conditioned.** We say it plainly because the word "tent" makes people assume the opposite, and because the still, humid weeks — typically the end of the dry season running into the first rains, with afternoons at 31–32 °C — are exactly when a canvas room without it gets warm and stays warm.
 
-The straightforward version: you cannot air-condition a tent. You can only do one of two things to it. You can insulate and seal it, at which point it has stopped being a tent and has become a small room with canvas wallpaper — and everything you came for, the air, the sound of the sea, the weather happening a few feet away, is on the wrong side of the envelope. Or you can fit a unit that fights the outside air continuously, which roars, which is why you would be paying extra to stop hearing the thing you booked.
+**Close the dome before you switch it on.** It sounds obvious and it is easy to forget: an air conditioner fighting an open door is cooling the deck, not you. Once it is closed, the shape is on your side — the least skin for the volume is the least surface letting the heat back in. On a breezy night you may prefer to switch it off and open the dome to the sea air instead. That is the sound you came for, and the choice is yours each night.
 
-So the dome is cooled the way a dome on a cliff is supposed to be cooled: **the sea breeze, which on this edge runs most of the day and nearly every night.** The siting is the climate control. It is also the reason the domes are where they are rather than in a nicer spot further back from the drop.
+**What air conditioning does not fix is everything else that makes a dome a dome.** It does not make canvas quiet in a downpour. It does not keep the light out at half past five. It does not stop the wind announcing itself on an exposed cliff, or the insects that gather on any deck in the tropics at dusk.
 
-**And there are nights it is not enough.** In the still, humid weeks — typically the end of the dry season running into the first rains, with afternoons at 31–32 °C — the air stops moving and a canvas room gets warm and stays warm. That is not a rare event and we are not going to pretend it away. It is the single most common reason a guest would be happier in a room, and the reason we ask.
+Those are the real reasons someone would be happier in a room, and they are why the next section is longer than this one.
 
-If a thermostat is part of what you mean by comfortable, book a room. You will have a better week, the view from it is identical, and we would rather have that conversation now than at eleven o'clock at night.
+If a dark, quiet room is part of what you mean by comfortable, book one. You will have a better week, the view from it is identical, and we would rather have that conversation now than at two o'clock in the morning.
 
 ## The honest bit
 
 Every section above is the case for it. This is the case against, and it is the reason this page exists.
 
-**There is no air conditioning.** The dome is cooled by moving sea air, which on a cliff is usually plenty. In the still, humid weeks — typically the end of the dry season into the first rains, when afternoons run 31–32 °C — it is warm at night and some guests find it too warm. If you sleep badly in heat, book a room with a thermostat. You will enjoy the holiday more and we would rather you did.
+**Canvas is not soundproofing.** The air conditioning deals with the heat; nothing deals with the sound. Rain, wind and the sea all come through the dome, and the light arrives at half past five. If you sleep lightly, book a room with walls. You will enjoy the holiday more and we would rather you did.
 
 **Rain is loud, and the wet season is real.** Camiguin's heavier rain runs roughly June to November, with the north-east *amihan* bringing its own wet, windy spell around December to February. Our [guide to the best time to visit](/guides/best-time-to-visit-camiguin) breaks the year down properly. A dome in a downpour is dry and it is not quiet.
 
@@ -136,9 +137,9 @@ Every section above is the case for it. This is the case against, and it is the 
 
 Most of this transfers to glamping anywhere warm, and nobody tells you any of it.
 
-**Open it up before dark, not when you get hot.** Canvas holds the afternoon's heat and a dome that was closed all day starts the night warm. Get the air moving through it while the sun is still up and you are working with the structure instead of against it.
+**Cool it before bed, not when you get hot.** Canvas holds the afternoon's heat. Either close the dome and run the air conditioning for an hour before you turn in, or, on a breezy evening, open it up while the sun is still up — both work with the structure instead of against it.
 
-**Lie with your head toward the opening, not away from it.** Moving air over your head and shoulders is what does the work; air over your feet does almost nothing. It is a small adjustment and it is the difference between a warm night and an uncomfortable one.
+**If you sleep with it open, lie with your head toward the opening.** Moving air over your head and shoulders is what does the work; air over your feet does almost nothing. It is a small adjustment and it is the difference between a warm night and an uncomfortable one.
 
 **Expect to wake at about four.** The breeze usually freshens before dawn and the temperature drops more than you think it will. This is why a light layer matters far more here than a thicker blanket — you want something you can pull over your shoulders at four and push off at six.
 
@@ -156,19 +157,19 @@ Guests ask us this constantly, usually a week before arrival, and the answer is 
 |---|---|---|
 | The view | Identical — same cliff, same horizon | Identical |
 | Sunrise | Comes into the tent | Comes through the glass |
-| Climate | Sea air only | Air conditioning |
+| Climate | Air conditioning, or the sea air if you prefer | Air conditioning |
 | Rain | Audible | Not |
 | Night sky | You are in it | Through a window |
 | Sleeps | Two | Two to a family, depending on the room |
 | Best months | Roughly November to May | Any |
 
-**The honest summary:** the view is the same from both. What the dome adds is *exposure* — the sky, the air, the sound of the sea and the rain. What it removes is the thermostat and the soundproofing.
+**The honest summary:** the view is the same from both. What the dome adds is *exposure* — the sky, the air, the sound of the sea and the rain. What it removes is the soundproofing.
 
-So: **one or two nights in the dome and the rest in a room** is the arrangement we suggest most often, and the one that produces the fewest regrets. You get the night under the stars while it is still a novelty, and you get a cool, quiet room for the nights after a long day on the ring road. Both are on the [booking page](/book), and we will happily split a stay across the two.
+So: **one or two nights in the dome and the rest in a room** is the arrangement we suggest most often, and the one that produces the fewest regrets. You get the night under the stars while it is still a novelty, and you get a quiet room with walls for the nights after a long day on the ring road. Both are on the [booking page](/book), and we will happily split a stay across the two.
 
 ## What is provided, and what to bring
 
-**Provided:** a queen bed with proper linen, an en-suite rain shower, power and lighting, WiFi, the private deck, and breakfast.
+**Provided:** a king-size bed with proper linen, air conditioning, a private bathroom with a hot shower, Starlink Wi-Fi, a mini fridge, power and lighting, the private deck, and breakfast.
 
 **Bring:** insect repellent, a light layer for after midnight, an eye mask if you are the sort of person who wakes at first light and does not want to (the whole point of the tent is that you will), and a torch for moving around the property after dark — the ring road and most island grounds are unlit, which our [getting-around guide](/guides/getting-around-camiguin) treats as a genuine planning fact rather than a detail.
 
@@ -176,7 +177,7 @@ So: **one or two nights in the dome and the rest in a room** is the arrangement 
 
 ## When to book it
 
-**November to May** is the dome's season, and the heart of it is roughly **February to May**, when the rain is least likely and the nights are moving air rather than still heat. April is statistically the driest month of the year on Camiguin and also the hottest, which is the trade.
+**November to May** is the dome's season, and the heart of it is roughly **February to May**, when the rain is least likely — and rain, not heat, is what decides a night under canvas. April is statistically the driest month of the year on Camiguin and also the hottest, which is the trade.
 
 **June to October** is the green season. It does not rain all day, the island is at its most beautiful, and the rates across the island are at their kindest — but a dome in that window is a gamble on your own tolerance for weather at night, and you should book it knowing that.
 
@@ -184,9 +185,9 @@ So: **one or two nights in the dome and the rest in a room** is the arrangement 
 
 ## Who it is for
 
-**Book the dome if:** you are a couple, you sleep well in warm air, you would rather hear weather than be sealed off from it, you get up early or would like an excuse to, and the phrase "nothing between us and the sea" sounds like a feature rather than a worry.
+**Book the dome if:** you are a couple, you would rather hear weather than be sealed off from it, you get up early or would like an excuse to, and the phrase "nothing between us and the sea" sounds like a feature rather than a worry.
 
-**Book a room instead if:** you need air conditioning to sleep, you are travelling with small children, you are a light sleeper, you are coming in the heaviest part of the wet season, or your idea of a holiday involves a dark room at two in the afternoon.
+**Book a room instead if:** you are travelling with small children, you are a light sleeper, you are coming in the heaviest part of the wet season, or your idea of a holiday involves a dark room at two in the afternoon.
 
 **And book a homestay instead if** what you actually want is the island itself, told to you by somebody who lives on it, for a fraction of any of the above. That is not a consolation prize. It is frequently the better trip.
 
@@ -196,13 +197,13 @@ So: **one or two nights in the dome and the rest in a room** is the arrangement 
 Yes, though very little of it. The island's accommodation grew up as family-run beach resorts along the north-west coast, and glamping needs something that stretch mostly lacks: ground with a view worth sleeping outdoors for, quiet, and flat enough for a platform. On a volcanic island that combination is found on the cliffs, which are scarce. Our dome tents sit on the eastern cliffs at Puting Balas, in Mambajao.
 
 ### What is a glamping dome tent like to sleep in?
-A proper queen bed with real linen, an en-suite rain shower, power, lighting and WiFi, on a private deck at the cliff edge. What you give up is the sealed, climate-controlled box that a hotel room is: there is no air conditioning, the dome is cooled by sea air, and rain on canvas is loud. Most guests describe the night sky through the dome as the thing they remember longest.
+A king-size bed with real linen, air conditioning, a private bathroom with a hot shower and Starlink Wi-Fi, on a private deck at the cliff edge. What you give up is the soundproofed, light-proof box that a hotel room is: rain on canvas is loud, and the light arrives at half past five. Most guests describe the night sky through the dome as the thing they remember longest.
 
 ### Why are glamping tents dome-shaped?
 Because a dome is a sphere cut off at the floor, and that single fact decides everything else. Wind divides around it instead of striking a flat side, and the load spreads through the whole frame rather than two poles and a guy line, which is what makes an exposed cliff possible at all. It holds its height close to the perimeter, so the floor area on the plan is roughly the floor area you can use. Warm air gathers at one apex, so venting the top moves the whole volume. And lying on your back you are looking at that apex, which is why the sky is above you rather than through a door.
 
 ### Does glamping in Camiguin have air conditioning?
-Ours does not, and that is by design rather than omission — the domes are cooled by moving sea air, which on an exposed cliff is usually ample. In the still, humid weeks it is warm at night. If you sleep badly in heat, book a room with a thermostat instead; it is a better holiday and we would rather say so before you arrive.
+Ours does: every dome is fully air-conditioned, which takes care of the still, humid weeks when a canvas room would otherwise get warm and stay warm. Close the dome before switching it on, or on a breezy night open it to the sea air instead. What air conditioning cannot change is the sound: rain on canvas is loud, so light sleepers are happier in a room.
 
 ### Can you see the sunrise from a glamping tent in Camiguin?
 From an east-facing cliff, yes, every morning of the year. The sunrise point at this latitude swings only between about 66 and 114 degrees along the horizon, and from that coast all of it is open sea, so there is no month when the sun comes up behind land. The light arrives through the canvas at around half past five.
@@ -211,7 +212,7 @@ From an east-facing cliff, yes, every morning of the year. The sunrise point at 
 The dome stays dry; it is simply loud. Some guests say it is the best sleep of the trip and some do not sleep at all, and we cannot tell you in advance which you will be. If a storm is forecast we move guests into a room, which is the right call and also means a dome is weather-dependent in a way an ordinary room is not.
 
 ### What is the best month for glamping in Camiguin?
-Roughly November to May, with February to May the strongest stretch: least rain and moving night air rather than still heat. April is statistically the driest month and also the hottest. June to October is the green season, which is beautiful and kind on rates but is a gamble on your own tolerance for weather at night.
+Roughly November to May, with February to May the strongest stretch: the least rain, which is what decides a night under canvas. April is statistically the driest month and also the hottest. June to October is the green season, which is beautiful and kind on rates but is a gamble on your own tolerance for weather at night.
 
 ### Is glamping in Camiguin suitable for children?
 Our domes sleep two and sit on a cliff edge, so no — a clifftop deck with a small child is a holiday spent supervising rather than resting. Families are generally happier in a room a few steps back from the edge, with a pool and shade, and the island as a whole is excellent for children once you are not sleeping on a precipice.
@@ -226,7 +227,7 @@ Six things that are not hotel rooms: glamping domes on the eastern cliffs, homes
 It is not budget accommodation, here or anywhere — a dome costs more than a simple room because of what it sits on rather than what it contains. If what you want is an unusual and inexpensive night on Camiguin, a homestay in the south will give you a better story for a fraction of the price, and we would point you there without hesitation.
 
 ### Can you book one night of glamping and the rest in a room?
-Yes, and it is what we suggest most often. The view is identical from both; the dome adds exposure to the sky and the air, and removes the thermostat and the soundproofing. One or two nights under canvas while it is still a novelty, then a cool quiet room for the nights after a long day on the ring road, is the arrangement that produces the fewest regrets.
+Yes, and it is what we suggest most often. The view is identical from both; the dome adds exposure to the sky and the air, and removes the soundproofing. One or two nights under canvas while it is still a novelty, then a quiet room with walls for the nights after a long day on the ring road, is the arrangement that produces the fewest regrets.
 
 ### Do you need a vehicle if you stay on Camiguin's eastern cliffs?
 It helps considerably. You are about seven kilometres from Mambajao town and its restaurants, five from Benoni ferry port and roughly six and a half from Mantigue Island, so the south-east is close and the north-west strip is a drive. There is no ride-hailing anywhere on the island and public multicabs stop in the early evening, so either rent wheels, use a driver, or stay somewhere that will run you around.
@@ -293,7 +294,7 @@ Bring repellent. Welcome home.
         {
           "@type": "Question",
           "name": "What is a glamping dome tent like to sleep in?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A proper queen bed with real linen, an en-suite rain shower, power, lighting and WiFi, on a private deck at the cliff edge. What you give up is the sealed, climate-controlled box that a hotel room is: there is no air conditioning, the dome is cooled by sea air, and rain on canvas is loud. Most guests describe the night sky through the dome as the thing they remember longest." }
+          "acceptedAnswer": { "@type": "Answer", "text": "A king-size bed with real linen, air conditioning, a private bathroom with a hot shower and Starlink Wi-Fi, on a private deck at the cliff edge. What you give up is the soundproofed, light-proof box that a hotel room is: rain on canvas is loud, and the light arrives at half past five. Most guests describe the night sky through the dome as the thing they remember longest." }
         },
         {
           "@type": "Question",
@@ -303,7 +304,7 @@ Bring repellent. Welcome home.
         {
           "@type": "Question",
           "name": "Does glamping in Camiguin have air conditioning?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Ours does not, and that is by design rather than omission: the domes are cooled by moving sea air, which on an exposed cliff is usually ample. In the still, humid weeks it is warm at night. If you sleep badly in heat, book a room with a thermostat instead; it is a better holiday and we would rather say so before you arrive." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Ours does: every dome is fully air-conditioned, which takes care of the still, humid weeks when a canvas room would otherwise get warm and stay warm. Close the dome before switching it on, or on a breezy night open it to the sea air instead. What air conditioning cannot change is the sound: rain on canvas is loud, so light sleepers are happier in a room." }
         },
         {
           "@type": "Question",
@@ -318,7 +319,7 @@ Bring repellent. Welcome home.
         {
           "@type": "Question",
           "name": "What is the best month for glamping in Camiguin?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Roughly November to May, with February to May the strongest stretch: least rain and moving night air rather than still heat. April is statistically the driest month and also the hottest. June to October is the green season, which is beautiful and kind on rates but is a gamble on your own tolerance for weather at night." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Roughly November to May, with February to May the strongest stretch: the least rain, which is what decides a night under canvas. April is statistically the driest month and also the hottest. June to October is the green season, which is beautiful and kind on rates but is a gamble on your own tolerance for weather at night." }
         },
         {
           "@type": "Question",
@@ -343,7 +344,7 @@ Bring repellent. Welcome home.
         {
           "@type": "Question",
           "name": "Can you book one night of glamping and the rest in a room?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes, and it is what we suggest most often. The view is identical from both; the dome adds exposure to the sky and the air, and removes the thermostat and the soundproofing. One or two nights under canvas while it is still a novelty, then a cool quiet room for the nights after a long day on the ring road, is the arrangement that produces the fewest regrets." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, and it is what we suggest most often. The view is identical from both; the dome adds exposure to the sky and the air, and removes the soundproofing. One or two nights under canvas while it is still a novelty, then a quiet room with walls for the nights after a long day on the ring road, is the arrangement that produces the fewest regrets." }
         },
         {
           "@type": "Question",
