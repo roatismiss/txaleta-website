@@ -28,6 +28,7 @@ export type SectionsDict = {
   };
   gallery: { kicker: string; title: string; cta: string };
   testimonials: { kicker: string; title: string; cta: string };
+  press: { kicker: string; title: string; cta: string };
 };
 
 const en: SectionsDict = {
@@ -96,6 +97,11 @@ const en: SectionsDict = {
     kicker: "Voices from Puting Balas",
     title: "What Stayed With Them",
     cta: "Read all reviews on Google",
+  },
+  press: {
+    kicker: "In the Press",
+    title: "What They Wrote",
+    cta: "Read the story",
   },
 };
 
@@ -166,6 +172,11 @@ const fr: SectionsDict = {
     title: "Ce qu'ils ont gardé en mémoire",
     cta: "Lire tous les avis sur Google",
   },
+  press: {
+    kicker: "Dans la presse",
+    title: "Ce qu'ils en ont écrit",
+    cta: "Lire l'article",
+  },
 };
 
 const de: SectionsDict = {
@@ -234,6 +245,11 @@ const de: SectionsDict = {
     kicker: "Stimmen aus Puting Balas",
     title: "Was ihnen geblieben ist",
     cta: "Alle Bewertungen auf Google lesen",
+  },
+  press: {
+    kicker: "In der Presse",
+    title: "Was über uns geschrieben wurde",
+    cta: "Artikel lesen",
   },
 };
 
@@ -304,6 +320,11 @@ const ja: SectionsDict = {
     title: "心に残ったもの",
     cta: "Googleですべてのクチコミを読む",
   },
+  press: {
+    kicker: "メディア掲載",
+    title: "記事に綴られたこと",
+    cta: "記事を読む",
+  },
 };
 
 const ko: SectionsDict = {
@@ -373,6 +394,11 @@ const ko: SectionsDict = {
     title: "마음에 남은 것들",
     cta: "Google에서 모든 리뷰 보기",
   },
+  press: {
+    kicker: "언론 보도",
+    title: "기사에 담긴 이야기",
+    cta: "기사 읽기",
+  },
 };
 
 const zh: SectionsDict = {
@@ -441,6 +467,11 @@ const zh: SectionsDict = {
     kicker: "来自Puting Balas的声音",
     title: "留在他们心里的",
     cta: "在 Google 上查看全部评价",
+  },
+  press: {
+    kicker: "媒体报道",
+    title: "他们笔下的 Txaleta",
+    cta: "阅读全文",
   },
 };
 

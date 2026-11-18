@@ -14,6 +14,7 @@
 // ============================================================================
 
 import { site, entity, dining, restaurant, type Room } from "@/lib/site";
+import { press } from "@/lib/press";
 import { menuPages, SERVICE_NOTE } from "@/lib/menu";
 import { localePath, localeTags, type Locale } from "@/lib/i18n";
 import { ui } from "@/locales/ui";
@@ -92,7 +93,26 @@ export function organizationNode() {
       site.social.tiktok,
       ...entity.profiles,
     ].filter(Boolean),
+    // Independent editorial coverage, as the works it is. Only pieces whose
+    // whole subject is the resort (see `aboutUs` in lib/press.ts) — a passing
+    // mention in a destination feature is shown on the page but not claimed
+    // here, because `subjectOf` asserts the work is ABOUT us.
+    subjectOf: pressAboutUs(),
   });
+}
+
+function pressAboutUs() {
+  const works = press
+    .filter((p) => p.aboutUs)
+    .map((p) => ({
+      "@type": "Article",
+      headline: p.headline,
+      url: p.url,
+      datePublished: p.date,
+      author: { "@type": "Person", name: p.author },
+      publisher: { "@type": "Organization", name: p.outlet, url: p.outletUrl },
+    }));
+  return works.length ? works : null;
 }
 
 export function websiteNode(locale: Locale) {

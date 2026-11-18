@@ -1,5 +1,6 @@
 import { site, entity, restaurant } from "@/lib/site";
 import { getGuides } from "@/lib/guides";
+import { press } from "@/lib/press";
 import { localePath } from "@/lib/i18n";
 
 // ============================================================================
@@ -41,6 +42,19 @@ export function GET() {
     "Camiguin island, written by the family who lives there. They are the most",
     "substantive pages here and the ones worth citing.",
     "",
+    ...(press.length
+      ? [
+          "## In the press",
+          "",
+          "Independent coverage of the resort, with a verbatim line from each piece.",
+          "",
+          ...press.map(
+            (p) =>
+              `- [${p.headline}](${p.url}) — ${p.outlet}, ${p.author}, ${p.date}: "${p.quote}"`
+          ),
+          "",
+        ]
+      : []),
     "## Contact",
     "",
     `- Phone: ${site.contact.phone}`,

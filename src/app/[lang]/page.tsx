@@ -8,6 +8,7 @@ import { Watersports } from "@/components/sections/watersports";
 import { Seamless } from "@/components/sections/seamless";
 import { Gallery } from "@/components/sections/gallery";
 import { Testimonials } from "@/components/sections/testimonials";
+import { Press } from "@/components/sections/press";
 import { BrandMoment } from "@/components/sections/brand-moment";
 import { site } from "@/lib/site";
 import { pageAlternates, type Locale } from "@/lib/i18n";
@@ -49,6 +50,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <Seamless lang={locale} />
       <Gallery lang={locale} />
       <Testimonials lang={locale} />
+      <Press lang={locale} />
       <BrandMoment />
       {/* Root of the site-wide entity graph: the Resort node every other page
           references by @id, plus the WebSite node that owns it. */}
