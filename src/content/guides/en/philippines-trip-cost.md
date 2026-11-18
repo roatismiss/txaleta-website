@@ -218,7 +218,7 @@ Yes, once you are on it. Entrance fees are measured in tens of pesos and a scoot
 
 If the budget maths on this page points anywhere, it points at staying put.
 
-We are the kind of place that argument ends at: a fourteen-room house on a clifftop in Mambajao, breakfast over the water every morning, and an island where the entrance fee to a waterfall costs less than your coffee did at the airport.
+We are the kind of place that argument ends at: a twenty-four-room house on a clifftop in Mambajao, breakfast over the water every morning, and an island where the entrance fee to a waterfall costs less than your coffee did at the airport.
 
 [Read the Camiguin cost breakdown](/guides/camiguin-travel-cost), [browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 

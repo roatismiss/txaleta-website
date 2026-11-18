@@ -174,7 +174,7 @@ However you build the fortnight, we would make one suggestion: **finish somewher
 
 A trip that ends on a busy beach ends at a high pitch. A trip that ends on a small volcanic island with a ring road, a sandbar and nowhere in particular to be sends you home differently.
 
-That is the part of the country we can speak for. Fourteen ocean-view rooms on a clifftop in Mambajao, breakfast over the water, and a whole island that closes early.
+That is the part of the country we can speak for. Twenty-four ocean-view rooms on a clifftop in Mambajao, breakfast over the water, and a whole island that closes early.
 
 [Read the Camiguin itinerary](/guides/camiguin-itinerary), [browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 

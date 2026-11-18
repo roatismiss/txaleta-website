@@ -102,7 +102,7 @@ Once a year Mambajao stops being a sleepy capital and becomes a street party. Fo
 
 If cultural travel is the point of your trip, this is the single best week to be on Camiguin. If solitude is the point, it's the one week to avoid.
 
-Either way: **book months ahead.** Fourteen rooms, one island, one festival. October fills first.
+Either way: **book months ahead.** Twenty-four rooms, one island, one festival. October fills first.
 
 We've written the whole week up properly — the fruit, the events, where to stand, and the honest case for and against — in our [Lanzones Festival guide](/guides/camiguin-lanzones-festival).
 

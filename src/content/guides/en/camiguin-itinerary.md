@@ -23,7 +23,7 @@ imageAlt: "Camiguin itinerary: White Island sandbar at sunrise with the volcano 
 
 We live here. From our clifftop in Mambajao, between Mt. Hibok-Hibok and the Bohol Sea, we watch travellers arrive with the same question every week: how do you actually *do* Camiguin? Not in a rushed weekend, but properly — the sunrise sandbar, the waterfalls, the slow merienda afternoons. This **Camiguin itinerary** is the three-day plan we give our own guests: a real, local, day-by-day route around the island, with honest prices, sensible timing, and a quiet place to come home to each night.
 
-It is short enough to fit a long weekend and complete enough to leave nothing essential behind. And because we are not a travel blog passing through — we are the family who owns the fourteen-room cottage on the cliff — every day here closes the way it should: with the sea at eye level and dinner waiting.
+It is short enough to fit a long weekend and complete enough to leave nothing essential behind. And because we are not a travel blog passing through — we are the family who owns the twenty-four-room cottage on the cliff — every day here closes the way it should: with the sea at eye level and dinner waiting.
 
 *Written by the family at Txaleta de Camiguin. Last updated June 2026.*
 
@@ -75,7 +75,7 @@ Drop your bags. Do not unpack yet. The [infinity pool](/accommodation) is open f
 
 **Dinner.** Back at the cliff, our [Filipino-Spanish kitchen](/dining) is open — to our guests and to walk-in visitors alike. Start with tapas: gambas al ajillo, croquetas, a plate of pork sisig. Then [the paella](/guides/best-paella-in-camiguin), which is the reason people come back. A Spanish latte or a moonlight cocktail to finish. "Filipino Heart, Spanish Soul" is not a slogan we made up for a wall; it is genuinely how we cook and how we host.
 
-**Where you sleep:** in one of our [fourteen ocean-view rooms](/accommodation), the sea murmuring below the cliff. If it is your first night, ask for the [Premier Seaview Suite](/book?room=premier-seaview-suite) — king bed, floor-to-ceiling glass, a private terrace, and White Island sitting out there on the water, waiting for you to reach it at dawn.
+**Where you sleep:** in one of our [twenty-four ocean-view rooms](/accommodation), the sea murmuring below the cliff. If it is your first night, ask for the [Premier Seaview Suite](/book?room=premier-seaview-suite) — king bed, floor-to-ceiling glass, a private terrace, and White Island sitting out there on the water, waiting for you to reach it at dawn.
 
 ---
 
@@ -157,7 +157,7 @@ Here is the single decision that makes this whole itinerary work: **stay in one 
 
 (Choosing between the island's coasts and barangays is a whole subject of its own — we break it down area by area in [where to stay in Camiguin](/guides/where-to-stay-in-camiguin).)
 
-This is, frankly, the one thing a travel blog cannot offer you: a *base*. We are not just a stop on the map — we are [Txaleta de Camiguin](/about), a family-owned boutique resort of fourteen rooms on a Mambajao clifftop, between the volcano and the Bohol Sea. The name "Txaleta" comes from the Spanish word for a small home, a cottage, and that is exactly what we built: more than a resort, a place to belong.
+This is, frankly, the one thing a travel blog cannot offer you: a *base*. We are not just a stop on the map — we are [Txaleta de Camiguin](/about), a family-owned boutique resort of twenty-four rooms on a Mambajao clifftop, between the volcano and the Bohol Sea. The name "Txaleta" comes from the Spanish word for a small home, a cottage, and that is exactly what we built: more than a resort, a place to belong.
 
 Every day in this plan ends here on purpose. Breakfast by the water is part of every morning — our **Almusal sa Bahay** heritage table of tsokolate, pan de sal con keso de bola, garlic adobo, and sweet Camiguin mango. The infinity pool is open from first light. The hosts who pour your coffee are the same people who arranged your banca and checked your tide times. That continuity *is* the luxury — luxury without pretense.
 
@@ -199,7 +199,7 @@ Day 1 arrival, the infinity pool and a sunset kayak at the Sunken Cemetery; Day 
 A scooter (PHP 450/day) for two confident riders, or an SUV/AUV (PHP 2,850/day, plus PHP 1,000/day for a local driver) for families, luggage or the green season — the Day 3 ring-road loop works either way, and we arrange both at the resort. Fares for multicabs, tricycles and habal-habal, plus the caveats about driving after dark, are in our guide to [getting around Camiguin](/guides/getting-around-camiguin).
 
 ### Where should you base yourself for this itinerary?
-Base yourself in Mambajao, the island's main town and natural midpoint — it puts White Island, the airport, the Sunken Cemetery, and the ring road all within easy reach, so you never need to change hotels. Txaleta de Camiguin is a fourteen-room boutique resort on a Mambajao clifftop with an infinity pool over the Bohol Sea, ocean-view rooms, and breakfast by the water.
+Base yourself in Mambajao, the island's main town and natural midpoint — it puts White Island, the airport, the Sunken Cemetery, and the ring road all within easy reach, so you never need to change hotels. Txaleta de Camiguin is a twenty-four-room boutique resort on a Mambajao clifftop with an infinity pool over the Bohol Sea, ocean-view rooms, and breakfast by the water.
 
 ### Is Camiguin worth visiting?
 Yes — Camiguin is one of the Philippines' most rewarding small islands precisely because it is uncrowded, safe, and easy to navigate. In a few days you get sandbars, snorkelling, waterfalls, hot and cold springs, an active volcano, and warm Filipino hospitality, all on an island you can circle in an hour.
@@ -335,7 +335,7 @@ Come for the views. Stay for the feeling. Welcome home.
           "name": "Where should you base yourself for this Camiguin itinerary?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Base yourself in Mambajao, the island's main town and natural midpoint — it puts White Island, the airport, the Sunken Cemetery, and the ring road all within easy reach, so you never need to change hotels. Txaleta de Camiguin is a fourteen-room boutique resort on a Mambajao clifftop with an infinity pool over the Bohol Sea, ocean-view rooms, and breakfast by the water."
+            "text": "Base yourself in Mambajao, the island's main town and natural midpoint — it puts White Island, the airport, the Sunken Cemetery, and the ring road all within easy reach, so you never need to change hotels. Txaleta de Camiguin is a twenty-four-room boutique resort on a Mambajao clifftop with an infinity pool over the Bohol Sea, ocean-view rooms, and breakfast by the water."
           }
         },
         {

@@ -121,7 +121,7 @@ Now the part where we stop being neutral.
 
 ### Test 1 — Real height: pass
 
-[Txaleta de Camiguin](/about) is fourteen rooms on a cliff at Puting Balas, in Mambajao, **forty metres above the Bohol Sea**, with the water directly below. The boats land underneath us — it is how the kitchen gets the day's catch, and it is also why we can give you a number rather than an adjective. The sea-view rooms and the [cliff-edge glamping](/book?room=ocean-view-glamping) put the water below your own deck rather than across a lawn, and the [infinity pool](/accommodation) is built at the edge, so its surface reads against the open sea rather than against a hedge.
+[Txaleta de Camiguin](/about) is twenty-four rooms on a cliff at Puting Balas, in Mambajao, **forty metres above the Bohol Sea**, with the water directly below. The boats land underneath us — it is how the kitchen gets the day's catch, and it is also why we can give you a number rather than an adjective. The sea-view rooms and the [cliff-edge glamping](/book?room=ocean-view-glamping) put the water below your own deck rather than across a lawn, and the [infinity pool](/accommodation) is built at the edge, so its surface reads against the open sea rather than against a hedge.
 
 This is the test that is easiest to verify from photographs and hardest to fake, which is why it is first. Look at any property's pool shot: if the far lip of the pool meets sea, the pool is on the edge. If it meets vegetation, it is not.
 

@@ -109,7 +109,7 @@ Almost all of Camiguin's good accommodation is in Mambajao, and almost all of th
 
 Which part of that coast suits you, and which type of property, is a longer conversation than this page should have — the comparison by coast, by budget and by type is in [where to stay in Camiguin](/guides/where-to-stay-in-camiguin).
 
-**Where we are, since you are entitled to know the bias:** on the cliff at Puting Balas, fourteen rooms above the Bohol Sea, an infinity pool at the edge, breakfast served over the water, and the airport fifteen minutes away. [Browse the rooms](/accommodation) or [tell us your dates](/book) and judge for yourself.
+**Where we are, since you are entitled to know the bias:** on the cliff at Puting Balas, twenty-four rooms above the Bohol Sea, an infinity pool at the edge, breakfast served over the water, and the airport fifteen minutes away. [Browse the rooms](/accommodation) or [tell us your dates](/book) and judge for yourself.
 
 ## Getting into town, and getting around
 

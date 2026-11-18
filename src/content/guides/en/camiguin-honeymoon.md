@@ -156,7 +156,7 @@ If you read those five and thought "that's exactly what I want" — this is your
 
 Camiguin does these quietly and well. The sandbar at sunrise with no one else on it. A private picnic on the cliff at golden hour. A table set apart with the sea below.
 
-If you're planning something — a proposal, a milestone anniversary, a small vow renewal — tell us in advance and we'll set it up rather than improvise it on the day. Small resorts are good at this precisely because there are only fourteen rooms and everyone knows what's happening.
+If you're planning something — a proposal, a milestone anniversary, a small vow renewal — tell us in advance and we'll set it up rather than improvise it on the day. Small resorts are good at this precisely because there are only twenty-four rooms and everyone knows what's happening.
 
 ## Frequently asked questions
 
@@ -194,7 +194,7 @@ Very. It has very low crime and a relaxed, unguarded culture — people leave he
 
 A honeymoon here is not a list of things you did. It's a handful of moments: the boat engine cutting out at a sandbar before sunrise, a spring you had entirely to yourselves, a picnic where the sky went gold and neither of you said anything for a while.
 
-We'll set those up and then get out of the way. The pickup, the banca timed to the tide, the picnic on the cliff, the massage, the table apart. Fourteen rooms, so nothing gets lost.
+We'll set those up and then get out of the way. The pickup, the banca timed to the tide, the picnic on the cliff, the massage, the table apart. Twenty-four rooms, so nothing gets lost.
 
 [Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277) and tell us what you're planning. Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 

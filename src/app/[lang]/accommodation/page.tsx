@@ -21,7 +21,7 @@ export const revalidate = 3600;
 const meta: Metadata = {
   title: "Accommodation",
   description:
-    "Seaview suites, cliff-edge ocean-view glamping and garden retreats at Txaleta de Camiguin — fourteen rooms between the volcano and the Bohol Sea, minutes from Camiguin Airport.",
+    "Seaview suites, cliff-edge ocean-view glamping and garden retreats at Txaleta de Camiguin — twenty-four rooms between the volcano and the Bohol Sea, minutes from Camiguin Airport.",
 };
 
 const inclusionIcons = [Coffee, Waves, Wifi, Wind, Car, Utensils, Sparkles, Bell];

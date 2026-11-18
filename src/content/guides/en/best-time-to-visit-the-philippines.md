@@ -176,7 +176,7 @@ March to May is our driest and most reliable stretch, which is different from th
 
 Whatever month you land on, the archipelago rewards the same thing: going slowly, and choosing fewer places.
 
-We are one of the quiet ones — a volcanic island in the Bohol Sea with a 64-kilometre ring road, hot springs, a white sandbar that moves with the tide, and a fourteen-room house on a clifftop where breakfast is served over the water.
+We are one of the quiet ones — a volcanic island in the Bohol Sea with a 64-kilometre ring road, hot springs, a white sandbar that moves with the tide, and a twenty-four-room house on a clifftop where breakfast is served over the water.
 
 [Read the Camiguin season guide](/guides/best-time-to-visit-camiguin), [browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 

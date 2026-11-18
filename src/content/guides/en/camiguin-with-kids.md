@@ -160,7 +160,7 @@ Reef-safe sunscreen and rash guards (better than reapplying sunscreen), hats, mo
 
 The best family days here look almost lazy from the outside: an early boat, a long breakfast, a spring in the middle of the day, a pool in the afternoon, everyone in bed by nine. It doesn't photograph like an adventure. It's the version that actually works.
 
-Tell us the ages and we'll be honest about what's worth doing, what to skip, and which room suits your particular combination of people. We're a family running a fourteen-room house — we plan around children rather than in spite of them.
+Tell us the ages and we'll be honest about what's worth doing, what to skip, and which room suits your particular combination of people. We're a family running a twenty-four-room house — we plan around children rather than in spite of them.
 
 [Browse our rooms](/accommodation), [book your stay direct](/book), or message us on [WhatsApp](https://wa.me/639175822277). Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 

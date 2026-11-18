@@ -31,7 +31,7 @@ Search **where to stay in Camiguin** and you get a list. Twenty properties, rank
 
 The list is the wrong tool. Camiguin is a small island — a ring road of about sixty-four kilometres, an hour to drive without stopping — and yet *where on that ring you sleep* changes your holiday more than any amenity on any booking page. One coast has the airport, the restaurants, the boats to White Island and almost every resort on the island. The rest has almost nothing, on purpose.
 
-So we're going to do this by **area**, not by star rating. We'll tell you what each stretch of coast is actually like, who it suits, what it costs, and what to check before you press book. Then, because it would be strange to pretend otherwise, we'll tell you plainly where we fit — we're a fourteen-room family resort on a clifftop in Mambajao, and we're not going to rank our neighbours. We'll just make sure you can choose properly.
+So we're going to do this by **area**, not by star rating. We'll tell you what each stretch of coast is actually like, who it suits, what it costs, and what to check before you press book. Then, because it would be strange to pretend otherwise, we'll tell you plainly where we fit — we're a twenty-four-room family resort on a clifftop in Mambajao, and we're not going to rank our neighbours. We'll just make sure you can choose properly.
 
 *Written by the family at Txaleta de Camiguin. Last updated September 2026.*
 
@@ -172,7 +172,7 @@ Everything above sorts the island by geography, which is the decision that matte
 
 **There are no international chains here. None.** Camiguin is an island of family-run properties, which is either the whole appeal or a dealbreaker depending on what you're used to. Nobody is going to have a 24-hour front desk, a concierge team or a loyalty programme.
 
-**Boutique and clifftop stays** — the top of the island's range, ₱5,000–12,000+. Concentrated in Mambajao — the north-west coast and the east-facing cliffs past the town — generally small, generally with a pool over the sea and a kitchen that does most of your meals because there is nowhere else nearby. Expect design and personal service rather than facilities. This is the band we sit in, so treat what follows as declared bias: fourteen rooms on a cliff, breakfast over the water, and a [Filipino-Spanish kitchen](/dining) open to visitors as well as guests. How to judge a clifftop property on this island — ours included, and we fail one of the tests — is its own guide: [the five tests](/guides/best-clifftop-resort-in-camiguin).
+**Boutique and clifftop stays** — the top of the island's range, ₱5,000–12,000+. Concentrated in Mambajao — the north-west coast and the east-facing cliffs past the town — generally small, generally with a pool over the sea and a kitchen that does most of your meals because there is nowhere else nearby. Expect design and personal service rather than facilities. This is the band we sit in, so treat what follows as declared bias: twenty-four rooms on a cliff, breakfast over the water, and a [Filipino-Spanish kitchen](/dining) open to visitors as well as guests. How to judge a clifftop property on this island — ours included, and we fail one of the tests — is its own guide: [the five tests](/guides/best-clifftop-resort-in-camiguin).
 
 **Mid-range beach resorts** — ₱2,800–5,000, the widest category and the one most visitors book. Pool, restaurant, beach access, tours arranged. Mostly along the Agoho–Yumbing stretch.
 
@@ -203,7 +203,7 @@ Standard hotel checklists don't cover island realities. These do.
 
 We're not going to pretend to be a neutral referee, so here is our position plainly.
 
-[Txaleta de Camiguin](/about) is a family-owned, fourteen-room boutique resort on a clifftop in **Puting Balas, Mambajao** — on the island's east-facing cliffs, about fifteen minutes from the runway and seven kilometres past the town. *Txaleta* is Spanish for a small home, and that's the whole idea: **Filipino Heart, Spanish Soul**, luxury without pretense.
+[Txaleta de Camiguin](/about) is a family-owned, twenty-four-room boutique resort on a clifftop in **Puting Balas, Mambajao** — on the island's east-facing cliffs, about fifteen minutes from the runway and seven kilometres past the town. *Txaleta* is Spanish for a small home, and that's the whole idea: **Filipino Heart, Spanish Soul**, luxury without pretense.
 
 What that looks like in practice: an **infinity pool that opens at sunrise** and appears to spill straight into the Bohol Sea; rooms with the water at eye level; **[cliff-edge glamping](/guides/glamping-in-camiguin)** — a proper bed under canvas on a private deck above the sea; breakfast served beside the water; a Filipino-Spanish kitchen that welcomes walk-ins as well as guests; and hosts who will arrange your banca, your trek, your massage and your airport pickup before you've unpacked.
 
@@ -240,7 +240,7 @@ Both work. Here's the honest trade-off.
 
 **Booking sites** are excellent for comparing, for loyalty points, and for free cancellation if your plans are soft. Use them without guilt.
 
-**Booking direct** — with us or with any small island property — usually gets you the better room in the same category, the flexibility to move a date without a fight, and a person who reads your message. It also means more of what you pay stays on the island rather than going to a commission. On a fourteen-room family resort, that difference is somebody's training, somebody's job.
+**Booking direct** — with us or with any small island property — usually gets you the better room in the same category, the flexibility to move a date without a fight, and a person who reads your message. It also means more of what you pay stays on the island rather than going to a commission. On a twenty-four-room family resort, that difference is somebody's training, somebody's job.
 
 If you're unsure: message the property first. How a small resort answers a question in August tells you exactly how it will look after you in November.
 
@@ -289,7 +289,7 @@ Four windows: Holy Week (late March or early April), the Filipino summer from la
 
 Choose the coast first, the property second. Get that right and this island is very easy to love: mornings on flat water, afternoons in a volcano-warmed spring, evenings watching the sky do something extravagant over the Bohol Sea.
 
-If the clifftop version of that sounds like yours, we'd love to host you. Fourteen rooms, one infinity pool that opens at sunrise, a kitchen with a Spanish accent, and a family who'll have your airport pickup arranged before you land.
+If the clifftop version of that sounds like yours, we'd love to host you. Twenty-four rooms, one infinity pool that opens at sunrise, a kitchen with a Spanish accent, and a family who'll have your airport pickup arranged before you land.
 
 [Browse our rooms](/accommodation), [check live rates and book direct](/book), or message us on [WhatsApp](https://wa.me/639175822277) and tell us your dates. Reach us anytime at +63 917 582 2277, or visit us at Purok 6, Puting Balas, Mambajao, 9100 Camiguin.
 

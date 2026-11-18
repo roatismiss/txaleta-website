@@ -132,7 +132,7 @@ One honest note for anyone choosing an island on the strength of its sand: ours 
 
 You can sleep cheap and basic in Camiguin, and many do. But if you have chosen a quiet island precisely to feel something, where you stay becomes the trip. (For the full picture — every coast, every barangay, what each costs — see [where to stay in Camiguin](/guides/where-to-stay-in-camiguin).)
 
-Txaleta de Camiguin is a family-owned boutique resort — fourteen rooms — set on a clifftop in Mambajao, between Mt. Hibok-Hibok and the Bohol Sea. The name *Txaleta* is Spanish for a small home, a cottage, and that is the whole idea: not a hotel that processes you, but a house that takes you in. Filipino Heart, Spanish Soul. Our infinity pool reaches out over the Bohol Sea and is open from sunrise; breakfast by the water is included every morning; and the [Filipino-Spanish restaurant](/dining) is open to resort guests and walk-in visitors alike.
+Txaleta de Camiguin is a family-owned boutique resort — twenty-four rooms — set on a clifftop in Mambajao, between Mt. Hibok-Hibok and the Bohol Sea. The name *Txaleta* is Spanish for a small home, a cottage, and that is the whole idea: not a hotel that processes you, but a house that takes you in. Filipino Heart, Spanish Soul. Our infinity pool reaches out over the Bohol Sea and is open from sunrise; breakfast by the water is included every morning; and the [Filipino-Spanish restaurant](/dining) is open to resort guests and walk-in visitors alike.
 
 A few ways to come home to Camiguin:
 

@@ -119,8 +119,10 @@ export const entity = {
   // is a real question people ask about it.
   restaurantHours: { opens: "08:00", closes: "21:00" },
 
-  // Sourced from the /accommodation page copy ("fourteen rooms").
-  numberOfRooms: 14,
+  // 24, per the owners in the Simpol.ph profile (2026-11-16: "a 24-room
+  // boutique resort"), confirmed for the site 2026-11-18. Was 14 before then;
+  // the copy in every locale and the guides were moved to 24 at the same time.
+  numberOfRooms: 24,
 
   priceRange: "₱₱",
   currency: "PHP",
@@ -1098,7 +1100,7 @@ const accommodationMega: MegaMenu = {
   kicker: "Stay With Us",
   heading: "Rooms by the Sea",
   blurb:
-    "Fourteen rooms between the volcano and the Bohol Sea — seaview suites, cliff-edge glamping and quiet garden retreats.",
+    "Twenty-four rooms between the volcano and the Bohol Sea — seaview suites, cliff-edge glamping and quiet garden retreats.",
   viewAll: { label: "All Accommodation", href: "/accommodation" },
   links: [
     { label: "Inclusions & Amenities", href: "/accommodation#inclusions" },

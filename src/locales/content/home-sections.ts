@@ -33,10 +33,10 @@ export type SectionsDict = {
 
 const en: SectionsDict = {
   accommodation: {
-    kicker: "The Fourteen Rooms",
+    kicker: "The Twenty-Four Rooms",
     title: "Where You Wake on Camiguin",
     intro:
-      "Fourteen rooms sit between the volcano and the sea, close enough to hear both, and no two open onto the same view. Some face the Bohol Sea, others the garden or the cliff's edge. Choose the one that matches how you want to meet the morning.",
+      "Twenty-four rooms sit between the volcano and the sea, close enough to hear both, and no two open onto the same view. Some face the Bohol Sea, others the garden or the cliff's edge. Choose the one that matches how you want to meet the morning.",
     cta: "Check Availability",
   },
   dining: {
@@ -107,10 +107,10 @@ const en: SectionsDict = {
 
 const fr: SectionsDict = {
   accommodation: {
-    kicker: "Les quatorze chambres",
+    kicker: "Les vingt-quatre chambres",
     title: "Là où vous vous réveillez à Camiguin",
     intro:
-      "Quatorze chambres entre le volcan et la mer, assez proches pour entendre les deux — et aucune n'ouvre sur la même vue. Certaines regardent la mer de Bohol, d'autres le jardin ou le bord de la falaise. Choisissez celle qui ressemble à votre façon d'accueillir le matin.",
+      "Vingt-quatre chambres entre le volcan et la mer, assez proches pour entendre les deux — et aucune n'ouvre sur la même vue. Certaines regardent la mer de Bohol, d'autres le jardin ou le bord de la falaise. Choisissez celle qui ressemble à votre façon d'accueillir le matin.",
     cta: "Voir les disponibilités",
   },
   dining: {
@@ -181,10 +181,10 @@ const fr: SectionsDict = {
 
 const de: SectionsDict = {
   accommodation: {
-    kicker: "Die vierzehn Zimmer",
+    kicker: "Die vierundzwanzig Zimmer",
     title: "Wo Sie auf Camiguin aufwachen",
     intro:
-      "Vierzehn Zimmer liegen zwischen Vulkan und Meer, nah genug, um beide zu hören — und keines öffnet sich auf denselben Blick. Manche schauen auf die Bohol-See, andere in den Garten oder an die Klippenkante. Wählen Sie das Zimmer, das zu Ihrem Morgen passt.",
+      "Vierundzwanzig Zimmer liegen zwischen Vulkan und Meer, nah genug, um beide zu hören — und keines öffnet sich auf denselben Blick. Manche schauen auf die Bohol-See, andere in den Garten oder an die Klippenkante. Wählen Sie das Zimmer, das zu Ihrem Morgen passt.",
     cta: "Verfügbarkeit prüfen",
   },
   dining: {
@@ -255,10 +255,10 @@ const de: SectionsDict = {
 
 const ja: SectionsDict = {
   accommodation: {
-    kicker: "14の客室",
+    kicker: "24の客室",
     title: "カミギンで迎える朝",
     intro:
-      "火山と海のあいだに佇む14の客室。どちらの気配も届く近さで、同じ景色を望む部屋はふたつとありません。ボホール海を望む部屋、庭や崖の縁に面した部屋。朝の迎え方に合わせて、お選びください。",
+      "火山と海のあいだに佇む24の客室。どちらの気配も届く近さで、同じ景色を望む部屋はふたつとありません。ボホール海を望む部屋、庭や崖の縁に面した部屋。朝の迎え方に合わせて、お選びください。",
     cta: "空室を確認する",
   },
   dining: {
@@ -329,10 +329,10 @@ const ja: SectionsDict = {
 
 const ko: SectionsDict = {
   accommodation: {
-    kicker: "열네 개의 객실",
+    kicker: "스물네 개의 객실",
     title: "카미긴에서 맞는 아침",
     intro:
-      "화산과 바다 사이, 두 소리가 모두 들리는 곳에 열네 개의 객실이 있습니다. 같은 풍경을 마주한 방은 하나도 없습니다. 보홀 바다를 향한 방, 정원이나 절벽 끝을 향한 방. 아침을 맞이하고 싶은 방식대로 고르세요.",
+      "화산과 바다 사이, 두 소리가 모두 들리는 곳에 스물네 개의 객실이 있습니다. 같은 풍경을 마주한 방은 하나도 없습니다. 보홀 바다를 향한 방, 정원이나 절벽 끝을 향한 방. 아침을 맞이하고 싶은 방식대로 고르세요.",
     cta: "예약 가능 여부 확인",
   },
   dining: {
@@ -403,10 +403,10 @@ const ko: SectionsDict = {
 
 const zh: SectionsDict = {
   accommodation: {
-    kicker: "十四间客房",
+    kicker: "二十四间客房",
     title: "在卡米金醒来的地方",
     intro:
-      "十四间客房坐落在火山与大海之间，近得能同时听见两者的声音——而且没有两间面向同样的风景。有的面朝保和海，有的面向花园或悬崖边缘。选一间与你迎接清晨的方式最相配的。",
+      "二十四间客房坐落在火山与大海之间，近得能同时听见两者的声音——而且没有两间面向同样的风景。有的面朝保和海，有的面向花园或悬崖边缘。选一间与你迎接清晨的方式最相配的。",
     cta: "查询空房",
   },
   dining: {

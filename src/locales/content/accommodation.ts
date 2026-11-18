@@ -32,7 +32,7 @@ const en: AccommodationDict = {
   heroKicker: "Where You Wake on Camiguin",
   heroTitle: "Accommodation",
   intro:
-    "Fourteen rooms sit between the volcano and the sea, close enough to hear both, and no two open onto the same view. Choose the one that matches how you want to meet the morning.",
+    "Twenty-four rooms sit between the volcano and the sea, close enough to hear both, and no two open onto the same view. Choose the one that matches how you want to meet the morning.",
   checkAvailability: "Check Availability",
   sleepsUpTo: "Sleeps up to {n}",
   inclusionsKicker: "The Same For Every Room",
@@ -66,7 +66,7 @@ const fr: AccommodationDict = {
   heroKicker: "Là où vous vous réveillez à Camiguin",
   heroTitle: "Hébergement",
   intro:
-    "Quatorze chambres entre le volcan et la mer, assez proches pour entendre les deux — et aucune n'ouvre sur la même vue. Choisissez celle qui ressemble à votre façon d'accueillir le matin.",
+    "Vingt-quatre chambres entre le volcan et la mer, assez proches pour entendre les deux — et aucune n'ouvre sur la même vue. Choisissez celle qui ressemble à votre façon d'accueillir le matin.",
   checkAvailability: "Voir les disponibilités",
   sleepsUpTo: "Jusqu'à {n} personnes",
   inclusionsKicker: "Identique pour chaque chambre",
@@ -100,7 +100,7 @@ const de: AccommodationDict = {
   heroKicker: "Wo Sie auf Camiguin aufwachen",
   heroTitle: "Unterkünfte",
   intro:
-    "Vierzehn Zimmer liegen zwischen Vulkan und Meer, nah genug, um beide zu hören — und keines öffnet sich auf denselben Blick. Wählen Sie das Zimmer, das zu Ihrem Morgen passt.",
+    "Vierundzwanzig Zimmer liegen zwischen Vulkan und Meer, nah genug, um beide zu hören — und keines öffnet sich auf denselben Blick. Wählen Sie das Zimmer, das zu Ihrem Morgen passt.",
   checkAvailability: "Verfügbarkeit prüfen",
   sleepsUpTo: "Bis zu {n} Personen",
   inclusionsKicker: "Für jedes Zimmer gleich",
@@ -134,7 +134,7 @@ const ja: AccommodationDict = {
   heroKicker: "カミギンで迎える朝",
   heroTitle: "客室",
   intro:
-    "火山と海のあいだに佇む14の客室。どちらの気配も届く近さで、同じ景色を望む部屋はふたつとありません。朝の迎え方に合わせて、お選びください。",
+    "火山と海のあいだに佇む24の客室。どちらの気配も届く近さで、同じ景色を望む部屋はふたつとありません。朝の迎え方に合わせて、お選びください。",
   checkAvailability: "空室を確認",
   sleepsUpTo: "最大{n}名",
   inclusionsKicker: "どの客室にも共通",
@@ -168,7 +168,7 @@ const ko: AccommodationDict = {
   heroKicker: "카미긴에서 맞는 아침",
   heroTitle: "객실",
   intro:
-    "화산과 바다 사이, 두 소리가 모두 들리는 곳에 열네 개의 객실이 있습니다. 같은 풍경을 마주한 방은 하나도 없습니다. 아침을 맞이하고 싶은 방식대로 고르세요.",
+    "화산과 바다 사이, 두 소리가 모두 들리는 곳에 스물네 개의 객실이 있습니다. 같은 풍경을 마주한 방은 하나도 없습니다. 아침을 맞이하고 싶은 방식대로 고르세요.",
   checkAvailability: "예약 가능 여부 확인",
   sleepsUpTo: "최대 {n}인",
   inclusionsKicker: "모든 객실에 동일하게",
@@ -202,7 +202,7 @@ const zh: AccommodationDict = {
   heroKicker: "在卡米金醒来的地方",
   heroTitle: "客房",
   intro:
-    "十四间客房坐落在火山与大海之间，近得能同时听见两者的声音——而且没有两间面向同样的风景。选一间与你迎接清晨的方式最相配的。",
+    "二十四间客房坐落在火山与大海之间，近得能同时听见两者的声音——而且没有两间面向同样的风景。选一间与你迎接清晨的方式最相配的。",
   checkAvailability: "查询空房",
   sleepsUpTo: "最多可住{n}人",
   inclusionsKicker: "每间客房都一样",
