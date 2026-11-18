@@ -11,6 +11,7 @@ import {
   featuredRoomOrder,
   roomKickers,
   roomKickerFallback,
+  roomOccupancyOverrides,
 } from "@/lib/site";
 
 const BASE = site.cloudreef.baseUrl;
@@ -156,6 +157,15 @@ function kickerFor(name: string): string {
   return roomKickerFallback;
 }
 
+/** Max guests for a live room: the site.ts override if there is one, else Cloudbeds. */
+function occupancyFor(name: string, live: number): number {
+  const target = normName(name);
+  for (const [k, v] of Object.entries(roomOccupancyOverrides)) {
+    if (normName(k) === target) return v;
+  }
+  return live;
+}
+
 /** Featured rooms first (in `featuredRoomOrder`), the rest keep their incoming
  *  order. Stable sort, so non-featured stay in the API's ascending-rate order. */
 function sortFeatured(list: DisplayRoom[]): DisplayRoom[] {
@@ -184,7 +194,7 @@ export async function fetchDisplayRooms(): Promise<DisplayRoom[]> {
       amenities: t.amenities ?? [],
       images: t.images,
       cover: t.images[0],
-      maxOccupancy: t.max_occupancy,
+      maxOccupancy: occupancyFor(t.name, t.max_occupancy),
     }));
     return sortFeatured(mapped);
   } catch {

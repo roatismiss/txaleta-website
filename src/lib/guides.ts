@@ -112,6 +112,8 @@ const ORDER = [
   "best-beaches-in-the-philippines",
   "is-the-philippines-safe",
   "birdwatching-camiguin-hibok-hibok",
+  "camiguin-from-cagayan-de-oro",
+  "camiguin-faq",
 ];
 
 // Date labels in the reader's language ("Updated August 2026").

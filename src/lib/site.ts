@@ -316,6 +316,14 @@ export const roomKickers: Record<string, string> = {
 };
 export const roomKickerFallback = "Oceanfront Stay";
 
+// How many people a room really sleeps, where the Cloudbeds `max_occupancy`
+// says otherwise. Cloudbeds lists the domes at 4; the client confirmed 2 (one
+// king bed) on 2026-11-12. Wins over the live value on the cards ("Sleeps up
+// to N") and in the HotelRoom JSON-LD. Delete an entry once Cloudbeds agrees.
+export const roomOccupancyOverrides: Record<string, number> = {
+  "Glamping Dome Tent": 2,
+};
+
 // ============================================================================
 // The restaurant, as an entity of its own.
 //

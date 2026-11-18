@@ -250,14 +250,32 @@ not mention either fact yet. The Cebgo 7 kg allowance is no longer hedged.
 3. **The digital nomad visa** (EO 86, Apr 2025) and the BI field office in Mambajao are stated
    with hedges — re-check both when the article is next refreshed.
 
-**Further backlog** if the cadence stays at 2/week: Camiguin from Manila · Camiguin from Cagayan
-de Oro · the 64km ring road self-drive guide · Camiguin in 2 days · solo travel in Camiguin ·
-Camiguin for seniors/accessibility · the Walkway to the Old Volcano · Camiguin's beaches ranked ·
-best sunset spots · lanzones and what else grows here · Camiguin travel safety · Camiguin SIM and
-connectivity · scuba vs snorkel · Camiguin's seven volcanoes explained · Filipino-Spanish food
+**Further backlog** if the cadence stays at 2/week: the 64km ring road self-drive guide ·
+Camiguin in 2 days · solo travel in Camiguin · Camiguin for seniors/accessibility · the Walkway
+to the Old Volcano · Camiguin's beaches ranked · lanzones and what else grows here · Camiguin
+travel safety · scuba vs snorkel · Camiguin's seven volcanoes explained · Filipino-Spanish food
 explained · a Camiguin packing list for the green season · Camiguin nightlife (honestly: there
 isn't any, and that ranks) · how locals spend a Sunday · Camiguin photography spots ·
-Camiguin FAQ mega-page.
+Weddings & elopements at Txaleta.
+
+### November 2026 — a third pair, picked from the backlog
+
+Requested on 18 Nov 2026 on top of the clifftop/glamping and packing/nomad pairs, so **November
+now carries six English articles.** Library: **41 English guides.** The brief's contracted scope
+was 8 articles; this is 33 past it — raise scope with the client before the next invoice, per the
+standing note on this engagement.
+
+- **`camiguin-from-cagayan-de-oro`** — "Camiguin from Cagayan de Oro" / "Laguindingan to Camiguin".
+  The last transport-gateway gap: Laguindingan airport sits west of CDO, Balingoan port sits east
+  of it, and nobody writes that down. Required demoting the "Cagayan de Oro to Camiguin, on its
+  own" section in `how-to-get-to-camiguin-from-manila` to a short paragraph plus a link — a §6
+  collision avoided the same way the packing-list demotion was handled.
+- **`camiguin-faq`** — the FAQ mega-page from the backlog. A single hub answering ~28 top-of-funnel
+  questions in fresh wording, each linking out to its deep-dive guide. **Does not yet resolve** the
+  "known debt" noted above (twelve FAQ questions duplicated verbatim across older articles) — this
+  page adds a 29th place some of those questions are answered, not a replacement for the still-open
+  cleanup pass. That pass should eventually point the older per-article FAQs back to this hub rather
+  than restating them.
 
 ---
 

@@ -118,9 +118,7 @@ The honest decision rule, the way we would give it to a friend:
 
 ## Cagayan de Oro to Camiguin, on its own
 
-If you are already in Mindanao — living in CDO, working in Cagayan de Oro, coming off a Bukidnon trip — the whole question collapses to one line: **Agora or Bulua terminal → Rural Transit bus to Balingoan → RoRo to Benoni → multicab to Mambajao.** Around **four hours** and under **₱600** if you stay on public transport the whole way.
-
-It is a genuinely pleasant half-day. The highway runs along the Macajalar Bay coast, the crossing is short, and the volcano gets bigger the whole way over. Plenty of people from CDO do this as a long weekend, which is exactly what it is good for — see our [three-day Camiguin itinerary](/guides/camiguin-itinerary) for how to spend it.
+If you are already in Mindanao — living in CDO, working in Cagayan de Oro, coming off a Bukidnon trip — the whole question collapses to one line: terminal, bus to Balingoan, RoRo to Benoni, multicab to Mambajao. Around four hours and under ₱600 if you stay on public transport the whole way. We have broken that route down in full, including which airport terminal to use and what to do if you land too late for the last ferry, in [Camiguin from Cagayan de Oro](/guides/camiguin-from-cagayan-de-oro).
 
 ## The two ways to arrive by sea, and the one to avoid
 
