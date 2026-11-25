@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
 import { getGuides, getGuideAlternates, localesWithGuides } from "@/lib/guides";
 import { locales, localeTags, localePath, defaultLocale, type Locale } from "@/lib/i18n";
+import { getLegalDoc } from "@/lib/legal";
+import { legalDocs } from "@/locales/legal";
 
 // Every route × every locale, each entry carrying its hreflang alternates so
 // Google discovers all language versions straight from the sitemap.
@@ -123,5 +125,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  return [...staticEntries, ...hubEntries, ...guideEntries];
+  // Legal documents: English only. Every locale serves the same English text
+  // and canonicals to these URLs (see legalMetadata), so listing the other
+  // five would only advertise duplicates. Dated by each document's `updated`.
+  const legalEntries = legalDocs.map((doc) => ({
+    url: `${site.url}${localePath(defaultLocale, `/${doc}`)}`,
+    lastModified: new Date(getLegalDoc(doc).updated),
+    changeFrequency: "yearly" as const,
+    priority: 0.2,
+  }));
+
+  return [...staticEntries, ...hubEntries, ...guideEntries, ...legalEntries];
 }

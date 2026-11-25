@@ -4,6 +4,8 @@ import { site } from "@/lib/site";
 import { localePath, type Locale } from "@/lib/i18n";
 import { hasGuides } from "@/lib/guides";
 import { ui } from "@/locales/ui";
+import { legal, legalDocs } from "@/locales/legal";
+import { CookieSettingsButton } from "./cookie-consent";
 import { FacebookIcon, InstagramIcon, TikTokIcon } from "./icons";
 import { LogoWordmark } from "./logo";
 import { PoweredByCloudReef } from "./powered-by";
@@ -34,6 +36,7 @@ function localeHref(lang: Locale, href: string): string {
 
 export function Footer({ lang = "en" }: { lang?: Locale }) {
   const t = ui[lang];
+  const l = legal[lang];
 
   return (
     <footer className="relative overflow-hidden bg-[#0f1b30] text-white">
@@ -92,7 +95,26 @@ export function Footer({ lang = "en" }: { lang?: Locale }) {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+        <nav
+          aria-label={l.page.kicker}
+          className="mt-16 flex flex-wrap items-center justify-center gap-x-7 gap-y-3 border-t border-white/10 pt-8 sm:justify-start"
+        >
+          {legalDocs.map((doc) => (
+            <Link
+              key={doc}
+              href={localePath(lang, `/${doc}`)}
+              className="text-xs text-white/55 transition-colors hover:text-white"
+            >
+              {l.docs[doc]}
+            </Link>
+          ))}
+          <CookieSettingsButton
+            label={l.cookieSettings}
+            className="text-xs text-white/55 underline decoration-white/25 underline-offset-4 transition-colors hover:text-white hover:decoration-white"
+          />
+        </nav>
+
+        <div className="mt-6 flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-xs text-white/40">
             © {new Date().getFullYear()} {site.name}. {t.footer.rights}
           </p>

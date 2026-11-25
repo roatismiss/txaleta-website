@@ -87,3 +87,10 @@ export function pageAlternates(locale: Locale, path: string) {
     languages: hreflangAlternates(path),
   };
 }
+
+/**
+ * Request header the proxy (src/proxy.ts) stamps with the resolved locale, so
+ * app/global-not-found.tsx — which gets no params — can answer in the
+ * visitor's language.
+ */
+export const LOCALE_HEADER = "x-txaleta-locale";

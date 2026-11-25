@@ -12,7 +12,7 @@ import { localePath } from "@/lib/i18n";
 
 // Small page-chrome strings not part of the content dictionaries.
 const pageStrings: Record<Locale, { quote: string; believeKicker: string; believeHeading: string; bookCta: string; orReach: string }> = {
-  en: { quote: "A heartfelt retreat where heritage meets healing.", believeKicker: "What We Believe", believeHeading: "{P.believeHeading}", bookCta: "Book Your Stay", orReach: "Or reach us directly" },
+  en: { quote: "A heartfelt retreat where heritage meets healing.", believeKicker: "What We Believe", believeHeading: "Five Ideas at the Heart of Txaleta", bookCta: "Book Your Stay", orReach: "Or reach us directly" },
   fr: { quote: "Un refuge sincère, où l’héritage rencontre l’apaisement.", believeKicker: "Ce en quoi nous croyons", believeHeading: "Cinq idées au cœur de Txaleta", bookCta: "Réserver votre séjour", orReach: "Ou contactez-nous directement" },
   de: { quote: "Ein herzlicher Rückzugsort, wo Erbe auf Erholung trifft.", believeKicker: "Woran wir glauben", believeHeading: "Fünf Ideen im Herzen von Txaleta", bookCta: "Aufenthalt buchen", orReach: "Oder erreichen Sie uns direkt" },
   ja: { quote: "伝統と癒しが出会う、心のこもった隠れ家。", believeKicker: "私たちの信条", believeHeading: "Txaletaの中心にある5つの想い", bookCta: "宿泊を予約する", orReach: "または直接ご連絡ください" },

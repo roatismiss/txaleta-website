@@ -345,6 +345,44 @@ html.booking-open [data-cloudreef-chatbot] {
   display: none !important;
 }
 
+/* ==========================================================================
+   Cookie banner on screen (`html.consent-open`, toggled by CookieConsent).
+   The WhatsApp button sits exactly where the banner card sits, and on phones
+   the concierge chat button (bottom-right, z-index 2147483646) would cover the
+   banner's buttons. Both come back the moment the visitor decides.
+   ========================================================================== */
+html.consent-open .whatsapp-fab {
+  display: none !important;
+}
+@media (max-width: 639px) {
+  html.consent-open #cloudreef-widget-root,
+  html.consent-open [data-cloudreef-widget],
+  html.consent-open [data-cloudreef-chatbot] {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   Print — the legal pages offer "Print or save as PDF". Paper gets the
+   document only: no site chrome, floating buttons, chat or cookie banner.
+   ========================================================================== */
+@media print {
+  body > header,
+  header.fixed,
+  footer,
+  .whatsapp-fab,
+  #txaleta-splash,
+  #cloudreef-widget-root,
+  [data-cloudreef-widget],
+  [data-cloudreef-chatbot],
+  a[style*="vertical-rl"] {
+    display: none !important;
+  }
+  body { background: #fff; color: #000; }
+  main { padding: 0 !important; }
+  @page { margin: 18mm 16mm; }
+}
+
 /* Respect reduced-motion: neutralize CSS animations/transitions site-wide.
    (framer-motion is handled separately via useReducedMotion.) */
 @media (prefers-reduced-motion: reduce) {

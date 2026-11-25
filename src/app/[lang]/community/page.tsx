@@ -135,7 +135,7 @@ export default async function CommunityPage({ params }: PageProps<"/[lang]">) {
                 <article className="flex h-full flex-col">
                   {"embed" in a && a.embed ? (
                     <div className="flex w-full justify-center">
-                      <InstagramEmbed url={a.embed} />
+                      <InstagramEmbed url={a.embed} lang={lang} poster={a.image} />
                     </div>
                   ) : (
                     <div className="group relative aspect-[16/10] w-full overflow-hidden">

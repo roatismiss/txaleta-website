@@ -77,7 +77,7 @@ export default async function BookPage({ params, searchParams }: PageProps<"/[la
             {([
               { icon: CalendarCheck, label: p.trust[0] },
               { icon: Zap, label: p.trust[1] },
-              { icon: ShieldCheck, label: p.trust[2], note: "GCash · Maya · Apple Pay" },
+              { icon: ShieldCheck, label: p.trust[2] },
               { icon: Mail, label: p.trust[3] },
             ] as { icon: LucideIcon; label: string; note?: string }[]).map(({ icon: Icon, label, note }) => (
               <span key={label} className="flex items-start gap-2.5 text-[13px] text-white/80">
